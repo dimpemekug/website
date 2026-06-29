@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
+import { Font } from "astro:assets";
 import { SITE } from "@/config";
 import SearchModal from "@/components/SearchModal.astro";
 import { getLangFromUrl } from "@/i18n/utils";
@@ -126,11 +127,11 @@ const showGrain = SITE.backdropEffects.grain;
     {prev && <link rel="prev" href={prev} />}
     {next && <link rel="next" href={next} />}
 
-    <!-- Load Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sriracha&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-    <style>:root { --font-wotfard: "Inter", system-ui, sans-serif; --font-sriracha: "Sriracha", cursive; --font-firacode: "Fira Code", monospace; --font-cascadia-code: "Fira Code", monospace; }</style>
+    <!-- Local fonts (configured in astro.config.mjs) -->
+    <Font cssVariable="--font-wotfard" preload />
+    <Font cssVariable="--font-sriracha" />
+    <Font cssVariable="--font-firacode" />
+    <Font cssVariable="--font-cascadia-code" />
 
     <!-- General Meta Tags -->
     <title>{title}</title>
