@@ -1,0 +1,54 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<span class:list={["site-logo", className]}>
+  dimpemekug<span class="site-logo-cursor" aria-hidden="true">▌</span>
+</span>
+
+<style>
+  .site-logo {
+    display: inline-flex;
+    align-items: baseline;
+    font-family: var(--font-firacode), "Fira Code", monospace;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+    transition: filter 0.3s ease;
+  }
+
+  .site-logo-cursor {
+    display: inline-block;
+    margin-left: 0.08em;
+    color: var(--accent);
+    animation: site-logo-blink 1.1s steps(1) infinite;
+  }
+
+  :global(.group:hover .site-logo) {
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 45%, transparent));
+  }
+
+  :global(.group:hover .site-logo-cursor) {
+    animation-duration: 0.45s;
+  }
+
+  @keyframes site-logo-blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    50.01%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-logo-cursor {
+      animation: none;
+    }
+  }
+</style>

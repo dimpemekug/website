@@ -1,0 +1,31 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": [
+    "dist",
+    "public/pagefind",
+    "src/components/blog",
+    "src/components/comments",
+    "src/components/article",
+    "src/components/cards",
+    "src/components/widgets",
+    "src/components/mdx",
+    "src/components/BaseHead.astro",
+    "src/components/Icon.astro",
+    "src/components/SmartImage.astro",
+    "src/components/FullFontWarmup.astro",
+    "src/utils/blog-heatmap.ts",
+    "src/utils/comments.ts",
+    "src/utils/content-groups.ts",
+    "src/utils/full-font-warmup.ts",
+    "src/utils/carousel.ts",
+    "src/utils/zoomable-images.ts"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

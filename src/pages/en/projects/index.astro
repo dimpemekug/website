@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { SITE } from "@/config";
+
+const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
+---
+
+<Layout title={`Projects | ${SITE.title}`} description="Apps and websites I have built.">
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-4">
+    <div class="page-hero" data-page-hero>
+      <div class="aurora-orb aurora-orb-1"></div>
+      <div class="aurora-orb aurora-orb-2"></div>
+      <div class="aurora-orb aurora-orb-3"></div>
+      <div class="aurora-mouse" data-hero-mouse></div>
+      <div class="relative z-10">
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+          <span class="glow-text">Projects</span>
+        </h1>
+        <p class="mt-3 max-w-lg text-foreground/70 italic">
+          Apps and websites I have built.
+        </p>
+      </div>
+    </div>
+
+    {projects.length > 0 ? (
+      <ul class="mt-6 grid gap-4 sm:grid-cols-2 [&>li]:my-0">
+        {projects.map(project => (
+          <ProjectCard
+            project={project}
+            href={`/en/projects/${project.id}/`}
+            lang="en"
+          />
+        ))}
+      </ul>
+    ) : (
+      <p class="mt-8 text-foreground/60 italic">No projects yet. Coming soon.</p>
+    )}
+  </main>
+  <Footer />
+</Layout>

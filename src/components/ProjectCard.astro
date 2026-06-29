@@ -1,0 +1,125 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
+import Datetime from "./Datetime.astro";
+
+type Props = {
+  project: CollectionEntry<"projects"> | CollectionEntry<"projectsEn">;
+  href: string;
+  lang?: "it" | "en";
+  featured?: boolean;
+};
+
+const { project, href, lang = "it", featured = false } = Astro.props;
+const { title, description, pubDatetime, appStore, playStore, website } = project.data;
+
+const appStoreLabel = "App Store";
+const playStoreLabel = "Google Play";
+const websiteLabel = lang === "en" ? "Website" : "Sito web";
+
+const headingId = `project-${slugifyStr(String(project.id))}-title`;
+const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
+---
+
+<li
+  class:list={[
+    "card-glow group/card relative my-3 rounded-2xl",
+    "border backdrop-blur-sm",
+    "transition-[border-color,background-color,box-shadow,transform] duration-300 ease-out motion-reduce:transform-none motion-reduce:transition-none",
+    "hover:-translate-y-0.5 focus-within:-translate-y-0.5",
+    "hover:shadow-lg focus-within:shadow-lg",
+    !featured && [
+      "border-border/25 bg-muted/10",
+      "hover:border-accent/40 hover:bg-accent/5 focus-within:border-accent/40 focus-within:bg-accent/5",
+      "hover:shadow-accent/10 focus-within:shadow-accent/10",
+    ],
+    featured && [
+      "border-accent/30 bg-accent/5",
+      "hover:border-accent/50 hover:bg-accent/10 focus-within:border-accent/50 focus-within:bg-accent/10",
+      "hover:shadow-accent/15 focus-within:shadow-accent/15",
+      "shadow-[0_0_20px_-5px_color-mix(in_oklab,var(--color-accent)_15%,transparent)]",
+    ],
+  ]}
+>
+  <div
+    class="card-glow-effect pointer-events-none absolute inset-0 z-0 rounded-2xl opacity-0 transition-opacity duration-300 motion-reduce:transition-none group-hover/card:opacity-100 group-focus-within/card:opacity-100"
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative z-5 p-4 sm:p-5">
+    <a
+      href={href}
+      class="text-lg font-semibold text-foreground transition-colors duration-200 group-hover/card:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+      aria-labelledby={headingId}
+      aria-describedby={descriptionId}
+    >
+      <h2 id={headingId}>{title}</h2>
+      <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
+    </a>
+
+    <div class="relative z-20 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none">
+      <Datetime pubDatetime={pubDatetime} />
+    </div>
+
+    <p
+      id={descriptionId}
+      class="relative z-20 mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75 pointer-events-auto select-text"
+    >
+      {description}
+    </p>
+
+    {(appStore || playStore || website) && (
+      <div class="relative z-20 mt-4 flex flex-wrap gap-2 pointer-events-auto">
+        {appStore && (
+          <a
+            href={appStore}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-muted/15 px-3 py-1 text-xs font-medium text-foreground/70 transition-colors hover:border-accent/40 hover:text-accent"
+          >
+            {appStoreLabel}
+          </a>
+        )}
+        {playStore && (
+          <a
+            href={playStore}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-muted/15 px-3 py-1 text-xs font-medium text-foreground/70 transition-colors hover:border-accent/40 hover:text-accent"
+          >
+            {playStoreLabel}
+          </a>
+        )}
+        {website && (
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-muted/15 px-3 py-1 text-xs font-medium text-foreground/70 transition-colors hover:border-accent/40 hover:text-accent"
+          >
+            {websiteLabel}
+          </a>
+        )}
+      </div>
+    )}
+  </div>
+</li>
+
+<style>
+  .card-glow {
+    contain: paint;
+  }
+  .card-glow-effect {
+    background: radial-gradient(
+      350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      color-mix(in oklab, var(--accent) 8%, transparent) 0%,
+      color-mix(in oklab, var(--accent) 4%, transparent) 30%,
+      color-mix(in oklab, var(--accent) 0.8%, transparent) 60%,
+      transparent 80%
+    );
+    will-change: opacity;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card-glow-effect { background: none; }
+  }
+</style>

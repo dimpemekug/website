@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "WebSearch",
+      "WebFetch(domain:astro.build)",
+      "Bash(npm create *)",
+      "Bash(mv tmp-astro/.[!.]* tmp-astro/* .)",
+      "Bash(rmdir tmp-astro *)",
+      "Bash(mv tmp-astro/.github tmp-astro/.husky tmp-astro/.vscode .)",
+      "Bash(rm -rf tmp-astro/.git)",
+      "Bash(npm install *)",
+      "Bash(timeout 20 npm run dev)",
+      "Bash(mkdir -p ~/Documents/ShowNest)",
+      "Bash(rsync -a --exclude node_modules \"/Users/dimpemekug/Documents/App source/#landing-page-app/ShowNest/\" ~/Documents/ShowNest/)",
+      "Read(//Users/dimpemekug/Documents/**)",
+      "Bash(curl -s http://localhost:4321/progetti/)",
+      "Bash(pnpm run *)",
+      "Bash(npx astro *)",
+      "WebFetch(domain:dimpemekug.github.io)"
+    ]
+  }
+}

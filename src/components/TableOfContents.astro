@@ -1,0 +1,128 @@
+---
+type Heading = { depth: number; slug: string; text: string };
+
+interface Props {
+  headings: Heading[];
+  lang?: "it" | "en";
+}
+
+const { headings, lang = "it" } = Astro.props;
+
+const filtered = headings.filter(h => h.depth === 2 || h.depth === 3);
+const label = lang === "en" ? "Table of Contents" : "Indice";
+---
+
+{filtered.length > 1 && (
+  <nav
+    id="toc"
+    class="toc-nav mb-8 rounded-2xl border border-border/25 bg-muted/8 px-5 py-4 backdrop-blur-sm"
+    aria-label={label}
+  >
+    <div class="toc-header mb-3 flex items-center justify-between">
+      <span class="font-firacode text-[11px] font-bold tracking-widest text-accent/70 uppercase select-none">
+        {label}
+      </span>
+      <button
+        id="toc-toggle"
+        class="toc-toggle-btn ml-auto flex items-center gap-1 rounded-md px-2 py-0.5 font-firacode text-[10px] text-foreground/40 transition-colors hover:text-accent/60 md:hidden"
+        aria-expanded="true"
+        aria-controls="toc-list"
+      >
+        <svg id="toc-chevron" class="size-3 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="18 15 12 9 6 15" />
+        </svg>
+      </button>
+    </div>
+
+    <ol id="toc-list" class="toc-list space-y-0.5">
+      {filtered.map((h, i) => (
+        <li class:list={["toc-item", { "pl-4": h.depth === 3 }]}>
+          <a
+            href={`#${h.slug}`}
+            class:list={[
+              "toc-link group flex items-start gap-2 rounded-lg px-2 py-1.5 text-sm leading-snug text-foreground/60 transition-all duration-150 hover:bg-accent/5 hover:text-accent",
+              { "text-[0.8rem]": h.depth === 3 },
+            ]}
+            data-toc-link
+          >
+            <span class="toc-num mt-0.5 shrink-0 font-firacode text-[10px] text-accent/30 transition-colors duration-150 group-hover:text-accent/60">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span class="toc-text">{h.text}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<script>
+  function initToc() {
+    const nav = document.getElementById("toc");
+    if (!nav) return;
+
+    // ── Mobile collapse toggle ──
+    const toggle = document.getElementById("toc-toggle") as HTMLButtonElement | null;
+    const list = document.getElementById("toc-list");
+    const chevron = document.getElementById("toc-chevron");
+
+    if (toggle && list && chevron) {
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        list.style.display = expanded ? "none" : "";
+        chevron.style.transform = expanded ? "rotate(180deg)" : "";
+      });
+    }
+
+    // ── Scroll spy via IntersectionObserver ──
+    const links = Array.from(nav.querySelectorAll<HTMLAnchorElement>("[data-toc-link]"));
+    if (!links.length) return;
+
+    const headingIds = links.map(a => a.getAttribute("href")?.slice(1) ?? "");
+    const headingEls = headingIds
+      .map(id => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    let activeId = "";
+
+    const setActive = (id: string) => {
+      if (id === activeId) return;
+      activeId = id;
+      links.forEach(a => {
+        const isActive = a.getAttribute("href") === `#${id}`;
+        a.classList.toggle("toc-active", isActive);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+            break;
+          }
+        }
+      },
+      { rootMargin: "-10% 0px -80% 0px", threshold: 0 }
+    );
+
+    headingEls.forEach(el => observer.observe(el));
+  }
+
+  initToc();
+  document.addEventListener("astro:after-swap", initToc);
+</script>
+
+<style>
+  .toc-active {
+    color: var(--color-accent) !important;
+    background-color: color-mix(in oklab, var(--color-accent) 8%, transparent);
+  }
+  .toc-active .toc-num {
+    color: color-mix(in oklab, var(--color-accent) 60%, transparent) !important;
+  }
+  .toc-active .toc-text {
+    font-weight: 500;
+  }
+</style>

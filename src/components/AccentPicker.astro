@@ -1,0 +1,149 @@
+---
+---
+
+<div class="accent-inline-row">
+  <div class="accent-swatches-inline"></div>
+</div>
+
+<script>
+  const ACCENTS = [
+    { id: "blue",   label: "Blue",   swatch: "#1158d1" },
+    { id: "purple", label: "Purple", swatch: "#7c3aed" },
+    { id: "green",  label: "Green",  swatch: "#16a34a" },
+    { id: "teal",   label: "Teal",   swatch: "#0d9488" },
+    { id: "rose",   label: "Rose",   swatch: "#e11d48" },
+    { id: "orange", label: "Orange", swatch: "#ea580c" },
+    { id: "pink",   label: "Pink",   swatch: "#db2777" },
+    { id: "amber",  label: "Amber",  swatch: "#b45309" },
+  ] as const;
+
+  type AccentId = typeof ACCENTS[number]["id"];
+
+  let cleanup: AbortController | null = null;
+
+  function getAccentId(): AccentId {
+    return (localStorage.getItem("accent-id") as AccentId) || "blue";
+  }
+
+  function applyAccent(id: AccentId) {
+    if (id === "blue") {
+      document.documentElement.removeAttribute("data-accent");
+      localStorage.removeItem("accent-id");
+    } else {
+      document.documentElement.setAttribute("data-accent", id);
+      localStorage.setItem("accent-id", id);
+    }
+    updateSwatchActiveState(id);
+  }
+
+  function updateSwatchActiveState(activeId: AccentId) {
+    document.querySelectorAll<HTMLElement>("[data-accent-id]").forEach(el => {
+      el.classList.toggle("active", el.dataset["accentId"] === activeId);
+    });
+  }
+
+  function buildSwatches(container: HTMLElement) {
+    container.innerHTML = "";
+    const currentId = getAccentId();
+    ACCENTS.forEach(a => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "accent-swatch";
+      btn.dataset["accentId"] = a.id;
+      btn.title = a.label;
+      btn.setAttribute("aria-label", a.label);
+      btn.style.background = a.swatch;
+      if (a.id === currentId) btn.classList.add("active");
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        applyAccent(a.id);
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  function initPicker() {
+    // Clean up previous listeners
+    if (cleanup) cleanup.abort();
+    cleanup = new AbortController();
+
+    // Re-apply in case data-accent was cleared by view transition swap
+    restoreAccent();
+
+    document.querySelectorAll<HTMLElement>(".accent-swatches-inline").forEach(buildSwatches);
+  }
+
+  function restoreAccent() {
+    const id = getAccentId();
+    if (id === "blue") {
+      document.documentElement.removeAttribute("data-accent");
+    } else {
+      document.documentElement.setAttribute("data-accent", id);
+    }
+  }
+
+  // Copy data-accent to incoming document BEFORE swap to prevent flash
+  document.addEventListener("astro:before-swap", (event) => {
+    const e = event as { newDocument: Document };
+    const accentId = localStorage.getItem("accent-id");
+    if (accentId) {
+      e.newDocument.documentElement.setAttribute("data-accent", accentId);
+    } else {
+      e.newDocument.documentElement.removeAttribute("data-accent");
+    }
+  });
+
+  initPicker();
+  document.addEventListener("astro:after-swap", () => {
+    restoreAccent();
+    initPicker();
+  });
+</script>
+
+<style>
+  /* ── Inline variant ── */
+  .accent-inline-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .accent-swatches-inline {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ── Swatch buttons — :global perché creati dinamicamente via JS ── */
+  :global(.accent-swatch) {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2.5px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    outline: none;
+  }
+
+  :global(.accent-swatch:hover) {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-foreground) 20%, transparent);
+  }
+
+  :global(.accent-swatch:focus-visible) {
+    box-shadow: 0 0 0 2px var(--color-accent);
+  }
+
+  :global(.accent-swatch.active) {
+    border-color: var(--color-foreground);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-foreground) 30%, transparent);
+  }
+</style>

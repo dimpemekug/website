@@ -1,0 +1,289 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Datetime from "@/components/Datetime.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import BackToTopButton from "@/components/BackToTopButton.astro";
+import { SITE } from "@/config";
+import TableOfContents from "@/components/TableOfContents.astro";
+import ProjectPrivacySupport from "@/components/ProjectPrivacySupport.astro";
+
+type Props = {
+  project: CollectionEntry<"projects"> | CollectionEntry<"projectsEn">;
+  lang?: "it" | "en";
+};
+
+const { project, lang = "it" } = Astro.props;
+const { title, description, pubDatetime, appStore, playStore, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt } = project.data;
+
+const { Content, headings } = await render(project);
+const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
+
+const backHref = lang === "en" ? "/en/projects/" : "/progetti/";
+const backLabel = lang === "en" ? "All projects" : "Tutti i progetti";
+const websiteLabel = lang === "en" ? "Website" : "Sito web";
+---
+
+<Layout
+  title={`${title} | ${SITE.title}`}
+  description={description}
+  scrollSmooth={true}
+>
+  <Header />
+  {SITE.showBackButton && <Breadcrumb withBackButton />}
+  <main id="main-content" class:list={["relative app-layout pb-12", { "mt-8": !SITE.showBackButton }]}>
+
+    <!-- Project header -->
+    <header class="post-header relative mb-10 text-center">
+      <div class="post-hero-bg"></div>
+      <div class="relative z-10 rounded-3xl border border-border/20 bg-muted/5 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-12">
+
+        <h1 class="post-title text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-[2.75rem]">
+          {title}
+        </h1>
+
+        {description && (
+          <p class="mt-3 text-base text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+            {description}
+          </p>
+        )}
+
+        <!-- Metadata row -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+          <!-- Author chip -->
+          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
+            <svg class="size-3.5 text-accent/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="opacity-70">{SITE.author}</span>
+          </div>
+
+          <!-- Date chip -->
+          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
+            <svg class="size-3.5 text-accent/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <Datetime {pubDatetime} size="sm" class="opacity-70 [&>svg]:hidden" />
+          </div>
+        </div>
+
+        <!-- Store links -->
+        {(appStore || playStore || website) && (
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            {appStore && (
+              <a
+                href={appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/8 px-4 py-1.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+              >
+                <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                App Store
+              </a>
+            )}
+            {playStore && (
+              <a
+                href={playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/8 px-4 py-1.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+              >
+                <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3.18 23.76c.3.17.64.22.98.14l12.35-7.13-2.79-2.79-10.54 9.78zM.34 1.18C.13 1.5 0 1.9 0 2.36v19.28c0 .46.13.86.34 1.18l.06.06 10.8-10.8v-.25L.4 1.12l-.06.06zM20.8 10.37l-2.8-1.62-3.14 3.14 3.14 3.14 2.82-1.63c.8-.46.8-1.22-.02-1.03zM3.18.24l12.35 7.13-2.79 2.79L2.2.38C2.5.06 2.88 0 3.18.24z"/>
+                </svg>
+                Google Play
+              </a>
+            )}
+            {website && (
+              <a
+                href={website}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full border border-border/30 bg-muted/15 px-4 py-1.5 text-sm font-medium text-foreground/70 transition-all duration-200 hover:border-accent/40 hover:text-accent hover:shadow-sm"
+              >
+                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                {websiteLabel}
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </header>
+
+    {hasToc ? (
+      <div class="post-layout grid gap-8 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start">
+        <aside class="toc-sidebar lg:order-2 lg:sticky lg:top-24" aria-label={lang === "en" ? "Table of contents" : "Indice"}>
+          <TableOfContents {headings} {lang} />
+        </aside>
+        <article id="article" class="app-prose w-full max-w-none lg:order-1 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)">
+          <Content />
+        </article>
+      </div>
+    ) : (
+      <article id="article" class="app-prose w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)">
+        <Content />
+      </article>
+    )}
+
+    {(privacyDataTypes || privacyUpdatedAt) && (
+      <ProjectPrivacySupport
+        {title}
+        {lang}
+        {privacyDataTypes}
+        {privacyStorageNote}
+        {privacyUpdatedAt}
+      />
+    )}
+
+    <!-- End separator -->
+    <div class="relative mt-12 mb-8 flex items-center justify-center gap-4" aria-hidden="true">
+      <div class="relative h-px flex-1 bg-linear-to-r from-transparent via-border/30 to-accent/20">
+        <div class="absolute inset-0 bg-linear-to-r from-transparent via-accent/40 to-accent/40 blur-[2px]"></div>
+      </div>
+      <div class="relative z-10 flex items-center gap-2 font-firacode text-[10px] tracking-widest text-accent/40 uppercase select-none">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent/50 shadow-[0_0_8px_var(--color-accent)]"></span>
+        end
+      </div>
+      <div class="relative h-px flex-1 bg-linear-to-l from-transparent via-border/30 to-accent/20">
+        <div class="absolute inset-0 bg-linear-to-l from-transparent via-accent/40 to-accent/40 blur-[2px]"></div>
+      </div>
+    </div>
+
+    <!-- Back link -->
+    <div class="mt-6 flex justify-center">
+      <a
+        href={backHref}
+        class="inline-flex items-center gap-2 rounded-xl border border-border/25 bg-muted/10 px-5 py-2.5 text-sm font-medium text-foreground/70 transition-all duration-200 hover:border-accent/30 hover:text-accent hover:-translate-y-0.5"
+      >
+        <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+        {backLabel}
+      </a>
+    </div>
+  </main>
+
+  <BackToTopButton />
+  <Footer />
+</Layout>
+
+<script is:inline data-astro-rerun>
+  function createProgressBar() {
+    if (document.querySelector(".progress-container")) return;
+    const progressContainer = document.createElement("div");
+    progressContainer.className = "progress-container fixed top-0 z-50 h-1 w-full bg-background";
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  function updateScrollProgress() {
+    const myBar = document.getElementById("myBar");
+    if (!myBar) return;
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const winScroll = document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          myBar.style.width = ((winScroll / height) * 100) + "%";
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+  updateScrollProgress();
+
+  function addHeadingLinks() {
+    const headings = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"));
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className = "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      link.ariaLabel = "link to heading";
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  function attachCopyButtons() {
+    const copyButtonLabel = "Copy";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+    const topClasses = codeBlocks.map(cb =>
+      getComputedStyle(cb).getPropertyValue("--file-name-offset").trim() !== ""
+        ? "top-(--file-name-offset)"
+        : "-top-3"
+    );
+    codeBlocks.forEach((codeBlock, i) => {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+      const copyButton = document.createElement("button");
+      copyButton.className = `copy-code absolute end-3 ${topClasses[i]} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+      copyButton.addEventListener("click", async () => {
+        const code = codeBlock.querySelector("code");
+        await navigator.clipboard.writeText(code?.innerText ?? "");
+        copyButton.innerText = "Copied";
+        setTimeout(() => { copyButton.innerText = copyButtonLabel; }, 700);
+      });
+    });
+  }
+  attachCopyButtons();
+
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>
+
+<style>
+  .post-title {
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      color-mix(in oklab, var(--accent) 60%, var(--foreground)) 25%,
+      var(--foreground) 50%,
+      var(--foreground) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .post-hero-bg {
+    position: absolute;
+    inset: -2px;
+    opacity: 0.6;
+    background:
+      radial-gradient(circle at 20% 5%, color-mix(in oklab, var(--accent) 12%, transparent) 0%, transparent 45%),
+      radial-gradient(ellipse 80% 60% at 80% 95%, color-mix(in oklab, var(--accent) 8%, transparent) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 1.5rem;
+  }
+</style>

@@ -1,0 +1,181 @@
+export const languages = {
+  it: "Italiano",
+  en: "English",
+} as const;
+
+export type Lang = keyof typeof languages;
+export const defaultLang: Lang = "it";
+
+export const ui = {
+  it: {
+    // Nav
+    "nav.posts": "Articoli",
+    "nav.projects": "Progetti",
+    "nav.tags": "Tag",
+    "nav.about": "Chi sono",
+    "nav.search": "Cerca",
+    "nav.archives": "Archivio",
+    "nav.galleries": "Gallerie",
+    "nav.search.label": "Apri la ricerca",
+    "nav.skip": "Vai al contenuto",
+    "nav.more": "Altro",
+    "nav.accent": "Colore d'accento",
+    "nav.theme_dark": "Scuro",
+    "nav.theme_light": "Chiaro",
+    // Home
+    "home.featured": "In evidenza",
+    "home.recent": "Recenti",
+    "home.all_posts": "Tutti gli articoli →",
+    "home.all_projects": "Tutti i progetti →",
+    // Posts
+    "posts.title": "Articoli",
+    "posts.description": "Note, guide e riflessioni sullo sviluppo.",
+    "posts.read_more": "Leggi →",
+    "posts.min_read": "min di lettura",
+    // Projects
+    "projects.title": "Progetti",
+    "projects.description": "App e siti web che ho sviluppato.",
+    "projects.app_store": "App Store",
+    "projects.play_store": "Google Play",
+    "projects.website": "Sito web",
+    "projects.empty": "Nessun progetto ancora. Presto in arrivo.",
+    // About
+    "about.title": "Chi sono",
+    // Search
+    "search.title": "Cerca",
+    "search.placeholder": "Cerca articoli...",
+    "search.description": "Trova qualsiasi articolo, tutorial o idea nel blog.",
+    "search.aria": "Cerca nel sito",
+    "search.close": "Chiudi la ricerca",
+    "search.close_label": "chiudi",
+    "search.empty": "Digita per cercare articoli, tutorial e idee...",
+    "search.open_hint": "apri",
+    "search.navigate_hint": "naviga",
+    // Archives
+    "archives.title": "Archivio",
+    // Tags
+    "tags.title": "Tag",
+    "tags.results": "Risultati per",
+    // Misc
+    "footer.rights": "Tutti i diritti riservati.",
+    "footer.tagline": "Uno spazio dove la curiosità diventa codice.",
+    "footer.connect": "Contatti",
+    "footer.rss": "Feed RSS",
+    "share.title": "Condividi",
+    "edit.post": "Modifica questo articolo",
+    "back": "Indietro",
+    "404.title": "Pagina non trovata",
+    "404.message": "La pagina che cerchi non esiste.",
+    "404.back_home": "Torna alla home",
+    // Home
+    "home.description_intro": "Uno spazio dove la curiosità si trasforma in software.",
+    "home.description": "Progetto applicazioni mobile con Flutter, Dart e SwiftUI, oltre a siti web e temi WordPress realizzati su misura. Ogni progetto nasce con un'attenzione particolare alla semplicità d'uso, alle prestazioni e al rispetto della privacy.",
+    "home.terminal_path": "/benvenuti su",
+    "home.explore_posts": "Esplora tutti gli articoli",
+    "home.activity.title": "Attività",
+    "home.activity.total_posts": "Articoli",
+    "home.activity.active_days": "Giorni attivi",
+    "home.activity.streak": "Giorni di fila",
+    "home.activity.latest": "Ultimo pubblicato",
+    "home.activity.less": "Meno",
+    "home.activity.more": "Più",
+    // Archives
+    "archives.description": "Un viaggio attraverso tutto ciò che ho pubblicato, organizzato nel tempo.",
+    "archives.year": "anno",
+    "archives.years": "anni",
+    // Tags
+    "tags.description": "Esplora tutti gli argomenti del blog per tag.",
+    // Posts page
+    "posts.page": "Pagina",
+    "posts.empty": "Nessun articolo ancora.",
+    "posts.empty_desc": "Torna più tardi per leggere i prossimi articoli.",
+    // About
+    "about.greeting": "Ciao! Sono",
+    "about.badge_developer": "🚀 Sviluppatore",
+    "about.badge_teacher": "📚 Insegnante",
+  },
+  en: {
+    // Nav
+    "nav.posts": "Posts",
+    "nav.projects": "Projects",
+    "nav.tags": "Tags",
+    "nav.about": "About",
+    "nav.search": "Search",
+    "nav.archives": "Archives",
+    "nav.galleries": "Galleries",
+    "nav.search.label": "Open search",
+    "nav.skip": "Skip to content",
+    "nav.more": "More",
+    "nav.accent": "Accent color",
+    "nav.theme_dark": "Dark",
+    "nav.theme_light": "Light",
+    // Home
+    "home.featured": "Featured",
+    "home.recent": "Recent",
+    "home.all_posts": "All posts →",
+    "home.all_projects": "Explore all projects",
+    "home.description_intro": "A space where curiosity turns into software.",
+    "home.description": "I build mobile apps with Flutter, Dart, and SwiftUI, along with custom websites and WordPress themes. Every project is built with a focus on ease of use, performance, and privacy.",
+    "home.terminal_path": "/welcome to",
+    "home.explore_posts": "Explore all posts",
+    "home.activity.title": "Activity",
+    "home.activity.total_posts": "Posts",
+    "home.activity.active_days": "Active days",
+    "home.activity.streak": "Day streak",
+    "home.activity.latest": "Latest published",
+    "home.activity.less": "Less",
+    "home.activity.more": "More",
+    // Posts
+    "posts.title": "Posts",
+    "posts.description": "Notes, guides and reflections on development.",
+    "posts.read_more": "Read →",
+    "posts.min_read": "min read",
+    "posts.page": "Page",
+    "posts.empty": "No posts yet",
+    "posts.empty_desc": "Come back later to read our upcoming articles.",
+    // Projects
+    "projects.title": "Projects",
+    "projects.description": "Apps and websites I have built.",
+    "projects.app_store": "App Store",
+    "projects.play_store": "Google Play",
+    "projects.website": "Website",
+    "projects.empty": "No projects yet. Coming soon.",
+    // About
+    "about.title": "About",
+    "about.greeting": "Hi! I'm",
+    "about.badge_developer": "🚀 Developer",
+    "about.badge_teacher": "📚 Teacher",
+    // Search
+    "search.title": "Search",
+    "search.placeholder": "Search posts...",
+    "search.description": "Find any article, tutorial, or idea on the blog.",
+    "search.aria": "Search the site",
+    "search.close": "Close search",
+    "search.close_label": "close",
+    "search.empty": "Type to search for articles, tutorials, and ideas...",
+    "search.open_hint": "open",
+    "search.navigate_hint": "navigate",
+    // Archives
+    "archives.title": "Archives",
+    "archives.description": "A journey through everything I've published, organized over time.",
+    "archives.year": "year",
+    "archives.years": "years",
+    // Tags
+    "tags.title": "Tags",
+    "tags.results": "Results for",
+    "tags.description": "Explore all blog topics by tag.",
+    // Misc
+    "footer.rights": "All rights reserved.",
+    "footer.tagline": "A space where curiosity turns into code.",
+    "footer.connect": "Connect",
+    "footer.rss": "RSS feed",
+    "share.title": "Share",
+    "edit.post": "Edit this post",
+    "back": "Back",
+    "404.title": "Page not found",
+    "404.message": "The page you are looking for does not exist.",
+    "404.back_home": "Back to home",
+  },
+} as const;
+
+export type UIKey = keyof typeof ui[typeof defaultLang];

@@ -1,0 +1,229 @@
+---
+import IconDots from "@/assets/icons/IconDots.svg";
+import IconHash from "@/assets/icons/IconHash.svg";
+import IconArchive from "@/assets/icons/IconArchive.svg";
+import IconMoon from "@/assets/icons/IconMoon.svg";
+import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+import AccentPicker from "./AccentPicker.astro";
+
+interface Props {
+  tagsHref: string;
+  tagsLabel: string;
+  tagsActive: boolean;
+  archivesHref: string;
+  archivesLabel: string;
+  archivesActive: boolean;
+  showArchives: boolean;
+  moreLabel: string;
+  accentLabel: string;
+  showThemeToggle: boolean;
+  themeDarkLabel: string;
+  themeLightLabel: string;
+}
+
+const {
+  tagsHref,
+  tagsLabel,
+  tagsActive,
+  archivesHref,
+  archivesLabel,
+  archivesActive,
+  showArchives,
+  moreLabel,
+  accentLabel,
+  showThemeToggle,
+  themeDarkLabel,
+  themeLightLabel,
+} = Astro.props;
+---
+
+<div class="more-wrap" id="more-menu-wrap">
+  <button
+    id="more-menu-btn"
+    class:list={["nav-icon-btn", { "nav-active": tagsActive || archivesActive }]}
+    title={moreLabel}
+    aria-label={moreLabel}
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <IconDots class="size-4.5" />
+  </button>
+  <div id="more-popover" class="more-popover" role="menu" aria-label={moreLabel} hidden>
+    <a href={tagsHref} role="menuitem" class:list={["more-item", { "more-item-active": tagsActive }]}>
+      <IconHash class="size-4 opacity-70" />
+      <span>{tagsLabel}</span>
+    </a>
+    {
+      showArchives && (
+        <a href={archivesHref} role="menuitem" class:list={["more-item", { "more-item-active": archivesActive }]}>
+          <IconArchive class="size-4 opacity-70" />
+          <span>{archivesLabel}</span>
+        </a>
+      )
+    }
+    <div class="more-divider"></div>
+    <div class="more-accent-row">
+      <span class="more-accent-label">{accentLabel}</span>
+      <AccentPicker />
+    </div>
+    {
+      showThemeToggle && (
+        <button
+          id="theme-btn"
+          type="button"
+          class="more-item more-theme-btn"
+          title="Toggles light & dark"
+          aria-label="auto"
+          aria-live="polite"
+        >
+          <IconMoon class="block size-4 opacity-70 dark:hidden" />
+          <IconSunHigh class="hidden size-4 opacity-70 dark:block" />
+          <span class="block dark:hidden">{themeDarkLabel}</span>
+          <span class="hidden dark:block">{themeLightLabel}</span>
+        </button>
+      )
+    }
+  </div>
+</div>
+
+<script>
+  let cleanup: AbortController | null = null;
+
+  function initMoreMenu() {
+    if (cleanup) cleanup.abort();
+    cleanup = new AbortController();
+    const { signal } = cleanup;
+
+    const triggerBtn = document.getElementById("more-menu-btn") as HTMLButtonElement | null;
+    const popover = document.getElementById("more-popover") as HTMLElement | null;
+    if (!triggerBtn || !popover) return;
+
+    const close = () => {
+      popover.hidden = true;
+      triggerBtn.setAttribute("aria-expanded", "false");
+    };
+
+    triggerBtn.addEventListener(
+      "click",
+      e => {
+        e.stopPropagation();
+        const isOpen = !popover.hidden;
+        if (isOpen) {
+          close();
+        } else {
+          popover.hidden = false;
+          triggerBtn.setAttribute("aria-expanded", "true");
+        }
+      },
+      { signal }
+    );
+
+    document.addEventListener(
+      "click",
+      e => {
+        if (popover.hidden) return;
+        if (!popover.contains(e.target as Node) && e.target !== triggerBtn) close();
+      },
+      { signal }
+    );
+
+    document.addEventListener(
+      "keydown",
+      e => {
+        if (e.key === "Escape" && !popover.hidden) close();
+      },
+      { signal }
+    );
+
+    // Delegated so it keeps working even if #theme-btn gets replaced
+    // (theme.ts clones it on init/swap to strip stale listeners).
+    popover.addEventListener(
+      "click",
+      e => {
+        const target = e.target as HTMLElement;
+        if (target.closest("a") || target.closest("#theme-btn")) close();
+      },
+      { signal }
+    );
+  }
+
+  initMoreMenu();
+  document.addEventListener("astro:after-swap", initMoreMenu);
+</script>
+
+<style>
+  .more-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .more-popover {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 200;
+    min-width: 260px;
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid color-mix(in srgb, var(--color-border) 30%, transparent);
+    background: color-mix(in srgb, var(--color-background) 88%, transparent);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .more-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-foreground);
+    border-radius: 9px;
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .more-item:hover {
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+
+  .more-theme-btn {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .more-item-active {
+    color: var(--color-accent);
+  }
+
+  .more-divider {
+    margin: 6px 4px;
+    height: 1px;
+    background: color-mix(in srgb, var(--color-border) 40%, transparent);
+  }
+
+  .more-accent-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem 0.65rem 0.45rem;
+  }
+
+  .more-accent-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--color-foreground) 60%, transparent);
+  }
+
+  :global(#more-popover .accent-inline-row) {
+    justify-content: flex-start;
+  }
+</style>

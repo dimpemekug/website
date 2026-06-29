@@ -1,0 +1,514 @@
+---
+import IconSearch from "@/assets/icons/IconSearch.svg";
+import IconGallery from "@/assets/icons/IconGallery.svg";
+import Logo from "./Logo.astro";
+import LinkButton from "./LinkButton.astro";
+import MobileMenu from "./MobileMenu.astro";
+import IntroAudioCompact from "./IntroAudioCompact.astro";
+import MoreMenu from "./MoreMenu.astro";
+import { SITE } from "@/config";
+import { getLangFromUrl, useTranslations, getAlternateUrl } from "@/i18n/utils";
+
+const { pathname } = Astro.url;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const alternateLang = lang === "it" ? "en" : "it";
+const alternateUrl = getAlternateUrl(Astro.url, alternateLang);
+
+// Remove trailing slash from current pathname if exists
+const currentPath =
+  pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+
+// Normalize: strip /en prefix for section comparison
+const sectionRoot = currentPath.replace(/^\/en/, "").split("/").filter(Boolean)[0] ?? "";
+
+const isActive = (section: string) =>
+  sectionRoot === section || (section === "projects" && sectionRoot === "progetti");
+
+// Localized nav paths
+const navPosts    = lang === "en" ? "/en/posts"    : "/posts";
+const navProjects = lang === "en" ? "/en/projects" : "/progetti";
+const navTags     = lang === "en" ? "/en/tags"     : "/tags";
+const navAbout    = lang === "en" ? "/en/about"    : "/about";
+const navSearch   = lang === "en" ? "/en/search"   : "/search";
+const navArchives = lang === "en" ? "/en/archives" : "/archives";
+const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
+---
+
+<a
+  id="skip-to-content"
+  href="#main-content"
+  class="absolute start-16 -top-full z-50 rounded-b-lg bg-accent px-4 py-2 font-medium text-background transition-all focus:top-0"
+>
+  {t("nav.skip")}
+</a>
+
+<header id="main-header" class="sticky top-0 z-40 w-full transition-colors duration-300">
+  <div class="header-scrolled-filter w-full">
+    <div class="app-layout">
+      <div
+        id="top-nav-wrap"
+        class:list={[
+          "py-3 sm:py-5",
+          "relative w-full",
+          "flex items-center justify-between gap-2 sm:gap-4",
+          "transition-all duration-300",
+        ]}
+      >
+        <!-- Logo -->
+        <a
+          href="/"
+          class="group relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl shrink-0"
+        >
+          <Logo class="text-xl sm:text-2xl" />
+        </a>
+
+        <!-- Center Audio Player -->
+        {
+          SITE.introAudio.enabled && (
+            <div class="flex-1 flex justify-center min-w-0">
+              <IntroAudioCompact
+                src={SITE.introAudio.src}
+                label={SITE.introAudio.label}
+                duration={SITE.introAudio.duration}
+                isStream={SITE.introAudio.isStream}
+                class="nav-intro-audio-compact"
+              />
+            </div>
+          )
+        }
+
+        <!-- Nav area -->
+        <nav id="nav-menu" class="flex items-center sm:gap-1 shrink-0">
+          <!-- Mobile hamburger (animated lines) -->
+          <button
+            id="menu-btn"
+            class="hamburger-btn sm:hidden"
+            aria-label="Open Menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <div class="hamburger-box">
+              <span class="hamburger-line hamburger-line--1"></span>
+              <span class="hamburger-line hamburger-line--2"></span>
+              <span class="hamburger-line hamburger-line--3"></span>
+            </div>
+          </button>
+
+          <!-- Desktop links (always visible on sm+) -->
+          <ul class="hidden sm:flex sm:flex-row sm:items-center sm:gap-1">
+            <li>
+              <a
+                href={navPosts}
+                class:list={["nav-link", { "nav-active": isActive("posts") }]}
+                >{t("nav.posts")}</a
+              >
+            </li>
+            <li>
+              <a
+                href={navProjects}
+                class:list={["nav-link", { "nav-active": isActive("projects") }]}
+                >{t("nav.projects")}</a
+              >
+            </li>
+            <li>
+              <a
+                href={navAbout}
+                class:list={["nav-link", { "nav-active": isActive("about") }]}
+                >{t("nav.about")}</a
+              >
+            </li>
+            {
+              SITE.showGalleries && (
+                <li>
+                  <LinkButton
+                    href={navGalleries}
+                    class:list={[
+                      "nav-link",
+                      { "nav-active": isActive("galleries") },
+                    ]}
+                    title={t("nav.galleries")}
+                    aria-label={t("nav.galleries")}
+                  >
+                    <IconGallery class="hidden sm:inline-block" />
+                    <span class="sm:sr-only">{t("nav.galleries")}</span>
+                  </LinkButton>
+                </li>
+              )
+            }
+
+            <!-- Separator -->
+            <li class="flex items-center px-1" aria-hidden="true">
+              <div class="h-4 w-px bg-border/30"></div>
+            </li>
+
+            <li class="flex items-center">
+              <button
+                data-search-trigger
+                class="nav-search-btn"
+                title={`${t("nav.search")} (⌘K)`}
+                aria-label={t("nav.search.label")}
+                aria-keyshortcuts="Meta+K"
+              >
+                <IconSearch class="size-4.5" />
+                <kbd class="nav-kbd">⌘K</kbd>
+              </button>
+            </li>
+
+            <!-- Language switcher -->
+            <li class="flex items-center">
+              <a
+                href={alternateUrl}
+                class="nav-lang-btn"
+                title={`Switch to ${alternateLang === "en" ? "English" : "Italiano"}`}
+                aria-label={`Switch language to ${alternateLang}`}
+              >
+                {alternateLang.toUpperCase()}
+              </a>
+            </li>
+
+            <li class="flex items-center">
+              <MoreMenu
+                tagsHref={navTags}
+                tagsLabel={t("nav.tags")}
+                tagsActive={isActive("tags")}
+                archivesHref={navArchives}
+                archivesLabel={t("nav.archives")}
+                archivesActive={isActive("archives")}
+                showArchives={SITE.showArchives}
+                moreLabel={t("nav.more")}
+                accentLabel={t("nav.accent")}
+                showThemeToggle={SITE.lightAndDarkMode}
+                themeDarkLabel={t("nav.theme_dark")}
+                themeLightLabel={t("nav.theme_light")}
+              />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <MobileMenu currentPath={currentPath} />
+
+  <!-- Bottom border with gradient -->
+  <div
+    id="header-border"
+    class="header-border-line opacity-0 transition-opacity duration-300 h-px w-full bg-linear-to-r from-transparent via-border/40 to-transparent"
+  >
+  </div>
+</header>
+
+<style>
+  /* ─── Header Glass & Scroll Physics ─── */
+  #main-header {
+    background: transparent;
+  }
+  
+  :global(.header-scrolled) {
+    background: color-mix(in srgb, var(--background) 80%, transparent) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.header-scrolled .header-scrolled-filter) {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+
+  :global(.nav-intro-audio-compact) {
+    max-width: 100%;
+  }
+
+  /* ─── Desktop nav links ─── */
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--foreground);
+    border-radius: 0.5rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .nav-link:focus-visible, .nav-icon-btn:focus-visible, .nav-search-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 50%, transparent);
+  }
+
+  :is(.nav-link, .nav-icon-btn):hover {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  .nav-active {
+    color: var(--accent);
+    /* Clean active state for desktop */
+    background: transparent;
+  }
+
+  /* Glowing dot for active state (macOS Dock style) */
+  .nav-active::after {
+    content: "";
+    position: absolute;
+    bottom: -0.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 80%, transparent);
+  }
+
+  .nav-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: var(--foreground);
+  }
+
+  .nav-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 0.375rem;
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nav-lang-btn:hover {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  /* ─── Desktop Search Button with ⌘K ─── */
+  .nav-search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+    border-radius: 0.5rem;
+    background: color-mix(in srgb, var(--muted) 40%, transparent);
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nav-search-btn:hover {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  .nav-kbd {
+    display: inline-flex;
+    align-items: center;
+    font-family: inherit;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+    border-bottom-width: 2px;
+    background: color-mix(in srgb, var(--background) 90%, transparent);
+    color: var(--muted-foreground);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nav-search-btn:hover .nav-kbd {
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    color: var(--accent);
+  }
+
+  /* ─── Animated Hamburger Button ─── */
+  .hamburger-btn {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  @media (min-width: 640px) {
+    .hamburger-btn {
+      display: none;
+    }
+  }
+
+  .hamburger-btn:hover,
+  .hamburger-btn[aria-expanded="true"] {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .hamburger-box {
+    position: relative;
+    width: 18px;
+    height: 14px;
+  }
+
+  .hamburger-line {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--foreground);
+    transition:
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      top 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hamburger-line--1 {
+    top: 0;
+  }
+  .hamburger-line--2 {
+    top: 6px;
+  }
+  .hamburger-line--3 {
+    top: 12px;
+    width: 60%;
+  }
+
+  /* Open state: morph to X */
+  .hamburger-btn[aria-expanded="true"] .hamburger-line {
+    background: var(--accent);
+  }
+  .hamburger-btn[aria-expanded="true"] .hamburger-line--1 {
+    top: 6px;
+    transform: rotate(45deg);
+  }
+  .hamburger-btn[aria-expanded="true"] .hamburger-line--2 {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger-btn[aria-expanded="true"] .hamburger-line--3 {
+    top: 6px;
+    width: 100%;
+    transform: rotate(-45deg);
+  }
+
+
+</style>
+
+<script>
+  let headerCleanup: AbortController | null = null;
+  let scrollCleanup: AbortController | null = null;
+
+  function setupScrollPhysics() {
+    if (scrollCleanup) scrollCleanup.abort();
+    scrollCleanup = new AbortController();
+    const { signal } = scrollCleanup;
+
+    const header = document.getElementById("main-header");
+    const navWrap = document.getElementById("top-nav-wrap");
+    const borderLine = document.getElementById("header-border");
+
+    if (!header || !navWrap || !borderLine) return;
+
+    let rafPending = false;
+    const handleScroll = () => {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 15;
+        header.classList.toggle("header-scrolled", scrolled);
+        navWrap.classList.toggle("sm:py-5", !scrolled);
+        navWrap.classList.toggle("sm:py-3", scrolled);
+        borderLine.classList.toggle("opacity-0", !scrolled);
+        borderLine.classList.toggle("opacity-100", scrolled);
+        rafPending = false;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true, signal });
+    handleScroll(); // Init instantly
+  }
+
+  function setupMobileNav() {
+    // Cleanup previous listeners
+    if (headerCleanup) headerCleanup.abort();
+    headerCleanup = new AbortController();
+    const { signal } = headerCleanup;
+
+    const menuBtn = document.querySelector("#menu-btn");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const backdrop = document.querySelector(".mobile-menu-backdrop");
+
+    if (!menuBtn || !mobileMenu) return;
+    
+    const closeMenu = () => {
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Open Menu");
+      mobileMenu.classList.remove("is-open");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    };
+
+    menuBtn.addEventListener(
+      "click",
+      () => {
+        const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menuBtn.setAttribute("aria-expanded", "true");
+          menuBtn.setAttribute("aria-label", "Close Menu");
+          mobileMenu.classList.add("is-open");
+          mobileMenu.setAttribute("aria-hidden", "false");
+        }
+      },
+      { signal }
+    );
+    
+    // Close when clicking the backdrop
+    if (backdrop) {
+      backdrop.addEventListener("click", closeMenu, { signal });
+      window.addEventListener("scroll", closeMenu, { passive: true, signal });
+    }
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu, { signal });
+    });
+  }
+
+  // Initial load
+  setupScrollPhysics();
+  setupMobileNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", () => {
+    setupScrollPhysics();
+    setupMobileNav();
+  });
+</script>
