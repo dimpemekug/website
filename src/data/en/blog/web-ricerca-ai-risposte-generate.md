@@ -5,7 +5,6 @@ pubDatetime: 2026-06-24T08:05:00Z
 tags:
   - ai
   - seo
-  - search
   - geo
 draft: false
 ---

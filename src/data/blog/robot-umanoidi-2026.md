@@ -4,7 +4,6 @@ description: Da Tesla Optimus a Figure, i robot umanoidi stanno lasciando i vide
 pubDatetime: 2026-06-30T08:00:00Z
 tags:
   - robotics
-  - ai
   - automation
   - manufacturing
 draft: false

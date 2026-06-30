@@ -4,7 +4,6 @@ description: Companies and developers are shifting from experimentation to concr
 pubDatetime: 2026-06-02T08:05:00Z
 tags:
   - ai
-  - business
   - enterprise
   - roi
 featured: true

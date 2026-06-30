@@ -6,7 +6,6 @@ tags:
   - cybersecurity
   - passkeys
   - passwordless
-  - authentication
 draft: false
 ---
 

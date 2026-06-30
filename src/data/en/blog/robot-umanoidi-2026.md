@@ -4,7 +4,6 @@ description: From Tesla Optimus to Figure, humanoid robots are moving past polis
 pubDatetime: 2026-06-30T08:00:00Z
 tags:
   - robotics
-  - ai
   - automation
   - manufacturing
 draft: false

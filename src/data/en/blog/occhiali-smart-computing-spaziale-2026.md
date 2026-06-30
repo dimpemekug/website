@@ -6,7 +6,6 @@ tags:
   - wearables
   - ar-vr
   - spatial-computing
-  - consumer-tech
 draft: false
 ---
 

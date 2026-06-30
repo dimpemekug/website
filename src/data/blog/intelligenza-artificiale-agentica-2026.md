@@ -3,7 +3,6 @@ title: "AI Agentica: come gli assistenti intelligenti stanno passando dalle risp
 description: Gli agenti AI capaci di pianificare ed eseguire compiti in autonomia sono una delle tendenze tecnologiche più discusse del 2026. Ecco come funzionano e dove si usano già.
 pubDatetime: 2026-06-29T08:00:00Z
 tags:
-  - ai
   - ai-agents
   - automation
   - llm

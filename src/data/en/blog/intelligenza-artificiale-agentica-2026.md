@@ -3,7 +3,6 @@ title: "Agentic AI: how intelligent assistants are moving from answers to action
 description: AI agents that can plan and execute multi-step tasks on their own are one of the defining tech trends of 2026. Here's how they work and where they're already in use.
 pubDatetime: 2026-06-29T08:05:00Z
 tags:
-  - ai
   - ai-agents
   - automation
   - llm

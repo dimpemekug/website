@@ -4,7 +4,6 @@ description: I data center per addestrare e far girare i modelli AI consumano en
 pubDatetime: 2026-06-30T09:00:00Z
 tags:
   - ai
-  - energy
   - nuclear-energy
   - data-centers
 draft: false

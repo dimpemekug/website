@@ -4,7 +4,6 @@ description: The data centers that train and run AI models are consuming power a
 pubDatetime: 2026-06-30T09:00:00Z
 tags:
   - ai
-  - energy
   - nuclear-energy
   - data-centers
 draft: false

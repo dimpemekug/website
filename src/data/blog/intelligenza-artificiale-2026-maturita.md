@@ -4,7 +4,6 @@ description: Aziende e sviluppatori passano dalla sperimentazione a casi d'uso c
 pubDatetime: 2026-06-02T08:00:00Z
 tags:
   - ai
-  - business
   - enterprise
   - roi
 featured: true
