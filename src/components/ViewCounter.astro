@@ -1,0 +1,50 @@
+---
+import IconEye from "@/assets/icons/IconEye.svg";
+
+type Props = {
+  slug: string;
+  label: string;
+  class?: string;
+};
+
+const { slug, label, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={["inline-flex items-center gap-1.5", className]}
+  data-view-counter
+  data-slug={slug}
+>
+  <IconEye aria-hidden="true" class="size-3.5 text-accent/70" />
+  <span class="sr-only">{label}: </span>
+  <span class="text-sm opacity-70" data-view-count aria-hidden="true">···</span>
+</div>
+
+<script>
+  const NAMESPACE = "dimpemekug-com";
+
+  async function updateViewCounters() {
+    const counters = document.querySelectorAll<HTMLElement>(
+      "[data-view-counter]"
+    );
+
+    for (const counter of counters) {
+      const slug = counter.dataset.slug;
+      const countEl = counter.querySelector<HTMLElement>("[data-view-count]");
+      if (!slug || !countEl) continue;
+
+      try {
+        const res = await fetch(
+          `https://abacus.jasoncameron.dev/hit/${NAMESPACE}/${encodeURIComponent(slug)}`
+        );
+        if (!res.ok) throw new Error("counter request failed");
+        const data = await res.json();
+        countEl.textContent = new Intl.NumberFormat().format(data.value);
+      } catch {
+        countEl.textContent = "—";
+      }
+    }
+  }
+
+  document.addEventListener("astro:page-load", updateViewCounters);
+</script>

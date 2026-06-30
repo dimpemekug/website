@@ -50,7 +50,7 @@ const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
             <span class="opacity-40">{SITE.heroTerminalPrompt.suffix}</span>
           </div>
 
-          <h1 class="hero-title mb-3 text-4xl leading-[1.1] font-bold tracking-tight break-words sm:text-6xl lg:text-7xl">
+          <h1 class="hero-title mb-3 text-4xl leading-[1.1] font-bold tracking-tight break-words sm:text-6xl xl:text-7xl">
             {SITE.title}
           </h1>
 
@@ -142,3 +142,33 @@ const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
   </main>
   <Footer />
 </Layout>
+
+<style>
+  /* ── Hero title shimmer ── */
+  .hero-title {
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      color-mix(in oklab, var(--accent) 50%, var(--foreground)) 20%,
+      var(--foreground) 35%,
+      var(--foreground) 65%,
+      color-mix(in oklab, var(--accent) 50%, var(--foreground)) 80%,
+      var(--accent) 100%
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%,
+    100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+</style>

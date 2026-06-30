@@ -35,6 +35,12 @@ jobs:
         env:
           SITE_URL: https://dimpemekug.com
           SITE_BASE: /
+          PUBLIC_SOCIAL_GITHUB: ${{ secrets.PUBLIC_SOCIAL_GITHUB }}
+          PUBLIC_SOCIAL_X: ${{ secrets.PUBLIC_SOCIAL_X }}
+          PUBLIC_SOCIAL_LINKEDIN: ${{ secrets.PUBLIC_SOCIAL_LINKEDIN }}
+          PUBLIC_SOCIAL_EMAIL: ${{ secrets.PUBLIC_SOCIAL_EMAIL }}
+          PUBLIC_EDIT_POST_URL: ${{ secrets.PUBLIC_EDIT_POST_URL }}
+          PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.PUBLIC_GOOGLE_SITE_VERIFICATION }}
         run: npm run build
 
       - name: Upload artifact

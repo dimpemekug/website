@@ -1,11 +1,17 @@
 import type { CollectionEntry } from "astro:content";
 import { getEntryPath } from "./contentEntry";
 
+export interface HeatmapPostRef {
+  title: string;
+  href: string;
+}
+
 export interface HeatmapDay {
   date: string;
   count: number;
   level: 0 | 1 | 2 | 3 | 4;
   isFuture?: boolean;
+  posts: HeatmapPostRef[];
 }
 
 export interface LatestPost {
@@ -61,10 +67,16 @@ export function createRecentBlogHeatmap(
   const start = getStartOfWeek(today);
   start.setDate(start.getDate() - (weeks - 1) * DAYS_IN_WEEK);
 
-  const postCountByDate = new Map<string, number>();
+  const postsByDate = new Map<string, HeatmapPostRef[]>();
   for (const post of posts) {
     const key = getDateKey(post.data.pubDatetime);
-    postCountByDate.set(key, (postCountByDate.get(key) ?? 0) + 1);
+    const ref = { title: post.data.title, href: getEntryPath(post) };
+    const existing = postsByDate.get(key);
+    if (existing) {
+      existing.push(ref);
+    } else {
+      postsByDate.set(key, [ref]);
+    }
   }
 
   const days: HeatmapDay[] = [];
@@ -73,9 +85,15 @@ export function createRecentBlogHeatmap(
     date.setDate(start.getDate() + index);
     const key = getDateKey(date);
     const isFuture = date > today;
-    const count = isFuture ? 0 : postCountByDate.get(key) ?? 0;
+    const dayPosts = isFuture ? [] : postsByDate.get(key) ?? [];
 
-    days.push({ date: key, count, level: getLevel(count), isFuture });
+    days.push({
+      date: key,
+      count: dayPosts.length,
+      level: getLevel(dayPosts.length),
+      isFuture,
+      posts: dayPosts,
+    });
   }
 
   let currentStreak = 0;

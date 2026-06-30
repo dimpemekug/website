@@ -10,9 +10,11 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import GalleryEmbed from "@/components/GalleryEmbed.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
+import ViewCounter from "@/components/ViewCounter.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import { getReadingTime } from "@/utils/readingTime";
+import { useTranslations } from "@/i18n/utils";
 import { SITE } from "@/config";
 
 type Props = {
@@ -22,6 +24,7 @@ type Props = {
 
 const { post, posts } = Astro.props;
 const lang = post.collection === "blogEn" ? "en" : "it";
+const t = useTranslations(lang);
 
 const {
   title,
@@ -192,6 +195,13 @@ const nextPost =
             </div>
           )}
 
+          <!-- Views chip -->
+          <div
+            class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+          >
+            <ViewCounter slug={`${lang}-${post.id}`} label={t("posts.views")} />
+          </div>
+
           <!-- Edit post -->
           <EditPost
             {hideEditPost}
@@ -205,13 +215,13 @@ const nextPost =
     </header>
 
     {hasToc ? (
-      <div class="post-layout grid gap-8 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start">
-        <aside class="toc-sidebar lg:order-2 lg:sticky lg:top-24" aria-label={lang === "en" ? "Table of contents" : "Indice"}>
+      <div class="post-layout grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start">
+        <aside class="toc-sidebar min-w-0 lg:order-2 lg:sticky lg:top-24" aria-label={lang === "en" ? "Table of contents" : "Indice"}>
           <TableOfContents {headings} {lang} />
         </aside>
         <article
           id="article"
-          class="app-prose mt-8 w-full max-w-none lg:order-1 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
+          class="app-prose mt-8 w-full min-w-0 max-w-none lg:order-1 prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
         >
           <Content components={{ GalleryEmbed }} />
         </article>

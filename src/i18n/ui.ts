@@ -32,6 +32,7 @@ export const ui = {
     "posts.description": "Note, guide e riflessioni sullo sviluppo.",
     "posts.read_more": "Leggi →",
     "posts.min_read": "min di lettura",
+    "posts.views": "Visualizzazioni",
     // Projects
     "projects.title": "Progetti",
     "projects.description": "App e siti web che ho sviluppato.",
@@ -79,6 +80,8 @@ export const ui = {
     "home.activity.latest": "Ultimo pubblicato",
     "home.activity.less": "Meno",
     "home.activity.more": "Più",
+    "home.activity.post_count_one": "articolo",
+    "home.activity.post_count_other": "articoli",
     // Archives
     "archives.description": "Un viaggio attraverso tutto ciò che ho pubblicato, organizzato nel tempo.",
     "archives.year": "anno",
@@ -125,11 +128,14 @@ export const ui = {
     "home.activity.latest": "Latest published",
     "home.activity.less": "Less",
     "home.activity.more": "More",
+    "home.activity.post_count_one": "post",
+    "home.activity.post_count_other": "posts",
     // Posts
     "posts.title": "Posts",
     "posts.description": "Notes, guides and reflections on development.",
     "posts.read_more": "Read →",
     "posts.min_read": "min read",
+    "posts.views": "Views",
     "posts.page": "Page",
     "posts.empty": "No posts yet",
     "posts.empty_desc": "Come back later to read our upcoming articles.",

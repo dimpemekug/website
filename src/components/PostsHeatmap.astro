@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import dayjs from "dayjs";
+import "dayjs/locale/it";
 import { createRecentBlogHeatmap } from "@/utils/blog-heatmap";
 import { useTranslations } from "@/i18n/utils";
 import IconCalendar from "@/assets/icons/IconCalendar.svg";
@@ -21,6 +22,12 @@ const weekdayLabels = lang === "en" ? ["Mon", "Wed", "Fri"] : ["Lun", "Mer", "Ve
 const latestDateLabel = latest
   ? dayjs(latest.date).locale(lang).format("D MMM YYYY")
   : "";
+
+const formatPostCount = (count: number) =>
+  `${count} ${t(count === 1 ? "home.activity.post_count_one" : "home.activity.post_count_other")}`;
+
+const formatCellDate = (dateKey: string) =>
+  dayjs(dateKey).locale(lang).format("D MMM YYYY");
 ---
 
 {heatmap.totalPosts > 0 && (
@@ -52,12 +59,21 @@ const latestDateLabel = latest
         {weekdayLabels.map(label => <span>{label}</span>)}
       </div>
       <div class="heatmap-grid" style={`--weeks: ${heatmap.weeks};`}>
-        {heatmap.days.map(day => (
-          <span
-            class:list={["heatmap-cell", `level-${day.level}`, { "is-future": day.isFuture }]}
-            title={day.isFuture ? undefined : `${day.date}: ${day.count}`}
-          />
-        ))}
+        {heatmap.days.map(day =>
+          day.posts.length > 0 ? (
+            <a
+              href={day.posts[0].href}
+              class:list={["heatmap-cell", "heatmap-cell-link", `level-${day.level}`]}
+              title={`${formatCellDate(day.date)}: ${day.posts.map(p => p.title).join(", ")}`}
+              aria-label={`${formatCellDate(day.date)}: ${day.posts.map(p => p.title).join(", ")}`}
+            />
+          ) : (
+            <span
+              class:list={["heatmap-cell", `level-${day.level}`, { "is-future": day.isFuture }]}
+              title={day.isFuture ? undefined : `${formatCellDate(day.date)}: ${formatPostCount(day.count)}`}
+            />
+          )
+        )}
       </div>
     </div>
 
@@ -110,6 +126,19 @@ const latestDateLabel = latest
 
   .heatmap-cell.is-future {
     background: transparent;
+  }
+
+  .heatmap-cell-link {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .heatmap-cell-link:hover,
+  .heatmap-cell-link:focus-visible {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 60%, transparent);
+    outline: none;
   }
 
   .level-1 {
