@@ -27,20 +27,11 @@ html[data-theme="dark"][data-accent="purple"]       { --accent: #a78bfa; }
 html[data-accent="green"]                           { --accent: #16a34a; }
 html[data-theme="dark"][data-accent="green"]        { --accent: #34d399; }
 
-html[data-accent="teal"]                            { --accent: #0d9488; }
-html[data-theme="dark"][data-accent="teal"]         { --accent: #2dd4bf; }
-
 html[data-accent="rose"]                            { --accent: #e11d48; }
 html[data-theme="dark"][data-accent="rose"]         { --accent: #fb7185; }
 
 html[data-accent="orange"]                          { --accent: #ea580c; }
 html[data-theme="dark"][data-accent="orange"]       { --accent: #fb923c; }
-
-html[data-accent="pink"]                            { --accent: #db2777; }
-html[data-theme="dark"][data-accent="pink"]         { --accent: #f472b6; }
-
-html[data-accent="amber"]                           { --accent: #b45309; }
-html[data-theme="dark"][data-accent="amber"]        { --accent: #fbbf24; }
 
 @theme inline {
   --font-app: var(--font-wotfard);

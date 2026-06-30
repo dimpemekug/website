@@ -20,6 +20,7 @@ export const ui = {
     "nav.skip": "Vai al contenuto",
     "nav.more": "Altro",
     "nav.accent": "Colore d'accento",
+    "nav.theme": "Tema",
     "nav.theme_dark": "Scuro",
     "nav.theme_light": "Chiaro",
     // Home
@@ -110,6 +111,7 @@ export const ui = {
     "nav.skip": "Skip to content",
     "nav.more": "More",
     "nav.accent": "Accent color",
+    "nav.theme": "Theme",
     "nav.theme_dark": "Dark",
     "nav.theme_light": "Light",
     // Home

@@ -32,7 +32,15 @@ function setPreference(): void {
 function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", themeValue);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  document.querySelector("#theme-btn-mobile")?.setAttribute("aria-label", themeValue);
+
+  document
+    .querySelectorAll<HTMLElement>("[data-theme-value]")
+    .forEach(btn => {
+      const isActive = btn.dataset.themeValue === themeValue;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", String(isActive));
+    });
 
   // Get a reference to the body element
   const body = document.body;
@@ -82,21 +90,31 @@ function setThemeFeature(): void {
     setPreference();
   };
 
-  const themeBtn = document.querySelector("#theme-btn");
+  const setTheme = (value: string) => {
+    if (value !== LIGHT && value !== DARK) return;
+    themeValue = value;
+    window.theme?.setTheme(themeValue);
+    setPreference();
+  };
+
   const themeBtnMobile = document.querySelector("#theme-btn-mobile");
 
   // Remove previous listeners to avoid duplicates on view transitions
-  const freshBtn = themeBtn?.cloneNode(true) as Element | null;
-  if (themeBtn && freshBtn) {
-    themeBtn.replaceWith(freshBtn);
-    freshBtn.addEventListener("click", toggleTheme);
-  }
-
   const freshBtnMobile = themeBtnMobile?.cloneNode(true) as Element | null;
   if (themeBtnMobile && freshBtnMobile) {
     themeBtnMobile.replaceWith(freshBtnMobile);
     freshBtnMobile.addEventListener("click", toggleTheme);
   }
+
+  document
+    .querySelectorAll<HTMLElement>("[data-theme-value]")
+    .forEach(btn => {
+      const freshBtn = btn.cloneNode(true) as HTMLElement;
+      btn.replaceWith(freshBtn);
+      freshBtn.addEventListener("click", () =>
+        setTheme(freshBtn.dataset["themeValue"] as string)
+      );
+    });
 }
 
 // Set up theme features after page load

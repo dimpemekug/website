@@ -8,13 +8,10 @@
 <script>
   const ACCENTS = [
     { id: "blue",   label: "Blue",   swatch: "#1158d1" },
-    { id: "purple", label: "Purple", swatch: "#7c3aed" },
     { id: "green",  label: "Green",  swatch: "#16a34a" },
-    { id: "teal",   label: "Teal",   swatch: "#0d9488" },
-    { id: "rose",   label: "Rose",   swatch: "#e11d48" },
+    { id: "purple", label: "Purple", swatch: "#7c3aed" },
     { id: "orange", label: "Orange", swatch: "#ea580c" },
-    { id: "pink",   label: "Pink",   swatch: "#db2777" },
-    { id: "amber",  label: "Amber",  swatch: "#b45309" },
+    { id: "rose",   label: "Rose",   swatch: "#e11d48" },
   ] as const;
 
   type AccentId = typeof ACCENTS[number]["id"];
@@ -53,6 +50,7 @@
       btn.title = a.label;
       btn.setAttribute("aria-label", a.label);
       btn.style.background = a.swatch;
+      btn.style.setProperty("--swatch-color", a.swatch);
       if (a.id === currentId) btn.classList.add("active");
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -121,20 +119,19 @@
   /* ── Swatch buttons — :global perché creati dinamicamente via JS ── */
   :global(.accent-swatch) {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    border: 2.5px solid transparent;
+    border: none;
     padding: 0;
     cursor: pointer;
     flex-shrink: 0;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, width 0.15s ease, height 0.15s ease;
     outline: none;
   }
 
   :global(.accent-swatch:hover) {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-foreground) 20%, transparent);
+    transform: scale(1.15);
   }
 
   :global(.accent-swatch:focus-visible) {
@@ -142,8 +139,14 @@
   }
 
   :global(.accent-swatch.active) {
-    border-color: var(--color-foreground);
-    transform: scale(1.15);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-foreground) 30%, transparent);
+    width: 26px;
+    height: 26px;
+    box-shadow:
+      0 0 0 3px var(--color-background),
+      0 0 0 6px color-mix(in srgb, var(--swatch-color) 55%, transparent);
+  }
+
+  :global(.accent-swatch.active:hover) {
+    transform: none;
   }
 </style>

@@ -17,6 +17,7 @@ interface Props {
   moreLabel: string;
   accentLabel: string;
   showThemeToggle: boolean;
+  themeLabel: string;
   themeDarkLabel: string;
   themeLightLabel: string;
 }
@@ -32,6 +33,7 @@ const {
   moreLabel,
   accentLabel,
   showThemeToggle,
+  themeLabel,
   themeDarkLabel,
   themeLightLabel,
 } = Astro.props;
@@ -68,19 +70,34 @@ const {
     </div>
     {
       showThemeToggle && (
-        <button
-          id="theme-btn"
-          type="button"
-          class="more-item more-theme-btn"
-          title="Toggles light & dark"
-          aria-label="auto"
-          aria-live="polite"
-        >
-          <IconMoon class="block size-4 opacity-70 dark:hidden" />
-          <IconSunHigh class="hidden size-4 opacity-70 dark:block" />
-          <span class="block dark:hidden">{themeDarkLabel}</span>
-          <span class="hidden dark:block">{themeLightLabel}</span>
-        </button>
+        <>
+          <div class="more-divider"></div>
+          <div class="more-accent-row">
+            <span class="more-accent-label">{themeLabel}</span>
+            <div class="more-theme-buttons">
+              <button
+                id="theme-btn-light"
+                type="button"
+                class="more-theme-option"
+                data-theme-value="light"
+                aria-label={themeLightLabel}
+              >
+                <IconSunHigh class="size-4 opacity-70" />
+                <span>{themeLightLabel}</span>
+              </button>
+              <button
+                id="theme-btn-dark"
+                type="button"
+                class="more-theme-option"
+                data-theme-value="dark"
+                aria-label={themeDarkLabel}
+              >
+                <IconMoon class="size-4 opacity-70" />
+                <span>{themeDarkLabel}</span>
+              </button>
+            </div>
+          </div>
+        </>
       )
     }
   </div>
@@ -191,13 +208,37 @@ const {
     background: color-mix(in srgb, var(--color-accent) 8%, transparent);
   }
 
-  .more-theme-btn {
-    width: 100%;
-    border: none;
-    background: transparent;
+  .more-theme-buttons {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .more-theme-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
     font: inherit;
-    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--color-foreground) 65%, transparent);
+    background: color-mix(in srgb, var(--color-foreground) 5%, transparent);
+    border: 1px solid transparent;
+    border-radius: 9px;
     cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .more-theme-option:hover {
+    color: var(--color-foreground);
+  }
+
+  .more-theme-option.active {
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
   }
 
   .more-item-active {
