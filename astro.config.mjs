@@ -20,13 +20,7 @@ const isProjectPage =
   Boolean(repositoryName) &&
   repositoryName !== `${repositoryOwner}.github.io`;
 
-const githubPagesSite =
-  repositoryOwner && repositoryName
-    ? `https://${repositoryOwner}.github.io${isProjectPage ? `/${repositoryName}` : ''}`
-    : undefined;
-
-const resolvedSite =
-  customSite || (isGitHubActions && githubPagesSite ? githubPagesSite : 'https://example.com');
+const resolvedSite = customSite || SITE.website;
 
 const resolvedBase =
   customBase || (isGitHubActions && isProjectPage && repositoryName ? `/${repositoryName}` : '/');
