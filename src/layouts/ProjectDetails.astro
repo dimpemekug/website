@@ -16,7 +16,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, description, pubDatetime, appStore, playStore, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt } = project.data;
+const { title, description, pubDatetime, appStore, playStore, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const { Content, headings } = await render(project);
 const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
@@ -144,6 +144,7 @@ const websiteLabel = lang === "en" ? "Website" : "Sito web";
         {privacyDataTypes}
         {privacyStorageNote}
         {privacyUpdatedAt}
+        {privacyUrl}
       />
     )}
 

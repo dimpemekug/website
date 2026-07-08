@@ -61,6 +61,7 @@ const projectSchema = z.object({
   privacyDataTypes: z.string().optional(),
   privacyStorageNote: z.string().optional(),
   privacyUpdatedAt: z.string().optional(),
+  privacyUrl: z.string().optional(),
 });
 
 const projects = defineCollection({

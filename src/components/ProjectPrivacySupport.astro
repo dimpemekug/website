@@ -5,9 +5,10 @@ interface Props {
   privacyDataTypes?: string;
   privacyStorageNote?: string;
   privacyUpdatedAt?: string;
+  privacyUrl?: string;
 }
 
-const { title, lang = "it", privacyDataTypes, privacyStorageNote, privacyUpdatedAt } = Astro.props;
+const { title, lang = "it", privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = Astro.props;
 
 const email = "dimpemekug.app@gmail.com";
 const isEn = lang === "en";
@@ -34,6 +35,7 @@ const labels = {
   rightsBody: isEn
     ? "You can access, modify, and delete your data directly within the app."
     : "Puoi accedere, modificare ed eliminare i tuoi dati direttamente dall'app.",
+  fullPolicy: isEn ? "Read the full privacy policy" : "Leggi l'informativa completa",
   contact: isEn ? "Contact" : "Contatti",
   contactBody: isEn
     ? "For questions, bug reports, or feedback:"
@@ -105,6 +107,19 @@ const labels = {
         </div>
 
       </dl>
+
+      {privacyUrl && (
+        <a
+          href={privacyUrl}
+          class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:underline"
+        >
+          {labels.fullPolicy}
+          <svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      )}
     </div>
   </details>
 

@@ -29,8 +29,11 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => "featured" in data && data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && data.featured));
 
-const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
+const allProjects = await getCollection("projectsEn", ({ data }) => !data.draft);
+const pinnedProjectIds = ["horologe", "domometer"];
+const pinnedProjects = pinnedProjectIds
+  .map(id => allProjects.find(project => project.id === id))
+  .filter((project): project is (typeof allProjects)[number] => Boolean(project));
 ---
 
 <Layout title={SITE.title} description="App and websites. Clean code, clear ideas.">
@@ -73,18 +76,31 @@ const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
       </div>
     </section>
 
-    {projects.length > 0 && (
+    {pinnedProjects.length > 0 && (
       <section id="projects" class="pb-6">
         <div class="mb-6 flex items-center gap-3">
-          <h2 class="text-sm font-bold tracking-widest uppercase text-accent">{t("nav.projects")}</h2>
+          <h2 class="flex items-center gap-2 text-sm font-bold tracking-widest text-accent uppercase">
+            <svg
+              class="size-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="7" height="7" rx="1.5" />
+              <rect x="11" y="2" width="7" height="7" rx="1.5" />
+              <rect x="2" y="11" width="7" height="7" rx="1.5" />
+              <rect x="11" y="11" width="7" height="7" rx="1.5" />
+            </svg>
+            {t("home.projects_title")}
+          </h2>
           <div class="h-px flex-1 bg-border/20" />
         </div>
         <ul class="grid gap-4 sm:grid-cols-2 [&>li]:my-0">
-          {projects.slice(0, 2).map(project => (
+          {pinnedProjects.map(project => (
             <ProjectCard project={project} href={`/en/projects/${project.id}/`} lang="en" featured />
           ))}
         </ul>
-        {projects.length > 2 && (
+        {allProjects.length > pinnedProjects.length && (
           <div class="mt-8 mb-4 flex justify-center w-full">
             <LinkButton
               href="/en/projects/"

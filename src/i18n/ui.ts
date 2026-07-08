@@ -24,10 +24,11 @@ export const ui = {
     "nav.theme_dark": "Scuro",
     "nav.theme_light": "Chiaro",
     // Home
-    "home.featured": "In evidenza",
-    "home.recent": "Recenti",
+    "home.featured": "Articoli in evidenza",
+    "home.recent": "Articoli recenti",
     "home.all_posts": "Tutti gli articoli →",
     "home.all_projects": "Tutti i progetti →",
+    "home.projects_title": "Progetti ed App in evidenza",
     // Posts
     "posts.title": "Articoli",
     "posts.description": "Note, guide e riflessioni sullo sviluppo.",
@@ -115,10 +116,11 @@ export const ui = {
     "nav.theme_dark": "Dark",
     "nav.theme_light": "Light",
     // Home
-    "home.featured": "Featured",
-    "home.recent": "Recent",
+    "home.featured": "Featured Articles",
+    "home.recent": "Recent Articles",
     "home.all_posts": "All posts →",
     "home.all_projects": "Explore all projects",
+    "home.projects_title": "Featured Projects & Apps",
     "home.description_intro": "A space where curiosity turns into software.",
     "home.description": "I build mobile apps with Flutter, Dart, and SwiftUI, along with custom websites and WordPress themes. Every project is built with a focus on ease of use, performance, and privacy.",
     "home.terminal_path": "/welcome to",
