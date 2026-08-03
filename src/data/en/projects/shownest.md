@@ -4,6 +4,7 @@ description: "Mobile app to track TV shows and episodes, with iCloud sync and ne
 pubDatetime: 2026-07-22T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "intrattenimento", "privacy"]
+appStore: "https://apps.apple.com/it/app/shownest/id6793853311"
 privacyDataTypes: "shows added via TMDB search (title, poster, and metadata), tracked status and episode watch progress, plus language, theme, and notification preferences"
 privacyStorageNote: "If you enable iCloud Sync (optional), a copy of your library is saved to your personal iCloud via Apple's iCloud Key-Value Storage — it never passes through our servers. The app also communicates with the TMDB API to retrieve show and episode data."
 privacyUpdatedAt: "July 22, 2026"
