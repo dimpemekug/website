@@ -1,9 +1,8 @@
 interface Window {
   theme?: {
-    themeValue: string;
-    setPreference: () => void;
-    reflectPreference: () => void;
-    getTheme: () => string;
-    setTheme: (val: string) => void;
+    preference: "system" | "light" | "dark";
+    themeValue: "light" | "dark";
+    getTheme?: () => "light" | "dark";
+    setTheme?: (preference: "system" | "light" | "dark") => void;
   };
 }

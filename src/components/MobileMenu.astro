@@ -2,6 +2,7 @@
 import IconMoon from "@/assets/icons/IconMoon.svg";
 import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+import IconDeviceDesktop from "@/assets/icons/IconDeviceDesktop.svg";
 import { SITE } from "@/config";
 import AccentPicker from "./AccentPicker.astro";
 import { getLangFromUrl, useTranslations, getAlternateUrl } from "@/i18n/utils";
@@ -26,6 +27,12 @@ const navTags      = lang === "en" ? "/en/tags"     : "/tags";
 const navAbout     = lang === "en" ? "/en/about"    : "/about";
 const navArchives  = lang === "en" ? "/en/archives" : "/archives";
 const navGalleries = lang === "en" ? "/en/galleries": "/galleries";
+
+const themeOptions = [
+  { value: "system", label: t("nav.theme_system"), Icon: IconDeviceDesktop },
+  { value: "light", label: t("nav.theme_light"), Icon: IconSunHigh },
+  { value: "dark", label: t("nav.theme_dark"), Icon: IconMoon },
+];
 ---
 
 <div id="mobile-menu" class="mobile-menu sm:hidden" aria-hidden="true">
@@ -105,6 +112,24 @@ const navGalleries = lang === "en" ? "/en/galleries": "/galleries";
           <AccentPicker />
         </div>
 
+        <!-- Theme selector -->
+        {
+          SITE.lightAndDarkMode && (
+            <div class="mobile-theme-row" role="group" aria-label={t("nav.theme")}>
+              {themeOptions.map(({ value, label, Icon }) => (
+                <button
+                  type="button"
+                  class="mobile-action-btn mobile-theme-option flex-1 justify-center"
+                  data-theme-value={value}
+                >
+                  <Icon class="size-4" />
+                  <span>{label}</span>
+                </button>
+              ))}
+            </div>
+          )
+        }
+
         <!-- Bottom action row -->
         <div class="mobile-menu-actions">
           <button
@@ -123,22 +148,6 @@ const navGalleries = lang === "en" ? "/en/galleries": "/galleries";
           >
             <span>{alternateLang.toUpperCase()}</span>
           </a>
-          {
-            SITE.lightAndDarkMode && (
-              <button
-                id="theme-btn-mobile"
-                class="mobile-action-btn flex-1 justify-center"
-                title="Toggle theme"
-                aria-label="auto"
-                aria-live="polite"
-              >
-                <IconMoon class="block size-4 dark:hidden" />
-                <IconSunHigh class="hidden size-4 dark:block" />
-                <span class="block dark:hidden">{t("nav.theme_dark")}</span>
-                <span class="hidden dark:block">{t("nav.theme_light")}</span>
-              </button>
-            )
-          }
         </div>
       </div>
     </div>
@@ -284,6 +293,32 @@ const navGalleries = lang === "en" ? "/en/galleries": "/galleries";
   .mobile-menu.is-open .mobile-accent-row {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* ─── Theme selector row ─── */
+  .mobile-theme-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition-delay: 0.32s;
+  }
+
+  .mobile-menu.is-open .mobile-theme-row {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-theme-option {
+    padding-inline: 0.5rem;
+  }
+
+  .mobile-theme-option.active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
   }
 
   /* ─── Menu Divider ─── */

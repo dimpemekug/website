@@ -23,6 +23,7 @@ export const ui = {
     "nav.theme": "Tema",
     "nav.theme_dark": "Scuro",
     "nav.theme_light": "Chiaro",
+    "nav.theme_system": "Sistema",
     // Home
     "home.featured": "Articoli in evidenza",
     "home.recent": "Articoli recenti",
@@ -116,6 +117,7 @@ export const ui = {
     "nav.theme": "Theme",
     "nav.theme_dark": "Dark",
     "nav.theme_light": "Light",
+    "nav.theme_system": "System",
     // Home
     "home.featured": "Featured Articles",
     "home.recent": "Recent Articles",
