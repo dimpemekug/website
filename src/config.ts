@@ -7,6 +7,7 @@ export const SITE = {
   ogImage: "devosfera-og.webp",
   lightAndDarkMode: true,
   postPerIndex: 6,
+  featuredPerIndex: 2,
   postPerPage: 12,
   scheduledPostMargin: 15 * 60 * 1000,
   showArchives: true,
