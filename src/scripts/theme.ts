@@ -1,120 +1,93 @@
 // Constants
 const THEME = "theme";
+const SYSTEM = "system";
 const LIGHT = "light";
 const DARK = "dark";
 
-// Initial color scheme
-// Can be "light", "dark", or empty string for system's prefers-color-scheme
-const initialColorScheme = "dark";
+type ThemePreference = typeof SYSTEM | typeof LIGHT | typeof DARK;
+type ResolvedTheme = typeof LIGHT | typeof DARK;
 
-function getPreferTheme(): string {
-  // get theme data from local storage (user's explicit choice)
-  const currentTheme = localStorage.getItem(THEME);
-  if (currentTheme) return currentTheme;
+const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  // return initial color scheme if it is set (site default)
-  if (initialColorScheme) return initialColorScheme;
-
-  // return user device's prefer color scheme (system fallback)
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? DARK
-    : LIGHT;
+function isPreference(value: unknown): value is ThemePreference {
+  return value === SYSTEM || value === LIGHT || value === DARK;
 }
 
-// Use existing theme value from inline script if available, otherwise detect
-let themeValue = window.theme?.themeValue ?? getPreferTheme();
-
-function setPreference(): void {
-  localStorage.setItem(THEME, themeValue);
-  reflectPreference();
+// User's explicit choice from local storage; anything else means "follow the system"
+function getStoredPreference(): ThemePreference {
+  const stored = localStorage.getItem(THEME);
+  return isPreference(stored) ? stored : SYSTEM;
 }
+
+function resolveTheme(pref: ThemePreference): ResolvedTheme {
+  if (pref !== SYSTEM) return pref;
+  return darkQuery.matches ? DARK : LIGHT;
+}
+
+// Use existing preference from inline script if available, otherwise detect
+let preference: ThemePreference = window.theme?.preference ?? getStoredPreference();
+let themeValue: ResolvedTheme = resolveTheme(preference);
 
 function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", themeValue);
 
-  document.querySelector("#theme-btn-mobile")?.setAttribute("aria-label", themeValue);
+  if (window.theme) {
+    window.theme.preference = preference;
+    window.theme.themeValue = themeValue;
+  }
 
   document
     .querySelectorAll<HTMLElement>("[data-theme-value]")
     .forEach(btn => {
-      const isActive = btn.dataset.themeValue === themeValue;
+      const isActive = btn.dataset.themeValue === preference;
       btn.classList.toggle("active", isActive);
       btn.setAttribute("aria-pressed", String(isActive));
     });
 
-  // Get a reference to the body element
+  // Sync <meta theme-color> with the body background
   const body = document.body;
-
-  // Check if the body element exists before using getComputedStyle
   if (body) {
-    // Get the computed styles for the body element
-    const computedStyles = window.getComputedStyle(body);
-
-    // Get the background color property
-    const bgColor = computedStyles.backgroundColor;
-
-    // Set the background color in <meta theme-color ... />
+    const bgColor = window.getComputedStyle(body).backgroundColor;
     document
       .querySelector("meta[name='theme-color']")
       ?.setAttribute("content", bgColor);
   }
 }
 
-// Update the global theme API
-if (window.theme) {
-  window.theme.setPreference = setPreference;
-  window.theme.reflectPreference = reflectPreference;
-} else {
-  window.theme = {
-    themeValue,
-    setPreference,
-    reflectPreference,
-    getTheme: () => themeValue,
-    setTheme: (val: string) => {
-      themeValue = val;
-    },
-  };
+function setPreference(value: ThemePreference): void {
+  preference = value;
+  themeValue = resolveTheme(preference);
+  localStorage.setItem(THEME, preference);
+  reflectPreference();
 }
+
+window.theme = {
+  preference,
+  themeValue,
+  getTheme: () => themeValue,
+  setTheme: setPreference,
+};
 
 // Ensure theme is reflected (in case body wasn't ready when inline script ran)
 reflectPreference();
 
 function setThemeFeature(): void {
-  // set on load so screen readers can get the latest value on the button
+  // set on load so screen readers can get the latest value on the buttons
   reflectPreference();
 
-  // now this script can find and listen for clicks on the control
-  const toggleTheme = () => {
-    themeValue = themeValue === LIGHT ? DARK : LIGHT;
-    window.theme?.setTheme(themeValue);
-    setPreference();
-  };
-
-  const setTheme = (value: string) => {
-    if (value !== LIGHT && value !== DARK) return;
-    themeValue = value;
-    window.theme?.setTheme(themeValue);
-    setPreference();
-  };
-
-  const themeBtnMobile = document.querySelector("#theme-btn-mobile");
-
-  // Remove previous listeners to avoid duplicates on view transitions
-  const freshBtnMobile = themeBtnMobile?.cloneNode(true) as Element | null;
-  if (themeBtnMobile && freshBtnMobile) {
-    themeBtnMobile.replaceWith(freshBtnMobile);
-    freshBtnMobile.addEventListener("click", toggleTheme);
-  }
-
+  // Replace buttons to drop stale listeners on view transitions
   document
     .querySelectorAll<HTMLElement>("[data-theme-value]")
     .forEach(btn => {
       const freshBtn = btn.cloneNode(true) as HTMLElement;
       btn.replaceWith(freshBtn);
-      freshBtn.addEventListener("click", () =>
-        setTheme(freshBtn.dataset["themeValue"] as string)
-      );
+      freshBtn.addEventListener("click", () => {
+        const value = freshBtn.dataset.themeValue;
+        if (isPreference(value)) setPreference(value);
+      });
     });
+
+  reflectPreference();
 }
 
 // Set up theme features after page load
@@ -123,26 +96,25 @@ setThemeFeature();
 // Runs on view transitions navigation
 document.addEventListener("astro:after-swap", setThemeFeature);
 
-// Set theme-color value before page transition
-// to avoid navigation bar color flickering in Android dark mode
+// Carry theme and theme-color into the incoming document before the swap
+// to avoid flashes and navigation bar color flickering in Android dark mode
 document.addEventListener("astro:before-swap", event => {
-  const astroEvent = event;
+  event.newDocument.documentElement.setAttribute("data-theme", themeValue);
+
   const bgColor = document
     .querySelector("meta[name='theme-color']")
     ?.getAttribute("content");
 
   if (bgColor) {
-    astroEvent.newDocument
+    event.newDocument
       .querySelector("meta[name='theme-color']")
       ?.setAttribute("content", bgColor);
   }
 });
 
-// sync with system changes
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? DARK : LIGHT;
-    window.theme?.setTheme(themeValue);
-    setPreference();
-  });
+// Follow OS changes only while the user has chosen "system"
+darkQuery.addEventListener("change", () => {
+  if (preference !== SYSTEM) return;
+  themeValue = resolveTheme(preference);
+  reflectPreference();
+});

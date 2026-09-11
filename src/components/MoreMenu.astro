@@ -4,6 +4,7 @@ import IconHash from "@/assets/icons/IconHash.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconMoon from "@/assets/icons/IconMoon.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+import IconDeviceDesktop from "@/assets/icons/IconDeviceDesktop.svg";
 import AccentPicker from "./AccentPicker.astro";
 
 interface Props {
@@ -20,6 +21,7 @@ interface Props {
   themeLabel: string;
   themeDarkLabel: string;
   themeLightLabel: string;
+  themeSystemLabel: string;
 }
 
 const {
@@ -36,7 +38,14 @@ const {
   themeLabel,
   themeDarkLabel,
   themeLightLabel,
+  themeSystemLabel,
 } = Astro.props;
+
+const themeOptions = [
+  { value: "system", label: themeSystemLabel, Icon: IconDeviceDesktop },
+  { value: "light", label: themeLightLabel, Icon: IconSunHigh },
+  { value: "dark", label: themeDarkLabel, Icon: IconMoon },
+];
 ---
 
 <div class="more-wrap" id="more-menu-wrap">
@@ -74,27 +83,17 @@ const {
           <div class="more-divider"></div>
           <div class="more-accent-row">
             <span class="more-accent-label">{themeLabel}</span>
-            <div class="more-theme-buttons">
-              <button
-                id="theme-btn-light"
-                type="button"
-                class="more-theme-option"
-                data-theme-value="light"
-                aria-label={themeLightLabel}
-              >
-                <IconSunHigh class="size-4 opacity-70" />
-                <span>{themeLightLabel}</span>
-              </button>
-              <button
-                id="theme-btn-dark"
-                type="button"
-                class="more-theme-option"
-                data-theme-value="dark"
-                aria-label={themeDarkLabel}
-              >
-                <IconMoon class="size-4 opacity-70" />
-                <span>{themeDarkLabel}</span>
-              </button>
+            <div class="more-theme-buttons" role="group" aria-label={themeLabel}>
+              {themeOptions.map(({ value, label, Icon }) => (
+                <button
+                  type="button"
+                  class="more-theme-option"
+                  data-theme-value={value}
+                >
+                  <Icon class="size-4 opacity-70" />
+                  <span>{label}</span>
+                </button>
+              ))}
             </div>
           </div>
         </>
@@ -216,12 +215,13 @@ const {
   .more-theme-option {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    padding: 0.4rem 0.5rem;
+    gap: 0.25rem;
+    padding: 0.45rem 0.35rem;
     font: inherit;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: color-mix(in srgb, var(--color-foreground) 65%, transparent);
     background: color-mix(in srgb, var(--color-foreground) 5%, transparent);

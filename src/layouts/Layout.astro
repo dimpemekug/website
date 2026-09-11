@@ -213,18 +213,17 @@ const showGrain = SITE.backdropEffects.grain;
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
     <script is:inline>
       (function () {
-        const initialColorScheme = ""; // "light" | "dark"
-        const currentTheme = localStorage.getItem("theme");
+        // Stored preference: "system" | "light" | "dark" (missing = "system")
+        const stored = localStorage.getItem("theme");
+        const preference =
+          stored === "light" || stored === "dark" ? stored : "system";
 
-        function getPreferTheme() {
-          if (currentTheme) return currentTheme;
-          if (initialColorScheme) return initialColorScheme;
-          return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        }
-
-        const themeValue = getPreferTheme();
+        const themeValue =
+          preference === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : preference;
 
         // Set theme immediately to prevent flash
         document.firstElementChild?.setAttribute("data-theme", themeValue);
@@ -236,13 +235,7 @@ const showGrain = SITE.backdropEffects.grain;
         }
 
         // Export minimal API for external script
-        window.theme = {
-          themeValue: themeValue,
-          getTheme: () => window.theme.themeValue,
-          setTheme: val => {
-            window.theme.themeValue = val;
-          },
-        };
+        window.theme = { preference, themeValue };
       })();
     </script>
   </head>
