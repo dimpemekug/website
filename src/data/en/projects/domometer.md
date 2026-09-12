@@ -1,6 +1,6 @@
 ---
 title: "DomoMeter"
-description: "Mobile app to monitor home utility consumption (electricity, gas, water) in a single dashboard. Data stored locally, no account required."
+description: "Mobile app to monitor home utility consumption (electricity, gas, water) in a single dashboard. Data stored locally, no account required. Free, with no ads or in-app purchases."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false
 tags: ["iOS", "Android", "mobile", "utility", "privacy"]
@@ -23,6 +23,7 @@ DomoMeter solves a concrete problem: keeping track of home utility consumption m
 - **Two interface styles** — modern iOS design and retro monospace aesthetic
 - **Dark mode** — supported in both styles
 - **Offline-first** — works without a connection, data never leaves your device
+- **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 

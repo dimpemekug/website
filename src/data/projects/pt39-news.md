@@ -1,6 +1,6 @@
 ---
 title: "PT39 News"
-description: "App mobile di informazione locale per Bagnoli Irpino e l'Irpinia, a cura del Circolo Palazzo Tenta 39. Nessuna registrazione, nessun tracciamento di terze parti."
+description: "App mobile di informazione locale per Bagnoli Irpino e l'Irpinia, a cura del Circolo Palazzo Tenta 39. Nessuna registrazione, nessun tracciamento di terze parti. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2025-11-03T00:00:00+01:00
 draft: false
 tags: ["iOS", "Android", "mobile", "news", "privacy"]
@@ -24,6 +24,7 @@ PT39 News è l'app ufficiale del Circolo Socio-Culturale Palazzo Tenta 39, attiv
 - **Ricerca avanzata** — risultati ordinati per titolo, estratto, contenuto e categorie
 - **Sezione Salvati** — ritrova facilmente gli articoli preferiti
 - **Design incentrato sulla privacy** — nessuna registrazione, nessun dato personale raccolto, nessun tracciamento di terze parti
+- **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 

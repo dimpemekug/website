@@ -1,6 +1,6 @@
 ---
 title: "ShowNest"
-description: "App mobile per tracciare serie TV ed episodi, con sincronizzazione iCloud e avvisi per i nuovi episodi. Gratuita, senza pubblicità, dati forniti da TMDB."
+description: "App mobile per tracciare serie TV ed episodi, con sincronizzazione iCloud e avvisi per i nuovi episodi. Gratuita, senza pubblicità né acquisti in-app, dati forniti da TMDB."
 pubDatetime: 2026-07-22T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "intrattenimento", "privacy"]

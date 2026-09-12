@@ -1,6 +1,6 @@
 ---
 title: "Time Tracker"
-description: "App mobile per tracciare il tempo su progetti e attività. Backup locale, report PDF, multilingua. Nessun account, nessun abbonamento."
+description: "App mobile per tracciare il tempo su progetti e attività. Backup locale, report PDF, multilingua. Nessun account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2025-12-01T00:00:00+01:00
 draft: false
 appStore: "https://apps.apple.com/app/time-tracker-momentum/id6755822750"
@@ -23,6 +23,7 @@ Time Tracker nasce per chi ha bisogno di sapere esattamente dove va il proprio t
 - **Backup locale** — i dati restano sul dispositivo, con export per sicurezza
 - **Dark mode** — interfaccia chiara o scura, a tua scelta
 - **Multilingua** — italiano, inglese, francese, tedesco, portoghese, spagnolo, russo
+- **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 

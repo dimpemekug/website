@@ -1,6 +1,6 @@
 ---
 title: "Resizo"
-description: "App per Mac per ridimensionare foto in batch: pixel, percentuale o preset, conversione HEIC in JPEG e rimozione dei metadati EXIF. Completamente offline, nessun account."
+description: "App per Mac per ridimensionare foto in batch: pixel, percentuale o preset, conversione HEIC in JPEG e rimozione dei metadati EXIF. Completamente offline e senza account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "grafica", "privacy"]
@@ -26,6 +26,7 @@ Resizo è il modo più rapido per ridimensionare le immagini sul Mac. Trascina u
 - **Originali al sicuro**: crea sempre un nuovo file con il suffisso che preferisci, senza mai sovrascrivere nulla
 - **Integrata con macOS**: trascinamento sull'icona nel Dock, "Apri con…" e servizio "Ridimensiona con Resizo" dal Finder, scorciatoie da tastiera
 - **Tema chiaro, scuro o automatico**: interfaccia in italiano e in inglese
+- **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 

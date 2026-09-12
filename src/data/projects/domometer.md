@@ -1,6 +1,6 @@
 ---
 title: "DomoMeter"
-description: "App mobile per monitorare i consumi domestici di luce, gas e acqua in un'unica dashboard. Dati salvati localmente, nessun account richiesto."
+description: "App mobile per monitorare i consumi domestici di luce, gas e acqua in un'unica dashboard. Dati salvati localmente, nessun account richiesto. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false
 tags: ["iOS", "Android", "mobile", "utility", "privacy"]
@@ -23,6 +23,7 @@ DomoMeter nasce da un problema concreto: tenere traccia dei consumi domestici si
 - **Due stili di interfaccia** — design moderno iOS e look retro monospaziato
 - **Dark mode** — supportata in entrambi gli stili
 - **Offline-first** — funziona senza connessione, i dati non lasciano mai il dispositivo
+- **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
