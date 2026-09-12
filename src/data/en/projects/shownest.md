@@ -1,6 +1,6 @@
 ---
 title: "ShowNest"
-description: "Mobile app to track TV shows and episodes, with iCloud sync and new-episode alerts. Free, with no ads, data provided by TMDB."
+description: "Mobile app to track TV shows and episodes, with iCloud sync and new-episode alerts. Free, with no ads or in-app purchases, data provided by TMDB."
 pubDatetime: 2026-07-22T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "intrattenimento", "privacy"]

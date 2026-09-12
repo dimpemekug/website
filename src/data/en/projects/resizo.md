@@ -1,6 +1,6 @@
 ---
 title: "Resizo"
-description: "Mac app to batch-resize photos: by pixels, percentage, or preset, with HEIC-to-JPEG conversion and EXIF metadata removal. Fully offline, no account."
+description: "Mac app to batch-resize photos: by pixels, percentage, or preset, with HEIC-to-JPEG conversion and EXIF metadata removal. Fully offline, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "grafica", "privacy"]
@@ -26,6 +26,7 @@ Resizo is the fastest way to resize images on your Mac. Drop one photo or a hund
 - **Originals stay safe**: always creates a new file with the suffix of your choice and never overwrites anything
 - **Built for macOS**: drag onto the Dock icon, "Open With…" and the "Resize with Resizo" service in Finder, keyboard shortcuts
 - **Light, dark, or automatic appearance**: interface in English and Italian
+- **No subscription**: free, with no ads and no in-app purchases
 
 ## Platforms
 

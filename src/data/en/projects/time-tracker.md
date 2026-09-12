@@ -1,6 +1,6 @@
 ---
 title: "Time Tracker"
-description: "Mobile app to track time across projects and activities. Local backup, PDF reports, multi-language. No account, no subscription."
+description: "Mobile app to track time across projects and activities. Local backup, PDF reports, multi-language. No account. Free, with no ads or in-app purchases."
 pubDatetime: 2025-12-01T00:00:00+01:00
 draft: false
 appStore: "https://apps.apple.com/app/time-tracker-momentum/id6755822750"
@@ -23,6 +23,7 @@ Time Tracker is built for anyone who needs to know exactly where their time goes
 - **Local backup** — data stays on your device, with export for peace of mind
 - **Dark mode** — light or dark interface, your choice
 - **Multi-language** — Italian, English, French, German, Portuguese, Spanish, Russian
+- **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 

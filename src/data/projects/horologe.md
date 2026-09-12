@@ -1,6 +1,6 @@
 ---
 title: "Horologe"
-description: "App mobile per catalogare e gestire la tua collezione di orologi. Statistiche, stato e wishlist, registro al polso e blocco biometrico. Database locale, nessun abbonamento."
+description: "App mobile per catalogare e gestire la tua collezione di orologi. Statistiche, stato e wishlist, registro al polso e blocco biometrico. Database locale, gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-02-11T00:00:00+01:00
 draft: false
 appStore: "https://apps.apple.com/us/app/horologe/id6758836092"
