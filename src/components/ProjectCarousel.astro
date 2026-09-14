@@ -1,0 +1,169 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+import { useTranslations } from "@/i18n/utils";
+
+type Props = {
+  projects: (CollectionEntry<"projects"> | CollectionEntry<"projectsEn">)[];
+  hrefPrefix: string;
+  lang: "it" | "en";
+};
+
+const { projects, hrefPrefix, lang } = Astro.props;
+const t = useTranslations(lang);
+
+const arrowClass =
+  "inline-flex size-8 items-center justify-center rounded-full border border-border/30 bg-muted/15 text-foreground/70 transition-colors hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-30";
+---
+
+<div data-project-carousel data-page-label={t("home.carousel.page")}>
+  <div class="mb-6 flex items-center gap-3">
+    <h2 class="flex items-center gap-2 text-sm font-bold tracking-widest text-accent uppercase">
+      <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <rect x="2" y="2" width="7" height="7" rx="1.5" />
+        <rect x="11" y="2" width="7" height="7" rx="1.5" />
+        <rect x="2" y="11" width="7" height="7" rx="1.5" />
+        <rect x="11" y="11" width="7" height="7" rx="1.5" />
+      </svg>
+      {t("home.projects_title")}
+    </h2>
+    <div class="h-px flex-1 bg-border/20" />
+    <!-- Arrows only from sm up: on phones, swiping and the dots are enough and the title keeps its room -->
+    <div data-carousel-controls class="hidden items-center gap-2 max-sm:hidden!">
+      <button type="button" data-carousel-prev class={arrowClass} aria-label={t("home.carousel.prev")}>
+        <svg class="size-4 rtl:-rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 0 1-.02 1.06L8.832 10l3.938 3.71a.75.75 0 1 1-1.04 1.08l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 0 1 1.06.02Z" clip-rule="evenodd" />
+        </svg>
+      </button>
+      <button type="button" data-carousel-next class={arrowClass} aria-label={t("home.carousel.next")}>
+        <svg class="size-4 rtl:-rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 0 1 .02-1.06L11.168 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 0 1-1.06-.02Z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Padding + negative margin leave room for the cards' hover lift and shadow, which overflow-x would clip -->
+  <ul
+    data-carousel-track
+    aria-label={t("home.projects_title")}
+    class:list={[
+      "carousel-track relative -mx-2 -my-3 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-px-2 px-2 py-3",
+      "[&>li]:my-0 [&>li]:shrink-0 [&>li]:snap-start",
+      // Phone: one card at a time, with the next one peeking in to hint at swiping
+      "[&>li]:basis-[85%]",
+      // From sm: two cards per page, snapping on the first card of each pair
+      "sm:[&>li]:basis-[calc((100%-1rem)/2)] sm:[&>li:nth-child(even)]:snap-align-none",
+    ]}
+  >
+    {projects.map(project => (
+      <ProjectCard project={project} href={`${hrefPrefix}${project.id}/`} lang={lang} featured />
+    ))}
+  </ul>
+
+  <div data-carousel-dots class="mt-4 flex justify-center gap-2"></div>
+</div>
+
+<style>
+  .carousel-track {
+    scrollbar-width: none;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  function initProjectCarousels() {
+    document.querySelectorAll<HTMLElement>("[data-project-carousel]").forEach(root => {
+      const track = root.querySelector<HTMLElement>("[data-carousel-track]");
+      const controls = root.querySelector<HTMLElement>("[data-carousel-controls]");
+      const prev = root.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+      const next = root.querySelector<HTMLButtonElement>("[data-carousel-next]");
+      const dots = root.querySelector<HTMLElement>("[data-carousel-dots]");
+      if (!track || !controls || !prev || !next || !dots) return;
+
+      const pageLabel = root.dataset.pageLabel ?? "{n} / {total}";
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let pages: number[] = [];
+      let current = 0;
+
+      // Page offsets are the snap points of the current layout (every card on phones, every pair from sm up)
+      const measure = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const items = Array.from(track.children) as HTMLElement[];
+        const offsets = items
+          .filter(item => getComputedStyle(item).scrollSnapAlign !== "none")
+          .map(item => Math.min(item.offsetLeft - items[0].offsetLeft, maxScroll));
+        pages = [...new Set(offsets.map(Math.round))];
+      };
+
+      const nearestPage = () => {
+        let best = 0;
+        pages.forEach((offset, i) => {
+          if (Math.abs(offset - track.scrollLeft) < Math.abs(pages[best] - track.scrollLeft)) best = i;
+        });
+        return best;
+      };
+
+      const goTo = (index: number) => {
+        const target = Math.max(0, Math.min(index, pages.length - 1));
+        track.scrollTo({ left: pages[target], behavior: reduceMotion.matches ? "auto" : "smooth" });
+      };
+
+      const update = () => {
+        current = nearestPage();
+        prev.disabled = current === 0;
+        next.disabled = current === pages.length - 1;
+        dots.querySelectorAll<HTMLButtonElement>("button").forEach((dot, i) => {
+          const active = i === current;
+          dot.setAttribute("aria-current", active ? "true" : "false");
+          dot.classList.toggle("w-6", active);
+          dot.classList.toggle("bg-accent", active);
+          dot.classList.toggle("w-2", !active);
+          dot.classList.toggle("bg-foreground/20", !active);
+        });
+      };
+
+      const render = () => {
+        measure();
+        const multiPage = pages.length > 1;
+        controls.classList.toggle("hidden", !multiPage);
+        controls.classList.toggle("flex", multiPage);
+        dots.hidden = !multiPage;
+        dots.replaceChildren(
+          ...pages.map((_, i) => {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className =
+              "h-2 rounded-full transition-all duration-300 hover:bg-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent motion-reduce:transition-none";
+            dot.setAttribute(
+              "aria-label",
+              pageLabel.replace("{n}", String(i + 1)).replace("{total}", String(pages.length))
+            );
+            dot.addEventListener("click", () => goTo(i));
+            return dot;
+          })
+        );
+        update();
+      };
+
+      prev.addEventListener("click", () => goTo(current - 1));
+      next.addEventListener("click", () => goTo(current + 1));
+
+      let frame = 0;
+      track.addEventListener(
+        "scroll",
+        () => {
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(update);
+        },
+        { passive: true }
+      );
+
+      new ResizeObserver(render).observe(track);
+    });
+  }
+
+  document.addEventListener("astro:page-load", initProjectCarousels);
+</script>
