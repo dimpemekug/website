@@ -33,7 +33,7 @@ const featuredPosts = sortedPosts
 const recentPosts = sortedPosts.filter(post => !featuredPosts.includes(post));
 
 const allProjects = await getCollection("projectsEn", ({ data }) => !data.draft);
-const pinnedProjectIds = ["codevault", "resizo"];
+const pinnedProjectIds = ["remuxly", "codevault"];
 const pinnedProjects = pinnedProjectIds
   .map(id => allProjects.find(project => project.id === id))
   .filter((project): project is (typeof allProjects)[number] => Boolean(project));
