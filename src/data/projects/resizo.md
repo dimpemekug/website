@@ -4,6 +4,7 @@ description: "App per Mac per ridimensionare foto in batch: pixel, percentuale o
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "grafica", "privacy"]
+appStore: "https://apps.apple.com/it/app/resizo/id6811090881?mt=12"
 privacyDataTypes: "immagini che scegli di ridimensionare, copie ridimensionate create su tua richiesta e preferenze dell'app (formato, qualità JPEG, suffisso, cartella di destinazione, preset, lingua e tema)"
 privacyStorageNote: "L'app non ha accesso alla rete: le immagini vengono elaborate in memoria sul Mac e non vengono mai caricate su alcun server. Per impostazione predefinita i metadati EXIF, compresa la posizione GPS, vengono rimossi dalle copie esportate."
 privacyUpdatedAt: "11 settembre 2026"

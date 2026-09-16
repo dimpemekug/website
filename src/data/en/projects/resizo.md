@@ -4,6 +4,7 @@ description: "Mac app to batch-resize photos: by pixels, percentage, or preset, 
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "grafica", "privacy"]
+appStore: "https://apps.apple.com/it/app/resizo/id6811090881?mt=12"
 privacyDataTypes: "images you choose to resize, resized copies created at your request, and app preferences (format, JPEG quality, suffix, destination folder, presets, language, and theme)"
 privacyStorageNote: "The app has no network access: images are processed in memory on your Mac and are never uploaded to any server. By default, EXIF metadata, including GPS location, is stripped from exported copies."
 privacyUpdatedAt: "September 11, 2026"

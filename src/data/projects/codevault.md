@@ -4,6 +4,7 @@ description: "App per iPhone, iPad e Mac per salvare, organizzare e ritrovare sn
 pubDatetime: 2026-09-12T00:00:00+02:00
 draft: false
 tags: ["iOS", "macOS", "produttività", "privacy"]
+appStore: "https://apps.apple.com/it/app/codevault-snippet-e-note/id6811374495"
 privacyDataTypes: "snippet di codice e note che crei o importi (titolo, descrizione, contenuto, linguaggio, categoria, tag), elementi nel cestino e preferenze dell'app (tema, colore di accento, lingua, impostazioni dell'editor, blocco biometrico, sincronizzazione iCloud)"
 privacyStorageNote: "Con la sincronizzazione iCloud attiva (predefinita, disattivabile), snippet e note vengono sincronizzati tra i tuoi dispositivi tramite il database privato CloudKit del tuo account iCloud — non passano mai dai nostri server. Senza iCloud l'app funziona solo in locale."
 privacyUpdatedAt: "12 settembre 2026"
