@@ -4,6 +4,7 @@ description: "iPhone, iPad, and Mac app to save, organize, and find code snippet
 pubDatetime: 2026-09-12T00:00:00+02:00
 draft: false
 tags: ["iOS", "macOS", "produttività", "privacy"]
+appStore: "https://apps.apple.com/it/app/codevault-snippet-e-note/id6811374495"
 privacyDataTypes: "code snippets and notes you create or import (title, description, content, language, category, tags), items in the trash, and app preferences (theme, accent color, language, editor settings, biometric lock, iCloud sync)"
 privacyStorageNote: "With iCloud sync on (the default, and it can be turned off), snippets and notes are synced across your devices through the CloudKit private database of your iCloud account — they never pass through our servers. Without iCloud, the app works locally only."
 privacyUpdatedAt: "September 12, 2026"
