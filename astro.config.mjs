@@ -41,6 +41,14 @@ export default defineConfig({
     }),
   ],
 
+  // The project was published as "remuxly" before it was renamed to rMux
+  redirects: {
+    "/progetti/remuxly": "/progetti/rmux/",
+    "/progetti/remuxly/privacy": "/progetti/rmux/privacy/",
+    "/en/projects/remuxly": "/en/projects/rmux/",
+    "/en/projects/remuxly/privacy": "/en/projects/rmux/privacy/",
+  },
+
   i18n: {
     defaultLocale: "it",
     locales: ["it", "en"],

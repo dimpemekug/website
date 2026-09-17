@@ -34,8 +34,8 @@ Per questo le mie app sono e resteranno **sempre gratuite**: niente pubblicità,
 - **[DomoMeter](/progetti/domometer/)** — monitora i consumi domestici di luce, gas e acqua in un'unica dashboard, senza account né server.
 - **[Horologe](/progetti/horologe/)** — catalogo privato per chi colleziona orologi, con statistiche, manutenzioni e registro al polso.
 - **[PT39 News](/progetti/pt39-news/)** — app di informazione locale per Bagnoli Irpino e l'Irpinia, senza registrazione né tracciamento di terze parti.
-- **[Remuxly](/progetti/remuxly/)** — taglia, converte e unisce video sul Mac, senza ricodificare quando possibile.
 - **[Resizo](/progetti/resizo/)** — ridimensiona foto in batch sul Mac, con conversione da HEIC a JPEG e rimozione dei metadati.
+- **[rMux](/progetti/rmux/)** — taglia, converte e unisce video sul Mac, senza ricodificare quando possibile.
 - **[ShowNest](/progetti/shownest/)** — tiene traccia delle serie TV e degli episodi, con avvisi per le nuove uscite.
 - **[Time Tracker](/progetti/time-tracker/)** — traccia il tempo su progetti e attività, con report PDF e backup locale.
 - **[WP PT39](/progetti/wp-pt39/)** — tema WordPress editoriale per magazine digitali e siti di news, scritto in PHP puro.
