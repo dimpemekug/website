@@ -34,8 +34,8 @@ That's why my apps are, and will stay, **always free**: no ads, no in-app purcha
 - **[DomoMeter](/en/projects/domometer/)** — monitors home utility consumption (electricity, gas, water) in a single dashboard, with no account and no server.
 - **[Horologe](/en/projects/horologe/)** — a private catalog for watch collectors, with stats, maintenance tracking, and a wear log.
 - **[PT39 News](/en/projects/pt39-news/)** — a local news app for Bagnoli Irpino and Irpinia, with no registration and no third-party tracking.
-- **[Remuxly](/en/projects/remuxly/)** — trims, converts, and merges videos on your Mac, without re-encoding whenever possible.
 - **[Resizo](/en/projects/resizo/)** — batch-resizes photos on your Mac, with HEIC-to-JPEG conversion and metadata removal.
+- **[rMux](/en/projects/rmux/)** — trims, converts, and merges videos on your Mac, without re-encoding whenever possible.
 - **[ShowNest](/en/projects/shownest/)** — keeps track of TV shows and episodes, with alerts for new releases.
 - **[Time Tracker](/en/projects/time-tracker/)** — tracks time across projects and tasks, with PDF reports and local backup.
 - **[WP PT39](/en/projects/wp-pt39/)** — an editorial WordPress theme for digital magazines and news sites, written in plain PHP.

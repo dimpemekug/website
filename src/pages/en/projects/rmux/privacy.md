@@ -1,12 +1,12 @@
 ---
 layout: ../../../../layouts/LegalLayout.astro
-title: "Remuxly Privacy Policy"
-description: "Full privacy policy for the Remuxly app: what data is processed, how videos are handled, and why no data ever leaves your Mac."
+title: "rMux Privacy Policy"
+description: "Full privacy policy for the rMux app: what data is processed, how videos are handled, and why no data ever leaves your Mac."
 ---
 
-Last updated: September 13, 2026
+Last updated: September 17, 2026
 
-This Privacy Policy describes how **Remuxly** handles data.
+This Privacy Policy describes how **rMux** handles data.
 
 ## Summary
 
@@ -19,7 +19,7 @@ This Privacy Policy describes how **Remuxly** handles data.
 
 ## Data processed by the app
 
-Remuxly processes only:
+rMux processes only:
 
 - the videos the user chooses to open: with "Open Video…", by dragging them into the window or onto the Dock icon, with "Open With…" from Finder, or by adding them to the "Merge Videos" window
 - the files the user chooses to use while editing: subtitles (SRT, ASS/SSA) and color lookup tables (.cube LUTs)
@@ -37,27 +37,27 @@ All data stays on the user's Mac.
 
 ## Videos and original files
 
-Remuxly never modifies the original files: every export, merge, or extraction creates a new file at the destination chosen by the user.
+rMux never modifies the original files: every export, merge, or extraction creates a new file at the destination chosen by the user.
 
 Video metadata (for example track language and title) is read to display it in the app and, if the user edits it, written only to the new exported file, always and only on the Mac.
 
 ## Third-party components
 
-Remuxly includes FFmpeg, distributed under the LGPL license, to analyze, decode, and encode videos. FFmpeg runs locally, inside the same sandbox as the app and without network access.
+rMux includes FFmpeg, distributed under the LGPL license, to analyze, decode, and encode videos. FFmpeg runs locally, inside the same sandbox as the app and without network access.
 
-Remuxly contains no analytics, advertising, crash reporting, or other external SDKs.
+rMux contains no analytics, advertising, crash reporting, or other external SDKs.
 
 ## Sync and cloud
 
-Remuxly offers no sync features and does not use iCloud. If the user opens videos from, or chooses as the destination, a folder synced by a cloud service (for example iCloud Drive), syncing is handled by that service and by macOS, not by Remuxly.
+rMux offers no sync features and does not use iCloud. If the user opens videos from, or chooses as the destination, a folder synced by a cloud service (for example iCloud Drive), syncing is handled by that service and by macOS, not by rMux.
 
 ## Notifications
 
-Remuxly can show a local notification when an export finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time from System Settings › Notifications. Notifications are generated on the Mac: no push notification service is used.
+rMux can show a local notification when an export finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time from System Settings › Notifications. Notifications are generated on the Mac: no push notification service is used.
 
 ## Device permissions
 
-Remuxly runs inside the macOS sandbox and can only access the files and folders the user explicitly chooses, by dragging, opening, or selecting them in a system panel.
+rMux runs inside the macOS sandbox and can only access the files and folders the user explicitly chooses, by dragging, opening, or selecting them in a system panel.
 
 To reopen a video or write to the chosen folder after a restart (for example for queued exports), the app saves a security-scoped bookmark to those files and folders.
 
@@ -65,7 +65,7 @@ The app does not request access to the camera, microphone, Photos library, conta
 
 ## Data sharing
 
-Remuxly does not share user data with the developer or third parties for any purpose: analytics, advertising, profiling, or tracking.
+rMux does not share user data with the developer or third parties for any purpose: analytics, advertising, profiling, or tracking.
 
 No data leaves the Mac through the app.
 
@@ -87,7 +87,7 @@ Because the developer does not receive or store any data, the developer cannot a
 
 ## Children
 
-Remuxly is not specifically directed to children and does not collect personal data from any user, children included.
+rMux is not specifically directed to children and does not collect personal data from any user, children included.
 
 ## Security
 

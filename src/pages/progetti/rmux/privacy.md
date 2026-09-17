@@ -1,12 +1,12 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
-title: "Informativa sulla Privacy - Remuxly"
-description: "Informativa completa sulla privacy dell'app Remuxly: quali dati vengono trattati, come vengono gestiti i video e perché nessun dato lascia il Mac."
+title: "Informativa sulla Privacy - rMux"
+description: "Informativa completa sulla privacy dell'app rMux: quali dati vengono trattati, come vengono gestiti i video e perché nessun dato lascia il Mac."
 ---
 
-Ultimo aggiornamento: 13 settembre 2026
+Ultimo aggiornamento: 17 settembre 2026
 
-Questa Informativa sulla Privacy descrive come **Remuxly** tratta i dati.
+Questa Informativa sulla Privacy descrive come **rMux** tratta i dati.
 
 ## Sintesi
 
@@ -19,7 +19,7 @@ Questa Informativa sulla Privacy descrive come **Remuxly** tratta i dati.
 
 ## Dati trattati dall'app
 
-Remuxly tratta esclusivamente:
+rMux tratta esclusivamente:
 
 - i video che l'utente sceglie di aprire: con "Apri Video…", trascinandoli nella finestra o sull'icona nel Dock, con "Apri con…" dal Finder, o aggiungendoli alla finestra "Unisci video"
 - i file che l'utente sceglie di usare durante la modifica: sottotitoli (SRT, ASS/SSA) e tabelle colore LUT (.cube)
@@ -37,27 +37,27 @@ Tutti i dati restano sul Mac dell'utente.
 
 ## Video e file originali
 
-Remuxly non modifica mai i file originali: ogni esportazione, unione o estrazione crea un nuovo file nella destinazione scelta dall'utente.
+rMux non modifica mai i file originali: ogni esportazione, unione o estrazione crea un nuovo file nella destinazione scelta dall'utente.
 
 I metadati dei video (ad esempio lingua e titolo delle tracce) vengono letti per mostrarli nell'app e, se l'utente li modifica, scritti solo nel nuovo file esportato, sempre e solo sul Mac.
 
 ## Componenti di terze parti
 
-Remuxly include FFmpeg, distribuito con licenza LGPL, per analizzare, decodificare e codificare i video. FFmpeg viene eseguito localmente, all'interno della stessa sandbox dell'app e senza accesso alla rete.
+rMux include FFmpeg, distribuito con licenza LGPL, per analizzare, decodificare e codificare i video. FFmpeg viene eseguito localmente, all'interno della stessa sandbox dell'app e senza accesso alla rete.
 
-Remuxly non contiene SDK di analytics, pubblicità, crash reporting o altri servizi esterni.
+rMux non contiene SDK di analytics, pubblicità, crash reporting o altri servizi esterni.
 
 ## Sincronizzazione e cloud
 
-Remuxly non offre funzioni di sincronizzazione e non usa iCloud. Se l'utente apre video o sceglie come destinazione una cartella sincronizzata da un servizio cloud (ad esempio iCloud Drive), la sincronizzazione è gestita da quel servizio e da macOS, non da Remuxly.
+rMux non offre funzioni di sincronizzazione e non usa iCloud. Se l'utente apre video o sceglie come destinazione una cartella sincronizzata da un servizio cloud (ad esempio iCloud Drive), la sincronizzazione è gestita da quel servizio e da macOS, non da rMux.
 
 ## Notifiche
 
-Remuxly può mostrare una notifica locale quando un'esportazione termina. L'autorizzazione viene chiesta da macOS la prima volta che serve e può essere revocata in qualsiasi momento da Impostazioni di Sistema › Notifiche. Le notifiche sono generate sul Mac: non viene usato alcun servizio di notifiche push.
+rMux può mostrare una notifica locale quando un'esportazione termina. L'autorizzazione viene chiesta da macOS la prima volta che serve e può essere revocata in qualsiasi momento da Impostazioni di Sistema › Notifiche. Le notifiche sono generate sul Mac: non viene usato alcun servizio di notifiche push.
 
 ## Permessi del dispositivo
 
-Remuxly funziona all'interno della sandbox di macOS e può accedere solo ai file e alle cartelle che l'utente sceglie esplicitamente, trascinandoli, aprendoli o selezionandoli in un pannello di sistema.
+rMux funziona all'interno della sandbox di macOS e può accedere solo ai file e alle cartelle che l'utente sceglie esplicitamente, trascinandoli, aprendoli o selezionandoli in un pannello di sistema.
 
 Per poter riaprire un video o scrivere nella cartella scelta anche dopo un riavvio (ad esempio per le esportazioni in coda), l'app salva un riferimento di sicurezza (security-scoped bookmark) a quei file e cartelle.
 
@@ -65,7 +65,7 @@ L'app non richiede l'accesso a fotocamera, microfono, libreria di Foto, contatti
 
 ## Condivisione dei dati
 
-Remuxly non condivide dati dell'utente con lo sviluppatore o con terze parti, per nessuna finalità: analytics, pubblicità, profilazione o tracciamento.
+rMux non condivide dati dell'utente con lo sviluppatore o con terze parti, per nessuna finalità: analytics, pubblicità, profilazione o tracciamento.
 
 Nessun dato lascia il Mac a opera dell'app.
 
@@ -87,7 +87,7 @@ Poiché lo sviluppatore non riceve né conserva alcun dato, non può accedere, c
 
 ## Minori
 
-Remuxly non è rivolta specificamente ai minori e non raccoglie dati personali di alcun utente, minori compresi.
+rMux non è rivolta specificamente ai minori e non raccoglie dati personali di alcun utente, minori compresi.
 
 ## Sicurezza
 
