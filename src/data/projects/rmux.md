@@ -4,6 +4,7 @@ description: "App per Mac per tagliare, convertire e unire video, senza ricodifi
 pubDatetime: 2026-09-14T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "video", "privacy"]
+appStore: "https://apps.apple.com/app/rmux/id6813485133?mt=12"
 privacyDataTypes: "video che scegli di aprire, file usati durante la modifica (sottotitoli SRT e ASS/SSA, LUT .cube), file creati su tua richiesta, coda di lavoro e preferenze dell'app (formato e codec predefiniti, cartella di destinazione, lingua, scorciatoie)"
 privacyStorageNote: "L'app non ha accesso alla rete: i video vengono elaborati interamente sul Mac, anche tramite i componenti FFmpeg inclusi, e non vengono mai caricati su alcun server. Gli originali non vengono mai modificati."
 privacyUpdatedAt: "17 settembre 2026"
