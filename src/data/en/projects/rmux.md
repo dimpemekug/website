@@ -4,6 +4,7 @@ description: "Mac app to trim, convert, and merge videos, without re-encoding wh
 pubDatetime: 2026-09-14T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "video", "privacy"]
+appStore: "https://apps.apple.com/app/rmux/id6813485133?mt=12"
 privacyDataTypes: "videos you choose to open, files used while editing (SRT and ASS/SSA subtitles, .cube LUTs), files created at your request, the job queue, and app preferences (default format and codec, destination folder, language, shortcuts)"
 privacyStorageNote: "The app has no network access: videos are processed entirely on your Mac, including through the bundled FFmpeg components, and are never uploaded to any server. Originals are never modified."
 privacyUpdatedAt: "September 17, 2026"

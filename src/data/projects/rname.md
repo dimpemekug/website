@@ -4,6 +4,7 @@ description: "App per Mac per rinominare file in blocco: otto regole da combinar
 pubDatetime: 2026-09-18T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "utility", "privacy"]
+appStore: "https://apps.apple.com/app/rname/id6813582676?mt=12"
 privacyDataTypes: "file e cartelle che scegli di aprire, di ciascun file il nome, il percorso, la dimensione e le date, i permessi sulle cartelle salvati come segnalibri di sicurezza e le preferenze dell'app (aspetto, lingua, ordinamento, opzioni sui file e sulle regole, preset salvati)"
 privacyStorageNote: "L'app non ha accesso alla rete: i file vengono rinominati interamente sul Mac e non vengono mai caricati su alcun server. rName non legge il contenuto dei file: ne usa solo il nome, la dimensione e le date."
 privacyUpdatedAt: "17 settembre 2026"
