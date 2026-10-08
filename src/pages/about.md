@@ -14,7 +14,7 @@ Sono **dimpemekug**, sviluppatore appassionato di tecnologia, design e tutto ci�
 
 Programmo soprattutto per divertimento. Non è il mio modo di guadagnare: è il modo in cui mi piace passare il tempo libero, tra un'idea da mettere in pratica, un problema da risolvere e la soddisfazione di vedere qualcosa funzionare.
 
-Quasi tutte le mie app nascono da un'esigenza personale. Mi serviva tenere d'occhio i consumi di casa, catalogare gli orologi, seguire le serie TV, ridimensionare una cartella di foto, tagliare un video senza perdere qualità o rimettere ordine nei nomi di centinaia di file, e non trovavo niente di semplice, pulito e rispettoso della privacy. Così me le sono scritte. Il primo utente di ogni app sono io: la uso ogni giorno, e se qualcosa non va me ne accorgo subito.
+Quasi tutte le mie app nascono da un'esigenza personale. Mi serviva tenere d'occhio i consumi di casa, catalogare gli orologi, seguire le serie TV, ridimensionare una cartella di foto, tagliare un video senza perdere qualità, rimettere ordine nei nomi di centinaia di file o correggere la data delle foto scattate con l'orologio della fotocamera sbagliato, e non trovavo niente di semplice, pulito e rispettoso della privacy. Così me le sono scritte. Il primo utente di ogni app sono io: la uso ogni giorno, e se qualcosa non va me ne accorgo subito.
 
 Altre app nascono da richieste di amici, che mi raccontano un problema e mi chiedono se si può fare qualcosa. Spesso si può, e il risultato finisce per essere utile anche a molte altre persone.
 
@@ -35,6 +35,7 @@ Per questo le mie app sono e resteranno **sempre gratuite**: niente pubblicità,
 - **[Horologe](/progetti/horologe/)** — catalogo privato per chi colleziona orologi, con statistiche, manutenzioni e registro al polso.
 - **[PT39 News](/progetti/pt39-news/)** — app di informazione locale per Bagnoli Irpino e l'Irpinia, senza registrazione né tracciamento di terze parti.
 - **[Resizo](/progetti/resizo/)** — ridimensiona foto in batch sul Mac, con conversione da HEIC a JPEG e rimozione dei metadati.
+- **[rExif](/progetti/rexif/)** — corregge data, posizione e altri metadati di foto e video sul Mac, anche in blocco, con l'anteprima di ogni modifica.
 - **[rMux](/progetti/rmux/)** — taglia, converte e unisce video sul Mac, senza ricodificare quando possibile.
 - **[rName](/progetti/rname/)** — rinomina file in blocco sul Mac, con anteprima, controllo dei conflitti e annullamento.
 - **[ShowNest](/progetti/shownest/)** — tiene traccia delle serie TV e degli episodi, con avvisi per le nuove uscite.

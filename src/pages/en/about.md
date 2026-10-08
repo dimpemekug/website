@@ -14,7 +14,7 @@ I'm **dimpemekug**, a developer passionate about technology, design, and everyth
 
 I code mostly for fun. It's not how I make a living: it's how I like to spend my free time, between an idea to try out, a problem to solve, and the satisfaction of seeing something work.
 
-Almost all of my apps start from a personal need. I wanted to keep an eye on my home's utility usage, catalog my watches, keep up with TV shows, resize a folder of photos, trim a video without losing quality, or tidy up the names of hundreds of files, and I couldn't find anything simple, clean, and respectful of privacy. So I wrote them myself. I'm the first user of every app I make: I use them every day, and if something is off, I notice right away.
+Almost all of my apps start from a personal need. I wanted to keep an eye on my home's utility usage, catalog my watches, keep up with TV shows, resize a folder of photos, trim a video without losing quality, tidy up the names of hundreds of files, or fix the dates of photos taken with the camera clock set wrong, and I couldn't find anything simple, clean, and respectful of privacy. So I wrote them myself. I'm the first user of every app I make: I use them every day, and if something is off, I notice right away.
 
 Other apps come from friends' requests: they tell me about a problem and ask whether something can be done. Often it can, and the result ends up being useful to plenty of other people too.
 
@@ -35,6 +35,7 @@ That's why my apps are, and will stay, **always free**: no ads, no in-app purcha
 - **[Horologe](/en/projects/horologe/)** — a private catalog for watch collectors, with stats, maintenance tracking, and a wear log.
 - **[PT39 News](/en/projects/pt39-news/)** — a local news app for Bagnoli Irpino and Irpinia, with no registration and no third-party tracking.
 - **[Resizo](/en/projects/resizo/)** — batch-resizes photos on your Mac, with HEIC-to-JPEG conversion and metadata removal.
+- **[rExif](/en/projects/rexif/)** — fixes the date, location, and other metadata of photos and videos on your Mac, in bulk too, with a preview of every change.
 - **[rMux](/en/projects/rmux/)** — trims, converts, and merges videos on your Mac, without re-encoding whenever possible.
 - **[rName](/en/projects/rname/)** — batch-renames files on your Mac, with a preview, conflict checks, and undo.
 - **[ShowNest](/en/projects/shownest/)** — keeps track of TV shows and episodes, with alerts for new releases.
