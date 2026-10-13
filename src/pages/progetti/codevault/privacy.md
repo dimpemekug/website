@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - CodeVault"
 description: "Informativa completa sulla privacy dell'app CodeVault: quali dati vengono trattati, come funziona la sincronizzazione iCloud e perché lo sviluppatore non riceve alcun dato."
 ---
 
-Ultimo aggiornamento: 12 settembre 2026
+Ultimo aggiornamento: 12 ottobre 2026
 
 Questa Informativa sulla Privacy descrive come **CodeVault** tratta i dati.
 
@@ -54,15 +54,40 @@ Backup JSON, esportazioni Markdown e PDF vengono creati solo su richiesta dell'u
 
 CodeVault non contiene SDK di analytics, pubblicità, crash reporting o tracciamento. L'unico servizio esterno utilizzato è iCloud di Apple, per la sincronizzazione descritta sopra.
 
-## Eliminazione dei dati
+## Condivisione dei dati
+
+CodeVault non condivide dati dell'utente con lo sviluppatore o con terze parti, per nessuna finalità: analytics, pubblicità, profilazione o tracciamento. Se la sincronizzazione iCloud è attiva, i dati restano nell'account iCloud privato dell'utente (vedi «Sincronizzazione iCloud»).
+
+## Conservazione dei dati
+
+L'app salva sul dispositivo, nel proprio contenitore:
+
+- snippet, note ed elementi nel cestino
+- le preferenze: tema, colore di accento, lingua, impostazioni dell'editor, blocco biometrico, sincronizzazione iCloud
+
+Se la sincronizzazione iCloud è attiva, snippet e note sono conservati anche nel database privato CloudKit dell'utente e le preferenze nell'archivio chiave-valore di iCloud.
+
+## Conservazione e cancellazione
 
 - Gli elementi eliminati finiscono nel cestino e vengono rimossi definitivamente dopo 30 giorni, o subito con "Svuota cestino".
 - Eliminando l'app vengono rimossi i dati locali.
 - I dati sincronizzati in iCloud possono essere eliminati da Impostazioni › [nome utente] › iCloud › Gestisci spazio › CodeVault (iPhone/iPad) o da Impostazioni di Sistema › [nome utente] › iCloud (Mac).
 
+Poiché lo sviluppatore non riceve né conserva alcun dato, non può accedere, correggere o cancellare i dati dell'utente per suo conto.
+
 ## Minori
 
 CodeVault non raccoglie dati di alcun utente, inclusi i minori.
+
+## Sicurezza
+
+L'app si affida ai meccanismi di sicurezza di iOS, iPadOS e macOS. Il blocco facoltativo con Face ID o Touch ID protegge l'accesso all'app; i dati sincronizzati sono gestiti da iCloud secondo le condizioni di Apple.
+
+Nessun metodo di archiviazione su dispositivo può essere garantito come completamente sicuro.
+
+## Modifiche a questa informativa
+
+Questa Informativa sulla Privacy può essere aggiornata nelle future versioni dell'app. L'ultima versione dovrebbe essere resa disponibile all'URL pubblico della privacy policy usato in App Store Connect.
 
 ## Contatti
 

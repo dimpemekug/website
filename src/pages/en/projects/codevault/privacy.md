@@ -4,7 +4,7 @@ title: "CodeVault Privacy Policy"
 description: "Full privacy policy for the CodeVault app: what data is processed, how iCloud sync works, and why the developer receives no data."
 ---
 
-Last updated: September 12, 2026
+Last updated: October 12, 2026
 
 This Privacy Policy describes how **CodeVault** handles data.
 
@@ -17,7 +17,7 @@ This Privacy Policy describes how **CodeVault** handles data.
 - The developer runs no servers and receives no data
 - Snippets and notes stay on the user's devices and, when sync is on, in their private iCloud account
 
-## Data handled by the app
+## Data the app handles
 
 CodeVault only handles content the user creates or imports:
 
@@ -54,15 +54,40 @@ JSON backups and Markdown and PDF exports are created only when the user asks, a
 
 CodeVault contains no analytics, advertising, crash reporting or tracking SDKs. The only external service used is Apple's iCloud, for the sync described above.
 
-## Deleting data
+## Data sharing
+
+CodeVault does not share user data with the developer or with third parties, for any purpose: analytics, advertising, profiling, or tracking. When iCloud sync is on, data stays in the user's private iCloud account (see "iCloud sync").
+
+## Data storage
+
+The app stores on the device, in its own container:
+
+- snippets, notes, and items in the trash
+- preferences: theme, accent color, language, editor settings, biometric lock, iCloud sync
+
+When iCloud sync is on, snippets and notes are also kept in the user's CloudKit private database and preferences in iCloud key-value storage.
+
+## Retention and deletion
 
 - Deleted items go to the trash and are permanently removed after 30 days, or immediately with "Empty Trash".
 - Deleting the app removes local data.
 - Data synced to iCloud can be deleted in Settings › [your name] › iCloud › Manage Storage › CodeVault (iPhone/iPad) or System Settings › [your name] › iCloud (Mac).
 
+Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
+
 ## Children
 
 CodeVault does not collect data from any user, including children.
+
+## Security
+
+The app relies on the security mechanisms of iOS, iPadOS, and macOS. The optional Face ID or Touch ID lock protects access to the app; synced data is handled by iCloud under Apple's terms.
+
+No method of on-device storage can be guaranteed to be completely secure.
+
+## Changes to this policy
+
+This Privacy Policy may be updated in future versions of the app. The latest version should be made available at the public privacy policy URL used in App Store Connect.
 
 ## Contact
 

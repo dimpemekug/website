@@ -7,7 +7,7 @@ tags: ["macOS", "desktop", "utility", "privacy"]
 appStore: "https://apps.apple.com/app/rname/id6813582676?mt=12"
 privacyDataTypes: "the files and folders you choose to open, each file's name, path, size, and dates, the folder permissions saved as security-scoped bookmarks, and the app's preferences (appearance, language, sorting, file and rule options, saved presets)"
 privacyStorageNote: "The app has no network access: files are renamed entirely on your Mac and are never uploaded to any server. rName does not read the contents of your files: it only uses their name, size, and dates."
-privacyUpdatedAt: "September 17, 2026"
+privacyUpdatedAt: "October 12, 2026"
 privacyUrl: "/en/projects/rname/privacy/"
 ---
 

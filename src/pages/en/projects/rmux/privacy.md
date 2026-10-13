@@ -13,19 +13,19 @@ This Privacy Policy describes how **rMux** handles data.
 - No account is required
 - No analytics tools are used
 - No advertising SDKs or third-party SDKs that communicate over the network are used
-- No user tracking is performed
-- The app does not connect to the Internet: it has no network entitlement, so macOS prevents it from making any connection
-- Videos are processed entirely on the Mac and are never uploaded to any server, whether the developer's or a third party's
+- No user tracking takes place
+- The app does not connect to the Internet: it has no network permission, so macOS prevents any connection
+- Videos are processed entirely on the Mac and are never uploaded to servers, whether the developer's or third parties'
 
-## Data processed by the app
+## Data the app handles
 
-rMux processes only:
+rMux only handles:
 
-- the videos the user chooses to open: with "Open Video…", by dragging them into the window or onto the Dock icon, with "Open With…" from Finder, or by adding them to the "Merge Videos" window
-- the files the user chooses to use while editing: subtitles (SRT, ASS/SSA) and color lookup tables (.cube LUTs)
-- the files the app creates at the user's request: exported or merged videos, extracted audio, video, or subtitle tracks, frames saved as images, and subtitles saved as SRT
+- the videos the user chooses to open: with "Open Video…", by dragging them into the window or onto the Dock icon, with "Open With…" from the Finder, or by adding them to the "Merge Videos" window
+- the files the user chooses to use while editing: subtitles (SRT, ASS/SSA) and LUT color tables (.cube)
+- the files the app creates at the user's request: exported or merged videos, extracted audio, video, or subtitle tracks, frames saved as images, subtitles saved as SRT
 - the job queue: queued exports, with the paths of the files involved and the chosen settings (format, encoding, trim, filters, tracks)
-- the app's preferences: default format and codec, default destination folder, interface language, and keyboard shortcuts
+- app preferences: default format and codec, default destination folder, interface language, and keyboard shortcuts
 
 Videos are read and processed locally on the Mac, including through the FFmpeg components bundled with the app (see "Third-party components").
 
@@ -37,35 +37,35 @@ All data stays on the user's Mac.
 
 ## Videos and original files
 
-rMux never modifies the original files: every export, merge, or extraction creates a new file at the destination chosen by the user.
+rMux never modifies the original files: every export, merge, or extraction creates a new file in the destination chosen by the user.
 
-Video metadata (for example track language and title) is read to display it in the app and, if the user edits it, written only to the new exported file, always and only on the Mac.
+Video metadata (for example track language and title) is read to show it in the app and, if the user edits it, written only to the new exported file, always and only on the Mac.
 
 ## Third-party components
 
-rMux includes FFmpeg, distributed under the LGPL license, to analyze, decode, and encode videos. FFmpeg runs locally, inside the same sandbox as the app and without network access.
+rMux includes FFmpeg, distributed under the LGPL license, to analyze, decode, and encode videos. FFmpeg runs locally, inside the app's own sandbox and without network access.
 
-rMux contains no analytics, advertising, crash reporting, or other external SDKs.
+rMux contains no analytics, advertising, crash reporting, or other external service SDKs.
 
 ## Sync and cloud
 
-rMux offers no sync features and does not use iCloud. If the user opens videos from, or chooses as the destination, a folder synced by a cloud service (for example iCloud Drive), syncing is handled by that service and by macOS, not by rMux.
+rMux offers no sync features and does not use iCloud. If the user opens videos from, or chooses as a destination, a folder synced by a cloud service (for example iCloud Drive), syncing is handled by that service and by macOS, not by rMux.
 
 ## Notifications
 
-rMux can show a local notification when an export finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time from System Settings › Notifications. Notifications are generated on the Mac: no push notification service is used.
+rMux can show a local notification when an export finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time in System Settings › Notifications. Notifications are generated on the Mac: no push notification service is used.
 
 ## Device permissions
 
 rMux runs inside the macOS sandbox and can only access the files and folders the user explicitly chooses, by dragging, opening, or selecting them in a system panel.
 
-To reopen a video or write to the chosen folder after a restart (for example for queued exports), the app saves a security-scoped bookmark to those files and folders.
+To reopen a video or write to the chosen folder even after a restart (for example for queued exports), the app saves a security-scoped bookmark to those files and folders.
 
 The app does not request access to the camera, microphone, Photos library, contacts, calendars, location, or biometric authentication, and has no network access.
 
 ## Data sharing
 
-rMux does not share user data with the developer or third parties for any purpose: analytics, advertising, profiling, or tracking.
+rMux does not share user data with the developer or with third parties, for any purpose: analytics, advertising, profiling, or tracking.
 
 No data leaves the Mac through the app.
 
@@ -73,21 +73,21 @@ No data leaves the Mac through the app.
 
 The app stores locally on the Mac:
 
-- the preferences (`UserDefaults`) listed in the "Data processed by the app" section
+- the preferences (`UserDefaults`) listed in "Data the app handles"
 - the job queue, in a file inside the app's container (Application Support), together with the security-scoped bookmarks of the files involved
-- the files created at the user's request, at the chosen destination
+- the files created at the user's request, in the chosen destination
 
 ## Retention and deletion
 
-- Exported files are regular user files: they stay where they were saved until the user moves or deletes them, even after the app is uninstalled.
+- Exported files are ordinary user files: they stay where they were saved until the user moves or deletes them, even after the app is uninstalled.
 - Exports can be removed from the job queue (Tools › Job Queue).
-- Uninstalling the app removes the saved preferences and job queue, subject to operating system behavior.
+- Uninstalling the app removes the saved preferences and job queue, within the limits of operating system behavior.
 
-Because the developer does not receive or store any data, the developer cannot access, correct, or delete the user's data on their behalf.
+Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
 
 ## Children
 
-rMux is not specifically directed to children and does not collect personal data from any user, children included.
+rMux is not specifically directed at children and does not collect personal data from any user, including children.
 
 ## Security
 
