@@ -1,3 +1,4 @@
-bunx lint-staged
-
-bun run build
+# Controlla tipi e frontmatter dei contenuti prima di ogni commit (circa 7 secondi).
+# Non serve installare husky: lo attiva `git config core.hooksPath .husky`.
+# La build completa la fa GitHub Actions a ogni push su main.
+npx astro check
