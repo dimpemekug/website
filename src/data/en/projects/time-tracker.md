@@ -7,7 +7,8 @@ appStore: "https://apps.apple.com/app/time-tracker-momentum/id6755822750"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.timetracker"
 privacyDataTypes: "projects, activities, time intervals, and preferences"
 privacyStorageNote: "Backups are JSON files saved locally at your choice — no automatic transmission to our servers. Backup files are not encrypted: we recommend storing them in a secure location."
-privacyUpdatedAt: "November 21, 2025"
+privacyUpdatedAt: "October 13, 2026"
+privacyUrl: "/en/projects/time-tracker/privacy/"
 ---
 
 ## What is Time Tracker?

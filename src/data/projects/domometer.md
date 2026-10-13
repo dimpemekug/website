@@ -7,7 +7,9 @@ tags: ["iOS", "Android", "mobile", "utility", "privacy"]
 appStore: "https://apps.apple.com/it/app/domometer/id6761052846"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.domoMeter"
 privacyDataTypes: "letture dei contatori, consumi mensili e impostazioni preferite"
-privacyUpdatedAt: "26 giugno 2026"
+privacyStorageNote: "Le letture restano sul dispositivo. Su iOS puoi attivare la sincronizzazione iCloud (facoltativa): i dati vanno nel tuo iCloud personale tramite Apple CloudKit, mai sui nostri server. Su Android l'app non si connette a Internet."
+privacyUpdatedAt: "13 ottobre 2026"
+privacyUrl: "/progetti/domometer/privacy/"
 ---
 
 ## Cos'è DomoMeter
