@@ -1,7 +1,7 @@
 ---
 title: "Quantum computers and cybersecurity: why 2026 could be a decisive year"
 description: Between breakthroughs in error-corrected qubits and the migration to post-quantum cryptography, 2026 marks a turning point for cybersecurity in the quantum computing era.
-pubDatetime: 2026-06-18T08:05:00Z
+pubDatetime: 2026-06-18T08:00:00Z
 tags:
   - quantum-computing
   - cybersecurity

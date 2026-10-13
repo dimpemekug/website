@@ -1,7 +1,7 @@
 ---
 title: "From hype to results: will 2026 really be the year AI grows up?"
 description: Companies and developers are shifting from experimentation to concrete, measurable use cases. We look at the data, the obstacles, and the signals pointing to AI maturity in 2026.
-pubDatetime: 2026-06-02T08:05:00Z
+pubDatetime: 2026-06-02T08:00:00Z
 tags:
   - ai
   - enterprise
