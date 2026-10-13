@@ -13,8 +13,8 @@ For years, quantum computing was treated as a distant promise — great for head
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
-    alt="Close-up of an advanced chip with complex circuitry, symbolizing quantum technology"
+    src="https://images.unsplash.com/photo-1681908571122-97f349e1ace0?w=1200&q=80"
+    alt="Inside a quantum computer: gold-plated tiers linked by dense bundles of silver wiring, against a black background"
   />
   <figcaption class="text-center">
     Every advance in quantum computing also moves the cryptography clock forward.

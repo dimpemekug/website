@@ -13,8 +13,8 @@ Per anni il calcolo quantistico è stato trattato come una promessa lontana, buo
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
-    alt="Primo piano di un chip avanzato con circuiti complessi, simbolo della tecnologia quantistica"
+    src="https://images.unsplash.com/photo-1681908571122-97f349e1ace0?w=1200&q=80"
+    alt="L'interno di un computer quantistico: piani dorati collegati da fitti fasci di cavi argentati, su sfondo nero"
   />
   <figcaption class="text-center">
     Ogni progresso nel calcolo quantistico sposta in avanti anche l'orologio della crittografia.

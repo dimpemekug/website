@@ -13,8 +13,8 @@ Una videochiamata con il volto e la voce del proprio amministratore delegato che
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80"
-    alt="Flusso di codice binario verde su sfondo nero"
+    src="https://images.unsplash.com/photo-1750096319146-6310519b5af2?w=1200&q=80"
+    alt="Un volto digitale ricoperto di righe di codice, con gli occhi che emettono luce arancione su sfondo azzurro"
   />
   <figcaption class="text-center">
     Distinguere cosa è reale da cosa è generato è diventata una sfida quotidiana per la sicurezza digitale.

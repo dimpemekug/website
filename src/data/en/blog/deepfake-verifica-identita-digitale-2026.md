@@ -13,8 +13,8 @@ A video call with the face and voice of a company's own CEO authorizing a multi-
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80"
-    alt="Stream of green binary code on a black background"
+    src="https://images.unsplash.com/photo-1750096319146-6310519b5af2?w=1200&q=80"
+    alt="A digital face covered in lines of code, its eyes glowing orange against a light blue background"
   />
   <figcaption class="text-center">
     Telling what's real from what's generated has become a daily challenge for digital security.
