@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - rManga"
 description: "Informativa completa sulla privacy dell'app rManga: quali dati vengono trattati, a quali sorgenti e server si collega e come funziona la sincronizzazione iCloud facoltativa."
 ---
 
-Ultimo aggiornamento: 12 ottobre 2026
+Ultimo aggiornamento: 13 ottobre 2026
 
 Questa Informativa sulla Privacy descrive come **rManga** tratta i dati.
 
@@ -35,7 +35,7 @@ Lo sviluppatore non raccoglie, non riceve, non vende e non condivide dati dell'u
 
 ## Connessioni di rete
 
-- **Sorgenti ed estensioni.** Le estensioni vengono scaricate dai repository che l'utente aggiunge (per le estensioni Paperback è proposto il repository pubblico Inkdex) e contattano i siti dei contenuti per cercare serie, elencare capitoli e scaricare pagine o video. Questi siti sono gestiti da terze parti, che ricevono le richieste necessarie (ad esempio i termini di ricerca e l'indirizzo IP) e le trattano secondo le proprie regole. Lo sviluppatore non gestisce né controlla questi siti.
+- **Sorgenti ed estensioni.** Le estensioni vengono scaricate dai repository che l'utente aggiunge (l'app non include né propone alcun repository) e contattano i siti dei contenuti per cercare serie, elencare capitoli e scaricare pagine o video. Questi siti sono gestiti da terze parti, che ricevono le richieste necessarie (ad esempio i termini di ricerca e l'indirizzo IP) e le trattano secondo le proprie regole. Lo sviluppatore non gestisce né controlla questi siti.
 - **Server personali.** Suwayomi, Komga, Kavita, Jellyfin e i cataloghi OPDS sono server dell'utente o da lui scelti, raggiunti con le credenziali che l'utente inserisce, anche sulla rete locale.
 - **Pagine web delle sorgenti.** Alcuni siti richiedono una verifica (ad esempio Cloudflare) o un accesso: rManga li apre in una vista web, e i cookie che quei siti impostano vengono conservati per le richieste successive.
 - **Informazioni sugli episodi.** Per i tempi di sigla e riepilogo da saltare e per titoli e anteprime degli episodi, l'app interroga AniList (con il titolo della serie), AniSkip, Anira e Kitsu (con l'identificativo della serie e il numero dell'episodio). Non vengono inviati dati dell'utente.

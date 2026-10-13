@@ -4,7 +4,7 @@ title: "rManga Privacy Policy"
 description: "Full privacy policy for the rManga app: what data is processed, which sources and servers it connects to, and how optional iCloud sync works."
 ---
 
-Last updated: October 12, 2026
+Last updated: October 13, 2026
 
 This Privacy Policy describes how **rManga** handles data.
 
@@ -35,7 +35,7 @@ The developer does not collect, receive, sell, or share user data. rManga has no
 
 ## Network connections
 
-- **Sources and extensions.** Extensions are downloaded from the repositories the user adds (for Paperback extensions the public Inkdex repository is suggested) and contact the content websites to search for series, list chapters, and download pages or videos. These websites are run by third parties, which receive the necessary requests (for example search terms and the IP address) and handle them under their own rules. The developer does not run or control these websites.
+- **Sources and extensions.** Extensions are downloaded from the repositories the user adds (the app neither includes nor suggests any repository) and contact the content websites to search for series, list chapters, and download pages or videos. These websites are run by third parties, which receive the necessary requests (for example search terms and the IP address) and handle them under their own rules. The developer does not run or control these websites.
 - **Personal servers.** Suwayomi, Komga, Kavita, Jellyfin, and OPDS catalogs are servers belonging to or chosen by the user, reached with the credentials the user enters, including on the local network.
 - **Source web pages.** Some websites require a check (for example Cloudflare) or a sign-in: rManga opens them in a web view, and the cookies those websites set are kept for later requests.
 - **Episode information.** For intro and recap skip times and for episode titles and thumbnails, the app queries AniList (with the series title), AniSkip, Anira, and Kitsu (with the series identifier and episode number). No user data is sent.
