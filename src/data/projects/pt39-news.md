@@ -9,6 +9,7 @@ playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.pt39.ne
 website: "https://www.pt39.it"
 privacyDataTypes: "preferenze di tema, layout e notifiche locali"
 privacyUpdatedAt: "29 giugno 2026"
+privacyUrl: "https://www.pt39.it/privacy-policy-app/"
 ---
 
 ## Cos'è PT39 News
