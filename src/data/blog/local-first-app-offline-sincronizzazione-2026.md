@@ -1,6 +1,6 @@
 ---
 title: "Local-first: le app che funzionano offline e sincronizzano dopo"
-description: I dati sul dispositivo, il server come copia e non come padrone. Dopo anni di prototipi, nel 2026 il local-first ha librerie mature, motori di sincronizzazione in produzione e una track dedicata al FOSDEM. Cosa vuol dire, cosa si guadagna e dove fa ancora male.
+description: "I dati sul dispositivo, il server come copia e non come padrone. Nel 2026 il local-first ha librerie mature, motori di sincronizzazione in produzione e una track dedicata al FOSDEM. Cosa vuol dire, cosa si guadagna e dove fa ancora male."
 pubDatetime: 2026-09-14T08:00:00Z
 tags:
   - software-development

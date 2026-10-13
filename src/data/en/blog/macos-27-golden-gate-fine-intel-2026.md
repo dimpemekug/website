@@ -1,6 +1,6 @@
 ---
 title: "macOS Golden Gate: the first Mac without Intel"
-description: With version 27, released on September 14, macOS runs on Apple silicon only. Intel Macs stay on Tahoe, Rosetta 2 is on its last stretch, and anyone shipping an app has a check to run today. What changes, both for people using a Mac and for people building on it.
+description: "With version 27, released on September 14, macOS runs on Apple silicon only. Intel Macs stay on Tahoe, Rosetta 2 is on its last stretch, and anyone shipping an app has a check to run today. What changes for Mac users and for developers."
 pubDatetime: 2026-09-16T08:00:00Z
 tags:
   - macos

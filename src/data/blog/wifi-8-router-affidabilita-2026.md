@@ -1,6 +1,6 @@
 ---
 title: "Wi-Fi 8: i primi router arrivano ora, lo standard nel 2028"
-description: La prossima generazione del Wi-Fi non promette più velocità di picco, ma meno pacchetti persi, meno latenza e una copertura migliore ai bordi della casa. I primi apparecchi si vedono da ottobre, la certificazione definitiva arriverà fra due anni. Conviene aspettare?
+description: "Il Wi-Fi di nuova generazione non promette più velocità di picco, ma meno pacchetti persi, meno latenza e una copertura migliore ai bordi della casa. I primi apparecchi arrivano da ottobre, la certificazione fra due anni. Conviene aspettare?"
 pubDatetime: 2026-09-15T08:00:00Z
 tags:
   - connectivity

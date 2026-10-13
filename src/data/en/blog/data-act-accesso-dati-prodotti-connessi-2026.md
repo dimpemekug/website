@@ -1,6 +1,6 @@
 ---
 title: "Data Act: since September, connected devices must open up their data"
-description: As of September 12, 2026, the EU data regulation's "access by design" obligation applies to connected products placed on the market. Cars, appliances, machinery, and their companion apps must make data available to the people who use them, in a machine-readable format. What changes for buyers and for developers.
+description: "From September 12, 2026, cars, appliances, machinery, and companion apps placed on the market must make their data available to the people who use them, in a machine-readable format. What the Data Act changes for buyers and for developers."
 pubDatetime: 2026-09-18T08:00:00Z
 tags:
   - compliance

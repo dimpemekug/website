@@ -1,6 +1,6 @@
 ---
 title: "Cyber Resilience Act: da oggi le vulnerabilità sfruttate vanno segnalate entro 24 ore"
-description: Dall'11 settembre 2026 scattano i primi obblighi del regolamento europeo sulla cybersicurezza dei prodotti digitali. Chi vende software o dispositivi connessi nell'Unione deve segnalare vulnerabilità sfruttate e incidenti gravi con tempi precisi. Cosa cambia e come prepararsi.
+description: "Dall'11 settembre 2026 scattano i primi obblighi del regolamento europeo sulla cybersicurezza dei prodotti digitali: chi vende software o dispositivi connessi nell'Unione deve segnalare vulnerabilità sfruttate e incidenti gravi. Cosa cambia e come prepararsi."
 pubDatetime: 2026-09-11T08:00:00Z
 tags:
   - cybersecurity

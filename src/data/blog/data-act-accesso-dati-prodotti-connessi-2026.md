@@ -1,6 +1,6 @@
 ---
 title: "Data Act: da settembre i dispositivi connessi devono aprire i loro dati"
-description: Dal 12 settembre 2026 l'obbligo di accesso «by design» del regolamento europeo sui dati si applica ai prodotti connessi immessi sul mercato. Auto, elettrodomestici, macchinari e app collegate devono rendere i dati disponibili a chi li usa, in un formato leggibile da una macchina. Cosa cambia per chi compra e per chi sviluppa.
+description: "Dal 12 settembre 2026 auto, elettrodomestici, macchinari e app collegate immessi sul mercato devono rendere i dati disponibili a chi li usa, in un formato leggibile da una macchina. Cosa cambia con il Data Act per chi compra e per chi sviluppa."
 pubDatetime: 2026-09-18T08:00:00Z
 tags:
   - compliance

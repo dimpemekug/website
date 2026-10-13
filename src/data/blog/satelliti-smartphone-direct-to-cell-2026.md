@@ -1,6 +1,6 @@
 ---
 title: "Smartphone via satellite: quando il segnale arriva dallo spazio"
-description: Messaggi, posizione e, più avanti, anche dati senza un'antenna a terra nel raggio di chilometri. Il collegamento diretto tra satelliti e telefoni comuni sta uscendo dalla fase sperimentale. Cosa funziona già, cosa no, e perché conta anche per chi vive in città.
+description: "Messaggi, posizione e più avanti anche dati, senza un'antenna a terra nel raggio di chilometri: il collegamento diretto tra satelliti e telefoni comuni esce dalla fase sperimentale. Cosa funziona già, cosa no, e perché conta anche in città."
 pubDatetime: 2026-08-31T08:00:00Z
 tags:
   - satellite
