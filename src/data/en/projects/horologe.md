@@ -7,7 +7,7 @@ appStore: "https://apps.apple.com/us/app/horologe/id6758836092"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.horologe"
 privacyDataTypes: "watch details (brand, model, price, dates), photos, service records, wishlist, wear log, accuracy measurements, and attached documents"
 privacyStorageNote: "If you enable iCloud sync (optional, iOS only), a copy of the backup is saved to your personal iCloud via Apple CloudKit — it never passes through our servers."
-privacyUpdatedAt: "July 8, 2026"
+privacyUpdatedAt: "October 13, 2026"
 privacyUrl: "/en/projects/horologe/privacy/"
 ---
 
