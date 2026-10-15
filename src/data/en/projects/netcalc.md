@@ -29,7 +29,7 @@ NetCalc Pro works out a network's addressing plan, generates the commands to con
 - **On iPhone, iPad, and Mac**: free, with no ads or in-app purchases, with menus and keyboard shortcuts on the Mac; English and Italian, light or dark theme, and an accent color of your choice
 - **Privacy**: no account and no tracking; calculations stay on the device, and projects only go through your private iCloud
 
-Cisco and IOS are trademarks of Cisco Systems, Inc., mentioned only to describe the command format; NetCalc Pro is not affiliated with Cisco.
+Cisco and Cisco IOS are trademarks or registered trademarks of Cisco Systems, Inc. and/or its affiliates in the U.S. and other countries. NetCalc Pro generates commands in Cisco IOS syntax; it is not developed, sponsored, or endorsed by Cisco and is not affiliated with Cisco. Other trademarks are the property of their respective owners.
 
 ## Platforms
 

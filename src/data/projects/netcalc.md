@@ -29,7 +29,7 @@ NetCalc Pro calcola il piano di indirizzamento di una rete, genera i comandi per
 - **Su iPhone, iPad e Mac**: gratuita, senza pubblicità né acquisti in-app, con menu e scorciatoie da tastiera su Mac; italiano e inglese, tema chiaro o scuro e colore d'accento a scelta
 - **Privacy**: nessun account e nessun tracciamento; i calcoli restano sul dispositivo e i progetti passano solo dal tuo iCloud privato
 
-Cisco e IOS sono marchi di Cisco Systems, Inc., citati solo per indicare il formato dei comandi; NetCalc Pro non è affiliata a Cisco.
+Cisco e Cisco IOS sono marchi o marchi registrati di Cisco Systems, Inc. e/o delle sue affiliate negli Stati Uniti e in altri Paesi. NetCalc Pro genera comandi nella sintassi di Cisco IOS; non è sviluppata, sponsorizzata né approvata da Cisco e non è affiliata a Cisco. Gli altri marchi citati appartengono ai rispettivi proprietari.
 
 ## Piattaforme
 
