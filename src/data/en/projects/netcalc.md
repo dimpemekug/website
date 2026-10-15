@@ -1,12 +1,12 @@
 ---
 title: "NetCalc Pro"
-description: "Networking app for iPhone, iPad, and Mac: IPv4 and IPv6 calculators, subnetting and VLSM, Cisco IOS-style commands for routers and switches, and a checker that finds mistakes before you power on the lab. No account, no Internet."
+description: "Networking app for iPhone, iPad, and Mac: IPv4 and IPv6 calculators, subnetting and VLSM, Cisco IOS-style commands for routers and switches, and a checker that finds mistakes before you power on the lab. Free, no account, with iCloud sync."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["iOS", "macOS", "networking", "privacy"]
 privacyDataTypes: "the addresses and values you use in calculations, your projects with their devices and configurations, and the app's preferences"
-privacyStorageNote: "Every calculation happens on your device: NetCalc Pro makes no network requests, and projects and preferences stay on your iPhone, iPad, or Mac."
-privacyUpdatedAt: "October 12, 2026"
+privacyStorageNote: "Every calculation happens on your device. With iCloud sync on (the default, and it can be turned off), projects and preferences are synced across your devices through the CloudKit private database of your iCloud account — they never pass through our servers. Without iCloud, they stay on your iPhone, iPad, or Mac."
+privacyUpdatedAt: "October 14, 2026"
 privacyUrl: "/en/projects/netcalc/privacy/"
 ---
 
@@ -23,13 +23,14 @@ NetCalc Pro works out a network's addressing plan, generates the commands to con
 - **Import a running-config**: paste it and find it in your project, device by device
 - **Projects**: devices and interfaces organized by lab, with search, duplication, and undo
 - **Lab checker**: finds overlapping subnets, duplicate or unusable addresses, unreachable next hops, networks missing from OSPF, and DHCP gateways outside the pool, with an explanation and the fix
-- **Learn**: a 13-chapter networking guide with worked examples, a searchable glossary, Beginner mode with more help, and Expert mode when you want less
+- **Learn**: a 21-chapter networking guide with worked examples, a searchable glossary, Beginner mode with more help, and Expert mode when you want less
 - **Export and share**: plans and projects as PDF, CSV, or text; actions for Shortcuts and Spotlight
-- **On iPhone, iPad, and Mac**: one purchase for all your devices, with menus and keyboard shortcuts on the Mac; English and Italian, light or dark theme, and an accent color of your choice
-- **Privacy**: no account, no tracking, and no Internet connection
+- **iCloud sync**: projects and settings kept up to date across iPhone, iPad, and Mac, with a local-only fallback if iCloud isn't available
+- **On iPhone, iPad, and Mac**: free, with no ads or in-app purchases, with menus and keyboard shortcuts on the Mac; English and Italian, light or dark theme, and an accent color of your choice
+- **Privacy**: no account and no tracking; calculations stay on the device, and projects only go through your private iCloud
 
 Cisco and IOS are trademarks of Cisco Systems, Inc., mentioned only to describe the command format; NetCalc Pro is not affiliated with Cisco.
 
 ## Platforms
 
-Coming to the App Store for **iPhone** and **iPad** with iOS/iPadOS 17 or later, and for **Mac** with macOS 14 or later.
+Coming to the App Store for **iPhone** and **iPad** with iOS/iPadOS 17 or later, and for **Mac** with macOS 14 or later: one free app for all your devices.

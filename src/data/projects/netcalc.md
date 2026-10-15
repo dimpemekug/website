@@ -1,12 +1,12 @@
 ---
 title: "NetCalc Pro"
-description: "App per iPhone, iPad e Mac per le reti: calcolo IPv4 e IPv6, subnetting e VLSM, comandi in stile Cisco IOS per router e switch e una verifica che trova gli errori prima di accendere il laboratorio. Senza account e senza connessione."
+description: "App per iPhone, iPad e Mac per le reti: calcolo IPv4 e IPv6, subnetting e VLSM, comandi in stile Cisco IOS per router e switch e una verifica che trova gli errori prima di accendere il laboratorio. Gratuita, senza account e con la sincronizzazione iCloud."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["iOS", "macOS", "reti", "privacy"]
 privacyDataTypes: "gli indirizzi e i valori che usi nei calcoli, i progetti con i loro dispositivi e configurazioni, e le preferenze dell'app"
-privacyStorageNote: "Tutti i calcoli avvengono sul dispositivo: NetCalc Pro non effettua richieste di rete e progetti e preferenze restano sul tuo iPhone, iPad o Mac."
-privacyUpdatedAt: "12 ottobre 2026"
+privacyStorageNote: "Tutti i calcoli avvengono sul dispositivo. Con la sincronizzazione iCloud attiva (predefinita, disattivabile), progetti e preferenze passano tra i tuoi dispositivi tramite il database privato CloudKit del tuo account iCloud — mai dai nostri server. Senza iCloud restano sul tuo iPhone, iPad o Mac."
+privacyUpdatedAt: "14 ottobre 2026"
 privacyUrl: "/progetti/netcalc/privacy/"
 ---
 
@@ -23,13 +23,14 @@ NetCalc Pro calcola il piano di indirizzamento di una rete, genera i comandi per
 - **Importa una running-config**: incollala e ritrovala nel progetto, dispositivo per dispositivo
 - **Progetti**: dispositivi e interfacce organizzati per laboratorio, con ricerca, duplicazione e annulla
 - **Verifica del laboratorio**: trova subnet sovrapposte, indirizzi duplicati o non assegnabili, next-hop irraggiungibili, reti non annunciate in OSPF e gateway DHCP fuori dal pool, con la spiegazione e la correzione
-- **Per studiare**: guida alle reti in 13 capitoli con esempi svolti, glossario ricercabile, modalità Principiante con più aiuti e modalità Esperto più essenziale
+- **Per studiare**: guida alle reti in 21 capitoli con esempi svolti, glossario ricercabile, modalità Principiante con più aiuti e modalità Esperto più essenziale
 - **Esporta e condividi**: piani e progetti in PDF, CSV o testo; azioni per Comandi rapidi e Spotlight
-- **Su iPhone, iPad e Mac**: un solo acquisto per tutti i dispositivi, con menu e scorciatoie da tastiera su Mac; italiano e inglese, tema chiaro o scuro e colore d'accento a scelta
-- **Privacy**: nessun account, nessun tracciamento e nessuna connessione a Internet
+- **Sincronizzazione iCloud**: progetti e impostazioni sempre aggiornati fra iPhone, iPad e Mac, con funzionamento in locale se iCloud non è disponibile
+- **Su iPhone, iPad e Mac**: gratuita, senza pubblicità né acquisti in-app, con menu e scorciatoie da tastiera su Mac; italiano e inglese, tema chiaro o scuro e colore d'accento a scelta
+- **Privacy**: nessun account e nessun tracciamento; i calcoli restano sul dispositivo e i progetti passano solo dal tuo iCloud privato
 
 Cisco e IOS sono marchi di Cisco Systems, Inc., citati solo per indicare il formato dei comandi; NetCalc Pro non è affiliata a Cisco.
 
 ## Piattaforme
 
-In arrivo sull'App Store per **iPhone** e **iPad** con iOS/iPadOS 17 o successivi e per **Mac** con macOS 14 o successivi.
+In arrivo sull'App Store per **iPhone** e **iPad** con iOS/iPadOS 17 o successivi e per **Mac** con macOS 14 o successivi: un'unica app gratuita per tutti i tuoi dispositivi.

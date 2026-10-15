@@ -1,10 +1,10 @@
 ---
 layout: ../../../../layouts/LegalLayout.astro
 title: "NetCalc Pro Privacy Policy"
-description: "Full privacy policy for the NetCalc Pro app: what data is processed and why calculations and projects stay on your device."
+description: "Full privacy policy for the NetCalc Pro app: what data is processed and why calculations and projects stay on your devices and in your private iCloud."
 ---
 
-Last updated: October 12, 2026
+Last updated: October 14, 2026
 
 This Privacy Policy describes how **NetCalc Pro** handles data.
 
@@ -14,8 +14,8 @@ This Privacy Policy describes how **NetCalc Pro** handles data.
 - No analytics tools are used
 - No advertising SDKs or third-party SDKs are used
 - No user tracking takes place
-- The app makes no network requests: all calculations happen on the device
-- Projects and preferences stay on the user's device
+- All calculations happen on the device; the only connection is iCloud's, when sync is on
+- Projects and preferences stay on the user's devices and, with sync on, in their private iCloud
 
 ## Data the app handles
 
@@ -27,7 +27,7 @@ NetCalc Pro only handles the content the user enters:
 
 ## Data collection
 
-The developer does not collect, receive, transmit, sell, or share user data. The app does not communicate with any server, whether the developer's or third parties'.
+The developer does not collect, receive, transmit, sell, or share user data. The app does not communicate with the developer's servers or with third parties: its only connection is to Apple's iCloud, when sync is on (see "Data storage").
 
 ## Export and sharing
 
@@ -52,12 +52,12 @@ The app stores on the device, in its own container:
 - projects and devices, in a local database (SwiftData)
 - preferences
 
-Data is not synced with iCloud or any other service.
+If iCloud sync is on (Settings › Sync), projects, devices and preferences are also copied to the user's **private** iCloud database, so they are available on the other devices signed into the same Apple Account. This data stays in the user's iCloud account, is handled by Apple under its privacy policy, and the developer cannot read it. Sync can be turned off at any time in Settings.
 
 ## Retention and deletion
 
 - Projects and devices are edited or deleted in the app.
-- Uninstalling the app removes projects and preferences, within the limits of operating system behavior.
+- Uninstalling the app removes projects and preferences from the device, within the limits of operating system behavior. Copies in iCloud are deleted from Settings › [name] › iCloud › Manage Storage on the Apple device.
 - Exported files stay where the user saved them until they are deleted.
 
 Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
