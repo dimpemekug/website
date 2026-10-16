@@ -4,6 +4,7 @@ description: "Mac app to fix the metadata of photos and videos: capture date, GP
 pubDatetime: 2026-10-08T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "photo", "privacy"]
+appStore: "https://apps.apple.com/it/app/rexif/id6820436697?mt=12"
 privacyDataTypes: "the photos and videos you choose to add, the Photos library items you pick in the system picker, their metadata (dates, GPS location, camera, description, author, copyright, place, keywords, and rating), the files you use while editing (GPX tracks, Google Takeout JSON, CSV, .xmp), the files created at your request, the session, and the app's preferences (language, appearance, thumbnails, table columns)"
 privacyStorageNote: "Photos and videos are read and edited entirely on your Mac and are never uploaded to any server. The only network connections go to Apple services for the map, place search, and city names, and only when you use those features."
 privacyUpdatedAt: "October 7, 2026"

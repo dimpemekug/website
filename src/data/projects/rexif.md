@@ -4,6 +4,7 @@ description: "App per Mac per correggere i metadati di foto e video: data di sca
 pubDatetime: 2026-10-08T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "foto", "privacy"]
+appStore: "https://apps.apple.com/it/app/rexif/id6820436697?mt=12"
 privacyDataTypes: "foto e video che scegli di aggiungere, elementi della libreria Foto che scegli nel selettore di sistema, i loro metadati (date, posizione GPS, fotocamera, descrizione, autore, copyright, luogo, parole chiave e valutazione), file usati durante la modifica (tracce GPX, JSON di Google Takeout, CSV, .xmp), file creati su tua richiesta, la sessione e le preferenze dell'app (lingua, aspetto, miniature, colonne della tabella)"
 privacyStorageNote: "Foto e video vengono letti e modificati interamente sul Mac e non vengono mai caricati su alcun server. Le sole connessioni di rete sono verso i servizi di Apple per la mappa, la ricerca dei luoghi e i nomi delle città, e solo quando usi quelle funzioni."
 privacyUpdatedAt: "7 ottobre 2026"
