@@ -19,7 +19,7 @@ type Props = {
   scrollSmooth?: boolean;
   prev?: string;
   next?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown> | null;
 };
 
 const {
@@ -92,14 +92,14 @@ const finalStructuredData = structuredDataProp ?? (
             "query-input": "required name=search_term_string",
           },
         }
-      : rawPath === "/about"
+      : rawPath === "/about" || rawPath === "/en/about"
         ? {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
             mainEntity: {
               "@type": "Person",
               name: author,
-              description: "Developer, student, and gamer. Creator of Astro Devosfera.",
+              description: SITE.desc,
               ...(profile && { url: profile }),
             },
           }
@@ -269,10 +269,10 @@ const showGrain = SITE.backdropEffects.grain;
           });
         }, { signal });
         hero.addEventListener("mouseleave", () => { mouse.style.opacity = "0"; }, { signal });
-        (hero as any)._heroAC = ac;
+        (hero as HTMLElement & { _heroAC?: AbortController })._heroAC = ac;
       });
       document.addEventListener("astro:before-preparation", () => {
-        const hero = document.querySelector("[data-page-hero]") as any;
+        const hero = document.querySelector("[data-page-hero]") as (HTMLElement & { _heroAC?: AbortController }) | null;
         hero?._heroAC?.abort();
       });
     </script>

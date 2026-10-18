@@ -4,7 +4,7 @@ export const SITE = {
   profile: process.env.PUBLIC_SOCIAL_GITHUB ?? "",
   desc: "App e siti web. Codice pulito, idee chiare.",
   title: "dimpemekug.com",
-  ogImage: "devosfera-og.webp",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerIndex: 6,
   featuredPerIndex: 2,

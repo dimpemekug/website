@@ -1,14 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": [
-    "dist",
-    "public/pagefind",
-    "src/components/Icon.astro",
-    "src/components/SmartImage.astro",
-    "src/utils/blog-heatmap.ts",
-    "src/utils/content-groups.ts"
-  ],
+  "exclude": ["dist", "public/pagefind"],
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]

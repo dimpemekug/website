@@ -167,7 +167,7 @@ const labels = {
     document.querySelectorAll(".project-disclosure").forEach(function (d) {
       if (d.dataset.init) return;
       d.dataset.init = "1";
-      var chevron = d.querySelector(".disclosure-chevron");
+      const chevron = d.querySelector(".disclosure-chevron");
       if (!chevron) return;
       chevron.style.transition = "transform 0.2s ease";
       d.addEventListener("toggle", function () {
