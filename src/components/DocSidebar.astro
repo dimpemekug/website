@@ -47,7 +47,7 @@ const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
     <div class="pb-4 border-b border-border/20">
       <a
         href={backHref}
-        class="inline-flex items-center gap-1.5 text-xs text-foreground/50 hover:text-accent transition-colors font-medium mb-2.5"
+        class="inline-flex items-center gap-1.5 text-xs text-foreground/70 hover:text-accent transition-colors font-medium mb-2.5"
       >
         {backLabel}
       </a>
@@ -65,7 +65,7 @@ const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
     <nav class="space-y-5" aria-label={`${projectName} ${docsLabel}`}>
       {sections.map(sec => (
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/40 font-firacode mb-2 px-2">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/65 font-firacode mb-2 px-2">
             {sec.section}
           </h3>
           <ul class="space-y-0.5">
@@ -84,7 +84,7 @@ const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
                       "group flex items-center justify-between rounded-lg px-2.5 py-1.5 text-sm transition-all duration-150",
                       isCurrent
                         ? "bg-accent/10 text-accent font-medium border-l-2 border-accent pl-2"
-                        : "text-foreground/70 hover:bg-muted/10 hover:text-foreground"
+                        : "text-foreground/80 hover:bg-muted/10 hover:text-foreground"
                     ]}
                   >
                     <span class="truncate">{item.title}</span>
