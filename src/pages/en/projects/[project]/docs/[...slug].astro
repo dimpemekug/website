@@ -1,0 +1,144 @@
+---
+import { getCollection, render } from "astro:content";
+import DocLayout from "@/layouts/DocLayout.astro";
+
+export async function getStaticPaths() {
+  const allDocs = await getCollection("docsEn", ({ data }) => !data.draft);
+  const allProjects = await getCollection("projectsEn");
+
+  const projectMap = new Map(allProjects.map(p => [p.id, p]));
+  const projectsWithDocs = Array.from(
+    new Set(allDocs.map(d => d.data.project || d.id.split("/")[0]))
+  );
+
+  const paths = [];
+
+  for (const projectId of projectsWithDocs) {
+    const projectDocs = allDocs
+      .filter(d => (d.data.project || d.id.split("/")[0]) === projectId)
+      .sort((a, b) => a.data.order - b.data.order);
+
+    if (projectDocs.length === 0) continue;
+
+    const project = projectMap.get(projectId);
+    const projectName = project ? project.data.title : projectId;
+
+    const sectionMap = new Map<string, typeof projectDocs>();
+    for (const d of projectDocs) {
+      const sec = d.data.section || "General";
+      if (!sectionMap.has(sec)) sectionMap.set(sec, []);
+      sectionMap.get(sec)!.push(d);
+    }
+
+    function getDocSubSlug(docId: string, pId: string): string {
+      if (docId === pId || docId === `${pId}/index` || docId === "index" || docId.endsWith("/index")) {
+        return "index";
+      }
+      if (docId.startsWith(`${pId}/`)) {
+        return docId.slice(pId.length + 1);
+      }
+      return docId;
+    }
+
+    const sections = Array.from(sectionMap.entries()).map(([section, items]) => ({
+      section,
+      items: items.map(it => {
+        const docSubSlug = getDocSubSlug(it.id, projectId);
+        return {
+          id: it.id,
+          slug: docSubSlug,
+          title: it.data.title,
+          order: it.data.order,
+          section: it.data.section || "General",
+        };
+      }),
+    }));
+
+    const rootDoc =
+      projectDocs.find(d => getDocSubSlug(d.id, projectId) === "index") ||
+      projectDocs[0];
+
+    // Root path: /en/projects/[project]/docs/
+    if (rootDoc) {
+      const rootIndexInSorted = projectDocs.indexOf(rootDoc);
+      const nextAfterRoot = rootIndexInSorted < projectDocs.length - 1 ? projectDocs[rootIndexInSorted + 1] : null;
+
+      paths.push({
+        params: { project: projectId, slug: undefined },
+        props: {
+          doc: rootDoc,
+          projectId,
+          projectName,
+          currentSlug: "index",
+          sections,
+          prevDoc: null,
+          nextDoc: nextAfterRoot ? {
+            id: nextAfterRoot.id,
+            slug: getDocSubSlug(nextAfterRoot.id, projectId),
+            title: nextAfterRoot.data.title,
+            order: nextAfterRoot.data.order,
+            section: nextAfterRoot.data.section,
+          } : null,
+        },
+      });
+    }
+
+    // Specific sub-paths: /en/projects/[project]/docs/[slug]/
+    projectDocs.forEach((doc, idx) => {
+      const docSubSlug = getDocSubSlug(doc.id, projectId);
+      if (docSubSlug === "index") return; // Handled as root
+
+      const prev = idx > 0 ? {
+        id: projectDocs[idx - 1].id,
+        slug: getDocSubSlug(projectDocs[idx - 1].id, projectId),
+        title: projectDocs[idx - 1].data.title,
+        order: projectDocs[idx - 1].data.order,
+        section: projectDocs[idx - 1].data.section,
+      } : null;
+
+      const next = idx < projectDocs.length - 1 ? {
+        id: projectDocs[idx + 1].id,
+        slug: getDocSubSlug(projectDocs[idx + 1].id, projectId),
+        title: projectDocs[idx + 1].data.title,
+        order: projectDocs[idx + 1].data.order,
+        section: projectDocs[idx + 1].data.section,
+      } : null;
+
+      paths.push({
+        params: { project: projectId, slug: docSubSlug },
+        props: {
+          doc,
+          projectId,
+          projectName,
+          currentSlug: docSubSlug,
+          sections,
+          prevDoc: prev,
+          nextDoc: next,
+        },
+      });
+    });
+  }
+
+  return paths;
+}
+
+const { doc, projectId, projectName, currentSlug, sections, prevDoc, nextDoc } = Astro.props;
+const { Content, headings } = await render(doc);
+---
+
+<DocLayout
+  title={doc.data.title}
+  description={doc.data.description}
+  projectId={projectId}
+  projectName={projectName}
+  currentSlug={currentSlug}
+  sections={sections}
+  headings={headings}
+  prevDoc={prevDoc}
+  nextDoc={nextDoc}
+  lang="en"
+>
+  <article class="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-accent prose-code:font-firacode prose-code:text-accent">
+    <Content />
+  </article>
+</DocLayout>

@@ -38,6 +38,7 @@ export const getPathSegments = (pathname: string) =>
 
 const buildDefaultBreadcrumbItems = (
   segments: string[],
+  basePath = "",
   locale?: string
 ): BreadcrumbItem[] =>
   segments.map((segment, index) => ({
@@ -45,7 +46,7 @@ const buildDefaultBreadcrumbItems = (
     href:
       index === segments.length - 1
         ? null
-        : `/${segments.slice(0, index + 1).join("/")}/`,
+        : `${basePath}/${segments.slice(0, index + 1).join("/")}/`,
   }));
 
 const compactPagination = (
@@ -80,16 +81,22 @@ export const buildBreadcrumbItems = (
   const { locale, compactNumericPagination: shouldCompactPagination = true } =
     options;
 
-  const segments = getPathSegments(pathname);
+  const rawSegments = getPathSegments(pathname);
+  if (rawSegments.length === 0) return [];
+
+  const isEn = rawSegments[0] === "en";
+  const segments = isEn ? rawSegments.slice(1) : rawSegments;
   if (segments.length === 0) return [];
+
+  const basePath = isEn ? "/en" : "";
 
   if (shouldCompactPagination && isNumericSegment(segments.at(-1))) {
     const pageSegment = segments.at(-1) as string;
     const parentSegments = segments.slice(0, -1);
-    const parentItems = buildDefaultBreadcrumbItems(parentSegments, locale);
+    const parentItems = buildDefaultBreadcrumbItems(parentSegments, basePath, locale);
 
     return compactPagination(parentItems, pageSegment);
   }
 
-  return buildDefaultBreadcrumbItems(segments, locale);
+  return buildDefaultBreadcrumbItems(segments, basePath, locale);
 };

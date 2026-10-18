@@ -82,7 +82,7 @@ if (SITE.showCoverImages) {
 
 <li
   class:list={[
-    "card-glow group/card relative my-3 rounded-2xl",
+    "card-glow group/card relative my-3 rounded-2xl flex flex-col justify-between",
     // Use overflow-hidden when cover image is shown so the image respects border-radius
     coverSrc ? "overflow-hidden" : "",
     "border backdrop-blur-sm",
@@ -99,10 +99,10 @@ if (SITE.showCoverImages) {
 
     // Featured generic posts styling
     !isGallery && featured && [
-      "border-amber-500/30 bg-amber-500/5",
-      "hover:border-amber-500/50 hover:bg-amber-500/10 focus-within:border-amber-500/50 focus-within:bg-amber-500/10",
-      "hover:shadow-amber-500/10 focus-within:shadow-amber-500/10",
-      "shadow-[0_0_20px_-5px_rgba(245,158,11,0.15)]",
+      "border-accent/40 bg-accent/8",
+      "hover:border-accent/60 hover:bg-accent/15 focus-within:border-accent/60 focus-within:bg-accent/15",
+      "hover:shadow-accent/20 focus-within:shadow-accent/20",
+      "shadow-[0_0_25px_-5px_color-mix(in_srgb,var(--accent)_20%,transparent)]",
     ],
 
     // Gallery variant styling
@@ -158,79 +158,88 @@ if (SITE.showCoverImages) {
     </a>
   )}
 
-  <div class="relative z-5 p-4 sm:p-5">
-    <a
-      href={href}
-      class:list={[
-        "text-lg font-semibold text-foreground transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm",
-        isGallery 
-          ? "group-hover/card:text-purple-400 focus-visible:ring-purple-500" 
-          : featured 
-            ? "group-hover/card:text-amber-500 focus-visible:ring-amber-500"
-            : "group-hover/card:text-accent focus-visible:ring-accent"
-      ]}
-      aria-labelledby={headingId}
-      aria-describedby={descriptionId}
-      style={{ viewTransitionName }}
-    >
-      <Heading id={headingId} class="flex items-center gap-2">
-        {isGallery && (
-          <span
-            aria-hidden="true"
-            class="inline-flex items-center justify-center rounded-md bg-purple-500/10 p-1 text-purple-400/80 ring-1 ring-purple-500/20"
-          >
-            <IconGallery class="size-4" />
+  <div class="relative z-5 p-5 flex flex-col flex-1 justify-between">
+    <div>
+      <a
+        href={href}
+        class:list={[
+          "text-lg font-bold tracking-tight text-foreground transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm block",
+          isGallery 
+            ? "group-hover/card:text-purple-400 focus-visible:ring-purple-500" 
+            : featured 
+              ? "group-hover/card:text-amber-500 focus-visible:ring-amber-500"
+              : "group-hover/card:text-accent focus-visible:ring-accent"
+        ]}
+        aria-labelledby={headingId}
+        aria-describedby={descriptionId}
+        style={{ viewTransitionName }}
+      >
+        <Heading id={headingId} class="flex items-center gap-2">
+          {isGallery && (
+            <span
+              aria-hidden="true"
+              class="inline-flex items-center justify-center rounded-md bg-purple-500/10 p-1 text-purple-400/80 ring-1 ring-purple-500/20"
+            >
+              <IconGallery class="size-4" />
+            </span>
+          )}
+          {isGallery && <span class="sr-only">Gallery:</span>}
+          {title}
+        </Heading>
+        <!-- Expand clickable area to whole card on top of everything, minus the description -->
+        <span class="absolute -inset-5 z-10" aria-hidden="true"></span>
+      </a>
+      
+      <!-- Meta row: date + reading time -->
+      <div class="relative z-20 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none text-xs text-foreground/60">
+        <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} />
+        {readingTime && (
+          <span class="flex items-center gap-1 text-xs text-foreground/60 whitespace-nowrap">
+            <IconClock class="size-3.5 shrink-0" aria-hidden="true" />
+            {readingTime}
           </span>
         )}
-        {isGallery && <span class="sr-only">Gallery:</span>}
-        {title}
-      </Heading>
-      <!-- Expand clickable area to whole card on top of everything, minus the description -->
-      <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
-    </a>
-    
-    <!-- Meta row: date + reading time -->
-    <div class="relative z-20 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none">
-      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} />
-      {readingTime && (
-        <span class="flex items-center gap-1 text-sm text-foreground/60 whitespace-nowrap">
-          <IconClock class="size-4 shrink-0" aria-hidden="true" />
-          {readingTime}
-        </span>
-      )}
+      </div>
+
+      <p
+        id={descriptionId}
+        class="relative z-20 mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/75 pointer-events-auto select-text"
+      >
+        {description}
+      </p>
     </div>
 
-    <p
-      id={descriptionId}
-      class="relative z-20 mt-2 line-clamp-2 text-sm leading-relaxed text-foreground/75 pointer-events-auto select-text"
-    >
-      {description}
-    </p>
+    <!-- Tags & Arrow Row -->
+    <div class="relative z-20 mt-5 pt-3.5 border-t border-border/15 flex items-center justify-between gap-2 pointer-events-auto">
+      {SITE.showTagsInCards && tags.length > 0 ? (
+        <ul class="flex flex-wrap gap-1.5">
+          {tags.slice(0, 3).map((tag: string) => (
+            <li>
+              <a
+                href={`/tags/${slugifyStr(tag)}/`}
+                class:list={[
+                  "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5",
+                  "text-[11px] font-medium font-firacode",
+                  "border transition-colors duration-200",
+                  isGallery
+                    ? "border-purple-500/25 bg-purple-500/8 text-purple-400/80 hover:border-purple-500/50 hover:bg-purple-500/15 hover:text-purple-400"
+                    : featured
+                      ? "border-amber-500/25 bg-amber-500/8 text-amber-500/80 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-500"
+                      : "border-border/30 bg-muted/15 text-foreground/60 hover:border-accent/40 hover:bg-accent/10 hover:text-accent",
+                ]}
+              >
+                <span aria-hidden="true" class="opacity-60">#</span>{tag}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : <div />}
 
-    <!-- Tags -->
-    {SITE.showTagsInCards && tags.length > 0 && (
-      <ul class="relative z-20 mt-3 flex flex-wrap gap-1.5 pointer-events-auto">
-        {tags.slice(0, 4).map((tag: string) => (
-          <li>
-            <a
-              href={`/tags/${slugifyStr(tag)}/`}
-              class:list={[
-                "inline-flex items-center gap-0.5 rounded-full px-2.5 py-0.5",
-                "text-xs font-medium",
-                "border transition-colors duration-200",
-                isGallery
-                  ? "border-purple-500/25 bg-purple-500/8 text-purple-400/80 hover:border-purple-500/50 hover:bg-purple-500/15 hover:text-purple-400"
-                  : featured
-                    ? "border-amber-500/25 bg-amber-500/8 text-amber-500/80 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-500"
-                    : "border-border/30 bg-muted/15 text-foreground/60 hover:border-accent/40 hover:bg-accent/10 hover:text-accent",
-              ]}
-            >
-              <span aria-hidden="true" class="opacity-60">#</span>{tag}
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
+      <span class="text-xs font-semibold text-accent/80 group-hover/card:text-accent flex items-center gap-1 transition-colors shrink-0">
+        <span>Leggi</span>
+        <span class="transition-transform group-hover/card:translate-x-0.5">→</span>
+      </span>
+    </div>
   </div>
 </li>
 

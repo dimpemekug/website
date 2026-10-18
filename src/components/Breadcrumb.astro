@@ -1,18 +1,24 @@
 ---
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import { SITE } from "@/config";
-import { buildBreadcrumbItems } from "@/utils/breadcrumbs";
+import { buildBreadcrumbItems, type BreadcrumbItem } from "@/utils/breadcrumbs";
 
 type Props = {
   withBackButton?: boolean;
+  backHref?: string;
+  items?: BreadcrumbItem[];
 };
 
-const { withBackButton = false } = Astro.props as Props;
+const { withBackButton = false, backHref, items } = Astro.props as Props;
 
-const breadcrumbs = buildBreadcrumbItems(Astro.url.pathname, {
+const breadcrumbs = items ?? buildBreadcrumbItems(Astro.url.pathname, {
   locale: SITE.lang || undefined,
   compactNumericPagination: true,
 });
+
+const isEn = Astro.url.pathname.startsWith("/en/") || Astro.url.pathname === "/en";
+const homeHref = isEn ? "/en/" : "/";
+const resolvedBackHref = backHref ?? (isEn ? "/en/" : "/");
 
 const currentPageLabel = breadcrumbs.at(-1)?.label ?? "Home";
 ---
@@ -25,7 +31,7 @@ const currentPageLabel = breadcrumbs.at(-1)?.label ?? "Home";
     {withBackButton && (
       <a
         id="back-button"
-        href="/"
+        href={resolvedBackHref}
         class="breadcrumb-bar back-btn group flex-shrink-0 !gap-2 text-foreground/60 transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background font-firacode text-sm"
         aria-label={`Go back to the previous page. Current context: ${currentPageLabel}`}
       >
@@ -45,7 +51,7 @@ const currentPageLabel = breadcrumbs.at(-1)?.label ?? "Home";
     >
       <li class:list={["breadcrumb-item", { "is-root": withBackButton }]}> 
         <a
-          href="/"
+          href={homeHref}
           class:list={["breadcrumb-home", { "breadcrumb-link-soft": withBackButton }]}
           aria-label="Home"
           title="Home"
@@ -255,7 +261,7 @@ const currentPageLabel = breadcrumbs.at(-1)?.label ?? "Home";
   withBackButton && (
     <script>
       const BACK_BUTTON_SELECTOR = "#back-button";
-      const FALLBACK_BACK_URL = "/";
+      const FALLBACK_BACK_URL = window.location.pathname.startsWith("/en") ? "/en/" : "/";
 
       function toSafeBackPath(rawBackUrl: string | null) {
         if (!rawBackUrl) return FALLBACK_BACK_URL;

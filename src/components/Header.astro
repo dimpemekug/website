@@ -28,9 +28,9 @@ const isActive = (section: string) =>
 // Localized nav paths
 const navPosts    = lang === "en" ? "/en/posts"    : "/posts";
 const navProjects = lang === "en" ? "/en/projects" : "/progetti";
+const navDocs     = lang === "en" ? "/en/docs"     : "/docs";
 const navTags     = lang === "en" ? "/en/tags"     : "/tags";
 const navAbout    = lang === "en" ? "/en/about"    : "/about";
-const navSearch   = lang === "en" ? "/en/search"   : "/search";
 const navArchives = lang === "en" ? "/en/archives" : "/archives";
 const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
 ---
@@ -57,7 +57,7 @@ const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
       >
         <!-- Logo -->
         <a
-          href="/"
+          href={lang === "en" ? "/en" : "/"}
           class="group relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl shrink-0"
         >
           <Logo class="text-xl sm:text-2xl" />
@@ -119,6 +119,13 @@ const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
                 href={navProjects}
                 class:list={["nav-link", { "nav-active": isActive("projects") }]}
                 >{t("nav.projects")}</a
+              >
+            </li>
+            <li>
+              <a
+                href={navDocs}
+                class:list={["nav-link", { "nav-active": sectionRoot === "docs" }]}
+                >Docs</a
               >
             </li>
             <li>

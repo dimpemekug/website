@@ -5,22 +5,27 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #f2f5ec;
-  --foreground: #353538;
-  --accent: #1158d1;
-  --muted: #bbc789;
-  --border: #7cadff;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --accent: #4f46e5;
+  --muted: #e2e8f0;
+  --border: #cbd5e1;
+  --card: #ffffff;
 }
 
 html[data-theme="dark"] {
-  --background: #10131a;
-  --foreground: #f6f7f8;
-  --accent: #008fec;
-  --muted: #212f3f;
-  --border: #2264e3;
+  --background: #090d16;
+  --foreground: #f8fafc;
+  --accent: #6366f1;
+  --muted: #182235;
+  --border: #25314a;
+  --card: #0f1626;
 }
 
 /* ── Accent palette variants (data-accent overrides --accent per theme) ── */
+html[data-accent="cyan"]                            { --accent: #0284c7; }
+html[data-theme="dark"][data-accent="cyan"]         { --accent: #38bdf8; }
+
 html[data-accent="purple"]                          { --accent: #7c3aed; }
 html[data-theme="dark"][data-accent="purple"]       { --accent: #a78bfa; }
 
@@ -35,7 +40,6 @@ html[data-theme="dark"][data-accent="orange"]       { --accent: #fb923c; }
 
 @theme inline {
   --font-app: var(--font-wotfard);
-  --font-sriracha: var(--font-sriracha);
   --font-firacode: var(--font-firacode);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,17 +48,6 @@ html[data-theme="dark"][data-accent="orange"]       { --accent: #fb923c; }
   --color-border: var(--border);
 }
 
-.italic,
-.prose em,
-em,
-i {
-  font-family: var(--font-sriracha);
-  font-style: italic;
-}
-
-.spicy {
-  font-family: var(--font-sriracha);
-}
 
 @layer base {
   * {
@@ -79,7 +72,7 @@ i {
 }
 
 @utility max-w-app {
-  @apply max-w-4xl xl:max-w-5xl;
+  @apply max-w-4xl lg:max-w-5xl xl:max-w-[1180px];
 }
 
 @utility app-layout {
@@ -90,93 +83,66 @@ i {
   @apply text-accent;
 }
 
-/* ===== Shared Page Hero ===== */
+/* ===== Shared Page Hero (Linear Modern Glass) ===== */
 .page-hero {
   position: relative;
   overflow: hidden;
   border-radius: 1.5rem;
-  padding: 2.5rem 2rem;
+  padding: 2.25rem 1.75rem;
   margin-bottom: 2.5rem;
-  background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-background));
-  border: 1px solid color-mix(in srgb, var(--color-accent) 12%, transparent);
+  background: color-mix(in srgb, var(--color-foreground) 2.5%, var(--color-background));
+  border: 1px solid color-mix(in srgb, var(--color-border) 25%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 640px) {
-  .page-hero { padding: 3rem; }
+  .page-hero { padding: 2.75rem 2.5rem; border-radius: 1.75rem; }
 }
 
-.aurora-orb {
+.page-hero::before {
+  content: "";
   position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 680px;
+  height: 240px;
+  background: radial-gradient(ellipse at top, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 70%);
   pointer-events: none;
-  will-change: transform;
-}
-.aurora-orb-1 {
-  width: 300px; height: 300px; top: -30%; left: -10%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 25%, transparent), transparent 70%);
-  animation: orb-drift-1 7s ease-in-out infinite alternate;
-}
-.aurora-orb-2 {
-  width: 250px; height: 250px; top: 10%; right: -5%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--color-border) 20%, transparent), transparent 70%);
-  animation: orb-drift-2 9s ease-in-out infinite alternate;
-}
-.aurora-orb-3 {
-  width: 200px; height: 200px; bottom: -20%; left: 40%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 70%);
-  animation: orb-drift-3 11s ease-in-out infinite alternate;
-}
-@keyframes orb-drift-1 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(40px, 20px) scale(1.2); }
-}
-@keyframes orb-drift-2 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-30px, 30px) scale(1.15); }
-}
-@keyframes orb-drift-3 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(20px, -25px) scale(1.1); }
+  filter: blur(40px);
 }
 
 .aurora-mouse {
   position: absolute;
-  width: 350px; height: 350px; border-radius: 50%;
+  width: 320px; height: 320px; border-radius: 50%;
   background: radial-gradient(
     circle,
-    color-mix(in srgb, var(--color-accent) 18%, transparent),
-    color-mix(in srgb, var(--color-border) 8%, transparent) 40%,
+    color-mix(in srgb, var(--color-accent) 15%, transparent),
     transparent 70%
   );
-  filter: blur(50px);
+  filter: blur(40px);
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  transform: translate(calc(var(--mx, 0px) - 175px), calc(var(--my, 0px) - 175px));
+  transition: opacity 0.3s ease;
+  transform: translate(calc(var(--mx, 0px) - 160px), calc(var(--my, 0px) - 160px));
   will-change: transform;
   z-index: 1;
 }
 
 .glow-text {
-  background: linear-gradient(135deg, var(--color-foreground), var(--color-accent));
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    color-mix(in oklab, var(--accent) 50%, var(--foreground)) 20%,
+    var(--foreground) 35%,
+    var(--foreground) 65%,
+    color-mix(in oklab, var(--accent) 50%, var(--foreground)) 80%,
+    var(--accent) 100%
+  );
+  background-size: 250% auto;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 25px color-mix(in srgb, var(--color-accent) 25%, transparent));
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
-  backdrop-filter: blur(8px);
+  -webkit-text-fill-color: transparent;
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */

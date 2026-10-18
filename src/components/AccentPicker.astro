@@ -7,11 +7,12 @@
 
 <script>
   const ACCENTS = [
-    { id: "blue",   label: "Blue",   swatch: "#1158d1" },
-    { id: "green",  label: "Green",  swatch: "#16a34a" },
-    { id: "purple", label: "Purple", swatch: "#7c3aed" },
-    { id: "orange", label: "Orange", swatch: "#ea580c" },
-    { id: "rose",   label: "Rose",   swatch: "#e11d48" },
+    { id: "indigo", label: "Indigo", swatch: "#6366f1" },
+    { id: "cyan",   label: "Cyan",   swatch: "#38bdf8" },
+    { id: "purple", label: "Purple", swatch: "#a855f7" },
+    { id: "green",  label: "Green",  swatch: "#10b981" },
+    { id: "orange", label: "Orange", swatch: "#f97316" },
+    { id: "rose",   label: "Rose",   swatch: "#fb7185" },
   ] as const;
 
   type AccentId = typeof ACCENTS[number]["id"];
@@ -19,11 +20,11 @@
   let cleanup: AbortController | null = null;
 
   function getAccentId(): AccentId {
-    return (localStorage.getItem("accent-id") as AccentId) || "blue";
+    return (localStorage.getItem("accent-id") as AccentId) || "indigo";
   }
 
   function applyAccent(id: AccentId) {
-    if (id === "blue") {
+    if (id === "indigo") {
       document.documentElement.removeAttribute("data-accent");
       localStorage.removeItem("accent-id");
     } else {
@@ -73,7 +74,7 @@
 
   function restoreAccent() {
     const id = getAccentId();
-    if (id === "blue") {
+    if (id === "indigo") {
       document.documentElement.removeAttribute("data-accent");
     } else {
       document.documentElement.setAttribute("data-accent", id);

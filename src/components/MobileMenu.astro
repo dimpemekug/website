@@ -23,6 +23,7 @@ const isActive = (section: string) =>
 
 const navPosts     = lang === "en" ? "/en/posts"    : "/posts";
 const navProjects  = lang === "en" ? "/en/projects" : "/progetti";
+const navDocs      = lang === "en" ? "/en/docs"     : "/docs";
 const navTags      = lang === "en" ? "/en/tags"     : "/tags";
 const navAbout     = lang === "en" ? "/en/about"    : "/about";
 const navArchives  = lang === "en" ? "/en/archives" : "/archives";
@@ -61,6 +62,14 @@ const themeOptions = [
           >
             <span class="mobile-nav-indicator"></span>
             <span>{t("nav.projects")}</span>
+          </a>
+          <a
+            href={navDocs}
+            class:list={["mobile-nav-link", { active: sectionRoot === "docs" }]}
+            style="--i:2"
+          >
+            <span class="mobile-nav-indicator"></span>
+            <span>Docs</span>
           </a>
           <a
             href={navTags}

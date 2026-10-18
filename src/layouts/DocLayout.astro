@@ -1,0 +1,176 @@
+---
+import type { MarkdownHeading } from "astro";
+import Layout from "./Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import DocSidebar, { type DocItem } from "@/components/DocSidebar.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import type { BreadcrumbItem } from "@/utils/breadcrumbs";
+import { SITE } from "@/config";
+
+interface Props {
+  title: string;
+  description?: string;
+  projectId: string;
+  projectName: string;
+  currentSlug: string;
+  sections: { section: string; items: DocItem[] }[];
+  headings: MarkdownHeading[];
+  prevDoc?: DocItem | null;
+  nextDoc?: DocItem | null;
+  lang?: "it" | "en";
+}
+
+const {
+  title,
+  description,
+  projectId,
+  projectName,
+  currentSlug,
+  sections,
+  headings,
+  prevDoc,
+  nextDoc,
+  lang = "it",
+} = Astro.props;
+
+const projectsHref = lang === "en" ? "/en/projects" : "/progetti";
+const projectHref = lang === "en" ? `/en/projects/${projectId}` : `/progetti/${projectId}`;
+const docsRootHref = lang === "en" ? `/en/projects/${projectId}/docs` : `/progetti/${projectId}/docs`;
+
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: lang === "en" ? "Projects" : "Progetti", href: projectsHref },
+  { label: projectName, href: projectHref },
+  { label: "Docs", href: docsRootHref },
+  { label: title, href: null },
+];
+
+const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
+
+const formatDocHref = (slug: string) => {
+  if (slug === "index" || slug === "") {
+    return lang === "en" ? `/en/projects/${projectId}/docs/` : `/progetti/${projectId}/docs/`;
+  }
+  return lang === "en" ? `/en/projects/${projectId}/docs/${slug}/` : `/progetti/${projectId}/docs/${slug}/`;
+};
+---
+
+<Layout
+  title={`${title} - ${projectName} Docs | ${SITE.title}`}
+  description={description ?? `${title} - Documentazione per ${projectName}`}
+  scrollSmooth={true}
+>
+  <Header />
+  <Breadcrumb items={breadcrumbItems} withBackButton backHref={docsRootHref} />
+
+  <main id="main-content" class="app-layout pt-2 pb-16">
+
+    <!-- Docs Layout Container -->
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[250px_minmax(0,1fr)] xl:grid-cols-[250px_minmax(0,1fr)_220px]">
+      <!-- Left Sidebar -->
+      <DocSidebar
+        projectId={projectId}
+        projectName={projectName}
+        currentSlug={currentSlug}
+        sections={sections}
+        lang={lang}
+      />
+
+      <!-- Main Content Column -->
+      <article class="min-w-0">
+        <!-- Page Header -->
+        <header class="mb-8 pb-6 border-b border-border/20">
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="text-xs font-firacode px-2 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-medium">
+              {projectName}
+            </span>
+            <span class="text-xs text-foreground/40 font-firacode">
+              / docs / {currentSlug}
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+            {title}
+          </h1>
+
+          {description && (
+            <p class="mt-3 text-base sm:text-lg text-foreground/70 leading-relaxed">
+              {description}
+            </p>
+          )}
+        </header>
+
+        <!-- In-page TOC for mobile/tablet when right column is hidden -->
+        {hasToc && (
+          <div class="xl:hidden mb-8">
+            <TableOfContents headings={headings} lang={lang} />
+          </div>
+        )}
+
+        <!-- Article Prose Content -->
+        <div class="prose prose-base max-w-none text-foreground/90 prose-headings:scroll-mt-24 prose-headings:font-bold prose-headings:tracking-tight prose-a:text-accent hover:prose-a:underline prose-code:rounded prose-code:bg-muted/15 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-firacode prose-pre:border prose-pre:border-border/30 prose-table:border-collapse prose-th:border-b prose-th:border-border/30 prose-td:border-b prose-td:border-border/15">
+          <slot />
+        </div>
+
+        <!-- Pagination / Prev Next Doc navigation -->
+        <nav class="mt-14 pt-8 border-t border-border/20 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Navigazione pagine documentazione">
+          {prevDoc ? (
+            <a
+              href={formatDocHref(prevDoc.slug)}
+              class="group flex flex-col p-4 rounded-xl border border-border/20 bg-muted/5 hover:bg-muted/15 hover:border-accent/40 transition-all"
+            >
+              <span class="text-xs text-foreground/50 font-firacode mb-1">
+                {lang === "en" ? "← Previous" : "← Precedente"}
+              </span>
+              <span class="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
+                {prevDoc.title}
+              </span>
+            </a>
+          ) : <div />}
+
+          {nextDoc ? (
+            <a
+              href={formatDocHref(nextDoc.slug)}
+              class="group flex flex-col items-end text-right p-4 rounded-xl border border-border/20 bg-muted/5 hover:bg-muted/15 hover:border-accent/40 transition-all sm:col-start-2"
+            >
+              <span class="text-xs text-foreground/50 font-firacode mb-1">
+                {lang === "en" ? "Next →" : "Successivo →"}
+              </span>
+              <span class="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
+                {nextDoc.title}
+              </span>
+            </a>
+          ) : null}
+        </nav>
+      </article>
+
+      <!-- Right Column: Table of Contents (XL screens) -->
+      {hasToc && (
+        <aside class="hidden xl:block">
+          <div class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-4 border-l border-border/20 scrollbar-thin">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/40 font-firacode mb-3">
+              {lang === "en" ? "On this page" : "In questa pagina"}
+            </h3>
+            <ul class="space-y-1 text-xs">
+              {headings
+                .filter(h => h.depth === 2 || h.depth === 3)
+                .map(h => (
+                  <li class:list={[{ "pl-3": h.depth === 3 }]}>
+                    <a
+                      href={`#${h.slug}`}
+                      class="block py-1 text-foreground/60 hover:text-accent transition-colors truncate"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </aside>
+      )}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

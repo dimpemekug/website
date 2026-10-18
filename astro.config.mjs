@@ -86,30 +86,12 @@ export default defineConfig({
       },
     },
     {
-      name: "Sriracha",
-      cssVariable: "--font-sriracha",
-      fallbacks: ["cursive"],
-      provider: fontProviders.local(),
-      options: {
-        variants: [{ src: ["./src/assets/fonts/sriracha.woff2"] }],
-      },
-    },
-    {
       name: "Fira Code",
       cssVariable: "--font-firacode",
       fallbacks: ["monospace"],
       provider: fontProviders.local(),
       options: {
         variants: [{ src: ["./src/assets/fonts/firacode.woff2"] }],
-      },
-    },
-    {
-      name: "Cascadia Code",
-      cssVariable: "--font-cascadia-code",
-      fallbacks: ["monospace"],
-      provider: fontProviders.local(),
-      options: {
-        variants: [{ src: ["./src/assets/fonts/cascadia-code.woff2"] }],
       },
     },
   ],

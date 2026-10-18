@@ -1,0 +1,121 @@
+---
+export interface DocItem {
+  id: string;
+  slug: string;
+  title: string;
+  order: number;
+  section: string;
+}
+
+interface Props {
+  projectId: string;
+  projectName: string;
+  currentSlug: string;
+  sections: { section: string; items: DocItem[] }[];
+  lang?: "it" | "en";
+}
+
+const { projectId, projectName, currentSlug, sections, lang = "it" } = Astro.props;
+
+const backLabel = lang === "en" ? "← Back to project" : "← Scheda progetto";
+const backHref = lang === "en" ? `/en/projects/${projectId}/` : `/progetti/${projectId}/`;
+const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
+---
+
+<aside class="doc-sidebar w-full lg:w-64 shrink-0">
+  <!-- Mobile toggle bar -->
+  <div class="lg:hidden mb-4 p-3 rounded-xl border border-border/20 bg-muted/5 flex items-center justify-between">
+    <div class="flex items-center gap-2 text-sm font-medium">
+      <span class="size-2 rounded-full bg-accent animate-pulse"></span>
+      <span>{projectName} Docs</span>
+    </div>
+    <button
+      id="doc-menu-btn"
+      class="text-xs px-2.5 py-1 rounded-lg border border-border/30 bg-muted/10 font-firacode hover:border-accent/40"
+      aria-expanded="false"
+      aria-controls="doc-nav-drawer"
+    >
+      Menu ▾
+    </button>
+  </div>
+
+  <div
+    id="doc-nav-drawer"
+    class="doc-nav-content hidden lg:block sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 pb-8 space-y-6 scrollbar-thin"
+  >
+    <!-- Project Header inside sidebar -->
+    <div class="pb-4 border-b border-border/20">
+      <a
+        href={backHref}
+        class="inline-flex items-center gap-1.5 text-xs text-foreground/50 hover:text-accent transition-colors font-medium mb-2.5"
+      >
+        {backLabel}
+      </a>
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-bold tracking-tight text-foreground flex items-center gap-2">
+          <span>{projectName}</span>
+          <span class="text-[10px] uppercase font-firacode px-1.5 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-semibold">
+            Docs
+          </span>
+        </h2>
+      </div>
+    </div>
+
+    <!-- Navigation Tree -->
+    <nav class="space-y-5" aria-label={`${projectName} ${docsLabel}`}>
+      {sections.map(sec => (
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/40 font-firacode mb-2 px-2">
+            {sec.section}
+          </h3>
+          <ul class="space-y-0.5">
+            {sec.items.map(item => {
+              const itemHref = item.slug === "index"
+                ? (lang === "en" ? `/en/projects/${projectId}/docs/` : `/progetti/${projectId}/docs/`)
+                : (lang === "en" ? `/en/projects/${projectId}/docs/${item.slug}/` : `/progetti/${projectId}/docs/${item.slug}/`);
+              
+              const isCurrent = currentSlug === item.slug || (currentSlug === "" && item.slug === "index");
+
+              return (
+                <li>
+                  <a
+                    href={itemHref}
+                    class:list={[
+                      "group flex items-center justify-between rounded-lg px-2.5 py-1.5 text-sm transition-all duration-150",
+                      isCurrent
+                        ? "bg-accent/10 text-accent font-medium border-l-2 border-accent pl-2"
+                        : "text-foreground/70 hover:bg-muted/10 hover:text-foreground"
+                    ]}
+                  >
+                    <span class="truncate">{item.title}</span>
+                    {isCurrent && (
+                      <span class="size-1.5 rounded-full bg-accent shrink-0"></span>
+                    )}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
+    </nav>
+  </div>
+</aside>
+
+<script>
+  function initDocSidebar() {
+    const btn = document.getElementById("doc-menu-btn");
+    const drawer = document.getElementById("doc-nav-drawer");
+    if (!btn || !drawer) return;
+
+    btn.addEventListener("click", () => {
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isExpanded));
+      drawer.classList.toggle("hidden", isExpanded);
+      btn.textContent = isExpanded ? "Menu ▾" : "Chiudi ▴";
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initDocSidebar);
+  document.addEventListener("astro:page-load", initDocSidebar);
+</script>

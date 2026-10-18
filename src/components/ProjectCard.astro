@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import Datetime from "./Datetime.astro";
 
@@ -12,6 +12,11 @@ type Props = {
 
 const { project, href, lang = "it", featured = false } = Astro.props;
 const { title, description, pubDatetime, appStore, playStore, website } = project.data;
+
+const projectDocs = lang === "en"
+  ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
+  : await getCollection("docs", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id);
+const hasDocs = projectDocs.length > 0;
 
 const appStoreLabel = "App Store";
 const playStoreLabel = "Google Play";
@@ -47,15 +52,28 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
   ></div>
 
   <div class="relative z-5 p-4 sm:p-5">
-    <a
-      href={href}
-      class="text-lg font-semibold text-foreground transition-colors duration-200 group-hover/card:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
-      aria-labelledby={headingId}
-      aria-describedby={descriptionId}
-    >
-      <h2 id={headingId}>{title}</h2>
-      <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
-    </a>
+    <div class="flex items-center justify-between gap-2">
+      <a
+        href={href}
+        class="text-lg font-semibold text-foreground transition-colors duration-200 group-hover/card:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+        aria-labelledby={headingId}
+        aria-describedby={descriptionId}
+      >
+        <h2 id={headingId}>{title}</h2>
+        <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
+      </a>
+
+      {hasDocs && (
+        <a
+          href={lang === "en" ? `/en/projects/${project.id}/docs/` : `/progetti/${project.id}/docs/`}
+          class="relative z-20 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/15 px-2.5 py-0.5 text-[11px] font-firacode font-medium text-accent hover:bg-accent hover:text-white transition-all shadow-sm"
+          title={`${projectDocs.length} guide disponibili`}
+        >
+          <span>Docs</span>
+          <span class="size-1 rounded-full bg-accent animate-pulse"></span>
+        </a>
+      )}
+    </div>
 
     <div class="relative z-20 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none">
       <Datetime pubDatetime={pubDatetime} />
@@ -68,8 +86,17 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
       {description}
     </p>
 
-    {(appStore || playStore || website) && (
+    {(hasDocs || appStore || playStore || website) && (
       <div class="relative z-20 mt-4 flex flex-wrap gap-2 pointer-events-auto">
+        {hasDocs && (
+          <a
+            href={lang === "en" ? `/en/projects/${project.id}/docs/` : `/progetti/${project.id}/docs/`}
+            class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/15 px-3 py-1 text-xs font-semibold text-accent transition-all hover:bg-accent hover:text-white"
+          >
+            <span>Wiki & Docs</span>
+            <span class="text-[10px] font-firacode opacity-75">({projectDocs.length})</span>
+          </a>
+        )}
         {appStore && (
           <a
             href={appStore}

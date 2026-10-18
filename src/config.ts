@@ -16,7 +16,7 @@ export const SITE = {
   showBackButton: true,
   showTagsInCards: true,
   showCoverImages: false,
-  indexPostsGrid: false,
+  indexPostsGrid: true,
   heroTerminalPrompt: {
     prefix: "~",
     suffix: "$",

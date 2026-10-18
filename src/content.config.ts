@@ -74,4 +74,27 @@ const projectsEn = defineCollection({
   schema: projectSchema,
 });
 
-export const collections = { blog, blogEn, galleries, projects, projectsEn };
+export const DOCS_PATH = "src/data/docs";
+export const DOCS_EN_PATH = "src/data/en/docs";
+
+const docSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  project: z.string().optional(),
+  order: z.number().default(0),
+  section: z.string().default("Generale"),
+  draft: z.boolean().optional().default(false),
+  lastModified: z.date().optional(),
+});
+
+const docs = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${DOCS_PATH}` }),
+  schema: docSchema,
+});
+
+const docsEn = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${DOCS_EN_PATH}` }),
+  schema: docSchema,
+});
+
+export const collections = { blog, blogEn, galleries, projects, projectsEn, docs, docsEn };
