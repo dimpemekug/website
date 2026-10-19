@@ -50,6 +50,7 @@ export default defineConfig({
           en: "en",
         },
       },
+      xslURL: "/sitemap.xsl",
     }),
   ],
 
