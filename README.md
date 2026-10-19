@@ -18,7 +18,7 @@ Costruito come generatore di siti statici (SSG) ad altissime prestazioni con **[
 - [Sviluppo locale](#sviluppo-locale)
 - [Variabili d'ambiente](#variabili-dambiente)
 - [Deploy e CI/CD](#deploy-e-cicd)
-- [Crediti e ringraziamenti](#crediti-e-ringraziamenti)
+- [Licenza e note legali](#licenza-e-note-legali)
 
 ---
 
@@ -40,7 +40,7 @@ I principi guida del progetto e del software ospitato sono:
 
 - **Blog (`/posts`, `/en/posts`)**: riflessioni, note tecniche e articoli di approfondimento su intelligenza artificiale, modelli on-device, cybersecurity, architetture local-first, sviluppo Apple e tendenze tecnologiche.
 - **Progetti (`/progetti`, `/en/projects`)**: vetrina di tutte le applicazioni native e dei progetti web realizzati, con badge di disponibilità su App Store e Google Play Store, collegamenti alla documentazione e schede informative sulla privacy dedicate per ciascuna app (`/progetti/<app>/privacy/`).
-- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni più complesse (attualmente **rExif** e **rZip**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
+- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **rZip**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **rManga**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
 - **Chi sono (`/about`, `/en/about`)**: panoramica del profilo dello sviluppatore, tecnologie impiegate (Swift, SwiftUI, Flutter, Dart, Astro, PHP) e canali di contatto.
 - **Archivio cronologico (`/archives`, `/en/archives`)**: indice temporale di tutti gli articoli pubblicati raggruppati per anno.
 - **Esplorazione per Tag (`/tags`, `/en/tags`)**: navigazione trasversale per argomenti e parole chiave con conteggio e paginazione.
@@ -57,16 +57,16 @@ Il sito documenta e ospita le schede ufficiali delle seguenti applicazioni:
 | ----------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- | :--: |
 | **[rExif](src/data/projects/rexif.md)**               | macOS              | Editor batch di metadati EXIF, IPTC, coordinate GPS e date per foto e video con anteprima in tempo reale.                 |  ✅  |
 | **[rZip](src/data/projects/rzip.md)**                 | macOS              | Ispezione, estrazione e creazione di archivi compressi (ZIP, RAR, 7z) anche protetti o multi-volume.                      |  ✅  |
-| **[rName](src/data/projects/rname.md)**               | macOS              | Ridenominazione in blocco di file e cartelle combinando regole modulari, anteprima dal vivo e storico annullamenti.       |  —   |
-| **[rMux](src/data/projects/rmux.md)**                 | macOS              | Taglio, ritaglio, conversione e unione video senza ricodifica (stream copy via FFmpeg), gestione audio e sottotitoli.     |  —   |
-| **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di immagini, conversione da formato HEIC e rimozione automatica dei metadati sensibili.           |  —   |
-| **[CodeVault](src/data/projects/codevault.md)**       | iOS, iPadOS, macOS | Gestione di snippet di codice e note tecniche con syntax highlighting per 20+ linguaggi, blocco Face ID e sync iCloud.    |  —   |
-| **[NetCalc Pro](src/data/projects/netcalc.md)**       | iOS, iPadOS, macOS | Calcolatore di reti IPv4/IPv6, subnetting VLSM, validazione laboratori e generazione comandi per switch/router Cisco IOS. |  —   |
-| **[rManga](src/data/projects/rmanga.md)**             | iOS, iPadOS        | Lettore per manga, fumetti, libri e anime con supporto server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS.         |  —   |
-| **[ShowNest](src/data/projects/shownest.md)**         | iOS                | Tracker per serie TV ed episodi basato su dati TMDB con notifiche uscite e sincronizzazione iCloud.                       |  —   |
-| **[DomoMeter](src/data/projects/domometer.md)**       | iOS, Android       | Monitoraggio dei consumi domestici di luce, gas e acqua con statistiche storiche e dashboard locale.                      |  —   |
-| **[Horologe](src/data/projects/horologe.md)**         | iOS, Android       | Gestione della propria collezione di orologi con storico manutenzioni, statistiche, wishlist e registro al polso.         |  —   |
-| **[Time Tracker](src/data/projects/time-tracker.md)** | iOS, Android       | Tracciamento del tempo speso su attività e commesse con esportazione report PDF e backup locale in JSON.                  |  —   |
+| **[rName](src/data/projects/rname.md)**               | macOS              | Ridenominazione in blocco di file e cartelle combinando regole modulari, anteprima dal vivo e storico annullamenti.       |  ✅  |
+| **[rMux](src/data/projects/rmux.md)**                 | macOS              | Taglio, ritaglio, conversione e unione video senza ricodifica (stream copy via FFmpeg), gestione audio e sottotitoli.     |  ✅  |
+| **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di immagini, conversione da formato HEIC e rimozione automatica dei metadati sensibili.           |  ✅  |
+| **[CodeVault](src/data/projects/codevault.md)**       | iOS, iPadOS, macOS | Gestione di snippet di codice e note tecniche con syntax highlighting per 20+ linguaggi, blocco Face ID e sync iCloud.    |  ✅  |
+| **[NetCalc Pro](src/data/projects/netcalc.md)**       | iOS, iPadOS, macOS | Calcolatore di reti IPv4/IPv6, subnetting VLSM, validazione laboratori e generazione comandi per switch/router Cisco IOS. |  ✅  |
+| **[rManga](src/data/projects/rmanga.md)**             | iOS, iPadOS        | Lettore per manga, fumetti, libri e anime con supporto server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS.         |  ✅  |
+| **[ShowNest](src/data/projects/shownest.md)**         | iOS                | Tracker per serie TV ed episodi basato su dati TMDB con notifiche uscite e sincronizzazione iCloud.                       |  ✅  |
+| **[DomoMeter](src/data/projects/domometer.md)**       | iOS, Android       | Monitoraggio dei consumi domestici di luce, gas e acqua con statistiche storiche e dashboard locale.                      |  ✅  |
+| **[Horologe](src/data/projects/horologe.md)**         | iOS, Android       | Gestione della propria collezione di orologi con storico manutenzioni, statistiche, wishlist e registro al polso.         |  ✅  |
+| **[Time Tracker](src/data/projects/time-tracker.md)** | iOS, Android       | Tracciamento del tempo speso su attività e commesse con esportazione report PDF e backup locale in JSON.                  |  ✅  |
 | **[PT39 News](src/data/projects/pt39-news.md)**       | iOS, Android       | Informazione locale e attualità per il comune di Bagnoli Irpino e l'Irpinia a cura del Circolo Palazzo Tenta 39.          |  —   |
 | **[WP PT39](src/data/projects/wp-pt39.md)**           | WordPress / PHP    | Tema editoriale leggero in PHP puro per riviste e portali di news con dark mode e conformità GDPR cookie.                 |  —   |
 
@@ -136,7 +136,7 @@ La configurazione generale del sito (titolo, metadati, autore, impostazioni di p
 │   ├── components/          # Componenti riutilizzabili Astro (Header, Footer, Card, ecc.)
 │   ├── data/                # File Markdown/MDX delle collezioni di contenuti
 │   │   ├── blog/            # Post del blog in italiano
-│   │   ├── docs/            # Documentazione in italiano per app (rExif, rZip)
+│   │   ├── docs/            # Documentazione in italiano per le app
 │   │   ├── en/              # Contenuti speculari in lingua inglese
 │   │   ├── galleries/       # Gallerie fotografiche
 │   │   └── projects/        # Schede dei progetti in italiano
@@ -239,11 +239,8 @@ Il deployment su ambiente di produzione è interamente automatizzato tramite **G
 
 ---
 
-## Crediti e ringraziamenti
+## Licenza e note legali
 
-Questo sito è una personalizzazione evoluta basata su due progetti open source dell'ecosistema Astro:
+Codice sorgente distribuito sotto licenza **MIT**.
 
-- **[Devosfera](https://github.com/0xdres/astro-devosfera)** di [0xdres](https://github.com/0xdres) — base iniziale per architettura dei componenti, stili e layout.
-- **[navfolio](https://github.com/navfolio/astro-navfolio)** — elementi di integrazione per font locali e utilità.
-
-Tutti i loghi, i testi dei progetti e i contenuti degli articoli appartengono ai rispettivi proprietari.
+Tutti i loghi, i testi dei progetti, i contenuti degli articoli e i marchi registrati citati appartengono ai rispettivi proprietari.
