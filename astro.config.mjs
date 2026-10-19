@@ -37,7 +37,19 @@ export default defineConfig({
     expressiveCode(),
     mdx(),
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith('/archives'),
+      filter: page => {
+        if (!SITE.showArchives && (page.endsWith("/archives") || page.endsWith("/archives/"))) return false;
+        if (page.endsWith("/search") || page.endsWith("/search/")) return false;
+        if (page.endsWith("/404") || page.endsWith("/404.html")) return false;
+        return true;
+      },
+      i18n: {
+        defaultLocale: "it",
+        locales: {
+          it: "it",
+          en: "en",
+        },
+      },
     }),
   ],
 
