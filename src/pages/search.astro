@@ -11,7 +11,7 @@ const t = useTranslations("it");
 const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 ---
 
-<Layout title={`${t("search.title")} | ${SITE.title}`}>
+<Layout title={`${t("search.title")} | ${SITE.title}`} noindex={true} nofollow={true}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">

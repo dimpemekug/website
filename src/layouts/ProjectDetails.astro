@@ -29,11 +29,32 @@ const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
 const backHref = lang === "en" ? "/en/projects/" : "/progetti/";
 const backLabel = lang === "en" ? "All projects" : "Tutti i progetti";
 const websiteLabel = lang === "en" ? "Website" : "Sito web";
+const projectStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: title,
+  description,
+  applicationCategory: "SoftwareApplication",
+  operatingSystem: appStore ? "iOS, macOS" : playStore ? "Android" : "All",
+  ...(website && { url: website }),
+  ...(appStore && { installUrl: appStore }),
+  ...(playStore && { downloadUrl: playStore }),
+  inLanguage: lang === "it" ? "it-IT" : "en-US",
+  author: {
+    "@type": "Person",
+    name: SITE.author,
+  },
+};
 ---
 
 <Layout
   title={`${title} | ${SITE.title}`}
+  ogTitle={title}
   description={description}
+  tags={project.data.tags}
+  articleSection="Projects"
+  pubDatetime={pubDatetime}
+  structuredData={projectStructuredData}
   scrollSmooth={true}
 >
   <Header />

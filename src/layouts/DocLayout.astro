@@ -54,11 +54,26 @@ const formatDocHref = (slug: string) => {
   }
   return lang === "en" ? `/en/projects/${projectId}/docs/${slug}/` : `/progetti/${projectId}/docs/${slug}/`;
 };
+
+const docStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: `${title} - ${projectName}`,
+  description: description ?? `${title} - Documentazione per ${projectName}`,
+  inLanguage: lang === "en" ? "en-US" : "it-IT",
+  author: {
+    "@type": "Person",
+    name: SITE.author,
+  },
+};
 ---
 
 <Layout
   title={`${title} - ${projectName} Docs | ${SITE.title}`}
+  ogTitle={`${title} - ${projectName} Docs`}
   description={description ?? `${title} - Documentazione per ${projectName}`}
+  articleSection={`${projectName} Docs`}
+  structuredData={docStructuredData}
   scrollSmooth={true}
 >
   <Header />

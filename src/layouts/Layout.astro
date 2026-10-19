@@ -1,40 +1,60 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
+import {
+  PUBLIC_GOOGLE_SITE_VERIFICATION,
+  PUBLIC_SOCIAL_X,
+} from "astro:env/client";
 import { Font } from "astro:assets";
+import { SEO } from "astro-seo";
 import { SITE } from "@/config";
 import SearchModal from "@/components/SearchModal.astro";
-import { getLangFromUrl } from "@/i18n/utils";
+import { getLangFromUrl, getAlternateUrl } from "@/i18n/utils";
 import "@/styles/global.css";
 
 type Props = {
   title?: string;
+  ogTitle?: string;
   author?: string;
   profile?: string;
   description?: string;
   ogImage?: string;
-  canonicalURL?: string;
+  ogImageAlt?: string;
+  canonicalURL?: string | null;
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
   prev?: string;
   next?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  robotsExtras?: string;
   structuredData?: Record<string, unknown> | null;
+  languageAlternates?: { href: string | URL; hrefLang: string }[];
+  tags?: string[];
+  articleSection?: string;
 };
 
 const {
   title = SITE.title,
+  ogTitle: ogTitleProp,
   author = SITE.author,
   profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage ? `/${SITE.ogImage}` : "/og.png",
+  ogImageAlt,
   canonicalURL: canonicalURLProp,
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
   prev,
   next,
+  noindex = false,
+  nofollow = false,
+  robotsExtras: robotsExtrasProp,
   structuredData: structuredDataProp,
+  languageAlternates: languageAlternatesProp,
+  tags,
+  articleSection,
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
@@ -43,13 +63,77 @@ const lang = getLangFromUrl(Astro.url);
 // Normalize trailing slash: always include it for consistency.
 const rawPath = Astro.url.pathname.replace(/\/$/, "");
 const canonicalURL =
-  canonicalURLProp ??
-  new URL(rawPath === "" ? "/" : `${rawPath}/`, SITE.website);
+  canonicalURLProp === null
+    ? null
+    : canonicalURLProp !== undefined
+      ? new URL(canonicalURLProp, SITE.website)
+      : new URL(rawPath === "" ? "/" : `${rawPath}/`, SITE.website);
 
-const socialImageURL = new URL(ogImage, Astro.url);
+const socialImageURL = (() => {
+  if (ogImage.startsWith("http://") || ogImage.startsWith("https://")) {
+    return new URL(ogImage);
+  }
+  return new URL(
+    ogImage.startsWith("/") ? ogImage : `/${ogImage}`,
+    SITE.website
+  );
+})();
+
+// Determine clean ogTitle (strip trailing site branding if present)
+const ogTitle =
+  ogTitleProp ??
+  (title.endsWith(` | ${SITE.title}`)
+    ? title.slice(0, -` | ${SITE.title}`.length)
+    : title);
 
 // Whether this page is a blog post (has a publish date)
 const isArticle = Boolean(pubDatetime);
+
+// Robots extras: default to rich snippets & large image previews for indexable pages
+const robotsExtras =
+  robotsExtrasProp ??
+  (!noindex
+    ? "max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    : undefined);
+
+// Multilingual language alternates (hreflang)
+const languageAlternates =
+  languageAlternatesProp ??
+  (canonicalURL && !noindex
+    ? (() => {
+        const currentPath = canonicalURL.pathname;
+        const itPath = lang === "it" ? currentPath : getAlternateUrl(currentPath, "it");
+        const enPath = lang === "en" ? currentPath : getAlternateUrl(currentPath, "en");
+
+        const itHref = new URL(itPath, SITE.website).href;
+        const enHref = new URL(enPath, SITE.website).href;
+
+        return [
+          { hrefLang: "it", href: itHref },
+          { hrefLang: "en", href: enHref },
+          { hrefLang: "x-default", href: itHref },
+        ];
+      })()
+    : undefined);
+
+// Twitter handle
+const twitterHandle = (() => {
+  if (PUBLIC_SOCIAL_X) {
+    const trimmed = PUBLIC_SOCIAL_X.trim();
+    if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) {
+      try {
+        const u = new URL(trimmed);
+        const name = u.pathname.replace(/^\/+/, "").split("/")[0];
+        if (name) return name.startsWith("@") ? name : `@${name}`;
+      } catch {
+        // ignore
+      }
+    } else if (trimmed) {
+      return trimmed.startsWith("@") ? trimmed : `@${trimmed}`;
+    }
+  }
+  return SITE.author ? (SITE.author.startsWith("@") ? SITE.author : `@${SITE.author}`) : undefined;
+})();
 
 const finalStructuredData = structuredDataProp ?? (
   isArticle
@@ -58,14 +142,16 @@ const finalStructuredData = structuredDataProp ?? (
         "@type": "BlogPosting",
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": canonicalURL.toString(),
+          "@id": canonicalURL ? canonicalURL.toString() : Astro.url.href,
         },
-        headline: title,
+        headline: ogTitle,
         description,
         image: socialImageURL.toString(),
-        url: canonicalURL.toString(),
+        url: canonicalURL ? canonicalURL.toString() : Astro.url.href,
         datePublished: pubDatetime!.toISOString(),
         ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+        inLanguage: lang === "it" ? "it-IT" : "en-US",
+        ...(tags && tags.length > 0 && { keywords: tags.join(", ") }),
         author: [
           {
             "@type": "Person",
@@ -79,13 +165,14 @@ const finalStructuredData = structuredDataProp ?? (
           ...(profile && { url: profile }),
         },
       }
-    : rawPath === ""
+    : rawPath === "" || rawPath === "/en"
       ? {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: SITE.title,
           url: SITE.website,
           description: SITE.desc,
+          inLanguage: lang === "it" ? "it-IT" : "en-US",
           potentialAction: {
             "@type": "SearchAction",
             target: `${SITE.website}search/?q={search_term_string}`,
@@ -96,6 +183,7 @@ const finalStructuredData = structuredDataProp ?? (
         ? {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
+            inLanguage: lang === "it" ? "it-IT" : "en-US",
             mainEntity: {
               "@type": "Person",
               name: author,
@@ -113,65 +201,93 @@ const showGrain = SITE.backdropEffects.grain;
 <!doctype html>
 <html
   dir={SITE.dir}
-  lang={`${SITE.lang ?? "en"}`}
+  lang={lang}
   class={`${scrollSmooth ? "scroll-smooth" : ""}`}
 >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Relational Pagination Links -->
-    {prev && <link rel="prev" href={prev} />}
-    {next && <link rel="next" href={next} />}
+    <!-- SEO & Metadata via astro-seo -->
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonicalURL ? canonicalURL.href : null}
+      noindex={noindex}
+      nofollow={nofollow}
+      robotsExtras={robotsExtras}
+      openGraph={{
+        basic: {
+          title: ogTitle,
+          type: isArticle ? "article" : "website",
+          image: socialImageURL.href,
+          url: canonicalURL ? canonicalURL.href : undefined,
+        },
+        optional: {
+          siteName: SITE.title,
+          description: description,
+          locale: lang === "it" ? "it_IT" : "en_US",
+          localeAlternate: [lang === "it" ? "en_US" : "it_IT"],
+        },
+        image: {
+          url: socialImageURL.href,
+          width: 1200,
+          height: 630,
+          alt: ogImageAlt || ogTitle,
+        },
+        ...(isArticle
+          ? {
+              article: {
+                publishedTime: pubDatetime?.toISOString(),
+                modifiedTime: modDatetime ? modDatetime.toISOString() : undefined,
+                authors: [author || SITE.author],
+                section: articleSection || "Blog",
+                tags: tags && tags.length > 0 ? tags : undefined,
+              },
+            }
+          : {}),
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: twitterHandle,
+        creator: twitterHandle,
+        title: ogTitle,
+        description: description,
+        image: socialImageURL.href,
+        imageAlt: ogImageAlt || ogTitle,
+      }}
+      languageAlternates={languageAlternates}
+      extend={{
+        link: [
+          ...(prev ? [{ rel: "prev", href: prev }] : []),
+          ...(next ? [{ rel: "next", href: next }] : []),
+          { rel: "sitemap", href: "/sitemap-index.xml" },
+          {
+            rel: "alternate",
+            type: "application/rss+xml",
+            title: SITE.title,
+            href: new URL("rss.xml", SITE.website).href,
+          },
+        ],
+        meta: [
+          { name: "author", content: author },
+          ...(PUBLIC_GOOGLE_SITE_VERIFICATION
+            ? [
+                {
+                  name: "google-site-verification",
+                  content: PUBLIC_GOOGLE_SITE_VERIFICATION,
+                },
+              ]
+            : []),
+        ],
+      }}
+    />
 
     <!-- Local fonts (configured in astro.config.mjs) -->
     <Font cssVariable="--font-wotfard" preload />
     <Font cssVariable="--font-firacode" />
-
-    <!-- General Meta Tags -->
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content={SITE.title} />
-    <meta property="og:type" content={isArticle ? "article" : "website"} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Article Published/Modified time -->
-    {
-      pubDatetime && (
-        <meta
-          property="article:published_time"
-          content={pubDatetime.toISOString()}
-        />
-      )
-    }
-    {
-      modDatetime && (
-        <meta
-          property="article:modified_time"
-          content={modDatetime.toISOString()}
-        />
-      )
-    }
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
-    <meta property="twitter:creator" content={SITE.author} />
 
     <!-- Google JSON-LD Structured data -->
     {
@@ -180,28 +296,6 @@ const showGrain = SITE.backdropEffects.grain;
           type="application/ld+json"
           is:inline
           set:html={JSON.stringify(finalStructuredData)}
-        />
-      )
-    }
-
-    <!-- Enable RSS feed auto-discovery  -->
-    <!-- https://docs.astro.build/en/recipes/rss/#enabling-rss-feed-auto-discovery -->
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title={SITE.title}
-      href={new URL("rss.xml", Astro.site)}
-    />
-
-
-    {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
-      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
-      PUBLIC_GOOGLE_SITE_VERIFICATION && (
-        <meta
-          name="google-site-verification"
-          content={PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
       )
     }

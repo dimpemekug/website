@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import { SITE } from "@/config";
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
+<Layout title={`Search | ${SITE.title}`} noindex={true} nofollow={true}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">

@@ -13,18 +13,20 @@ export function useTranslations(lang: Lang) {
 }
 
 /** Returns the equivalent URL in the other locale. */
-export function getAlternateUrl(url: URL, targetLang: Lang): string {
-  const path = url.pathname;
+export function getAlternateUrl(url: URL | string, targetLang: Lang): string {
+  const path = typeof url === "string" ? url : url.pathname;
 
   if (targetLang === "en") {
     // IT → EN: prepend /en, swap /progetti → /projects
-    const enPath = path
-      .replace(/^\/progetti(\/|$)/, "/projects$1");
-    return `/en${enPath === "/" ? "" : enPath}`;
+    const enPath = path.replace(/^\/progetti(\/|$)/, "/projects$1");
+    if (enPath === "" || enPath === "/") return "/en/";
+    return `/en${enPath.startsWith("/") ? enPath : `/${enPath}`}`;
   } else {
     // EN → IT: strip /en prefix, swap /projects → /progetti
-    const stripped = path.replace(/^\/en/, "") || "/";
-    return stripped.replace(/^\/projects(\/|$)/, "/progetti$1");
+    let stripped = path.replace(/^\/en(\/|$)/, "/");
+    if (!stripped.startsWith("/")) stripped = `/${stripped}`;
+    const itPath = stripped.replace(/^\/projects(\/|$)/, "/progetti$1");
+    return itPath === "" ? "/" : itPath;
   }
 }
 
