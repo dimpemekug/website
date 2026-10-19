@@ -1,60 +1,77 @@
 ---
-title: "Local Library and Formats"
-description: "How to import comics via the Apple Files app, organize CBZ/ZIP archives, and structure series folders in rManga."
+title: "Local Library and Supported Formats"
+description: "How to import manga, ebooks, and video media via the Apple Files app, folder hierarchies, and support for CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, and MP4."
 project: "rmanga"
 order: 2
 section: "Library"
 ---
 
-## Managing Files via Apple's Files App
+## Accessing Files via Apple's Files App
 
-rManga exposes its *Documents* sandbox folder directly within iOS and iPadOS. Access it inside:
+rManga exposes its *Documents* sandbox folder directly inside iOS and iPadOS. Access it inside:
 
 ```text
 Files › On My iPhone (or On My iPad) › rManga
 ```
 
-You can transfer files via AirDrop from your Mac, download them via Safari, or transfer them over USB cable via macOS Finder.
+You can import media by dropping files from Mac over AirDrop or USB cable, downloading via Safari, or using the standard iOS Share Sheet from other apps.
 
 ---
 
-## Supported Folder Hierarchies
+## Supported Formats by Media Category
 
-rManga parses your files automatically following simple structural conventions:
+| Media Category | Supported Formats | Engine |
+| :--- | :--- | :--- |
+| **Manga & Comics** | `.cbz`, `.zip`, `.cbr`, `.rar` (including solid archives), image folders | `ArchivePageProvider`, `RARSolidReader`, `FolderPageProvider` |
+| **Ebooks & Text** | `.epub` (EPUB 2 / 3), `.pdf`, `.fb2`, `.docx`, `.odt`, `.rtf`, `.txt`, `.md` | **Readium** (`EbookReaderView`), `TextBookFormats`, `PDFKit` |
+| **Anime & Video** | `.mp4`, `.m4v`, `.mov`, `.mkv`, `.webm`, `.avi`, `.ts`, HLS `.m3u8` streams | **AVPlayer** (Apple native) & **libmpv** (MoltenVK Metal) |
 
-### 1. Single Standalone Volume
-For single-volume graphic novels or one-shots, place the archive directly into the root folder:
+---
+
+## Library Folder Organization
+
+rManga automatically parses file layouts following natural naming conventions:
+
+### 1. Single Standalone Work (One-Shot, Book, or Movie)
+Placing a file directly in the root of the `rManga` directory creates a single self-contained title:
 ```text
 rManga/
-└── Akira_Vol01.cbz
+├── Akira_Volume1.cbz      ← Manga volume
+├── 1984_GeorgeOrwell.epub ← Complete text ebook
+└── Totoro.mkv             ← Standalone video file
 ```
-rManga creates a series entry titled `Akira_Vol01` containing the archive as a single readable volume.
 
 ### 2. Multi-Chapter Series
-For ongoing series with separate chapters or volumes:
+Group separate chapters or volumes inside a named folder; the folder name becomes the series title and files become ordered chapters:
 ```text
 rManga/
-└── Berserk/
-    ├── Chapter 001.cbz
-    ├── Chapter 002.cbz
-    └── Chapter 003.zip
+├── Berserk/
+│   ├── Chapter 001.cbz
+│   ├── Chapter 002.cbz
+│   └── cover.jpg            ← Custom series cover artwork
+├── Foundation_Trilogy/
+│   ├── 01_Foundation.epub
+│   ├── 02_FoundationAndEmpire.epub
+│   └── 03_SecondFoundation.epub
+└── Frieren/
+    ├── Episode 01.mp4
+    ├── Episode 02.mkv
+    └── subtitles_ep2.ass    ← Stylized external subtitle file
 ```
-The app groups them under **Berserk**, sorts chapters sequentially, and extracts the first page of the earliest chapter as the series cover.
 
 ### 3. Chapter as Image Folders
-Uncompressed image folders are supported as well:
+Uncompressed image folders are supported directly:
 ```text
 rManga/
-└── ChainsawMan/
-    └── Chapter 01/
-        ├── 001.jpg
-        ├── 002.jpg
-        └── 003.png
+└── OnePiece/
+    └── Chapter 1000/
+        ├── 01.jpg
+        ├── 02.jpg
+        └── 03.png
 ```
 
 ---
 
-## File Formats and Covers
-- **Supported Archives**: `.cbz`, `.zip`.
-- **Supported Image Encodings**: JPEG, PNG, WebP, static GIF.
-- **Custom Series Cover**: placing an image named `cover.jpg` or `cover.png` inside a series directory designates it as the series artwork.
+## Metadata Support (ComicInfo.xml & EPUB)
+- **Comics**: if a CBZ or CBR archive includes standard `ComicInfo.xml` metadata, rManga extracts official titles, writers, illustrators, plot summaries, and genres.
+- **Ebooks**: for EPUB files, book metadata, chapter hierarchies, and cover art are extracted directly from the package manifest (`content.opf`).
