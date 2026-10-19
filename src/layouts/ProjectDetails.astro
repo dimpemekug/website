@@ -59,7 +59,11 @@ const projectStructuredData = {
 >
   <Header />
   {SITE.showBackButton && <Breadcrumb withBackButton />}
-  <main id="main-content" class:list={["relative app-layout pb-12", { "mt-8": !SITE.showBackButton }]}>
+  <main
+    id="main-content"
+    class:list={["relative app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
+    data-pagefind-body
+  >
 
     <!-- Project header -->
     <header class="post-header relative mb-10 text-center">
@@ -235,7 +239,7 @@ const projectStructuredData = {
     </div>
 
     <!-- Back link -->
-    <div class="mt-6 flex justify-center">
+    <div data-pagefind-ignore class="mt-6 flex justify-center">
       <a
         href={backHref}
         class="inline-flex items-center gap-2 rounded-xl border border-border/25 bg-muted/10 px-5 py-2.5 text-sm font-medium text-foreground/70 transition-all duration-200 hover:border-accent/30 hover:text-accent hover:-translate-y-0.5"

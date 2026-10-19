@@ -93,7 +93,7 @@ const docStructuredData = {
       />
 
       <!-- Main Content Column -->
-      <article class="min-w-0">
+      <article class="min-w-0" data-pagefind-body>
         <!-- Page Header -->
         <header class="mb-8 pb-6 border-b border-border/20">
           <div class="inline-flex items-center gap-2 mb-3">
@@ -129,7 +129,7 @@ const docStructuredData = {
         </div>
 
         <!-- Pagination / Prev Next Doc navigation -->
-        <nav class="mt-14 pt-8 border-t border-border/20 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Navigazione pagine documentazione">
+        <nav data-pagefind-ignore class="mt-14 pt-8 border-t border-border/20 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Navigazione pagine documentazione">
           {prevDoc ? (
             <a
               href={formatDocHref(prevDoc.slug)}
