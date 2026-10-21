@@ -1,6 +1,6 @@
 ---
 title: "Introduction to NetCalc Pro"
-description: "Overview of NetCalc Pro for Mac, iPad, and iPhone: IPv4/IPv6 calculation, subnetting & VLSM planner, Cisco IOS configuration generator, and network linter for CCNA labs."
+description: "Overview of NetCalc Pro for Mac, iPad, and iPhone: IPv4/IPv6 calculation, subnetting and VLSM, four network tools, Cisco IOS generator, topology diagram, and linter."
 project: "netcalc"
 order: 1
 section: "Getting Started"
@@ -8,50 +8,54 @@ section: "Getting Started"
 
 ## What is NetCalc Pro?
 
-**NetCalc Pro** is a professional networking utility natively built in Swift, SwiftUI, and SwiftData for **macOS 14+ (Sonoma, Sequoia, Tahoe)**, **iPadOS 17+**, and **iOS 17+**.
+**NetCalc Pro** is a professional networking utility built natively in Swift, SwiftUI, and SwiftData for **macOS 14+ (Sonoma, Sequoia, Tahoe)**, **iPadOS 17+**, and **iOS 17+**.
 
-Designed specifically for networking students (school and university courses or **Cisco CCNA** exam preparation), instructors, system administrators, and network engineers, NetCalc Pro bridges the gap between theoretical calculations on paper and practical device configuration in simulators like **Cisco Packet Tracer**, **GNS3**, **EVE-NG**, or physical lab benches.
+Designed specifically for networking students (computer science coursework and **Cisco CCNA** certification studies), educators, systems administrators, and telecommunications enthusiasts, NetCalc Pro bridges the gap between theoretical pencil-and-paper subnetting and practical appliance configuration in environments such as **Cisco Packet Tracer**, **GNS3**, **EVE-NG**, or physical hardware racks.
 
-The application allows you to:
+The app allows you to:
 
-- **Calculate and Inspect IPv4 & IPv6 Addresses**: subnet masks, CIDR prefixes, wildcard masks, usable host ranges, and a 32-bit interactive color-coded binary view dynamically separating network and host bits.
-- **Plan Subnets with Equal Blocks and VLSM**: partition networks into equal-sized subnets or variable-length blocks using a descending best-fit algorithm (_sorted largest first_), complete with a proportional address space occupancy map.
-- **Generate Complete Cisco IOS Configurations**: ready-to-paste CLI scripts for routers and switches (physical interfaces, 802.1Q dot1Q sub-interfaces, static routes, OSPF, RIPv2, EIGRP, DHCP servers with dedicated pools, standard and extended ACLs, NAT/PAT overload, and system hardening).
-- **Import Real Running-Configs**: parse pasted or saved outputs from `show running-config` to automatically reconstruct devices and interfaces inside your project.
-- **Verify Lab Topologies (Network Linter)**: proactively diagnose configuration errors before powering on devices (overlapping subnets, duplicate IPs, unreachable next-hops, unadvertised OSPF networks, and misconfigured DHCP default-routers).
-- **Export and Share**: generate pixel-perfect vector PDF reports rendered via CoreGraphics/CoreText, structured CSV spreadsheets, and clean plain-text CLI files.
+- **Calculate and Explore IPv4 & IPv6 Addresses**: subnet masks, CIDR prefixes, wildcard masks, host ranges, 32-bit binary breakdown with interactive boundary adjustment, and step-by-step arithmetic explanations ("How it's calculated").
+- **Plan Subnet Partitioning**: fixed-size subnetting and advanced **VLSM** (_Variable Length Subnet Masking_) ordered by descending host capacity (_best-fit descending_) with a dynamic, zoomable address space map.
+- **Access Advanced Network Tools**: route summarization/supernetting with ready-made Cisco IOS commands and Null0 routes, arbitrary IP range decomposition to minimal CIDR blocks with ACL lines, wildcard mask & ACL line-by-line packet simulator, and network comparison with asymmetric ping detection and Longest Prefix Match simulation.
+- **Generate Cisco IOS Configurations**: comprehensive, annotated CLI syntax for routers and switches (interfaces, 802.1Q dot1Q sub-interfaces, IPv6 and OSPFv3, HSRP redundancy, `ip helper-address` DHCP relay, Spanning Tree, EtherChannel, Port Security, DHCP, ACLs, NAT/PAT, and device hardening).
+- **Import and Compare Live Configurations (Config Diff)**: instant parsing of `show running-config` output and stanza-by-stanza bidirectional comparison between physical hardware and your project plan, with single-click copying of missing commands.
+- **Visualize Network Topologies**: interactive, vector topology diagram automatically derived from configured IP addresses and point-to-point links, printable as a dedicated high-resolution page in PDF reports.
+- **Verify Topology Integrity (15-Rule Network Linter)**: proactive detection of misconfigurations before powering on equipment (overlapping subnets, duplicate IPs, unreachable next hops, OSPFv3 missing router-id, faulty HSRP virtual IPs, port security on trunks).
+- **Practice with Interactive Quizzes & Widgets**: 9 subnetting exercise question types across 3 difficulty tiers with full step-by-step explanations, streak tracking, and high scores; interactive "Daily Quiz" widget with on-face answer reveal for iOS 18 and macOS 15.
+- **Export and Share**: professional vector PDF reports drawn with Apple CoreGraphics/CoreText, structured CSV tables, and plain text CLI configurations.
 
 ---
 
-## Architecture & Design Principles
+## Architecture and Design Principles
 
-NetCalc Pro is engineered according to Apple's modern software development best practices:
+NetCalc Pro follows Apple's highest software engineering standards:
 
 ### 1. Pure Domain Model
 
-The core domain model (`IPv4Address`, `IPv6Address`, `SubnetMask`, `SubnetPlan`, `CiscoDevice`, `NetworkLinter`) is built with pure Swift structs and enums, completely decoupled from SwiftUI and persistence frameworks. All calculations and parsing routines are 100% deterministic, side-effect free, and backed by comprehensive unit test suites.
+The domain model layer (`IPv4Address`, `IPv6Address`, `SubnetMask`, `SubnetPlan`, `CiscoDevice`, `NetworkLinter`, `RouteSummary`, `TopologyBuilder`, `SubnetQuiz`) is implemented using pure Swift structs and enums, decoupled from both SwiftUI and persistence frameworks. Every calculation algorithm and Cisco CLI parser is strictly deterministic, free of side effects, and covered by more than 260 unit tests.
 
-### 2. Absolute Privacy & Local-First Philosophy
+### 2. Absolute Privacy & Local-First Design
 
-- **Zero Tracking**: the app contains no third-party SDKs, analytics frameworks, tracking pixels, or advertising libraries.
-- **Complete Offline Operation**: all calculations, CLI generations, and diagnostic scans run entirely on the device's local CPU.
-- **Private iCloud Synchronization**: projects, devices, and preferences optionally synchronize across your devices using Apple's private CloudKit database container (`iCloud.com.dimpemekug.netcalc`). Your data remains encrypted in your personal iCloud account and is never accessible to outside servers.
+- **Zero Tracking**: the app contains no analytics SDKs, ad trackers, or third-party profiling libraries.
+- **100% Offline Operation**: all calculations, CLI generation, and diagnostic evaluations execute entirely on the local device CPU.
+- **Private iCloud Synchronization**: projects, devices, and preferences synchronize optionally through the user's **private** Apple CloudKit database container (`iCloud.com.dimpemekug.netcalc`). Data remains encrypted within your personal Apple account and never transits through third-party servers.
 
 ### 3. Adaptive Universal Interface
 
-- **macOS and Regular Width iPad**: three-column layout via `NavigationSplitView` featuring a sidebar (Tools and Projects), a primary workspace, and an optional collapsible contextual inspector.
-- **iPhone and Compact Split**: optimized `TabView` with dedicated segmented pickers for calculation modes, modal bottom sheets, and numeric keypads tailored for IP input.
+- **macOS and Regular Width iPad**: two-panel navigation using `NavigationSplitView` with sidebar (Tools and Projects), main work area, integrated syntax-colored terminal, and collapsible contextual inspector. Standalone calculator window available via <kbd>⌥</kbd><kbd>⌘</kbd><kbd>C</kbd>.
+- **iPhone and Compact Widths**: tabbed interface (`TabView`) optimized with calculation mode selectors and native modal sheets with specialized numeric keyboards and monospaced controls.
 
 ---
 
-## Documentation Roadmap
+## Documentation Directory
 
-Explore the dedicated guides to master all aspects of NetCalc Pro:
+To master every aspect of the application, explore the dedicated documentation guides:
 
-- [IPv4, IPv6 Calculator & Subnetting](/en/projects/netcalc/docs/ip-calculator-and-subnetting): Input modes, binary inspection, and fixed-size subnetting.
-- [VLSM Best-Fit Planner](/en/projects/netcalc/docs/vlsm-best-fit-planner): Variable-length subnet allocation, waste metrics, and automated device provisioning.
-- [Cisco IOS Configuration Generator](/en/projects/netcalc/docs/cisco-ios-configurations): Routers, switches, VLANs, trunks, OSPF/EIGRP/RIP routing, DHCP, ACLs, and NAT.
-- [Importing Running-Configs](/en/projects/netcalc/docs/import-running-config): Parsing existing Cisco CLI configurations into project topologies.
-- [Lab Verification (Network Linter)](/en/projects/netcalc/docs/lab-linter-and-verification): Automated pre-flight detection of IP conflicts and routing issues.
-- [Projects, Exporting & iCloud](/en/projects/netcalc/docs/projects-export-and-icloud): Lab management, CoreGraphics PDF reports, CSV export, and private CloudKit sync.
-- [Shortcuts, Learning & Reference](/en/projects/netcalc/docs/shortcuts-and-learning): 21-chapter networking curriculum, searchable glossary, Beginner vs Expert modes, and macOS keyboard shortcuts.
+- [IPv4, IPv6 Calculator and Subnetting](/en/projects/netcalc/docs/ip-calculator-and-subnetting): Input modes, binary inspection, step-by-step calculation breakdown, and recent history.
+- [VLSM Best-Fit Planning](/en/projects/netcalc/docs/vlsm-best-fit-planner): Hierarchical subnet planning, capacity waste evaluation, zoomable space map, and interconnected router generator.
+- [Advanced Network Tools](/en/projects/netcalc/docs/network-tools): Route summary with Cisco commands, Range to CIDR with ACLs, Wildcard & ACL simulator, and Longest Prefix Match.
+- [Cisco IOS Configurations Generation](/en/projects/netcalc/docs/cisco-ios-configurations): Routers, switches, IPv6/OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, and Port Security.
+- [Running-Config Import & Comparison](/en/projects/netcalc/docs/import-running-config): Existing Cisco configuration parsing, project integration, and stanza Config Diff with copyable missing commands.
+- [Lab Verification (Network Linter)](/en/projects/netcalc/docs/lab-linter-and-verification): Proactive 15-rule diagnostics for anomalies, IP collisions, OSPFv3 flaws, and routing inconsistencies.
+- [Projects, Topology and Exporting](/en/projects/netcalc/docs/projects-export-and-icloud): Lab project organization, automatic topology diagram, CoreGraphics PDF reports, and CloudKit synchronization.
+- [Learning, Exercises and Widgets](/en/projects/netcalc/docs/shortcuts-and-learning): 9-type interactive quiz with streak/records, 21-chapter textbook, 55+ term glossary, and iOS 18 / macOS 15 widgets.

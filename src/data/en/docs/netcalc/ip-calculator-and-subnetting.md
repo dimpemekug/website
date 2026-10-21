@@ -1,79 +1,112 @@
 ---
-title: "IPv4, IPv6 Calculator & Subnetting"
-description: "Master IPv4 and IPv6 addressing in NetCalc Pro: four input modes, interactive 32-bit binary inspection, EUI-64 generator, and equal-size subnetting."
+title: "IPv4, IPv6 Calculator and Subnetting"
+description: "Guide to NetCalc Pro's IP calculation tools: four input modes, 32-bit binary inspection, step-by-step calculation breakdown, recent history, and IPv6."
 project: "netcalc"
 order: 2
 section: "Calculation & Planning"
 ---
 
-## Comprehensive Addressing Calculator
+## Redesigned IPv4 Calculator
 
-The calculator in NetCalc Pro is engineered to provide instant clarity on any network address, combining mathematical accuracy with interactive visual feedback.
+The IPv4 calculator in **NetCalc Pro** delivers a seamless and intuitive experience for analyzing any combination of IP address and subnet mask, combining algebraic accuracy with maximum visual clarity.
 
----
+On macOS and iPad, all essential values and controls fit on a single screen without scrolling; on iPhone, the interface dynamically optimizes for full address visibility, continuous prefix sliders, and quick contextual menus.
 
-## IPv4: Four Flexible Input Modes
+### 4 Flexible Input Modes
 
-Networks can be expressed in various notations across exam questions, documentation, and vendor specifications. NetCalc Pro supports four distinct input modes:
+The app adapts to how you prefer to enter network data:
 
-1. **CIDR Prefix (e.g., `192.168.1.10 /24`)**:
-   Specify the base IP address and the prefix length `/n` (from `/0` to `/32`) using a dedicated stepper or slider.
-2. **Dotted Decimal Subnet Mask (e.g., `255.255.255.192`)**:
-   Enter standard subnet masks. NetCalc Pro automatically verifies that the mask consists of contiguous high-order bits (`1`s followed by `0`s), preventing invalid mask errors.
-3. **Cisco Wildcard Mask (e.g., `0.0.0.63`)**:
-   Directly enter inverted wildcard masks used in Cisco IOS OSPF and Access Control Lists. The calculator instantly derives the corresponding CIDR prefix and standard subnet mask.
-4. **Required Usable Hosts (e.g., `50 hosts`)**:
-   Specify how many client devices need an IP address. NetCalc Pro determines the tightest CIDR prefix that can accommodate the requested capacity (for 50 hosts, it computes `2^(32-26) - 2 = 62` usable hosts on a `/26` block).
+1. **Address / CIDR Prefix** (e.g., `192.168.1.100/26`): the fastest notation, featuring quick increment/decrement `−` and `+` buttons (or a continuous slider on iPhone).
+2. **Dotted Decimal** (e.g., IP `172.16.50.14`, Mask `255.255.240.0`): ideal for pasting configuration parameters from OS network settings or exam sheets.
+3. **Inverse Wildcard Mask** (e.g., IP `10.1.0.50`, Wildcard `0.0.3.255`): essential for verifying and composing rules for Access Control Lists (ACLs) and `network` statements in OSPF and EIGRP.
+4. **Host Capacity Sizing**: enter the starting address and required host count (e.g., 500 hosts); NetCalc Pro instantly computes the minimal efficient mask (e.g., `/23`), minimizing unused addresses.
 
 ---
 
-## Interactive 32-Bit Binary Inspection (`BitBoundaryView`)
+## Interactive Binary Inspection (`BitBoundaryView`)
 
-Understanding subnetting requires visualizing how bits are partitioned. NetCalc Pro features an interactive binary inspector that represents all 32 bits across the four octets:
+At the core of the IPv4 calculator is the **32-bit binary breakdown**:
 
-- **Visual Separation**: network bits are highlighted in the active accent color, while host bits are displayed with subtle neutral contrast.
-- **Dynamic Boundary**: adjust the prefix length dynamically and watch the dividing line shift across octet boundaries in real time.
-- **Bit Values**: see binary positional values (`128, 64, 32, 16, 8, 4, 2, 1`) to easily understand how decimal numbers are composed.
+```text
+Octet 1            Octet 2            Octet 3            Octet 4
+11000000 (192)  .  10101000 (168)  .  00000001 (1)    .  01 | 100100 (100)
+▲─────────────────────────── Network (/26) ─────────────────────────▲ ▲── Host ──▲
+```
 
----
-
-## Comprehensive Calculated Output
-
-For any IPv4 input, NetCalc Pro provides a complete breakdown:
-
-| Parameter             | Description                                                                                                                                                                                                    |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Network Address**   | The very first address of the block; identifies the subnet and cannot be assigned to a host device.                                                                                                            |
-| **Subnet Mask**       | Dotted decimal representation of fixed network bits (e.g., `255.255.255.0`).                                                                                                                                   |
-| **Wildcard Mask**     | Inverted bitmask calculated as `255.255.255.255 - Mask` (e.g., `0.0.0.255`).                                                                                                                                   |
-| **Broadcast Address** | The last address of the block; used for sending broadcast frames to all local nodes.                                                                                                                           |
-| **Usable Host Range** | The range spanning from `firstHost` (`Network + 1`) to `lastHost` (`Broadcast - 1`).                                                                                                                           |
-| **Host Capacity**     | Total addresses (`2^(32 - CIDR)`) and usable hosts (`2^(32 - CIDR) - 2`, with special handling for `/31` point-to-point and `/32` loopback).                                                                   |
-| **Historical Class**  | Class A, B, C, D (Multicast), or E (Experimental) based on high-order bits.                                                                                                                                    |
-| **Address Scope**     | Flags whether the address is Public Internet routable, Private RFC 1918 (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`), Loopback RFC 1122 (`127.0.0.0/8`), or APIPA link-local RFC 3927 (`169.254.0.0/16`). |
+- **High-Contrast Color Coding**: network bits and host bits are highlighted in distinct, accessible colors.
+- **Interactive Boundary Dragging**: on Mac and iPad, click any bit or drag the divider to shift the prefix length (from `/1` to `/32`), observing live updates to the mask, wildcard, network address, and broadcast address.
+- **Hexadecimal Representation**: instant 8-character hex conversion for low-level packet analysis and IP header inspection.
 
 ---
 
-## IPv6 Calculator & EUI-64
+## "How It's Calculated": Step-by-Step Breakdown
 
-NetCalc Pro includes complete native support for IPv6 addressing:
+Directly beneath the primary results, the **"How it's calculated"** panel details the exact Boolean algebra performed on the entered values:
 
-- **RFC 5952 Canonical Compression**: automatically condenses the longest run of consecutive 16-bit zero hextets into `::` and removes leading zeros.
-- **Full Expansion**: uncompresses any IPv6 address into its full 8-hextet, 32-hexadecimal-digit format (`2001:0db8:0000:0000:0000:0000:0000:0001`).
-- **Standard Prefixes**: calculate subnet blocks using standard global prefixes (`/48` site, `/64` standard interface subnet).
-- **EUI-64 MAC Address Converter**: paste a 48-bit hardware MAC address (e.g., `00:1A:2B:3C:4D:5E`) to generate the modified EUI-64 interface identifier by inverting the Universal/Local bit (bit 7) and inserting `FF:FE` in the middle (`021A:2BFF:FE3C:4D5E`).
+```text
+IP Address:      192.168.1.100    -> 11000000.10101000.00000001.01100100
+Subnet Mask:     255.255.255.192  -> 11111111.11111111.11111111.11000000
+-------------------------------------------------------------------------
+Bitwise AND:     192.168.1.64     -> 11000000.10101000.00000001.01000000 (Network)
+
+Wildcard Mask:   0.0.0.63         -> 00000000.00000000.00000000.00111111
+Bitwise OR:      192.168.1.127    -> 11000000.10101000.00000001.01111111 (Broadcast)
+
+Host Formula:    2^(32 - 26) - 2  =  2^6 - 2 = 64 - 2 = 62 usable hosts
+```
+
+1. **Bitwise AND for Network Address**: compares every bit of the IP address with the subnet mask. Since $1 \text{ AND } 1 = 1$ and any bit with $0$ evaluates to $0$, all host bits are zeroed out, isolating the subnet ID.
+2. **Wildcard Mask Inversion**: inverts mask bits (`1`s become `0`s and vice versa).
+3. **Bitwise OR for Broadcast Address**: performs an OR operation between network address and wildcard mask, forcing all host bits to `1`.
+4. **Host Capacity**: evaluates total address count ($2^H$) and subtracts the two reserved addresses (network and broadcast).
 
 ---
 
-## Equal-Size Subnetting (FLSM)
+## History and "Recents" Menu
 
-When partitioning a parent network into equal-sized child subnets (Fixed-Length Subnet Masking):
+NetCalc Pro automatically preserves your **last 15 calculations**:
 
-1. Enter your parent network (e.g., `192.168.0.0/24`).
-2. Select whether to divide by **Number of Subnets** (e.g., 4 subnets of `/26`) or **Hosts per Subnet** (e.g., 30 hosts).
-3. The app instantly renders an interactive table detailing each child block:
-   - Subnet index and network address
-   - Subnet mask and prefix
-   - Usable host range
-   - Broadcast address
-4. Click on any generated subnet to open it directly in the calculator or transfer it into a project.
+- History saves in the background whenever you pause on a valid calculation result.
+- Opening the **Recents** menu in the calculator toolbar lets you recall any past calculation with one click, immediately restoring the address and prefix.
+
+---
+
+## Computed Properties and Metrics
+
+For every entered configuration, NetCalc Pro outputs a comprehensive property sheet with single-tap copyable values:
+
+| Parameter                       | Description                                                                                             | Example (`192.168.1.100/26`)     |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| **Network Address**             | Subnet identifier address (host bits set to `0`)                                                        | `192.168.1.64`                   |
+| **Broadcast Address**           | Subnet broadcast address (host bits set to `1`)                                                         | `192.168.1.127`                  |
+| **Usable Host Range**           | First and last assignable host addresses                                                                | `192.168.1.65` — `192.168.1.126` |
+| **Total / Usable Hosts**        | Total block addresses ($2^{32 - \text{prefix}}$) and usable capacity (excluding network and broadcast) | 64 total / **62 usable**         |
+| **Dotted Decimal Subnet Mask**  | Four-octet subnet mask                                                                                  | `255.255.255.192`                |
+| **Wildcard Mask**               | Inverted mask for ACLs and OSPF                                                                         | `0.0.0.63`                       |
+| **Class and Scope**             | Historical class classification (A, B, C, D, E) and RFC scope                                           | Class C · Private (RFC 1918)     |
+| **Special Addresses**           | Automatic detection of Link-Local APIPA (`169.254.0.0/16`), Loopback (`127.0.0.0/8`), Multicast, etc.  | —                                |
+
+---
+
+## IPv6 Calculator
+
+NetCalc Pro features a dedicated 128-bit IPv6 module:
+
+- **RFC 5952 Canonical Compression**: enter any IPv6 address in compressed or uncompressed form; the app displays both canonical format with `::` and full 32-hex expansion.
+- **Prefix Inspection**: breaks down Global Routing Prefix, Provider ID (/48), Subnet ID (/64), and 64-bit Interface Identifier.
+- **EUI-64 Calculation from MAC**: enter a 48-bit Ethernet MAC (e.g., `00:1A:2B:3C:4D:5E`); NetCalc Pro flips the 7th bit (Universal/Local) and inserts `FF:FE` to produce SLAAC / Link-Local addresses (`fe80::021a:2bff:fe3c:4d5e`).
+- **Address Classification**: immediate scope detection across Global Unicast (`2000::/3`), Link-Local (`fe80::/10`), Unique Local ULA (`fc00::/7`), Multicast (`ff00::/8`), and Loopback (`::1/128`).
+- **Cisco CLI Generation**: one-click output for `ipv6 address` and `ipv6 address ... eui-64` statements.
+
+---
+
+## Fixed-Size Subnetting
+
+When dividing an organization's block into equal-sized subnets:
+
+1. Enter the base root block (e.g., `10.10.0.0/16`).
+2. Select partitioning criteria:
+   - **By required subnet count** (e.g., 8 equal departments).
+   - **By target prefix** (e.g., transform `/16` into `/20` subnets).
+3. The app generates the complete allocation table including subnet indices, network IDs, gateway and host ranges, broadcast addresses, and host counts.
+4. Click **"Create devices from plan"** to immediately convert the table into configured routers and switches inside your lab project.

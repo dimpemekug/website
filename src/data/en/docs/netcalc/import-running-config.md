@@ -1,78 +1,88 @@
 ---
-title: "Importing Running-Configs"
-description: "How to import, parse, and analyze real Cisco IOS running-config outputs from hardware or Packet Tracer in NetCalc Pro."
+title: "Running-Config Import & Comparison"
+description: "How to import, parse, and compare live Cisco IOS running configurations in NetCalc Pro: device reconstruction, stanza-by-stanza Config Diff, and missing command copying."
 project: "netcalc"
-order: 5
+order: 6
 section: "Cisco IOS Integration"
 ---
 
-## Closing the Lab Workflow Loop
+## Closing the Lab Lifecycle Loop
 
-In standard network engineering workflows:
+In the daily workflow of networking students, educators, and engineers:
 
-1. **You design** the addressing plan in NetCalc Pro.
-2. **You generate** Cisco IOS commands and paste them into your devices or **Cisco Packet Tracer**.
-3. **You make adjustments** directly on the CLI during hands-on troubleshooting (adding interfaces, adjusting static routes, tweaking NAT or ACLs).
-4. **Connectivity issues arise**: "ping fails", but Packet Tracer does not explain why.
+1. **Design**: establish the subnet plan in NetCalc Pro.
+2. **Deploy**: generate Cisco IOS scripts and paste them into simulators (**Cisco Packet Tracer**, **GNS3**, **EVE-NG**) or physical devices.
+3. **Troubleshoot**: make real-time modifications directly in the CLI console during lab testing (adding routes, bouncing interfaces, tweaking ACLs).
+4. **Drift**: the physical device configuration diverges from the original lab specification, making connectivity issues difficult to trace.
 
-To avoid tedious manual re-entry of changes made in the simulator, NetCalc Pro includes the **RunningConfigParser** module. This component parses raw text from a `show running-config` command and reconstructs a complete device model directly inside your project.
-
-Once imported, the device can immediately be inspected by NetCalc Pro's **Network Linter** to identify the root cause of connectivity failures.
+To address this bidirectional challenge, NetCalc Pro provides two complementary tools:
+- **Running-Config Import**: parses an existing configuration text to reconstruct full device models in your project.
+- **Config Comparison (Config Diff)**: compares live device configurations against your planned design, highlighting missing and extra commands.
 
 ---
 
-## How to Import a Configuration
+## 1. How to Import a Running-Config
 
-1. In your router or switch CLI (in Packet Tracer or physical terminal), execute:
+1. In your router or switch CLI (in Packet Tracer or serial console), type:
    ```text
    enable
    show running-config
    ```
-2. Select and copy the entire output text (including comments, exclamation marks `!`, and interface blocks).
-3. In NetCalc Pro, select your project in the sidebar.
-4. Click **Import Running-Config** (or choose it from the project's action menu).
-5. Paste the text into the import sheet and confirm.
-6. The app automatically creates a new `CiscoDevice` populated with the extracted hostname, interfaces, routing tables, and security settings.
+2. Select and copy the entire output (including `!` separators and interface blocks).
+3. In NetCalc Pro, open your project in the sidebar.
+4. Click **Import Running-Config** (via the toolbar or project context menu).
+5. Paste the text into the input sheet and confirm.
+6. The app automatically creates a new `CiscoDevice` populating hostname, physical and sub-interfaces, routing protocols, and active services.
 
 ---
 
-## Parser Architecture: Fault Tolerance & Transparency
+## 2. Parser Architecture: Fault Tolerance and Transparency
 
-Real-world production or lab configurations often contain hundreds of lines irrelevant to layer 2/3 topology planning (e.g., `spanning-tree mode pvst`, `crypto pki trustpoint`, `line con 0` details, logging parameters).
+Production and lab running configurations frequently contain hundreds of lines unrelated to core Layer 2/3 logic (e.g., `crypto pki trustpoint`, certificates, internal timers, proprietary hardware directives).
 
-NetCalc Pro's parser is designed around two engineering principles:
+NetCalc Pro's parser is built around two key engineering principles:
 
-### 1. Graceful Fault Tolerance
+### Fault Tolerance for Unmodeled Statements
 
-The parser **never throws a fatal error** when encountering unfamiliar commands or hardware-specific syntax. Blocks are recognized by standard contextual keywords (`interface`, `router ospf`, `ip dhcp pool`, `vlan`) and terminated cleanly by standard delimiters (`!` or `exit`/`end`).
+The parser **never throws a fatal error** when encountering unknown hardware or software directives. Configuration stanzas are parsed by recognizing opening keywords (`interface`, `router ospf`, `ipv6 router ospf`, `ip dhcp pool`, `vlan`) and standard delimiters (`!` or `exit`/`end`).
 
-### 2. Complete Transparency (`unrecognizedLines`)
+### Total Transparency (`unrecognizedLines`)
 
-Unrecognized commands are not discarded silently. They are collected in the `unrecognizedLines` array and displayed in a dedicated review sheet. You always know exactly which lines became active model objects and which lines were auxiliary commands.
-
----
-
-## Recognized Syntax Elements
-
-The parser supports all configuration directives produced by NetCalc Pro's CLI generator:
-
-| Feature                           | Parsed Commands and Blocks                                                                                                                                |
-| :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Device Identity**               | `hostname <name>`                                                                                                                                         |
-| **Physical & Virtual Interfaces** | `interface <name>`, `description <text>`, `ip address <ip> <mask>`, `shutdown` / `no shutdown`                                                            |
-| **Sub-interfaces & Trunking**     | `encapsulation dot1Q <vlan_id>`, `switchport mode access`, `switchport mode trunk`, `switchport access vlan <id>`, `switchport trunk allowed vlan <list>` |
-| **VLAN Database**                 | `vlan <id>`, `name <name>`                                                                                                                                |
-| **Static Routing**                | `ip route <dest_network> <mask> <next_hop>`                                                                                                               |
-| **OSPF**                          | `router ospf <process_id>`, `network <ip> <wildcard> area <area_id>`                                                                                      |
-| **RIPv2**                         | `router rip`, `version 2`, `no auto-summary`, `network <ip>`, `passive-interface <name>`                                                                  |
-| **EIGRP**                         | `router eigrp <as_number>`, `no auto-summary`, `network <ip> [wildcard]`                                                                                  |
-| **DHCP Server**                   | `ip dhcp pool <name>`, `network <ip> <mask>`, `default-router <ip>`, `dns-server <ip>`, automatically linking preceding `ip dhcp excluded-address` ranges |
-| **NAT / PAT**                     | `ip nat inside source list <acl> interface <wan> overload`, `ip nat inside source static` entries, interface tags `ip nat inside` and `ip nat outside`    |
-| **Access Control Lists**          | `access-list <id> permit/deny <protocol> ...`, interface directives `ip access-group <id> in/out`                                                         |
-| **Device Hardening**              | `enable secret <pass>`, `service password-encryption`, `banner motd #<text>#`, `ip domain-name <domain>`                                                  |
+Unmodeled configuration lines are neither silently discarded nor lost: they are captured into an `unrecognizedLines` array and surfaced to the user in a dedicated summary inspection view. This gives you complete transparency into what was imported and what was preserved as auxiliary CLI.
 
 ---
 
-## Instant Pre-Flight Diagnostics
+## 3. Supported Parsed Statements (Version 1.1)
 
-As soon as a device is imported, it participates in project-wide analysis. Clicking **Lab Verification** instantly highlights whether the imported running-config introduced duplicate IPs, overlapping subnets, or missing OSPF network statements.
+The parser recognizes all commands generated by the app's CLI engine:
+
+| Domain                           | Recognized Statements and Stanzas                                                                                                                           |
+| :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Device Identity**              | `hostname <name>`, global routing `ipv6 unicast-routing`                                                                                                    |
+| **Physical and Sub-interfaces**  | `interface <name>`, `description <text>`, `ip address <ip> <mask>`, `ipv6 address <ip/prefix>`, `shutdown` / `no shutdown`                                 |
+| **Sub-interfaces and Trunking**   | `encapsulation dot1Q <vlan_id>`, `switchport mode access`, `switchport mode trunk`, `switchport access vlan <id>`, `switchport trunk allowed vlan <list>`    |
+| **Advanced Switching**           | `spanning-tree mode ...`, `spanning-tree vlan ... root ...`, `channel-group <id> mode ...`, `switchport port-security`, `switchport port-security sticky`  |
+| **Redundancy and Relay**         | `standby <group> ip <virtual_ip>`, `standby priority`, `standby preempt`, `ip helper-address <server>`                                                     |
+| **VLAN Database**                | `vlan <id>`, `name <name>`                                                                                                                                  |
+| **Static Routing**               | `ip route <network> <mask> <next_hop>`, `ipv6 route <prefix> <next_hop>`                                                                                    |
+| **OSPFv2 and OSPFv3**            | `router ospf <id>`, `network <net> <wildcard> area <id>`, `ipv6 router ospf <id>`, `router-id <id>`, `ipv6 ospf <id> area <area>`                           |
+| **RIPv2 and EIGRP**              | `router rip`, `version 2`, `no auto-summary`, `network <net>`, `router eigrp <as>`, `network <net> [wildcard]`                                            |
+| **DHCP Server**                  | `ip dhcp pool <name>`, `network <net> <mask>`, `default-router <ip>`, `dns-server <ip>`, preceding `ip dhcp excluded-address` ranges                        |
+| **NAT / PAT**                    | `ip nat inside source list <acl> interface <wan> overload`, static rules `ip nat inside source static`, interface markers `ip nat inside` and `outside`    |
+| **Access Control Lists**         | `access-list <id> permit/deny <protocol> ...`, interface bindings `ip access-group <id> in/out`                                                             |
+| **Security Hardening**           | `enable secret <pass>`, `service password-encryption`, `banner motd #<msg>#`, `transport input ssh`, line configs `line con 0` and `line vty 0 4`          |
+
+---
+
+## 4. "Compare with Running-Config" (Config Diff)
+
+A standout addition in **NetCalc Pro 1.1** is the **Compare with running-config** sheet (`ConfigCompareSheet`), available directly from each device's inspection view.
+
+### How the Diff Works
+
+When you paste a device's current `show running-config`:
+
+1. **Stanza-by-Stanza Logical Analysis**: rather than a crude line-by-line textual diff, the engine performs a contextual block comparison (interface by interface, protocol by protocol).
+2. **Missing Commands Highlighting**: identifies commands defined in your NetCalc Pro model that are absent on the live device (such as an un-entered `no shutdown`, an unassigned trunk VLAN, or a missing static route).
+3. **Extra Commands Detection**: flags active commands on the physical unit that are not part of the project design.
+4. **"Copy Missing Commands" Button**: with a single click, NetCalc Pro extracts and copies exclusively the minimal sequence of Cisco IOS statements needed to reconcile the device with the plan, ready to paste straight into the terminal.

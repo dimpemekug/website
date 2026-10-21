@@ -1,14 +1,74 @@
 ---
-title: "Scorciatoie, Didattica e Riferimenti"
-description: "Modalità Principiante ed Esperto, guida alle reti in 21 capitoli, glossario interattivo, scorciatoie macOS e comandi rapidi Siri/Spotlight in NetCalc Pro."
+title: "Didattica, Esercizi e Widget"
+description: "Esercizi di subnetting interattivi a 9 tipologie, guida didattica alle reti in 21 capitoli, glossario ampliato, widget per iOS 18/macOS 15, controlli e scorciatoie."
 project: "netcalc"
-order: 8
-section: "Riferimento"
+order: 9
+section: "Riferimento e Didattica"
 ---
 
 ## Didattica Integrata e Apprendimento Attivo
 
-NetCalc Pro non è solo un calcolatore per professionisti, ma un vero e proprio strumento didattico progettato per accompagnare gli studenti durante la preparazione scolastica, universitaria o verso le certificazioni industriali come **Cisco CCNA (200-301)**.
+NetCalc Pro non è solo un calcolatore per professionisti, ma un ambiente di apprendimento completo progettato per accompagnare studenti e docenti nella preparazione scolastica, universitaria e verso le certificazioni industriali come **Cisco CCNA (200-301)**.
+
+---
+
+## Esercizi di Subnetting Interattivi (`SubnetQuiz`)
+
+**NetCalc Pro 1.1** introduce il modulo di autovalutazione interattivo **Esercizi di Subnetting** (disponibile nella sezione _Impara_ su iPhone/iPad e dal menu _Aiuto_ su macOS):
+
+### 9 Tipologie di Domanda
+
+Il generatore algoritmico crea quesiti casuali e realistici appartenenti alle classi di indirizzi privati e pubblici:
+
+1. **Trova l'Indirizzo di Rete** (dato un host e il prefisso).
+2. **Trova l'Indirizzo di Broadcast**.
+3. **Determina il Primo Host Assegnabile**.
+4. **Determina l'Ultimo Host Assegnabile**.
+5. **Calcola la Maschera Minima per un Fabbisogno di Host**.
+6. **Determina il Numero Totale di Host Utilizzabili**.
+7. **Verifica l'Appartenenza di Due Host alla Stessa Subnet**.
+8. **Converti tra Maschera di Sottorete e Wildcard Mask**.
+9. **Identifica il Prefisso CIDR da una Maschera Decimale Puntata**.
+
+### 3 Livelli di Difficoltà
+
+- **Base**: prefissi compresi nel 4° ottetto (`/25` - `/30`), ideali per familiarizzare con il calcolo dei blocchi.
+- **Intermedio**: prefissi a cavallo del 3° ottetto (`/17` - `/24`), con subnetting di classe B.
+- **Avanzato**: prefissi estesi (`/9` - `/16`), maschere inconsuete e intervalli ampi.
+
+### Correzione con Spiegazione Matematica Passo-Passo
+
+A differenza dei comuni quiz a risposta multipla, NetCalc Pro non si limita a indicare se la risposta è giusta o sbagliata:
+- Mostra la **spiegazione analitica dettagliata** impiegando esattamente i valori numerici della domanda.
+- Illustra il passaggio binario, la grandezza del blocco incrementale ($256 - \text{maschera}$) e i confini della sottorete.
+- Tiene traccia del **punteggio**, della **serie consecutiva di risposte esatte (Streak)** e del tuo **record personale**.
+
+---
+
+## Widget Interattivi e Integrazione iOS 18 / macOS 15+
+
+NetCalc Pro sfrutta appieno le novità architetturali di WidgetKit e App Intents di Apple:
+
+### 1. Widget "Esercizio del Giorno" (Daily Quiz Widget)
+- Presenta ogni giorno un quesito di subnetting deterministico sulla schermata Home o sulla scrivania del Mac.
+- **Interattività Diretta**: puoi riflettere sul calcolo e toccare il pulsante interattivo **"Mostra la risposta"** direttamente sulla superficie del widget senza dover aprire l'applicazione.
+- Toccando il widget si apre l'app alla pagina degli esercizi per approfondire la spiegazione.
+
+### 2. Widget "Tabella dei Prefissi CIDR"
+- Prontuario tascabile sempre visibile con l'equivalenza tra prefissi `/n`, maschera decimale, wildcard e capacità host utili.
+
+### 3. Controlli per il Centro di Controllo e Schermata di Blocco
+- Pulsanti e interruttori dedicati per avviare istantaneamente la Calcolatrice o aprire l'Esercizio del giorno dal Centro di Controllo su iOS 18 e macOS 15+.
+
+### 4. Deep Linking Universale (`netcalc://`)
+- L'applicazione risponde allo schema di URL nativo `netcalc://` per navigare direttamente nelle sezioni desiderate da script o scorciatoie:
+  - `netcalc://calculator`: apre la calcolatrice IPv4.
+  - `netcalc://subnetting`: apre il subnetting a dimensione fissa.
+  - `netcalc://vlsm`: apre il pianificatore VLSM.
+  - `netcalc://ipv6`: apre la calcolatrice IPv6.
+  - `netcalc://tools`: apre gli strumenti di rete (Summary, Range to CIDR, Wildcard, Compare).
+  - `netcalc://quiz`: apre gli esercizi interattivi di subnetting.
+  - `netcalc://projects`: apre l'elenco dei progetti di laboratorio.
 
 ---
 
@@ -16,22 +76,14 @@ NetCalc Pro non è solo un calcolatore per professionisti, ma un vero e proprio 
 
 Nelle preferenze dell'applicazione (o tramite il selettore rapido) è possibile alternare tra due modalità di fruizione:
 
-### 1. Modalità Principiante
-
-- **Spiegazioni Contestuali**: in ogni schermata di calcolo o pianificazione compaiono schede didattiche che spiegano il significato teorico di ciascun valore (perché il primo indirizzo è la rete, cosa fa la wildcard mask, perché le subnet VLSM vanno ordinate per capienza decrescente).
-- **Aiuto Passo-Passo**: campi pre-popolati con valori didattici standard ed etichette descrittive estese per ogni parametro di configurazione Cisco.
-- **Accesso Diretto ai Termini**: collegamenti ipertestuali interni che rimandano alle definizioni del glossario integrato.
-
-### 2. Modalità Esperto
-
-- **Massima Densità Informativa**: rimozione dei riquadri esplicativi introduttivi per concentrare lo spazio visivo su tabelle, mappe di indirizzamento e blocchi CLI.
-- **Flusso di Lavoro Rapido**: comandi pronti per la copia istantanea e visualizzazione compatta delle interfacce.
+- **Modalità Principiante**: schede didattiche contestuali con spiegazioni teoriche, aiuti passo-passo e collegamenti ipertestuali al glossario.
+- **Modalità Esperto**: interfaccia minimale ad altissima densità informativa con tabelle, mappe e terminale CLI privi di testi introduttivi.
 
 ---
 
 ## Guida Didattica alle Reti (21 Capitoli)
 
-L'applicazione include un manuale completo di networking, consultabile offline sia su Mac che su iPad e iPhone (richiamabile da tastiera con `⌘?` o dal menu _Aiuto_):
+L'applicazione include un manuale completo di networking, consultabile offline sia su Mac che su iPad e iPhone (richiamabile da tastiera con <kbd>⌘</kbd><kbd>?</kbd> o dal menu _Aiuto_):
 
 |   N.   | Modulo e Argomento Trattato                                                                                      |
 | :----: | :--------------------------------------------------------------------------------------------------------------- |
@@ -59,19 +111,19 @@ L'applicazione include un manuale completo di networking, consultabile offline s
 
 ---
 
-## Glossario di Rete Integrato
+## Glossario di Rete Integrato (55+ Definizioni)
 
-Accessibile in qualsiasi momento dal menu _Aiuto → Glossario di Rete_, raccoglie oltre 40 definizioni essenziali spiegate con terminologia rigorosa ma accessibile:
+Accessibile in qualsiasi momento dal menu _Aiuto → Glossario di Rete_, raccoglie oltre 55 voci con l'aggiunta di 15 nuovi concetti introdotti nella versione 1.1:
 
 - **Concetti Base**: _Indirizzo IP_, _CIDR_, _Subnet Mask_, _Wildcard Mask_, _Indirizzo di Rete_, _Broadcast_, _Host Utilizzabili_.
-- **Routing e Switching**: _Default Gateway_, _Distanza Amministrativa_, _Metrica_, _Next-Hop_, _Trunk 802.1Q_, _Sub-interfaccia_, _SVI_.
-- **Protocolli e Servizi**: _OSPF Area_, _Passive Interface_, _Pool DHCP_, _Indirizzi Esclusi_, _Access List Standard/Estesa_, _PAT Overload_, _EUI-64_.
+- **Routing e Switching Avanzato**: _Default Gateway_, _Distanza Amministrativa_, _Metrica_, _Next-Hop_, _Trunk 802.1Q_, _Sub-interfaccia_, _SVI_, **_Spanning Tree Protocol (STP)_**, **_PortFast_**, **_BPDU Guard_**, **_EtherChannel (LACP/PAgP)_**, **_Port Security_**, **_HSRP (Hot Standby Router Protocol)_**, **_IP Helper-Address_**.
+- **Protocolli e Servizi**: _OSPF Area_, **_OSPFv3_**, _Passive Interface_, _Pool DHCP_, _Indirizzi Esclusi_, _Access List Standard/Estesa_, _PAT Overload_, _EUI-64_, **_Supernetting / Route Summarization_**, **_Longest Prefix Match_**.
 
 ---
 
 ## Scorciatoie da Tastiera macOS
 
-NetCalc Pro è una vera applicazione desktop per Mac, controllabile integralmente da tastiera:
+NetCalc Pro offre un controllo completo da tastiera per un flusso di lavoro efficiente:
 
 | Scorciatoia                            | Menu        | Azione                                                             |
 | :------------------------------------- | :---------- | :----------------------------------------------------------------- |
@@ -79,35 +131,9 @@ NetCalc Pro è una vera applicazione desktop per Mac, controllabile integralment
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>D</kbd> | File        | Aggiunge un nuovo dispositivo (router/switch) al progetto corrente |
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Finestra    | Apre la **Calcolatrice IP in una finestra indipendente separata**  |
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Vista       | Mostra o nasconde l'ispettore laterale dei dettagli                |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copia la configurazione CLI Cisco del dispositivo selezionato      |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copia la configurazione CLI Cisco del pannello in primo piano      |
 | <kbd>⌘</kbd> <kbd>?</kbd>              | Aiuto       | Apre la Guida Didattica alle Reti in 21 capitoli                   |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Apre la finestra Impostazioni (Generali e Sincronizzazione iCloud) |
-| <kbd>⌘</kbd> <kbd>Z</kbd>              | Modifica    | Annulla l'ultima modifica (progetti, porte, route, impostazioni)   |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>?</kbd> | Aiuto       | Apre il Glossario di Rete                                          |
+| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Apre la finestra Impostazioni                                      |
+| <kbd>⌘</kbd> <kbd>Z</kbd>              | Modifica    | Annulla l'ultima modifica                                          |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Modifica    | Ripristina l'ultima operazione annullata                           |
-
-> [!TIP]
-> La combinazione <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd> apre la calcolatrice in una finestra dedicata, permettendoti di affiancarla al progetto o alla finestra di Cisco Packet Tracer a tutto schermo.
-
----
-
-## Integrazione con Siri, Spotlight e Comandi Rapidi (App Intents)
-
-NetCalc Pro integra il framework **App Intents** di Apple, consentendoti di effettuare calcoli di rete al volo direttamente dalla barra di ricerca di **Spotlight** o tramite comandi vocali con **Siri**, senza nemmeno aprire la finestra dell'applicazione:
-
-### 1. Calcola una Subnet
-
-- **Frasi supportate**: _"Calcola una subnet con NetCalc Pro"_, _"Subnet con NetCalc Pro"_
-- **Parametri**: Indirizzo IP e prefisso CIDR (es. `172.16.0.10/20`).
-- **Risposta**: Rete calcolata, maschera decimale, broadcast, numero di host utilizzabili e intervallo assegnabile.
-
-### 2. Trova il Prefisso per N Host
-
-- **Frasi supportate**: _"Trova il prefisso con NetCalc Pro"_, _"Quale prefisso mi serve con NetCalc Pro"_
-- **Parametri**: Numero di host desiderati (es. `120`).
-- **Risposta**: Prefisso CIDR minimo (es. `/25`), maschera decimale associata e capacità effettiva del blocco.
-
-### 3. Converti Subnet Mask
-
-- **Frasi supportate**: _"Converti una subnet mask con NetCalc Pro"_
-- **Parametri**: Maschera decimale (es. `255.255.240.0`) o prefisso CIDR (es. `20`).
-- **Risposta**: Conversione bidirezionale immediata con il calcolo automatico della rispettiva wildcard mask Cisco.

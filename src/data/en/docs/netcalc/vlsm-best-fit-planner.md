@@ -1,72 +1,81 @@
 ---
-title: "VLSM Best-Fit Planner"
-description: "Design hierarchical IP addressing plans with Variable Length Subnet Masking (VLSM), descending allocation, waste metrics, and one-click device generation."
+title: "VLSM Best-Fit Planning"
+description: "Best-fit descending algorithm in NetCalc Pro: variable-length subnet planning, address allocation, waste calculations, dynamic zooming map, and automatic interconnected router topology builder."
 project: "netcalc"
 order: 3
 section: "Calculation & Planning"
 ---
 
-## Overcoming Fixed-Size Address Waste
+## The Flaw of Traditional Fixed Subnetting
 
-In classical Fixed-Length Subnet Masking (FLSM), every subnet receives identical block sizes regardless of whether it serves 120 desktop clients in a sales office or just 2 router interfaces on a point-to-point WAN link. Assigning a `/24` or `/26` to a serial link wastes dozens or hundreds of valid IPv4 addresses.
+In classical fixed-size subnetting, every network receives an identical mask. This generates massive address waste: allocating a `/24` subnet (254 hosts) to a point-to-point serial link between two routers (which only needs 2 addresses) wastes 252 IP addresses—or 99.2% of the block.
 
-**VLSM (Variable Length Subnet Masking)** solves this inefficiency by tailoring individual subnet masks to the exact host requirements of each segment.
-
----
-
-## The Descending Best-Fit Algorithm
-
-A critical rule taught in Cisco networking courses is that **VLSM subnets must always be allocated starting from the largest requirement to the smallest**.
-
-NetCalc Pro enforces this standard with its mathematical **Best-Fit Descending** algorithm:
-
-### 1. Automatic Requirement Sorting
-
-When you input required host counts for each department or link (e.g., _Headquarters: 100 hosts_, _Branch Office: 50 hosts_, _Server Farm: 25 hosts_, _WAN Link: 2 hosts_), NetCalc Pro automatically sorts the requirements in descending order before computing addresses.
-
-### 2. Preventing Address Space Fragmentation
-
-Because CIDR blocks must align on binary power-of-two boundaries:
-
-- Allocating a smaller subnet first (e.g., a `/30` at `192.168.1.0/30`) locks out the aligned boundary for a subsequent `/25` block, forcing unused gaps (_fragmentation_).
-- By allocating larger blocks first (`/25`, then `/26`, then `/27`, and finally `/30`), blocks tile contiguously with zero fragmentation.
-
-### 3. Exact Bit Formula
-
-For each requested host count $H$, NetCalc Pro determines the minimum host bits $k$ such that:
-$$2^k - 2 \ge H$$
-The resulting prefix is $\text{CIDR} = 32 - k$. The next subnet starts at the exact address boundary following the broadcast address of the preceding block.
+**VLSM** (_Variable Length Subnet Masking_) eliminates this inefficiency by allowing network engineers to tailor the subnet mask of each segment to its specific host requirements.
 
 ---
 
-## Address Space Occupancy Map
+## NetCalc Pro's Best-Fit Descending Algorithm
 
-To visualize your allocation, NetCalc Pro includes a proportional address map (`AddressSpaceMapView`):
+To prevent overlaps and address space fragmentation, the golden rule of networking is: **always allocate the largest subnets first**.
 
-- **Proportional Representation**: a `/25` occupies exactly half (50%) of a `/24` parent bar, a `/26` takes 25%, and point-to-point links take narrow slivers.
-- **Color Differentiation**: each subnet receives an identifiable colored segment tagged with department name, network address, and CIDR prefix.
-- **Remaining Capacity**: unassigned space is clearly indicated as free buffer, showing you how much capacity remains for future company expansion.
+NetCalc Pro automates this entire procedure:
+
+1. **Root Block Specification**: enter your starting base network (e.g., `172.16.0.0/20` or `192.168.10.0/24`).
+2. **Define Requirements**: add your subnets with custom names and host requirements:
+   - _Research Lab_: 120 hosts
+   - _Admin Offices_: 50 hosts
+   - _Server Farm_: 26 hosts
+   - _Executive Suite_: 10 hosts
+   - _WAN Link Router1 ↔ Router2_: 2 hosts
+3. **Reactive Re-computation**:
+   - The planner calculates in real time as you type.
+   - The algorithm sorts all requests in descending order.
+   - For each request, it evaluates the smallest power of two satisfying $2^n - 2 \ge \text{required hosts}$.
+   - It assigns the corresponding prefix ($32 - n$) and advances the base pointer without leaving unallocated gaps.
+   - Shows remaining unallocated space for future expansions.
 
 ---
 
-## Efficiency and Waste Metrics
+## Proportional Space Map with Dynamic Zoom
 
-For every planned subnet and across the entire project, NetCalc Pro calculates:
+NetCalc Pro features a proportional address space visualizer (`AddressSpaceMapView`):
 
-- **Allocated Hosts**: total usable address space provided by the block.
-- **Needed Hosts**: the exact quantity requested.
-- **Address Overhead / Waste**: unused addresses within the block.
-- **Overall Allocation Efficiency**: percentage ratio of requested addresses to total assigned block space.
+```text
+┌────────────────────────────────────── 192.168.10.0/24 ──────────────────────────────────────┐
+│  Research (120)     │   Admin (50)    │  Server (26)  │ Exec(10) │ WAN │    Free Space      │
+│        /25          │       /26       │      /27      │   /28    │ /30 │        /28         │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+- **Smart Zoom**: when your plan consumes less than a quarter ($< 25\%$) of the root block, the map dynamically zooms into the active portion, ensuring segment labels, prefixes, and narrow point-to-point slices remain clearly legible.
+- **Visual Breakdown**: displays allocation density, assigned blocks, overhead reserved addresses, and unallocated capacity.
 
 ---
 
-## One-Click Device Generation (`PlanDeviceBuilder`)
+## Efficiency Metrics and Diagnostics
 
-Transforming a theoretical subnetting table into a working network laboratory is often tedious and error-prone.
+For every generated VLSM plan, NetCalc Pro evaluates:
 
-In NetCalc Pro, the **Create Devices from Plan** button bridges this gap instantly:
+- **Overall Efficiency**: percentage of assigned addresses relative to the root block size.
+- **Overhead and Reserved Count**: exact count of network and broadcast addresses across all segments.
+- **Capacity Verification**: if host requests exceed the capacity of the root network, the app immediately flags an `Insufficient Space` error, quantifying exactly how many addresses are needed.
 
-1. The app analyzes each subnet in your VLSM table.
-2. It generates corresponding router interfaces or switch VLANs with correctly assigned IP addresses and subnet masks.
-3. Point-to-point `/30` and `/31` subnets automatically create paired interfaces on adjacent routers.
-4. The generated topology is immediately ready for Cisco IOS CLI export or pre-flight verification in the Network Linter.
+---
+
+## From VLSM Plan to Interconnected Topology (`PlanDeviceBuilder`)
+
+Once planning is complete, you never have to manually transcribe IP addresses into your lab equipment.
+
+Click **"Create devices from plan"** in the toolbar:
+
+1. **Topology Selection**:
+   - **Chain Topology**: connects routers in a linear sequence $R1 \leftrightarrow R2 \leftrightarrow R3$.
+   - **Star Topology**: central core/aggregation router connecting all peripheral branch routers.
+   - **Mesh Topology**: fully redundant interconnections between all routers for maximum fault tolerance.
+2. **Transit Network Allocation**:
+   - Choose your point-to-point prefix: standard `/30` subnets (4 IPs, 2 usable) or modern `/31` subnets (RFC 3021, 2 IPs for point-to-point links).
+   - Generates matching interface IP addresses across all connected router pairs.
+3. **Automated OSPF Routing**:
+   - Automatically injects `router ospf` processes and precise `network` statements with inverse wildcard masks covering both LANs and point-to-point transit links.
+4. **LAN Default Gateways**:
+   - User-facing interfaces automatically receive the first usable IP (`.1`) as the default gateway, complete with description and enabled state.

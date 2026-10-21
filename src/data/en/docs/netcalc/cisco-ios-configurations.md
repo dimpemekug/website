@@ -1,89 +1,99 @@
 ---
-title: "Cisco IOS Configuration Generator"
-description: "Generate production-grade Cisco IOS commands in NetCalc Pro: interfaces, 802.1Q dot1Q sub-interfaces, VLANs, trunks, OSPF/RIP/EIGRP, DHCP, ACLs, and NAT."
+title: "Cisco IOS Configurations Generation"
+description: "Cisco IOS CLI generation engine in NetCalc Pro: IPv4/IPv6 interfaces, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, Port Security, DHCP, ACLs, and NAT."
 project: "netcalc"
-order: 4
+order: 5
 section: "Cisco IOS Integration"
 ---
 
-## From Addressing Plan to Live CLI Commands
+## From Logical Design to Real CLI
 
-In networking lab environments such as **Cisco Packet Tracer**, **GNS3**, or hands-on CCNA exam simulations, manually typing dozens of configuration commands across multiple routers and switches often leads to typos, missing directives (such as forgetting `no shutdown`), or miscalculated wildcard masks.
+In networking labs such as **Cisco Packet Tracer**, **GNS3**, **EVE-NG**, or physical hardware testbeds, hand-crafting hundreds of configuration lines frequently introduces typos, wildcard mask errors, or critical omissions (such as forgetting `no shutdown` or the global `ipv6 unicast-routing` command).
 
-**NetCalc Pro** includes an integrated Cisco IOS configuration engine. Commands are generated according to official Cisco best practices and formatted with comments explaining each configuration block.
+**NetCalc Pro 1.1** features an advanced **Cisco IOS** syntax generation engine adhering strictly to Cisco and CCNA best practices, organized according to the operating system's dependency model:
 
-The output respects the natural dependency hierarchy of Cisco IOS:
-
-1. VLANs are declared in the switch database before being assigned to access ports.
-2. Interfaces are addressed and brought up (`no shutdown`) before DHCP or NAT services reference them.
-3. Access Control Lists (ACLs) are written before being bound to interfaces or NAT translation rules.
+1. Global parameters (`hostname`, `ipv6 unicast-routing`, security) appear first.
+2. VLAN databases are initialized before assignment to access/trunk switchports.
+3. Physical interfaces and 802.1Q sub-interfaces are configured and un-shut before referenced by routing protocols or network services.
+4. Redundancy protocols (HSRP), link aggregation (EtherChannel), and spanning tree directives are systematically applied.
+5. Application services (DHCP Server, IP Helper, ACLs, NAT/PAT) conclude the configuration script.
 
 ---
 
 ## Supported Configuration Modules
 
-### 1. Physical Interfaces and Sub-Interfaces (`Router-on-a-Stick`)
+### 1. Physical Interfaces, Sub-interfaces & In-place Editing
 
-- **Port Support**: `GigabitEthernet`, `FastEthernet`, `Ethernet`, and `Serial`.
-- **Automatic Link Activation**: automatically adds `no shutdown` to every configured port (since Cisco router interfaces are administratively down by default).
-- **Inter-VLAN Routing**: provisions virtual sub-interfaces (e.g., `GigabitEthernet0/0/0.10`) with standard IEEE 802.1Q encapsulation (`encapsulation dot1Q 10`) before IP address binding.
-- **Interface Descriptions**: assigns clear `description` tags linking each port to its respective subnet name.
+- **Port Families**: native support for `GigabitEthernet`, `FastEthernet`, `Ethernet`, and `Serial` ports.
+- **Automatic Port Activation**: automatically injects the `no shutdown` command on enabled ports.
+- **In-place Interface Editing**: in NetCalc Pro 1.1, you can edit any existing interface (double-click on Mac, context menu, or tap on iPhone/iPad) to update IP, mask, descriptions, or advanced settings without recreating the port.
 
-### 2. Switch VLANs and 802.1Q Trunking
+### 2. Router-on-a-Stick Builder (Inter-VLAN Routing)
 
-- **VLAN Creation**: establishes VLAN entries with IDs and descriptive names (`vlan 10`, `name Engineering`).
-- **Access Ports**: configures end-user edge ports (`switchport mode access`, `switchport access vlan 10`).
-- **Trunk Ports**: configures backbone uplinks connecting switches together or routing to the router (`switchport mode trunk`, `switchport trunk allowed vlan ...`).
+NetCalc Pro features a dedicated builder for single-router inter-VLAN routing connected to an 802.1Q trunk switch:
 
-### 3. Static and Default Routing
+- **Automatic VLAN Discovery**: discovers all VLANs configured across the project's switches and suggests corresponding virtual sub-interfaces (e.g., `GigabitEthernet0/0/0.10`, `GigabitEthernet0/0/0.20`).
+- **IEEE 802.1Q Encapsulation**: injects `encapsulation dot1Q <vlan_id>` before assigning the default gateway IP address.
+- **DHCP Flexibility**: option to pair each sub-interface with a local DHCP pool or an `ip helper-address` forwarding to a centralized server.
 
-- **Static Routes**: calculates precise syntax for destination networks, masks, and next-hop router IPs:
-  ```text
-  ip route 10.0.0.0 255.255.0.0 192.168.1.2
-  ```
-- **Default Route / Gateway of Last Resort**: generates default gateway routes directing internet-bound traffic to your ISP:
-  ```text
-  ip route 0.0.0.0 0.0.0.0 203.0.113.1
-  ```
+### 3. Full IPv6 on Devices and OSPFv3
 
-### 4. Dynamic Routing Protocols
+NetCalc Pro natively supports dual-stack IPv4/IPv6 configurations:
 
-- **OSPF (Open Shortest Path First)**:
-  - Generates `router ospf <process_id>`.
-  - Calculates exact **inverse wildcard masks** for `network <ip> <wildcard> area <area_id>` commands.
-  - Generates `passive-interface <interface>` directives to suppress OSPF hello broadcasting on user-facing LAN segments.
-- **RIPv2**: `router rip`, `version 2`, `no auto-summary`, and network statements.
-- **EIGRP**: `router eigrp <as_number>`, `no auto-summary`, and wildcard network commands.
+- **Global Unicast and Link-Local Addresses**: configure both Global Unicast (`ipv6 address 2001:db8:1::1/64`) and custom Link-Local (`ipv6 address fe80::1 link-local`) addresses per interface.
+- **Automatic Routing Enablement**: automatically inserts the global `ipv6 unicast-routing` command at the top of routers with active IPv6 interfaces.
+- **Dynamic OSPFv3**:
+  - `ipv6 router ospf <id>` process creation.
+  - Mandatory 32-bit `router-id <A.B.C.D>` generation (crucial for OSPFv3 operation in pure IPv6 environments).
+  - Direct per-interface area assignment (`ipv6 ospf <id> area <area>`).
+- **IPv6 Static Routes**: syntax generation for `ipv6 route <prefix/length> <next_hop>`.
 
-### 5. Local DHCP Server Pools
+### 4. Gateway Redundancy (HSRP) & IP Helper-Address
 
-- **Address Exclusions**: generates `ip dhcp excluded-address <start_ip> <end_ip>` before the pool definition to protect default gateways, DNS servers, and printers.
-- **Pool Definitions**: configures `ip dhcp pool <name>`, `network <ip> <mask>`, `default-router <gateway_ip>`, and `dns-server <dns_ip>`.
+- **Hot Standby Router Protocol (HSRP)**:
+  - Generates `standby <group> ip <virtual_ip>` statements to share a virtual gateway between redundant routers.
+  - Priority configuration (`standby <group> priority <value>`) and preemption (`standby <group> preempt`).
+- **DHCP Relay (IP Helper-Address)**:
+  - Injects `ip helper-address <server_ip>` on LAN interfaces to forward client broadcast DHCP discovery packets (UDP port 67) across routers.
 
-### 6. Access Control Lists (ACL)
+### 5. Advanced Switching: Spanning Tree, EtherChannel & Port Security
 
-- **Standard ACLs (1–99 / 1300–1999)**: filters traffic based on source IP address and wildcard.
-- **Extended ACLs (100–199 / 2000–2699)**: granular filtering by protocol (IP, TCP, UDP, ICMP), destination port numbers (HTTP 80, HTTPS 443, SSH 22, DNS 53), and target subnets.
-- **Interface Binding**: binds filters using `ip access-group <id> in/out`.
+NetCalc Pro 1.1 provides complete Layer 2 switching support required by CCNA certification curricula:
 
-### 7. Network Address Translation (NAT / PAT Overload)
+- **Spanning Tree Protocol (STP)**:
+  - Global mode configuration: `spanning-tree mode pvst`, `rapid-pvst`, or `mst`.
+  - Root Bridge role assignment: `spanning-tree vlan <id> root primary/secondary`.
+  - Access edge port hardening: **PortFast** (`spanning-tree portfast`) and **BPDU Guard** (`spanning-tree bpduguard enable`).
+- **Link Aggregation (EtherChannel)**:
+  - IEEE standard LACP (`channel-group <id> mode active/passive`).
+  - Cisco proprietary PAgP (`channel-group <id> mode desirable/auto`).
+  - Static forced mode (`channel-group <id> mode on`).
+  - Automatic creation of the logical aggregated bundle `interface Port-channel <id>` (with trunk settings).
+- **Port Security (Switchport Hardening)**:
+  - Enable on access ports: `switchport port-security`.
+  - MAC address limits: `switchport port-security maximum <n>`.
+  - Dynamic sticky MAC learning: `switchport port-security mac-address sticky`.
+  - Violation actions: `violation protect`, `violation restrict`, or `violation shutdown` with SNMP trap.
 
-- Identifies internal interfaces (`ip nat inside`) and WAN edge ports (`ip nat outside`).
-- Generates dynamic Port Address Translation (PAT) overloading a single public ISP interface:
-  ```text
-  ip nat inside source list 1 interface GigabitEthernet0/0/0 overload
-  ```
-- Supports static one-to-one port forwarding (`ip nat inside source static ...`).
+### 6. Static Routing and Dynamic IPv4 Routing
 
-### 8. Basic System Hardening
+- **Static Routes & Default Gateway**: `ip route <network> <mask> <next_hop>` and default route `ip route 0.0.0.0 0.0.0.0 <gateway>`.
+- **Single & Multi-Area OSPF**: `router ospf <id>`, mathematically exact inverse wildcard masks, and automated `passive-interface` directives on host-facing LANs.
+- **RIPv2 & EIGRP**: `router rip` (with `version 2` and `no auto-summary`) and `router eigrp <as_number>`.
 
-- `enable secret <password>` for strong MD5/SHA-256 privileged EXEC password encryption.
-- `service password-encryption` to obfuscate plaintext passwords in the configuration file.
-- `banner motd #...#` for legal unauthorized-access warning banners.
-- Line configuration for console and VTY (`line console 0`, `line vty 0 4` with `login local`, `transport input ssh`).
+### 7. Core Services and Security Hardening
+
+- **Built-in DHCP Server**: proactive `ip dhcp excluded-address` ranges, dedicated pools with network, mask, default-router, and dns-server.
+- **Access Control Lists (ACL)**: standard (1-99) and extended (100-199) numbered access lists.
+- **Network Address Translation (NAT/PAT Overload)**: `ip nat inside`/`outside` role definitions and WAN overload translation.
+- **Device Hardening**: `enable secret`, `service password-encryption`, encrypted management via SSH (`transport input ssh`), console line protection (`line con 0`), and legal login banners (`banner motd`).
 
 ---
 
-## One-Click Copy & Export
+## Integrated Terminal with Themes and Selection Sync
 
-Every generated device configuration includes an immediate **Copy Cisco Configuration** button (keyboard shortcut `⌘⇧C` on macOS). The script can be pasted directly into Cisco Packet Tracer's CLI tab or an SSH terminal window.
+On desktop layouts (macOS and iPad), the device configuration inspector sits alongside a live Cisco terminal:
+
+- **Graphite Theme with Syntax Color-Coding**: comments in desaturated gray, interface identifiers in bright yellow, IP addresses and masks in cyan/blue, and Cisco command keywords distinctly highlighted. (Alternative retro green, amber, and monochrome themes available).
+- **Selection Synchronization**: clicking an interface or routing protocol in the left panel scrolls the terminal directly to the corresponding stanza and highlights its lines.
+- **Smart Copy (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd>)**: copies the entire script to the clipboard with one click, ready for immediate paste into Cisco Packet Tracer, PuTTY, or SecureCRT.

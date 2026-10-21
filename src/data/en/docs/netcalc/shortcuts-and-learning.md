@@ -1,113 +1,139 @@
 ---
-title: "Shortcuts, Learning & Reference"
-description: "Beginner and Expert modes, 21-chapter networking guide, interactive glossary, macOS keyboard shortcuts, and Siri/Spotlight App Intents in NetCalc Pro."
+title: "Learning, Exercises and Widgets"
+description: "Interactive 9-type subnetting quiz, 21-chapter networking guide, expanded glossary, iOS 18/macOS 15 widgets, Control Center controls, and shortcuts."
 project: "netcalc"
-order: 8
-section: "Reference"
+order: 9
+section: "Reference & Learning"
 ---
 
-## Integrated Learning & Active Reference
+## Integrated Learning & Active Practice
 
-NetCalc Pro is designed not only as a rapid calculator for experienced engineers, but as a comprehensive study companion for students preparing for academic courses or certifications like **Cisco CCNA (200-301)**.
+NetCalc Pro is not just an IP calculator for professionals, but a comprehensive learning environment designed to assist students and instructors preparing for academic coursework and industry certifications such as **Cisco CCNA (200-301)**.
+
+---
+
+## Interactive Subnetting Exercises (`SubnetQuiz`)
+
+**NetCalc Pro 1.1** introduces an interactive self-assessment module—**Subnetting Exercises** (available under the _Learn_ section on iPhone/iPad and via the _Help_ menu on macOS):
+
+### 9 Question Types
+
+The algorithmic question generator creates varied, realistic problems spanning private and public IPv4 ranges:
+
+1. **Find the Network Address** (given host IP and prefix).
+2. **Find the Broadcast Address**.
+3. **Determine the First Assignable Host**.
+4. **Determine the Last Assignable Host**.
+5. **Calculate the Minimal Subnet Mask for a Given Host Count**.
+6. **Determine Total Usable Hosts in a Block**.
+7. **Determine Whether Two Hosts Reside in the Same Subnet**.
+8. **Convert Between Subnet Mask and Wildcard Mask**.
+9. **Identify the CIDR Prefix from a Dotted Decimal Mask**.
+
+### 3 Difficulty Levels
+
+- **Beginner**: prefixes in the 4th octet (`/25` to `/30`), perfect for mastering base block sizes.
+- **Intermediate**: prefixes crossing the 3rd octet (`/17` to `/24`), focusing on Class B style subnetting.
+- **Advanced**: wide enterprise blocks (`/9` to `/16`), atypical masks, and large supernets.
+
+### Step-by-Step Mathematical Explanation
+
+Unlike standard multiple-choice testing apps, NetCalc Pro provides immediate, full-depth solutions:
+- Displays **step-by-step mathematical explanations** using the exact numbers from the question.
+- Demonstrates binary conversion, block increments ($256 - \text{mask}$), and subnet boundaries.
+- Tracks your **Score**, continuous **Winning Streak**, and **All-Time Personal Record**.
+
+---
+
+## Interactive Widgets & iOS 18 / macOS 15+ System Integration
+
+NetCalc Pro takes full advantage of modern Apple WidgetKit and App Intents architecture:
+
+### 1. "Daily Quiz" Interactive Widget
+- Delivers a fresh subnetting exercise every day right to your iPhone Home Screen or Mac desktop.
+- **Direct Interactivity**: solve the problem mentally and tap the interactive **"Reveal Answer"** button directly on the widget face without launching the application.
+- Tapping the widget opens the app directly to the exercise review screen for full explanations.
+
+### 2. "CIDR Prefix Table" Widget
+- A handy pocket reference showing prefix lengths `/n`, decimal masks, wildcard masks, and usable host counts.
+
+### 3. Control Center and Lock Screen Controls
+- Native control controls to launch the IP Calculator or open the Daily Quiz instantly from iOS 18 Control Center or macOS 15 menu bar.
+
+### 4. Universal Deep Linking (`netcalc://`)
+- The app handles the `netcalc://` URL scheme for rapid scriptable navigation:
+  - `netcalc://calculator`: opens the IPv4 calculator.
+  - `netcalc://subnetting`: opens fixed-size subnetting.
+  - `netcalc://vlsm`: opens the VLSM planner.
+  - `netcalc://ipv6`: opens the IPv6 calculator.
+  - `netcalc://tools`: opens network tools (Summary, Range to CIDR, Wildcard, Compare).
+  - `netcalc://quiz`: opens subnetting exercises.
+  - `netcalc://projects`: opens lab projects.
 
 ---
 
 ## Beginner Mode vs Expert Mode
 
-In application preferences (or via the quick switcher), you can tailor the interface density to your current skill level:
+In application preferences (or via the quick toolbar toggle), switch between two distinct interaction tiers:
 
-### 1. Beginner Mode
-
-- **Contextual Explanations**: every calculation and planning screen features inline educational cards explaining what each value means (why the first address is the network ID, what wildcard masks do, why VLSM blocks must be sorted largest-first).
-- **Step-by-Step Guidance**: input fields are pre-populated with standard educational defaults and accompanied by descriptive labels.
-- **Direct Glossary Access**: inline hyperlinks navigate directly to definitions within the built-in glossary.
-
-### 2. Expert Mode
-
-- **High-Density Information**: removes introductory explanatory cards to maximize workspace area for tables, address space maps, and CLI blocks.
-- **Fast-Paced Workflow**: immediate one-click copy actions and streamlined interface drawers.
+- **Beginner Mode**: contextual didactic cards explaining theory, step-by-step guidance, and glossary hyperlink cross-references.
+- **Expert Mode**: streamlined, high-density layout with tables, space maps, and CLI terminal output stripped of introductory commentary.
 
 ---
 
-## 21-Chapter Integrated Networking Guide
+## Educational Networking Guide (21 Chapters)
 
-NetCalc Pro includes an offline textbook covering the networking curriculum from fundamentals to advanced routing (accessible via <kbd>⌘</kbd> <kbd>?</kbd> on macOS or via the _Help_ menu):
+The app bundles a complete offline networking textbook on Mac, iPad, and iPhone (press <kbd>⌘</kbd><kbd>?</kbd> on macOS or tap _Help_):
 
-| Chapter | Topic & Curriculum Coverage                                                                                     |
-| :-----: | :-------------------------------------------------------------------------------------------------------------- |
-| **01**  | **Networks & Topologies**: network models, star/mesh topologies, collision and broadcast domains.               |
-| **02**  | **IPv4 Addressing**: 32-bit architecture, dotted-decimal notation, and binary conversion.                       |
-| **03**  | **Masks & CIDR**: subnet masks, slash `/n` prefixes, and usable host capacity formulas.                         |
-| **04**  | **Address Classes & Private Networks**: RFC 1918 private scopes, loopback, and APIPA link-local addresses.      |
-| **05**  | **ARP & ICMP**: MAC address resolution, ping mechanics, and network control messages.                           |
-| **06**  | **Transport & Port Numbers**: TCP vs UDP, common port assignments (HTTP, HTTPS, DNS, SSH, DHCP).                |
-| **07**  | **Fixed-Length Subnetting (FLSM)**: partitioning address spaces into uniform blocks.                            |
-| **08**  | **VLSM (Variable Length Subnet Masking)**: efficient variable-size allocation sorted by host requirements.      |
-| **09**  | **Supernetting & Route Summarization**: CIDR aggregation to minimize routing table overhead.                    |
-| **10**  | **Comprehensive Addressing Plans**: professional methodology for structuring corporate networks.                |
-| **11**  | **Routing Tables**: route lookup logic, longest prefix match rule, and cost metrics.                            |
-| **12**  | **Static Routing**: `ip route` syntax, default routes (`0.0.0.0/0`), and next-hop selection.                    |
-| **13**  | **Routing Algorithms**: architecture of Distance Vector vs Link State protocols.                                |
-| **14**  | **Dynamic Routing**: single-area OSPF, RIPv2, and EIGRP configuration.                                          |
-| **15**  | **VLANs & Trunking**: layer 2 segmentation, IEEE 802.1Q encapsulation, and Inter-VLAN routing.                  |
-| **16**  | **Network Services**: local DHCP server pools, relay agents, and DNS resolution.                                |
-| **17**  | **Perimeter Security**: Access Control Lists (ACLs), DMZ architectures, NAT, and PAT overload.                  |
-| **18**  | **IPv6**: 128-bit structure, RFC 5952 compression, `/64` subnets, and EUI-64 autoconfiguration.                 |
-| **19**  | **Fundamental Cisco IOS CLI**: User EXEC, Privileged EXEC, and Global Configuration modes.                      |
-| **20**  | **Lab Troubleshooting Checklist**: systematic troubleshooting methodology for simulation and hardware.          |
-| **21**  | **Complete Exam Capstone Lab**: full-scale practical project combining routers, switches, VLANs, OSPF, and NAT. |
+|  No.   | Module & Covered Topic                                                                                           |
+| :----: | :--------------------------------------------------------------------------------------------------------------- |
+| **01** | **Networks and Topologies**: topologies, collision domains, and broadcast domains.                               |
+| **02** | **IPv4 Address**: 32-bit layout, dotted decimal format, and binary arithmetic.                                   |
+| **03** | **Mask and CIDR**: subnet masks, slash `/n` notation, and host capacity equations.                               |
+| **04** | **Address Classes and Private Networks**: RFC 1918 (10.0.0.0, 172.16.0.0, 192.168.0.0) and APIPA/Loopback scopes. |
+| **05** | **ARP and ICMP**: IP-to-MAC resolution, ping mechanics, and control messages.                                   |
+| **06** | **Transport and Ports**: TCP vs UDP, well-known port numbers (HTTP, HTTPS, DNS, SSH, DHCP).                      |
+| **07** | **Fixed-Length Subnetting (FLSM)**: equal division of root address space.                                        |
+| **08** | **VLSM**: variable-length planning sorted by host demand descending.                                             |
+| **09** | **Supernetting & Route Summarization (CIDR)**: aggregating routing table entries.                                 |
+| **10** | **Complete Addressing Plan**: professional methodology for drafting network plans.                               |
+| **11** | **Routing Table Operations**: lookup mechanisms, longest prefix match, and metrics.                              |
+| **12** | **Static Routing**: `ip route` syntax, default route `0.0.0.0/0`, and egress gateways.                            |
+| **13** | **Routing Algorithms**: distance vector vs link-state architectures.                                             |
+| **14** | **Dynamic Routing**: single-area OSPF, RIPv2, and EIGRP protocols.                                               |
+| **15** | **VLANs and Trunking**: Layer 2 segmentation, IEEE 802.1Q tags, and Inter-VLAN routing.                          |
+| **16** | **Network Services**: DHCP server setup, relay agents, and DNS resolution.                                      |
+| **17** | **Perimeter Security**: Access Control Lists (ACLs), DMZ, NAT, and PAT overload.                                 |
+| **18** | **IPv6 Protocol**: 128-bit structure, RFC 5952 compression, `/64` prefixes, and EUI-64.                          |
+| **19** | **Core Cisco IOS CLI**: User EXEC, Privileged EXEC, and Global Configuration modes.                              |
+| **20** | **Lab Checklist**: step-by-step troubleshooting checklist for physical and simulated labs.                       |
+| **21** | **Complete Exam Project**: capstone hands-on lab with mixed routers/switches, VLANs, OSPF, and NAT.              |
 
 ---
 
-## Integrated Network Glossary
+## Integrated Network Glossary (55+ Definitions)
 
-Accessible at any time from **Help → Network Glossary**, the app provides definitions for over 40 core concepts:
+Open anytime via _Help → Network Glossary_, featuring over 55 comprehensive definitions updated with 15 new terms introduced in version 1.1:
 
-- **Core Addressing**: _IP Address_, _CIDR_, _Subnet Mask_, _Wildcard Mask_, _Network Address_, _Broadcast Address_, _Usable Hosts_.
-- **Routing & Switching**: _Default Gateway_, _Administrative Distance_, _Metric_, _Next Hop_, _802.1Q Trunk_, _Sub-interface_, _SVI_.
-- **Protocols & Services**: _OSPF Area_, _Passive Interface_, _DHCP Pool_, _Excluded Addresses_, _Standard/Extended ACL_, _PAT Overload_, _EUI-64_.
+- **Fundamentals**: _IP Address_, _CIDR_, _Subnet Mask_, _Wildcard Mask_, _Network Address_, _Broadcast_, _Usable Hosts_.
+- **Advanced Routing & Switching**: _Default Gateway_, _Administrative Distance_, _Metric_, _Next Hop_, _802.1Q Trunk_, _Sub-interface_, _SVI_, **_Spanning Tree Protocol (STP)_**, **_PortFast_**, **_BPDU Guard_**, **_EtherChannel (LACP/PAgP)_**, **_Port Security_**, **_HSRP (Hot Standby Router Protocol)_**, **_IP Helper-Address_**.
+- **Protocols & Services**: _OSPF Area_, **_OSPFv3_**, _Passive Interface_, _DHCP Pool_, _Excluded Addresses_, _Standard/Extended ACL_, _PAT Overload_, _EUI-64_, **_Supernetting / Route Summarization_**, **_Longest Prefix Match_**.
 
 ---
 
 ## macOS Keyboard Shortcuts
 
-NetCalc Pro is a fully keyboard-navigable macOS desktop application:
+NetCalc Pro offers full keyboard navigation for professional workflows:
 
-| Shortcut                               | Menu        | Action                                                       |
-| :------------------------------------- | :---------- | :----------------------------------------------------------- |
-| <kbd>⌘</kbd> <kbd>N</kbd>              | File        | Create a new lab project                                     |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>D</kbd> | File        | Add a new device (router/switch) to the current project      |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Window      | Open the **IP Calculator in an independent separate window** |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View        | Toggle the contextual detail inspector                       |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copy the Cisco CLI configuration of the selected device      |
-| <kbd>⌘</kbd> <kbd>?</kbd>              | Help        | Open the 21-Chapter Networking Guide                         |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Open Settings (General & iCloud Sync)                        |
-| <kbd>⌘</kbd> <kbd>Z</kbd>              | Edit        | Undo the last change (projects, devices, interfaces, routes) |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit        | Redo the last undone operation                               |
-
-> [!TIP]
-> The shortcut <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd> opens the calculator in its own standalone window, allowing you to position it side-by-side with Cisco Packet Tracer or lab notes.
-
----
-
-## Siri, Spotlight & Shortcuts (App Intents)
-
-NetCalc Pro integrates Apple's **App Intents** framework, allowing you to perform calculations directly from **Spotlight** or via **Siri** voice commands without opening the main app window:
-
-### 1. Calculate a Subnet
-
-- **Invocation phrases**: _"Calculate a subnet with NetCalc Pro"_, _"Subnet with NetCalc Pro"_
-- **Inputs**: IP address and CIDR prefix (e.g., `10.0.0.1/22`).
-- **Response**: Calculated network address, subnet mask, broadcast, usable host capacity, and valid assignable host range.
-
-### 2. Find Prefix for N Hosts
-
-- **Invocation phrases**: _"Find prefix with NetCalc Pro"_, _"Which prefix do I need with NetCalc Pro"_
-- **Inputs**: Required number of host devices (e.g., `75`).
-- **Response**: Tightest CIDR prefix (e.g., `/25`), dotted decimal mask, and total capacity.
-
-### 3. Convert Subnet Mask
-
-- **Invocation phrases**: _"Convert a subnet mask with NetCalc Pro"_
-- **Inputs**: Dotted decimal mask (e.g., `255.255.248.0`) or CIDR integer (e.g., `21`).
-- **Response**: Bidirectional conversion between decimal and CIDR, including the inverted Cisco wildcard mask.
+| Shortcut                               | Menu        | Action                                                  |
+| :------------------------------------- | :---------- | :------------------------------------------------------ |
+| <kbd>⌘</kbd> <kbd>N</kbd>              | File        | Create a new lab project                                |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>D</kbd> | File        | Add a new device (router/switch) to current project     |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Window      | Open **IP Calculator in a separate standalone window**  |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View        | Toggle inspector side panel                             |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copy Cisco CLI configuration from the active panel      |
+| <kbd>⌘</kbd> <kbd>?</kbd>              | Help        | Open 21-chapter Networking Guide                        |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>?</kbd> | Help        | Open Network Glossary                                   |
+| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Open Settings window                                    |
+| <kbd>⌘</kbd> <kbd>Z</kbd>              | Edit        | Undo last modification                                  |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit        | Redo last undone action                                 |

@@ -1,56 +1,69 @@
 ---
-title: "Projects, Exporting & iCloud"
-description: "Manage lab projects in NetCalc Pro, context-aware Undo/Redo, vector PDF/CSV/TXT export, and private CloudKit synchronization."
+title: "Projects, Topology and Exporting"
+description: "Lab project management in NetCalc Pro, automatic topology diagram, CoreGraphics PDF reports, CSV/TXT export, and private CloudKit synchronization."
 project: "netcalc"
-order: 7
+order: 8
 section: "Management & Sharing"
 ---
 
 ## Lab Project Management
 
-In NetCalc Pro, network topology planning is not limited to isolated scratchpad calculations. Entire multi-device labs can be saved, structured, and maintained in persistent **Projects**.
+In NetCalc Pro, designing a network topology is not confined to isolated calculations: configurations are organized into persistent, structured **Projects**.
 
-Each project organizes a complete set of network equipment (`CiscoDevice`):
+Each project hosts a complete ecosystem of network appliances (`CiscoDevice`):
 
 - **Routers and Switches**: with physical interfaces (`GigabitEthernet`, `FastEthernet`, `Serial`) and logical ports (802.1Q sub-interfaces and VLAN SVIs).
-- **Routing Engines**: static route entries and dynamic routing protocols (OSPF, RIPv2, EIGRP).
-- **Services & Security**: dedicated LAN DHCP pools, NAT/PAT address translation rules, Access Control Lists, and system hardening parameters.
-- **Lab Notes**: freeform text documentation to record assignment requirements, topology constraints, or exam criteria.
+- **Routing Tables**: static routes and dynamic routing engines (OSPF, RIPv2, EIGRP).
+- **Network Services**: dedicated LAN DHCP servers, NAT/PAT translation rules (with overload), Access Control Lists, and OS hardening parameters.
+- **Lab Notes**: textual documentation for lab tasks, exam constraints, or topology requirements.
 
 ---
 
-## Local-First Architecture & Full Undo/Redo
+## Network Schematic & Topology Diagram (`TopologyView`)
 
-NetCalc Pro implements a strictly **Local-First** persistence model built on **SwiftData**:
+**NetCalc Pro 1.1** introduces an automated topology visualizer (`TopologyBuilder`), displayed directly in the project summary:
 
-### 1. Dedicated Local SQLite Store
-
-All project records reside in an application-specific directory (`~/Library/Application Support/NetCalc Pro/NetCalc.store`). The app requires zero network connectivity to launch, query, or edit projects, ensuring instant responsiveness in classrooms or offline test labs.
-
-### 2. Multi-Level Undo and Redo (`UndoManager`)
-
-All destructive or structural changes (creating or deleting projects, adding devices, modifying interfaces, or removing static routes) register with an `UndoManager` bound directly to the SwiftData `ModelContext`.
-
-- On **macOS**: use standard system shortcuts <kbd>⌘</kbd> <kbd>Z</kbd> (Undo) and <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (Redo), or the _Edit_ menu.
-- On **iPad/iPhone**: standard three-finger gestures and navigation bar undo buttons provide full history traversal.
+- **Automatic Interconnection Detection**: by analyzing the IP addresses and subnet masks across all interfaces, the algorithm automatically identifies:
+  - **Point-to-Point Links**: interconnected router pairs on `/30` or `/31` subnets or matching subnets.
+  - **Multi-Access LAN Segments**: switches and routers converging on common broadcast domains.
+- **Interactive, Zoomable Canvas**: the interactive map highlights device roles, interface identifiers, subnet labels, and default gateways, allowing you to visually review the entire architecture before deployment.
+- **Vector PDF Integration**: rendered in high-resolution vector graphics as a dedicated page in printable PDF project reports.
 
 ---
 
-## Comprehensive Export Options
+## Local-First Architecture and Full Undo/Redo
 
-NetCalc Pro offers three export workflows designed for documentation, evaluation, and physical deployment:
+NetCalc Pro implements a strictly **Local-First** design powered by **SwiftData**:
 
-### 1. Vector PDF Reports (CoreGraphics & CoreText)
+### 1. Dedicated Local Store
 
-PDF export (`ProjectPDFExporter`) is rendered directly using Apple's low-level graphics frameworks (**CoreGraphics** and **CoreText**), avoiding WebKit/HTML overhead or third-party dependencies:
+Project data resides in a local application container (`~/Library/Application Support/NetCalc Pro/NetCalc.store`). The app requires zero network access to launch, read, or modify projects, ensuring instant responsiveness in offline environments and classrooms.
 
-- **Flawless Typography**: standardized _US Letter_ pagination, clean headings, and monospaced data grids.
-- **Detailed Summary**: prints hostname, device type, configured interfaces, IP addresses, subnet masks, calculated network IDs, and broadcast addresses for each apparatus.
-- **VLSM Plan PDFs**: subnet allocation tables can also be exported to matching vector PDFs.
+### 2. Context-Level Undo/Redo (`UndoManager`)
 
-### 2. CSV Spreadsheets for Network Inventories
+All destructive or mutative actions (creating/deleting projects, adding devices, modifying interfaces, or editing routing tables) register with the `UndoManager` bound directly to SwiftData's `ModelContext`.
 
-Generates RFC 4180-compliant spreadsheets suitable for import into Excel, Apple Numbers, or Google Sheets:
+- On **macOS**: use standard system shortcuts <kbd>⌘</kbd><kbd>Z</kbd> (Undo) and <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Z</kbd> (Redo), or the _Edit_ menu.
+- On **iPad/iPhone**: support for three-finger gestures and navigation undo buttons.
+
+---
+
+## Export Options
+
+NetCalc Pro offers three export formats tailored for academic and enterprise workflows:
+
+### 1. Vector PDF Documents (CoreGraphics & CoreText)
+
+PDF export (`ProjectPDFExporter`) is implemented by drawing directly with Apple's low-level **CoreGraphics** and **CoreText** engines, avoiding WebKit HTML conversions or external dependencies:
+
+- **Flawless Typography**: standard _US Letter_ format, high-contrast headers, and pixel-aligned monospaced data tables.
+- **Dedicated Topology Graphic Page**: renders the visual network diagram and interconnecting links.
+- **Comprehensive Device Specs**: lists hostnames, device types, interfaces, IPv4/IPv6 addresses, subnet masks, network IDs, and broadcast addresses.
+- **VLSM Plan Exporting**: subnetting plans export with the same aesthetic polish, including ordered subnets and capacity metrics.
+
+### 2. CSV Inventory Table
+
+Generates RFC 4180-compliant CSV files for spreadsheet applications (Microsoft Excel, Apple Numbers, Google Sheets):
 
 ```csv
 IP,MASK,GATEWAY,DEVICE,INTERFACE
@@ -58,16 +71,16 @@ IP,MASK,GATEWAY,DEVICE,INTERFACE
 192.168.2.1,255.255.255.0,192.168.2.1,R1,GigabitEthernet0/0/1
 ```
 
-Includes automatic quote escaping for interface descriptions containing commas or special characters.
+Properly handles quotes and comma escaping for complex descriptions.
 
-### 3. Plain Text (TXT) Cisco IOS Master Scripts
+### 3. Full Cisco IOS TXT Script
 
-Generates a consolidated text file containing all CLI configuration blocks for every device in the project, alphabetically sorted by hostname and partitioned with formatted comment banners:
+Produces a consolidated text file containing all project device configurations, sorted alphabetically by hostname and separated by structured comment banners:
 
 ```text
 ! ============================================================
-! Project: CCNA Module 3 Capstone Lab
-! Exported on Oct 18, 2026, 6:45 PM
+! Project: CCNA Lab Module 3
+! Exported on Oct 21, 2026, 11:30
 ! ============================================================
 
 ! --- Router R1 ---
@@ -75,29 +88,22 @@ hostname R1
 ...
 ```
 
-Can be saved to disk or dispatched immediately via system share sheets (AirDrop, Mail, Messages).
+Ready to save to disk or share via system channels (Mail, AirDrop, Messages).
 
 ---
 
 ## Private iCloud Synchronization (CloudKit)
 
-Your projects synchronize seamlessly across Mac, iPad, and iPhone signed in with the same Apple ID, without requiring user accounts or third-party servers.
+Projects synchronize across all devices signed into your Apple ID without requiring user accounts or third-party servers.
 
-### 1. Private User Database
+### 1. User Private Database
 
-Sync is managed by **NSPersistentCloudKitContainer** inside the private container `iCloud.com.dimpemekug.netcalc`.
+Sync runs via **NSPersistentCloudKitContainer** targeting the private container `iCloud.com.dimpemekug.netcalc`. Data travels exclusively through Apple's end-to-end encrypted infrastructure, maintaining complete privacy.
 
-- Data travels exclusively through Apple's end-to-end encrypted CloudKit infrastructure.
-- The developer has zero access to user projects or network topologies.
+### 2. Preferences Cloud Synchronization
 
-### 2. Preferences Synchronization
+App preferences (language, light/dark theme, accent color, terminal styling, and Beginner mode) sync in real time across Mac, iPad, and iPhone via `NSUbiquitousKeyValueStore` (`PreferencesCloudSync`).
 
-Application settings (interface language, light/dark mode, accent palette, terminal theme, and Beginner/Expert mode) synchronize automatically via `NSUbiquitousKeyValueStore` (`PreferencesCloudSync`). Settings sync can be disabled independently if you prefer different visual themes on Mac and mobile.
+### 3. Real-Time Sync Diagnostics (`CloudSyncMonitor`)
 
-### 3. Real-Time Diagnostics (`CloudSyncMonitor`)
-
-Under **Settings → Sync**, NetCalc Pro provides real-time CloudKit telemetry:
-
-- **Account Status**: checks whether iCloud is available, restricted, or temporarily offline.
-- **Server Record Inventory**: queries CloudKit directly to confirm the exact count of project records (`CD_Project`) and device records (`CD_ProjectDevice`) safely stored in the cloud.
-- **Transient Error Handling**: differentiates temporary network dropouts from permanent conflicts, ensuring local offline changes are safely queued until reconnection.
+Under **Settings → Synchronization**, NetCalc Pro provides a diagnostic monitor showing sync status, last update timestamp, remote/local record counts, and network troubleshooting guidance.

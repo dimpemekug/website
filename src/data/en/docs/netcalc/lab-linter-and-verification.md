@@ -1,109 +1,115 @@
 ---
 title: "Lab Verification (Network Linter)"
-description: "Proactive topology diagnostics for CCNA labs: detect duplicate IPs, overlapping subnets, unreachable next hops, OSPF wildcard errors, and DHCP mismatches."
+description: "Proactive diagnostics for CCNA labs: detects IP conflicts, overlapping subnets, unreachable next hops, OSPFv3 issues, HSRP inconsistencies, sub-interfaces, and DHCP flaws."
 project: "netcalc"
-order: 6
+order: 7
 section: "Diagnostics & Verification"
 ---
 
 ## Why a Network Linter?
 
-In network simulators such as **Cisco Packet Tracer**, **GNS3**, or hands-on equipment racks, the most frustrating troubleshooting scenario is a silent failure: the `ping` command times out, but Cisco IOS provides no explanation as to why packets are being dropped.
+In networking simulators like **Cisco Packet Tracer**, **GNS3**, or on physical equipment, the most frustrating problem presents as silent packet drops: `ping` requests time out, yet the Cisco CLI offers no explanation as to why packets are being discarded.
 
-The root causes are frequently subtle configuration mistakes:
+Typical root causes are subtle:
 
-- Two interfaces on different routers were assigned the same IP address by mistake.
-- A `/24` subnet partially overlaps with an existing `/26` subnet.
-- A static route points to a next-hop IP that does not belong to any directly connected network.
-- An OSPF `network` statement uses an incorrect wildcard mask (or accidentally uses a subnet mask).
-- An interface is assigned the subnet's network or broadcast address.
-- A DHCP pool distributes a default-router IP belonging to a completely different subnet.
+- Two interfaces on different routers received the same IP by accident.
+- A `/24` subnet and a `/26` subnet partially overlap.
+- A static route points to a next hop that does not belong to any directly connected network.
+- An OSPF `network` statement uses an invalid wildcard (or accidentally specifies the subnet mask).
+- An OSPFv3 process fails to run because no 32-bit `router-id` is configured.
+- An 802.1Q sub-interface lacks encapsulation or runs on a shut physical port.
+- An HSRP virtual IP sits outside the interface's subnet.
+- Port security is activated on an 802.1Q trunk port (a combination forbidden by Cisco IOS).
 
-NetCalc Pro's **Network Linter** is a pure functional diagnostic engine (`NetworkLinter.analyze(devices:)`) that audits your entire topology before you even turn on device power, providing educational explanations and actionable remediation steps.
+NetCalc Pro's **Network Linter** (`NetworkLinter.analyze(devices:)`) is a pure functional diagnostic engine that scans your entire lab topology before powering on devices, highlighting every misconfiguration with educational explanations and actionable fixes.
 
 ---
 
 ## Severity Levels
 
-Diagnostic findings are prioritized and categorized into three severity levels:
+Diagnostics are categorized into three severity tiers:
 
-|              Icon               | Severity    | Impact                                                                                                                                                |
-| :-----------------------------: | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      `xmark.octagon.fill`       | **Error**   | Breaks network communication. Causes routing loops, address collisions, or undeliverable packets.                                                     |
-| `exclamationmark.triangle.fill` | **Warning** | The network will boot, but behavior will be defective or incomplete (e.g., missing dynamic routing advertisements, interfaces administratively down). |
-|       `info.circle.fill`        | **Note**    | Reminders and completeness suggestions (e.g., devices with no configured interfaces).                                                                 |
+|              Icon               | Severity    | Description                                                                                                   |
+| :-----------------------------: | :---------- | :------------------------------------------------------------------------------------------------------------ |
+|      `xmark.octagon.fill`       | **Error**   | Prevents network operation. Involves routing ambiguities, IP collisions, or undeliverable packets.            |
+| `exclamationmark.triangle.fill` | **Warning** | The network will initialize, but behavior will be defective (e.g., missing OSPF announcements, shut ports).    |
+|       `info.circle.fill`        | **Note**    | Informational reminders and completeness checks (e.g., empty devices without interfaces).                    |
 
 ---
 
-## The 10 Diagnostic Checks
+## The 15 Diagnostic Rules
 
-### 1. Invalid IP Addresses or Prefixes
-
+### 1. Invalid Addresses or Prefixes
 - **Severity**: Error
-- **Inspection**: Verifies that every addressed interface uses valid octets (`0` to `255`) and prefix lengths within `/0` to `/32`.
-- **Remediation**: Correct formatting errors in the IP address or subnet mask.
+- **Check**: Validates that all IP octets fall within `0`–`255` and prefixes span `/0` to `/32`.
 
 ### 2. Duplicate IP Addresses
-
 - **Severity**: Error
-- **Inspection**: Scans all interfaces across all routers, switches, and PCs to ensure that no single IP address is assigned more than once.
-- **Remediation**: Assign a unique address to each conflicting interface.
+- **Check**: Scans every interface across all routers, switches, and hosts to ensure no IP address is assigned to more than one port.
 
 ### 3. Partially Overlapping Subnets
-
 - **Severity**: Error
-- **Inspection**: Identical subnets on shared links are valid (e.g., two routers on the same point-to-point link). However, when two subnets have different prefix lengths and one strictly contains the other (e.g., `192.168.1.0/24` and `192.168.1.0/26`), routing ambiguity causes unpredictable packet loss.
-- **Remediation**: Reallocate conflicting subnets into disjoint address spaces (ideally using the VLSM planner).
+- **Check**: Flags ambiguous routing trees where subnets of differing prefix lengths overlap (e.g., `192.168.1.0/24` and `192.168.1.0/26`).
 
-### 4. Unusable Host Address (Network or Broadcast)
-
+### 4. Invalid Host Address in Subnet
 - **Severity**: Error
-- **Inspection**: On standard IPv4 subnets (prefixes `/1` to `/30`), the first address is the **network address** and the last is the **broadcast address**. Neither may be assigned to an interface. _(Special RFC 3021 `/31` point-to-point links and `/32` host routes are exempt)._
-- **Remediation**: Change the interface IP to a usable host within the valid range between `firstHost` and `lastHost`.
+- **Check**: Ensures host interfaces do not use network IDs or broadcast addresses on standard `/1` to `/30` subnets. _(Special `/31` point-to-point and `/32` host routes are exempt)._
 
-### 5. OSPF Consistency & Coverage
-
+### 5. OSPFv2 Consistency and Coverage
 - **Severity**: Error / Warning
-- **Inspection**:
-  - Flags invalid syntax in `network <ip> <wildcard>` statements as an **Error**.
-  - Flags statements whose wildcard mask does not match any local interface on the device as a **Warning** (often indicating that a standard subnet mask was pasted instead of an inverted wildcard).
-  - Flags active interfaces whose subnets are not covered by any OSPF network statement as a **Warning** (neighbor routers will never learn routes to that LAN).
-- **Remediation**: Use the "Generate Wildcard from Interface" feature or correct the wildcard mask.
+- **Check**:
+  - Invalid syntax in `network <net> <wildcard>` statements.
+  - Wildcard mask fails to match any active local interface (usually caused by entering a subnet mask instead of a wildcard).
+  - Valid interface IP unannounced in any local OSPF directive.
 
-### 6. Unreachable Static Route Next-Hops
-
+### 6. Static Route Next-Hop Reachability
 - **Severity**: Error
-- **Inspection**: In Cisco IOS, a static route's next-hop address (`ip route ... <next_hop>`) must belong to a subnet directly connected to one of the router's local interfaces.
-- **Remediation**: Set the next-hop to the neighbor router's IP address on the shared point-to-point link.
+- **Check**: Validates that next-hop addresses belong to a subnet directly connected to one of the local router's active interfaces.
 
-### 7. Disabled Interfaces Configured with IPs (`shutdown`)
-
+### 7. Configured Interfaces in Shutdown State
 - **Severity**: Warning
-- **Inspection**: Flags interfaces configured with an IP address that are marked as disabled (`isEnabled == false`). Cisco router ports boot administratively down by default.
-- **Remediation**: Enable the interface in NetCalc Pro's inspector to append `no shutdown` to the generated CLI script.
+- **Check**: Flags interfaces with configured IP parameters that remain administratively disabled (`shutdown`).
 
-### 8. DHCP Pool Subnet & Gateway Consistency
-
+### 8. DHCP Server Subnet Alignment
 - **Severity**: Error
-- **Inspection**:
-  - Verifies that the pool's network and subnet mask are valid and contiguous.
-  - Ensures that the `default-router` address strictly resides within the pool's assigned subnet block.
-- **Remediation**: Set the default-router to the router interface IP that faces the respective local LAN segment.
+- **Check**:
+  - Validates pool network and mask contiguity.
+  - Ensures the specified `default-router` strictly belongs to the pool's network segment.
 
-### 9. Non-Existent Interface References (NAT & ACL)
-
+### 9. References to Non-Existent Interfaces (NAT & ACLs)
 - **Severity**: Warning
-- **Inspection**: Detects NAT statements (`ip nat inside/outside`, overload interface) or Access Lists bound via `ip access-group` that reference interface names not present on the device.
-- **Remediation**: Correct typos in interface names (e.g., `GigabitEthernet0/0/0` vs `GigabitEthernet0/0`).
+- **Check**: Detects misspelled or missing interface names referenced by NAT statements or `ip access-group` bindings.
 
-### 10. Empty Devices
-
+### 10. Unconfigured / Empty Devices
 - **Severity**: Note
-- **Inspection**: Identifies routers or switches in the project that have no configured interfaces.
-- **Remediation**: Configure at least one interface so the device can participate in the network topology.
+- **Check**: Identifies project devices with zero interfaces or addressing configured.
+
+### 11. Invalid or Duplicate IPv6 Addresses
+- **Severity**: Error
+- **Check**: Validates RFC IPv6 syntax (hextet length, single `::` compression, `/0` to `/128` prefix) and checks for duplicate Global Unicast and Link-Local assignments.
+
+### 12. OSPFv3 Missing Router-ID
+- **Severity**: Error
+- **Check**: In OSPFv3, a 32-bit dotted decimal router ID (`router-id <A.B.C.D>`) is strictly required. Without configured IPv4 interfaces, the engine cannot auto-select an ID and OSPFv3 fails to start.
+- **Fix**: Add `router-id 1.1.1.1` under the OSPFv3 process stanza.
+
+### 13. Sub-interfaces Missing Encapsulation or on Shut Ports
+- **Severity**: Error / Warning
+- **Check**:
+  - Virtual sub-interfaces lacking `encapsulation dot1Q <vlan>` cannot tag frames for Inter-VLAN routing.
+  - Parent physical port in `shutdown` state disables all child virtual sub-interfaces.
+
+### 14. HSRP Virtual Gateway Inconsistencies
+- **Severity**: Error
+- **Check**: The virtual standby IP configured via `standby <group> ip <virtual_ip>` must reside inside the physical/virtual interface's local subnet.
+
+### 15. Port Security on 802.1Q Trunk Ports
+- **Severity**: Error
+- **Check**: Cisco IOS forbids enabling `switchport port-security` on switchports configured in trunk mode (`switchport mode trunk`). Port security is only supported on access ports.
+- **Fix**: Disable port security on trunk ports or change switchport mode to `access`.
 
 ---
 
 ## User Interface Integration
 
-The project view features a **Lab Verification** status pill displaying the live count of errors and warnings. Clicking on any finding navigates directly to the affected device and interface in the inspector, allowing you to fix issues with a single click.
+In the project view, the **Lab Verification** button features a dynamic badge displaying active error and warning counts. Clicking any item instantly selects and highlights the faulty device or interface in the context inspector.

@@ -1,8 +1,8 @@
 ---
-title: "Progetti, Esportazione e iCloud"
-description: "Gestione dei progetti di laboratorio in NetCalc Pro, storico modifiche (Undo/Redo), esportazione PDF/CSV/TXT e sincronizzazione CloudKit privata."
+title: "Progetti, Topologia ed Esportazione"
+description: "Gestione dei progetti di laboratorio in NetCalc Pro, diagramma di topologia automatico, report PDF con CoreGraphics, esportazione CSV/TXT e sincronizzazione CloudKit."
 project: "netcalc"
-order: 7
+order: 8
 section: "Gestione e Condivisione"
 ---
 
@@ -19,6 +19,18 @@ Ogni progetto ospita un insieme completo di apparati (`CiscoDevice`):
 
 ---
 
+## Schema della Rete e Diagramma di Topologia (`TopologyView`)
+
+**NetCalc Pro 1.1** introduce il generatore automatico di topologia (`TopologyBuilder`), visualizzabile nel riepilogo del progetto:
+
+- **Ricostruzione Automatica delle Connessioni**: analizzando gli indirizzi IP e le subnet mask assegnate a ciascuna interfaccia, l'algoritmo identifica autonomamente:
+  - **Link Punto-Punto**: router interconnessi su subnet `/30`, `/31` o con subnet identiche.
+  - **Segmenti LAN Multi-Accesso**: switch e router convergenti sullo stesso dominio di broadcast.
+- **Diagramma Interattivo e Ingrandibile**: la mappa grafica evidenzia apparati, nomi delle interfacce, etichette delle sottoreti e default gateway, permettendo di zoomare e ispezionare visivamente l'intera architettura prima di procedere al deployment.
+- **Integrazione Vettoriale nel PDF**: lo schema viene renderizzato in alta risoluzione come tavola grafica dedicata all'interno dei report stampabili.
+
+---
+
 ## Architettura Local-First e Undo/Redo Completo
 
 NetCalc Pro adotta un approccio rigorosamente **Local-First** basato su **SwiftData**:
@@ -31,7 +43,7 @@ I dati risiedono in una cartella applicativa dedicata (`~/Library/Application Su
 
 Tutte le operazioni distruttive o di modifica (creazione o cancellazione di un progetto, aggiunta di dispositivi, modifica di interfacce o rimozione di route statiche) sono registrate nell'`UndoManager` collegato direttamente al `ModelContext` di SwiftData.
 
-- Su **macOS**: usa le scorciatoie di sistema standard `⌘Z` (Annulla) e `⇧⌘Z` (Ripristina), oppure le voci nel menu _Modifica_.
+- Su **macOS**: usa le scorciatoie di sistema standard <kbd>⌘</kbd><kbd>Z</kbd> (Annulla) e <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Z</kbd> (Ripristina), oppure le voci nel menu _Modifica_.
 - Su **iPad/iPhone**: supporta i gesti standard con tre dita e i pulsanti dedicati di navigazione.
 
 ---
@@ -45,7 +57,8 @@ NetCalc Pro offre tre formati di esportazione progettati per diversi scopi didat
 L'esportazione in PDF (`ProjectPDFExporter`) è implementata disegnando direttamente con i framework grafici a basso livello di Apple (**CoreGraphics** e **CoreText**), senza ricorrere a conversioni HTML/WebKit o librerie di terze parti:
 
 - **Resa Tipografica Impeccabile**: formato standard _US Letter_, intestazioni ad alta leggibilità e tabelle con font monospazio perfettamente allineate.
-- **Dati Inclusi**: per ogni dispositivo vengono stampati hostname, tipologia, interfacce configurate, indirizzi IP, maschere decimali, indirizzo di rete e broadcast calcolati.
+- **Tavola Grafica della Topologia**: include una pagina dedicata con lo schema visuale della rete e delle interconnessioni.
+- **Dati Inclusi**: per ogni dispositivo vengono stampati hostname, tipologia, interfacce configurate, indirizzi IPv4/IPv6, maschere decimali, indirizzo di rete e broadcast calcolati.
 - **Esportazione Piani VLSM**: anche i piani di subnetting possono essere esportati in PDF con la stessa cura grafica, includendo l'elenco delle subnet ordinate e i parametri di capienza.
 
 ### 2. Tabella CSV per Inventario di Rete
@@ -67,7 +80,7 @@ Genera un file di testo contenente i comandi di configurazione di tutti i dispos
 ```text
 ! ============================================================
 ! Progetto: Laboratorio CCNA Modulo 3
-! Esportato il 18 ott 2026, 18:45
+! Esportato il 21 ott 2026, 11:30
 ! ============================================================
 
 ! --- Router R1 ---
@@ -96,8 +109,4 @@ Le preferenze dell'app (lingua, tema chiaro/scuro, palette accento, tema del ter
 
 ### 3. Diagnostica in Tempo Reale (`CloudSyncMonitor`)
 
-Nella schermata **Impostazioni → Sincronizzazione**, NetCalc Pro offre un monitor di diagnostica avanzato:
-
-- **Stato dell'Account Apple**: verifica se l'account iCloud è disponibile, limitato o temporaneamente disconnesso.
-- **Inventario Cloud Reale**: interroga direttamente CloudKit per contare con precisione quanti record di progetti (`CD_Project`) e dispositivi (`CD_ProjectDevice`) sono stati effettivamente memorizzati sul server.
-- **Gestione Errori Transitori**: distingue i normali ritardi di rete dai conflitti permanenti, garantendo la conservazione delle modifiche locali fino alla riconnessione.
+Nella schermata **Impostazioni → Sincronizzazione**, NetCalc Pro offre un monitor di diagnostica avanzato con stato del servizio, timestamp dell'ultimo scambio dati, conteggio dei record remoti e locali, e risoluzione guidata delle anomalie di rete.
