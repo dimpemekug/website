@@ -5,7 +5,7 @@ import Header from "@/components/Header.astro";
 import PageHero from "@/components/PageHero.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
-import Card from "@/components/Card.astro";
+import HomeRecentPosts from "@/components/HomeRecentPosts.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
@@ -356,20 +356,7 @@ const pinnedProjects = pinnedProjectIds
             </a>
           </div>
 
-          <!-- 2 Columns Grid -->
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 [&>li]:my-0">
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && (
-                  <Card
-                    variant="h3"
-                    {...data}
-                    loading={index < 2 ? "eager" : "lazy"}
-                    fetchpriority={index < 2 ? "high" : "auto"}
-                  />
-                )
-            )}
-          </ul>
+          <HomeRecentPosts posts={recentPosts.slice(0, SITE.postPerIndex)} />
         </section>
       )
     }

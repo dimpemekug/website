@@ -6,7 +6,7 @@ export const SITE = {
   title: "dimpemekug.com",
   ogImage: "og.png",
   lightAndDarkMode: true,
-  postPerIndex: 6,
+  postPerIndex: 5,
   featuredPerIndex: 2,
   postPerPage: 12,
   scheduledPostMargin: 15 * 60 * 1000,

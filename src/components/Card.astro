@@ -9,6 +9,7 @@ import Datetime from "./Datetime.astro";
 import IconGallery from "@/assets/icons/IconGallery.svg";
 import IconClock from "@/assets/icons/IconClock.svg";
 import { SITE } from "@/config";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 type Props = {
   variant?: "h2" | "h3";
@@ -39,6 +40,7 @@ const headingId = `${collection}-${slugifyStr(String(id))}-title`;
 const descriptionId = `${collection}-${slugifyStr(String(id))}-description`;
 const viewTransitionName = slugifyStr(String(title).replaceAll(".", "-"));
 const readingTime = body ? getReadingTime(body) : null;
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 // Resolve cover image source
 let coverSrc: string | ImageMetadata | undefined;
@@ -236,7 +238,7 @@ if (SITE.showCoverImages) {
       ) : <div />}
 
       <span class="text-xs font-semibold text-accent/80 group-hover/card:text-accent flex items-center gap-1 transition-colors shrink-0">
-        <span>Leggi</span>
+        <span>{t("posts.read_more").replace(" →", "")}</span>
         <span class="transition-transform group-hover/card:translate-x-0.5">→</span>
       </span>
     </div>
