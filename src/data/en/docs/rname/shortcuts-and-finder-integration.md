@@ -1,60 +1,60 @@
 ---
-title: "Shortcuts and Finder Integration"
-description: "Keyboard shortcuts, Dock and Finder integration, drag-and-drop workflows, and layout stability architecture in rName."
+title: "Shortcuts and macOS Integration"
+description: "Keyboard shortcuts, Finder and Dock integration, dragging files and interface design choices in rName."
 project: "rname"
 order: 7
 section: "Reference"
 ---
 
-## Built Exclusively for macOS
+## Built for the Mac
 
-rName is tailored specifically for the **macOS** desktop environment, embracing native Mac interaction paradigms: system keyboard shortcuts, seamless drag-and-drop, Dock integration, and Finder contextual services.
+rName fits naturally into **macOS**: keyboard, drag and drop, system menus and the Finder.
 
 ---
 
 ## Keyboard Shortcuts
 
-Every primary action can be triggered immediately without reaching for the mouse:
+| Shortcut | Menu | Action |
+| :--- | :--- | :--- |
+| <kbd>⌘</kbd> <kbd>O</kbd> | File | Choose a folder |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> | File | Add individual files to the list |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | File | Clear the list |
+| <kbd>⌘</kbd> <kbd>↩</kbd> | Rename | **Apply the rename** to the files that are ready |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Rename | **Undo the last rename** |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View | Show or hide the rule settings |
+| <kbd>⌘</kbd> <kbd>,</kbd> | rName | Open Settings |
 
-| Shortcut                               | Menu    | Action                                                      |
-| :------------------------------------- | :------ | :---------------------------------------------------------- |
-| <kbd>⌘</kbd> <kbd>O</kbd>              | File    | Choose a folder via standard Finder open dialog             |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> | File    | Add individual files to the current batch                   |
-| <kbd>⌘</kbd> <kbd>↩</kbd>              | Actions | **Apply Rename** to all ready files                         |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit    | **Undo the last rename operation**                          |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View    | Toggle the rule settings inspector pane                     |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | Edit    | Clear all files from the list                               |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | rName   | Open Settings (General, Files, Rules, Presets, Permissions) |
-
----
-
-## Finder and Dock Integration
-
-Beyond keyboard navigation, you can interact with rName through three native macOS mechanisms:
-
-### 1. Drag and Drop onto the Window
-
-Drop any folder or collection of files directly into the rName window. Dropping a folder automatically secures containing folder permissions and loads all items instantly.
-
-### 2. Drag and Drop onto the Dock Icon
-
-Drag files or folders onto the rName icon in the macOS **Dock**:
-
-- If the application is closed, it launches and immediately loads the items.
-- If the application is already running, it appends the new files to the current workspace.
-
-### 3. Contextual «Open With…» in Finder
-
-Select files or folders in Finder, right-click, and choose **Open With › rName**. The app opens the path and prepares the preview according to your active rule chain.
+From the _Rename_ menu you can also add a rule, remove all rules and restore hand-typed names.
 
 ---
 
-## Layout Stability & Adaptive Design
+## Finder and Dock
 
-During the development of rName, strict layout engineering was implemented to ensure flawless resizing across displays of all sizes (from MacBook Air displays to Pro Display XDR monitors).
+Besides the keyboard and toolbar, you can add files to rName in three ways:
 
-To avoid known AppKit autolayout constraints negotiation crashes on high-density data tables, rName integrates its rule inspector directly within the right-hand split view column:
+### 1. Dragging into the Window
 
-- The window resizes fluidly without stutter or layout lag.
-- Table columns use adaptive ideal widths that prevent long filenames from truncating prematurely.
-- Controls remain accessible and properly proportioned at any screen resolution.
+Drag a folder or a group of files from the Finder into the rName window. If you drag a folder, the app immediately gets write permission and loads every file inside it.
+
+### 2. Dragging onto the Dock Icon
+
+Drag a folder or some files onto rName's icon in the **Dock**:
+
+- if the app is closed, it opens with the files already loaded;
+- if it's already open, it adds the new items to the list.
+
+### 3. "Open With…"
+
+In the Finder, right-click a folder or file and choose **Open With › rName**: the app opens the path and shows the preview with the current rules.
+
+---
+
+## A Stable Window
+
+During development, window stability while resizing was checked with repeated tests, because some SwiftUI split view configurations can make the app quit due to layout passes that never settle.
+
+That's why the rule settings panel is built into the right-hand column instead of being a separate third column:
+
+- the window can be narrowed and widened freely;
+- table columns have ideal widths that adapt to the available space;
+- the settings are always reachable, at any window size.

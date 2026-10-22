@@ -14,19 +14,19 @@ privacyUrl: "https://www.pt39.it/privacy-policy-app/"
 
 ## Cos'è PT39 News
 
-PT39 News è l'app ufficiale del Circolo Socio-Culturale Palazzo Tenta 39, attivo dal 2007 nella promozione del confronto civile e dell'informazione libera a Bagnoli Irpino e in Irpinia. L'app aggrega in modo rapido e intuitivo gli articoli, gli avvisi, le opinioni e gli approfondimenti pubblicati su pt39.it, pensata per chi vuole restare aggiornato senza rinunciare alla privacy.
+PT39 News è l'app del Circolo Socio-Culturale Palazzo Tenta 39, attivo dal 2007 nella promozione del confronto civile e dell'informazione libera a Bagnoli Irpino e in Alta Irpinia. Porta sul telefono e sul tablet articoli, avvisi, rubriche e approfondimenti pubblicati su pt39.it, per chi vuole restare aggiornato senza rinunciare alla privacy.
 
 ## Funzionalità principali
 
-- **Aggiornamenti in tempo reale** — cronaca, politica, sport, eventi, cultura, meteo e opinioni sempre a portata di mano
-- **Notifiche locali** — un avviso per i nuovi articoli senza servizi di notifica esterni invasivi
-- **Due stili grafici** — Moderno, vicino all'interfaccia nativa, e Retrò, con palette e tipografia dedicate
-- **Due layout del feed** — Standard con card ampie e visive, o Compatto per consultare più articoli rapidamente
-- **Ricerca avanzata** — risultati ordinati per titolo, estratto, contenuto e categorie
-- **Sezione Salvati** — ritrova facilmente gli articoli preferiti
-- **Design incentrato sulla privacy** — nessuna registrazione, nessun dato personale raccolto, nessun tracciamento di terze parti
+- **Il paese, aggiornato** — cronaca, avvisi, iniziative, sport, meteo e le rubriche storiche di pt39.it in un unico posto
+- **Più modi di leggere** — «In evidenza», con le notizie principali e le sezioni per argomento, o «Elenco», un flusso cronologico unico (su Android anche «Titoli», compatto); scegli tu quali sezioni mostrare e in che ordine
+- **Salva e leggi con calma** — gli articoli salvati si rileggono anche senza connessione
+- **Avvisami quando esce** — una notifica quando su pt39.it viene pubblicato un nuovo articolo, senza account né registrazione
+- **Fatta per essere letta** — testo che segue la dimensione dei caratteri scelta nel sistema, tema chiaro o scuro, colore d'accento a scelta e stili grafici diversi, tra cui uno classico con i caratteri della carta stampata
+- **Foto e video** — gallerie a schermo intero con lo zoom e video direttamente nell'articolo
+- **Rispetto per chi legge** — nessuna pubblicità, nessun tracciamento, nessun account; preferenze e articoli salvati restano sul dispositivo
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
-Disponibile su **iOS** e **Android**.
+Disponibile su **iPhone** e **iPad** con iOS/iPadOS 18 o successivo e su **Android** 7.0 o successivo.

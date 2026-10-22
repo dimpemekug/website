@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a rManga"
-description: "Panoramica di rManga per iPhone e iPad: suite multimediale per la lettura di manga, fumetti ed ebook e la visione di anime, con zero tracciamento e massima fluidità."
+description: "Panoramica di rManga per iPhone e iPad: un'unica app per leggere manga, fumetti ed ebook e guardare anime, senza tracciamento."
 project: "rmanga"
 order: 1
 section: "Iniziare"
@@ -8,40 +8,40 @@ section: "Iniziare"
 
 ## Cos'è rManga
 
-**rManga** è un'applicazione nativa per **iPhone e iPad (iOS/iPadOS 26+)** che unisce in un'unica libreria elegante e scattante tre grandi mondi dell'intrattenimento multimediale:
+**rManga** è un'app nativa per **iPhone e iPad (iOS/iPadOS 26+)**, in italiano e in inglese, che riunisce in un'unica libreria tre mondi:
 
-1. **Manga e Fumetti**: lettura di fumetti giapponesi, comic book occidentali e webtoon a scorrimento verticale, con supporto a file locali e repository di estensioni.
-2. **Ebook e Libri di Testo**: lettore avanzato di libri digitali (EPUB, PDF, FB2, DOCX, TXT e Markdown) con motore Readium, impaginazione fluida, evidenziazioni e note.
-3. **Anime e Serie Animate**: riproduttore video con doppio motore (AVPlayer nativo e libmpv via Metal per file MKV), moduli di streaming Sora, integrazione con server Jellyfin, salto automatico delle sigle tramite AniSkip e supporto a sottotitoli stilizzati ASS/SSA.
+1. **Manga e fumetti**: manga, fumetti occidentali e webtoon a scorrimento verticale, da file locali, estensioni e server.
+2. **Ebook e libri di testo**: un lettore di testo basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown, con impaginazione, segnalibri, evidenziazioni e ricerca; i PDF e gli EPUB illustrati si sfogliano come fumetti.
+3. **Anime e video**: un player con due motori (AVPlayer di Apple e libmpv su Metal per MKV e simili), moduli video Sora, server Jellyfin, salto delle sigle con AniSkip e sottotitoli ASS/SSA con il loro stile.
 
-Sviluppata interamente in **SwiftUI e SwiftData** con design *Liquid Glass*, rManga non ospita né distribuisce contenuti: è un contenitore universale raffinato progettato per riprodurre i tuoi file personali e collegarsi alle tue sorgenti preferite.
+Sviluppata in **SwiftUI e SwiftData** con il design *Liquid Glass*, rManga non ospita né distribuisce contenuti: legge i tuoi file e si collega alle fonti che scegli tu.
 
 ---
 
-## Architettura e Punti di Forza
+## Architettura e punti di forza
 
-### 1. Privacy Assoluta e Nessun Account Obbligatorio
-- **Nessuna profilazione**: l'app non include analytics, tracker commerciali né annunci pubblicitari.
-- **I tuoi dati sul tuo dispositivo**: la libreria, la cronologia, i segnalibri e i progressi risiedono nella memoria locale protetta e, solo se decidi di attivare la sincronizzazione, nel tuo **iCloud personale**.
-- **Credenziali al sicuro nel Portachiavi**: password dei server Jellyfin, Suwayomi e token API rimangono cifrati nel Keychain di sistema.
+### 1. Privacy e nessun account obbligatorio
+- **Nessuna profilazione**: l'app non include analytics, tracker né pubblicità.
+- **I tuoi dati sul tuo dispositivo**: libreria, cronologia e progressi restano sul dispositivo e, solo se attivi la sincronizzazione, nel tuo **iCloud personale**.
+- **Credenziali nel Portachiavi**: password e token dei server (Jellyfin, Suwayomi, Komga, Kavita) restano nel Portachiavi di iOS e non finiscono né nei backup né in iCloud.
 
-### 2. Gestione Unificata di Media Differenti
-In rManga ogni opera è rappresentata dal modello unificato `Manga` e i suoi contenuti (capitoli di fumetti, tomi di libri o episodi video) dal modello `Chapter`:
+### 2. Un solo modello per media diversi
+In rManga ogni opera è un `Manga` e i suoi contenuti (capitoli di fumetti, volumi di libri o episodi) sono `Chapter`:
 - Per i **fumetti**, il progresso corrisponde alla pagina letta.
-- Per gli **ebook**, il progresso memorizza la posizione esatta (*locator*) nel testo.
-- Per gli **anime e video**, la posizione è tracciata al secondo esatto, segnando l'episodio come completato una volta superato il 90% della durata.
-- In questo modo cronologia, riga "Continua a guardare/leggere" e sincronizzazione funzionano con coerenza e senza duplicazioni.
+- Per gli **ebook**, il progresso usa le posizioni di Readium (circa una ogni mille caratteri), uguali su ogni dispositivo.
+- Per i **video**, la posizione è salvata al secondo, e un episodio conta come visto oltre il 90% della durata.
+- Così cronologia, riga "Continua", backup e sincronizzazione funzionano allo stesso modo per tutti.
 
-### 3. Prestazioni al Vertice e Display ProMotion a 120 Hz
-Tutte le schermate sono ottimizzate per eliminare gli scatti (*animation hitches*):
-- Conteggio capitoli calcolato in una **singola query aggregata** in memoria.
-- Memoria riciclata per le strisce verticali dei webtoon.
-- Decodifica video accelerata su hardware Apple Silicon tramite VideoToolbox.
+### 3. Prestazioni e schermi ProMotion a 120 Hz
+Le schermate sono state misurate e ottimizzate per evitare gli scatti (*animation hitches*):
+- in Libreria i capitoli si contano con **una sola query** per disegno;
+- nei webtoon solo le pagine vicine allo schermo hanno una vista, riciclata da pagina a pagina;
+- il video è decodificato in hardware con VideoToolbox.
 
 ---
 
-## Flusso di Avvio Rapido
+## Per iniziare
 
-1. **Importa i tuoi file**: copia archivi di manga o libri digitali nella cartella `rManga` dell'app **File**.
-2. **Collega le tue fonti**: aggiungi repository di estensioni Aidoku/Paperback, moduli video Sora o connettiti al tuo server domestico (Komga, Kavita, Suwayomi o Jellyfin).
-3. **Scegli l'esperienza di fruizione**: apri un manga per sfogliarlo da destra a sinistra, un webtoon per scorrere verticalmente, un ebook per evidenziare citazioni, oppure avvia un episodio anime con sottotitoli e Picture in Picture.
+1. **Importa i tuoi file**: copia archivi di manga, libri o video nella cartella `rManga` dell'app **File**.
+2. **Collega le tue fonti**: aggiungi repository di estensioni Aidoku o Paperback, moduli video Sora o il tuo server (Komga, Kavita, Suwayomi o Jellyfin). Nessun repository è incluso nell'app.
+3. **Leggi o guarda**: sfoglia un manga da destra a sinistra, scorri un webtoon in verticale, evidenzia un passaggio in un ebook o avvia un episodio con sottotitoli e Picture in Picture.

@@ -1,6 +1,6 @@
 ---
 title: "Learning, Exercises and Widgets"
-description: "Interactive 9-type subnetting quiz, 21-chapter networking guide, expanded glossary, iOS 18/macOS 15 widgets, Control Center controls, and shortcuts."
+description: "Interactive 9-type subnetting quiz, 21-chapter networking guide, expanded glossary, widgets, Control Center controls and shortcuts."
 project: "netcalc"
 order: 9
 section: "Reference & Learning"
@@ -45,7 +45,7 @@ Unlike standard multiple-choice testing apps, NetCalc Pro provides immediate, fu
 
 ---
 
-## Interactive Widgets & iOS 18 / macOS 15+ System Integration
+## Interactive Widgets and System Integration
 
 NetCalc Pro takes full advantage of modern Apple WidgetKit and App Intents architecture:
 
@@ -58,17 +58,14 @@ NetCalc Pro takes full advantage of modern Apple WidgetKit and App Intents archi
 - A handy pocket reference showing prefix lengths `/n`, decimal masks, wildcard masks, and usable host counts.
 
 ### 3. Control Center and Lock Screen Controls
-- Native control controls to launch the IP Calculator or open the Daily Quiz instantly from iOS 18 Control Center or macOS 15 menu bar.
+- Two controls to open the IP Calculator or the Daily Quiz right away from Control Center (iOS 18 or later, macOS 26 or later). The widgets themselves work from iOS 17 and macOS 14.
 
-### 4. Universal Deep Linking (`netcalc://`)
-- The app handles the `netcalc://` URL scheme for rapid scriptable navigation:
-  - `netcalc://calculator`: opens the IPv4 calculator.
-  - `netcalc://subnetting`: opens fixed-size subnetting.
-  - `netcalc://vlsm`: opens the VLSM planner.
-  - `netcalc://ipv6`: opens the IPv6 calculator.
-  - `netcalc://tools`: opens network tools (Summary, Range to CIDR, Wildcard, Compare).
-  - `netcalc://quiz`: opens subnetting exercises.
-  - `netcalc://projects`: opens lab projects.
+### 4. `netcalc://` Links
+- The app responds to `netcalc://` links, used by the widgets and controls and also usable from Shortcuts or scripts:
+  - `netcalc://calculator`: opens the calculator;
+  - `netcalc://calculator/<mode>`: opens the calculator on a specific mode: `ipv4`, `subnetting`, `vlsm`, `ipv6`, `summary`, `range`, `wildcard` or `compare` (e.g. `netcalc://calculator/vlsm`);
+  - `netcalc://quiz`: opens the subnetting exercises;
+  - `netcalc://quiz/daily`: opens the daily exercise directly.
 
 ---
 
@@ -111,9 +108,9 @@ The app bundles a complete offline networking textbook on Mac, iPad, and iPhone 
 
 ---
 
-## Integrated Network Glossary (55+ Definitions)
+## Integrated Network Glossary (Over 100 Entries)
 
-Open anytime via _Help → Network Glossary_, featuring over 55 comprehensive definitions updated with 15 new terms introduced in version 1.1:
+Open anytime via _Help → Network Glossary_, with more than a hundred entries, including 15 new terms introduced in version 1.1:
 
 - **Fundamentals**: _IP Address_, _CIDR_, _Subnet Mask_, _Wildcard Mask_, _Network Address_, _Broadcast_, _Usable Hosts_.
 - **Advanced Routing & Switching**: _Default Gateway_, _Administrative Distance_, _Metric_, _Next Hop_, _802.1Q Trunk_, _Sub-interface_, _SVI_, **_Spanning Tree Protocol (STP)_**, **_PortFast_**, **_BPDU Guard_**, **_EtherChannel (LACP/PAgP)_**, **_Port Security_**, **_HSRP (Hot Standby Router Protocol)_**, **_IP Helper-Address_**.
@@ -133,7 +130,6 @@ NetCalc Pro offers full keyboard navigation for professional workflows:
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View        | Toggle inspector side panel                             |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copy Cisco CLI configuration from the active panel      |
 | <kbd>⌘</kbd> <kbd>?</kbd>              | Help        | Open 21-chapter Networking Guide                        |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>?</kbd> | Help        | Open Network Glossary                                   |
 | <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Open Settings window                                    |
 | <kbd>⌘</kbd> <kbd>Z</kbd>              | Edit        | Undo last modification                                  |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit        | Redo last undone action                                 |

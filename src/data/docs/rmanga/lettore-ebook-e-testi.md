@@ -1,47 +1,49 @@
 ---
-title: "Lettore Ebook e Libri di Testo"
-description: "Il motore di lettura testuale Readium per EPUB, PDF, FB2, DOCX e TXT: temi, caratteri, impaginazione, note, evidenziazioni e ricerca in rManga."
+title: "Lettore di ebook e libri di testo"
+description: "Il lettore di testo basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown: temi, caratteri, impaginazione, segnalibri, evidenziazioni e ricerca in rManga."
 project: "rmanga"
 order: 4
 section: "Ebook"
 ---
 
-## Il Motore di Lettura Testuale (Readium)
+## Il lettore di testo (Readium)
 
-rManga integra al proprio interno il framework professionale open-source **Readium** (`EPUBNavigatorViewController`), lo standard industriale per la fruizione di libri digitali ed ebook.
+Per i libri fatti di testo rManga usa **Readium** (`EPUBNavigatorViewController`), il toolkit open source di riferimento per gli ebook. I PDF e gli EPUB fatti di immagini si sfogliano invece con il lettore dei fumetti.
 
-A differenza dei semplici visualizzatori WebKit, Readium garantisce:
-- Calcolo esatto delle posizioni (*locators*) indipendentemente dalle dimensioni dello schermo o dal font scelto.
-- Impaginazione fluida a colonne con sillabazione (*hyphenation*) calcolata tramite il framework linguistico `NaturalLanguage` di Apple.
-- Sincronizzazione precisa dei progressi di lettura anche con server remoti compatibili come Komga e Kavita.
-
----
-
-## Conversione Trasparente dei Formati Testuali
-
-Se importi documenti che non sono in formato EPUB nativo (come file **TXT, Markdown, DOCX di Microsoft Word, ODT di LibreOffice, RTF o FictionBook FB2**), rManga non richiede programmi di conversione esterni (come Calibre):
-
-1. **Conversione Locale al Volo**: al primo tocco, il file sorgente viene analizzato e convertito istantaneamente in un perfetto pacchetto **EPUB 3** memorizzato nella cache locale (`Caches/TextBooks`).
-2. **Struttura Intelligente dei Capitoli**:
-   - I file di testo e Markdown riconoscono titoli, capitoli e sezioni analizzando intestazioni (`# Capitolo`, `## Paragrafo`).
-   - I file Word DOCX e LibreOffice ODT conservano grassetti, corsivi, elenchi puntati, tabelle, immagini incorporate e note a piè di pagina.
-   - I file FB2 preservano poesie, citazioni epigrafiche e immagini codificate in base64.
-3. **Note a Piè di Pagina EPUB (`noteref`)**: toccando il numero di una nota a piè di pagina nel testo, rManga apre direttamente la spiegazione della nota senza costringerti a scorrere a fine libro.
+Con Readium:
+- le posizioni nel libro (circa una ogni mille caratteri) sono le stesse su ogni dispositivo, qualunque sia lo schermo o il carattere scelto;
+- il testo è impaginato con la sillabazione nella lingua del libro, riconosciuta con il framework `NaturalLanguage` di Apple;
+- il punto di lettura si sincronizza anche con i server Komga e Kavita.
 
 ---
 
-## Personalizzazione Grafica e Tipografia
+## Conversione automatica degli altri formati
 
-Toccando il menu delle opzioni nel lettore di libri puoi personalizzare ogni dettaglio della pagina:
-- **Temi Cromatici**: Chiaro classico, Carta Seppia riposante, Scuro AMOLED profondo o Automatico (sincronizzato con il tema di iOS).
-- **Tipografia**: seleziona caratteri con grazie (*serif*) editoriali, senza grazie (*sans-serif*) moderni, oppure font monospaziati.
-- **Regolazione Testo**: cursore continuo per la dimensione del carattere, regolazione dell'interlinea e ampiezza dei margini laterali.
-- **Impaginazione su iPad**: su schermi larghi puoi attivare la visualizzazione a **due colonne affiancate** per riprodurre la sensazione di un libro stampato.
+Per i documenti che non sono EPUB (**TXT, Markdown, DOCX di Word, ODT di LibreOffice, RTF, HTML o FB2**) non servono programmi esterni come Calibre:
+
+1. **Conversione sul dispositivo**: alla prima apertura il file viene convertito in un **EPUB 3** salvato nella cache (`Caches/TextBooks`), che viene rifatto se il file cambia.
+2. **Capitoli riconosciuti automaticamente**:
+   - nel Markdown ogni titolo di livello 1 o 2 apre un capitolo; nei TXT lo aprono i paragrafi brevi che cominciano con parole come "Capitolo", "Parte" o "Prologo" (ma non le righe di un indice);
+   - DOCX e ODT conservano grassetto, corsivo, sottolineato, titoli, elenchi, tabelle, immagini, link e note a piè di pagina (raccolte in fondo al capitolo), ma non caratteri, dimensioni e colori, che lascerebbero fuori i temi del lettore;
+   - gli FB2 conservano sezioni, note, poesie, epigrafi, citazioni e immagini incorporate.
+3. **Formati non supportati**: i vecchi `.doc` di Word 97 (un formato binario che iOS non sa aprire) e gli FB2 compressi (`.fb2.zip`).
 
 ---
 
-## Segnalibri, Evidenziazioni e Ricerca
+## Aspetto e tipografia
 
-- **Evidenziazioni a Colori**: seleziona qualsiasi porzione di testo con il cursore per applicare un'evidenziazione. Puoi rivedere tutte le citazioni raccolte nella scheda dedicata del libro.
-- **Segnalibri**: premi l'icona del segnalibro nella barra superiore per fissare la pagina corrente.
-- **Ricerca nel Testo Intero**: lo strumento di ricerca analizza l'intero volume (fino a 300 occorrenze) mostrando frammenti di contesto prima e dopo il termine cercato, permettendo salti immediati al punto desiderato.
+Dal menu del lettore (o da Impostazioni › Lettore libri) puoi regolare:
+- **Tema**: automatico (segue iOS), chiaro, seppia o scuro.
+- **Carattere** e **dimensione del testo**.
+- **Interlinea** e **scorrimento continuo** al posto delle pagine.
+- **Due colonne su iPad**: in orizzontale il testo si dispone su due colonne affiancate, come un libro aperto.
+
+---
+
+## Segnalibri, evidenziazioni e ricerca
+
+- **Evidenziazioni**: seleziona un passaggio e scegli "Evidenzia"; tocca un'evidenziazione per toglierla. Le ritrovi tutte nella scheda Evidenziazioni dell'indice.
+- **Segnalibri**: il pulsante del segnalibro nella barra in alto mette o toglie un segnalibro sulla pagina corrente.
+- **Cerca nel libro**: cerca in tutto il volume (fino a 300 risultati), mostra ogni risultato con il testo attorno e porta al punto scelto, che resta sottolineato.
+
+Segnalibri ed evidenziazioni restano su questo dispositivo: non vanno in iCloud né nei backup.

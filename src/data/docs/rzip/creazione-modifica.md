@@ -1,55 +1,56 @@
 ---
-title: "Creazione, Modifica e Conversione"
-description: "Creazione archivi, modifica diretta in-place con backup nel Cestino, esclusione automatica di file spazzatura e conversione formati."
+title: "Creazione, modifica e conversione"
+description: "Creazione di archivi, aggiunta ed eliminazione di file con copia di sicurezza nel Cestino, esclusione automatica dei file di sistema di macOS e conversione di formato in rZip."
 project: "rzip"
 order: 4
 section: "Guide d'uso"
 ---
 
-## Creazione di Nuovi Archivi (`⌘N`)
+## Creare un nuovo archivio (<kbd>⌘</kbd> <kbd>N</kbd>)
 
-Dalla finestra di benvenuto, dal menu File o premendo `⌘N`, rZip apre la finestra di creazione (`CreateArchiveView`):
+Dalla finestra di benvenuto, dal menu File o con <kbd>⌘</kbd> <kbd>N</kbd>, rZip apre la finestra di creazione:
 
-1. **Aggiunta Contenuti**: Trascina file o cartelle dal Finder direttamente nella finestra.
-2. **Formato di Compressione**:
-   - **7z**: Algoritmo LZMA2 con il più alto rapporto di compressione, supporto alla crittografia AES-256 e alla cifratura della tabella dei nomi dei file.
-   - **ZIP**: Il formato universale compatibile con qualsiasi sistema operativo, con supporto opzionale per la crittografia moderna AES-256.
-   - **TAR, TAR.GZ, TAR.XZ, TAR.BZ2**: I formati standard degli ambienti UNIX e server Linux.
-   - *Nota importante*: Il formato **RAR non è creabile** da rZip poiché la compressione RAR è un algoritmo proprietario protetto da brevetto di RARLAB.
-3. **Livello di Compressione**: Da *Nessuna* / *Rapido* (massima velocità) a *Ultra* (sfrutta tutti i core della CPU per massimizzare il risparmio di spazio).
-4. **Suddivisione in Volumi**: Puoi dividere l'archivio in parti uguali per l'invio via email (es. 25 MB), storage cloud o supporti fisici.
+1. **Contenuti**: trascina file e cartelle dal Finder nella finestra.
+2. **Formato**:
+   - **7z**: compressione LZMA2 con il rapporto più alto, cifratura AES-256 e, se vuoi, cifratura dei nomi dei file.
+   - **ZIP**: il formato universale, apribile su qualsiasi sistema, con cifratura AES-256 opzionale.
+   - **TAR, TAR.GZ, TAR.XZ, TAR.BZ2**: i formati classici di Unix e Linux.
+   - *Nota*: il formato **RAR non si può creare**, perché è un formato proprietario di RARLAB.
+3. **Livello di compressione**: Nessuna, Rapidissima, Veloce, Normale, Massima o Ultra.
+4. **Divisione in volumi**: puoi dividere l'archivio in parti di dimensione fissa (es. 25 MB per l'email) per l'invio o per supporti esterni.
 
-## Esclusione Automatica File di Sistema macOS
+Formato, livello, cifratura dei nomi ed esclusione dei file di sistema predefiniti si impostano nelle Impostazioni.
 
-Quando crei un archivio compresso su macOS, il Finder include comunemente file invisibili specifici del Mac:
-- File `.DS_Store` (preferenze di visualizzazione della cartella nel Finder).
-- Cartelle `__MACOSX` e file fork risorsa `._nomefile`.
-- File di indicizzazione Spotlight (`.Spotlight-V100`) e cestino locale (`.Trashes`).
+## Esclusione dei file di sistema di macOS
+
+Gli archivi creati sul Mac includono spesso file invisibili tipici di macOS:
+- `.DS_Store` (preferenze di visualizzazione delle cartelle nel Finder);
+- cartelle `__MACOSX` e file `._nomefile` con le informazioni aggiuntive dei file;
+- cartelle di Spotlight (`.Spotlight-V100`) e del cestino (`.Trashes`).
 
 > [!NOTE]
-> rZip esclude automaticamente tutti questi file spazzatura durante la creazione e l'aggiornamento degli archivi, generando archivi puliti e pronti per essere aperti su Windows o Linux senza errori. Durante la consultazione di un archivio, puoi premere `⇧⌘.` per mostrare o nascondere temporaneamente i file di sistema.
+> Di default rZip esclude questi file quando crea o aggiorna un archivio, così l'archivio si apre pulito anche su Windows o Linux. Mentre consulti un archivio, <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>.</kbd> mostra o nasconde i file di sistema.
 
-## Modifica di Archivi Esistenti (In-Place Editing)
+## Modificare un archivio esistente
 
-Non occorre estrarre l'intero archivio per aggiungere o togliere file da archivi **ZIP**, **7z** o **TAR**:
+Puoi aggiungere o togliere file da archivi **ZIP**, **7z** e **TAR** (anche `.gz`, `.bz2`, `.xz`) senza estrarli:
 
-- **Aggiungi File** (`⌥⌘A`): Trascina nuovi file nella finestra aperta oppure usa il comando *Aggiungi all'archivio...*.
-- **Elimina File** (`⌘⌫`): Seleziona uno o più elementi interni e premi `⌘ + Backspace` per rimuoverli.
-- **Rinomina**: Modifica il nome di file o cartelle direttamente nella lista.
+- **Aggiungi** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>A</kbd>): trascina nuovi file nella finestra o usa *Aggiungi all'archivio…*.
+- **Elimina** (<kbd>⌘</kbd> <kbd>⌫</kbd>): seleziona uno o più elementi (le cartelle vengono eliminate con tutto il contenuto) e usa *Elimina dall'archivio…*.
 
-### Protezione con Copia di Riserva nel Cestino
+Il nuovo archivio viene scritto a parte e sostituisce l'originale solo se l'operazione riesce. Non si possono modificare gli archivi RAR né quelli divisi in più volumi.
 
-Per evitare qualsiasi perdita accidentale di dati durante le riscritture:
-- Prima di applicare qualsiasi modifica distruttiva all'archivio sul disco, rZip deposita automaticamente una **copia di riserva dell'archivio originale nel Cestino del Mac** (`~/.Trash`).
-- Se cambi idea o si verifica un problema, puoi ripristinare il file precedente dal Cestino con un clic su *Ripristina*.
+### Copia di sicurezza nel Cestino
 
-## Conversione di Archivi tra Formati Diversi
+Con l'opzione **Conserva una copia dell'originale nel Cestino**, attiva di default nelle Impostazioni, prima di ogni modifica rZip mette nel Cestino del Mac una copia dell'archivio originale, chiamata per esempio `Foto (prima della modifica).zip`. Se cambi idea, la recuperi dal Cestino con **Rimetti**.
 
-Dal menu File o dal pulsante della barra degli strumenti puoi scegliere **Converti in un altro formato…**:
+## Convertire un archivio in un altro formato
 
-1. rZip estrae l'archivio corrente in una cartella temporanea privata e sicura (`ConversionStaging`).
-2. Si apre direttamente la finestra di creazione configurata in modalità conversione.
-3. Puoi scegliere un nuovo formato (ad esempio convertire un archivio proprietario **RAR** in un moderno **7z** o **ZIP** universale), reimpostare compressione, password o volumi.
-4. Il nuovo archivio viene salvato accanto all'originale (che non viene toccato).
-5. Se l'archivio di origine era protetto da password, rZip ripropone automaticamente la stessa password e le impostazioni di cifratura sul nuovo archivio.
-6. La cartella temporanea di staging viene distrutta e ripulita istantaneamente al termine dell'operazione.
+Dal menu File o dal menu Estrai della barra degli strumenti scegli **Converti in un altro formato…**:
+
+1. rZip estrae l'archivio in una cartella temporanea privata (`ConversionStaging`).
+2. Si apre la finestra di creazione in modalità conversione.
+3. Scegli il nuovo formato (per esempio da **RAR** a **7z** o **ZIP**), la compressione, la password e i volumi.
+4. Il nuovo archivio viene proposto con lo stesso nome accanto all'originale, che non viene toccato.
+5. Se l'archivio di partenza era protetto, rZip ripropone la stessa password e la cifratura dei nomi.
+6. La cartella temporanea viene eliminata al termine (e comunque all'avvio e all'uscita dall'app).

@@ -1,57 +1,59 @@
 ---
-title: "Scorciatoie e Selezioni Rapide"
-description: "Elenco completo delle scorciatoie da tastiera native di rExif e criteri di selezione rapida per velocizzare il lavoro."
+title: "Scorciatoie e selezioni rapide"
+description: "Elenco completo delle scorciatoie da tastiera di rExif e dei criteri del menu Seleziona per lavorare più in fretta."
 project: "rexif"
 order: 9
 section: "Riferimento"
 ---
 
-## Scorciatoie da Tastiera Complete
+## Scorciatoie da tastiera
 
-Tutte le funzioni principali di rExif sono accessibili tramite scorciatoie native di macOS:
+Le funzioni principali di rExif hanno una scorciatoia da tastiera:
 
-### Gestione File e Sessione
+### File e sessione
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Aggiungi foto e video…** | `⌘ + O` | Apre il pannello di selezione file e cartelle |
-| **Aggiungi da libreria Foto…** | `⌥ + ⌘ + O` | Apre il selettore di sistema per modificare data/GPS in Foto |
+| **Aggiungi foto e video…** | `⌘ + O` | Apre il pannello per scegliere file e cartelle |
+| **Aggiungi dalla libreria Foto…** | `⌥ + ⌘ + O` | Apre il selettore di sistema per modificare data e posizione in Foto |
 | **Esporta originali da Foto…** | `⇧ + ⌘ + E` | Estrae gli originali per modificare tutti i campi |
 | **Salva modifiche** | `⌘ + S` | Scrive su disco tutte le modifiche evidenziate in arancione |
-| **Svuota lista** | `⇧⌘⌫` | Rimuove tutti gli elementi dalla finestra (i file su disco restano intatti, `⌘Z` ripristina la lista) |
-| **Mostra nel Finder** | `⇧ + ⌘ + R` | Rivela i file selezionati all'interno della cartella del Finder |
-| **Impostazioni** | `⌘ + ,` | Apre le preferenze (lingua, tema, aspetto miniature) |
+| **Svuota lista** | `⇧ + ⌘ + ⌫` | Toglie tutti gli elementi dalla finestra (i file su disco restano intatti, `⌘Z` li rimette) |
+| **Mostra nel Finder** | `⇧ + ⌘ + R` | Mostra i file selezionati nella loro cartella del Finder |
+| **Impostazioni** | `⌘ + ,` | Apre le impostazioni (lingua, aspetto, miniature, sessione) |
 
-### Modifiche e Metadati
+### Modifiche e metadati
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
 | **Modifiche in blocco…** | `⇧ + ⌘ + D` | Apre il pannello batch con anteprima riga per riga |
-| **Allinea date a data di scatto** | `⇧ + ⌘ + L` | Sincronizza digitalizzazione e timestamp filesystem con lo scatto |
+| **Allinea tutte le date alla data di scatto** | `⇧ + ⌘ + L` | Copia la data di scatto nella data di digitalizzazione e nelle date del file |
 | **Copia metadati** | `⌥ + ⌘ + C` | Copia i metadati della foto selezionata negli appunti |
-| **Incolla metadati** | `⌥ + ⌘ + V` | Incolla i metadati copiati sulla selezione corrente |
-| **Valutazione 1–5 stelle** | `⌘ + 1` … `⌘ + 5` | Assegna da 1 a 5 stelle all'elemento selezionato |
+| **Incolla metadati** | `⌥ + ⌘ + V` | Incolla tutti i metadati copiati sulla selezione (dal menu puoi incollarne anche solo una parte) |
+| **Valutazione 1–5 stelle** | `⌘ + 1` … `⌘ + 5` | Assegna da 1 a 5 stelle agli elementi selezionati |
 | **Rimuovi valutazione** | `⌘ + 0` | Elimina la valutazione a stelle |
-| **Annulla modifica** | `⌘ + Z` | Annulla l'ultima operazione effettuata |
-| **Ripristina modifica** | `⇧ + ⌘ + Z` | Ripete l'ultima operazione annullata |
+| **Annulla** | `⌘ + Z` | Annulla l'ultima operazione |
+| **Ripeti** | `⇧ + ⌘ + Z` | Ripete l'ultima operazione annullata |
 
-### Visualizzazione e Navigazione
+### Visualizzazione
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Vista Tabella** | `⌃ + ⌘ + 1` | Passa alla vista tabellare con colonne |
-| **Vista Mappa** | `⌃ + ⌘ + 2` | Passa alla vista geografica interattiva Apple Maps |
+| **Come tabella** | `⌃ + ⌘ + 1` | Passa alla vista a tabella |
+| **Come mappa** | `⌃ + ⌘ + 2` | Passa alla vista su mappa (Apple Maps) |
 | **Ingrandisci miniature** | `⌘ + +` | Aumenta la dimensione delle miniature nella tabella |
 | **Riduci miniature** | `⌘ + -` | Riduce la dimensione delle miniature nella tabella |
-| **Anteprima rapida** | `Spazio` | Visualizza in alta risoluzione l'anteprima Quick Look |
-| **Cerca** | `⌘ + F` | Sposta il focus sul campo di ricerca nella toolbar |
+| **Anteprima rapida** | `Spazio` | Mostra l'anteprima Quick Look degli elementi selezionati |
 
-## Menu Seleziona: Filtri Intelligenti
+## Il menu Seleziona
 
-Il menu a comparsa **Seleziona** (nella toolbar e nella barra dei menu) permette di isolare con un clic gli elementi che richiedono attenzione:
+Il menu **Seleziona** (nella barra degli strumenti e nella barra dei menu) seleziona con un clic gli elementi che richiedono attenzione:
 
-- **Senza data di scatto**: Isola le immagini prive di `DateTimeOriginal`.
-- **Date del file diverse dalla data di scatto**: Individua i file i cui timestamp del filesystem non coincidono con il momento dello scatto (ideale prima di premere `⇧⌘L`).
-- **Senza posizione**: Seleziona tutte le foto prive di coordinate GPS per geolocalizzarle rapidamente.
-- **Con posizione**: Isola i file georeferenziati (ad esempio per rimuovere la posizione o esportarli).
-- **Per fotocamera**: Sottomenu dinamico che raggruppa le foto per corpo macchina o obiettivo rilevato.
-- **Solo foto** / **Solo video** / **Elementi da Foto**: Filtra gli elementi in base al tipo di file o alla provenienza.
-- **Con modifiche**: Seleziona unicamente gli elementi con modifiche in arancione in attesa di salvataggio.
-- **Con errori**: Individua file protetti da scrittura o con permessi mancanti.
+- **Senza data di scatto**: gli elementi senza `DateTimeOriginal`.
+- **Date sospette**: date di scatto precedenti al 1990 o nel futuro.
+- **Date del file diverse dalla data di scatto**: i file le cui date di creazione o modifica non coincidono con lo scatto (utile prima di `⇧⌘L`).
+- **Senza posizione**: le foto senza coordinate GPS, da geolocalizzare.
+- **Con posizione**: i file con una posizione (per esempio per toglierla prima di condividerli).
+- **Per fotocamera**: un sottomenu con le fotocamere trovate negli elementi.
+- **Solo foto** / **Solo video** / **Solo libreria Foto**: in base al tipo di file o alla provenienza.
+- **Con modifiche non salvate**: gli elementi con modifiche in arancione in attesa di salvataggio.
+- **Con errori**: i file che non è stato possibile leggere o salvare (es. protetti da scrittura o senza permessi).
+
+Ci sono anche **Tutti** e **Inverti selezione**.

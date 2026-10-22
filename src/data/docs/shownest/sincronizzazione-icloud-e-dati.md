@@ -1,23 +1,27 @@
 ---
-title: "Sincronizzazione iCloud e Privacy"
-description: "Sincronizzazione multi-dispositivo tramite Apple iCloud Key-Value Storage, backup dei dati e rispetto della privacy in ShowNest."
+title: "Sincronizzazione iCloud e privacy"
+description: "Sincronizzazione tra iPhone e iPad tramite l'archivio chiave-valore di iCloud, uso delle API di TMDB e consultazione senza connessione in ShowNest."
 project: "shownest"
 order: 4
 section: "Dati e Privacy"
 ---
 
-## Sincronizzazione con iCloud Key-Value Storage
+## Sincronizzazione con iCloud
 
-ShowNest memorizza la tua watchlist e lo stato di ciascun episodio sfruttando il meccanismo nativo **iCloud Key-Value Storage** di Apple (`NSUbiquitousKeyValueStore`):
+ShowNest può sincronizzare la libreria e gli episodi visti con l'**archivio chiave-valore di iCloud** (`NSUbiquitousKeyValueStore`). La sincronizzazione è facoltativa e disattivata di default: si attiva nelle Impostazioni.
 
-- **Sincronizzazione Trasparente**: se guardi un episodio sul divano con il tuo iPad e lo marchi come visto, lo ritroverai aggiornato anche sul tuo iPhone senza dover compiere alcuna azione manuale.
-- **Sicurezza e Riservatezza**: il contenitore iCloud è strettamente personale e protetto dalla crittografia Apple. Nessun server terzo o sviluppatore ha accesso ai titoli delle serie che segui.
-- **Nessun Impatto sulla Memoria**: i dati sincronizzati sono leggeri e non occupano spazio significativo nella quota del tuo abbonamento iCloud.
+- **Automatica, una volta attivata**: se segni un episodio come visto sull'iPad, lo ritrovi aggiornato anche sull'iPhone, senza fare nulla.
+- **Conflitti risolti serie per serie**: se modifichi la stessa serie su due dispositivi, vince la modifica più recente; le serie rimosse vengono eliminate anche dagli altri dispositivi.
+- **Privata**: i dati restano nel tuo account iCloud; lo sviluppatore non ha accesso alle serie che segui.
+- **Leggera**: la libreria viaggia compressa e occupa pochissimo spazio.
+- **Stato visibile**: nelle Impostazioni una pagina mostra lo stato della sincronizzazione, la data dell'ultimo aggiornamento ed eventuali problemi (per esempio iCloud non disponibile). Da lì la sincronizzazione si attiva e si disattiva.
 
 ---
 
-## Utilizzo delle API di The Movie Database (TMDB)
+## Uso delle API di TMDB
 
-- **Accesso ai Metadati**: ShowNest interroga le API pubbliche di TMDB esclusivamente per recuperare informazioni oggettive su serie, cast, trame e locandine.
-- **Nessuna Condivisione di Dati Personali**: durante le richieste a TMDB non vengono mai inviate informazioni sul tuo profilo, sui tuoi contatti o sulle tue abitudini di visione.
-- **Caching Locale**: le locandine e i dettagli scaricati vengono memorizzati nella cache locale del dispositivo, riducendo al minimo il consumo di traffico dati cellulare.
+- **Solo metadati**: ShowNest interroga le API di TMDB esclusivamente per scaricare informazioni su serie, stagioni, episodi, trame e poster.
+- **Nessun dato personale**: alle richieste a TMDB non vengono aggiunte informazioni su di te o sulle tue abitudini di visione.
+- **Cache locale**: le risposte scaricate vengono conservate sul dispositivo, così le serie che hai già aperto restano consultabili anche senza connessione e il traffico dati si riduce.
+
+*Dati forniti da The Movie Database (TMDB). ShowNest utilizza le API di TMDB ma non è approvata né certificata da TMDB.*

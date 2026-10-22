@@ -1,42 +1,46 @@
 ---
-title: "Meter Readings and Time Bands"
-description: "How to log meter entries, manage F1/F2/F3 electricity time bands, and calculate prorated consumption in DomoMeter."
+title: "Entering Readings and Time Bands"
+description: "How to record meter readings, handle the F1/F2/F3 electricity bands and how DomoMeter splits usage that spans two months."
 project: "domometer"
 order: 3
 section: "Features"
 ---
 
-## Logging Meter Readings
+## Recording a Reading
 
-Every entry recorded in DomoMeter represents the cumulative absolute figure displayed on your physical meter counter.
+Every reading in DomoMeter is the running total you see on the meter.
 
-### Step-by-Step Entry
-1. Select the relevant utility tab (**Electricity**, **Gas**, or **Water**).
-2. Tap the **Add Reading** (`+`) button.
-3. Verify the **timestamp** (defaults to the current date and time).
-4. Enter the cumulative numerical counter value.
-5. Save: the engine calculates consumption relative to the prior reading and updates charts immediately.
+### How to Enter It
+1. Open the utility (**Electricity**, **Gas** or **Water**) or use the new reading button.
+2. Pick the reading **date**: it defaults to today, but you can also enter past readings.
+3. Type the value shown on the meter.
+4. On iOS you can add a **note** (e.g. "changed supplier", "two weeks away").
+5. Save: the app works out the usage since the previous reading and updates the charts.
 
----
-
-## Electricity Time Bands (F1, F2, F3)
-
-In many electricity markets, rates vary depending on peak and off-peak demand windows:
-- **F1 (Peak Hours)**: Monday to Friday, 08:00 – 19:00.
-- **F2 (Mid-Peak Hours)**: Monday to Friday 07:00 – 08:00 and 19:00 – 23:00; Saturdays 07:00 – 23:00.
-- **F3 (Off-Peak Hours)**: Monday to Saturday 23:00 – 07:00; Sundays and holidays all day.
-
-### Flat Rate vs Multi-Band Mode
-Inside Electricity utility settings, you can toggle between:
-- **Single Flat Reading**: one cumulative kWh counter.
-- **Three Separate Bands (F1, F2, F3)**: input individual counters for each band. DomoMeter monitors individual band deltas and aggregates them into a comprehensive total.
+### Meter Replacement (iOS)
+If your meter is replaced and starts again from zero, mark the reading as a **new meter**: DomoMeter won't count the drop as usage.
 
 ---
 
-## Prorated Calculations Across Months
+## Electricity Time Bands
 
-In practice, meter readings are rarely taken precisely at midnight on the last day of each month. For instance, if you log a reading on March 20th and the next on April 10th:
+In Italy electricity can be priced differently depending on the time of day:
+- **F1 (peak hours)**: Monday to Friday, 8:00 to 19:00.
+- **F2 (mid-peak hours)**: Monday to Friday 7:00 to 8:00 and 19:00 to 23:00; Saturday 7:00 to 23:00.
+- **F3 (off-peak hours)**: Monday to Saturday 23:00 to 7:00; Sundays and public holidays all day.
 
-- 21 total days elapsed (11 days in March, 10 days in April).
-- DomoMeter allocates 11/21 of the total usage delta to March and 10/21 to April.
-- This proportional time-proration avoids synthetic spikes and empty months, delivering realistic and consistent month-over-month comparisons.
+### Single Reading or Bands
+For electricity you can:
+- record a **single reading** (flat tariff);
+- record the **three F1, F2 and F3 values** in the same reading. DomoMeter then works out the usage for each band and the total for the period.
+
+---
+
+## Usage Spanning Two Months
+
+Readings are almost never taken at midnight on the last day of the month. If, for example, you enter a reading on March 20 and the next one on April 10:
+
+- 21 days pass between the two readings (11 in March and 10 in April);
+- DomoMeter assigns 11/21 of the usage to March and 10/21 to April.
+
+Thanks to this proportional split, monthly totals and daily averages show no odd spikes or empty months and stay comparable with each other.

@@ -1,55 +1,56 @@
 ---
-title: "Creating, Editing and Converting Archives"
-description: "Creating new archives, direct in-place editing with Trash backup protection, macOS system junk stripping, and format conversion."
+title: "Creating, Editing and Converting"
+description: "Creating archives, adding and deleting files with a safety copy in the Trash, automatic exclusion of macOS system files and format conversion in rZip."
 project: "rzip"
 order: 4
 section: "User Guides"
 ---
 
-## Creating New Archives (`⌘N`)
+## Creating a New Archive (<kbd>⌘</kbd> <kbd>N</kbd>)
 
-From the Welcome window, File menu, or by pressing `⌘N`, rZip opens the archive creator sheet (`CreateArchiveView`):
+From the welcome window, the File menu or with <kbd>⌘</kbd> <kbd>N</kbd>, rZip opens the creation window:
 
-1. **Adding Content**: Drag files or folders from Finder into the creation sheet.
-2. **Container Format**:
-   - **7z**: LZMA2 compression delivering the highest space savings, with optional AES-256 header and filename encryption.
-   - **ZIP**: Universal compatibility across macOS, Windows, and Linux, with modern AES-256 password security.
-   - **TAR, TAR.GZ, TAR.XZ, TAR.BZ2**: Standard packages for UNIX, Linux servers, and software distribution.
-   - *Important note*: The **RAR format cannot be created** by rZip because RAR compression is proprietary to RARLAB and protected by commercial patents.
-3. **Compression Level**: From *None* / *Fast* to *Ultra* (multi-core LZMA2 compression maximizing disk space savings).
-4. **Volume Spanning**: Split archives into uniform parts for email attachment limits (e.g. 25 MB), cloud storage, or physical media.
+1. **Contents**: drag files and folders from the Finder into the window.
+2. **Format**:
+   - **7z**: LZMA2 compression with the highest ratio, AES-256 encryption and, optionally, encrypted file names.
+   - **ZIP**: the universal format that opens on any system, with optional AES-256 encryption.
+   - **TAR, TAR.GZ, TAR.XZ, TAR.BZ2**: the classic Unix and Linux formats.
+   - *Note*: **RAR archives can't be created**, because RAR is a proprietary RARLAB format.
+3. **Compression level**: None, Fastest, Fast, Normal, Maximum or Ultra.
+4. **Split into volumes**: you can split the archive into fixed-size parts (e.g. 25 MB for email) for sending or external media.
 
-## Automatic macOS System Junk Stripping
+The default format, level, file-name encryption and system-file exclusion are set in Settings.
 
-Standard macOS archiving in Finder bundles hidden system files:
-- `.DS_Store` (Finder window layout and view preferences).
-- `__MACOSX` directories and resource fork wrappers `._filename`.
-- Spotlight indexing files (`.Spotlight-V100`) and local trash folders (`.Trashes`).
+## Excluding macOS System Files
+
+Archives created on a Mac often include invisible macOS-specific files:
+- `.DS_Store` (Finder folder view settings);
+- `__MACOSX` folders and `._filename` files carrying extra file information;
+- Spotlight (`.Spotlight-V100`) and trash (`.Trashes`) folders.
 
 > [!NOTE]
-> rZip automatically filters and strips all proprietary macOS hidden files during creation and archive editing, producing clean, cross-platform packages ready for Windows and Linux recipients. While browsing archives in rZip, press `⇧⌘.` to toggle system file visibility.
+> By default rZip leaves these files out when it creates or updates an archive, so the archive opens cleanly on Windows or Linux too. While browsing an archive, <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>.</kbd> shows or hides system files.
 
-## In-Place Archive Editing
+## Editing an Existing Archive
 
-You do not need to unpack an archive to disk to modify its contents in **ZIP**, **7z**, or **TAR** formats:
+You can add files to or remove files from **ZIP**, **7z** and **TAR** archives (including `.gz`, `.bz2`, `.xz`) without extracting them:
 
-- **Add Files** (`⌥⌘A`): Drag new files directly into the rZip window or use the *Add to Archive...* menu command.
-- **Delete Files** (`⌘⌫`): Select items and press `⌘ + Backspace` to delete them.
-- **Rename Files**: Select an item in the list and edit its name directly.
+- **Add** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>A</kbd>): drag new files into the window or use *Add to Archive…*.
+- **Delete** (<kbd>⌘</kbd> <kbd>⌫</kbd>): select one or more items (folders are deleted with everything inside) and use *Delete from Archive…*.
 
-### Safety Backups in the Mac Trash
+The new archive is written separately and replaces the original only if the operation succeeds. RAR archives and archives split into several volumes can't be edited.
 
-To eliminate risk during in-place archive modifications:
-- Before applying any destructive changes to an archive on disk, rZip automatically deposits an **exact backup copy of the original archive in the Mac Trash** (`~/.Trash`).
-- If you need to revert changes, simply open the Trash and click *Put Back*.
+### Safety Copy in the Trash
 
-## Format Conversion Between Archives
+With **Keep a copy of the original in the Trash**, on by default in Settings, before every edit rZip puts a copy of the original archive in the Mac's Trash, named for example `Photos (before editing).zip`. If you change your mind, get it back from the Trash with **Put Back**.
 
-Select **Convert to Another Format…** from the File menu or toolbar:
+## Converting an Archive to Another Format
 
-1. rZip extracts the active archive into a private, secure staging folder (`ConversionStaging` in `rZip-Convert`).
-2. The creation sheet appears configured in conversion mode.
-3. Choose your desired target format (e.g. convert a proprietary **RAR** archive into a modern **7z** or universal **ZIP** file), adjusting compression and encryption parameters.
-4. The converted archive is saved beside the original without altering the source file.
-5. If the original archive was password-protected, rZip automatically transfers the password and filename encryption settings to the new archive.
-6. The temporary conversion staging folder is immediately purged upon completion.
+From the File menu or the toolbar's Extract menu, choose **Convert to Another Format…**:
+
+1. rZip extracts the archive into a private temporary folder (`ConversionStaging`).
+2. The creation window opens in conversion mode.
+3. Pick the new format (for example from **RAR** to **7z** or **ZIP**), compression, password and volumes.
+4. The new archive is offered with the same name next to the original, which is left untouched.
+5. If the source archive was protected, rZip offers the same password and file-name encryption again.
+6. The temporary folder is deleted at the end (and in any case when the app launches and quits).

@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a ShowNest"
-description: "Panoramica di ShowNest: tracciamento di serie TV ed episodi su iPhone e iPad con dati TMDB, sincronizzazione iCloud e avvisi personalizzati."
+description: "Panoramica di ShowNest: tracciamento di serie TV ed episodi su iPhone e iPad con dati TMDB, sincronizzazione iCloud e notifiche delle nuove uscite."
 project: "shownest"
 order: 1
 section: "Iniziare"
@@ -8,27 +8,30 @@ section: "Iniziare"
 
 ## Cos'è ShowNest
 
-**ShowNest** è un'applicazione nativa per **iOS e iPadOS** ideata per gli appassionati di serie televisive che desiderano organizzare la propria libreria di visione, tenere traccia degli episodi visti e scoprire nuove produzioni senza perdersi nei cataloghi frammentati delle varie piattaforme di streaming.
+**ShowNest** è un'app nativa per **iPhone e iPad (iOS/iPadOS 17 o successivo)** pensata per chi segue molte serie TV: ti dice sempre qual è il prossimo episodio da vedere, tiene traccia delle puntate viste e ti avvisa quando escono quelle nuove, senza perdersi tra i cataloghi delle varie piattaforme di streaming.
 
-Alimentata dal vasto database comunitario di **TMDB** (*The Movie Database*) e arricchita dalla sincronizzazione automatica tramite **iCloud**, ShowNest offre un'interfaccia elegante, scattante e priva di distrazioni.
+I dati di serie ed episodi arrivano da **TMDB** (*The Movie Database*); la tua libreria si sincronizza tramite **iCloud**. ShowNest è gratuita, senza pubblicità, abbonamenti né account.
 
 ---
 
-## Caratteristiche Principali
+## Caratteristiche principali
 
-### 1. Catalogo e Scoperta con TMDB
-- Cerca tra decine di migliaia di serie TV internazionali, attuali o storiche.
-- Esplora le sezioni **Tendenze**, **Più Popolari**, **Più Votate** e **In Onda Oggi** per trovare sempre spunti di visione aggiornati.
-- Schede dettagliate con sinossi in italiano, cast, stagioni, episodi, date di uscita ufficiali e poster ad alta risoluzione.
+### 1. Catalogo e scoperta con TMDB
+- Cerca in tutto il catalogo di TMDB, con serie attuali e del passato.
+- Esplora le sezioni **Tendenze**, **Popolari**, **Più votate** e **In onda oggi**, più i suggerimenti basati su ciò che segui: serie simili all'ultima che hai aggiunto e altri titoli del tuo genere preferito.
+- Schede con trama, stagioni, episodi, date di uscita, poster e trailer.
 
-### 2. Gestione Intelligente della Watchlist
-- **In Visione (*Up Next*)**: mostra immediatamente il prossimo episodio da guardare per ogni serie iniziata.
-- **In Arrivo**: tiene il conto dei giorni che mancano alla messa in onda delle nuove stagioni o dei nuovi episodi.
-- **Completate**: archivio delle serie concluse con voto personale e storico di visione.
+### 2. Watchlist e libreria
+- **Watchlist**: il prossimo episodio da vedere per ogni serie che segui; per le serie in cui sei in pari, il conto alla rovescia al prossimo episodio.
+- **Le mie serie**: la libreria divisa in **In uscita**, **In corso**, **Da iniziare** e **Completate**, più un **Archivio** per le serie che hai messo da parte.
 
-### 3. Statistiche e Tempo di Visione
-Scopri quanto tempo hai dedicato alle tue serie preferite grazie alla scheda statistiche: giorni e ore totali di visione, numero complessivo di episodi guardati e grafici di ripartizione per genere (fantascienza, drama, comedy, thriller, ecc.).
+### 3. Statistiche
+Tempo totale di visione, episodi visti, serie completate, riepilogo dell'anno mese per mese, giorni consecutivi, generi preferiti, serie più viste e cronologia completa delle visioni.
 
-### 4. Riservatezza e Sincronizzazione iCloud
-- **Nessuna registrazione**: non serve creare un account o condividere la propria email.
-- **iCloud Key-Value Storage**: la tua watchlist e lo stato di avanzamento degli episodi si sincronizzano silenziosamente e in tempo reale tra il tuo iPhone e il tuo iPad tramite il tuo account Apple personale.
+### 4. Privacy e sincronizzazione
+- **Nessuna registrazione**: non serve un account né un indirizzo email.
+- **iCloud**: libreria ed episodi visti si sincronizzano tra iPhone e iPad tramite il tuo account Apple.
+- **Notifiche locali**: un avviso il giorno in cui esce un nuovo episodio delle tue serie.
+
+### 5. A modo tuo
+Tema chiaro, scuro o di sistema, sei colori d'accento, l'app in sette lingue (anche diversa da quella del dispositivo) e, su iPhone, barra delle schede o menu compatto.

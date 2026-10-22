@@ -1,6 +1,6 @@
 ---
 title: "Didattica, Esercizi e Widget"
-description: "Esercizi di subnetting interattivi a 9 tipologie, guida didattica alle reti in 21 capitoli, glossario ampliato, widget per iOS 18/macOS 15, controlli e scorciatoie."
+description: "Esercizi di subnetting interattivi a 9 tipologie, guida didattica alle reti in 21 capitoli, glossario ampliato, widget, controlli del Centro di Controllo e scorciatoie."
 project: "netcalc"
 order: 9
 section: "Riferimento e Didattica"
@@ -45,7 +45,7 @@ A differenza dei comuni quiz a risposta multipla, NetCalc Pro non si limita a in
 
 ---
 
-## Widget Interattivi e Integrazione iOS 18 / macOS 15+
+## Widget interattivi e integrazione con il sistema
 
 NetCalc Pro sfrutta appieno le novità architetturali di WidgetKit e App Intents di Apple:
 
@@ -58,17 +58,14 @@ NetCalc Pro sfrutta appieno le novità architetturali di WidgetKit e App Intents
 - Prontuario tascabile sempre visibile con l'equivalenza tra prefissi `/n`, maschera decimale, wildcard e capacità host utili.
 
 ### 3. Controlli per il Centro di Controllo e Schermata di Blocco
-- Pulsanti e interruttori dedicati per avviare istantaneamente la Calcolatrice o aprire l'Esercizio del giorno dal Centro di Controllo su iOS 18 e macOS 15+.
+- Due controlli per aprire subito la Calcolatrice IP o l'Esercizio del giorno dal Centro di Controllo (iOS 18 o successivo, macOS 26 o successivo). I widget invece funzionano da iOS 17 e macOS 14.
 
-### 4. Deep Linking Universale (`netcalc://`)
-- L'applicazione risponde allo schema di URL nativo `netcalc://` per navigare direttamente nelle sezioni desiderate da script o scorciatoie:
-  - `netcalc://calculator`: apre la calcolatrice IPv4.
-  - `netcalc://subnetting`: apre il subnetting a dimensione fissa.
-  - `netcalc://vlsm`: apre il pianificatore VLSM.
-  - `netcalc://ipv6`: apre la calcolatrice IPv6.
-  - `netcalc://tools`: apre gli strumenti di rete (Summary, Range to CIDR, Wildcard, Compare).
-  - `netcalc://quiz`: apre gli esercizi interattivi di subnetting.
-  - `netcalc://projects`: apre l'elenco dei progetti di laboratorio.
+### 4. Link `netcalc://`
+- L'app risponde ai link `netcalc://`, usati da widget e controlli e utilizzabili anche da Comandi rapidi o script:
+  - `netcalc://calculator`: apre la calcolatrice;
+  - `netcalc://calculator/<modalità>`: apre la calcolatrice su una modalità precisa, tra `ipv4`, `subnetting`, `vlsm`, `ipv6`, `summary`, `range`, `wildcard` e `compare` (es. `netcalc://calculator/vlsm`);
+  - `netcalc://quiz`: apre gli esercizi di subnetting;
+  - `netcalc://quiz/daily`: apre direttamente l'esercizio del giorno.
 
 ---
 
@@ -111,9 +108,9 @@ L'applicazione include un manuale completo di networking, consultabile offline s
 
 ---
 
-## Glossario di Rete Integrato (55+ Definizioni)
+## Glossario di rete integrato (oltre 100 voci)
 
-Accessibile in qualsiasi momento dal menu _Aiuto → Glossario di Rete_, raccoglie oltre 55 voci con l'aggiunta di 15 nuovi concetti introdotti nella versione 1.1:
+Accessibile in qualsiasi momento dal menu _Aiuto → Glossario di Rete_, raccoglie più di cento voci, tra cui 15 nuovi concetti introdotti nella versione 1.1:
 
 - **Concetti Base**: _Indirizzo IP_, _CIDR_, _Subnet Mask_, _Wildcard Mask_, _Indirizzo di Rete_, _Broadcast_, _Host Utilizzabili_.
 - **Routing e Switching Avanzato**: _Default Gateway_, _Distanza Amministrativa_, _Metrica_, _Next-Hop_, _Trunk 802.1Q_, _Sub-interfaccia_, _SVI_, **_Spanning Tree Protocol (STP)_**, **_PortFast_**, **_BPDU Guard_**, **_EtherChannel (LACP/PAgP)_**, **_Port Security_**, **_HSRP (Hot Standby Router Protocol)_**, **_IP Helper-Address_**.
@@ -133,7 +130,6 @@ NetCalc Pro offre un controllo completo da tastiera per un flusso di lavoro effi
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Vista       | Mostra o nasconde l'ispettore laterale dei dettagli                |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copia la configurazione CLI Cisco del pannello in primo piano      |
 | <kbd>⌘</kbd> <kbd>?</kbd>              | Aiuto       | Apre la Guida Didattica alle Reti in 21 capitoli                   |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>?</kbd> | Aiuto       | Apre il Glossario di Rete                                          |
 | <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Apre la finestra Impostazioni                                      |
 | <kbd>⌘</kbd> <kbd>Z</kbd>              | Modifica    | Annulla l'ultima modifica                                          |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Modifica    | Ripristina l'ultima operazione annullata                           |

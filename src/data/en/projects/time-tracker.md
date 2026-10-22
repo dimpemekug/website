@@ -1,8 +1,9 @@
 ---
 title: "Time Tracker"
-description: "Mobile app to track time across projects and activities. Local backup, PDF reports, multi-language. No account. Free, with no ads or in-app purchases."
+description: "App for iPhone, iPad and Android to log the time you spend on projects and clients: focus timer, hourly rates and VAT, dashboard and PDF and CSV reports. No account. Free, with no ads or in-app purchases."
 pubDatetime: 2025-12-01T00:00:00+01:00
 draft: false
+tags: ["iOS", "Android", "mobile", "productivity", "privacy"]
 appStore: "https://apps.apple.com/app/time-tracker-momentum/id6755822750"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.timetracker"
 privacyDataTypes: "projects, activities, time intervals, and preferences"
@@ -13,19 +14,20 @@ privacyUrl: "/en/projects/time-tracker/privacy/"
 
 ## What is Time Tracker?
 
-Time Tracker is built for anyone who needs to know exactly where their time goes. Freelancers, students, and teams can start a timer in seconds, organize work by project and activity, and browse a full session history — all without creating an account.
+Time Tracker is for anyone who needs to know exactly where their time goes, and what it's worth. Freelancers, developers, consultants and students log hours in seconds, organize them by project and see billable hours and revenue, all without creating an account.
 
 ## Key Features
 
-- **Active tracking** — start and stop the timer with a single tap
-- **Project organization** — group activities however you like
-- **Full session history** — access every recorded session at any time
-- **PDF reports** — export summaries for clients or personal records
-- **Local backup** — data stays on your device, with export for peace of mind
-- **Dark mode** — light or dark interface, your choice
-- **Multi-language** — Italian, English, French, German, Portuguese, Spanish, Russian
+- **Activities in seconds** — with a start and end time or as a daily total, with titles you've used before offered as suggestions
+- **Projects** — color, notes, start and end dates, hourly rate and VAT; finished projects can be archived
+- **Focus timer** — a stopwatch anchored to the system clock, always visible in a bar inside the app and, outside it, in the Dynamic Island (iOS) or a notification with Pause, Resume and Stop (Android); when you stop it, the session becomes an activity
+- **Summary** — activities grouped by day, with search across title, notes and project
+- **Dashboard** — hours by week, month, year or a custom range, hours per project, billable share and revenue
+- **PDF and CSV reports** — to send to clients or open in a spreadsheet
+- **JSON backup** — export and import your data whenever you like, even between iPhone and Android; on iOS there's also optional iCloud sync
+- **Your way** — light, dark or system theme, a choice of accent color, seven languages
 - **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 
-Available on **iOS** and **Android**.
+Available on **iPhone** and **iPad** with iOS/iPadOS 18 or later and on **Android** 7.0 or later.

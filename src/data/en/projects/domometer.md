@@ -1,6 +1,6 @@
 ---
 title: "DomoMeter"
-description: "Mobile app to monitor home utility consumption (electricity, gas, water) in a single dashboard. Data stored locally, no account required. Free, with no ads or in-app purchases."
+description: "App for iPhone, iPad and Android to keep track of electricity, gas and water use from your meter readings, with F1/F2/F3 bands, charts and yearly limits. Data on your device, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false
 tags: ["iOS", "Android", "mobile", "utility", "privacy"]
@@ -14,19 +14,21 @@ privacyUrl: "/en/projects/domometer/privacy/"
 
 ## What is DomoMeter?
 
-DomoMeter solves a concrete problem: keeping track of home utility consumption means dealing with paper bills, scattered notes, or hard-to-update spreadsheets. The app consolidates electricity, gas, and water into a single interface — designed for anyone who wants to understand their usage without the hassle.
+DomoMeter comes from a real problem: keeping track of household utility use means juggling paper bills, scraps of paper or spreadsheets that are hard to keep up to date. The app brings electricity, gas and water together on one screen: you record your meter readings whenever you like and immediately see how much you use, month by month and year by year.
 
 ## Key Features
 
-- **Unified dashboard** — electricity, gas, and water in one place
-- **Monthly statistics** — consumption trends over time with charts
-- **Spending forecasts** — proactive alerts before your bill arrives
-- **Monthly reports** — exportable summary to keep everything in check
-- **Two interface styles** — modern iOS design and retro monospace aesthetic
-- **Dark mode** — supported in both styles
-- **Offline-first** — works without a connection, data never leaves your device
+- **Meter readings** — for electricity, gas and water, with an editable date so you can enter past readings too
+- **F1, F2 and F3 bands** — for electricity, alongside the single reading
+- **Usage split across months** — even if you read the meter on irregular dates, monthly totals stay comparable
+- **Charts and comparisons** — monthly and yearly usage, comparison with the previous month and past years, a map of reading days
+- **Yearly limits** — an expected usage for each utility, with the share already used
+- **Several homes** — separate profiles for home, office or holiday home
+- **File backups** — export your data to JSON and import it again when needed, even when moving from iPhone to Android and back
+- **iOS only** — tariffs with bill estimates, tariff history and budget; reading reminders; notes and meter replacement; CSV export and import; optional iCloud sync
+- **Privacy** — no account, no tracking; on Android the app doesn't connect to the Internet
 - **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 
-Available on **iOS** and **Android**.
+Available on **iPhone** and **iPad** with iOS/iPadOS 18 or later and on **Android** 8.0 or later, in seven languages.

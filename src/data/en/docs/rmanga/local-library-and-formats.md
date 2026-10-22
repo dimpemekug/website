@@ -1,66 +1,65 @@
 ---
 title: "Local Library and Supported Formats"
-description: "How to import manga, ebooks, and video media via the Apple Files app, folder hierarchies, and support for CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, and MP4."
+description: "How to import manga, ebooks and videos with the Files app, how to organize folders and which formats are supported: CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, MP4 and more."
 project: "rmanga"
 order: 2
 section: "Library"
 ---
 
-## Accessing Files via Apple's Files App
+## The Folder in the Files App
 
-rManga exposes its *Documents* sandbox folder directly inside iOS and iPadOS. Access it inside:
+rManga's *Documents* folder is visible in the **Files** app, under:
 
 ```text
 Files › On My iPhone (or On My iPad) › rManga
 ```
 
-You can import media by dropping files from Mac over AirDrop or USB cable, downloading via Safari, or using the standard iOS Share Sheet from other apps.
+You can copy files there from your Mac (via cable or AirDrop), download them with Safari or save them from other apps with the share sheet.
 
 ---
 
-## Supported Formats by Media Category
+## Supported Formats
 
-| Media Category | Supported Formats | Engine |
+| Category | Formats | How they're read |
 | :--- | :--- | :--- |
-| **Manga & Comics** | `.cbz`, `.zip`, `.cbr`, `.rar` (including solid archives), image folders | `ArchivePageProvider`, `RARSolidReader`, `FolderPageProvider` |
-| **Ebooks & Text** | `.epub` (EPUB 2 / 3), `.pdf`, `.fb2`, `.docx`, `.odt`, `.rtf`, `.txt`, `.md` | **Readium** (`EbookReaderView`), `TextBookFormats`, `PDFKit` |
-| **Anime & Video** | `.mp4`, `.m4v`, `.mov`, `.mkv`, `.webm`, `.avi`, `.ts`, HLS `.m3u8` streams | **AVPlayer** (Apple native) & **libmpv** (MoltenVK Metal) |
+| **Manga and comics** | `.cbz`, `.zip`, `.cbr`, `.rar` (solid too), image folders | `ArchivePageProvider`, `RARSolidReader`, `FolderPageProvider` |
+| **Ebooks and documents** | `.epub` (EPUB 2 and 3), `.fb2`, `.docx`, `.odt`, `.rtf`, `.html`, `.txt`, `.md` | **Readium** text reader (`EbookReaderView`); formats other than EPUB are converted to EPUB first |
+| **PDFs and illustrated EPUBs** | `.pdf`, image-based `.epub` | Comic reader (`PDFPageProvider`, `EPUBPageProvider`) |
+| **Video** | `.mp4`, `.m4v`, `.mov`, `.mkv`, `.webm`, `.avi`, `.ts`, HLS `.m3u8` streams | Apple's **AVPlayer** and **libmpv** (MoltenVK on Metal) |
 
 ---
 
-## Library Folder Organization
+## Organizing Folders
 
-rManga automatically parses file layouts following natural naming conventions:
+rManga works out title, series and volumes from the folder structure:
 
-### 1. Single Standalone Work (One-Shot, Book, or Movie)
-Placing a file directly in the root of the `rManga` directory creates a single self-contained title:
+### 1. Single Work (One-Shot, Book or Film)
+A file placed directly in the `rManga` folder becomes a series with a single chapter:
 ```text
 rManga/
-├── Akira_Volume1.cbz      ← Manga volume
-├── 1984_GeorgeOrwell.epub ← Complete text ebook
-└── Totoro.mkv             ← Standalone video file
+├── Akira_Volume1.cbz      ← Manga series with 1 volume
+├── 1984_GeorgeOrwell.epub ← Complete book
+└── MyNeighborTotoro.mkv   ← Film or single episode
 ```
 
-### 2. Multi-Chapter Series
-Group separate chapters or volumes inside a named folder; the folder name becomes the series title and files become ordered chapters:
+### 2. Series with Several Volumes or Chapters
+If you group files in a subfolder, the folder name becomes the series title and each file a chapter or episode:
 ```text
 rManga/
 ├── Berserk/
 │   ├── Chapter 001.cbz
-│   ├── Chapter 002.cbz
-│   └── cover.jpg            ← Custom series cover artwork
-├── Foundation_Trilogy/
-│   ├── 01_Foundation.epub
-│   ├── 02_FoundationAndEmpire.epub
-│   └── 03_SecondFoundation.epub
+│   └── Chapter 002.cbz
+├── TheDivineComedy/
+│   ├── 01_Inferno.epub
+│   ├── 02_Purgatorio.epub
+│   └── 03_Paradiso.epub
 └── Frieren/
     ├── Episode 01.mp4
-    ├── Episode 02.mkv
-    └── subtitles_ep2.ass    ← Stylized external subtitle file
+    └── Episode 02.mkv
 ```
 
-### 3. Chapter as Image Folders
-Uncompressed image folders are supported directly:
+### 3. Chapter as an Image Folder
+If you have already-extracted images (e.g. JPEG or PNG scans):
 ```text
 rManga/
 └── OnePiece/
@@ -72,6 +71,7 @@ rManga/
 
 ---
 
-## Metadata Support (ComicInfo.xml & EPUB)
-- **Comics**: if a CBZ or CBR archive includes standard `ComicInfo.xml` metadata, rManga extracts official titles, writers, illustrators, plot summaries, and genres.
-- **Ebooks**: for EPUB files, book metadata, chapter hierarchies, and cover art are extracted directly from the package manifest (`content.opf`).
+## Automatic Metadata (ComicInfo.xml and EPUB)
+- **Comics**: if a CBZ or CBR archive contains the standard `ComicInfo.xml` file, rManga reads the series title, author, synopsis, genres, chapter title and number and reading direction from it. Without metadata, file names are used.
+- **Ebooks**: for EPUBs, title, author, description, subjects and reading direction come from the book's metadata, and the cover is the one the book declares (or the first page if there isn't one). An EPUB on its own names the series; inside a folder it's a volume.
+- **DRM-protected EPUBs** (Adobe, Apple, Readium LCP) can't be opened: rManga tells you so with a message.

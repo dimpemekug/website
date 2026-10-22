@@ -1,39 +1,52 @@
 ---
-title: "Discovery and Watchlist Management"
-description: "How to browse TV shows, organize your library, log watched episodes, and manage seasons in ShowNest."
+title: "Discovery and Watchlist"
+description: "How to search for TV shows, organize your library, mark episodes as watched and manage seasons in ShowNest."
 project: "shownest"
 order: 2
 section: "Features"
 ---
 
-## Exploring and Searching New Shows
+## Exploring and Searching for New Shows
 
-The **Explore** tab in ShowNest makes finding your next series engaging and effortless:
-- **Trending This Week**: worldwide popular releases currently generating discussion.
-- **Airing Today**: episodes broadcast across major global networks within the last 24 hours.
-- **Top Rated**: critically acclaimed television series of all time.
-- **Instant Search**: search by title in English or localized names to review summaries, season counts, and trailers.
-
----
-
-## Watchlist Organization
-
-Adding a show to your watchlist is as simple as tapping the bookmark or `+` button. ShowNest automatically organizes your library into three dynamic stages:
-
-### 1. Up Next
-Displays active series cards with a clear badge indicating the next unviewed episode (e.g. *S02E04*). A single tap marks the episode as watched.
-
-### 2. Upcoming
-Shows renewed series with future release schedules, featuring a clear countdown of days remaining until premiere.
-
-### 3. Completed Archive
-When you conclude the final episode of the final available season, the series transitions into the completed archive and updates your overall viewing achievements.
+The **Explore** tab in ShowNest helps you find new titles through several sections:
+- **Trending**: the most followed shows right now.
+- **Popular** and **Top Rated**: the titles TMDB's audience loves most.
+- **Airing Today**: shows with an episode coming out today.
+- **Picks for you**: shows similar to the last one you added ("Because you follow…") and more from the genre you follow most ("More in…").
+- **Search**: type a title to search the whole TMDB catalog and open the show page, with synopsis, seasons, trailer and similar titles.
 
 ---
 
-## Advanced Episode Management
+## The Watchlist
 
-Inside any series page:
-- **Mark Entire Season Watched**: quickly mark an entire season as watched with one tap, perfect for importing your existing viewing history.
-- **Episode Overviews**: tap an episode to inspect its title, synopsis, runtime, and original broadcast date.
-- **Undo Watched Status**: easily toggle any episode back to unviewed if marked by accident.
+Adding a show takes one tap from its page. The **Watchlist** shows:
+
+### Up Next
+For every show in progress, the next unwatched episode with its code (e.g. *S02E04*) and title. One tap marks it as watched and, if you made a mistake, you can undo the last episode you marked.
+
+### Coming Up
+Shows you're caught up on display how many days are left until the next announced episode.
+
+### Sorting
+You can sort the Watchlist by recently watched, recently added, newest episode, alphabetical order, total episodes or episodes left. Ended shows you've finished can be hidden without losing them.
+
+---
+
+## My Shows
+
+The **My Shows** tab groups your library by what you've done with each show:
+- **Coming Up**: shows with new episodes announced.
+- **In progress**: shows you've started but not finished.
+- **Not started**: shows you've added but haven't watched yet.
+- **Completed**: shows you've watched in full.
+- **Archive**: archived shows leave the lists but keep their history and still count in your statistics.
+
+---
+
+## Marking Episodes
+
+On a show's page you can:
+- **Mark a single episode** or a **whole season** as watched, or use **Mark All Watched** for the entire show (handy for shows you watched in the past).
+- **Pick the date**: mark episodes as watched today or on the day they aired, so your statistics stay accurate.
+- **Unmark a season** or an episode marked by mistake.
+- **Open an episode's details**: title, synopsis, runtime and air date.

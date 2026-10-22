@@ -1,38 +1,44 @@
 ---
-title: "Backup, Sync, and Exports"
-description: "Universal ZIP archives with full-resolution images, CloudKit multi-tier sync on iOS, and PDF or CSV exports in Horologe."
+title: "Backup, Sync and Export"
+description: "ZIP archive with photos, safety copy, CloudKit sync on iOS, PDF sheets, insurance inventory and CSV export in Horologe."
 project: "horologe"
 order: 5
 section: "Data & Sync"
 ---
 
-## Complete ZIP Backup Format
+## The ZIP Backup
 
-Unlike basic cataloging utilities that export only text logs and discard photos, Horologe produces a self-contained, compressed **`.zip` archive**:
+Many cataloging apps export plain text only and lose your images. Horologe instead creates a **complete `.zip` archive**:
 
 ```text
-Backup_Horologe_2026-10-18.zip
-├── manifest.json            ← Full database dump (watches, services, wrist time, accuracy)
-└── watch_images/            ← High-resolution photo collection
-    ├── watch_1_cover.jpg
-    ├── watch_1_image_1.jpg
-    └── ...
+Backup_Horologe.zip
+├── manifest.json            ← watches, services, wrist days, accuracy
+├── watch_1_cover.jpg        ← cover photo
+├── watch_1_gallery_1.jpg    ← gallery photos
+├── watch_1_att_1.pdf        ← attachments
+├── watch_2_cover.jpg
+└── ...
 ```
 
-This archive format is 100% interoperable between iOS and Android: an archive generated on iPhone restores cleanly on Android, and vice versa.
+The format is the same on iOS and Android: export the archive from an iPhone and you can import it on Android (and vice versa), with every photo and detail in place.
+
+### Importing a Backup
+Importing **replaces** your current collection with the backup's. On iOS, before doing so, Horologe automatically saves a **safety copy** of the current collection: if you change your mind, **Restore previous collection** takes you back. The same copy is made before a reset or loading sample data.
 
 ---
 
-## iCloud Synchronization (iOS Exclusive)
+## iCloud Sync (iOS Only)
 
-On Apple devices, Horologe incorporates advanced **CloudKit** sync architecture:
-- **Relational Data**: synchronized in the private `primary-v2` record.
-- **Deduplicated Photos**: each image is stored as a `file-<sha256>` record. If an image already exists on iCloud, redundant re-uploading is skipped.
-- **Throttling Resistance**: during large initial sync batches, `withServerRetry` respects `CKErrorRetryAfterKey` to prevent HTTP 429 rate limit errors.
+On iPhone and iPad Horologe can sync your collection through **CloudKit**, in your private database:
+- **Data**: a compact manifest in the `primary-v2` record.
+- **Photos and attachments without duplicates**: each file is a `file-<sha256>` record identified by its content; if it's already in iCloud it isn't uploaded again.
+- **Large collections**: requests are spread over time and, if CloudKit asks to slow down (HTTP 429), the app waits and retries instead of giving up.
+- **Who wins**: if the collection changed on several devices, the most recent change prevails.
 
 ---
 
-## PDF Spec Sheets and CSV Exports
+## PDF and CSV
 
-- **A4 Watch Spec Sheet**: export a polished PDF document displaying the watch's hero photo, technical specifications, service history, and estimated valuation for insurance or consignment.
-- **CSV Data Dump**: export tabular data to open your collection in Excel, Numbers, or Google Sheets.
+- **Watch PDF sheet**: a document with photos, technical details, service history and accuracy measurements, to share or include with a sale.
+- **Insurance PDF** (iOS): an A4 inventory of the collection with a summary (number of pieces, purchase value per currency, full sets), a table of every watch and a page for each one with photos, reference, serial number, purchase details and papers.
+- **CSV**: the whole collection as a table, to open in Excel, Numbers or Google Sheets.

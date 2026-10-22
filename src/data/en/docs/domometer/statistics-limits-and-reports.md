@@ -1,33 +1,43 @@
 ---
-title: "Statistics, Limits, and Reports"
-description: "Monthly consumption analysis, trend charts, budget limit alerts, and periodic report generation in DomoMeter."
+title: "Statistics, Limits and Costs"
+description: "Monthly and yearly charts, year-over-year comparison, yearly limits per utility, bill estimate and budget in DomoMeter."
 project: "domometer"
 order: 4
 section: "Features"
 ---
 
-## Dashboard and Usage Trends
+## Home and Statistics
 
-DomoMeter's home dashboard offers immediate clarity on utility performance:
+DomoMeter's main screen shows the status of every utility in the active profile:
 
-- **Estimated Current Usage**: projected run rate based on the latest logged intervals.
-- **Month-over-Month Comparisons**: view consumption changes relative to the previous month or the corresponding month last year.
-- **Seasonal Trend Charts**: visualize changes across seasons (such as winter heating demands or summer air-conditioning loads).
-
----
-
-## Annual Budgets and Proactive Alerts
-
-To avoid surprises when utility invoices arrive, configure custom annual ceilings for each utility:
-
-1. **Set Target Limits**: define a maximum annual quota in units (e.g., 2,700 kWh/year or 800 Smc/year) or estimated currency amounts.
-2. **Pacing Indicator**: a visual progress gauge illustrates actual consumption compared to the expected pro-quota allocation for the current day of the year.
-3. **Threshold Alerts**: if your consumption rate exceeds expected budget pacing, DomoMeter highlights the discrepancy before the billing cycle closes.
+- **Usage for the period**: how much you've used in the current month (on iOS you can pick a bimonthly, six-monthly or yearly period) and the forecast for the end of the period.
+- **Comparisons**: this month's usage compared with the previous month and with the same month in past years.
+- **Charts**: monthly and yearly usage for each utility, to see seasonal trends (e.g. gas in winter or electricity in summer with air conditioning).
+- **Reading map**: a calendar highlighting the days you recorded readings.
 
 ---
 
-## Periodic Reports Export
+## Yearly Limits
 
-Generate detailed summaries of your historical usage to keep or share:
-- **Historical Log**: lists all readings with dates, computed deltas, and notes.
-- **Device-Local Generation**: reports are rendered on-device, ready to be saved to Files, emailed, or printed.
+For each utility you can set an **expected yearly usage**, a reference limit (e.g. 2,700 kWh a year for electricity or 800 Smc for gas):
+
+1. **Setup**: enter the limit in the utility's settings, in the unit you prefer.
+2. **Share used**: DomoMeter shows how much of the limit you've already used; the charts also show the matching monthly limit.
+3. **Alerts in the summary**: when you get close to or go past the threshold, the summary tells you.
+
+---
+
+## Tariffs, Bills and Budget (iOS)
+
+On iOS you can estimate spending too:
+- **Tariff per utility**: price per unit and monthly standing charge, in the currency you prefer. If you leave the tariff empty, the app shows usage only.
+- **Billing period**: monthly, bimonthly or six-monthly.
+- **Tariff history**: each tariff applies from the month it took effect, so changing supplier doesn't rewrite what past months cost.
+- **Budget**: set a spending cap and check the share already used; the summary warns you when you get close to the budget or exceed it.
+- **Estimated CO₂**: if you enter an emission factor per unit, the app shows a rough estimate of your emissions.
+
+---
+
+## CSV Export (iOS)
+
+**Export CSV** gives you every reading in a spreadsheet-ready file, with home, utility, date, value, band, unit and note. You can also **import** readings from an external CSV: the app shows a summary of valid and skipped rows before adding them.

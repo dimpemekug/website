@@ -1,6 +1,6 @@
 ---
 title: "Introduction to DomoMeter"
-description: "Overview of DomoMeter: track home electricity, gas, and water meters on iOS and Android with prorated usage calculations, time-bands, and strict privacy."
+description: "Overview of DomoMeter: tracking household electricity, gas and water use on iOS and Android, with usage split across months, time bands and data that stays on your device."
 project: "domometer"
 order: 1
 section: "Getting Started"
@@ -8,30 +8,35 @@ section: "Getting Started"
 
 ## What is DomoMeter
 
-**DomoMeter** is a native mobile application for **iOS** and **Android** engineered to monitor and understand household **electricity, gas, and water** consumption through manual meter readings.
+**DomoMeter** is a native app for **iPhone and iPad** and for **Android** that helps you keep an eye on your household **electricity, gas and water** use, starting from meter readings you enter by hand.
 
-Designed to eliminate scattered paper utility bills, notebooks, and complicated spreadsheets, DomoMeter aggregates all your home meters into an intuitive dashboard with clear usage trends, period comparisons, and proactive budget projections.
-
----
-
-## Core Principles
-
-### 1. Zero-Account Privacy & Offline-First Design
-- **No registration required**: no account creation, emails, or passwords.
-- **Your data stays on your device**: meter entries and history stay exclusively in local secure storage.
-- **Completely free**: zero advertisements, zero analytics tracking, and no in-app purchases or subscriptions.
-
-### 2. Time-Proportional Prorated Consumption Model
-Domestic utility meters present cumulative counters. When you record two readings at different dates, DomoMeter determines the net difference (*delta*). If your readings span across calendar month boundaries, the calculation engine divides consumption **proportionally according to the exact number of days spent** in each month. This ensures month-over-month graphs remain meaningful even when readings are recorded on irregular days.
-
-### 3. Italian & EU Electricity Time Bands (F1, F2, F3)
-For electric meters, DomoMeter supports both standard flat rates and the three European peak/off-peak pricing bands (F1 peak hours, F2 mid-peak hours, F3 off-peak hours and weekends), helping you plan appliance usage effectively.
+Instead of scattered bills, scraps of paper and mental arithmetic, DomoMeter brings every utility together on one screen, with clear statistics, monthly and yearly charts and comparisons with previous years.
 
 ---
 
-## Quick Workflow
+## Principles
 
-1. **Enable Utilities**: activate the utilities you wish to track (Electricity, Gas, Water) and select your preferred measurement units (kWh, Smc, Litres, or Cubic Meters).
-2. **Add Initial Reading**: record your meter's starting reading today.
-3. **Log Periodic Readings**: at month-end or whenever you inspect your utility box, enter the new cumulative value. DomoMeter immediately updates calculations and charts.
-4. **Monitor Budgets**: set yearly caps and check alerts to ensure consumption remains within target limits.
+### 1. Privacy and Offline Use
+- **No account**: no sign-up, email or password.
+- **Your data stays yours**: readings and history live only on your device (on iOS you can turn on sync with your private iCloud).
+- **Free**: no ads, no tracking, no subscriptions or in-app purchases.
+
+### 2. Usage Split Across Months
+Meters show running totals. When you enter two readings, DomoMeter works out usage as the difference between them. If the readings straddle the end of a month, the usage is **split in proportion to the days elapsed** in each month, so monthly comparisons stay accurate even if you read the meter on irregular dates.
+
+### 3. Electricity Time Bands (F1, F2, F3)
+For electricity you can record a single reading or the values of the three Italian time bands (F1, F2 and F3), useful to see when you use the most energy under your tariff.
+
+### 4. Several Homes
+You can create several **housing profiles** (home, office, holiday home), each with its own utilities and readings.
+
+---
+
+## How to Use It
+
+1. **Set up your utilities**: choose which utilities to track (electricity, gas, water) and your preferred units (kWh, Smc, liters or cubic meters). Optionally, set a yearly limit for each one.
+2. **Enter the first reading**: record the meter's current value.
+3. **Add later readings**: whenever you like, for example at the end of the month or when a bill arrives. DomoMeter immediately works out the usage for the period.
+4. **Check charts and limits**: see how much of your yearly limit you've already used and compare the current month with the previous one and with past years.
+
+To try the app you can load **sample data** from Settings.

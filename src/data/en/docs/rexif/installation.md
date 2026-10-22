@@ -1,6 +1,6 @@
 ---
 title: "Installation and Requirements"
-description: "System requirements, Mac App Store download, macOS sandbox permissions, and Apple Photos library integration."
+description: "System requirements, Photos library integration (PhotoKit), sandbox, session and settings in rExif."
 project: "rexif"
 order: 2
 section: "Getting Started"
@@ -8,38 +8,40 @@ section: "Getting Started"
 
 ## System Requirements
 
-rExif is engineered using native macOS technologies to maximize performance on modern Mac hardware.
+- **Operating system**: macOS 15 Sequoia or later (including macOS 26 Tahoe).
+- **Processor**: universal binary for Macs with Apple Silicon and 64-bit Intel processors.
 
-- **Operating System**: macOS 15.0 Sequoia or later (including macOS 26 Tahoe).
-- **Hardware Architecture**:
-  - Mac computers with Apple Silicon (M1, M2, M3, M4, and Pro/Max/Ultra tiers).
-  - Mac computers with 64-bit Intel processors (Universal binary).
-- **RAM**: 4 GB minimum (8 GB or more recommended for sessions handling over 10,000 photos simultaneously).
-- **Disk Space**: Approximately 45 MB for application installation.
+## Download
 
-## Download and Setup
+The app is available on the **Mac App Store**:
+- bundle ID `com.dimpemekug.rexif`;
+- Photography category;
+- free: no ads, accounts, subscriptions or in-app purchases.
 
-rExif is officially and freely distributed via the **Mac App Store**:
+## Photos Library Integration
 
-1. Open the **App Store** on your Mac.
-2. Search for `rExif` or visit the [rExif Mac App Store page](https://apps.apple.com/it/app/rexif/id6820436697?mt=12).
-3. Click **Get** / **Install**.
-4. The application is immediately ready in your `/Applications` directory and Launchpad.
+rExif works with the macOS Photos app in two ways, through Apple's **PhotoKit** framework.
 
-> [!NOTE]
-> rExif is completely free of charge: it contains no third-party ads, requires no account registration or recurring subscriptions, and includes zero in-app purchases.
+### 1. Add from Photos Library (`⌥⌘O`)
+- Opens the macOS photo picker.
+- For the chosen items you can edit the **date taken** and the **GPS location**.
+- When you press **Save** (`⌘S`), macOS asks for a single confirmation to allow editing the items directly in the Photos library.
+- *Note*: PhotoKit only allows editing date and location; the original file stored in the library doesn't change.
 
-## Sandbox and Privacy Model
+### 2. Export Originals from Photos (`⇧⌘E`)
+- To also edit author, copyright, keywords and description, or to rename files, use this feature.
+- The originals are saved to a folder of your choice on disk.
+- The files are then added to rExif as regular files, with every EXIF, IPTC and XMP field editable.
 
-rExif strictly adheres to Apple's macOS App Sandbox security model:
+## Sandbox and Session
 
-- **File Access**: When you drag files or directories into the window, macOS grants rExif read and write access scoped exclusively to those selected items for the active session.
-- **Network Access**: The application does not connect to any proprietary servers. Outbound connections are handled exclusively by native Apple system frameworks (MapKit and CoreLocation) when you explicitly perform address searches or reverse geocoding lookups.
+- **File access**: rExif runs in the sandbox and only accesses the files and folders you open, by dragging, with **Open With** from the Finder or with the **Add Photos and Videos…** panel (`⌘O`). To create an `.xmp` file next to a file you added on its own, rExif asks for access to its folder when saving.
+- **Session**: on quit, file paths and Photos item identifiers are remembered as secure bookmarks (`SessionStore`); on the next launch rExif reopens the previous session. You can turn this off in Settings.
 
-## Apple Photos Integration
+## Settings (`⌘,`)
 
-If your primary photo library is managed in **Apple Photos**:
-
-- **System Media Browser**: Import pictures via the native macOS photo picker sheet.
-- **Direct Edits**: rExif supports modifying dates and GPS data on items within your Photos library with seamless background syncing.
-- **Exporting Originals**: Alternatively, drag or export unmodified originals from Photos to a local Finder folder, batch-process them in rExif, and re-import them with consolidated metadata.
+In Settings you can choose:
+- **Language**: *System*, *Italian* or *English* (applied when the app restarts).
+- **Appearance**: *System*, *Light* or *Dark*.
+- **Thumbnails**: the size of thumbnails in the table.
+- **Session**: whether to reopen the previous session's items at launch.

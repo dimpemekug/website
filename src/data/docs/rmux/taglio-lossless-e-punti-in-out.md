@@ -1,35 +1,38 @@
 ---
-title: "Taglio Lossless e Punti In/Out"
-description: "Come tagliare video all'istante senza ricodifica con punti In e Out, precisione sui keyframe e direct stream copy in rMux."
+title: "Taglio senza perdita e punti In/Out"
+description: "Come tagliare video senza ricodifica con i punti In e Out, i fotogrammi chiave sulla timeline e i segmenti multipli in rMux."
 project: "rmux"
 order: 2
 section: "Editing"
 ---
 
-## Il Concetto di Taglio Lossless (Senza Ricodifica)
+## Il taglio senza ricodifica
 
-I formati video compressi moderni (come MP4, MKV o MOV codificati in H.264 o HEVC) sono composti da fotogrammi chiave indipendenti (*Keyframe* o *I-Frame*) e fotogrammi intermedi che memorizzano solo le differenze tra un quadro e il successivo (*P-Frame* e *B-Frame*).
+I formati video compressi (MP4, MKV o MOV in H.264 o HEVC) sono fatti di fotogrammi chiave indipendenti (*keyframe* o *I-frame*) e di fotogrammi intermedi che memorizzano solo le differenze rispetto ai precedenti (*P-frame* e *B-frame*).
 
-Quando esegui un'operazione di esportazione con modalità **Lossless**:
-- **Zero Decadimento**: i flussi audio e video vengono estratti e reincapsulati nel nuovo contenitore senza decomprimere e ricomprimere le immagini.
-- **Velocità Istantanea**: un filmato 4K da 2 ore può essere ritagliato in pochi secondi, limitato unicamente dalla velocità di lettura/scrittura dell'SSD del Mac.
-- **Consumo Risorse Nullo**: la CPU e la GPU non compiono alcuno sforzo computazionale pesante.
-
----
-
-## Impostazione dei Punti In e Out
-
-La barra temporale di rMux permette un controllo al millisecondo:
-
-1. **Riproduci o Scorri la Timeline**: usa la barra spaziatrice per avviare/fermare la riproduzione, oppure trascina la testina temporale.
-2. **Imposta Punto In**: premi il tasto <kbd>I</kbd> nel punto esatto in cui desideri che il video inizi.
-3. **Imposta Punto Out**: premi il tasto <kbd>O</kbd> nel punto in cui il video deve terminare.
-4. **Navigazione tra Fotogrammi**: usa i tasti freccia <kbd>←</kbd> e <kbd>→</kbd> per muoverti avanti o indietro di un singolo fotogramma.
+Quando la traccia video è impostata su **Copy**:
+- **Nessuna perdita**: i flussi audio e video vengono copiati nel nuovo contenitore senza decomprimere e ricomprimere le immagini.
+- **Velocità**: anche un filmato lungo si taglia in pochi secondi; il limite è la velocità del disco.
+- **Nessun carico**: CPU e GPU restano praticamente a riposo.
 
 ---
 
-## Allineamento ai Keyframe
+## Impostare i punti In e Out
 
-Nel taglio puramente lossless, l'inizio del flusso deve coincidere con un *Keyframe* per evitare artefatti o schermate nere nei primi secondi di riproduzione:
-- rMux evidenzia visivamente sulla timeline la posizione dei keyframe reali rilevati da `ffprobe`.
-- Se il punto In selezionato cade su un fotogramma intermedio, rMux offre l'opzione di agganciarsi al keyframe più vicino (*Smart Keyframe Snap*) oppure di attivare la transcodifica secolare solo per i primi fotogrammi.
+1. **Scorri la timeline**: avvia la riproduzione o trascina la testina nel punto desiderato.
+2. **Punto In**: premi <kbd>⌘</kbd> <kbd>I</kbd> (o il pulsante sotto la timeline) dove vuoi che il video inizi.
+3. **Punto Out**: premi <kbd>⌘</kbd> <kbd>O</kbd> dove il video deve finire. Puoi anche trascinare le maniglie sulla timeline.
+4. **Anteprima**: riproduci solo la selezione per controllare il taglio.
+5. **Cancella**: <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd> rimuove i contrassegni.
+
+### Più segmenti
+Con **Aggiungi segmento** fissi la selezione corrente e puoi contrassegnarne un'altra, anche non contigua. All'esportazione tutti i segmenti vengono uniti in un unico file. Con più segmenti l'esportazione resta senza perdita solo se tutte le tracce incluse sono su Copy e non sono coinvolti sottotitoli; altrimenti rMux ricodifica e te lo segnala.
+
+---
+
+## Fotogrammi chiave
+
+Con la copia diretta, un taglio pulito deve iniziare su un fotogramma chiave, altrimenti i primi istanti possono mostrare artefatti:
+- rMux segna sulla timeline la posizione dei **keyframe reali**, rilevati con `ffprobe`.
+- Con <kbd>⌥</kbd> <kbd>←</kbd> e <kbd>⌥</kbd> <kbd>→</kbd> salti al keyframe precedente o successivo, per piazzare i punti di taglio esattamente su un fotogramma chiave.
+- Se ti serve un taglio preciso al fotogramma in un punto qualsiasi, imposta la traccia video su **Transcode**: il video verrà ricodificato.

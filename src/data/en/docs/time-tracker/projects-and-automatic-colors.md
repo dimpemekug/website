@@ -1,30 +1,34 @@
 ---
-title: "Projects and Automatic Colors"
-description: "Project management, billing rates, tax tiers, and the deterministic mathematical FNV-1a color derivation algorithm in Time Tracker."
+title: "Projects and Colors"
+description: "Managing projects, hourly rates, VAT, archiving and the automatic project colors on Android in Time Tracker."
 project: "time-tracker"
 order: 3
 section: "Projects"
 ---
 
-## Managing Client Projects
+## Creating and Setting Up a Project
 
-The **Projects** tab organizes your operational domains:
+The **Projects** section is the organizational core of Time Tracker:
 
-- **Title & Description**: clear labeling (e.g. *Mobile App Redesign*, *Cloud Infrastructure Audit*, *Master Thesis*).
-- **Hourly Billing Rate**: set your contracted hourly rate (e.g. $75.00/h). Non-billable internal projects can be set to zero or toggled off.
-- **VAT / Tax Tier**: specify local sales tax or VAT percentages (e.g. 20%) for automated tax estimation.
-- **Archiving**: when milestones conclude, archive the project to remove it from quick logging selectors while preserving full historical analytics.
+- **Name and notes**: a clear title (e.g. *E-commerce redesign*, *Cloud consulting*, *Master's thesis*) and optional notes.
+- **Period**: optional start and end dates.
+- **Billing**: turn it on to set the **hourly rate** (e.g. €65 per hour) and the **VAT rate** (e.g. 22%). For a personal or unpaid project, leave it off: its hours won't count toward the billable share.
+- **Archiving**: a finished project can be archived; it no longer appears among the projects offered for new activities, but its history remains for statistics and exports.
+- **Deleting**: deleting a project also deletes its hours.
 
 ---
 
-## The Color Engine: Zero Manual Color Picking
+## A Project's Color
 
-Selecting colors from endless palette grids is tedious and frequently results in poor contrast or duplicate hues.
+The color lets you recognize a project at a glance in lists and charts.
 
-In Time Tracker, **project colors are derived algorithmically from their name**:
+- **On iOS** you pick it from a grid of system colors in the project editor.
+- **On Android** there's nothing to pick: **the color is worked out from the name**.
 
-### How the Algorithm Works
-1. **Deterministic FNV-1a Hashing**: the project title passes through a custom FNV-1a hash function (avoiding platform-dependent `hashCode()`), guaranteeing the same title outputs the exact same color on iOS, Android, and across backups.
-2. **Fixed CIELAB Perceptual Lightness & Chroma**: perceptual lightness is anchored to $L^* = 62$ and chroma to $C^* = 78$. No project color ever appears too washed out or overly intense in comparison to its neighbors.
-3. **Golden Angle Spacing ($137.5^\circ$)**: if two projects generate hues with an angular distance of less than $40^\circ$, the algorithm rotates by the golden section angle until it lands on the widest unallocated color space. This prevents visual collisions between projects.
-4. **Frozen on First Save**: as you type a title, the color badge previews the calculated hue in real time; once saved, the color is locked to the record so fixing a typo later does not alter historical charts.
+### How It Works on Android
+1. **FNV-1a hash**: the name goes through a purpose-written FNV-1a function (not `hashCode()`), so the same name always gives the same hue.
+2. **Fixed lightness and chroma in CIELAB**: perceptual lightness is fixed at L\* 62 and chroma at 78, so no project looks paler or brighter than its neighbors in the charts.
+3. **Golden angle (137.5°)**: if the hue suggested by the name is less than 40° from one already in use, it's rotated by the golden angle until it finds a free spot. With many projects the threshold shrinks on its own as far as the color wheel allows.
+4. **Color fixed on first save**: while you type the name, the dot next to the field changes color letter by letter; once saved, the color stays. Fixing a typo in the name won't change how past charts look.
+
+Existing projects, including those imported from a backup, keep the color they have.

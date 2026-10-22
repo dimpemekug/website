@@ -1,40 +1,46 @@
 ---
-title: "Pulizia e Copie Sanificate"
-description: "Rimozione sicura di coordinate GPS e dati identificativi ed esportazione di copie sanificate per la condivisione."
+title: "Pulizia e copie senza dati personali"
+description: "Rimozione della posizione GPS e dei dati personali ed esportazione di copie da condividere in rExif."
 project: "rexif"
 order: 7
 section: "Privacy & Sicurezza"
 ---
 
-## Tutela della Privacy Fotografica
+## Perché ripulire le foto
 
-Le foto digitali moderne incorporano dati che possono rivelare informazioni sensibili:
-- Coordinate GPS millimetriche della propria abitazione, scuola o luoghi abituali.
-- Numero di serie del corpo macchina e dell'ottica (che collegano in modo univoco scatti diversi alla stessa attrezzatura).
-- Nome del fotografo o dell'account computer registrato nei metadati IPTC.
+Le foto digitali contengono dati che possono rivelare informazioni personali:
+- le coordinate GPS precise di casa, della scuola o dei luoghi che frequenti;
+- il numero di serie della fotocamera e dell'obiettivo, che collega foto diverse alla stessa attrezzatura;
+- il nome del fotografo o del proprietario della fotocamera.
 
-rExif offre sia la rimozione mirata di singoli campi, sia la generazione automatica di copie sanificate prima della pubblicazione sul web.
+rExif permette sia di togliere singoli campi dai file originali, sia di esportare copie già ripulite da condividere.
 
-## Rimozione Mirata nei File Originali
+## Togliere campi dagli originali
 
-Se desideri igienizzare direttamente i tuoi file:
-- **Rimozione Posizione GPS**: Seleziona le foto, fai clic destro e scegli **Rimuovi posizione** (oppure clicca sul pulsante elimina accanto alle coordinate nell'Inspector). I tag `GPSLatitude`, `GPSLongitude`, `GPSAltitude` e i toponimi derivati vengono azzerati.
-- **Rimozione Autore e Copyright**: Seleziona gli elementi e cancella il contenuto dei campi nell'Inspector o tramite la scheda di modifica in blocco.
-- **Conferma non distruttiva**: Le rimozioni compaiono in arancione come qualsiasi altra modifica e diventano effettive solo premendo **Salva** (`⌘S`).
+Se vuoi ripulire direttamente i tuoi file:
+- **Posizione**: seleziona le foto e scegli **Rimuovi posizione** dal menu contestuale (oppure usa il pulsante accanto alle coordinate nell'inspector). Latitudine, longitudine e altitudine vengono cancellate.
+- **Autore e copyright**: seleziona gli elementi e cancella i campi nell'inspector o con la scheda Testo delle modifiche in blocco.
+- **Nessuna sorpresa**: le rimozioni compaiono in arancione come qualsiasi altra modifica e diventano effettive solo quando premi **Salva** (`⌘S`).
 
-## Esporta Copie Senza Dati Personali (`CleanExportSheet`)
+## Esporta copie senza dati personali
 
-Per non rischiare di perdere i metadati storici dai tuoi archivi originali, rExif include la funzione dedicata **Esporta copie senza dati personali...**:
+Per condividere foto e video senza toccare i tuoi originali, usa **File** › **Esporta copie senza dati personali…**:
 
-1. Seleziona le foto o i video che intendi condividere.
-2. Dal menu principale o dalla barra degli strumenti scegli **Esporta copie senza dati personali...**.
-3. Si aprirà la finestra di configurazione dell'esportazione pulita (`CleanExportSheet`), dove potrai indicare la cartella di destinazione.
-4. rExif genera nuove copie dei file con le seguenti caratteristiche:
-   - **Coordinate geografiche GPS rimosse al 100%**.
-   - **Autore, proprietario e dati personali rimossi**.
-   - **Numero di serie del dispositivo e MakerNotes rimossi**.
-   - **Qualità visiva dei pixel preservata**: la matrice grafica dell'immagine o del video non subisce alcuna ricompressione o transcodifica.
-   - **I tuoi file master originali restano intatti e completi sul Mac**.
+1. seleziona le foto o i video da condividere;
+2. scegli **Esporta copie senza dati personali…**;
+3. nella finestra che si apre scegli cosa tenere:
+   - **Data e ora di scatto** (attiva di default);
+   - **Autore e copyright** (attiva di default);
+   - **Descrizione**;
+   - **Fotocamera e obiettivo**;
+4. scegli la cartella di destinazione.
+
+Le copie vengono create:
+- **senza posizione GPS**;
+- **senza numeri di serie, MakerNote, software usato e cronologia delle modifiche**;
+- con i soli campi che hai scelto di tenere, comprese le modifiche non ancora salvate;
+- **senza ricompressione**: pixel e fotogrammi restano identici;
+- **lasciando intatti gli originali** sul Mac.
 
 > [!IMPORTANT]
-> L'intero processo di sanificazione avviene localmente all'interno della Sandbox di macOS: nessun byte lascia il tuo computer, a differenza dei servizi online gratuiti che richiedono l'upload dei file su server remoti.
+> Tutto avviene sul tuo Mac, all'interno della sandbox: nessun file viene caricato su server esterni, al contrario dei servizi online che chiedono di caricare le foto.

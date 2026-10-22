@@ -1,37 +1,37 @@
 ---
-title: "Audio Management and Tracks"
-description: "Extracting audio streams, muting tracks, replacing background audio, and codec support for AAC, MP3, Opus, and FLAC in rMux."
+title: "Audio and Tracks"
+description: "Copying, converting and excluding audio tracks, volume, sync, track metadata and track extraction in rMux."
 project: "rmux"
 order: 4
 section: "Audio"
 ---
 
-## Audio Track Inspection
+## Audio Tracks One by One
 
-Containers frequently house multiple audio tracks (foreign language dubs, director commentaries, 5.1 surround mixes). rMux lets you configure each stream:
+A video file often contains several audio streams (different languages, commentary, 5.1 surround). rMux's **Audio Inspector** shows each track with its own settings:
 
-- **Direct Stream Copy**: preserves existing audio bitstreams without re-sampling.
-- **Audio Transcoding**: converts incompatible audio formats into standard stereo AAC or MP3.
-- **Channel Downmixing**: downmix 5.1 surround mixes to stereo or retain all discrete channels.
-
----
-
-## Extracting Audio from Video
-
-To save speech or music tracks as standalone audio files:
-
-1. Open your video in rMux.
-2. Select **Audio Only** in the export panel.
-3. Choose your target audio format:
-   - **AAC / M4A**: pristine Apple high-efficiency audio.
-   - **MP3 (via LAME LGPL)**: universal playback compatibility.
-   - **Opus (BSD)**: ultra-compact, high-clarity voice and podcast encoding.
-   - **FLAC / WAV (PCM)**: lossless master fidelity.
-4. Export: rMux extracts the soundtrack in seconds.
+- **Include or exclude**: turn a track off to leave it out of the exported file. Excluding every track gives you a silent video.
+- **Copy**: the track is copied as is, with no loss.
+- **Transcode**: the track is converted to **AAC, AC3, MP3, Opus, FLAC or PCM**, with bitrate, channels (same as source, mono, stereo or 5.1) and sample rate (same as source, 44.1 or 48 kHz).
 
 ---
 
-## Muting and Track Replacement
+## Volume and Sync
 
-- **Mute Video**: uncheck the audio track to export silent video without third-party software.
-- **Replace Audio Track**: import external audio files (e.g. remastered music or clean voiceovers) to substitute or supplement original camera audio.
+- **Gain**: raise or lower the track volume in dB.
+- **Sync**: fix the delay between audio and video by moving the track earlier or later in 100-millisecond steps, even without re-encoding.
+
+---
+
+## Track Metadata
+
+For each track you can edit:
+- the **title** (e.g. "Director's commentary");
+- the **language** (e.g. `eng`);
+- the **default track**, the one players turn on first in files with several tracks.
+
+---
+
+## Extracting a Track
+
+**Extract…** saves an audio track to a separate file without re-encoding: rMux copies it into a Matroska audio file (`.mka`), which accepts any codec. Likewise, in the Video Inspector you can use **Extract Video…** to save the video track alone, without audio.

@@ -14,19 +14,19 @@ privacyUrl: "https://www.pt39.it/privacy-policy-app/"
 
 ## What is PT39 News?
 
-PT39 News is the official app of Circolo Socio-Culturale Palazzo Tenta 39, active since 2007 in promoting civil discourse and free information in Bagnoli Irpino and the Irpinia region. The app aggregates articles, alerts, opinions, and in-depth coverage from pt39.it quickly and intuitively, built for readers who want to stay updated without giving up their privacy.
+PT39 News is the app of the Palazzo Tenta 39 social and cultural association, active since 2007 in promoting civil debate and free information in Bagnoli Irpino and Alta Irpinia. It brings the articles, notices, columns and in-depth pieces published on pt39.it to your phone and tablet, for anyone who wants to stay informed without giving up their privacy.
 
 ## Key Features
 
-- **Real-time updates** — news, politics, sports, events, culture, weather, and opinion pieces always at hand
-- **Local notifications** — get notified about new articles without invasive external notification services
-- **Two graphic styles** — Modern, close to the native interface, and Retro, with dedicated palette and typography
-- **Two feed layouts** — Standard with large, visual cards, or Compact to browse more articles quickly
-- **Advanced search** — results ranked by title, excerpt, content, and category
-- **Saved section** — easily find your favorite articles again
-- **Privacy-first design** — no registration, no personal data collected, no third-party tracking
+- **Local news, up to date** — news, notices, events, sports, weather and pt39.it's long-running columns in one place
+- **Several ways to read** — «In evidenza» (featured), with the top stories and sections by topic, or «Elenco» (list), a single chronological feed (on Android also «Titoli», a compact headline view); you choose which sections to show and in what order
+- **Save and read later** — saved articles can be read again even offline
+- **Tell me when it's out** — a notification when a new article is published on pt39.it, with no account or sign-up
+- **Made for reading** — text that follows the system font size, light or dark theme, a choice of accent color and different visual styles, including a classic one with newspaper typefaces
+- **Photos and videos** — full-screen galleries with zoom and videos right inside the article
+- **Respect for readers** — no ads, no tracking, no account; preferences and saved articles stay on your device
 - **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 
-Available on **iOS** and **Android**.
+Available on **iPhone** and **iPad** with iOS/iPadOS 18 or later and on **Android** 7.0 or later. The app is in Italian.

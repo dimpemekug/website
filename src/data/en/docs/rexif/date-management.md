@@ -1,62 +1,59 @@
 ---
 title: "Date Management and Repair"
-description: "Repairing EXIF timestamps, batch timezone shifts, filename date extraction, and Google Takeout JSON synchronization."
+description: "Shifting by intervals, camera clock correction, dates from file names or Google Takeout and aligning file system dates in rExif."
 project: "rexif"
 order: 3
 section: "User Guides"
 ---
 
-## Addressing Timestamp Discrepancies
+## The Dates of Each File
 
-Incorrect metadata timestamps are among the most persistent issues in photo library curation:
-- Digital cameras with internal clocks left unadjusted for daylight saving time or travel across timezones.
-- Media shared through messaging platforms (WhatsApp, Telegram) where original EXIF dates were stripped and replaced with the download timestamp.
-- Cloud exports from **Google Takeout**, where true capture dates are stored in separate accompanying `.json` files rather than embedded in the media files.
+rExif handles four dates separately for every file:
+1. **Date taken** (`DateTimeOriginal` / `QuickTime:CreateDate`): when the photo was taken or the video recorded.
+2. **Date digitized** (`CreateDate`): when the image was turned into a digital file (for example by scanning).
+3. **File creation date**: the one recorded by the macOS file system.
+4. **File modification date**: the last time the file changed on disk.
 
-rExif provides an exhaustive set of tools to resolve each of these challenges.
+> [!NOTE]
+> When you save metadata changes, rExif keeps the file's creation and modification dates, unless you changed them explicitly.
 
-## Batch Time Shifts
+## Bulk Date Editing (`⇧⌘D`)
 
-When a camera clock was off by a known delta across hundreds of photos:
+In the **Bulk Edit** window (`⇧⌘D` or the *Metadata* menu), the dates tab offers several modes. Each item gets a value calculated from its own data, with a row-by-row preview.
 
-1. Select the relevant images in the main table.
-2. Navigate to **Edit Date** > **Shift Interval**.
-3. Specify the time offset in days, hours, minutes, or seconds (e.g. `+ 02:00:00` or `- 01:00:00`).
-4. All relative timestamps update instantly in orange preview, preserving the exact interval between consecutive shutter releases.
+### 1. Shift by an Interval
+Useful when the camera clock was wrong or never switched to daylight saving time. Enter a change in days, hours, minutes and seconds, positive or negative: each item keeps its distance from the others.
 
-### Reference Photo Alignment
+### 2. Set the Same Date for All
+Assigns the same date and time to every selected item.
 
-If you do not recall the exact clock discrepancy but have one reference picture (such as an iPhone capture or a photo of a clock tower) with an authoritative timestamp:
+### 3. From Per-Item Sources
+rExif takes each item's date from the first available source among:
+- **another date field** of the same file;
+- **the file name**: it recognizes formats such as `IMG_20230514_123456`, `VID_20230514_123456`, `PXL_20230514_123456789` (Google Pixel), `2023-05-14 12.34.56`, `Screenshot 2023-05-14 at 12.34.56`, and WhatsApp's `IMG-20230514-WA0001` (date only);
+- **the folder name**: for files inside folders like `2019-07-04 Beach`;
+- **the Google Takeout JSON**: if the `.json` exported from Google Photos sits next to the file, the real capture date (`photoTakenTime`) is read.
 
-1. Select the reference photo and set its date to the correct value.
-2. Choose **Align Other Photos to This Reference**.
-3. rExif computes the proportional delta and shifts all selected images accordingly.
+### 4. Sequence
+Gives the first item a start date and increases each following one by a fixed interval (e.g. +5 seconds), in table order.
 
-## Extracting Dates from Filenames
+### 5. Fill from Neighbors
+If some photos in a series have no date (for example after scanning or converting), rExif works it out by linear interpolation from the items before and after them in the table.
 
-Many camera systems and smartphones generate filenames encoding the precise capture timestamp, such as:
-- `IMG_20230514_153022.jpg`
-- `WhatsApp Image 2024-08-12 at 18.45.10.jpeg`
-- `Screenshot 2026-03-01 at 09.15.00.png`
-- `PXL_20251104_120145890.jpg`
+### 6. Time Zone
+To change the time zone you can choose between:
+- *keeping the displayed time*: changes the zone without touching the clock digits (e.g. 15:30 UTC+1 → 15:30 UTC+2);
+- *keeping the instant*: changes the local time so it matches the same moment in UTC.
 
-With the **Derive Date from Filename** feature:
-1. Select items lacking original EXIF tags.
-2. rExif parses the date and time patterns embedded in the filename or parent folder structure.
-3. In a single click, extracted values are written to `DateTimeOriginal`, `CreateDate`, and `ModifyDate`.
+With **Only if the field is empty**, the change only affects items that don't have that date yet.
 
-## Google Takeout JSON Integration
+## Align All Dates to Date Taken (`⇧⌘L`)
 
-When downloading full backups from Google Photos via Google Takeout, images and videos are typically paired with metadata sidecar files ending in `.json` (e.g. `photo.jpg.json`).
+With `⇧⌘L` or from the *Metadata* menu, rExif reads the date taken and copies it in one pass to the date digitized and the file creation and modification dates.
 
-> [!TIP]
-> Drag the entire Google Takeout folder directly into rExif: the app pairs each `.json` file with its matching photo or video, extracts the authentic `photoTakenTime` and original GPS coordinates, and writes them straight into the media file's metadata blocks.
+## Correct Camera Clock
 
-## Aligning Filesystem Timestamps
-
-Operating systems such as macOS and Windows display the filesystem "Date Created" attribute in Finder/Explorer, which often differs from the true EXIF capture date (for instance after moving files between external drives).
-
-rExif's **Align File Dates to EXIF Date**:
-- Reads the authentic EXIF capture date stored in the image header.
-- Updates the filesystem timestamps on macOS (`kMDItemContentCreationDate` and `kMDItemFSContentChangeDate`).
-- Finder displays the actual moment the photograph was taken as the file creation date.
+If you have a photo whose exact time you know (for example a shot of a synced clock or a smartphone screen):
+1. select the reference photo in the table;
+2. choose **Metadata** › **Correct Camera Clock…**;
+3. enter the correct time of that shot: rExif works out the offset to the second and applies it to the photos taken with the same camera (or, if you prefer, to all of them).

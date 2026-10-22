@@ -1,44 +1,46 @@
 ---
 title: "Manga and Webtoon Reader"
-description: "Reading directions for Japanese and Western comics, continuous vertical Webtoon scroll, Core ML neural upscaling, and Apple Live Text in rManga."
+description: "Reading modes for manga and Western comics, continuous webtoon scrolling, Core ML upscaling and Live Text in rManga."
 project: "rmanga"
 order: 3
 section: "Comics"
 ---
 
-## Reading Directions and Pagination
+## Reading Directions
 
-The visual comic reader in rManga adapts to any publishing layout:
+rManga's reader adapts to every kind of comic. In every mode you can zoom with a pinch or a double tap, and a single tap shows or hides the controls.
 
-### 1. Right-to-Left (Manga)
-Authentic layout for Japanese manga: tapping the left side of the display or swiping right advances to the next page, respecting the artist's original narrative flow.
+### 1. Right to Left (Manga)
+The direction of Japanese manga: a tap on the left side of the screen or a swipe to the right goes to the next page, respecting the original layout.
 
-### 2. Left-to-Right (Western Comics)
-Standard Western page flow for European graphic novels, American comic books, and picture books.
+### 2. Left to Right (Western Comics)
+The direction of European graphic novels and American comic books.
 
-### 3. Continuous Vertical Scroll (Webtoon / Manhwa)
-Optimized specifically for digital vertical comics:
-- **Zero Interruption**: panels cascade smoothly without artificial gutters or borders.
-- **Recycled View Architecture**: powered by a high-performance `UIScrollView` that recycles off-screen views, maintaining 120Hz responsiveness across chapters containing dozens of megapixel strips.
-- **Infinite Run**: reaching the bottom of a chapter seamlessly stitches the subsequent chapter into the scroll run.
+### 3. Vertical Scrolling (Webtoons and Manhwa)
+Designed for vertical digital comics:
+- **No interruptions**: panels follow one another with no borders or gaps between them.
+- **Recycled views**: the strip is a `UIScrollView` where only the pages near the screen have a view, recycled from page to page, so scrolling stays smooth even with very long chapters and very tall pages.
+- **Infinite scrolling**: as you reach the end of a chapter, the next one is attached to the strip and the one you just finished is marked as read, without going back to the list.
 
 ---
 
-## Advanced Reader Features
+## Reader Features
 
-### Two-Page Spreads and Split Scans
-- **Two-Page Spread on iPad**: in landscape orientation, rManga pairs facing pages side-by-side like an open book, keeping the cover page centered alone.
-- **Automatic Split for Wide Scans**: when a single image contains two scanned pages side-by-side, rManga divides it into two individual sequential pages in the correct reading order.
+### Double Page and Wide Pages
+- **Double page on iPad**: with the iPad in landscape, rManga shows two pages side by side like an open book; the cover stays on its own and, in manga mode, the next page goes on the left. Turn it off from the reader menu or Settings.
+- **Split wide pages**: if a scan contains two pages side by side, rManga can show one half at a time, in the series' reading direction.
 
-### Core ML Neural Upscaling
-Import custom Core ML neural network models (`.mlmodel` or `.mlpackage`) to enhance low-resolution scans on-the-fly. Processing delegates directly to the Apple Neural Engine to sharpen screentones and linework with minimal battery overhead.
+### Core ML Upscaling
+No model is included, but you can import your own Core ML model (`.mlmodel` or `.mlpackage`) in the reading settings. It's compiled on import and applied to pages below the resolution limit you choose, to make them sharper.
 
-### Apple Live Text Integration
-With iOS Live Text support, tap and hold on any speech bubble or sound effect to:
-- Copy text directly to clipboard.
-- Translate foreign dialogue (Japanese, French, German) on the spot.
-- Look up definitions or search references via Safari.
+### Live Text
+With Live Text turned on in settings, iOS recognizes the text on the pages and makes it selectable, so you can:
+- copy it to the clipboard;
+- translate or look it up from the system selection menu.
 
-### Touch Zones and Gestures
-- **Custom Touch Zones**: choose between classic left/right zones, Kindle-style margins, or L-shaped layouts.
-- **Quick Dismiss**: pull down on an unzoomed page to dismiss the reader. In webtoon mode, swipe from the left edge to slide the reader away with one hand.
+Quick actions are disabled, because they would take over the taps that turn pages. On devices that don't support Live Text the option doesn't appear.
+
+### Tap Zones and Gestures
+- **Tap zones**: choose how the screen is divided for turning pages (left-right, L-shaped, Kindle, edges or off), with swappable sides and a visual preview.
+- **Quick close**: in page modes, pull an unzoomed page down to close the reader. In webtoons you close it with a swipe from the left edge, and pulling the strip down from the top opens the previous chapter.
+- **Pages to preload**: from 1 to 10 pages kept ready in advance.

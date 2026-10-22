@@ -1,42 +1,44 @@
 ---
-title: "Integrazione con macOS e Finder"
-description: "Servizio di sistema del Finder, trascinamento su icona Dock, destinazione di salvataggio e scorciatoie in Resizo."
+title: "Integrazione con macOS e il Finder"
+description: "Servizio del Finder, trascinamento sull'icona del Dock, cartella di destinazione, suffisso dei file e scorciatoie da tastiera in Resizo."
 project: "resizo"
 order: 4
 section: "Funzionalità"
 ---
 
-## Azione Rapida e Servizi del Finder
+## Servizio del Finder
 
-Resizo si integra profondamente nel menu contestuale di macOS grazie a `FinderServiceProvider`:
+Resizo aggiunge una voce al menu contestuale del Finder tramite `FinderServiceProvider`:
 
-- **Tasto Destro nel Finder**: seleziona uno o più file immagine nel Finder, fai clic destro e scegli **Servizi › Ridimensiona con Resizo** (oppure dal menu *Azioni Rapide*).
-- **Apertura Automatica**: Resizo si aprirà caricando all'istante tutti i file selezionati, pronto per applicare l'ultimo preset utilizzato con un solo clic.
-
----
-
-## Trascinamento sul Dock e Drag & Drop
-
-- **Icona nel Dock**: puoi trascinare file o un'intera cartella direttamente sull'icona di Resizo nel Dock di macOS, anche quando l'applicazione è chiusa: l'app si avvierà popolando subito la coda di lavoro.
-- **Finestra Principale**: trascina immagini in qualsiasi momento nell'area centrale. La tabella mostrerà anteprima in miniatura, nome del file, risoluzione originaria, risoluzione calcolata e peso stimato.
+- **Clic destro nel Finder**: seleziona una o più immagini, fai clic destro e scegli **Servizi › Ridimensiona con Resizo**.
+- **Apertura immediata**: Resizo si apre con i file selezionati già in elenco, pronti da ridimensionare con le opzioni che preferisci.
 
 ---
 
-## Gestione Destinazione e Suffisso
+## Dock e trascinamento
 
-Per evitare qualsiasi rischio di sovrascrittura accidentale:
-- **Salva nella Stessa Cartella con Suffisso**: aggiunge un suffisso al nome file (es. `foto_resized.jpg` o `foto_web.jpg`). Il suffisso è completamente personalizzabile.
-- **Salva in una Cartella Specifica**: seleziona una cartella di destinazione (es. *Desktop*, *Immagini/Esportate*) dove convogliare tutte le uscite senza toccare la cartella sorgente.
+- **Icona nel Dock**: trascina file o cartelle sull'icona di Resizo, anche ad app chiusa: l'app si avvia e li aggiunge all'elenco. Funziona anche **Apri con…** dal Finder.
+- **Finestra principale**: trascina immagini o cartelle nell'elenco in qualsiasi momento. Le cartelle vengono esplorate con le sottocartelle, saltando i file nascosti; le immagini già presenti non vengono aggiunte due volte. La tabella mostra miniatura e nome del file, risoluzione e peso originali, nuova dimensione e stato dell'elaborazione.
 
 ---
 
-## Scorciatoie da Tastiera
+## Destinazione e suffisso
+
+Per evitare sovrascritture accidentali:
+- **Cartella predefinita**: se non scegli nulla, i file vengono salvati in `Immagini/Resizo`.
+- **Cartella a scelta**: puoi indicare un'altra cartella di destinazione per tutte le immagini, senza toccare quella di origine.
+- **Suffisso personalizzabile**: al nome di ogni file viene aggiunto un suffisso (predefinito `-resized`, es. `foto-resized.jpg`). Se esiste già un file con lo stesso nome, Resizo ne crea uno nuovo invece di sovrascriverlo.
+
+---
+
+## Scorciatoie da tastiera
 
 | Scorciatoia | Funzione |
 | :--- | :--- |
-| <kbd>⌘</kbd> <kbd>O</kbd> | Apri file o cartella dal Finder |
-| <kbd>⌘</kbd> <kbd>R</kbd> | Esegui "Ridimensiona e Salva" |
-| <kbd>⌫</kbd> | Rimuovi immagine selezionata dalla coda |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | Svuota l'intera coda di lavoro |
-| <kbd>⌘</kbd> <kbd>,</kbd> | Apri Preferenze |
-| <kbd>⌘</kbd> <kbd>W</kbd> | Chiudi la finestra |
+| <kbd>⌘</kbd> <kbd>O</kbd> | Aggiungi immagini |
+| <kbd>⌘</kbd> <kbd>↩</kbd> | Ridimensiona e Salva |
+| <kbd>⌘</kbd> <kbd>⌫</kbd> | Rimuovi dall'elenco le immagini selezionate |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Mostra o nascondi le opzioni |
+| <kbd>⌘</kbd> <kbd>,</kbd> | Apri le Impostazioni |
+
+Il pulsante **Svuota** sopra l'elenco toglie tutte le immagini dalla lista senza toccare i file su disco. Nelle Impostazioni puoi anche scegliere la lingua dell'app (italiano o inglese) e l'aspetto chiaro, scuro o di sistema.

@@ -1,26 +1,29 @@
 ---
-title: "Notifiche e Statistiche"
-description: "Promemoria automatici per la messa in onda di nuovi episodi, calcolo del tempo di visione totale e preferenze generi in ShowNest."
+title: "Notifiche e statistiche"
+description: "Notifiche per i nuovi episodi, tempo totale di visione, riepilogo annuale, giorni consecutivi e generi preferiti in ShowNest."
 project: "shownest"
 order: 3
 section: "Funzionalità"
 ---
 
-## Notifiche per Nuovi Episodi
+## Notifiche per i nuovi episodi
 
-Non rischiare di dimenticare quando esce la nuova puntata della tua serie preferita:
+Non perderti l'uscita della nuova puntata della tua serie preferita:
 
-- **Avvisi nel Giorno di Uscita**: attivando le notifiche nelle impostazioni, ShowNest programma notifiche locali per le serie presenti nella tua Watchlist.
-- **Riepilogo Notifiche**: l'avviso riporta chiaramente il nome della serie e il codice dell'episodio in uscita (es. *"Nuovo episodio: House of the Dragon S02E08 è disponibile oggi"*).
-- **Nessun Server Push Terzo**: le notifiche sono calcolate ed emesse localmente dal sistema operativo del tuo iPhone o iPad basandosi sulle date ufficiali fornite da TMDB, senza richiedere token di tracciamento o server di terze parti.
+- **Avviso il giorno dell'uscita**: con le notifiche attive, ShowNest programma una notifica alle 9 del mattino del giorno in cui esce il prossimo episodio di ogni serie che segui.
+- **Contenuto chiaro**: la notifica riporta il nome della serie, la stagione e il numero dell'episodio in uscita.
+- **Tutto in locale**: le notifiche sono programmate dal tuo iPhone o iPad in base alle date fornite da TMDB, senza server push né identificativi di tracciamento.
 
 ---
 
-## Statistiche e Cruscotto di Visione
+## Statistiche
 
-La sezione **Statistiche** trasforma la tua passione per le serie in grafici analitici ricchi di curiosità:
+La scheda **Statistiche** trasforma le tue visioni in numeri e grafici:
 
-- **Tempo Totale di Visione**: calcolato moltiplicando la durata effettiva di ciascun episodio visto per il numero di episodi completati, espresso in giorni, ore e minuti.
-- **Contatore Episodi**: numero totale di episodi visti dall'inizio dell'utilizzo dell'app.
-- **Serie Completate**: percentuale di completamento della tua libreria personale.
-- **Ripartizione per Generi**: un grafico a torta interattivo evidenzia quali generi cinematografici occupano maggiormente le tue serate (es. 40% Fantascienza, 25% Crime/Thriller, 20% Animazione, 15% Altro).
+- **Tempo totale di visione**: la somma della durata degli episodi che hai visto, in ore e minuti.
+- **Contatori**: serie seguite (e archiviate), episodi visti e serie completate.
+- **Riepilogo dell'anno**: le ore di visione mese per mese in un grafico a barre, a confronto con l'anno precedente.
+- **Ritmo di visione**: il giorno della settimana in cui guardi di più, la media giornaliera, i giorni consecutivi di visione e il tuo record.
+- **Tempo rimanente e tasso di completamento**: quanto ti manca per finire le serie in corso e quante delle serie iniziate hai portato a termine.
+- **Generi preferiti**: la percentuale di ciascun genere sul totale delle tue visioni.
+- **Serie più viste** e **cronologia** di tutte le visioni, con la data di ogni episodio.

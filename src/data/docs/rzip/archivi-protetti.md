@@ -1,42 +1,40 @@
 ---
-title: "Archivi Protetti, Cifratura e Integrità"
-description: "Crittografia AES-256 su ZIP e 7z, protezione dei nomi dei file, gestione password in RAM, volumi multipli e verifica integrità."
+title: "Archivi protetti, cifratura e integrità"
+description: "Cifratura AES-256 di ZIP e 7z, protezione dei nomi dei file, gestione delle password, archivi in più volumi e verifica dell'integrità in rZip."
 project: "rzip"
 order: 5
 section: "Sicurezza"
 ---
 
-## Crittografia Forte e Standard Supportati
+## Cifratura supportata
 
-rZip supporta l'apertura e la generazione di archivi cifrati ad alto grado di sicurezza, integrando sia il motore `libarchive` sia il processo protetto `7zz` (7-Zip 26.03):
+rZip apre e crea archivi cifrati usando sia `libarchive` sia il `7zz` incluso (7-Zip 26.03):
 
-- **7z con Cifratura dei Nomi (`-mhe`)**: Nel formato 7z, oltre a cifrare i dati di ciascun file, puoi cifrare l'intera tabella dei nomi e della gerarchia. Senza inserire la password corretta, un osservatore esterno non può nemmeno scoprire quali file siano contenuti nell'archivio.
-- **ZIP con WinZip AES-256**: Lo standard moderno di crittografia a 256 bit per gli archivi `.zip`, universalmente supportato su Mac, Windows e Linux.
-- **RAR protetti (v4 e v5)**: Apertura e decifrazione di archivi RAR protetti da password, inclusi quelli con elenco dei file cifrato (`-hp`).
-- **Legacy ZipCrypto**: Supporto in lettura per la compatibilità con vecchi archivi generati da sistemi obsoleti.
+- **7z con nomi cifrati (`-mhe`)**: oltre ai dati dei file puoi cifrare l'elenco dei nomi e delle cartelle. Senza la password, nessuno può sapere nemmeno quali file contiene l'archivio.
+- **ZIP con AES-256**: la cifratura moderna a 256 bit per gli archivi `.zip`, la stessa usata da rZip quando crea uno ZIP protetto.
+- **RAR protetti (v4 e v5)**: apertura di archivi RAR protetti da password, anche con l'elenco dei file cifrato (`-hp`).
+- **ZipCrypto**: lettura dei vecchi ZIP protetti con la cifratura tradizionale.
 
-## Gestione Sicura delle Password in Memoria Volatile
+## Password
 
 > [!IMPORTANT]
-> A tutela della massima riservatezza:
-> - Le password digitate non vengono mai salvate su disco o memorizzate in file di log.
-> - La chiave simmetrica derivata risiede unicamente nella memoria RAM volatile associata alla sessione della finestra aperta e viene azzerata istantaneamente quando la finestra viene chiusa (`⌘W`).
-> - Se trascini un file cifrato verso il Finder, rZip richiede la password direttamente al momento del rilascio e la richiede nuovamente se errata.
+> - Le password non vengono mai salvate su disco né scritte nei log: restano solo in memoria, per la finestra dell'archivio aperto, e vengono scartate quando la chiudi (<kbd>⌘</kbd> <kbd>W</kbd>).
+> - Se trascini un file cifrato nel Finder, rZip chiede la password al rilascio e la richiede di nuovo se è sbagliata.
 
-## Archivi Multi-Volume (Divisi in Più Parti)
+## Archivi in più volumi
 
-Quando un archivio compresso di grandi dimensioni è suddiviso in molteplici file:
-- Standard 7-Zip: `archivio.7z.001`, `archivio.7z.002`...
-- Standard RAR: `archivio.part1.rar`, `archivio.part2.rar` oppure `archivio.r00`, `archivio.r01`...
-- Standard ZIP splittato: `archivio.zip`, `archivio.z01`, `archivio.z02`...
-- Archivi TAR compressi divisi: `archivio.tar.gz.001`, `archivio.tar.gz.002`...
+rZip riconosce gli archivi divisi in più file:
+- 7-Zip: `archivio.7z.001`, `archivio.7z.002`…
+- RAR: `archivio.part1.rar`, `archivio.part2.rar` oppure `archivio.rar`, `archivio.r00`, `archivio.r01`…
+- ZIP diviso: `archivio.zip`, `archivio.z01`, `archivio.z02`…
+- TAR compressi divisi: `archivio.tar.gz.001`, `archivio.tar.gz.002`…
 
-rZip permette di aprire l'archivio **partendo da qualsiasi volume della sequenza**:
-1. Trascina un volume qualsiasi nella finestra di rZip.
-2. Tramite il sistema protetto `FolderAccess`, rZip individua automaticamente tutti i volumi collegati presenti nella stessa cartella e ricostruisce l'albero completo dei contenuti.
+Puoi aprire l'archivio **partendo da qualsiasi volume**:
+1. trascina uno dei volumi in rZip;
+2. con il permesso sulla cartella (`FolderAccess`), rZip trova gli altri volumi nella stessa cartella e ricostruisce l'elenco completo dei contenuti.
 
-## Verifica dell'Integrità dell'Archivio
+## Verifica dell'integrità
 
-Dal menu principale o dalla barra degli strumenti puoi avviare il comando **Verifica integrità**:
-- rZip controlla la coerenza strutturale di ogni singolo file e ne verifica i checksum CRC/SHA senza estrarre nulla su disco.
-- Un banner dedicato di avanzamento (`VerificationBanner`) mostra la percentuale di verifica in tempo reale e segnala tempestivamente se uno o più blocchi risultano corrotti o troncati.
+Dal menu File puoi avviare **Verifica integrità**:
+- rZip decomprime in memoria tutti i dati e ne controlla i CRC, senza scrivere nulla su disco. Per la verifica usa 7-Zip, che controlla sempre i CRC; libarchive solo per i formati che 7-Zip non apre.
+- Un banner mostra l'avanzamento e, al termine, l'elenco dei file danneggiati o troncati, se ce ne sono.

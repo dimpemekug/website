@@ -1,104 +1,99 @@
 ---
-title: "Preset e Impostazioni"
-description: "I 4 preset predefiniti di rName, creazione di preset personalizzati e configurazione dettagliata dei 6 pannelli delle Impostazioni (⌘,)."
+title: "Preset e impostazioni"
+description: "I 4 preset predefiniti di rName, la creazione di preset personali e i 6 pannelli delle Impostazioni (⌘,)."
 project: "rname"
 order: 6
 section: "Configurazione e Preset"
 ---
 
-## Preset: Catene di Regole Riutilizzabili
+## Preset: catene di regole riutilizzabili
 
-Comporre manualmente una sequenza di regole per ogni singola cartella può diventare ripetitivo. In rName, qualsiasi combinazione di regole può essere salvata come **Preset** e riapplicata all'istante con un solo clic.
+Ricomporre la stessa sequenza di regole per ogni cartella può diventare ripetitivo. In rName qualsiasi catena di regole si può salvare come **preset** e riapplicare con un clic.
 
-Nel menu a tendina situato in fondo alla barra laterale sinistra puoi:
+Dal menu in fondo alla barra laterale puoi:
 
-- Selezionare e applicare un preset salvato.
-- Salvare l'attuale catena di regole con un nuovo nome personalizzato.
-- Gestire la libreria dei preset esistenti.
-
----
-
-## I 4 Preset Inclusi Pronti all'Uso
-
-rName include 4 configurazioni tipiche predefinite, studiate per risolvere le esigenze più comuni:
-
-### 1. Riordina i nomi (_Tidy up names_)
-
-Ideale per file scaricati dal web o scambiati via email che presentano caratteri spuri o formattazioni disordinate:
-
-- Elimina spazi superflui all'inizio e alla fine del nome (`trimEdges`).
-- Comprime spazi doppi o multipli consecutivi in un singolo spazio (`collapseSpaces`).
-- Rimuove caratteri incompatibili con il filesystem (`stripIllegalCharacters`).
-
-### 2. Numerazione progressiva (_Number in sequence_)
-
-Pensato per ordinare sequenze di documenti, capitoli o fotografie:
-
-- Inizia da `1` con incremento di `1`.
-- Imposta una spaziatura a tre cifre con zeri iniziali (`001`, `002`, `003`...).
-- Inserisce il numero all'inizio del nome con il separatore `-`.
-
-### 3. Data come prefisso (_Date prefix_)
-
-Perfetto per organizzare scansioni, fatture, ricevute o foto di viaggio:
-
-- Legge la data di ultima modifica o di scatto del file.
-- Applica il formato standard ISO `yyyy-MM-dd`.
-- Colloca la data all'inizio del nome seguita dal separatore `_` (es. `2026-10-18_relazione.pdf`).
-
-### 4. Nomi adatti al web (_Web-friendly names_)
-
-Indispensabile per sviluppatori, web designer o gestori di siti web prima dell'upload su server Linux o CMS:
-
-- Rimuove accenti e segni diacritici (es. `è` → `e`, `à` → `a`).
-- Rimuove emoji e caratteri speciali non-ASCII.
-- Sostituisce ogni spazio con un trattino (`-`).
-- Converte l'intero nome e l'estensione in minuscolo (`kebab-case`).
+- applicare un preset;
+- salvare la catena attuale con un nome (un preset con lo stesso nome viene aggiornato, non duplicato);
+- eliminare un preset salvato.
 
 ---
 
-## Finestra Impostazioni (<kbd>⌘</kbd> <kbd>,</kbd>)
+## I 4 preset inclusi
 
-Premendo <kbd>⌘</kbd> <kbd>,</kbd> (oppure dal menu _rName › Impostazioni…_) accedi a sei pannelli di configurazione progettati secondo gli standard di usabilità macOS:
+### 1. Riordina i nomi
+
+Per file scaricati dal web o ricevuti per email con nomi disordinati:
+
+- toglie gli spazi all'inizio e alla fine del nome;
+- riduce gli spazi doppi a uno solo;
+- toglie i caratteri non ammessi dal file system.
+
+### 2. Numerazione progressiva
+
+Per mettere in ordine documenti, capitoli o fotografie:
+
+- parte da `1`;
+- usa tre cifre con zeri iniziali (`001`, `002`, `003`…);
+- mette il numero all'inizio del nome, separato da ` - ` (es. `001 - relazione.pdf`).
+
+### 3. Data come prefisso
+
+Per scansioni, fatture, ricevute o foto:
+
+- usa la data di ultima modifica del file;
+- nel formato `yyyy-MM-dd`;
+- all'inizio del nome, seguita da `_` (es. `2026-10-18_relazione.pdf`).
+
+### 4. Nomi adatti al web
+
+Per chi pubblica file su un sito o un server:
+
+- toglie spazi alle estremità e spazi doppi;
+- toglie accenti ed emoji;
+- sostituisce gli spazi con un trattino (`-`);
+- mette in minuscolo il nome e l'estensione.
+
+---
+
+## Impostazioni (<kbd>⌘</kbd> <kbd>,</kbd>)
+
+Con <kbd>⌘</kbd> <kbd>,</kbd> (o dal menu _rName › Impostazioni…_) si aprono sei pannelli.
 
 ### 1. Generale
 
-- **Aspetto**: scegli tra _Sistema_, _Chiaro_ e _Scuro_. L'applicazione utilizza `NSApp.appearance`, estendendo la palette a tutte le finestre, finestre modali e pannelli di apertura.
-- **Lingua**: seleziona _Sistema_, _Italiano_ o _Inglese_. La modifica imposta `AppleLanguages` e richiede un riavvio rapido dell'app per caricare le tabelle corrette.
-- **Ripristina valori di fabbrica**: riporta le preferenze visive e comportamentali ai default originali, senza toccare preset e permessi.
+- **Aspetto**: _Sistema_, _Chiaro_ o _Scuro_. L'aspetto si applica a tutte le finestre dell'app, compresi avvisi e pannelli di apertura file.
+- **Lingua**: _Sistema_, _Italiano_ o _Inglese_. Il cambio richiede il riavvio dell'app, che rName propone ed esegue da sé.
+- **Ripristina**: riporta le preferenze ai valori di fabbrica, senza toccare preset, permessi e regole conservate.
 
 ### 2. File
 
-- **Ordinamento predefinito**: scegli come ordinare i file al momento del caricamento (per Nome, Data di modifica o Dimensione).
-- **Includi sottocartelle**: se attivato, scansiona ricorsivamente tutte le directory interne alla cartella aperta.
+- **Ordinamento predefinito**: come ordinare la lista (ordine manuale, nome, data di creazione, data di modifica, dimensione o tipo).
+- **Includi sottocartelle**: esplora anche le cartelle contenute nella cartella aperta.
 - **Includi file nascosti**: mostra e rinomina anche i file che iniziano con un punto (`.`).
-- **Rinomina anche le cartelle**: estende le regole di rinomina sia ai file che alle cartelle aperte.
-- **Conferma prima di rinominare**: mostra una richiesta di conferma esplicita prima di procedere con le scritture su disco.
-- **Ricorda le regole alla chiusura**: preserva la catena di regole attiva tra una sessione e l'altra dell'applicazione.
+- **Rinomina anche le cartelle**: applica le regole anche alle cartelle, oltre che ai file.
+- **Conferma prima di rinominare**: chiede conferma prima di scrivere sul disco (disattivata di default; vale per il pulsante, il menu e la scorciatoia).
+- **Ricorda le regole alla chiusura**: conserva la catena di regole da una sessione all'altra.
 
 ### 3. Regole
 
-Configura i valori iniziali predefiniti utilizzati ogni volta che aggiungi una nuova regola:
+I valori iniziali usati quando aggiungi una nuova regola:
 
-- Separatore predefinito (es. `_` o `-`).
-- Cifre di riempimento iniziali per la numerazione (es. 2 o 3 cifre).
-- Formato predefinito per data e ora, con anteprima del risultato in tempo reale.
+- separatore predefinito (es. `_` o `-`);
+- numero di cifre della numerazione (es. 2 o 3);
+- formato della data, con anteprima del risultato.
 
 ### 4. Preset
 
-Elenco completo di tutti i preset predefiniti e creati dall'utente:
+L'elenco dei preset predefiniti e personali, con cui puoi:
 
-- Rinomina i tuoi preset personali.
-- Elimina preset obsoleti.
-- Visualizza le regole contenute in ciascun modello.
+- rinominare i tuoi preset;
+- eliminarli;
+- cambiarne l'ordine.
 
 ### 5. Permessi
 
-Monitoraggio e gestione dei permessi di scrittura concessi per le cartelle del Mac:
-
-- Elenco dettagliato dei percorsi autorizzati.
-- Revoca selettiva o totale dei segnalibri di sicurezza con un solo clic.
+Le cartelle autorizzate, con la possibilità di revocare un permesso o tutti insieme.
 
 ### 6. Informazioni
 
-Versione e build dell'applicazione, identificativo di bundle, copyright e riepilogo delle garanzie sulla privacy (funzionamento offline al 100%).
+Versione dell'app, identificativo, copyright e una nota sulla privacy (l'app funziona completamente offline).

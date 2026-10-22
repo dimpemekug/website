@@ -1,54 +1,57 @@
 ---
-title: "Anime and Video Playback"
-description: "Native video player for anime: dual AVPlayer + libmpv engines for MKV, Sora streaming modules, Jellyfin, AniSkip intro skipping, ASS subtitles, and PiP."
+title: "Anime and Video"
+description: "rManga's video player: two engines (AVPlayer and libmpv for MKV), Sora modules, Jellyfin, intro skipping with AniSkip, ASS subtitles and Picture in Picture."
 project: "rmanga"
 order: 5
 section: "Anime & Video"
 ---
 
-## Native Video Playback Suite
+## The Player
 
-rManga includes a dedicated video player optimized for animated series and movies, bypassing the constraints of standard iOS system players:
+rManga has its own video player, built for anime, series and films, that goes beyond the limits of the iOS system player:
 
-- **Dual Rendering Engines**:
-  - **Native Apple AVPlayer**: used for HLS (`.m3u8`) streaming, MP4, and MOV files. Features automatic Picture in Picture (PiP), Apple TV AirPlay, and background audio playback with lock screen *NowPlaying* controls.
-  - **MPVEngine (libmpv via Metal)**: handles complex containers including **MKV, WebM, AVI, and TS**, utilizing VideoToolbox hardware acceleration over a dedicated Metal layer (`CAMetalLayer`). Plays high-definition files directly without forcing server transcoding.
-- **Glassmorphic Player UI**: auto-rotates to landscape orientation on iPhone and includes a screen lock button to prevent accidental touches.
-
----
-
-## Sora Modules and Anime Streaming
-
-Connect external anime sources using **Sora video modules**:
-- **Quick Installation**: paste a module JSON manifest URL in *Browse › More › Get Extensions › Sora*, or tap a deep link with the scheme `rmanga://add-module?url=...`.
-- **Multi-Server Streaming**: modules automatically discover stream mirrors, resolutions (1080p, 720p, 480p), and required network headers.
-- **Unified Library Presence**: anime series live alongside your manga: episodes are grouped by season, accompanied by 16:9 thumbnails and episode overviews from Anira and Kitsu.
-- **Background Offline Downloads**: download episodes via resilient background HLS sessions (`.movpkg` or `.mp4`) to watch on flights or offline commutes.
+- **Two engines**:
+  - **Apple's AVPlayer**: for HLS (`.m3u8`), MP4 and MOV, with Picture in Picture (which starts on its own when you go to the Home Screen), AirPlay and background audio with controls on the Lock Screen and in Control Center.
+  - **libmpv** (via MoltenVK on Metal): for **MKV, WebM, AVI, TS** and files AVPlayer can't read, with VideoToolbox hardware decoding. The episode switches to mpv on its own from the same point; you can also pick the engine by hand or always use mpv (Settings › Video). Picture in Picture and AirPlay stay with AVPlayer.
+- **Controls**: on iPhone the player stays in landscape; a padlock blocks accidental taps. Speed, fill/fit, server, audio language and subtitles are in an options sheet.
 
 ---
 
-## Automatic Intro Skipping (AniSkip & AniList)
+## Sora Video Modules
 
-Eliminate repetitive manual scrubbing through intro themes:
-1. **Automatic Show Identification**: rManga matches anime titles with AniList to resolve official MyAnimeList series IDs.
-2. **AniSkip Timestamp Integration**: automatically fetches exact start and end timestamps for:
-   - **Opening Themes (OP)**
-   - **Episode Recaps**
-   - **Ending Themes (ED / Outro)**
-3. **"Skip Intro" Button & Auto-Skip**: an interactive pill appears on-screen during theme segments. Tap to jump forward immediately, or enable **Auto Skip** in *Settings › Video*.
-
----
-
-## Stylized ASS/SSA Subtitles and Audio Tracks
-
-- **Advanced Anime Subtitles (ASS/SSA)**: with the mpv engine, complex fan-subtitles retain original custom fonts, character-specific color palettes, on-screen positioning, and karaoke effects.
-- **External Subtitles**: load standalone `.srt` or `.vtt` subtitle files directly and fine-tune synchronization using the subtitle delay slider.
-- **Multi-Audio Selection**: switch between Japanese original audio and international dubs, saving your audio preference across the entire series.
+You can add video sources with **Sora modules**:
+- **Adding**: paste the module's JSON address in *Explore › More › Get Extensions › Sora*, or open an `rmanga://add-module?url=…` link. From the same menu, **Play Video Address** opens any `.m3u8` or `.mp4`.
+- **Multiple servers**: the module offers the available servers, with the headers they need; the chosen server is remembered for the series and, if a stream won't start, you can switch to another.
+- **Episodes in the library**: series sit in the library like manga. Each episode has a 16:9 frame, a bar showing how much you've watched, its length and title; for anime, missing titles and images are filled in from Anira (or Kitsu).
+- **Downloads**: episodes download in the background (HLS as `.movpkg`, or the `.mp4` file) so you can watch offline; for HLS playlists choose the maximum quality (1080p, 720p or 480p) in Settings › Video.
+- **Other players**: if installed, streamed episodes can also be opened in VLC, Infuse, Outplayer, nPlayer or SenPlayer.
 
 ---
 
-## Touch Gestures on the Player
-- **Double Tap Left / Right**: seek backward or forward by 10 seconds (stackable).
-- **Long Press**: activates **2x playback speed** while holding your finger down.
-- **Horizontal Swipe**: fluid scrubbing across the timeline with offset previews.
-- **Vertical Swipe**: left half adjusts screen brightness; right half adjusts system volume.
+## Intro Skipping with AniSkip and AniList
+
+No more fast-forwarding by hand at the start of every episode:
+1. **Series lookup**: rManga finds the series' MyAnimeList ID by searching its title on AniList, once per series.
+2. **Times from AniSkip**: it fetches the user-submitted times of:
+   - **opening**;
+   - **recap**;
+   - **ending credits**.
+3. **"Skip Intro" or automatic skipping**: during that stretch a button appears above the time bar, even with the controls hidden; with **Skip automatically** (Settings › Video) the skip happens on its own.
+
+If the title leads to the wrong series (another season, a special), **Series for skipping intros** in the series menu lets you pick it by hand or turn skipping off.
+
+---
+
+## Subtitles and Audio
+
+- **ASS/SSA**: with mpv, ASS subtitles, embedded or imported, keep their original fonts, colors and positions.
+- **External subtitles**: import `.srt`, `.vtt` or `.ass` files, adjust size, color, background and height, and line them up with the delay setting.
+- **Audio tracks**: choose the audio language (e.g. dub or original Japanese); the choice is remembered for the series, and in Settings › Video you can prefer Japanese audio for new series.
+
+---
+
+## Player Gestures
+- **Double tap left or right**: back or forward 10 seconds (taps in a row add up).
+- **Long press**: **2×** speed while you hold your finger down.
+- **Horizontal drag**: seek through the video, with the target time and offset shown in the middle.
+- **Vertical drag**: brightness on the left, volume on the right.

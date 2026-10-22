@@ -1,60 +1,60 @@
 ---
-title: "Scorciatoie e Integrazione macOS"
-description: "Scorciatoie da tastiera, integrazione con Finder e Dock, trascinamento file e scelte di design dell'interfaccia in rName."
+title: "Scorciatoie e integrazione con macOS"
+description: "Scorciatoie da tastiera, integrazione con Finder e Dock, trascinamento dei file e scelte di progettazione dell'interfaccia di rName."
 project: "rname"
 order: 7
 section: "Riferimento"
 ---
 
-## Una Vera Applicazione macOS
+## Un'app pensata per il Mac
 
-rName è stata progettata specificamente per integrarsi in modo naturale con l'ambiente desktop di **macOS**, supportando pienamente i paradigmi di interazione del Mac: tastiera, drag & drop, menu di sistema e servizi del Finder.
-
----
-
-## Scorciatoie da Tastiera
-
-Ogni azione principale dell'applicazione può essere richiamata istantaneamente senza staccare le mani dalla tastiera:
-
-| Scorciatoia                            | Menu     | Azione                                                                   |
-| :------------------------------------- | :------- | :----------------------------------------------------------------------- |
-| <kbd>⌘</kbd> <kbd>O</kbd>              | File     | Scegli una cartella tramite la finestra del Finder                       |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> | File     | Aggiungi singoli file alla lista corrente                                |
-| <kbd>⌘</kbd> <kbd>↩</kbd>              | Azioni   | **Applica la rinomina** a tutti i file pronti                            |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Modifica | **Annulla l'ultima operazione di rinomina**                              |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Vista    | Mostra o nasconde l'ispettore delle impostazioni della regola            |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | Modifica | Svuota la lista dei file caricati                                        |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | rName    | Apre la finestra Impostazioni (Generale, File, Regole, Preset, Permessi) |
+rName si integra con **macOS** in modo naturale: tastiera, trascinamento, menu di sistema e Finder.
 
 ---
 
-## Integrazione con il Finder e il Dock
+## Scorciatoie da tastiera
 
-Oltre ai comandi da tastiera e ai pulsanti della barra strumenti, puoi interagire con rName in tre modalità dirette:
+| Scorciatoia | Menu | Azione |
+| :--- | :--- | :--- |
+| <kbd>⌘</kbd> <kbd>O</kbd> | File | Scegli una cartella |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> | File | Aggiungi singoli file alla lista |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | File | Svuota la lista |
+| <kbd>⌘</kbd> <kbd>↩</kbd> | Rinomina | **Applica la rinomina** ai file pronti |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Rinomina | **Annulla l'ultima rinomina** |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Vista | Mostra o nasconde le impostazioni della regola |
+| <kbd>⌘</kbd> <kbd>,</kbd> | rName | Apre le Impostazioni |
 
-### 1. Trascinamento nella Finestra (Drag & Drop)
-
-Puoi trascinare una cartella o un gruppo di file dal Finder direttamente all'interno della finestra principale di rName. Se trascini una cartella, l'app acquisisce automaticamente il permesso di scrittura e carica tutti gli elementi contenuti.
-
-### 2. Trascinamento sull'Icona nel Dock
-
-Trascina una cartella o una selezione di file direttamente sull'icona di rName presente nel **Dock** del Mac:
-
-- Se l'app è chiusa, si avvierà caricando immediatamente i file pronti per la configurazione.
-- Se l'app è già aperta, aggiungerà i nuovi elementi alla sessione di lavoro.
-
-### 3. Menu Contestuale «Apri con…»
-
-Nel Finder, seleziona una cartella o un file, fai clic con il tasto destro e scegli **Apri con › rName**. L'applicazione aprirà il percorso e predisporrà l'anteprima secondo le regole correnti.
+Dal menu _Rinomina_ puoi anche aggiungere una regola, rimuovere tutte le regole e ripristinare i nomi scritti a mano.
 
 ---
 
-## Stabilità del Layout e Architettura Visiva
+## Finder e Dock
 
-Durante lo sviluppo di rName è stata condotta una scrupolosa analisi ingegneristica per garantire la totale fluidità di ridimensionamento della finestra su display di qualsiasi dimensione (dal MacBook Air 13" ai monitor Pro Display XDR).
+Oltre a tastiera e barra degli strumenti, puoi aggiungere file a rName in tre modi:
 
-Per scongiurare i crash noti di AppKit legati ai cicli di autolayout multipli con tabelle ad alta densità informativa, rName implementa un pannello ispettore contestuale integrato direttamente nella gerarchia della colonna destra:
+### 1. Trascinamento nella finestra
 
-- La finestra può essere ristretta o allargata liberamente senza rallentamenti o sfarfallii.
-- Le colonne della tabella adottano larghezze ideali adattive che non collassano i titoli lunghi.
-- I controlli di configurazione rimangono sempre accessibili a qualsiasi risoluzione dello schermo.
+Trascina una cartella o un gruppo di file dal Finder nella finestra di rName. Se trascini una cartella, l'app ottiene subito il permesso di scrittura e carica tutti i file che contiene.
+
+### 2. Trascinamento sull'icona nel Dock
+
+Trascina una cartella o alcuni file sull'icona di rName nel **Dock**:
+
+- se l'app è chiusa, si apre con i file già caricati;
+- se è già aperta, aggiunge i nuovi elementi alla lista.
+
+### 3. «Apri con…»
+
+Nel Finder, fai clic destro su una cartella o un file e scegli **Apri con › rName**: l'app apre il percorso e mostra l'anteprima con le regole correnti.
+
+---
+
+## Una finestra stabile
+
+Durante lo sviluppo, la stabilità della finestra durante il ridimensionamento è stata verificata con test ripetuti, perché alcune configurazioni dello split view di SwiftUI possono far terminare l'app per cicli di layout che non convergono.
+
+Per questo il pannello delle impostazioni della regola è integrato nella colonna destra invece di essere una terza colonna separata:
+
+- la finestra si può stringere e allargare liberamente;
+- le colonne della tabella hanno larghezze ideali che si adattano allo spazio;
+- le impostazioni restano sempre raggiungibili, a qualsiasi dimensione della finestra.

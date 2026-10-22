@@ -21,7 +21,7 @@ L'applicazione consente di:
 - **Importare e confrontare configurazioni (Config Diff)**: parsing istantaneo di una `show running-config` e confronto bidirezionale blocco per blocco tra apparato reale e modello di progetto con copia dei soli comandi mancanti.
 - **Visualizzare la Topologia di Rete**: diagramma grafico vettoriale interattivo derivato automaticamente dagli indirizzi e dai link punto-punto, stampabile in alta risoluzione nel report PDF.
 - **Verificare la coerenza logica della topologia (Network Linter a 15 regole)**: diagnosi proattiva di errori di configurazione prima dell'avvio degli apparati (subnet sovrapposte, IP duplicati, next-hop irraggiungibili, OSPFv3 senza router-id, HSRP errati, port security su trunk).
-- **Esercitarsi con Quiz Interattivi e Widget**: 9 tipologie di esercizi di subnetting con 3 livelli di difficoltà, correzione spiegata e tracciamento record/streak; widget interattivo "Esercizio del giorno" per iOS 18 e macOS 15.
+- **Esercitarsi con Quiz Interattivi e Widget**: 9 tipologie di esercizi di subnetting con 3 livelli di difficoltà, correzione spiegata e tracciamento record/streak; widget interattivo "Esercizio del giorno" e controlli per il Centro di Controllo.
 - **Esportare e condividere**: reportistica professionale in PDF pixel-perfect disegnati con CoreGraphics/CoreText, esportazione tabellare CSV e testo puro.
 
 ---
@@ -58,4 +58,4 @@ Per padroneggiare ogni funzionalità dell'applicazione, consulta le guide dedica
 - [Importazione e Confronto Running-Config](/progetti/netcalc/docs/import-running-config): Analisi di configurazioni Cisco esistenti, parsing nel progetto e Config Diff con copia dei comandi mancanti.
 - [Verifica del Laboratorio (Network Linter)](/progetti/netcalc/docs/linter-verifica-laboratorio): Diagnosi proattiva a 15 regole di anomalie, conflitti IP, errori OSPFv3 e incoerenze prima del test.
 - [Progetti, Topologia ed Esportazione](/progetti/netcalc/docs/progetti-export-icloud): Gestione dei progetti, diagramma di topologia automatico, report PDF vettoriali e sincronizzazione CloudKit.
-- [Didattica, Esercizi e Widget](/progetti/netcalc/docs/scorciatoie-e-didattica): Quiz interattivo a 9 tipologie con serie/record, 21 capitoli didattici, glossario ampliato a 55+ voci e widget per iOS 18/macOS 15.
+- [Didattica, Esercizi e Widget](/progetti/netcalc/docs/scorciatoie-e-didattica): Quiz interattivo a 9 tipologie con serie/record, 21 capitoli didattici, glossario con oltre 100 voci, widget e controlli.

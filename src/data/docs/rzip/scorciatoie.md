@@ -1,46 +1,47 @@
 ---
-title: "Scorciatoie e Produttività"
-description: "Elenco completo delle scorciatoie da tastiera native di rZip e comandi per velocizzare l'esplorazione e la gestione archivi."
+title: "Scorciatoie e produttività"
+description: "Elenco completo delle scorciatoie da tastiera di rZip e dei comandi per esplorare e gestire gli archivi più in fretta."
 project: "rzip"
 order: 7
 section: "Riferimento"
 ---
 
-## Scorciatoie da Tastiera Complete
+## Scorciatoie da tastiera
 
-rZip offre un set esaustivo di scorciatoie da tastiera native per velocizzare ogni operazione senza usare il mouse:
-
-### Gestione Archivi e Finestre
+### Archivi e finestre
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Nuovo archivio…** | `⌘ + N` | Apre la finestra di creazione guidata dell'archivio |
-| **Apri archivio…** | `⌘ + O` | Mostra il pannello di selezione file del sistema |
-| **Finestra di benvenuto** | `⇧ + ⌘ + 0` | Riapre la schermata iniziale di benvenuto |
-| **Mostra l'archivio nel Finder**| `⌥ + ⌘ + R` | Rivela il file compresso corrente nella cartella del Finder |
-| **Chiudi finestra** | `⌘ + W` | Chiude la finestra corrente e azzera la memoria RAM associata |
-| **Impostazioni** | `⌘ + ,` | Apre le preferenze (comportamento estrazione, lingua, tema, cartelle autorizzate) |
+| **Nuovo archivio…** | <kbd>⌘</kbd> <kbd>N</kbd> | Apre la finestra di creazione |
+| **Apri archivio…** | <kbd>⌘</kbd> <kbd>O</kbd> | Mostra il pannello di selezione dei file |
+| **Finestra di benvenuto** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>0</kbd> | Riapre la schermata iniziale |
+| **Mostra l'archivio nel Finder** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>R</kbd> | Mostra l'archivio corrente nella sua cartella |
+| **Mostra/nascondi informazioni** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Apre o chiude il pannello informazioni |
+| **Chiudi finestra** | <kbd>⌘</kbd> <kbd>W</kbd> | Chiude la finestra e scarta la password eventualmente inserita |
+| **Impostazioni** | <kbd>⌘</kbd> <kbd>,</kbd> | Apre le impostazioni (aspetto, anteprime, estrazione, creazione, cartelle autorizzate) |
 
-### Esplorazione e Navigazione
+### Esplorazione e navigazione
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Cerca nell'archivio** | `⌘ + F` | Sposta il focus direttamente sul campo di ricerca rapida |
-| **Anteprima rapida** | `Spazio` o `⌘ + Y` | Mostra l'anteprima Quick Look in streaming RAM del file selezionato |
-| **Espandi tutto** | `⌥ + ⌘ + →` | Espande ricorsivamente tutte le cartelle dell'archivio |
-| **Comprimi tutto** | `⌥ + ⌘ + ←` | Richiude tutti i rami delle cartelle |
-| **Mostra file di sistema** | `⇧ + ⌘ + .` | Mostra o nasconde i file nascosti di macOS (`.DS_Store`, `__MACOSX`) |
+| **Cerca nell'archivio** | <kbd>⌘</kbd> <kbd>F</kbd> | Porta il cursore nel campo di ricerca |
+| **Anteprima rapida** | <kbd>Spazio</kbd> o <kbd>⌘</kbd> <kbd>Y</kbd> | Mostra l'anteprima in memoria del file selezionato |
+| **Espandi tutto** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>→</kbd> | Espande tutte le cartelle |
+| **Comprimi tutto** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>←</kbd> | Richiude tutte le cartelle |
+| **Mostra file di sistema** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>.</kbd> | Mostra o nasconde i file di macOS (`.DS_Store`, `__MACOSX`) |
+| **Indietro / Avanti** | <kbd>⌘</kbd> <kbd>[</kbd> / <kbd>⌘</kbd> <kbd>]</kbd> | Si sposta tra le cartelle visitate |
+| **Cartella superiore** | <kbd>⌘</kbd> <kbd>↑</kbd> | Sale di un livello |
+| **Inizio dell'archivio** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>H</kbd> | Torna alla radice dell'archivio |
 
-### Estrazione e Modifica
+### Estrazione e modifica
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Estrai selezione…** | `⌘ + E` | Esporta i file o le cartelle correntemente selezionati |
-| **Estrai tutto…** | `⇧ + ⌘ + E` | Decomprime l'intero archivio nella destinazione scelta |
-| **Aggiungi all'archivio…** | `⌥ + ⌘ + A` | Apre il pannello per inserire nuovi file nell'archivio aperto (ZIP/7z/TAR) |
-| **Elimina dall'archivio…** | `⌘ + ⌫` | Cancella gli elementi selezionati (con copia di riserva automatica nel Cestino) |
+| **Estrai selezione…** | <kbd>⌘</kbd> <kbd>E</kbd> | Estrae i file o le cartelle selezionati |
+| **Estrai tutto…** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd> | Estrae l'intero archivio nella destinazione scelta |
+| **Aggiungi all'archivio…** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>A</kbd> | Aggiunge file all'archivio aperto (ZIP, 7z, TAR) |
+| **Elimina dall'archivio…** | <kbd>⌘</kbd> <kbd>⌫</kbd> | Elimina gli elementi selezionati (con copia di sicurezza nel Cestino, se attiva) |
 
-## Gesture e Interazioni con il Dock
+## Trascinamento
 
-- **Trascinamento sull'icona nel Dock**:
-  - Se trascini un archivio compresso sull'icona di rZip nel Dock, viene aperto all'istante per l'esplorazione.
-  - Se trascini file o cartelle ordinarie sull'icona del Dock, si apre automaticamente la schermata di creazione per comprimerli in un nuovo archivio.
-- **Drag & Drop selettivo**:
-  - Trascina qualsiasi riga dell'elenco o la grande icona dell'Inspector direttamente in una cartella del Finder per estrarre selettivamente il file al rilascio.
+- **Sull'icona nel Dock**:
+  - un archivio trascinato sull'icona di rZip si apre subito per l'esplorazione;
+  - file o cartelle normali aprono la finestra di creazione, pronti da comprimere in un nuovo archivio.
+- **Verso il Finder**: trascina una riga dell'elenco o la grande icona del pannello informazioni in una cartella del Finder per estrarre quel file al rilascio.

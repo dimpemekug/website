@@ -1,38 +1,38 @@
 ---
-title: "Server, Estensioni e Sincronizzazione"
-description: "Collegamento a server domestici Jellyfin, Suwayomi, Komga e Kavita, estensioni Aidoku/Paperback e sincronizzazione iCloud in rManga."
+title: "Server, estensioni e sincronizzazione"
+description: "Collegamento ai server Jellyfin, Suwayomi, Komga e Kavita, estensioni Aidoku e Paperback, sincronizzazione iCloud e backup in rManga."
 project: "rmanga"
 order: 6
 section: "Rete e Sync"
 ---
 
-## Connessione a Server Personali
+## Server personali
 
-rManga si integra con i principali server multimediali e di catalogazione self-hosted:
+rManga si collega ai principali server self-hosted (Impostazioni › Fonti › Aggiungi server):
 
 ### 1. Jellyfin (10.9+)
-- Collega il tuo server Jellyfin inserendo indirizzo IP e credenziali (salvate in modo sicuro nel Portachiavi di iOS).
-- Esplora e riproduci film, serie e anime della tua rete locale o remota.
-- Sincronizzazione automatica bidirezionale dei progressi di riproduzione al secondo sul server.
-- Supporto a file originali non transcodificati tramite riproduzione diretta in mpv.
+- Aggiungi il server con indirizzo, nome utente e password; il token di accesso resta nel Portachiavi di iOS.
+- Esplora e cerca nelle librerie di film e serie e riproduci gli episodi.
+- I progressi si leggono dal server e vengono inviati ogni minuto, a fine episodio e alla chiusura del player.
+- Il file originale viene riprodotto così com'è (un MKV va in mpv, senza far lavorare il server); la versione convertita dal server resta come alternativa.
 
-### 2. Server di Fumetti ed Ebook: Komga, Kavita e Suwayomi
-- **Komga e Kavita (OPDS)**: sfoglia interi cataloghi di fumetti e libri, con streaming delle pagine e memorizzazione del punto esatto di lettura sia per i fumetti che per gli ebook di testo.
-- **Suwayomi (Mihon / Tachiyomi)**: accesso tramite API GraphQL con supporto a tutti i filtri di ricerca, autenticazione e cataloghi remoti.
-
----
-
-## Ecosistemi di Estensioni: Aidoku e Paperback
-
-rManga implementa runtime nativi per eseguire estensioni di terze parti:
-- **Estensioni Aidoku (`.aix`)**: eseguite in-app tramite WebAssembly (**WasmKit**), con supporto a filtri complessi, ricerca, login web e decifratura di immagini protette tramite CoreGraphics.
-- **Estensioni Paperback 0.9 (`.js`)**: eseguite tramite runtime **JavaScriptCore** nativo con supporto a interceptor, sezioni dinamiche e risoluzione delle protezioni Cloudflare.
-- **Aggiornamento Automatico**: puoi verificare gli aggiornamenti di tutte le estensioni e moduli video installati direttamente da *Impostazioni › Fonti*.
+### 2. Server di fumetti ed ebook: Komga, Kavita e Suwayomi
+- **Komga e Kavita (OPDS)**: sfoglia e cerca nei cataloghi di fumetti e libri, con le pagine in streaming (o scaricando il file) e il punto di lettura sincronizzato sia per i fumetti sia per gli ebook di testo. Per Kavita si incolla l'indirizzo OPDS con la chiave API.
+- **Suwayomi (Mihon / Tachiyomi)**: le estensioni Android non possono girare su iOS, ma attraverso un server Suwayomi (API GraphQL) puoi usarne le fonti: popolari e recenti, ricerca con filtri, dettagli, capitoli, lettura, impostazioni delle fonti e gestione di estensioni e repository del server. L'autenticazione viene riconosciuta da sola.
 
 ---
 
-## Sincronizzazione iCloud e Backup
+## Estensioni Aidoku e Paperback
 
-- **Sincronizzazione iCloud Personale**: progressi di lettura, segnalibri, stato dei capitoli e serie seguite si sincronizzano in tempo reale tra iPhone e iPad tramite il tuo account privato iCloud.
-- **Gestione Spazio Intelligente**: nella sezione *Impostazioni › Spazio* puoi visualizzare lo spazio occupato da download, copertine, file temporanei e cache, con opzione per eliminare automaticamente i capitoli letti e gli episodi visti dopo un intervallo programmabile (es. 24 ore o 7 giorni).
-- **Esportazione Backup Completo**: genera un archivio JSON con tutte le tue sorgenti, la cronologia e i progressi per esportarli o ripristinarli su un nuovo dispositivo in qualsiasi momento.
+rManga esegue al suo interno le estensioni di due ecosistemi. Nessun repository è incluso: li aggiungi tu, con un link o incollando l'indirizzo.
+- **Aidoku (`.aix`)**: eseguite con un runtime WebAssembly (**WasmKit**), con home, liste, ricerca con filtri, dettagli, capitoli, impostazioni della fonte, login e ricomposizione delle pagine protette con CoreGraphics.
+- **Paperback 0.9 (`index.js`)**: eseguite con **JavaScriptCore**, con sezioni della home, ricerca con ordinamenti, dettagli, capitoli, impostazioni della fonte e verifica Cloudflare.
+- **Aggiornamenti**: estensioni e moduli video si aggiornano da soli (si può disattivare), e da *Impostazioni › Fonti* puoi controllare gli aggiornamenti quando vuoi.
+
+---
+
+## Sincronizzazione iCloud, spazio e backup
+
+- **iCloud**: libreria, progressi, impostazioni, repository ed estensioni installate si sincronizzano tra i dispositivi con lo stesso account iCloud; per ogni capitolo vince il punto più avanti. Non viaggiano i capitoli scaricati, le serie locali (sono file di quel dispositivo) e le password.
+- **Spazio**: in *Impostazioni › Spazio* vedi quanto occupano download, copertine, libri convertiti, cache e file temporanei, e puoi svuotare ogni cache. Con **Elimina dopo la lettura** (mai, subito, dopo un giorno o dopo una settimana) i download dei capitoli letti e degli episodi visti vengono rimossi da soli.
+- **Backup**: in *Impostazioni › Dati › Backup* crei, importi, condividi e ripristini backup `.rmbackup` con libreria, cronologia e progressi, repository, estensioni installate, server (senza password) e impostazioni. I file stanno in `rManga/Backups` nell'app File. Al ripristino scegli cosa rimettere; la libreria viene sostituita, ma prima rManga salva un backup di quella attuale. Si possono importare anche i backup di Aidoku (`.aib`).

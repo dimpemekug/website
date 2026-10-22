@@ -1,37 +1,43 @@
 ---
-title: "Scheda Tecnica e Galleria Fotografica"
-description: "Come compilare le specifiche dettagliate di un orologio, gestire la galleria fotografica e allegare documenti in Horologe."
+title: "Scheda tecnica e galleria fotografica"
+description: "Come compilare la scheda di un orologio, usare i campi personalizzati, gestire la galleria fotografica e allegare documenti in Horologe."
 project: "horologe"
 order: 3
 section: "Funzionalità"
 ---
 
-## Creazione e Compilazione Scheda Orologio
+## Creare la scheda di un orologio
 
-Quando aggiungi un orologio alla tua collezione (tasto `+`), puoi inserire sia i parametri identificativi essenziali sia le specifiche tecniche avanzate:
+Quando aggiungi un orologio (pulsante `+`) puoi compilare questi campi; obbligatori sono solo marca e modello.
 
-### Informazioni Generali
-- **Marca e Modello**: es. *Omega Speedmaster Professional*, *Seiko SKX007*, *Rolex Submariner*.
-- **Soprannome / Nickname**: es. *Moonwatch*, *007*, *Pepsi*.
-- **Referenza e Numero di Serie**: codici identificativi ufficiali della manifattura.
-- **Anno di Produzione e Anno di Acquisto**.
+### Identificazione
+- **Marca e modello**: es. *Omega Speedmaster Professional*, *Seiko SKX007*.
+- **Referenza e numero di serie**: i codici ufficiali della manifattura.
+- **Anno** di produzione.
 
-### Specifiche Tecniche e Movimento
-- **Tipologia Movimento**: Meccanico manuale, Automatico, Al quarzo, Spring Drive, Elettro-meccanico, Solare.
-- **Calibro e Frequenza**: nome del calibro, alternanze orarie (es. 28.800 A/h, 21.600 A/h), riserva di carica in ore e numero di rubini.
-- **Cassa e Dimensioni**: diametro (es. 39 mm, 42 mm), spessore, distanza da ansa ad ansa (*lug-to-lug*) e larghezza ansa per il cambio cinturini.
-- **Materiali e Vetro**: Acciaio inossidabile 316L/904L, Titanio grado 2/5, Oro giallo/rosa/bianco, Bronzo, Ceramica; Vetro zaffiro bombato, esalite/plexiglass o minerale temprato.
-- **Impermeabilità**: espressa in bar, atmosfere o metri (es. 100m / 10 bar, 300m / 30 bar).
+### Dati tecnici
+- **Movimento**: testo libero (es. automatico, carica manuale, quarzo).
+- **Calibro**: es. *3861*, *7S26*.
+- **Diametro**: es. *39 mm*, *42 mm*.
+- **Materiale della cassa**: es. acciaio, titanio, oro, bronzo, ceramica.
+
+### Acquisto e stato
+- **Prezzo e valuta**, **data di acquisto**.
+- **Scatola** e **documenti**: indica se l'orologio ha il corredo completo.
+- **Stato**: in collezione, in riparazione, venduto (con data e prezzo di vendita, per calcolare il guadagno) o in wishlist.
+- **Intervallo di revisione**: ogni quanti anni va revisionato, per i promemoria.
+- **Note** libere.
+
+### Campi personalizzati
+Tutto ciò che non ha un campo dedicato (vetro, impermeabilità, riserva di carica, larghezza delle anse, cinturini…) si aggiunge come **campo personalizzato**, con un nome e un valore a tua scelta.
 
 ---
 
-## Gestione Immagini e Documenti
+## Foto e documenti
 
-Horologe supporta scatti multipli in alta risoluzione:
+1. **Foto di copertina**: l'immagine che rappresenta l'orologio nella collezione. Puoi sceglierla dalla libreria foto oppure, su iOS, scattarla con la fotocamera.
+2. **Galleria**: altre foto dedicate a quadrante, lunetta, fondello, movimento o cinturini, da sfogliare a schermo intero.
+3. **Allegati**: garanzie, certificati, fatture e ricevute, come immagini o PDF, ciascuno con un nome.
 
-1. **Foto di Copertina**: l'immagine primaria visibile nelle anteprime della collezione e nei widget.
-2. **Foto Aggiuntive**: scatti dedicati al quadrante, ai riflessi della lunetta, al fondello inciso, al movimento o a cinturini personalizzati.
-3. **Allegati e Garanzie**: fotografa o importa certificati di autenticità, fatture di acquisto d'epoca, tessere di garanzia o ricevute di laboratorio.
-
-### Risoluzione Sicura dei Percorsi
-Le immagini vengono salvate all'interno dello storage isolato dell'applicazione. Sia su iOS che su Android, Horologe gestisce percorsi relativi con fallback automatico sul nome del file per sopravvivere agli aggiornamenti di sistema e alle variazioni degli identificatori UUID di sandbox.
+### Percorsi sicuri
+Le immagini sono salvate nella memoria riservata dell'app. Su iOS e su Android Horologe le ritrova anche se cambia il percorso della cartella dell'app dopo un aggiornamento di sistema, cercandole per nome nella cartella `watch_images`.

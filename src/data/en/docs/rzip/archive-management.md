@@ -1,51 +1,52 @@
 ---
-title: "Archive Management and Extraction"
-description: "Tree navigation, in-memory QuickLook previews, macOS bundle inspection (BundleInspector), and drag & drop extraction."
+title: "Exploring and Selective Extraction"
+description: "Tree navigation, in-memory preview, app and package inspection (BundleInspector) and drag-and-drop extraction in rZip."
 project: "rzip"
 order: 3
 section: "User Guides"
 ---
 
-## Instant Content Inspection Without Extraction
+## Exploring Without Extracting
 
-rZip eliminates the need to unpack multi-gigabyte archives just to access individual documents:
+With rZip you don't need to decompress a huge archive to reach a single document:
 
-- **Expandable Folders**: Toggle folders open and closed with a click on the disclosure triangle or using the `→` / `←` arrow keys. Holding `⌥` (Option) while clicking expands or collapses the entire directory branch recursively.
-- **Expand / Collapse All**: Use the `⌥⌘→` (Expand All) and `⌥⌘←` (Collapse All) keyboard shortcuts to view the complete internal archive tree in one keystroke.
-- **Intelligent Sorting**: Sort by Name, Size, Date, or File Kind, with folders pinned to the top for familiar Finder-style browsing.
-- **Real-Time Filtering**: The search bar (`⌘F`) filters tens of thousands of cataloged items in sub-millisecond speeds.
-- **Interactive Path Bar**: The breadcrumb bar at the top displays your current folder depth with Back and Forward history navigation.
+- **Expandable folders**: open and close folders with the disclosure triangle or the <kbd>→</kbd> / <kbd>←</kbd> keys. <kbd>⌥</kbd>-click the triangle to expand or collapse a whole branch.
+- **Expand or collapse all**: <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>→</kbd> and <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>←</kbd> show or fold the entire structure.
+- **Sorting**: by name, size, modification date or kind, ascending or descending; folders stay on top (configurable in Settings).
+- **Search**: the search field (<kbd>⌘</kbd> <kbd>F</kbd>) instantly filters even tens of thousands of entries.
+- **Navigation**: Back (<kbd>⌘</kbd> <kbd>[</kbd>), Forward (<kbd>⌘</kbd> <kbd>]</kbd>), Enclosing Folder (<kbd>⌘</kbd> <kbd>↑</kbd>) and Archive Top Level (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>H</kbd>); from the **Go** menu you can also show only password-protected items.
 
-## In-Memory Quick Look Previews
+## In-Memory Preview
 
-Pressing `Space` or `⌘Y` on any highlighted item:
-- rZip decodes the stream directly in volatile RAM (via libarchive or `7zz e -so`).
-- The native macOS Quick Look window renders high-resolution photos, multi-page PDFs, audio clips, and syntax-highlighted source code with zero temporary files on disk.
+Press <kbd>Space</kbd> or <kbd>⌘</kbd> <kbd>Y</kbd> on a selected file:
+- rZip reads the content directly in memory (with libarchive or `7zz e -so`), without writing temporary files to disk;
+- the preview shows images, PDF documents, text and source code. The size limit for images and PDFs is set in Settings (from 10 to 250 MB).
 
-## App and Package Inspection (`BundleInspector`)
+## Inspecting Apps and Packages (`BundleInspector`)
 
-A signature capability of rZip is the integrated **BundleInspector**: when an archive contains a macOS application (`.app`), plug-in (`.plugin`, `.appex`), framework, or installer package (`.pkg`), rZip parses internal `Info.plist` records, app icons, and Mach-O binary headers in memory without extracting anything:
+When an archive contains a Mac app (`.app`), an extension (`.appex`), a plug-in, a framework or an installer package (`.pkg`), rZip reads `Info.plist`, icons and Mach-O headers in memory and shows in the info panel:
 
-- **Identity and Metadata**: High-resolution application icon, full version string and build number, Bundle ID, App Store category, copyright, and minimum macOS deployment target.
-- **Mach-O Architectures**: Identifies whether the binary runs as *Apple Silicon* (`arm64`), *Intel* (`x86_64`), or *Universal*.
-- **Code Signatures & Security**: Verifies the presence of a valid digital code signature (`_CodeSignature`), Apple Notarization Ticket (`stapler` CodeResources check), and Mac App Store receipt (`_MASReceipt`).
-- **Installer Packages (`.pkg`)**: Inspects the internal XAR index of installer packages, reporting component identifiers, target disk install locations, and total footprint.
+- **Identity and version**: icon, version, build, bundle ID, category and minimum macOS version required.
+- **Architectures**: whether the binary is for *Apple Silicon* (`arm64`), *Intel* (`x86_64`) or *universal*.
+- **Signing**: presence of the code signature (`_CodeSignature`), the notarization ticket and the Mac App Store receipt (`_MASReceipt`).
+- **Installer packages (`.pkg`)**: from the XAR index, without extracting anything, title, version, included components, installed size, install location, scripts and signature.
 
-## Drag-and-Drop Extraction into Finder
+## Drag-and-Drop Extraction
 
-rZip implements the modern macOS `Transferable` and `FileRepresentation` protocol:
+rZip uses macOS `Transferable` with `FileRepresentation`:
 
-1. Select one or more files in the table (or drag the large icon from the Inspector).
-2. Drag them straight into any Finder window or desktop space.
-3. Extraction executes only upon cursor release:
-   - If contents are encrypted, rZip prompts for the password on drop (and re-prompts if incorrect).
-   - A dedicated extraction banner monitors real-time byte throughput and progress.
-   - Files are extracted safely with duplicate renaming to prevent overwriting existing assets.
+1. Select one or more files in the list (or drag the large icon from the info panel).
+2. Drag them to a Finder folder or the Desktop.
+3. Extraction happens only when you drop:
+   - for protected files, rZip asks for the password on drop (and asks again if it's wrong);
+   - a banner shows extraction progress;
+   - extracted files never overwrite files with the same name already there.
 
-## Extraction Commands (`⌘E` and `⇧⌘E`)
+## Extraction on Command (<kbd>⌘</kbd> <kbd>E</kbd> and <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd>)
 
-From the toolbar, File menu, or contextual right-click menu:
-- **Extract Selection…** (`⌘E`): Unpacks only the highlighted items.
-- **Extract All…** (`⇧⌘E`): Decompresses the complete archive.
-- **Smart Folder Policy**: Single-item archives are unpacked directly; multi-item archives are automatically enclosed in a dedicated folder bearing the archive name.
-- **Destination Options**: In Settings, configure rZip to ask for a destination folder every time, extract beside the archive, or use a fixed download directory.
+From the toolbar, the File menu or the context menu:
+- **Extract Selection…** (<kbd>⌘</kbd> <kbd>E</kbd>): extracts only the selected items.
+- **Extract All…** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd>): extracts the whole archive.
+- **Folders**: if the archive has a single item at its root it's extracted directly, otherwise rZip creates a folder named after the archive (in Settings you can ask for that folder every time).
+- **Destination**: in Settings choose whether to ask every time, extract next to the archive or always use a chosen folder, and whether to show the result in the Finder afterwards.
+- **Safety**: extraction blocks paths that would escape the destination folder (`..`, symbolic links); on error or cancellation partial files are removed.

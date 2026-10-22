@@ -8,39 +8,39 @@ section: "Iniziare"
 
 ## Cos'è rExif
 
-**rExif** è l'editor nativo di metadati per foto e video su macOS (sviluppato in SwiftUI per macOS 15 Sequoia o successivo, con supporto universale Apple Silicon e Intel).
+**rExif** è un editor nativo di metadati per foto e video su macOS (sviluppato in SwiftUI per macOS 15 Sequoia o successivo, per Mac con Apple Silicon e Intel).
 
-È progettato per risolvere in modo rapido e sicuro tutti i problemi comuni delle librerie multimediali:
+È pensato per risolvere in modo rapido e sicuro i problemi più comuni delle librerie di foto e video:
 - Date di scatto errate o assenti (orologi della fotocamera non aggiornati, cambi di fuso orario, esportazioni da cloud).
-- Foto prive di geolocalizzazione GPS.
+- Foto senza posizione GPS.
 - Nomi di file criptici o non ordinabili (`_DSC0421.JPG`, screenshot, salvataggi WhatsApp).
 - Campi autore, copyright, parole chiave e valutazioni da uniformare per cataloghi professionali.
-- Necessità di igienizzare i file prima di condividerli online rimuovendo posizioni e dati personali.
+- File da ripulire prima di condividerli online, togliendo posizione e dati personali.
 
-## Principi di Progettazione
+## Principi
 
-1. **Anteprima delle modifiche in arancione**: Nessuna modifica viene scritta sul disco finché non premi **Salva** (`⌘S`). Ogni valore calcolato o modificato compare evidenziato in arancione nella tabella e nell'inspector, permettendo di verificare riga per riga il risultato.
-2. **Scrittura Non Distruttiva (Zero Ricompressione)**:
-   - **JPEG**: Riscritto tramite `CGImageDestinationCopyImageSource`, fondendo unicamente i tag modificati senza toccare la matrice dei pixel.
-   - **HEIC, PNG, TIFF**: Copia integrale dei dati immagine con sostituzione mirata del blocco metadati.
-   - **MOV, MP4, M4V**: Esportazione *passthrough* con patch binaria diretta degli atomi QuickTime (`mvhd`, `tkhd`, `mdhd`) senza ricodificare audio o video.
-   - **RAW (CR2, CR3, NEF, ARW, DNG, RAF...) e video non riscrivibili (AVI, MKV, WMV, MTS)**: Il file originale non viene mai toccato sul disco; le modifiche vengono scritte in un file sidecar `.xmp` standard adiacente, letto da Adobe Lightroom, Bridge e Premiere.
-3. **Privacy Assoluta & Zero Rete Proprietaria**: L'app opera all'interno della Sandbox di macOS (`com.dimpemekug.rexif`). Non contiene server proprietari, SDK di terze parti, account o analytics. Le sole chiamate di rete sono gestite direttamente dai framework Apple MapKit e Core Location quando l'utente usa le funzioni di mappa o ricerca luogo.
-4. **Sicurezza dei Dati su Disco**: La sovrascrittura avviene tramite file temporaneo e cloni APFS. In caso di interruzione imprevista (es. disco scollegato), l'originale viene ripristinato automaticamente o conservato come copia di riserva in `Application Support/Recupero`.
+1. **Anteprima delle modifiche in arancione**: nessuna modifica viene scritta sul disco finché non premi **Salva** (`⌘S`). Ogni valore calcolato o modificato compare in arancione nella tabella e nell'inspector, così puoi controllare il risultato riga per riga.
+2. **Scrittura senza ricompressione**:
+   - **JPEG**: riscritto con `CGImageDestinationCopyImageSource`, unendo solo i tag modificati senza toccare i pixel.
+   - **HEIC, PNG, TIFF**: copia completa dei dati dell'immagine con sostituzione dei soli metadati.
+   - **MOV, MP4, M4V**: esportazione *passthrough* con modifica diretta degli atomi QuickTime (`mvhd`, `tkhd`, `mdhd`), senza ricodificare audio o video.
+   - **RAW (CR2, CR3, NEF, ARW, DNG, RAF…) e video non riscrivibili (AVI, MKV, WMV, MTS…)**: il file originale non viene mai toccato; le modifiche vengono scritte in un file sidecar `.xmp` standard accanto al file, letto da Adobe Lightroom, Bridge e Premiere.
+3. **Privacy**: l'app lavora nella sandbox di macOS e non ha server propri, SDK di terze parti, account o analytics. Le uniche connessioni sono quelle dei framework Apple MapKit e Core Location quando usi la mappa, la ricerca dei luoghi o il calcolo di città e paese dalle coordinate.
+4. **Sicurezza dei dati**: la sovrascrittura passa da un file temporaneo e da un clone APFS. Se si interrompe (es. disco scollegato), l'originale viene ripristinato automaticamente oppure ne resta una copia completa, al limite in `Application Support/Recupero`.
 
-## Modalità di Visualizzazione
+## Modalità di visualizzazione
 
-Dalla barra degli strumenti o tramite scorciatoia da tastiera puoi alternare tra due modalità:
-- **Vista Tabella** (`⌃⌘1`): Elenco completo con miniature ridimensionabili (`⌘+`, `⌘-`), colonne ordinabili e personalizzabili, e selezione multipla.
-- **Vista Mappa** (`⌃⌘2`): Visualizzazione geografica su Apple Maps di tutti gli elementi georeferenziati, con raggruppamento dei pin per località.
+Dalla barra degli strumenti o con una scorciatoia puoi passare da una modalità all'altra:
+- **Come tabella** (`⌃⌘1`): elenco completo con miniature ridimensionabili (`⌘+`, `⌘-`), colonne ordinabili e selezione multipla.
+- **Come mappa** (`⌃⌘2`): tutti gli elementi con una posizione su una mappa di Apple Maps, ciascuno con il suo segnaposto.
 
-## Prossimi Passi
+## Prossimi passi
 
-- [Installazione e Requisiti](/progetti/rexif/docs/installazione): Piattaforme, sandbox e integrazione con la libreria Apple Foto.
-- [Gestione e Correzione Date](/progetti/rexif/docs/gestione-date): Spostamento intervalli, correzione orologio da foto e importazione da Google Takeout.
-- [Geolocalizzazione e Apple Maps](/progetti/rexif/docs/geolocalizzazione-mappa): Assegnazione GPS, tracce GPX e reverse geocoding toponomastico.
-- [Metadati Testuali e Copyright](/progetti/rexif/docs/metadati-testuali-iptc): Modelli con segnaposto, parole chiave e valutazioni a stelle.
-- [Modifiche in Blocco e Rinomina](/progetti/rexif/docs/rinomina-esportazione-batch): Finestra batch (`⇧⌘D`), schemi di rinomina ed esportazione/importazione CSV.
-- [Pulizia e Copie Sanificate](/progetti/rexif/docs/pulizia-metadati): Esportazione di copie prive di dati personali.
-- [Dettagli Formati e Sidecar XMP](/progetti/rexif/docs/formati-e-sidecar): Specifiche tecniche su MOV/MP4, RAW e limiti noti.
-- [Scorciatoie e Selezioni Rapide](/progetti/rexif/docs/scorciatoie-filtri): Elenco completo delle scorciatoie da tastiera e dei filtri intelligenti.
+- [Installazione e requisiti](/progetti/rexif/docs/installazione): piattaforme, sandbox e integrazione con la libreria di Foto.
+- [Gestione e correzione delle date](/progetti/rexif/docs/gestione-date): spostamento di intervalli, correzione dell'orologio della fotocamera e date da Google Takeout.
+- [Geolocalizzazione e Apple Maps](/progetti/rexif/docs/geolocalizzazione-mappa): posizione GPS, tracce GPX e città e paese dalle coordinate.
+- [Metadati testuali e copyright](/progetti/rexif/docs/metadati-testuali-iptc): modelli con segnaposto, parole chiave e valutazioni a stelle.
+- [Rinomina in blocco e CSV](/progetti/rexif/docs/rinomina-esportazione-batch): modelli di rinomina ed esportazione e importazione dei metadati in CSV.
+- [Pulizia e copie senza dati personali](/progetti/rexif/docs/pulizia-metadati): esportazione di copie da condividere.
+- [Formati e sidecar XMP](/progetti/rexif/docs/formati-e-sidecar): dettagli tecnici su MOV/MP4, RAW e limiti noti.
+- [Scorciatoie e selezioni rapide](/progetti/rexif/docs/scorciatoie-filtri): elenco delle scorciatoie da tastiera e del menu Seleziona.

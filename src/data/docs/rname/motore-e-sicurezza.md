@@ -1,67 +1,67 @@
 ---
-title: "Motore e Sicurezza Atomica"
-description: "L'architettura del motore di rinomina di rName: operazione in due fasi con file temporanei, gestione di maiuscole su APFS, rollback automatico e storico Annulla."
+title: "Motore e sicurezza"
+description: "Come funziona il motore di rinomina di rName: operazione in due fasi con nomi temporanei, cambi di maiuscole su APFS, ripristino automatico e annullamento."
 project: "rname"
 order: 4
 section: "Sicurezza e Sistema"
 ---
 
-## Il Rischio delle Operazioni di File System
+## I rischi della rinomina
 
-La manipolazione dei nomi dei file a livello di sistema operativo è un'operazione delicata. Se un'utility esegue le rinomine direttamente in un unico passaggio (`rename(sorgente, destinazione)`), si verificano con frequenza tre categorie di guasti critici:
+Rinominare file è un'operazione delicata. Se un'utility rinomina i file direttamente, in un solo passaggio (`rename(origine, destinazione)`), capitano spesso tre tipi di problemi:
 
-1. **Scambi circolari**: voler scambiare due file tra loro (`A` → `B` e `B` → `A`) fallisce al primo tentativo, poiché la destinazione `B` risulta già occupata da un file esistente.
-2. **Cambiamento di sole maiuscole**: sul filesystem predefinito del Mac (**APFS** o **HFS+** formattati come _Case-Insensitive_), rinominare `archivio.zip` in `Archivio.zip` fallisce o viene ignorato perché per il filesystem i due nomi corrispondono allo stesso nodo.
-3. **Interruzioni a metà batch**: se un'operazione su 500 file si arresta al file numero 250 (ad esempio per un permesso revocato o un disco disconnesso), l'utente si ritrova con l'archivio diviso a metà, senza sapere quali file siano stati toccati e quali no.
+1. **Scambi di nomi**: scambiare due file (`A` → `B` e `B` → `A`) fallisce subito, perché la destinazione `B` è ancora occupata.
+2. **Cambi di sole maiuscole**: sul file system predefinito del Mac (**APFS** o **HFS+** senza distinzione tra maiuscole e minuscole), rinominare `archivio.zip` in `Archivio.zip` fallisce o viene ignorato, perché per il file system i due nomi sono lo stesso file.
+3. **Interruzioni a metà**: se un'operazione su 500 file si ferma al file 250 (per esempio per un permesso revocato o un disco scollegato), ti ritrovi con l'archivio a metà, senza sapere quali file sono stati toccati.
 
-rName risolve alla radice tutti questi scenari attraverso il motore transazionale **RenameExecutor**.
+rName evita tutti questi casi con il suo motore di rinomina (`RenameExecutor`).
 
 ---
 
-## Esecuzione Atomica in Due Fasi
+## Rinomina in due fasi
 
-Tutte le operazioni sul disco vengono eseguite in background fuori dal _main actor_, seguendo una procedura rigorosa in due fasi:
+Le operazioni sul disco avvengono in background, fuori dal thread principale, in due fasi:
 
 ```
-[File Originale] ──(Fase 1)──> [.rname-<UUID> Temporaneo] ──(Fase 2)──> [Nome Finale Destinazione]
+[File originale] ──(fase 1)──> [.rname-<UUID> temporaneo] ──(fase 2)──> [Nome finale]
 ```
 
-### Fase 1 — Staging su Nomi Temporanei Univoci
+### Fase 1: nomi temporanei
 
-Ciascun file sorgente valido viene innanzitutto spostato su un nome temporaneo nascosto, generato con un identificatore univoco globale all'interno della medesima cartella:
+Ogni file da rinominare riceve prima un nome temporaneo nascosto e univoco, nella stessa cartella:
 
 ```
 foto.jpg  ──>  .rname-9B2A3D1E-548B-4FA3-88B1-9C3E14B82811
 ```
 
-In questo modo, il nome originale viene liberato immediatamente dal filesystem. Scambi complessi di nomi (`A` → `B` e `B` → `A`) e cicli multipli possono così avvenire senza alcuna collisione.
+Così il nome originale si libera subito, e scambi (`A` → `B` e `B` → `A`) o cicli più lunghi avvengono senza collisioni.
 
-### Fase 2 — Spostamento verso il Nome Definitivo
+### Fase 2: nomi definitivi
 
-Tutti i file temporanei vengono rinominati nella loro destinazione finale:
+Poi ogni file temporaneo riceve il nome finale:
 
 ```
 .rname-9B2A3D1E-548B-4FA3-88B1-9C3E14B82811  ──>  Foto.jpg
 ```
 
-Il filesystem accetta ora il nuovo nome (anche nel caso di sole lettere maiuscole) poiché la destinazione risulta libera da conflitti di binding.
+Ora il file system accetta il nuovo nome, anche quando cambiano solo le maiuscole, perché la destinazione è libera.
 
 ---
 
-## Ripristino di Emergenza (Rollback Automatico)
+## Ripristino automatico
 
-Se durante la seconda fase uno spostamento fallisce (ad esempio a causa di un file system esterno improvvisamente in sola lettura):
+Se nella seconda fase uno spostamento fallisce (per esempio perché un disco esterno è diventato di sola lettura):
 
-- Il motore intercetta immediatamente l'errore.
-- Il file temporaneo viene **immediatamente ripristinato al suo nome originale di partenza**.
-- Nessun file resta mai abbandonato sul disco con l'estensione o il prefisso temporaneo `.rname-`.
-- L'utente riceve un riepilogo dettagliato con la spiegazione del fallimento.
+- il motore intercetta subito l'errore;
+- il file temporaneo **torna al suo nome originale**;
+- nessun file resta sul disco con il nome temporaneo `.rname-`;
+- ricevi un riepilogo con il motivo dell'errore.
 
 ---
 
-## Storico delle Operazioni e Funzione Annulla (⌥⌘Z)
+## Annullare l'ultima rinomina (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
 
-Ogni sessione di rinomina andata a buon fine viene salvata in memoria all'interno di una struttura `RenameOperation`. Questa traccia registra la coppia esatta tra la posizione finale raggiunta e il nome originale di ciascun file coinvolto.
+Ogni rinomina riuscita viene ricordata, con il nome di arrivo e quello di partenza di ciascun file.
 
-- Se ti accorgi di aver applicato le regole sbagliate, premi la scorciatoia di sistema <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (oppure scegli dal menu _Modifica › Annulla rinomina_).
-- rName esegue istantaneamente il piano inverso in due fasi, riportando tutti i file della cartella al loro stato originario.
+- Se ti accorgi di aver applicato le regole sbagliate, premi <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (oppure scegli _Rinomina › Annulla ultima rinomina_).
+- rName esegue l'operazione inversa, sempre in due fasi, e riporta tutti i file al nome che avevano prima.

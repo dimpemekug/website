@@ -1,51 +1,52 @@
 ---
-title: "Gestione ed Estrazione Selettiva"
-description: "Navigazione ad albero, anteprima in memoria, ispezione app e pacchetti (BundleInspector) ed estrazione drag & drop."
+title: "Esplorazione ed estrazione selettiva"
+description: "Navigazione ad albero, anteprima in memoria, ispezione di app e pacchetti (BundleInspector) ed estrazione con il trascinamento in rZip."
 project: "rzip"
 order: 3
 section: "Guide d'uso"
 ---
 
-## Esplorazione Istantanea senza Estrazione
+## Esplorare senza estrarre
 
-rZip elimina la necessità di decomprimere archivi giganti per accedere a singoli documenti:
+Con rZip non serve decomprimere un archivio enorme per arrivare a un singolo documento:
 
-- **Cartelle Espandibili**: Puoi aprire e chiudere le cartelle interne con un clic sul triangolo di espansione o usando i tasti freccia `→` / `←`. Tenendo premuto `⌥` (Option) e cliccando sul triangolo espandi o comprimi l'intero ramo ricorsivamente.
-- **Espandi o Comprimi Tutto**: Con le scorciatoie `⌥⌘→` (Espandi tutto) e `⌥⌘←` (Comprimi tutto) puoi visualizzare l'intera struttura dell'archivio in un colpo solo.
-- **Ordinamento Intelligente**: Ordinamento per Nome, Dimensione, Data o Tipo di file, con le cartelle mantenute sempre in cima per una navigazione ordinata.
-- **Ricerca in Tempo Reale**: La barra di ricerca (`⌘F`) filtra istantaneamente decine di migliaia di voci interne in frazioni di millisecondo.
-- **Barra del Percorso (PathBar)**: Mostra il percorso breadcrumb della cartella corrente con navigazione Indietro/Avanti.
+- **Cartelle espandibili**: apri e chiudi le cartelle con il triangolo o con i tasti <kbd>→</kbd> / <kbd>←</kbd>. Con <kbd>⌥</kbd>-clic sul triangolo espandi o comprimi l'intero ramo.
+- **Espandi o comprimi tutto**: <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>→</kbd> e <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>←</kbd> mostrano o richiudono tutta la struttura.
+- **Ordinamento**: per nome, dimensione, data di modifica o tipo, in ordine crescente o decrescente; le cartelle restano in cima (si può cambiare nelle Impostazioni).
+- **Ricerca**: il campo di ricerca (<kbd>⌘</kbd> <kbd>F</kbd>) filtra all'istante anche decine di migliaia di voci.
+- **Navigazione**: Indietro (<kbd>⌘</kbd> <kbd>[</kbd>), Avanti (<kbd>⌘</kbd> <kbd>]</kbd>), Cartella superiore (<kbd>⌘</kbd> <kbd>↑</kbd>) e Inizio dell'archivio (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>H</kbd>); dal menu **Vai** puoi anche mostrare solo gli elementi protetti da password.
 
-## Anteprima Rapida in Memoria RAM (Quick Look)
+## Anteprima in memoria
 
-Premendo la barra spaziatrice `Spazio` o `⌘Y` su qualsiasi file selezionato:
-- rZip decodifica e legge il flusso di byte direttamente in memoria RAM (tramite libarchive o streaming `7zz e -so`).
-- L'anteprima nativa Quick Look di macOS visualizza immagini ad alta risoluzione, documenti PDF, testi o codice sorgente senza scrivere file temporanei su disco.
+Premendo <kbd>Spazio</kbd> o <kbd>⌘</kbd> <kbd>Y</kbd> su un file selezionato:
+- rZip legge il contenuto direttamente in memoria (con libarchive o con `7zz e -so`), senza scrivere file temporanei su disco;
+- l'anteprima mostra immagini, documenti PDF, testi e codice sorgente. Il limite di dimensione per immagini e PDF si regola nelle Impostazioni (da 10 a 250 MB).
 
-## Ispezione di App e Pacchetti (`BundleInspector`)
+## Ispezione di app e pacchetti (`BundleInspector`)
 
-Una delle caratteristiche più innovative di rZip è il modulo **BundleInspector**: quando un archivio contiene un'applicazione per Mac (`.app`), un'estensione (`.plugin`, `.appex`), un framework o un pacchetto di installazione (`.pkg`), rZip legge in memoria i file `Info.plist`, le icone e le intestazioni Mach-O dei binari, mostrando nell'Inspector:
+Quando un archivio contiene un'app per Mac (`.app`), un'estensione (`.appex`), un plug-in, un framework o un pacchetto di installazione (`.pkg`), rZip legge in memoria `Info.plist`, icone e intestazioni Mach-O e mostra nel pannello informazioni:
 
-- **Identità e Versioni**: Icona dell'app ad alta risoluzione, versione completa, numero di build, Bundle ID, categoria e requisiti minimi di sistema macOS.
-- **Architetture Mach-O**: Rileva se il binario è compilato per *Apple Silicon* (`arm64`), *Intel* (`x86_64`) oppure se è un binario *Universale*.
-- **Sicurezza e Firme**: Verifica la presenza della firma di codice digitale (`_CodeSignature`), del ticket di notarizzazione Apple (*Notarization Ticket*) e dello scontrino di acquisto Mac App Store (`_MASReceipt`).
-- **Pacchetti Installer (`.pkg`)**: Esamina l'indice interno XAR del pacchetto senza estrarlo, mostrando i componenti inclusi, la dimensione installata stimata e il percorso di installazione designato.
+- **Identità e versione**: icona, versione, build, bundle ID, categoria e versione minima di macOS richiesta.
+- **Architetture**: se il binario è per *Apple Silicon* (`arm64`), *Intel* (`x86_64`) o *universale*.
+- **Firma**: presenza della firma del codice (`_CodeSignature`), del ticket di notarizzazione e della ricevuta del Mac App Store (`_MASReceipt`).
+- **Pacchetti di installazione (`.pkg`)**: dall'indice XAR, senza estrarre nulla, titolo, versione, componenti inclusi, dimensione installata, percorso di installazione, presenza di script e firma.
 
-## Estrazione tramite Drag & Drop nel Finder
+## Estrazione con il trascinamento
 
-rZip implementa il protocollo moderno `Transferable` con `FileRepresentation` di macOS:
+rZip usa `Transferable` con `FileRepresentation` di macOS:
 
-1. Seleziona uno o più file nella lista (oppure trascina la grande icona dell'elemento dall'Inspector).
-2. Trascinali direttamente in qualsiasi cartella del Finder o sulla Scrivania.
-3. L'estrazione viene eseguita solo al momento del rilascio del cursore:
-   - Se i file sono protetti da password, rZip mostra la richiesta di password al rilascio (e la richiede se errata).
-   - Un banner di avanzamento dedicato mostra la velocità e i byte estratti in tempo reale.
-   - I file estratti non sovrascrivono mai documenti omonimi già presenti nella destinazione.
+1. Seleziona uno o più file nell'elenco (oppure trascina la grande icona dal pannello informazioni).
+2. Trascinali in una cartella del Finder o sulla Scrivania.
+3. L'estrazione avviene solo al rilascio:
+   - per i file protetti, rZip chiede la password al rilascio (e la richiede di nuovo se è sbagliata);
+   - un banner mostra l'avanzamento dell'estrazione;
+   - i file estratti non sovrascrivono mai quelli con lo stesso nome già presenti.
 
-## Estrazione su Comando (`⌘E` e `⇧⌘E`)
+## Estrazione su comando (<kbd>⌘</kbd> <kbd>E</kbd> e <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd>)
 
 Dalla barra degli strumenti, dal menu File o dal menu contestuale:
-- **Estrai selezione…** (`⌘E`): Estrae solo gli elementi correntemente selezionati.
-- **Estrai tutto…** (`⇧⌘E`): Decomprime l'intero archivio.
-- **Politica delle Cartelle**: Se l'archivio contiene un solo elemento alla radice, viene estratto direttamente; se contiene più file sparsi, rZip crea automaticamente una cartella con il nome dell'archivio per evitare disordine sul Mac.
-- **Destinazione Flessibile**: Nelle Impostazioni puoi scegliere se chiedere la cartella ogni volta, estrarre accanto all'archivio, o utilizzare una cartella di destinazione fissa (es. `~/Downloads`).
+- **Estrai selezione…** (<kbd>⌘</kbd> <kbd>E</kbd>): estrae solo gli elementi selezionati.
+- **Estrai tutto…** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd>): estrae l'intero archivio.
+- **Cartelle**: se l'archivio ha un solo elemento alla radice viene estratto direttamente, altrimenti rZip crea una cartella con il nome dell'archivio (nelle Impostazioni puoi chiedere di crearla sempre).
+- **Destinazione**: nelle Impostazioni scegli se chiedere la cartella ogni volta, estrarre accanto all'archivio o usare sempre una cartella scelta, e se mostrare il risultato nel Finder al termine.
+- **Sicurezza**: l'estrazione blocca i percorsi che uscirebbero dalla cartella di destinazione (`..`, link simbolici); in caso di errore o annullamento i file parziali vengono rimossi.

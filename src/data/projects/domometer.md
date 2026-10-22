@@ -1,6 +1,6 @@
 ---
 title: "DomoMeter"
-description: "App mobile per monitorare i consumi domestici di luce, gas e acqua in un'unica dashboard. Dati salvati localmente, nessun account richiesto. Gratuita, senza pubblicità né acquisti in-app."
+description: "App per iPhone, iPad e Android per tenere sotto controllo i consumi di luce, gas e acqua dalle letture dei contatori, con fasce F1/F2/F3, grafici e limiti annuali. Dati sul dispositivo, nessun account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false
 tags: ["iOS", "Android", "mobile", "utility", "privacy"]
@@ -14,19 +14,21 @@ privacyUrl: "/progetti/domometer/privacy/"
 
 ## Cos'è DomoMeter
 
-DomoMeter nasce da un problema concreto: tenere traccia dei consumi domestici significa gestire bollette cartacee, foglietti sparsi, o fogli di calcolo difficili da aggiornare. L'app unifica luce, gas e acqua in un'unica interfaccia — pensata per chi vuole capire i propri consumi senza complicazioni.
+DomoMeter nasce da un problema concreto: tenere traccia dei consumi di casa significa gestire bollette cartacee, foglietti sparsi o fogli di calcolo difficili da aggiornare. L'app riunisce luce, gas e acqua in un'unica schermata: registri le letture dei contatori quando vuoi e vedi subito quanto consumi, mese per mese e anno per anno.
 
 ## Funzionalità principali
 
-- **Dashboard unificata** — luce, gas e acqua in un solo posto
-- **Statistiche mensili** — andamento dei consumi nel tempo con grafici di tendenza
-- **Previsioni di spesa** — avvisi proattivi prima che arrivi la bolletta
-- **Report mensili** — riepilogo esportabile per tenere tutto sotto controllo
-- **Due stili di interfaccia** — design moderno iOS e look retro monospaziato
-- **Dark mode** — supportata in entrambi gli stili
-- **Offline-first** — funziona senza connessione, i dati non lasciano mai il dispositivo
+- **Letture del contatore** — per luce, gas e acqua, con data modificabile per inserire anche quelle passate
+- **Fasce F1, F2 e F3** — per l'elettricità, oltre alla lettura unica
+- **Consumi ripartiti tra i mesi** — anche se leggi il contatore in date irregolari, i totali mensili restano confrontabili
+- **Grafici e confronti** — consumo mensile e annuale, confronto con il mese precedente e con gli anni passati, mappa dei giorni di lettura
+- **Limiti annuali** — un consumo previsto per ogni utenza, con la percentuale già usata
+- **Più abitazioni** — profili separati per casa, ufficio o seconda casa
+- **Backup su file** — esporta i dati in JSON e reimportali quando serve, anche passando da iPhone ad Android e viceversa
+- **Solo su iOS** — tariffe con stima della bolletta, storico delle tariffe e budget; promemoria di lettura; note e sostituzione del contatore; esportazione e importazione CSV; sincronizzazione iCloud facoltativa
+- **Privacy** — nessun account, nessun tracciamento; su Android l'app non si connette a Internet
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
-Disponibile su **iOS** e **Android**.
+Disponibile su **iPhone** e **iPad** con iOS/iPadOS 18 o successivo e su **Android** 8.0 o successivo, in sette lingue.

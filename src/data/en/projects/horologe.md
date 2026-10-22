@@ -3,6 +3,7 @@ title: "Horologe"
 description: "Mobile app to catalog and manage your watch collection. Stats, status & wishlist, wear log, and biometric lock. Local database, free, with no ads or in-app purchases."
 pubDatetime: 2026-02-11T00:00:00+01:00
 draft: false
+tags: ["iOS", "Android", "mobile", "collecting", "privacy"]
 appStore: "https://apps.apple.com/us/app/horologe/id6758836092"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.horologe"
 privacyDataTypes: "watch details (brand, model, price, dates), photos, service records, wishlist, wear log, accuracy measurements, and attached documents"
@@ -25,11 +26,11 @@ Horologe is the app for watch enthusiasts who want to catalog, manage, and admir
 - **Wear log** — mark the days you wear a watch with a tap and discover which pieces you reach for the most
 - **Accuracy log** — track the daily rate deviation of your movements over time
 - **Document attachments** — keep warranty cards, receipts, and certificates alongside each watch
-- **App lock** — protect your collection with Face ID, Touch ID, or fingerprint
-- **Export & backup** — PDF to share, CSV for insurance and inventory, ZIP/JSON for complete local backups
+- **App lock** — protect your collection with Face ID or Touch ID on iOS, and fingerprint, face or PIN on Android
+- **Export & backup** — a PDF sheet for each watch, an insurance PDF inventory (iOS), a CSV of the collection and a full ZIP backup with photos, compatible between iOS and Android
 - **Privacy first** — database stored locally on your device (or your personal iCloud), no external servers
 - **No subscription** — free, with no ads and no in-app purchases
 
 ## Platforms
 
-Available on **iOS** and **Android**.
+Available on **iPhone** and **iPad** with iOS/iPadOS 17 or later and on **Android** 7.0 or later, in seven languages. iCloud sync is available on iOS only.

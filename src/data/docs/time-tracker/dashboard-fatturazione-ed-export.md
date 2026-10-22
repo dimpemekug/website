@@ -1,40 +1,41 @@
 ---
-title: "Dashboard, Fatturazione ed Export"
-description: "Cruscotto analitico, filtri temporali, quote fatturabili, export PDF/CSV e backup JSON in Time Tracker."
+title: "Dashboard, fatturazione ed export"
+description: "Dashboard con ore per progetto, quota fatturabile e ricavi, filtri per periodo e progetto, esportazione PDF e CSV e backup JSON in Time Tracker."
 project: "time-tracker"
 order: 5
 section: "Analisi e Dati"
 ---
 
-## Il Cruscotto Analitico (Dashboard)
+## La Dashboard
 
-La scheda **Dashboard** trasforma le ore registrate in informazioni operative e finanziarie chiare:
+La scheda **Dashboard** trasforma le ore registrate in informazioni chiare:
 
-- **Scheda Totale in Evidenza**: visualizza a colpo d'occhio le ore lavorate nel periodo selezionato.
-- **Ripartizione Progetti**: grafici a barre e percentuali che mostrano la concentrazione del lavoro sui diversi clienti.
-- **Quota Fatturabile**: separa chiaramente le ore remunerabili da quelle non fatturabili (es. formazione o manutenzione interna).
-- **Stima Economica**: moltiplica le ore per le rispettive tariffe orarie, calcolando l'imponibile totale e l'imposta IVA stimata.
-
----
-
-## Filtri Temporali e Personalizzati
-
-Puoi analizzare le tue metriche selezionando:
-- **Periodi Rapidi**: Questa Settimana, Questo Mese, Questo Anno, oppure il periodo precedente per un confronto diretto.
-- **Intervallo Libero**: imposta date di inizio e fine personalizzate (es. per preparare la fattura di un trimestre specifico).
-- **Filtro Progetti**: isola uno o più progetti per verificare il monte ore di un singolo cliente.
+- **Totale in evidenza**: le ore lavorate nel periodo scelto.
+- **Ore per progetto**: grafici e percentuali che mostrano come si distribuisce il lavoro tra progetti e clienti.
+- **Quota fatturabile**: separa le ore dei progetti con fatturazione attiva da quelle non fatturabili (es. formazione o attività interne).
+- **Ricavi**: per ogni progetto fatturabile, le ore moltiplicate per la tariffa oraria, IVA inclusa.
 
 ---
 
-## Esportazione Report PDF e Tabelle CSV
+## Periodi e filtri
 
-- **Report PDF Professionale**: genera un prospetto riepilogativo impaginato con logo, dettagli del cliente, ore per giorno, totali parziali e calcolo fiscale complessivo, pronto da allegare alla fattura o inviare al committente.
-- **Esportazione CSV**: scarica i dati grezzi con date, orari di inizio/fine, durate decimali, titoli, note e tariffe per analisi in Microsoft Excel o Google Fogli.
+Puoi analizzare i dati scegliendo:
+- **Periodi rapidi**: settimana, mese o anno in corso;
+- **Intervallo personalizzato**: date di inizio e fine a scelta (es. per preparare la fattura di un trimestre);
+- **Filtro per progetto**: uno o più progetti, per vedere il monte ore di un singolo cliente.
 
 ---
 
-## Backup e Ripristino JSON
+## Esportazione PDF e CSV
 
-In **Impostazioni › Backup e Ripristino**:
-- **Esporta Backup**: genera un file `.json` universale contenente l'intero database.
-- **Importa Backup**: ripristina la tua cronologia completa su qualsiasi dispositivo iOS o Android senza alcuna modifica o conversione.
+- **Report PDF**: un riepilogo impaginato del periodo con ore totali, ripartizione per progetto, totali fatturabili e ricavi, e l'elenco delle attività; pronto da allegare a una fattura o da inviare al committente.
+- **CSV**: i dati grezzi delle attività, con data, orari di inizio e fine, ore in formato decimale, progetto, titolo, note e indicazione dei totali giornalieri, da aprire in Excel, Numbers o Fogli Google.
+
+---
+
+## Backup e ripristino JSON
+
+Nelle **Impostazioni**:
+- **Esporta backup**: crea un file `.json` con tutti i progetti e le attività.
+- **Importa backup**: ripristina i dati su qualsiasi dispositivo iOS o Android, senza conversioni.
+- **Dati di esempio** e **azzeramento del database**, per provare l'app o ripartire da zero.

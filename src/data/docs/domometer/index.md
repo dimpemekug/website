@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a DomoMeter"
-description: "Panoramica di DomoMeter: monitoraggio dei consumi domestici di luce, gas e acqua su iOS e Android, con calcoli pro-rata, fasce orarie e privacy assoluta."
+description: "Panoramica di DomoMeter: monitoraggio dei consumi domestici di luce, gas e acqua su iOS e Android, con ripartizione dei consumi tra i mesi, fasce orarie e dati che restano sul dispositivo."
 project: "domometer"
 order: 1
 section: "Iniziare"
@@ -8,30 +8,35 @@ section: "Iniziare"
 
 ## Cos'è DomoMeter
 
-**DomoMeter** è un'applicazione mobile nativa per **iOS** e **Android** ideata per monitorare e comprendere i consumi domestici di **energia elettrica, gas e acqua** tramite la registrazione manuale delle letture dei contatori.
+**DomoMeter** è un'app nativa per **iPhone e iPad** e per **Android** che ti aiuta a tenere sotto controllo i consumi di casa di **luce, gas e acqua** a partire dalle letture dei contatori, inserite a mano.
 
-Nata per eliminare la confusione di bollette cartacee, foglietti sparsi e calcoli complessi, DomoMeter unifica tutte le utenze in una dashboard intuitiva, fornendo statistiche chiare, grafici di tendenza e previsioni di spesa prima che arrivino le fatture.
-
----
-
-## Principi Fondamentali
-
-### 1. Riservatezza Totale e Offline-First
-- **Nessun account richiesto**: non occorrono registrazioni, indirizzi email o password.
-- **I tuoi dati restano tuoi**: i valori dei contatori e lo storico dei consumi risiedono esclusivamente nella memoria protetta del tuo dispositivo.
-- **Completamente gratuita**: zero pubblicità, zero tracciamento, nessun abbonamento o acquisto in-app.
-
-### 2. Modello Matematico dei Consumi Pro-Rata
-I contatori domestici mostrano cifre cumulative progressive. Quando inserisci due letture a distanza di tempo, DomoMeter calcola il consumo netto (*delta*). Se le date delle letture si trovano a cavallo del cambio mese, l'algoritmo ripartisce i consumi **proporzionalmente ai giorni trascorsi** in ciascun mese, rendendo i confronti mensili accurati anche se effettui le letture in date irregolari.
-
-### 3. Fasce Orarie Elettriche (F1, F2, F3)
-Per l'energia elettrica è possibile registrare letture monorarie oppure suddivise nelle tre fasce orarie tipiche del mercato energetico (F1 ore di punta, F2 ore intermedie, F3 ore fuori punta), consentendoti di ottimizzare l'uso degli elettrodomestici in base alla tua tariffa.
+Al posto di bollette sparse, foglietti e calcoli fatti a mente, DomoMeter riunisce tutte le utenze in un'unica schermata, con statistiche chiare, grafici mensili e annuali e il confronto con gli anni precedenti.
 
 ---
 
-## Flusso Operativo di Base
+## Principi
 
-1. **Configura le utenze**: attiva le utenze desiderate (luce, gas, acqua) e imposta le unità di misura preferite (kWh, Smc, litri o metri cubi).
-2. **Inserisci la lettura iniziale**: registra il valore attuale mostrato sul contatore alla data odierna.
-3. **Aggiungi letture periodiche**: a fine mese o quando ricevi una fattura, inserisci il nuovo valore. DomoMeter calcolerà all'istante il consumo e la stima economica.
-4. **Consulta grafici e limiti**: verifica il rispetto dei tetti di spesa impostati e confronta il mese corrente con lo stesso periodo dell'anno precedente.
+### 1. Privacy e funzionamento offline
+- **Nessun account**: niente registrazione, email o password.
+- **I dati restano tuoi**: letture e storico stanno solo nella memoria del dispositivo (su iOS puoi attivare la sincronizzazione con il tuo iCloud privato).
+- **Gratuita**: nessuna pubblicità, nessun tracciamento, nessun abbonamento o acquisto in-app.
+
+### 2. Consumi ripartiti tra i mesi
+I contatori mostrano valori progressivi. Quando inserisci due letture, DomoMeter calcola il consumo come differenza tra i due valori. Se le letture sono a cavallo di un cambio di mese, il consumo viene **ripartito in proporzione ai giorni trascorsi** in ciascun mese: così i confronti mensili restano corretti anche se leggi il contatore in date irregolari.
+
+### 3. Fasce orarie della luce (F1, F2, F3)
+Per l'elettricità puoi registrare una lettura unica oppure i valori delle tre fasce orarie (F1, F2 e F3), utili per capire quando consumi di più in base alla tua tariffa.
+
+### 4. Più abitazioni
+Puoi creare più **profili abitazione** (casa, ufficio, seconda casa), ciascuno con le sue utenze e le sue letture.
+
+---
+
+## Come si usa
+
+1. **Configura le utenze**: scegli quali utenze seguire (luce, gas, acqua) e le unità di misura preferite (kWh, Smc, litri o metri cubi). Se vuoi, imposta un limite annuo per ciascuna.
+2. **Inserisci la lettura iniziale**: registra il valore attuale del contatore.
+3. **Aggiungi le letture successive**: quando vuoi, per esempio a fine mese o all'arrivo della bolletta. DomoMeter calcola subito il consumo del periodo.
+4. **Consulta grafici e limiti**: controlla quanta parte del limite annuo hai già usato e confronta il mese corrente con il precedente e con gli anni passati.
+
+Per provare l'app puoi caricare dei **dati di esempio** dalle Impostazioni.

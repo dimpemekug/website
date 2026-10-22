@@ -1,51 +1,61 @@
 ---
 title: "Confronto iOS e Android"
-description: "Differenze architetturali, tecnologie native, interfaccia e gestione dati tra la versione iOS e la versione Android di DomoMeter."
+description: "Differenze tra la versione iOS e la versione Android di DomoMeter: tecnologie, funzioni disponibili, archiviazione dei dati e interfaccia."
 project: "domometer"
 order: 2
 section: "Piattaforme"
 ---
 
-## Due Versioni Native a Confronto
+## Due versioni native
 
-Sebbene DomoMeter offra lo stesso modello di calcolo, la stessa precisione e un formato di backup condiviso, le implementazioni per **iOS** e **Android** sono state sviluppate ciascuna con il proprio stack nativo di riferimento per garantire la massima fedeltà alle linee guida di ciascuna piattaforma.
+DomoMeter usa lo stesso modello di calcolo e lo stesso formato di backup su entrambe le piattaforme, ma ciascuna versione è sviluppata con gli strumenti nativi del proprio sistema, per seguirne fedelmente le linee guida. La versione iOS ha alcune funzioni in più, indicate nella tabella.
 
 ---
 
-## Tabella Comparativa
+## Tabella comparativa
 
 | Caratteristica | DomoMeter per iOS | DomoMeter per Android |
 | :--- | :--- | :--- |
-| **Linguaggio e Framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
-| **Design System** | Apple Human Interface Guidelines, sfocature dinamiche e stile retro opzionale | Material 3, Dynamic Color (Material You su Android 12+) |
-| **Requisiti Minimi** | iOS 18.0 o successivo | Android 8.0 (API 26) o successivo |
-| **Motore di Persistenza** | Documento JSON strutturato in *Application Support* | Database relazionale SQLite con **Room** |
-| **Connessione a Internet** | **Facoltativa** (solo per CloudKit se abilitato) | **Assente** (nessun permesso `INTERNET` nel manifest) |
-| **Sincronizzazione Cloud** | Apple CloudKit (container privato `DomometerSnapshot`) | Nessuna sincronizzazione cloud (rigorosamente offline) |
-| **Dispositivi Pieghevoli** | Supporto standard iPadOS Split View | Adattamento cerniera (`FoldingFeature`) per pieghevoli |
-| **Selettore Lingua** | Bundle interno indipendente dalla lingua di sistema | Integrazione per-app locale tramite Android AppCompat |
-| **Formato Backup** | JSON `schemaVersion: 1` (`domometer-backup`) | JSON `schemaVersion: 1` (`domometer-backup`) |
+| **Linguaggio e framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
+| **Design** | Linee guida Apple, colore d'accento a scelta | Material 3, colori dinamici (Material You) su Android 12+ |
+| **Requisiti minimi** | iOS/iPadOS 18.0 o successivo | Android 8.0 (API 26) o successivo |
+| **Archiviazione** | Documento JSON in *Application Support* | Database SQLite con **Room** |
+| **Connessione a Internet** | Solo per iCloud, se attivato | **Nessuna** (nessun permesso nel manifest) |
+| **Sincronizzazione** | iCloud (CloudKit, database privato) | Nessuna, solo backup su file |
+| **Letture, fasce F1/F2/F3, profili, limiti annui** | Sì | Sì |
+| **Note e sostituzione del contatore** | Sì | No |
+| **Tariffe e stima della bolletta** | Sì, con storico tariffe e budget | No |
+| **Promemoria di lettura** | Sì | No |
+| **Importazione ed esportazione CSV** | Sì | No |
+| **Utenze personalizzate e stima CO₂** | Sì | No |
+| **Schermi grandi** | iPad | Tablet, orizzontale e pieghevoli |
+| **Lingua dell'app** | Scelta nell'app, indipendente dal sistema | Lingua per app (AppCompat) |
+| **Formato di backup** | JSON `domometer-backup`, `schemaVersion: 1` | JSON `domometer-backup`, `schemaVersion: 1` |
+
+Entrambe le versioni sono disponibili in sette lingue (italiano, inglese, spagnolo, portoghese, francese, tedesco e russo) e hanno tema chiaro, scuro o automatico.
 
 ---
 
-## Dettagli Specifici per Piattaforma
+## Dettagli per piattaforma
 
 ### DomoMeter per iOS
-- **Sincronizzazione iCloud CloudKit**: puoi abilitare la sincronizzazione automatica tra iPhone e iPad. Il backup viene inviato al container CloudKit personale (`DomometerSnapshot`/`primary`). Il meccanismo push/pull confronta i timestamp con risoluzione *last-write-wins*.
-- **Stile Visivo Duplice**: include sia l'interfaccia moderna con componenti e animazioni native di iOS, sia un look alternativo monospaziato retrò ispirato ai display digitali dei contatori industriali.
-- **Supporto Dark Mode**: entrambe le visuali si adattano istantaneamente al tema chiaro o scuro del sistema.
+- **Sincronizzazione iCloud**: puoi attivare la sincronizzazione tra iPhone e iPad. L'intero archivio viene salvato come un unico record nel tuo database privato CloudKit; a ogni sincronizzazione vince la versione più recente. Una pagina dedicata mostra lo stato dell'account, l'ultima sincronizzazione ed eventuali errori, e permette di sincronizzare subito.
+- **Costi e budget**: tariffa per ogni utenza (prezzo unitario e quota fissa mensile), fatturazione mensile, bimestrale o semestrale, storico delle tariffe e budget di spesa.
+- **Promemoria**: una notifica per utenza nel giorno e all'ora che scegli, ogni mese, ogni pochi mesi o una volta l'anno.
+- **Navigazione**: barra in basso o menu, sei colori d'accento.
+- **Accessibilità**: supporto completo a VoiceOver e Dynamic Type.
 
 ### DomoMeter per Android
-- **Isolamento di Rete Rigoroso**: l'app per Android non dichiara il permesso di accesso a Internet nel file `AndroidManifest.xml`. È tecnicamente impossibile che qualsiasi dato esca dal telefono.
-- **Material You Dinamico**: su dispositivi con Android 12 o successivo, i colori dell'interfaccia vengono estratti dinamicamente dallo sfondo impostato dall'utente sul dispositivo.
-- **Layout Adattivo per Schermi Grandi e Pieghevoli**:
-  - Sotto i **600dp** (telefoni compatti): barra di navigazione classica in basso.
-  - Sopra i **600dp** (telefoni in orizzontale o tablet): barra laterale (*Navigation Rail*) con contenuti disposti su due colonne di card.
-  - Sopra gli **840dp**: visualizzazione affiancata elenco + dettaglio.
-  - Sui **telefoni pieghevoli** aperti a libro, la cerniera fisica viene rilevata tramite `FoldingFeature`, evitando che testo o pulsanti cadano sulla linea di piega.
+- **Nessun accesso alla rete**: l'app non dichiara alcun permesso, neppure quello per Internet. I dati non possono lasciare il telefono, se non tramite i backup che esporti tu.
+- **Material You**: su Android 12 o successivo l'interfaccia può prendere i colori dallo sfondo del dispositivo.
+- **Layout adattivo**:
+  - sotto i **600 dp** (telefoni): barra di navigazione in basso e una colonna;
+  - da **600 dp** in su, o con il telefono in orizzontale: barra laterale (*navigation rail*) e due colonne di card;
+  - da **840 dp** in su: elenco e dettaglio affiancati;
+  - sui **pieghevoli** aperti a libro, la divisione tra i due pannelli cade sulla cerniera (`FoldingFeature`), così nessun contenuto finisce sulla piega.
 
 ---
 
-## Interoperabilità Totale dei Backup
+## Backup compatibili
 
-Grazie allo schema unificato dei dati, **un backup generato su iPhone può essere importato senza alcuna modifica su uno smartphone Android, e viceversa**. I file di backup contengono sia i profili abitativi che tutte le letture storiche memorizzate nelle unità base universali (litri per l'acqua, kWh per l'elettricità, Smc per il gas).
+Grazie al formato comune, **un backup creato su iPhone si importa senza modifiche su Android, e viceversa**. Il file contiene profili, letture e impostazioni, con i valori salvati nelle unità di base (litri per l'acqua, kWh per l'elettricità, Smc per il gas). I dati presenti solo su iOS, come le tariffe, vengono ignorati dalla versione Android.

@@ -1,40 +1,50 @@
 ---
-title: "Backup, Restore, and Migration"
-description: "Universal JSON backup format, cross-platform transfer between iOS and Android, and legacy database migration in DomoMeter."
+title: "Backup, Restore and Migration"
+description: "JSON backup format, restore, iCloud sync, migration from the old Flutter version and moving data between iOS and Android in DomoMeter."
 project: "domometer"
 order: 5
 section: "Data & Sync"
 ---
 
-## Universal Backup Format
+## A Shared Backup Format
 
-DomoMeter employs a clean, transparent JSON format (`format: domometer-backup`, `schemaVersion: 1`):
+DomoMeter uses an open JSON backup format (`format: domometer-backup`, `schemaVersion: 1`):
 
-- **Complete Portability**: files exported on iOS import directly into Android without modification, and vice versa.
-- **Base Units Canonicalization**: backup files serialize usage using standard base units (litres for water, kWh for power, Smc for gas). Changing the UI unit preference (e.g. from litres to cubic meters) never alters raw database figures.
+- **Cross-platform**: a backup exported from iOS imports on Android and vice versa. You can move from iPhone to Android (and back) without losing any readings.
+- **Base units**: values in the backup are always stored in base units (liters for water, kWh for electricity, Smc for gas). Changing the displayed unit, for example from liters to cubic meters, never alters or rounds the stored data.
 
 ---
 
-## Creating a Manual Backup
+## Exporting a Backup
 
-1. Open **Settings** inside DomoMeter.
-2. Navigate to **Backup & Restore**.
-3. Tap **Export Backup**: the app writes a `.json` archive containing your housing profiles and readings history.
-4. Save the file to your device, iCloud, Google Drive, or send it securely.
+1. Open the app's **Settings**.
+2. Go to **Backup and import**.
+3. Tap **Export backup**: a `.json` file is created with profiles, readings and settings.
+4. Save it to your device's files, share it or keep it wherever you like.
 
 ---
 
 ## Restoring a Backup
 
-1. In **Settings › Backup & Restore**, tap **Import Backup**.
-2. Select your `.json` file exported from any version of DomoMeter.
-3. Confirm the import: all readings are merged and stats recalculate immediately.
+1. In **Settings › Backup and import**, tap **Import backup**.
+2. Pick a JSON file created by any version of DomoMeter, including the old app.
+3. Confirm: **importing completely replaces** your current data, profiles and settings with those in the backup.
+
+From the same section you can also **reset the database**, deleting all local data, or load sample data.
 
 ---
 
-## Seamless Migration from Legacy Versions
+## iCloud Sync (iOS)
 
-Upgrading from the earlier Flutter edition of DomoMeter happens automatically without manual intervention:
+On iOS you can turn on iCloud sync: the archive is saved to your private CloudKit database and compared across devices, keeping the most recent version. iCloud copies use the same format as backups.
 
-- **iOS**: on first launch, the app detects the historical `domometer.db` file and migrates records to the modern JSON store in *Application Support*.
-- **Android**: `LegacySembastMigrator` reads `filesDir/domometer.db`, migrates all records into SQLite Room, and safely archives the legacy file as `domometer.db.flutter-migrated`.
+---
+
+## Migrating from the Previous Version
+
+If you had the old Flutter version of DomoMeter installed, the move to the native versions happens on its own at first launch:
+
+- **On iOS**: the app finds the old `domometer.db` store and imports it into the new JSON document in *Application Support*.
+- **On Android**: `LegacySembastMigrator` reads the old `filesDir/domometer.db` store, copies every record into the Room database keeping the same keys, and renames the old file to `domometer.db.flutter-migrated` without deleting it. A message confirms the migration when it's done.
+
+No data is deleted or lost.

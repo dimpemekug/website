@@ -3,6 +3,7 @@ title: "Horologe"
 description: "App mobile per catalogare e gestire la tua collezione di orologi. Statistiche, stato e wishlist, registro al polso e blocco biometrico. Database locale, gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-02-11T00:00:00+01:00
 draft: false
+tags: ["iOS", "Android", "mobile", "collezionismo", "privacy"]
 appStore: "https://apps.apple.com/us/app/horologe/id6758836092"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.horologe"
 privacyDataTypes: "dati degli orologi (marca, modello, prezzo, date), foto, manutenzioni, wishlist, registro al polso, misurazioni di precisione e documenti allegati"
@@ -25,11 +26,11 @@ Horologe è l'app pensata per gli appassionati di orologi che vogliono catalogar
 - **Registro al polso** — segna con un tocco i giorni in cui indossi un orologio e scopri quali usi di più
 - **Registro precisione** — tieni traccia dello scarto di marcia giornaliero dei tuoi movimenti nel tempo
 - **Allegati documenti** — conserva garanzie, scontrini e certificati insieme a ogni orologio
-- **Blocco app** — proteggi la collezione con Face ID, Touch ID o impronta digitale
-- **Export e backup** — PDF da condividere, CSV per assicurazioni e inventari, ZIP/JSON per backup locali completi
+- **Blocco app** — proteggi la collezione con Face ID o Touch ID su iOS, con impronta, volto o PIN su Android
+- **Export e backup** — scheda PDF di ogni orologio, inventario PDF per l'assicurazione (iOS), CSV della collezione e backup ZIP completo con le foto, compatibile tra iOS e Android
 - **Privacy first** — database salvato localmente sul dispositivo (o sul tuo iCloud personale), nessun server esterno
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
-Disponibile su **iOS** e **Android**.
+Disponibile su **iPhone** e **iPad** con iOS/iPadOS 17 o successivo e su **Android** 7.0 o successivo, in sette lingue. La sincronizzazione iCloud è disponibile solo su iOS.

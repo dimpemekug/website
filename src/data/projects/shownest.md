@@ -13,18 +13,22 @@ privacyUrl: "/progetti/shownest/privacy/"
 
 ## Cos'è ShowNest
 
-ShowNest è il compagno ideale per non perdere mai il filo di quello che stai guardando. Aiuta a organizzare, seguire e scoprire serie TV, tutto in un'app semplice e veloce.
+ShowNest ti dice sempre qual è il prossimo episodio da vedere: segui le tue serie TV, segna le puntate viste e scopri quando escono quelle nuove, tutto in un'app semplice e veloce.
 
 ## Funzionalità principali
 
-- **Trova qualcosa da guardare** — sfoglia Tendenze, Popolari, Più votate e In onda oggi, oppure cerca nel catalogo completo di TMDB
-- **Watchlist** — aggiungi qualsiasi serie e tieni traccia di ogni episodio, organizzato automaticamente tra prossimi episodi, in arrivo e conclusi
-- **Progressi di visione** — ordina le serie per visione recente, aggiunta recente, episodio più recente, episodi rimanenti e altro ancora
-- **Notifiche nuovi episodi** — ricevi un avviso il giorno in cui esce un nuovo episodio delle serie che segui
-- **Statistiche** — ore guardate, episodi completati, serie finite e generi preferiti in una scheda dedicata
-- **Sincronizzazione iCloud** — watchlist, progressi e impostazioni si sincronizzano automaticamente su iPhone e iPad
+- **La tua watchlist** — il prossimo episodio di ogni serie che segui; per quelle in cui sei in pari, i giorni che mancano al prossimo episodio; ordinamento per visione recente, aggiunta recente, ultimo episodio uscito, titolo o episodi rimanenti
+- **Segna gli episodi come preferisci** — uno alla volta, una stagione intera o tutta la serie, come visti oggi o nel giorno in cui sono usciti, con l'annullamento dell'ultimo episodio segnato
+- **Le mie serie** — la libreria divisa in In uscita, In corso, Da iniziare e Completate, più l'archivio per le serie finite, che restano nelle statistiche
+- **Trova cosa guardare** — Tendenze, Popolari, Più votate e In onda oggi, suggerimenti in base a ciò che segui e ricerca in tutto il catalogo di TMDB, con trailer e titoli simili
+- **Statistiche** — tempo totale, episodi visti, serie completate, riepilogo dell'anno, giorni consecutivi, generi preferiti e cronologia di ogni visione
+- **Notifiche nuovi episodi** — un avviso il giorno in cui esce un nuovo episodio delle serie che segui
+- **Sincronizzazione iCloud facoltativa** — libreria ed episodi visti allineati tra iPhone e iPad
+- **A modo tuo** — tema chiaro, scuro o di sistema, sei colori d'accento, sette lingue
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
+
+Dati forniti da The Movie Database (TMDB). ShowNest utilizza le API di TMDB ma non è approvata né certificata da TMDB.
 
 ## Piattaforme
 
-Disponibile su **iOS**.
+Disponibile su **iPhone** e **iPad** con iOS/iPadOS 17 o successivo.

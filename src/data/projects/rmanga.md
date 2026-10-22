@@ -1,6 +1,6 @@
 ---
 title: "rManga"
-description: "Lettore per iPhone e iPad di manga, fumetti, libri e serie animate: i tuoi file, i tuoi server Komga, Kavita, Suwayomi e Jellyfin e i cataloghi OPDS, in un'unica libreria. In beta su TestFlight."
+description: "Lettore per iPhone e iPad di manga, fumetti, libri e serie animate: i tuoi file, i tuoi server Komga, Kavita, Suwayomi e Jellyfin e i cataloghi OPDS, in un'unica libreria. In beta su TestFlight. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "lettura", "privacy"]
@@ -22,11 +22,12 @@ rManga non ospita né distribuisce contenuti: legge solo quelli che aggiungi tu.
 - **I tuoi server**: Komga, Kavita, Suwayomi e Jellyfin, anche sulla rete di casa, e qualunque catalogo OPDS, per esempio quelli dei libri di pubblico dominio
 - **Estensioni**: supporto per le estensioni Aidoku e Paperback e per i moduli video, dai repository che aggiungi tu
 - **Lettura comoda**: pagina singola, doppia pagina su iPad o scorrimento continuo per i webtoon; lettura da destra a sinistra, zoom e miglioramento delle immagini sul dispositivo
-- **Libri**: EPUB con evidenziazioni e segnalibri
-- **Video**: lettore con sottotitoli e salto di sigla e riepilogo
+- **Libri**: EPUB, FB2, DOCX, ODT, RTF, TXT e Markdown nel lettore di testo, con temi, evidenziazioni, segnalibri e ricerca
+- **Video**: lettore con due motori (anche MKV), sottotitoli ASS, Picture in Picture e salto di sigla e riepilogo
 - **Sempre con te**: download per leggere e guardare senza connessione, avvisi per i nuovi capitoli, sincronizzazione iCloud facoltativa tra iPhone e iPad
 - **Nativo per iOS 26**: barra laterale su iPad, tema chiaro o scuro, in italiano e in inglese
 - **Privacy**: nessun account, nessuna pubblicità, nessun tracciamento
+- **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 

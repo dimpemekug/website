@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Resizo"
-description: "Overview of Resizo for Mac: batch image resizing, HEIC to JPEG conversion, EXIF metadata stripping, and offline privacy."
+description: "Overview of Resizo for Mac: batch image resizing, HEIC to JPEG conversion, EXIF metadata removal and fully offline operation."
 project: "resizo"
 order: 1
 section: "Getting Started"
@@ -8,32 +8,32 @@ section: "Getting Started"
 
 ## What is Resizo
 
-**Resizo** is a native macOS application for **macOS 13 Ventura or newer** (optimized for Apple Silicon and Intel Macs) designed to resize, convert, and optimize image collections in batch with maximum speed and zero friction.
+**Resizo** is a native app for **macOS 13 Ventura or later** (for Apple Silicon and Intel Macs) that resizes, converts and slims down many images in one go.
 
-Whether you need to prepare hundreds of iPhone photos for a website, convert HEIC captures to universal JPEGs for printing, or strip location metadata before emailing attachments, Resizo completes the job in seconds utilizing all CPU cores in parallel.
+Whether you need to prepare a hundred iPhone photos for a website, convert photos from HEIC to JPEG or attach lightweight images to an email without their GPS location, Resizo does it in seconds, processing several images in parallel.
 
 ---
 
-## Key Highlights
+## Key Features
 
-### 1. Offline Privacy & Safety
-- **100% Offline**: the app contains zero networking modules or network entitlements. Your images never leave your local Mac memory.
-- **Default EXIF Scrubbing**: protect your privacy when sharing photos online by automatically stripping GPS coordinates, camera models, and timestamps from exported files.
-- **Originals Always Untouched**: Resizo never overwrites source files, saving new versions with custom suffixes or in dedicated output folders.
+### 1. Privacy
+- **Fully offline**: the app has no network access; your files never leave your Mac.
+- **Metadata removed by default**: exported files carry no GPS location, camera model, date or shooting settings, unless you choose to keep them.
+- **Originals untouched**: Resizo never overwrites your original files. New versions are saved with a suffix in the name, in the `Pictures/Resizo` folder or in a folder of your choice.
 
-### 2. Multi-Core Performance & Space Savings
-- **Parallel Processing**: multi-threaded rendering processes multiple images concurrently.
-- **Space Saved Gauge**: upon completion, the app displays exact megabytes saved per image and across the full collection.
+### 2. Performance
+- **Parallel processing**: up to four images at a time, depending on your Mac's cores.
+- **Space saved**: when processing ends, the app tells you how much space you saved, in bytes and as a percentage.
 
-### 3. Broad Format Compatibility
-- **Input**: PNG, JPEG, HEIC, HEIF, TIFF, BMP, GIF, and WebP.
-- **Output**: Original format, PNG, or JPEG with adjustable quality compression.
+### 3. Supported Formats
+- **Input**: PNG, JPEG, HEIC, HEIF, TIFF, BMP, GIF and WebP.
+- **Output**: original format, PNG or JPEG with adjustable quality. Formats macOS can read but not write (such as WebP) are saved as PNG.
 
 ---
 
 ## Quick Workflow
 
-1. **Add Images**: drag and drop photos or folders into Resizo's window, or onto its Dock icon.
-2. **Choose Mode**: select a preset (e.g. *Web 1920px*, *Social 1080px*) or define dimensions in pixels or percentage.
-3. **Configure Output**: choose output format, set compression quality, and toggle EXIF stripping.
-4. **Process**: click **Resize & Save** (or press <kbd>⌘</kbd> <kbd>R</kbd>).
+1. **Add images**: drag photos or whole folders (subfolders included) into the window or onto the app's Dock icon, or use **Add Images…** (<kbd>⌘</kbd> <kbd>O</kbd>).
+2. **Pick the size**: apply a preset from the sidebar (e.g. *Web 1920 px*, *Social 1080 px*) or set dimensions in pixels or as a percentage.
+3. **Set the output**: choose the format, JPEG quality, destination folder, filename suffix and whether to keep metadata.
+4. **Run**: click **Resize and Save** (or press <kbd>⌘</kbd> <kbd>↩</kbd>).

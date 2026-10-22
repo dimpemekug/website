@@ -1,40 +1,38 @@
 ---
 title: "Supported Formats and Compatibility"
-description: "Comprehensive format matrix for rZip: libarchive and 7-Zip engine division, supported creation formats, and package inspection."
+description: "List of the formats rZip handles: reading with libarchive and 7-Zip, formats it can create, encryption and package inspection."
 project: "rzip"
 order: 6
 section: "Formats & Compatibility"
 ---
 
-## Comprehensive Engine and Format Matrix
+## Format Table
 
-rZip selects the optimal internal engine based on archive format and task:
-
-| Format Container | Extensions | Read Engine | Browse / RAM Preview | Extract | Create | Password & Encryption |
+| Format | Extensions | Read engine | Browse and preview | Extract | Create | Encryption |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **ZIP** | `.zip` | libarchive / 7-Zip | ✅ | ✅ | ✅ | ZipCrypto & AES-256 |
-| **7-Zip** | `.7z` | libarchive / 7-Zip | ✅ | ✅ | ✅ | AES-256 (+ Header `-mhe`) |
-| **RAR (v4 & v5)** | `.rar` | libarchive / 7-Zip | ✅ | ✅ | ❌ | Passwords and Names (`-hp`) |
-| **UNIX TAR** | `.tar` | libarchive | ✅ | ✅ | ✅ | Not supported |
-| **GZip** | `.gz`, `.tgz` | libarchive | ✅ | ✅ | ✅ | Not supported |
-| **BZip2** | `.bz2`, `.tbz2` | libarchive | ✅ | ✅ | ✅ | Not supported |
-| **XZ** | `.xz`, `.txz` | libarchive | ✅ | ✅ | ✅ | Not supported |
-| **ISO Disk Images** | `.iso`, `.img` | libarchive | ✅ | ✅ | ❌ | Not supported |
-| **Apple Disk Image**| `.dmg` | libarchive | ✅ | ✅ | ❌ | Unencrypted HFS+/APFS |
-| **Windows Cabinet** | `.cab` | libarchive | ✅ | ✅ | ❌ | Not supported |
-| **XAR / pkg** | `.xar`, `.pkg` | libarchive | ✅ | ✅ | ❌ | Digital signatures verified |
-| **LHA / LZH** | `.lha`, `.lzh` | libarchive | ✅ | ✅ | ❌ | Legacy archives |
-| **CPIO / AR** | `.cpio`, `.ar`, `.deb` | libarchive | ✅ | ✅ | ❌ | Linux/UNIX packages |
-| **Digital Comic Books**| `.cbz`, `.cbr` | libarchive | ✅ | ✅ | ✅ (as CBZ) | Pages streamed in RAM |
-| **eBooks / Java** | `.epub`, `.jar`, `.apk`| libarchive | ✅ | ✅ | ✅ (as ZIP) | Standard ZIP packages |
+| **ZIP** | `.zip` | libarchive / 7-Zip | ✅ | ✅ | ✅ | AES-256 (ZipCrypto read too) |
+| **7-Zip** | `.7z` | libarchive / 7-Zip | ✅ | ✅ | ✅ | AES-256, names too (`-mhe`) |
+| **RAR (v4 and v5)** | `.rar` | libarchive / 7-Zip | ✅ | ✅ | ❌ | Read, including encrypted names (`-hp`) |
+| **TAR** | `.tar` | libarchive | ✅ | ✅ | ✅ | — |
+| **GZip** | `.gz`, `.tgz` | libarchive | ✅ | ✅ | ✅ (TAR.GZ) | — |
+| **BZip2** | `.bz2`, `.tbz`, `.tbz2` | libarchive | ✅ | ✅ | ✅ (TAR.BZ2) | — |
+| **XZ / LZMA** | `.xz`, `.txz`, `.lzma`, `.tlz` | libarchive | ✅ | ✅ | ✅ (TAR.XZ) | — |
+| **ISO images** | `.iso` | libarchive | ✅ | ✅ | ❌ | — |
+| **Windows Cabinet** | `.cab` | libarchive | ✅ | ✅ | ❌ | — |
+| **XAR / packages** | `.xar`, `.pkg` | libarchive | ✅ | ✅ | ❌ | — |
+| **LHA / LZH** | `.lha`, `.lzh` | libarchive | ✅ | ✅ | ❌ | — |
+| **CPIO, AR, Linux packages** | `.cpio`, `.ar`, `.a`, `.deb`, `.rpm` | libarchive | ✅ | ✅ | ❌ | — |
+| **Compress** | `.z` | libarchive | ✅ | ✅ | ❌ | — |
+| **Comics** | `.cbz`, `.cbr` | libarchive | ✅ | ✅ | ❌ | — |
+| **ZIP containers** | `.epub`, `.jar`, `.war`, `.apk`, `.ipa` | libarchive | ✅ | ✅ | ❌ | — |
 
 > [!NOTE]
-> **Why RAR Creation is Not Supported:**
-> RAR compression is proprietary to RARLAB and protected by commercial patents. Creating RAR archives requires closed-source licensing incompatible with open distribution. rZip supports full legal decompression, inspection, and decryption of RAR archives, and provides a one-click *Convert to Another Format...* feature to migrate RAR archives into standard 7z or ZIP packages.
+> **Why can't RAR archives be created?**
+> RAR is a proprietary RARLAB format: its compression can't be included in other software without a commercial license. rZip supports reading, extracting and decrypting it, and with *Convert to Another Format…* you can turn a RAR archive into 7z or ZIP.
 
-## Specialized Package Inspection
+## Inspecting Apps and Packages
 
-Beyond raw files, rZip inspects complex Apple bundle packages without unpacking them:
-- **Applications (`.app`)**: Displays application icons, bundle identifier, version and build number, digital code signature, Apple Notarization ticket, and supported Mach-O architectures (Apple Silicon and Intel).
-- **Installer Packages (`.pkg`)**: Inspects internal XAR payloads, package components, and target installation directories on your Mac.
-- **Frameworks and Plug-ins (`.framework`, `.plugin`, `.appex`)**: Validates binary architectures and macOS runtime compatibility.
+Beyond ordinary files, rZip understands the structure of typical Apple bundles:
+- **Apps (`.app`)**: icon, bundle ID, version and build, signature, notarization ticket, Mac App Store receipt and architectures (Apple Silicon and Intel).
+- **Installer packages (`.pkg`, `.mpkg`)**: in-memory reading of the index, with components, installed size and install location.
+- **Frameworks, extensions and plug-ins** (`.framework`, `.appex`, `.plugin`, `.bundle` and similar): version, architectures and macOS compatibility.

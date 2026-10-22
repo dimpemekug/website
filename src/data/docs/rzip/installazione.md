@@ -1,40 +1,38 @@
 ---
-title: "Installazione e Requisiti"
-description: "Requisiti di sistema, distribuzione Mac App Store, architettura sandbox sicura e gestione cartelle autorizzate (FolderAccess)."
+title: "Installazione e requisiti"
+description: "Requisiti di sistema, distribuzione sul Mac App Store, sandbox di macOS e gestione delle cartelle autorizzate (FolderAccess) in rZip."
 project: "rzip"
 order: 2
 section: "Iniziare"
 ---
 
-## Requisiti di Sistema
+## Requisiti di sistema
 
-rZip è sviluppata con SwiftUI e tecnologie native per macOS:
+- **Sistema operativo**: macOS 26 Tahoe o successivo.
+- **Processore**: binario universale per Mac con Apple Silicon e con processore Intel a 64 bit. Anche il `7zz` incluso nel pacchetto dell'app è universale.
 
-- **Sistema Operativo**: macOS 26.0 Tahoe o macOS 15.0 Sequoia o successivi.
-- **Architettura Hardware**: Universal Binary nativo per Apple Silicon (M1, M2, M3, M4 e varianti) e processori Intel x86_64 a 64-bit. Anche il binario ausiliario `7zz` integrato nel bundle è compilato come binario universale.
-- **Memoria RAM**: 4 GB minimi (consigliati 8 GB o più per archivi 7z di grandi dimensioni con dizionari LZMA estesi).
-- **Spazio di Archiviazione**: Circa 35 MB su disco.
+## Mac App Store
 
-## Download dal Mac App Store
+L'app è pensata e firmata per il **Mac App Store**:
+- bundle ID `com.dimpemekug.rzip`;
+- categoria Utility;
+- gratuita, senza pubblicità, senza account e senza tracciamento.
 
-L'applicazione è progettata e firmata per il **Mac App Store**:
-- Bundle ID: `com.dimpemekug.rzip`.
-- Categoria: Utility (`public.app-category.utilities`) e Produttività.
-- Senza costi occulti, pubblicità o account: nessun tracciamento degli utenti.
+L'interfaccia è disponibile in italiano e in inglese e segue la lingua del sistema.
 
-## Modello Sandbox e Gestione Cartelle (`FolderAccess`)
+## Sandbox e cartelle autorizzate (`FolderAccess`)
 
-rZip opera rigorosamente all'interno della Sandbox di sicurezza di macOS:
+rZip lavora all'interno della **sandbox** di macOS:
 
-- **Accesso ai File Singoli**: I file e gli archivi aperti tramite doppio clic nel Finder, trascinamento o finestra Apri (`⌘O`) vengono autorizzati automaticamente dal sistema per la sola sessione di lavoro attiva.
-- **Cartelle Autorizzate (`FolderAccess`)**: Quando un'operazione richiede l'accesso a una cartella intera — ad esempio per rilevare automaticamente tutti i volumi numerati di un archivio diviso (`.001`, `.002`...), per estrarre file accanto all'archivio originale, o per creare un archivio in più parti — rZip mostra un pannello di sistema nativo per richiedere l'autorizzazione una tantum.
-- **Segnalibri di Sicurezza**: Le cartelle autorizzate e la cronologia degli archivi recenti vengono conservate sul Mac come segnalibri sicuri (*security-scoped bookmarks*). Puoi consultare o revocare l'elenco delle cartelle autorizzate in qualsiasi momento dalla scheda **Impostazioni** (`⌘,`) > **Avanzate**.
+- **File singoli**: archivi e file aperti con doppio clic nel Finder, trascinamento o con il pannello Apri (<kbd>⌘</kbd> <kbd>O</kbd>) vengono autorizzati automaticamente dal sistema.
+- **Cartelle autorizzate**: quando un'operazione ha bisogno di una cartella intera (per trovare tutti i volumi di un archivio diviso, `.001`, `.002`…, per estrarre accanto all'archivio o per creare un archivio in più parti), rZip mostra il pannello di sistema per chiederne l'accesso una volta sola.
+- **Segnalibri sicuri**: le cartelle autorizzate e gli archivi recenti vengono ricordati come segnalibri *security-scoped*. Puoi vedere e revocare l'elenco delle cartelle autorizzate in **Impostazioni** (<kbd>⌘</kbd> <kbd>,</kbd>) › **Avanzate**.
 
-## Associazione Predefinita nel Finder
+## Aprire gli archivi con rZip nel Finder
 
-Per aprire qualsiasi archivio `.zip`, `.7z` o `.rar` con un semplice doppio clic in rZip:
+Per aprire con un doppio clic tutti gli archivi `.zip`, `.7z` o `.rar` in rZip:
 
-1. Fai clic destro su un file compresso nel Finder e seleziona **Ottieni informazioni** (`⌘I`).
+1. Fai clic destro su un archivio nel Finder e scegli **Ottieni informazioni** (<kbd>⌘</kbd> <kbd>I</kbd>).
 2. Espandi la sezione **Apri con**.
-3. Seleziona **rZip** dall'elenco a discesa delle applicazioni.
-4. Clicca sul pulsante **Modifica tutti...** e conferma nella finestra di dialogo per associare permanentemente tutti i file con quella estensione.
+3. Scegli **rZip** dal menu a comparsa.
+4. Fai clic su **Modifica tutto…** e conferma, per associare a rZip tutti i file con quell'estensione.

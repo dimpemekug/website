@@ -1,26 +1,29 @@
 ---
 title: "Notifications and Statistics"
-description: "Release day alerts for upcoming episodes, total screen time tracking, and genre breakdown charts in ShowNest."
+description: "New-episode notifications, total watch time, yearly recap, day streaks and favorite genres in ShowNest."
 project: "shownest"
 order: 3
 section: "Features"
 ---
 
-## Episode Release Alerts
+## New-Episode Notifications
 
-Never miss a season premiere or weekly episode release:
+Never miss the next episode of your favorite show:
 
-- **Day-of-Air Reminders**: with notifications enabled, ShowNest schedules local alerts for shows in your active Watchlist.
-- **Clear Information**: notifications display the series title and episode numbering clearly (e.g. *"New episode: Severance S02E01 is out today"*).
-- **No Third-Party Push Servers**: alerts are scheduled directly by iOS and iPadOS using officially announced broadcast dates from TMDB, preserving your privacy and battery life.
+- **Alert on release day**: with notifications on, ShowNest schedules a notification at 9 a.m. on the day the next episode of each show you follow comes out.
+- **Clear content**: the notification shows the show name and the season and episode number airing that day.
+- **All on device**: notifications are scheduled by your iPhone or iPad from the dates TMDB provides, with no push servers or tracking identifiers.
 
 ---
 
-## Viewing Statistics Dashboard
+## Statistics
 
-The **Statistics** tab provides insights into your entertainment habits:
+The **Statistics** tab turns your viewing into numbers and charts:
 
-- **Total Watch Time**: computed by aggregating the actual running time of completed episodes, presented in days, hours, and minutes.
-- **Episode Count**: total episodes logged since you began using the app.
-- **Series Completion Rate**: visual overview of how many followed series you have completed.
-- **Genre Distribution**: interactive donut charts illustrating your preferred storytelling genres (e.g., 40% Sci-Fi, 30% Mystery, 20% Drama, 10% Comedy).
+- **Total watch time**: the sum of the runtimes of the episodes you've watched, in hours and minutes.
+- **Counters**: shows tracked (and archived), episodes watched and shows completed.
+- **Yearly recap**: hours watched month by month in a bar chart, compared with the previous year.
+- **Viewing rhythm**: the weekday you watch most, your daily average, your current day streak and your record.
+- **Time left and completion rate**: how much is left to finish your shows in progress and how many of the shows you started you've finished.
+- **Favorite genres**: each genre's share of everything you've watched.
+- **Most watched shows** and a **history** of every episode you've watched, with dates.

@@ -1,26 +1,27 @@
 ---
-title: "Security, Biometrics, and Trash"
-description: "Biometric locking with Face ID and Touch ID, app privacy obscuring, and 30-day soft-delete trash in CodeVault."
+title: "Security, Biometrics and Trash"
+description: "Face ID and Touch ID lock, re-lock after a chosen interval and a Trash that keeps deleted items restorable for 30 days in CodeVault."
 project: "codevault"
 order: 3
 section: "Security"
 ---
 
-## Biometric Protection (Face ID & Touch ID)
+## Biometric Lock (Face ID and Touch ID)
 
-Technical notes and snippets often contain configuration templates, API scripts, or sensitive commands. CodeVault incorporates biometric defense powered by `LocalAuthentication`:
+Snippets and notes often contain configuration, deployment scripts or sensitive development data. That is why CodeVault offers an optional lock based on `LocalAuthentication`, which you enable in **Settings › Security › Biometric Lock**:
 
-- **iOS & iPadOS**: secure unlock using Face ID or Touch ID upon launch or after a customizable inactivity timeout.
-- **macOS**: native support for Touch ID and Apple Watch authentication.
-- **Privacy Obscuring**: when switching apps or moving to the background, screen content is immediately obscured in the system App Switcher to prevent unintended exposure.
+- **On iPhone and iPad**: unlock with Face ID or Touch ID when the app opens.
+- **On Mac**: unlock with Touch ID or Apple Watch.
+- **Passcode or password fallback**: if biometrics fail, you can unlock with the device passcode or your Mac password.
+- **Re-lock after an interval**: choose when the app asks to unlock again after going to the background: immediately, after 1 minute, after 5 minutes or after 15 minutes.
 
 ---
 
-## Soft-Delete Trash and Restoration
+## Trash with Restore
 
-Starting in schema V9, CodeVault implements an intelligent soft-delete system:
+Since version 9 of the data schema, CodeVault does not delete items right away but moves them to the **Trash** (*soft delete*):
 
-- **No Accidental Data Loss**: deleting an item marks its `deletedAt` timestamp instead of erasing it immediately from disk.
-- **Dedicated Trash View**: inspect, preview, and restore deleted snippets back to their original collection.
-- **Automated 30-Day Purge**: items remaining in the trash for longer than 30 days are permanently purged on app launch.
-- **Manual Empty**: you can empty the trash at any time to instantly remove deleted items permanently.
+- **No accidental losses**: a deleted snippet or note is not removed from the database; it is stamped with its deletion date (the `deletedAt` field) and hidden from the lists.
+- **Trash view**: in **Settings › Trash** you find every deleted item and can restore it with one click.
+- **Automatic cleanup after 30 days**: when the app launches, items that have been in the Trash for more than 30 days are permanently deleted.
+- **Manual emptying**: the **Empty Trash** button deletes everything at once, after a confirmation.

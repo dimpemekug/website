@@ -1,35 +1,49 @@
 ---
-title: "Service History, Wrist Time, and Timing"
-description: "Tracking watch maintenance intervals, timing accuracy deviations, and wear frequency in Horologe."
+title: "Services, Wrist Time and Accuracy"
+description: "Maintenance log, service reminders, wrist time, statistics and rate accuracy measurement in Horologe."
 project: "horologe"
 order: 4
 section: "Features"
 ---
 
-## Service and Overhaul Logs
+## Service Log
 
-Mechanical watches rely on fine synthetic oils, fresh gaskets, and periodic regulation. Horologe equips each piece with a dedicated maintenance ledger:
+Mechanical watches need regular maintenance. In Horologe every watch has its own service history:
 
-- **Service Metadata**: service date, procedure type (routine cleaning, full overhaul, battery change, case polish, waterproof pressure test).
-- **Service Center & Cost**: authorized boutique or independent watchmaker and total expenditure.
-- **Warranty Tracking**: service warranty duration and notes regarding replaced original parts.
-- **Interval Alerts**: configure notification reminders (e.g. 5-year cycle) to flag when a piece is due for preventive servicing.
+- **Service details**: date, type (e.g. full service, battery replacement, polishing, water-resistance test), cost with currency and notes.
+- **Reminders**: set a service interval in years on the watch sheet. Horologe works out the due date from the last service (or the purchase date) and sends you a notification when it's time; overdue services also show up in the statistics.
 
 ---
 
-## Wrist Time & Collection Rotation
+## Wrist Time
 
-Keep tabs on which watches spend time on your wrist and which remain in the watch box:
-- **Instant Logging**: one tap on the watch card or "Worn Today" widget logs a day of wear.
-- **Wear Rotation Analytics**: view monthly and annual leaderboards of your most-worn pieces.
-- **Cost per Wear**: evaluate purchase price divided by accumulated wear days to assess practical value over time.
+Want to know which watches you really wear and which stay in the box?
+- **One-tap logging**: mark that you're wearing a watch today from its sheet.
+- **Wear diary** (iOS): a monthly calendar showing which watch you wore each day.
+- **Statistics**: a ranking of the most worn watches, a calendar of recent weeks, watches you haven't worn in a while and **cost per wear** (purchase price divided by the number of times you've worn it).
 
 ---
 
-## Measuring Timing Accuracy
+## Measuring Accuracy
 
-Horologe includes a built-in chronometric deviation tracker that functions without requiring external physical timing machines:
+Horologe logs your watch's rate deviation without a timegrapher.
 
-1. **Initial Timestamp**: log the exact time indicated by your watch against an atomic clock NTP baseline.
-2. **Follow-up Reading**: after 24 to 48 hours, check and log the displayed time again.
-3. **Deviation Calculation**: Horologe calculates the daily rate in **seconds per day** (+3 s/d, -2 s/d, etc.) and highlights compliance with chronometer benchmarks (such as COSC -4/+6 s/d).
+### Two-Reading Assistant (iOS)
+1. **First reading**: tap **Now** at the exact moment the watch's seconds hand passes 12, then enter the hours and minutes the watch showed.
+2. **Wear the watch as usual** for at least 24 hours, without adjusting it.
+3. **Second reading**: repeat the same step.
+4. **Result**: Horologe works out the average deviation in **seconds per day** (e.g. +4 s/d, −2 s/d).
+
+The reference time is your phone's, automatically synced with official time: a tap a few tenths of a second late matters little if at least a day passes between the two readings.
+
+### Manual Entry
+If you measured the deviation some other way, you can enter the value in seconds per day directly (on Android this is the available method).
+
+### Chart
+Measurements appear on a chart over time; on iOS a green band highlights the tolerance of **COSC**-certified chronometers (**−4/+6 s/d**).
+
+---
+
+## Collection Statistics
+
+The **Statistics** tab shows the collection's total value per currency and its trend, breakdown by brand and movement, the most expensive piece, service costs and sale results, plus the wrist-time indicators described above.

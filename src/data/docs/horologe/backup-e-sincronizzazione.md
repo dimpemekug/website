@@ -1,39 +1,44 @@
 ---
-title: "Backup, Sincronizzazione ed Export"
-description: "Archivio ZIP universale con foto, sincronizzazione CloudKit multi-tier su iOS, esportazione schede PDF e tabelle CSV in Horologe."
+title: "Backup, sincronizzazione ed esportazione"
+description: "Archivio ZIP con foto, copia di sicurezza, sincronizzazione CloudKit su iOS, schede PDF, inventario per l'assicurazione ed esportazione CSV in Horologe."
 project: "horologe"
 order: 5
 section: "Dati e Backup"
 ---
 
-## Il Formato di Backup ZIP
+## Il backup ZIP
 
-A differenza delle normali applicazioni di catalogazione che esportano solo file di testo perdendo le immagini, Horologe genera un **archivio compresso `.zip` completo e autosufficiente**:
+Molte app di catalogazione esportano solo testo e perdono le immagini. Horologe crea invece un **archivio `.zip` completo**:
 
 ```text
-Backup_Horologe_2026-10-18.zip
-├── manifest.json            ← Dump SQLite completo (orologi, revisioni, polso, precisione)
-└── watch_images/            ← Tutte le fotografie ad alta risoluzione
-    ├── watch_1_cover.jpg
-    ├── watch_1_image_1.jpg
-    ├── watch_2_cover.jpg
-    └── ...
+Backup_Horologe.zip
+├── manifest.json            ← orologi, revisioni, giorni al polso, precisione
+├── watch_1_cover.jpg        ← foto di copertina
+├── watch_1_gallery_1.jpg    ← foto della galleria
+├── watch_1_att_1.pdf        ← allegati
+├── watch_2_cover.jpg
+└── ...
 ```
 
-Questo formato è condiviso al 100% tra le build iOS e Android: esportando l'archivio da un iPhone puoi importarlo direttamente in Android (e viceversa), ritrovando ogni foto e specifica tecnica al suo posto.
+Il formato è lo stesso su iOS e Android: esportando l'archivio da un iPhone puoi importarlo su Android (e viceversa) e ritrovare ogni foto e dato al suo posto.
+
+### Importare un backup
+L'importazione **sostituisce** la collezione attuale con quella del backup. Su iOS, prima di farlo, Horologe salva automaticamente una **copia di sicurezza** della collezione corrente: se cambi idea, puoi tornare indietro con **Ripristina collezione precedente**. La stessa copia viene creata prima di un reset o del caricamento dei dati di esempio.
 
 ---
 
-## Sincronizzazione iCloud (Esclusiva iOS)
+## Sincronizzazione iCloud (solo iOS)
 
-Sui dispositivi Apple, Horologe integra una sincronizzazione sofisticata tramite **CloudKit**:
-- **Dati strutturati**: sincronizzati nel record privato `primary-v2`.
-- **Foto sincronizzate con deduplicazione**: ciascuna foto viene archiviata con un record `file-<sha256>`. Se un'immagine è già presente sul cloud, il client evita di consumare banda e spazio ri-trasferendola.
-- **Protezione Anti-Throttling**: in collezioni importanti con migliaia di scatti, le chiamate di rete vengono distribuite a scaglioni con backoff esponenziale per prevenire blocchi server HTTP 429.
+Su iPhone e iPad Horologe può sincronizzare la collezione tramite **CloudKit**, nel tuo database privato:
+- **Dati**: un manifest compatto nel record `primary-v2`.
+- **Foto e allegati senza doppioni**: ogni file è un record `file-<sha256>` identificato dal suo contenuto; se è già in iCloud non viene caricato di nuovo.
+- **Collezioni grandi**: le richieste vengono distribuite nel tempo e, se CloudKit chiede di rallentare (HTTP 429), l'app attende e riprova invece di interrompersi.
+- **Chi vince**: se la collezione è cambiata su più dispositivi, prevale la modifica più recente.
 
 ---
 
-## Esportazione PDF e Tabelle CSV
+## PDF e CSV
 
-- **Scheda Orologio in PDF**: genera un documento elegante in formato A4 con copertina, specifiche tecniche, storico delle revisioni e valori stimati, ideale per perizie assicurative o per la vendita a terzi.
-- **Esportazione CSV**: scarica l'intera collezione in formato tabellare per aprirla in Excel, Numbers o Google Fogli.
+- **Scheda PDF dell'orologio**: un documento con foto, dati tecnici, storico delle revisioni e misurazioni di precisione, da condividere o allegare a una vendita.
+- **PDF per l'assicurazione** (iOS): un inventario della collezione in formato A4 con riepilogo (numero di pezzi, valore d'acquisto per valuta, corredi completi), una tabella di tutti gli orologi e una scheda per ciascuno con foto, referenza, numero di serie, dati d'acquisto e documenti.
+- **CSV**: l'intera collezione in formato tabellare, da aprire in Excel, Numbers o Fogli Google.

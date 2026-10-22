@@ -1,37 +1,37 @@
 ---
-title: "Gestione Audio e Tracce"
-description: "Estrazione tracce audio, silenziamento filmati, sostituzione audio e supporto codec AAC, MP3, Opus e FLAC in rMux."
+title: "Audio e tracce"
+description: "Copia, conversione ed esclusione delle tracce audio, volume, sincronizzazione, metadati ed estrazione delle tracce in rMux."
 project: "rmux"
 order: 4
 section: "Audio"
 ---
 
-## Ispezione e Configurazione delle Tracce Audio
+## Le tracce audio una per una
 
-Spesso un file video contiene flussi audio multipli (lingue differenti, commenti del regista, audio surround 5.1). L'Inspector Audio di rMux permette di analizzare ciascuna traccia separatamente:
+Un file video contiene spesso più flussi audio (lingue diverse, commento, audio surround 5.1). L'**Inspector Audio** di rMux mostra ogni traccia con le sue impostazioni:
 
-- **Copia Senza Ricodifica (*Copy*)**: mantiene il flusso audio originale senza alcuna perdita di campionamento o bit rate.
-- **Transcodifica Audio**: converte la traccia in un codec standard per garantire compatibilità con lettori multimediali specifici.
-- **Selezione Canali**: mixa da audio surround 5.1 a stereo o preserva l'audio multicanale intatto.
-
----
-
-## Estrazione Audio da un Video
-
-Se hai una registrazione, una conferenza o un concerto e desideri conservare solo il file audio:
-
-1. Apri il video in rMux.
-2. Dal menu delle impostazioni di esportazione, seleziona **Solo Audio**.
-3. Scegli il formato desiderato:
-   - **AAC / M4A**: formato standard Apple ad alta fedeltà.
-   - **MP3 (tramite LAME LGPL)**: formato universale per qualsiasi lettore.
-   - **Opus (BSD)**: ideale per parlato e podcast a basso bitrate con resa cristallina.
-   - **FLAC / WAV (PCM)**: formati non compressi o lossless per la massima fedeltà sonora.
-4. Esporta: rMux genererà un file audio autonomo in una frazione di secondo.
+- **Includi o escludi**: disattiva una traccia per non portarla nel file esportato. Escludendo tutte le tracce ottieni un video muto.
+- **Copy**: la traccia viene copiata così com'è, senza perdite.
+- **Transcode**: la traccia viene convertita in **AAC, AC3, MP3, Opus, FLAC o PCM**, con bitrate, canali (come la sorgente, mono, stereo o 5.1) e frequenza di campionamento (come la sorgente, 44,1 o 48 kHz).
 
 ---
 
-## Silenziamento e Sostituzione Audio
+## Volume e sincronizzazione
 
-- **Rimuovi Traccia Sonora (Mute)**: disattivando la traccia audio con un semplice clic, esporti un video completamente muto senza dover passare per programmi di editing complessi.
-- **Sostituzione Traccia**: puoi caricare un nuovo file audio (es. una colonna sonora o una voce registrata a parte) per sostituire o affiancare l'audio originario del filmato.
+- **Guadagno**: alza o abbassa il volume della traccia in dB.
+- **Sincronizzazione**: correggi il ritardo tra audio e video anticipando o ritardando la traccia a passi di 100 millisecondi, anche senza ricodificare.
+
+---
+
+## Metadati della traccia
+
+Per ogni traccia puoi modificare:
+- il **titolo** (es. "Commento del regista");
+- la **lingua** (es. `ita`);
+- la **traccia predefinita**, cioè quella che i lettori attivano per prima nei file con più tracce.
+
+---
+
+## Estrarre una traccia
+
+Con **Estrai…** salvi una traccia audio in un file separato, senza ricodifica: rMux la copia in un file Matroska audio (`.mka`), che accetta qualsiasi codec. Allo stesso modo, nell'Inspector Video puoi usare **Estrai video…** per salvare la sola traccia video, senza audio.

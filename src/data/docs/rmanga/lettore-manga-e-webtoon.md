@@ -1,44 +1,46 @@
 ---
-title: "Lettore Manga e Webtoon"
-description: "Modalità di lettura per fumetti giapponesi e occidentali, scorrimento continuo Webtoon, upscaling Core ML e Live Text in rManga."
+title: "Lettore di manga e webtoon"
+description: "Modalità di lettura per manga e fumetti occidentali, scorrimento continuo dei webtoon, ingrandimento con Core ML e Testo attivo in rManga."
 project: "rmanga"
 order: 3
 section: "Fumetti"
 ---
 
-## Direzioni di Lettura e Paginazione
+## Versi di lettura
 
-Il lettore visuale di rManga si adatta a qualsiasi stile editoriale:
+Il lettore di rManga si adatta a ogni tipo di fumetto. In tutte le modalità puoi ingrandire con un pizzico o un doppio tocco, e un tocco singolo mostra o nasconde i controlli.
 
-### 1. Da Destra a Sinistra (Manga Tradizionale)
-L'orientamento canonico per il fumetto giapponese. Un tocco sulla parte sinistra dello schermo o uno scorrimento verso destra fa avanzare la pagina, rispettando l'impaginazione originale dell'autore.
+### 1. Da destra a sinistra (manga)
+Il verso dei manga giapponesi: un tocco sul lato sinistro dello schermo o uno scorrimento verso destra porta alla pagina successiva, rispettando l'impaginazione originale.
 
-### 2. Da Sinistra a Destra (Fumetto Occidentale)
-L'orientamento standard per graphic novel europee, comic book americani e album spillati.
+### 2. Da sinistra a destra (fumetto occidentale)
+Il verso di graphic novel europee e comic book americani.
 
-### 3. Scorrimento Continuo Verticale (Webtoon / Manhwa)
-Ottimizzato specificamente per fumetti verticali digitali:
-- **Zero Interruzioni**: le tavole si susseguono a cascata senza bordi neri o cornici divisorie.
-- **Memoria Dinamica a Viste Riciclate**: gestito con `UIScrollView` nativa in cui solo le immagini visibili a schermo vengono caricate in memoria, mantenendo l'esperienza a 120 Hz anche su capitoli lunghissimi composti da dozzine di megapixel.
-- **Scorrimento Infinito**: al termine di un capitolo, il capitolo successivo si aggancia automaticamente in coda senza dover tornare all'elenco.
+### 3. Scorrimento verticale (webtoon e manhwa)
+Pensato per i fumetti digitali verticali:
+- **Nessuna interruzione**: le tavole si susseguono senza bordi né spazi tra una e l'altra.
+- **Viste riciclate**: la striscia è una `UIScrollView` in cui solo le pagine vicine allo schermo hanno una vista, riciclata da pagina a pagina, così lo scorrimento resta fluido anche con capitoli lunghissimi e pagine molto alte.
+- **Scorrimento infinito**: arrivando alla fine di un capitolo, il successivo si aggancia alla striscia e quello appena finito viene segnato come letto, senza tornare all'elenco.
 
 ---
 
-## Funzionalità Avanzate del Lettore
+## Funzioni del lettore
 
-### Doppia Pagina e Divisione Pagine Larghe
-- **Doppia Pagina su iPad**: quando impugni l'iPad in orizzontale (*landscape*), rManga affianca due pagine simulando la lettura di un volume cartaceo aperto, mantenendo la copertina singola.
-- **Dividi Scansioni Doppie**: se una scansione contiene due pagine unite in un'unica immagine orizzontale, rManga può dividerla a metà e mostrarla ordinatamente in sequenza.
+### Doppia pagina e pagine larghe
+- **Doppia pagina su iPad**: con l'iPad in orizzontale, rManga affianca due pagine come in un volume aperto; la copertina resta da sola e, in modalità manga, la pagina successiva va a sinistra. Si disattiva dal menu del lettore o dalle Impostazioni.
+- **Dividi le pagine larghe**: se una scansione contiene due pagine affiancate, rManga può mostrarne una metà alla volta, nel verso di lettura della serie.
 
-### Upscaling con Modelli Core ML
-Puoi importare modelli di intelligenza artificiale Core ML (`.mlmodel` o `.mlpackage`) da applicare in tempo reale alle scansioni a bassa risoluzione. L'elaborazione sfrutta il Neural Engine del dispositivo Apple per aumentare la nitidezza di retini e tratti a matita senza sfocature.
+### Ingrandimento con Core ML
+Nessun modello è incluso, ma puoi importare il tuo modello Core ML (`.mlmodel` o `.mlpackage`) nelle impostazioni di lettura. Viene compilato all'importazione e applicato alle pagine con una risoluzione inferiore al limite scelto, per renderle più nitide.
 
-### Testo Attivo (Apple Live Text)
-Grazie all'integrazione di Live Text di iOS, puoi selezionare con il dito qualsiasi balloon di testo o onomatopea presente sulla pagina per:
-- Copiare il testo negli appunti.
-- Tradurre istantaneamente frasi in lingua straniera (giapponese, inglese, francese).
-- Cercare definizioni o effettuare ricerche su Safari.
+### Testo attivo (Live Text)
+Attivando Testo attivo nelle impostazioni, iOS riconosce il testo delle pagine e lo rende selezionabile, per:
+- copiarlo negli appunti;
+- tradurlo o cercarlo dal menu di selezione di sistema.
 
-### Zone di Tocco e Gesti
-- **Zone Personalizzabili**: scegli come suddividere i comandi a tocco (stile classico, stile Kindle, tocco a "L").
-- **Chiusura Rapida**: trascina verso il basso una pagina non ingrandita per chiudere il lettore e tornare all'indice. Nel webtoon puoi utilizzare lo swipe dal bordo sinistro per uscire comodamente con una sola mano.
+Le azioni rapide sono disattivate, perché si prenderebbero i tocchi che girano pagina. Sui dispositivi che non supportano Testo attivo l'opzione non compare.
+
+### Zone di tocco e gesti
+- **Zone di tocco**: scegli come dividere lo schermo per girare pagina (sinistra-destra, a elle, Kindle, bordi o disattivate), con i lati scambiabili e un'anteprima grafica.
+- **Chiusura rapida**: nelle modalità a pagine, trascina in giù una pagina non ingrandita per chiudere il lettore. Nel webtoon si chiude con uno swipe dal bordo sinistro, e tirando la striscia in giù dalla cima si apre il capitolo precedente.
+- **Pagine da precaricare**: da 1 a 10 pagine tenute pronte in anticipo.

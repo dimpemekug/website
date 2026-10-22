@@ -1,58 +1,51 @@
 ---
 title: "Batch Renaming and CSV Export"
-description: "Pattern-based file renaming with dynamic tokens, metadata export to CSV spreadsheets, and batch re-import."
+description: "Renaming files with templates and placeholders, and exporting and re-importing metadata through CSV spreadsheets in rExif."
 project: "rexif"
 order: 6
 section: "User Guides"
 ---
 
-## Streamlining Media Organization
+## Renaming Files with a Template
 
-Default filenames produced by digital cameras (such as `_DSC0421.JPG` or `IMG_9104.CR3`) offer minimal contextual value and complicate long-term archiving across different storage volumes.
+Photos from cameras and smartphones often have generic, hard-to-read names (e.g. `_DSC8921.JPG` or `IMG_2024.CR3`).
 
-rExif includes a rule-based batch renaming engine that leverages metadata tokens, alongside a bidirectional CSV export and import pipeline for tabular spreadsheet workflows.
+In the **Bulk Edit** window (`⇧⌘D`), the **Rename** tab builds the new name from free text and the same placeholders as the text fields. The most useful ones:
 
-## Pattern-Based Batch Renaming
-
-Through the **Batch Rename** tool, you can construct naming schemas combining literal characters and dynamic tokens evaluated against each file's metadata:
-
-### Available Dynamic Tokens
-
-| Token | Description | Example Output |
+| Placeholder | Description | Example |
 | :--- | :--- | :--- |
-| `{date}` | Capture date in compact `YYYYMMDD` format | `20261014` |
-| `{date_iso}` | ISO standard capture date `YYYY-MM-DD` | `2026-10-14` |
-| `{time}` | Capture time `HHMMSS` | `143015` |
-| `{year}` | Four-digit capture year | `2026` |
-| `{month}` | Two-digit capture month | `10` |
-| `{camera}` | Camera body model string | `Sony_A7IV` |
-| `{city}` | Geotagged city name | `Florence` |
-| `{original_name}` | Previous filename without extension | `_DSC0421` |
-| `{nnn}` | Zero-padded sequential counter | `001`, `002`, `003` |
+| `{date}` | Date taken (YYYY-MM-DD) | `2026-10-14` |
+| `{year}`, `{month}`, `{day}` | Year, month and day taken | `2026`, `10`, `14` |
+| `{time}` | Time taken (HH.MM) | `18.30` |
+| `{seconds}` | Seconds of the time taken | `12` |
+| `{camera}` | Make and model | `SONY ILCE-7M4` |
+| `{name}` | Current file name, without extension | `_DSC8921` |
+| `{folder}` | Folder name | `Holidays` |
+| `{n}` / `{nnn}` | Sequential number (1, 2… / 001, 002…) | `001` |
 
-### Common Renaming Patterns
+### Example
+With the template `{date}_{time}_{nnn}`:
+- `_DSC8921.JPG` → `2026-10-14_18.30_001.JPG`
+- `_DSC8922.JPG` → `2026-10-14_18.30_002.JPG`
 
-- **Chronological sequence**: `{date}_{time}_{nnn}` $\rightarrow$ `20261014_143015_001.jpg`
-- **Location and date**: `{date_iso}_{city}_{nnn}` $\rightarrow$ `2026-10-14_Florence_001.heic`
-- **Camera gear and source**: `{camera}_{date}_{original_name}` $\rightarrow$ `Sony_A7IV_20261014__DSC0421.arw`
+The extension stays the file's own. Characters not allowed in file names (`/` and `:`) are replaced with a dash and, if a name is already taken in the same folder, a suffix is added (`-2`, `-3`…). The new name shows in orange in the table; the file is renamed only when you press **Save** (`⌘S`).
 
-> [!NOTE]
-> rExif checks for potential naming collisions in the target directory in real time. If a rule would generate conflicting filenames, safety suffixes are automatically suggested before executing changes.
+## Exporting Metadata as CSV
 
-## Metadata Export to CSV
+From **File** › **Export Metadata as CSV…** you save the items' metadata to a **CSV** file with these columns:
+- file name and path;
+- date taken, date digitized and file creation and modification dates;
+- latitude, longitude and altitude;
+- make, model, lens, description, author, copyright, city, state and country;
+- keywords and rating.
 
-For archival documentation, museum indexing, or client deliverables, export full metadata sets to **CSV (Comma-Separated Values)** spreadsheets:
+The file opens in **Numbers**, **Excel** or any script.
 
-1. Select the relevant files in the main table.
-2. Go to **File** > **Export Metadata to CSV...**.
-3. Choose the columns to include (Dates, GPS coordinates, Camera make, Lens, Shutter speed, Aperture, Copyright, Keywords).
-4. The generated CSV can be inspected and curated in **Apple Numbers**, **Microsoft Excel**, or imported into SQL databases.
+## Re-importing Changes from CSV
 
-## Re-Importing Changes from CSV
-
-The CSV re-import capability unlocks powerful automated curation pipelines:
-
-1. Edit titles, descriptions, dates, or copyright credits within a spreadsheet application utilizing custom formulas or scripts.
-2. Export the spreadsheet as a CSV while retaining the original file path/name identifier column.
-3. In rExif, select **File** > **Import Changes from CSV...**.
-4. The app matches spreadsheet rows against open files and stages every change in orange preview for verification prior to writing.
+If you'd rather work in a spreadsheet:
+1. open the exported CSV in Numbers or Excel;
+2. edit descriptions, dates, coordinates or copyright in the cells, leaving the path and file name columns alone;
+3. save the document as `.csv` again;
+4. in rExif choose **File** › **Import Metadata from CSV…**;
+5. rExif matches items by path (or by name, if only one item in the list has that name) and loads the differences as orange changes, to review before saving.

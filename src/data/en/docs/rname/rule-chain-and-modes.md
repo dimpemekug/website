@@ -1,108 +1,108 @@
 ---
-title: "Rule Chain and Modes"
-description: "Comprehensive guide to all 8 renaming rules in rName: regex replacement with ReDoS safety, text insertion, removal, sequential numbering, letter case, dates, extensions, and name clean-up."
+title: "Rule Chain"
+description: "rName's 8 renaming rules: replace, including regular expressions protected from catastrophic backtracking, insert, remove, numbering, letter case, dates, extensions and clean-up."
 project: "rname"
 order: 2
 section: "Rules & Editing"
 ---
 
-## The Rule Chain Architecture
+## How the Chain Works
 
-In rName, a new filename is not produced by a single isolated command, but through a **sequential chain of rules**.
+In rName a file's new name doesn't come from a single command but from a **chain of rules** applied in sequence.
 
-Rules are evaluated from top to bottom: each rule receives the output of the preceding rule and applies its own transformation. This pipeline architecture allows you to combine targeted operations without writing complex scripts. For instance, you can strip accented characters, convert names to lowercase, prepend a photo's capture date, and append clean sequential numbers.
+Rules run from top to bottom: each receives the result of the previous one and applies its own transformation. This lets you combine simple steps without writing complex formulas: for example, strip accents, convert everything to lower case, add the date in front and finally append a number.
 
-### Fast Sidebar Management
+### The Sidebar
 
-- **Instant Toggle**: each rule row features an on/off switch to temporarily deactivate it without deleting or reconfiguring parameters.
-- **Drag to Reorder**: grab and drag any rule up or down in the sidebar to change its position in the processing order.
-- **One-Click Addition**: the upper _Add a Rule_ section displays all 8 available rule types; clicking one appends it to the bottom of the chain and immediately displays its inspector settings.
-
----
-
-## Target Scope (`RuleScope`)
-
-Every rule lets you select exactly which portion of the filename it acts upon:
-
-1. **Name only (`baseName`)**: modifies the body of the filename while preserving the original extension intact (e.g., renames `document` without affecting `.pdf`).
-2. **Extension only (`fileExtension`)**: restricts changes to the characters following the last period.
-3. **Full name (`fullName`)**: operates across the entire string, including the extension.
+- **Turn on and off**: every rule in the chain has a switch to disable it temporarily, without deleting or reconfiguring it.
+- **Reorder**: drag a rule up or down to change the order in which it runs.
+- **Add with one click**: the _Add a rule_ section shows the 8 available rules; a click adds one at the end of the chain and opens its settings. The section can be collapsed when the chain gets long.
 
 ---
 
-## The 8 Rules in Detail
+## Scope
 
-### 1. Replace (`replace`)
+Each rule can act on a specific part of the name:
 
-Finds a string of characters and replaces it with new text (or deletes it if the replacement field is left empty).
+1. **Name only**: just the part before the extension (e.g. changes `document` without touching `.pdf`).
+2. **Extension only**: just the characters after the last dot.
+3. **Full name**: the whole name, extension included.
 
-- **Case Sensitive**: matches exact upper or lower case characters.
-- **First occurrence only**: limits replacement to the first match instead of all occurrences.
-- **Regular Expressions (Regex)**: supports advanced regex patterns with capture groups `()` accessible in the replacement string as `$1`, `$2`, etc. (e.g., swapping author and title: `(.*) - (.*)` → `$2 - $1`).
-- **Catastrophic Backtracking Protection**: nested quantifiers in regular expressions (such as `(a+)+` or `(.*)*`) can lock up a CPU for minutes or hours on non-matching strings. rName's engine performs static pattern inspection to identify and reject expressions prone to _catastrophic backtracking_, explaining in the inspector why the regex was refused.
+---
 
-### 2. Insert text (`insert`)
+## The 8 Rules
 
-Adds specific text at a designated location:
+### 1. Replace
 
-- **At the start**: serves as a prefix (e.g., `Archive_`).
-- **At the end**: serves as a suffix positioned immediately before the extension.
-- **At position**: inserts characters at an exact 0-based character index.
+Finds text and replaces it with something else (or deletes it, if you leave the replacement empty).
 
-### 3. Remove characters (`remove`)
+- **Case**: match upper and lower case exactly or not.
+- **First occurrence only**: replaces only the first match instead of all of them.
+- **Regular expressions**: supports capture groups `()`, which you can reference in the replacement with `$1`, `$2` and so on (for example, to swap author and title: `(.*) - (.*)` → `$2 - $1`).
+- **Protection from catastrophic backtracking**: expressions with nested quantifiers (like `(a+)+` or `(.*)*`) can lock up the processor for minutes. rName recognizes them before running them, rejects them and explains why in the rule's settings.
 
-Deletes portions of text using four distinct modes:
+### 2. Insert Text
 
-- **First characters**: removes a set number of characters from the beginning.
-- **Last characters**: removes a set number of characters from the end.
-- **Range**: begins at an exact character position and removes $N$ characters.
-- **Text pattern**: searches for and deletes recurring words or characters.
+Adds text:
 
-### 4. Numbering (`sequence`)
+- **at the start**, as a prefix (e.g. `Archive_`);
+- **at the end**, as a suffix;
+- **at a precise position**, counting characters from the start.
 
-Generates automated numerical sequences based on the current list order:
+### 3. Remove Characters
 
-- **Start and Step**: sets the initial starting number (e.g., `1`) and increment step (e.g., `1` or `10`).
-- **Zero Padding**: specifies minimum digit padding with leading zeros (e.g., with 3 digits: `001`, `002`, ..., `099`).
-- **Position and Separator**: places the counter as a prefix, suffix, or at an index, connected by a custom separator (e.g., `_`, `-`, `-`).
+Deletes parts of the name in four ways:
 
-### 5. Letter case (`changeCase`)
+- **First characters**: a set number of leading characters.
+- **Last characters**: a set number of trailing characters.
+- **Range**: a number of characters starting from a position.
+- **Text pattern**: a specific or recurring piece of text.
 
-Normalizes text formatting across 8 distinct styles:
+### 4. Numbering
 
-- `lower case`: converts all characters to lowercase.
-- `UPPER CASE`: converts all characters to uppercase.
-- `Title Case Of Each Word`: capitalizes the first letter of each word.
-- `First letter capitalised`: capitalizes only the first letter of the sentence (_Sentence case_).
-- `camelCase`: lowercases the first word and capitalizes subsequent words without spaces.
-- `PascalCase`: capitalizes each word without spaces.
-- `snake_case`: lowercases words separated by underscores `_`.
-- `kebab-case`: lowercases words separated by hyphens `-`.
+Numbers files following the list order:
 
-### 6. Date and time (`dateStamp`)
+- **Start and step**: the starting value (e.g. `1`) and the increment (e.g. `1` or `10`).
+- **Digits**: the minimum number of digits, with leading zeros (e.g. with 3 digits: `001`, `002`, … `099`).
+- **Position and separator**: the number goes at the start, at the end or at a precise position, joined to the name by a separator of your choice (e.g. `_`, `-` or ` - `).
 
-Appends timestamps to filenames:
+### 5. Letter Case
 
-- **Source**: Creation date from filesystem attributes, Last modification date, or Today's current date.
-- **Custom Format**: supports standard ISO date tokens (e.g., `yyyy-MM-dd`, `yyyyMMdd`, `yyyy-MM-dd_HHmm`), ensuring consistent chronological sorting in Finder.
-- **Position & Separator**: place the date string at the start or end of the filename.
+Standardizes capitalization with 8 styles:
 
-### 7. Extension (`fileExtension`)
+- `lower case`: everything in lower case.
+- `UPPER CASE`: everything in upper case.
+- `Title Case Of Each Word`: title style.
+- `First letter capitalised`: only the first character in upper case (_Sentence case_).
+- `camelCase`: first word lower case, the following ones joined with a capital initial.
+- `PascalCase`: every word joined with a capital initial.
+- `snake_case`: lower-case words separated by underscores `_`.
+- `kebab-case`: lower-case words separated by hyphens `-`.
 
-Dedicated extension management:
+### 6. Date and Time
 
-- **Set to**: forcibly modifies the file extension (e.g., from `jpeg` to `jpg`).
-- **Make lower case**: standardizes mismatched extensions (e.g., `.PNG` and `.JPG` become `.png` and `.jpg`).
-- **Make upper case**: converts extensions to uppercase.
-- **Remove**: strips the extension entirely from the filename.
+Inserts a date into file names:
 
-### 8. Clean up name (`cleanUp`)
+- **Source**: the file's creation date, last modification date or today's date.
+- **Format**: a customizable format pattern (e.g. `yyyy-MM-dd`, `yyyyMMdd`, `yyyy-MM-dd_HHmm`); with year, month and day in that order, the Finder sorts files by date.
+- **Position and separator**: at the start, at the end or at a precise position in the name.
 
-Sanitizes filenames before web publishing or archival:
+### 7. Extension
 
-- **Trim edges**: removes leading and trailing whitespace.
-- **Collapse spaces**: condenses double or multiple spaces into a single space.
-- **Space replacement**: converts spaces to underscores (`_`), hyphens (`-`), or deletes them.
-- **Remove accents and diacritics**: replaces accented characters with standard ASCII equivalents (e.g., `é` → `e`, `à` → `a`, `ü` → `u`).
-- **Strip invalid characters**: removes characters prohibited by filesystems (`/`, `:`, null byte `\0`).
-- **Strip emoji**: removes graphic emojis and decorative symbols.
+Manages file extensions:
+
+- **Set to**: changes the extension (e.g. from `jpeg` to `jpg`).
+- **Make lower case**: standardizes mixed extensions (e.g. `.PNG` and `.JPG` become `.png` and `.jpg`).
+- **Make upper case**: converts the extension to upper case.
+- **Remove**: deletes the extension from the name.
+
+### 8. Clean Up Name
+
+Tidies names before publishing them on the web or archiving them:
+
+- **Edge spaces**: removes spaces before and after the name.
+- **Double spaces**: reduces runs of spaces to a single one.
+- **Spaces**: leave them as they are, replace them with an underscore (`_`) or a hyphen (`-`), or delete them.
+- **Accents**: turns accented letters into plain ones (e.g. `è` → `e`, `à` → `a`, `ü` → `u`).
+- **Invalid characters**: removes characters the file system doesn't allow (`/`, `:`, null character).
+- **Emoji**: removes emoji and graphic symbols.

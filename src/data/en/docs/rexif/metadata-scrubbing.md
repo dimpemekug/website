@@ -1,48 +1,46 @@
 ---
-title: "Metadata Scrubbing and Privacy"
-description: "Sanitizing sensitive GPS coordinates, device serial numbers, and embedded thumbnails for safe public sharing."
+title: "Clean-Up and Copies Without Personal Data"
+description: "Removing GPS location and personal data, and exporting copies to share in rExif."
 project: "rexif"
 order: 7
 section: "Privacy & Security"
 ---
 
-## Why Metadata Scrubbing Matters
+## Why Clean Up Your Photos
 
-Photographs captured using modern smartphones and camera bodies embed a considerable amount of background telemetry:
-- **Pinpoint Geographic Data**: GPS latitude, longitude, altitude, and heading angle.
-- **Hardware Serial Numbers**: Unique identifier tokens for the camera body, lens, and internal sensor.
-- **User and Environment Telemetry**: Computer user account names, editing software history, and embedded thumbnail images which might reveal uncropped versions of a redacted photo.
+Digital photos contain data that can reveal personal information:
+- the precise GPS coordinates of your home, school or places you visit;
+- the serial number of your camera and lens, which links different photos to the same gear;
+- the name of the photographer or camera owner.
 
-Sharing unscrubbed files on public web forums, classified ads, or messaging channels exposes personal routines and home addresses to automated scrapers.
+rExif lets you both remove single fields from the original files and export already-cleaned copies to share.
 
-## Sanitization Profiles in rExif
+## Removing Fields from Originals
 
-rExif provides granular scrubbing options to balance technical utility with privacy needs:
+To clean up your files directly:
+- **Location**: select the photos and choose **Remove Location** from the context menu (or use the button next to the coordinates in the inspector). Latitude, longitude and altitude are cleared.
+- **Author and copyright**: select the items and clear the fields in the inspector or with the Text tab of Bulk Edit.
+- **No surprises**: removals show in orange like any other change and take effect only when you press **Save** (`⌘S`).
 
-### 1. Remove GPS Only
-Retains all technical exposure parameters (exposure time, f-stop, ISO, color profile) while stripping every geographic reference:
-- Clears `GPSLatitude`, `GPSLongitude`, `GPSAltitude`, `GPSTimeStamp`, and `GPSImgDirection`.
-- Removes reverse-geocoded IPTC city, state, postal code, and country records.
+## Export Copies Without Personal Data
 
-### 2. Remove Hardware and Personal Telemetry
-Removes data identifying specific individuals or hardware serial numbers:
-- Camera body and optical lens serial numbers.
-- Owner name, artist attribution, and free-form user comments.
-- Manufacturer proprietary *MakerNotes* (Apple, Canon, Nikon, Sony).
+To share photos and videos without touching your originals, use **File** › **Export Copies Without Personal Data…**:
 
-### 3. Full Sanitization (Strip All Metadata)
-Removes all EXIF, IPTC, and XMP structures alongside embedded thumbnail caches:
-- Retains only the foundational headers necessary for image rendering (dimensions, sRGB/Display P3 color space, and DPI density).
-- Often reduces total file weight by 15% to 25%, expediting web delivery.
+1. select the photos or videos to share;
+2. choose **Export Copies Without Personal Data…**;
+3. in the window that opens, choose what to keep:
+   - **Date and time taken** (on by default);
+   - **Author and copyright** (on by default);
+   - **Description**;
+   - **Camera and Lens**;
+4. choose the destination folder.
 
-## Exporting Sanitized Copies
-
-To safeguard primary raw assets, rExif supports creating clean derivative copies:
-
-1. Select the images intended for distribution.
-2. Click **Export Sanitized Copies...**.
-3. Choose a destination folder (e.g. `Sharing/`) or append an automated suffix like `_clean.jpg`.
-4. Your master library files remain completely intact with full metadata, while exported copies are stripped and safe for public release.
+The copies are created:
+- **without GPS location**;
+- **without serial numbers, MakerNotes, software and edit history**;
+- with only the fields you chose to keep, including unsaved changes;
+- **without recompression**: pixels and frames stay identical;
+- **leaving your originals intact** on your Mac.
 
 > [!IMPORTANT]
-> Unlike web-based metadata stripping tools that require uploading your photos to third-party cloud servers, rExif executes all processing within local Mac memory, ensuring total confidentiality.
+> Everything happens on your Mac, inside the sandbox: no file is uploaded to external servers, unlike online services that ask you to upload your photos.

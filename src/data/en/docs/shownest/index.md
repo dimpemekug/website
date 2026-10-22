@@ -1,6 +1,6 @@
 ---
 title: "Introduction to ShowNest"
-description: "Overview of ShowNest: TV show and episode tracker for iPhone and iPad powered by TMDB, iCloud sync, and custom release alerts."
+description: "Overview of ShowNest: TV show and episode tracking on iPhone and iPad with TMDB data, iCloud sync and new-episode notifications."
 project: "shownest"
 order: 1
 section: "Getting Started"
@@ -8,27 +8,30 @@ section: "Getting Started"
 
 ## What is ShowNest
 
-**ShowNest** is a native **iOS and iPadOS** application designed for television series enthusiasts who want to organize their viewing library, track unwatched episodes, and discover new productions without getting lost in fragmented streaming interfaces.
+**ShowNest** is a native app for **iPhone and iPad (iOS/iPadOS 17 or later)** made for people who follow lots of TV shows: it always tells you which episode is next, keeps track of what you've watched and lets you know when new episodes come out, without getting lost across streaming catalogs.
 
-Powered by community data from **The Movie Database (TMDB)** and synchronized seamlessly via **iCloud**, ShowNest offers an elegant, fast, and ad-free experience.
+Show and episode data comes from **TMDB** (*The Movie Database*); your library syncs through **iCloud**. ShowNest is free, with no ads, subscriptions or accounts.
 
 ---
 
-## Core Capabilities
+## Key Features
 
 ### 1. Catalog and Discovery with TMDB
-- Search across tens of thousands of international TV shows, both contemporary and classic.
-- Explore curated sections: **Trending**, **Popular**, **Top Rated**, and **Airing Today**.
-- Detailed series pages featuring localized synopses, cast directories, seasons, episode air dates, and high-definition poster art.
+- Search the whole TMDB catalog, from current shows to classics.
+- Browse the **Trending**, **Popular**, **Top Rated** and **Airing Today** sections, plus suggestions based on what you follow: shows similar to the last one you added and more titles from your favorite genre.
+- Show pages with synopsis, seasons, episodes, air dates, posters and trailers.
 
-### 2. Intelligent Watchlist Management
-- **Up Next**: highlights the immediate next episode to watch for every series in progress.
-- **Upcoming**: tracks countdowns to release dates for renewed seasons and upcoming premieres.
-- **Completed**: an organized archive of completed series with personal ratings and viewing logs.
+### 2. Watchlist and Library
+- **Watchlist**: the next episode to watch for every show you follow; for shows you're caught up on, a countdown to the next episode.
+- **My Shows**: your library split into **Coming Up**, **In progress**, **Not started** and **Completed**, plus an **Archive** for shows you've put away.
 
-### 3. Viewing Statistics and Screen Time
-Discover how much time you have invested into your favorite stories: total watch time in days and hours, total episode counts, and visual breakdowns by genre (Sci-Fi, Drama, Comedy, Mystery, etc.).
+### 3. Statistics
+Total watch time, episodes watched, completed shows, a month-by-month yearly recap, day streaks, favorite genres, most watched shows and your full watch history.
 
-### 4. Zero-Account Privacy & iCloud Sync
-- **No Sign-Up**: no account registration, passwords, or emails required.
-- **iCloud Key-Value Storage**: your watchlist and episode progress synchronize automatically and silently across your iPhone and iPad using your private Apple account.
+### 4. Privacy and Sync
+- **No sign-up**: no account or email address needed.
+- **iCloud**: your library and watched episodes sync between iPhone and iPad through your Apple account.
+- **Local notifications**: an alert on the day a new episode of your shows comes out.
+
+### 5. Your Way
+Light, dark or system theme, six accent colors, the app in seven languages (even different from the device language) and, on iPhone, a tab bar or a compact menu.

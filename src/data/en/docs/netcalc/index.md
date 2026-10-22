@@ -21,7 +21,7 @@ The app allows you to:
 - **Import and Compare Live Configurations (Config Diff)**: instant parsing of `show running-config` output and stanza-by-stanza bidirectional comparison between physical hardware and your project plan, with single-click copying of missing commands.
 - **Visualize Network Topologies**: interactive, vector topology diagram automatically derived from configured IP addresses and point-to-point links, printable as a dedicated high-resolution page in PDF reports.
 - **Verify Topology Integrity (15-Rule Network Linter)**: proactive detection of misconfigurations before powering on equipment (overlapping subnets, duplicate IPs, unreachable next hops, OSPFv3 missing router-id, faulty HSRP virtual IPs, port security on trunks).
-- **Practice with Interactive Quizzes & Widgets**: 9 subnetting exercise question types across 3 difficulty tiers with full step-by-step explanations, streak tracking, and high scores; interactive "Daily Quiz" widget with on-face answer reveal for iOS 18 and macOS 15.
+- **Practice with Interactive Quizzes & Widgets**: 9 subnetting exercise question types across 3 difficulty tiers with full step-by-step explanations, streak tracking, and high scores; interactive "Daily Quiz" widget with on-face answer reveal, plus Control Center controls.
 - **Export and Share**: professional vector PDF reports drawn with Apple CoreGraphics/CoreText, structured CSV tables, and plain text CLI configurations.
 
 ---
@@ -58,4 +58,4 @@ To master every aspect of the application, explore the dedicated documentation g
 - [Running-Config Import & Comparison](/en/projects/netcalc/docs/import-running-config): Existing Cisco configuration parsing, project integration, and stanza Config Diff with copyable missing commands.
 - [Lab Verification (Network Linter)](/en/projects/netcalc/docs/lab-linter-and-verification): Proactive 15-rule diagnostics for anomalies, IP collisions, OSPFv3 flaws, and routing inconsistencies.
 - [Projects, Topology and Exporting](/en/projects/netcalc/docs/projects-export-and-icloud): Lab project organization, automatic topology diagram, CoreGraphics PDF reports, and CloudKit synchronization.
-- [Learning, Exercises and Widgets](/en/projects/netcalc/docs/shortcuts-and-learning): 9-type interactive quiz with streak/records, 21-chapter textbook, 55+ term glossary, and iOS 18 / macOS 15 widgets.
+- [Learning, Exercises and Widgets](/en/projects/netcalc/docs/shortcuts-and-learning): 9-type interactive quiz with streak/records, 21-chapter textbook, glossary with over 100 entries, widgets and controls.

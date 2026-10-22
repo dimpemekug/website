@@ -1,6 +1,6 @@
 ---
 title: "rZip"
-description: "App per Mac per gli archivi compressi: guarda dentro ZIP, RAR, 7z e molti altri formati senza estrarli, apri archivi protetti o in più parti e crea i tuoi con password e volumi. Senza account e senza connessione."
+description: "App per Mac per gli archivi compressi: guarda dentro ZIP, RAR, 7z e molti altri formati senza estrarli, apri archivi protetti o in più parti e crea i tuoi con password e volumi. Senza account e senza connessione. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "utility", "privacy"]
@@ -27,6 +27,7 @@ rZip è l'app per gli archivi compressi sul Mac: guarda dentro ZIP, RAR, 7z e mo
 - **Tutti i formati più diffusi**: ZIP, RAR, 7Z, TAR, GZ, BZ2, XZ, ISO, CAB, LHA, CPIO, XAR, e anche JAR, EPUB, CBZ e CBR
 - **Nativo per macOS**: trascinamento sull'icona nel Dock, menu completi e scorciatoie da tastiera, tema chiaro o scuro, interfaccia in italiano e in inglese
 - **Privacy**: nessun account e nessuna connessione a Internet, i tuoi file non lasciano mai il Mac
+- **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 

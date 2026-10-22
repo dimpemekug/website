@@ -1,6 +1,6 @@
 ---
 title: "Introduction to rManga"
-description: "Overview of rManga for iPhone and iPad: complete media suite for reading manga, comics, and ebooks, and watching anime, with zero tracking and buttery-smooth performance."
+description: "Overview of rManga for iPhone and iPad: one app to read manga, comics and ebooks and watch anime, with no tracking."
 project: "rmanga"
 order: 1
 section: "Getting Started"
@@ -8,40 +8,40 @@ section: "Getting Started"
 
 ## What is rManga
 
-**rManga** is a native application for **iPhone and iPad (iOS/iPadOS 26+)** that unifies three core entertainment pillars into a singular, responsive library:
+**rManga** is a native app for **iPhone and iPad (iOS/iPadOS 26+)**, in English and Italian, that brings three worlds together in a single library:
 
-1. **Manga & Comics**: Japanese manga, Western graphic novels, and continuous vertical webtoons, supporting local archives and extension repositories.
-2. **Ebooks & Text Documents**: an advanced digital book reader powered by the industry-standard **Readium** engine, supporting EPUB, PDF, FB2, DOCX, TXT, and Markdown with fluid pagination, highlights, and annotations.
-3. **Anime & Animated Series**: a dedicated video player with a dual-engine architecture (native Apple AVPlayer plus libmpv via Metal for MKV containers), Sora streaming modules, Jellyfin server integration, AniSkip intro skipping, and stylized ASS/SSA subtitles.
+1. **Manga and comics**: manga, Western comics and vertical-scrolling webtoons, from local files, extensions and servers.
+2. **Ebooks and text books**: a Readium-based text reader for EPUB, FB2, DOCX, ODT, RTF, HTML, TXT and Markdown, with pagination, bookmarks, highlights and search; PDFs and illustrated EPUBs are paged through like comics.
+3. **Anime and video**: a player with two engines (Apple's AVPlayer and libmpv on Metal for MKV and the like), Sora video modules, Jellyfin servers, intro skipping with AniSkip and ASS/SSA subtitles with their own styling.
 
-Built in **SwiftUI and SwiftData** around Apple's *Liquid Glass* design paradigms, rManga hosts no content of its own: it is an open, private media player and reader built to enjoy your local files and connect to your personal servers.
-
----
-
-## Architecture and Core Principles
-
-### 1. Absolute Privacy and Zero Tracking
-- **Zero Profiling**: the app contains no telemetry, commercial trackers, or third-party ads.
-- **Your Data Remains On-Device**: your library, history, bookmarks, and progress live in local sandboxed storage and, optionally, your private **iCloud account**.
-- **Secure Keychain Storage**: passwords and API tokens for Jellyfin, Suwayomi, and OPDS catalogs are stored encrypted in the iOS Keychain.
-
-### 2. Unified Multi-Media Domain
-In rManga, every title is represented by the unified `Manga` model and its content segments by `Chapter`:
-- For **comics**, progress reflects the current page.
-- For **ebooks**, progress stores the exact document locator fraction.
-- For **anime and videos**, progress is tracked to the exact second, marking an episode finished when reaching 90% completion.
-- Consequently, history, "Continue Watching/Reading" rows, and cross-device sync operate harmoniously without duplicated tracking state.
-
-### 3. ProMotion 120Hz Fluidity
-Every interface component is optimized to eliminate frame drops (*animation hitches*):
-- Aggregated single-query chapter count computations.
-- Reusable view recycling for infinite vertical webtoon scrolls.
-- Hardware-accelerated VideoToolbox decoding for high-bitrate video streams.
+Built with **SwiftUI and SwiftData** in the *Liquid Glass* design, rManga doesn't host or distribute any content: it reads your files and connects to the sources you choose.
 
 ---
 
-## Quick Start
+## Architecture and Strengths
 
-1. **Import Files**: place comic archives or digital books into the `rManga` folder inside the Apple **Files** app.
-2. **Connect Sources**: install community Aidoku/Paperback repositories, add Sora video modules, or link your home server (Komga, Kavita, Suwayomi, or Jellyfin).
-3. **Enjoy Your Media**: flip manga pages from right to left, scroll continuous webtoons, annotate prose in ebooks, or stream anime episodes with custom subtitles and Picture in Picture.
+### 1. Privacy and No Required Account
+- **No profiling**: the app has no analytics, trackers or ads.
+- **Your data on your device**: library, history and progress stay on your device and, only if you turn on sync, in your **personal iCloud**.
+- **Credentials in the Keychain**: server passwords and tokens (Jellyfin, Suwayomi, Komga, Kavita) stay in the iOS Keychain and never end up in backups or iCloud.
+
+### 2. One Model for Different Media
+In rManga every work is a `Manga` and its contents (comic chapters, book volumes or episodes) are `Chapter`s:
+- For **comics**, progress is the page reached.
+- For **ebooks**, progress uses Readium positions (roughly one every thousand characters), the same on every device.
+- For **videos**, the position is saved to the second, and an episode counts as watched past 90% of its length.
+- This way history, the "Continue" row, backups and sync work the same for everything.
+
+### 3. Performance and 120 Hz ProMotion Screens
+Screens have been measured and optimized to avoid animation hitches:
+- the Library counts chapters with **a single query** per draw;
+- in webtoons only the pages near the screen have a view, recycled from page to page;
+- video is hardware-decoded with VideoToolbox.
+
+---
+
+## Getting Started
+
+1. **Import your files**: copy manga, book or video archives into the `rManga` folder in the **Files** app.
+2. **Connect your sources**: add Aidoku or Paperback extension repositories, Sora video modules or your server (Komga, Kavita, Suwayomi or Jellyfin). No repository is included with the app.
+3. **Read or watch**: page through a manga right to left, scroll a webtoon vertically, highlight a passage in an ebook or start an episode with subtitles and Picture in Picture.

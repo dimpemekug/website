@@ -1,41 +1,45 @@
 ---
-title: "Ridimensionamento, Preset e Qualità"
-description: "Modalità di ridimensionamento in pixel e percentuale, gestione dei preset integrati e personalizzati, e compressione JPEG in Resizo."
+title: "Ridimensionamento, preset e qualità"
+description: "Modalità di ridimensionamento in pixel e in percentuale, preset predefiniti e personalizzati, formati di uscita e qualità JPEG in Resizo."
 project: "resizo"
 order: 2
 section: "Funzionalità"
 ---
 
-## Modalità di Ridimensionamento
+## Modalità di ridimensionamento
 
-Resizo offre diverse opzioni per definire la dimensione finale delle immagini:
+Resizo offre due modi per stabilire la dimensione finale delle immagini.
 
-### 1. Ridimensionamento in Pixel
-- **Larghezza Fissa**: imposta la larghezza desiderata (es. 1200 px); l'altezza verrà calcolata automaticamente mantenendo le proporzioni originali.
-- **Altezza Fissa**: imposta l'altezza (es. 800 px); la larghezza si adatterà in proporzione.
-- **Rettangolo Limite (Entrambe le dimensioni)**: specifica larghezza e altezza massime (es. 1920×1080 px). Resizo ridimensionerà l'immagine in modo che rientri perfettamente nel riquadro senza mai deformarla o ritagliarla.
-- **Ignora Proporzioni**: opzione facoltativa per forzare dimensioni esatte qualora desiderato.
+### 1. In pixel
+Con l'opzione **Adatta mantenendo le proporzioni** attiva (predefinita):
+- **Solo larghezza**: imposta la larghezza (es. 1200 px) e lascia vuota l'altezza, che verrà calcolata in proporzione.
+- **Solo altezza**: imposta l'altezza (es. 800 px); la larghezza si adatterà in proporzione.
+- **Larghezza e altezza**: indica un riquadro massimo (es. 1920×1080 px). L'immagine viene ridimensionata per starci dentro, senza deformarla né ritagliarla.
 
-### 2. Ridimensionamento in Percentuale
-Scala le dimensioni da **5%** fino al **300%** rispetto alla risoluzione di partenza, ideale per ridurre dimezzando o riducendo a un quarto il peso complessivo di un set fotografico senza dover calcolare le risoluzioni in pixel.
+Disattivando l'opzione delle proporzioni, Resizo usa le dimensioni esatte che indichi, anche a costo di deformare l'immagine.
 
----
+### 2. In percentuale
+Scala l'immagine **dal 5% al 300%** rispetto alla risoluzione di partenza: comodo per dimezzare o ridurre a un quarto un intero gruppo di foto senza calcolare i pixel.
 
-## Preset Pronti e Personalizzati
-
-Per risparmiare tempo nelle operazioni ricorrenti, Resizo include quattro preset predefiniti:
-- **Web (1920 px)**: ideale per siti web, blog e presentazioni su schermi ad alta definizione.
-- **Social (1080 px)**: formato standard ottimizzato per post Instagram, LinkedIn e feed social.
-- **Email (800 px)**: immagini ultraleggere per allegati di posta elettronica rapidi da scaricare.
-- **Icona (512×512 px)**: formato quadrato per avatar, icone di app e profili.
-
-### Creare Preset Personalizzati
-Tramite il pulsante **Gestisci Preset**, puoi salvare le tue combinazioni preferite di larghezza, altezza, formato di uscita e qualità, assegnando loro un nome (es. *E-commerce Prodotti*, *Blogger Banner*).
+La colonna **Nuova dimensione** della tabella mostra in anticipo la risoluzione finale di ogni immagine. Per sicurezza, il lato lungo in uscita non supera i 16.384 pixel.
 
 ---
 
-## Formati e Regolazione Qualità JPEG
+## Preset predefiniti e personalizzati
 
-- **Salva nel Formato Originale**: converte solo le dimensioni mantenendo il formato di partenza.
-- **Converti in JPEG**: applica l'algoritmo di compressione JPEG con un cursore di qualità (dal 50% al 100%). Un valore compreso tra 80% e 85% garantisce un risparmio di peso eccezionale senza perdita percepibile di nitidezza visiva.
-- **Converti in PNG**: preserva la trasparenza alfa originale, ideale per loghi, grafiche vettoriali rasterizzate o screenshot.
+Per le operazioni ricorrenti, al primo avvio Resizo propone quattro preset, visibili nella barra laterale:
+- **Web (1920 px di larghezza)**: per siti, blog e presentazioni su schermi ad alta risoluzione.
+- **Social (1080 px di larghezza)**: per i post sui social network.
+- **Email (800 px di larghezza)**: immagini leggere da allegare alla posta.
+- **Icona (512×512 px)**: formato quadrato per avatar e immagini del profilo.
+
+### Creare e gestire i preset
+Con **Gestisci preset…** (nella barra laterale o nelle Impostazioni) puoi creare nuovi preset indicando nome, larghezza, altezza e se mantenere le proporzioni, nascondere quelli che non usi ed eliminarli, compresi quelli predefiniti.
+
+---
+
+## Formato di uscita e qualità JPEG
+
+- **Originale**: cambia solo le dimensioni e mantiene il formato di partenza.
+- **JPEG**: comprime l'immagine con un cursore di qualità dal 10% al 100% (predefinito 85%). Un valore tra l'80% e l'85% riduce molto il peso senza perdite visibili.
+- **PNG**: compressione senza perdita che conserva la trasparenza, adatta a loghi, grafiche e screenshot.

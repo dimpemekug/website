@@ -1,56 +1,56 @@
 ---
-title: "Preview and Conflict Resolution"
-description: "How real-time preview works in rName: automated conflict detection, non-blocking conflict isolation, and manual per-file overrides."
+title: "Preview and Conflicts"
+description: "How rName's real-time preview works: automatic conflict detection, leaving problem files out and per-row manual editing."
 project: "rname"
 order: 3
 section: "Rules & Editing"
 ---
 
-## Real-Time Continuous Preview
+## An Always-Current Preview
 
-A common flaw in traditional batch renamers is guesswork: a single misconfigured rule can inadvertently alter hundreds of files on disk before you realize what went wrong.
+The main problem with traditional renaming utilities is uncertainty: a wrong setting can rename hundreds of files irreversibly before you notice the mistake.
 
-In rName, **no filesystem changes happen in the background**.
+In rName **nothing is written to disk in the background**.
 
-The central table continuously displays every added file, contrasting the original filename with the proposed result from the active rule chain. Tweaking a parameter, appending a rule, or reordering steps instantly recalculates the entire preview without writing a single byte to disk.
-
----
-
-## Preview Diagnostic Statuses
-
-Each row in the table is accompanied by a status symbol and clear diagnostic feedback:
-
-|              Icon               | Status                                       | Description & Behavior                                                                                                       |
-| :-----------------------------: | :------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-|     `checkmark.circle.fill`     | **Ready (`ready`)**                          | The calculated name is valid, conflict-free, and differs from the original name. The file will be renamed upon confirmation. |
-|         `equal.circle`          | **Unchanged (`unchanged`)**                  | Active rules do not alter this filename. The file is skipped safely without error.                                           |
-| `exclamationmark.triangle.fill` | **Empty name (`emptyName`)**                 | The active rule chain removed all characters from the filename.                                                              |
-| `exclamationmark.triangle.fill` | **Duplicate name (`duplicate`)**             | Two or more files in the current batch would end up with the exact same name in the same folder.                             |
-| `exclamationmark.triangle.fill` | **Already exists (`alreadyExists`)**         | Another file with the proposed name already exists in that directory on disk.                                                |
-| `exclamationmark.triangle.fill` | **Invalid characters (`illegalCharacters`)** | The calculated name contains characters rejected by macOS filesystems (`/`, `:`, null byte).                                 |
-| `exclamationmark.triangle.fill` | **Name too long (`tooLong`)**                | The proposed name exceeds the maximum filesystem limit (255 characters on APFS/HFS+).                                        |
+The central table shows every added file in real time, with its original name next to the one proposed by the rule chain. Changing a setting, adding a rule or swapping two of them instantly recalculates the whole preview, without touching any files.
 
 ---
 
-## Conflict Isolation: No Aborted Batches
+## Preview States
 
-In conventional command-line tools and utilities, a single duplicate or over-length filename crashes the entire batch or silently overwrites existing files.
+Each row in the table has an icon and a status:
 
-rName handles errors through **preventive conflict isolation**:
-
-- Files triggering a blocking condition (`emptyName`, `duplicate`, `alreadyExists`, `illegalCharacters`, `tooLong`) are clearly highlighted and **set aside from the operation**.
-- Valid, conflict-free files proceed with renaming uninterrupted.
-- Your directories are protected from accidental data loss, overwrites, or broken naming sequences.
+| Icon | Status | Meaning |
+| :---: | :--- | :--- |
+| `checkmark.circle.fill` | **Ready** | The new name is valid, conflict-free and different from the current one: the file will be renamed. |
+| `equal.circle` | **Unchanged** | The rules don't change this file's name, so it's simply skipped. |
+| `exclamationmark.triangle.fill` | **Empty name** | The rule chain removed every character of the name. |
+| `exclamationmark.triangle.fill` | **Duplicate name** | Two or more files in the list would end up with the same name in the same folder. |
+| `exclamationmark.triangle.fill` | **Already exists** | Another file with the proposed name already exists in the folder. |
+| `exclamationmark.triangle.fill` | **Invalid characters** | The name contains characters the file system doesn't allow (`/`, `:`, null character). |
+| `exclamationmark.triangle.fill` | **Name too long** | The name exceeds the macOS and APFS limit (255 characters). |
 
 ---
 
-## Manual Per-File Overrides
+## Conflicts Don't Stop Everything
 
-Occasionally, within a batch of 50 documents following a standard naming pattern, a single item requires a unique custom title.
+In many programs a single duplicate or overlong name stops the whole rename with a generic error, or overwrites existing files.
 
-Rather than having to rename that file separately in Finder:
+rName instead **leaves conflicting files out in advance**:
 
-1. **Double-click** the file's row in the table (or right-click → _Edit name_).
-2. Type the desired custom name directly.
-3. The file will stop following the rule chain and will be tagged with a **pencil icon**.
-4. At any time, clicking the reset button next to the field returns the file back to its calculated rule chain name.
+- files with a blocking status (empty, duplicate, already existing, invalid characters, too long) are highlighted in the table and **left out of the operation**;
+- every other file is renamed normally;
+- no file is ever overwritten.
+
+---
+
+## Renaming a Single File by Hand
+
+Sometimes, in a group of 50 documents renamed by a rule, one file needs a different name.
+
+Instead of renaming it separately in the Finder:
+
+1. **double-click** the file's row (or right-click › _Edit the name_);
+2. type the name you want;
+3. that file stops following the rule chain and is marked with a **pencil**;
+4. at any time, the button next to it brings it back to the name worked out by the rules. From the _Rename_ menu you can also restore all hand-typed names at once.

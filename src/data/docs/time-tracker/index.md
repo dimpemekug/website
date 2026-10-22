@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Time Tracker"
-description: "Panoramica di Time Tracker: gestione progetti, registro attività, timer Pomodoro e dashboard di analisi per iOS e Android."
+description: "Panoramica di Time Tracker: progetti, registro delle attività, timer di concentrazione e dashboard con ore fatturabili e ricavi, per iOS e Android."
 project: "time-tracker"
 order: 1
 section: "Iniziare"
@@ -8,25 +8,28 @@ section: "Iniziare"
 
 ## Cos'è Time Tracker
 
-**Time Tracker** è un'applicazione mobile nativa per **iOS** e **Android** progettata per liberi professionisti, sviluppatori, consulenti e studenti che desiderano misurare con precisione il tempo dedicato a progetti e clienti, massimizzando la concentrazione ed eliminando le incertezze sulla fatturazione.
+**Time Tracker** è un'app nativa per **iPhone e iPad** e per **Android** pensata per freelance, sviluppatori, consulenti e studenti che vogliono sapere con precisione quanto tempo dedicano a progetti e clienti, e quanto vale quel tempo.
 
-Sviluppata interamente con stack nativi (**SwiftUI** su iOS e **Jetpack Compose** su Android), l'applicazione unisce un registro delle attività quotidiane, un timer Pomodoro ancorato all'orologio di sistema e un cruscotto analitico completo di tariffe orarie e calcolo dell'IVA.
+È sviluppata con gli strumenti nativi di ciascuna piattaforma (**SwiftUI** su iOS, **Jetpack Compose** su Android) e unisce un registro delle attività, un timer di concentrazione ancorato all'orologio di sistema e una dashboard con tariffe orarie e IVA.
 
 ---
 
-## Moduli Principali
+## Moduli principali
 
-### 1. Riepilogo Attività Quotidiane
-Visualizza le tue registrazioni raggruppate per giorno con il monte ore totale in evidenza. Include ricerca istantanea su titoli, note e progetti, con gesture di scorrimento laterale per modificare o eliminare rapidamente le voci.
+### 1. Riepilogo delle attività
+Le registrazioni raggruppate per giorno, con il totale delle ore in evidenza. Puoi cercare per titolo, note e progetto, e scorrere una riga di lato per modificarla o eliminarla.
 
-### 2. Gestione Progetti e Colori Intelligenti
-Ogni progetto dispone di nome, note, periodo di attività e stato di archiviazione. La tonalità cromatica del progetto viene calcolata automaticamente dal nome tramite un algoritmo matematico dedicato, garantendo armonia visiva e contrasti perfetti senza costringerti a scegliere i colori a mano.
+### 2. Registrazione delle attività
+Ogni attività si registra con **orario di inizio e fine** oppure come **totale giornaliero**, quando sai già quanto è durata. I titoli usati più spesso vengono proposti come suggerimenti.
 
-### 3. Timer Pomodoro Integrato
-Un timer di concentrazione ancorato all'orologio di sistema, con barre compatte non invasive e integrazione con le tecnologie native di ciascun sistema operativo (Live Activity su iOS e Foreground Service con notifiche continue su Android).
+### 3. Progetti
+Ogni progetto ha nome, colore, note, date di inizio e fine, e impostazioni di fatturazione con tariffa oraria e IVA. I progetti conclusi si possono archiviare.
 
-### 4. Dashboard di Analisi e Fatturazione
-Calcola ore complessive, suddivisione percentuale tra progetti, quota di tempo fatturabile e ricavi previsti in base a tariffa oraria e aliquota IVA, con esportazione immediata di report in PDF e fogli di calcolo CSV.
+### 4. Timer di concentrazione (Pomodoro)
+Un cronometro ancorato all'orologio di sistema, sempre visibile in una barra compatta dentro l'app e, fuori dall'app, nella Dynamic Island (iOS) o in una notifica continua (Android). Quando lo fermi, la sessione diventa un'attività del progetto scelto.
 
-### 5. Privacy Assoluta e Formato Aperto
-I tuoi dati restano sul dispositivo e sono esportabili in qualsiasi momento in formato JSON universale, compatibile e trasferibile tra iOS e Android.
+### 5. Dashboard
+Ore per settimana, mese, anno o un intervallo a scelta, ore per progetto, quota fatturabile e ricavi, con esportazione in PDF e CSV.
+
+### 6. Dati tuoi
+I dati restano sul dispositivo; su iOS puoi attivare la sincronizzazione con il tuo iCloud. Il backup JSON si esporta quando vuoi ed è compatibile tra iOS e Android. L'app è disponibile in sette lingue, con tema chiaro, scuro o di sistema e colore d'accento a scelta.

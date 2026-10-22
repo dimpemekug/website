@@ -1,57 +1,59 @@
 ---
-title: "Shortcuts and Smart Filters"
-description: "Complete list of native macOS keyboard shortcuts and intelligent selection filters for high-speed metadata workflows."
+title: "Shortcuts and Quick Selections"
+description: "Complete list of rExif keyboard shortcuts and of the Select menu criteria to work faster."
 project: "rexif"
 order: 9
 section: "Reference"
 ---
 
-## Complete Keyboard Shortcuts
+## Keyboard Shortcuts
 
-rExif exposes all core curation and metadata operations through native macOS keyboard shortcuts:
+The main features of rExif have a keyboard shortcut:
 
-### File Management and Session
+### Files and Session
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Add Photos and Videos…** | `⌘ + O` | Opens the standard system open file/folder panel |
-| **Add from Photos Library…** | `⌥ + ⌘ + O` | Opens the native photo picker sheet to edit items directly in Photos |
-| **Export Originals from Photos…** | `⇧ + ⌘ + E` | Exports unmodified originals to a folder to edit all metadata fields |
-| **Save Changes** | `⌘ + S` | Writes all orange staged changes to disk |
-| **Clear List** | `⇧⌘⌫` | Removes all items from the window (`⌘Z` immediately restores the list) |
-| **Reveal in Finder** | `⇧ + ⌘ + R` | Reveals the selected file in its parent Finder directory |
-| **Settings** | `⌘ + ,` | Opens application settings (Language, Theme, Thumbnail size) |
+| **Add Photos and Videos…** | `⌘ + O` | Opens the panel to choose files and folders |
+| **Add from Photos Library…** | `⌥ + ⌘ + O` | Opens the system picker to edit date and location in Photos |
+| **Export Originals from Photos…** | `⇧ + ⌘ + E` | Exports originals so every field can be edited |
+| **Save Changes** | `⌘ + S` | Writes every orange change to disk |
+| **Clear List** | `⇧ + ⌘ + ⌫` | Removes every item from the window (files on disk stay intact, `⌘Z` brings them back) |
+| **Show in Finder** | `⇧ + ⌘ + R` | Shows the selected files in their Finder folder |
+| **Settings** | `⌘ + ,` | Opens settings (language, appearance, thumbnails, session) |
 
-### Metadata and Batch Operations
+### Editing and Metadata
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Batch Edit…** | `⇧ + ⌘ + D` | Opens the multi-tab batch edit sheet with row-by-row live preview |
-| **Align Dates to Date Taken** | `⇧ + ⌘ + L` | Synchronizes digitization and APFS filesystem dates to the capture date |
-| **Copy Metadata** | `⌥ + ⌘ + C` | Copies all metadata tags from the selected picture |
-| **Paste Metadata** | `⌥ + ⌘ + V` | Applies copied tags across all currently selected items |
-| **Star Rating 1–5 Stars** | `⌘ + 1` … `⌘ + 5` | Assigns star ratings (`xmp:Rating`) compatible with Adobe Lightroom |
-| **Remove Rating** | `⌘ + 0` | Clears star rating from the selected items |
-| **Undo Modification** | `⌘ + Z` | Reverts the last metadata modification |
-| **Redo Modification** | `⇧ + ⌘ + Z` | Re-applies the previously reverted action |
+| **Bulk Edit…** | `⇧ + ⌘ + D` | Opens the bulk panel with a row-by-row preview |
+| **Align All Dates to Date Taken** | `⇧ + ⌘ + L` | Copies the date taken to the date digitized and the file dates |
+| **Copy Metadata** | `⌥ + ⌘ + C` | Copies the selected photo's metadata |
+| **Paste Metadata** | `⌥ + ⌘ + V` | Pastes all copied metadata onto the selection (from the menu you can paste just part of it) |
+| **Rating 1–5 stars** | `⌘ + 1` … `⌘ + 5` | Gives the selected items 1 to 5 stars |
+| **Remove rating** | `⌘ + 0` | Clears the star rating |
+| **Undo** | `⌘ + Z` | Undoes the last operation |
+| **Redo** | `⇧ + ⌘ + Z` | Redoes the last undone operation |
 
-### View Modes and Navigation
+### View
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Table View** | `⌃ + ⌘ + 1` | Switches to the multi-column tabular list |
-| **Map View** | `⌃ + ⌘ + 2` | Switches to the interactive full-window Apple Maps browser |
-| **Larger Thumbnails** | `⌘ + +` | Increases preview thumbnail dimension in the table |
-| **Smaller Thumbnails** | `⌘ + -` | Decreases preview thumbnail dimension in the table |
-| **Quick Look Preview** | `Space` | Opens the native high-resolution full-screen Quick Look preview |
-| **Find in Catalog** | `⌘ + F` | Moves focus to the real-time search field in the toolbar |
+| **As Table** | `⌃ + ⌘ + 1` | Switches to the table view |
+| **As Map** | `⌃ + ⌘ + 2` | Switches to the map view (Apple Maps) |
+| **Bigger thumbnails** | `⌘ + +` | Increases thumbnail size in the table |
+| **Smaller thumbnails** | `⌘ + -` | Decreases thumbnail size in the table |
+| **Quick Look** | `Space` | Shows the Quick Look preview of the selected items |
 
-## Smart Selection Queries
+## The Select Menu
 
-The **Select** pop-up menu in the toolbar provides one-click queries to identify files requiring curation:
+The **Select** menu (in the toolbar and the menu bar) selects with one click the items that need attention:
 
-- **Missing Date Taken**: Isolates media lacking authentic `DateTimeOriginal` timestamps.
-- **File Dates Differ from Date Taken**: Identifies files whose filesystem creation/modification dates disagree with the camera capture time (ideal before pressing `⇧⌘L`).
-- **Missing Location**: Selects all pictures lacking GPS coordinates for rapid geotagging.
-- **Has Location**: Isolates geotagged files (e.g. for sanitization or map review).
-- **By Camera**: Dynamic hierarchical submenu grouping files by detected camera body or lens model.
-- **Photos Only** / **Videos Only** / **From Photos**: Filters files by format class or origin.
-- **With Unsaved Changes**: Isolates all items holding orange staged diffs awaiting disk write.
-- **With Errors**: Highlights read-only files, locked volumes, or missing folder access permissions.
+- **Without Date Taken**: items without `DateTimeOriginal`.
+- **Suspicious Dates**: capture dates before 1990 or in the future.
+- **File Dates Different from Date Taken**: files whose creation or modification dates don't match the capture time (useful before `⇧⌘L`).
+- **Without Location**: photos without GPS coordinates, to geolocate.
+- **With Location**: files with a location (for example to remove it before sharing).
+- **By Camera**: a submenu with the cameras found in the items.
+- **Photos Only** / **Videos Only** / **Photos Library Only**: by file type or origin.
+- **With Unsaved Changes**: items with orange changes waiting to be saved.
+- **With Errors**: files that couldn't be read or saved (e.g. write-protected or without permission).
+
+There are also **All** and **Invert Selection**.

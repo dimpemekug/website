@@ -1,26 +1,27 @@
 ---
-title: "Sicurezza, Biometria e Cestino"
-description: "Blocco biometrico con Face ID e Touch ID, protezione dei dati sensibili e gestione del cestino soft-delete a 30 giorni in CodeVault."
+title: "Sicurezza, biometria e Cestino"
+description: "Blocco con Face ID e Touch ID, richiesta di sblocco dopo un intervallo a scelta e Cestino con ripristino per 30 giorni in CodeVault."
 project: "codevault"
 order: 3
 section: "Sicurezza"
 ---
 
-## Protezione con Biometria (Face ID e Touch ID)
+## Blocco biometrico (Face ID e Touch ID)
 
-Spesso gli snippet e le note contengono configurazioni d'ambiente, script di deployment o credenziali di sviluppo. CodeVault integra una protezione biometrica basata su `LocalAuthentication`:
+Snippet e note contengono spesso configurazioni, script di deploy o dati di sviluppo riservati. Per questo CodeVault offre un blocco opzionale basato su `LocalAuthentication`, da attivare in **Impostazioni › Sicurezza › Blocco biometrico**:
 
-- **Su iPhone e iPad**: sblocco sicuro con Face ID o Touch ID all'apertura dell'app o dopo un periodo di inattività personalizzabile.
-- **Su Mac**: supporto completo per Touch ID e per l'autenticazione tramite Apple Watch.
-- **Blocco Immediato al Cambio Finestra**: quando l'app passa in background, i contenuti a schermo vengono immediatamente sfocati per proteggere le informazioni da sguardi indiscreti nell'App Switcher.
+- **Su iPhone e iPad**: sblocco con Face ID o Touch ID all'apertura dell'app.
+- **Su Mac**: sblocco con Touch ID o con Apple Watch.
+- **Codice o password di riserva**: se la biometria non riesce, puoi sbloccare con il codice del dispositivo o la password del Mac.
+- **Nuova richiesta dopo un intervallo**: scegli quando l'app deve chiedere di nuovo lo sblocco dopo essere passata in background: subito, dopo 1 minuto, dopo 5 minuti o dopo 15 minuti.
 
 ---
 
-## Cestino Soft-Delete e Ripristino
+## Cestino con ripristino
 
-A partire dallo schema V9, CodeVault adotta una politica di cancellazione morbida (*soft-delete*):
+Dalla versione 9 dello schema dati, CodeVault non cancella subito gli elementi ma li sposta nel **Cestino** (*soft delete*):
 
-- **Nessuna perdita accidentale**: quando elimini uno snippet o una nota, l'elemento non viene rimosso fisicamente dal database ma marcato con il campo `deletedAt`.
-- **Vista Cestino**: puoi visualizzare tutti gli elementi eliminati, ispezionarne il contenuto e ripristinarli con un clic nella loro posizione originale.
-- **Pulizia Automatica a 30 Giorni**: gli elementi presenti nel cestino da più di 30 giorni vengono eliminati in modo definitivo e irreversibile all'avvio dell'applicazione, mantenendo pulito il database.
-- **Svuotamento Manuale**: puoi forzare l'eliminazione definitiva immediata in qualsiasi momento tramite il pulsante "Svuota Cestino".
+- **Nessuna perdita accidentale**: uno snippet o una nota eliminati non vengono rimossi dal database, ma contrassegnati con la data di eliminazione (campo `deletedAt`) e nascosti dalle liste.
+- **Vista Cestino**: in **Impostazioni › Cestino** trovi tutti gli elementi eliminati e puoi ripristinarli con un clic.
+- **Pulizia automatica dopo 30 giorni**: all'avvio dell'app, gli elementi nel Cestino da più di 30 giorni vengono eliminati in modo definitivo.
+- **Svuotamento manuale**: con il pulsante **Svuota cestino** puoi eliminare tutto subito, dopo una conferma.

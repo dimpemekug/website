@@ -1,46 +1,47 @@
 ---
 title: "Shortcuts and Productivity"
-description: "Comprehensive listing of native macOS keyboard shortcuts and interaction gestures supported by rZip."
+description: "Complete list of rZip keyboard shortcuts and commands to explore and manage archives faster."
 project: "rzip"
 order: 7
 section: "Reference"
 ---
 
-## Complete Native Keyboard Shortcuts
+## Keyboard Shortcuts
 
-rZip provides a comprehensive set of native macOS keyboard shortcuts for rapid, mouse-free archive curation:
-
-### Window and Archive Management
+### Archives and Windows
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **New Archive…** | `⌘ + N` | Opens the archive creation sheet |
-| **Open Archive…** | `⌘ + O` | Displays the system open file dialog |
-| **Welcome Window** | `⇧ + ⌘ + 0` | Opens the initial rZip welcome screen |
-| **Reveal in Finder** | `⌥ + ⌘ + R` | Reveals the active archive file in Finder |
-| **Close Window** | `⌘ + W` | Closes the current archive and scrubs associated RAM buffers |
-| **Settings** | `⌘ + ,` | Opens preferences (extraction defaults, language, theme, authorized folders) |
+| **New Archive…** | <kbd>⌘</kbd> <kbd>N</kbd> | Opens the creation window |
+| **Open Archive…** | <kbd>⌘</kbd> <kbd>O</kbd> | Shows the file selection panel |
+| **Welcome Window** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>0</kbd> | Reopens the start screen |
+| **Show Archive in Finder** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>R</kbd> | Shows the current archive in its folder |
+| **Show/Hide Info** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Opens or closes the info panel |
+| **Close Window** | <kbd>⌘</kbd> <kbd>W</kbd> | Closes the window and discards any password entered |
+| **Settings** | <kbd>⌘</kbd> <kbd>,</kbd> | Opens settings (appearance, previews, extraction, creation, authorized folders) |
 
-### Navigation and Exploration
+### Exploring and Navigation
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Search in Archive** | `⌘ + F` | Sets keyboard focus directly into the search filter field |
-| **Quick Look Preview** | `Space` or `⌘ + Y`| Streams the selected file in memory via native Quick Look |
-| **Expand All** | `⌥ + ⌘ + →` | Recursively expands all directory branches in the tree |
-| **Collapse All** | `⌥ + ⌘ + ←` | Collapses all expanded folder branches |
-| **Toggle System Files** | `⇧ + ⌘ + .` | Shows or hides macOS system files (`.DS_Store`, `__MACOSX`) |
+| **Search archive** | <kbd>⌘</kbd> <kbd>F</kbd> | Moves the cursor to the search field |
+| **Quick Look** | <kbd>Space</kbd> or <kbd>⌘</kbd> <kbd>Y</kbd> | Shows the in-memory preview of the selected file |
+| **Expand All** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>→</kbd> | Expands every folder |
+| **Collapse All** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>←</kbd> | Folds every folder |
+| **Show System Files** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>.</kbd> | Shows or hides macOS files (`.DS_Store`, `__MACOSX`) |
+| **Back / Forward** | <kbd>⌘</kbd> <kbd>[</kbd> / <kbd>⌘</kbd> <kbd>]</kbd> | Moves between visited folders |
+| **Enclosing Folder** | <kbd>⌘</kbd> <kbd>↑</kbd> | Goes up one level |
+| **Archive Top Level** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>H</kbd> | Returns to the archive's root |
 
 ### Extraction and Editing
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Extract Selection…** | `⌘ + E` | Extracts currently highlighted items |
-| **Extract All…** | `⇧ + ⌘ + E` | Unpacks the complete archive to the chosen destination |
-| **Add to Archive…** | `⌥ + ⌘ + A` | Inserts new files into an open archive (ZIP, 7z, TAR) |
-| **Delete from Archive…**| `⌘ + ⌫` | Removes selected items (with automatic safety backup in the Trash) |
+| **Extract Selection…** | <kbd>⌘</kbd> <kbd>E</kbd> | Extracts the selected files or folders |
+| **Extract All…** | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>E</kbd> | Extracts the whole archive to the chosen destination |
+| **Add to Archive…** | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>A</kbd> | Adds files to the open archive (ZIP, 7z, TAR) |
+| **Delete from Archive…** | <kbd>⌘</kbd> <kbd>⌫</kbd> | Deletes the selected items (with a safety copy in the Trash, if enabled) |
 
-## Dock and Drag-and-Drop Gestures
+## Drag and Drop
 
-- **Dragging to the Dock Icon**:
-  - Drag an archive onto the rZip Dock icon to open and inspect its contents immediately.
-  - Drag ordinary files or folders onto the Dock icon to launch the creation sheet and compress them into a new archive.
-- **Selective Drag & Drop Extraction**:
-  - Drag any row from the archive table or the large icon from the Inspector panel directly into a Finder folder or desktop workspace to extract it on drop.
+- **Onto the Dock icon**:
+  - an archive dropped on rZip's icon opens right away for browsing;
+  - ordinary files or folders open the creation window, ready to be compressed into a new archive.
+- **To the Finder**: drag a row from the list or the large icon in the info panel into a Finder folder to extract that file on drop.

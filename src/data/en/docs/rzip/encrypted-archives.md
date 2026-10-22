@@ -1,42 +1,40 @@
 ---
-title: "Encrypted Archives, Security and Integrity"
-description: "AES-256 standard encryption on ZIP and 7z, header filename protection, RAM password management, split volumes, and archive verification."
+title: "Protected Archives, Encryption and Integrity"
+description: "AES-256 encryption for ZIP and 7z, file-name protection, password handling, multi-volume archives and integrity verification in rZip."
 project: "rzip"
 order: 5
 section: "Security"
 ---
 
-## Strong Encryption Standards
+## Supported Encryption
 
-rZip leverages both the in-process `libarchive` engine and the sandboxed `7zz` (7-Zip 26.03) binary to handle high-security encrypted containers:
+rZip opens and creates encrypted archives using both `libarchive` and the bundled `7zz` (7-Zip 26.03):
 
-- **7z Header and Filename Encryption (`-mhe`)**: Beyond encrypting file data payloads, 7z supports full header encryption. Without entering the correct password, unauthorized third parties cannot even view file names, directory trees, or file sizes.
-- **ZIP WinZip AES-256**: The modern 256-bit AES standard for `.zip` archives, universally supported across Mac, Windows, and Linux.
-- **Protected RAR (v4 & v5)**: Seamless reading and extraction of password-protected RAR archives, including those with encrypted file tables (`-hp`).
-- **Legacy ZipCrypto**: Read-only extraction support for older archives created on legacy systems.
+- **7z with encrypted names (`-mhe`)**: besides the file data, you can encrypt the list of file and folder names. Without the password, nobody can even tell which files the archive contains.
+- **ZIP with AES-256**: modern 256-bit encryption for `.zip` archives, the same rZip uses when it creates a protected ZIP.
+- **Protected RAR (v4 and v5)**: opening password-protected RAR archives, including those with an encrypted file list (`-hp`).
+- **ZipCrypto**: reading old ZIP files protected with the traditional encryption.
 
-## Volatile In-Memory Password Security
+## Passwords
 
 > [!IMPORTANT]
-> To guarantee complete confidentiality:
-> - Passwords entered by the user are never persisted to disk, cached in application support folders, or written to system logs.
-> - Cryptographic symmetric keys live exclusively within volatile RAM associated with the active window session and are purged immediately when the window is closed (`⌘W`).
-> - When dragging an encrypted item directly into Finder, rZip requests the password upon drop (and prompts again if invalid).
+> - Passwords are never saved to disk or written to logs: they stay in memory only, for the open archive's window, and are discarded when you close it (<kbd>⌘</kbd> <kbd>W</kbd>).
+> - If you drag an encrypted file to the Finder, rZip asks for the password on drop and asks again if it's wrong.
 
-## Multi-Volume Spanned Archives
+## Multi-Volume Archives
 
-When large compressed archives are split across sequential files:
-- 7-Zip convention: `archive.7z.001`, `archive.7z.002`...
-- RAR convention: `archive.part1.rar`, `archive.part2.rar` or `archive.r00`, `archive.r01`...
-- Split ZIP convention: `backup.zip`, `backup.z01`, `backup.z02`...
-- Split compressed TAR: `data.tar.gz.001`, `data.tar.gz.002`...
+rZip recognizes archives split into several files:
+- 7-Zip: `archive.7z.001`, `archive.7z.002`…
+- RAR: `archive.part1.rar`, `archive.part2.rar` or `archive.rar`, `archive.r00`, `archive.r01`…
+- Split ZIP: `archive.zip`, `archive.z01`, `archive.z02`…
+- Split compressed TAR: `archive.tar.gz.001`, `archive.tar.gz.002`…
 
-rZip allows opening the archive **starting from any volume in the sequence**:
-1. Drag any volume from the set into the rZip window.
-2. Through the macOS sandbox `FolderAccess` workflow, rZip locates all associated volumes in the directory and reconstructs the full archive structure automatically.
+You can open the archive **starting from any volume**:
+1. drag any one of the volumes into rZip;
+2. with permission for the folder (`FolderAccess`), rZip finds the other volumes in the same folder and rebuilds the full list of contents.
 
-## Archive Integrity Verification
+## Integrity Verification
 
-From the main menu or toolbar, select **Verify Integrity**:
-- rZip audits the cryptographic integrity and CRC/SHA checksums of every internal entry without extracting anything to disk.
-- A dedicated progress banner (`VerificationBanner`) tracks real-time progress, alerting you immediately to truncated or corrupted blocks.
+From the File menu you can run **Verify Integrity**:
+- rZip decompresses all data in memory and checks its CRCs, without writing anything to disk. Verification uses 7-Zip, which always checks CRCs; libarchive only for formats 7-Zip can't open.
+- A banner shows progress and, at the end, the list of damaged or truncated files, if any.

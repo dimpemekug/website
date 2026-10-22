@@ -1,38 +1,50 @@
 ---
-title: "Transcodifica e Codec Video"
-description: "Encoder hardware VideoToolbox H.264 ed HEVC, supporto AV1, VP9, Apple ProRes e impostazioni di esportazione in rMux."
+title: "Transcodifica e codec video"
+description: "Encoder hardware VideoToolbox per H.264 e HEVC, AV1, VP9, Apple ProRes, contenitori e controllo della qualità in rMux."
 project: "rmux"
 order: 3
 section: "Conversione"
 ---
 
-## Motore di Transcodifica Integrato
+## Copy o Transcode
 
-Quando desideri convertire un video in un formato differente, ridurne la risoluzione (es. da 4K a 1080p) o regolarne il bitrate per ottenere un file leggero da condividere, rMux offre un ricco pannello di configurazione (*Inspector Video*).
+Nell'**Inspector Video** scegli per la traccia video:
+- **Copy**: il video viene copiato senza ricodifica (cambia solo il contenitore o la durata).
+- **Transcode**: il video viene ricodificato con l'encoder e le impostazioni che scegli.
 
-Tutti i codec supportati sono compilati con licenze aperte permissibili (LGPL / BSD), garantendo la totale conformità con gli standard di sicurezza di Apple.
+Il formato del file (**MP4, MOV, MKV, WebM o AVI**) si sceglie accanto al pulsante di esportazione. Se un contenitore non supporta un codec, rMux te lo segnala prima di esportare.
 
----
-
-## Codec Video Disponibili
-
-### 1. Apple VideoToolbox (H.264 & HEVC / H.265)
-- **Accelerazione Hardware Dedicata**: sfrutta direttamente i circuiti di decodifica ed encode hardware dei chip Apple Silicon (M1/M2/M3/M4) e Intel Quick Sync.
-- **Supporto HEVC 10-bit & HDR**: preserva la gamma dinamica estesa e i colori vividi dei video registrati con iPhone in formato HDR Dolby Vision.
-- **Velocità Estrema**: codifica fino a 5-10 volte più veloce rispetto alla computazione software su CPU.
-
-### 2. Apple ProRes (422 / 422 HQ / Proxy)
-Per professionisti del video editing e della post-produzione che desiderano convertire filmati acquisiti da telecamere o smartphone in un formato intermedio fluido e ideale per il montaggio.
-
-### 3. SVT-AV1 e libvpx VP9
-- **AV1 (tramite SVT-AV1 BSD)**: l'algoritmo di compressione di nuova generazione ad altissima efficienza, perfetto per lo streaming moderno su piattaforme web.
-- **VP9 (tramite libvpx BSD)**: ideale per caricamenti e compatibilità con il web aperto.
+Tutti i codec inclusi sono compilati senza componenti GPL o non liberi (licenze LGPL e BSD), come richiesto per il Mac App Store.
 
 ---
 
-## Parametri di Controllo Qualità
+## Codec video disponibili
 
-Nel pannello di esportazione puoi scegliere tra:
-- **Modalità CRF / Constant Quality**: imposta un valore di qualità visiva costante; l'encoder allocherà automaticamente il bitrate necessario per mantenere la medesima nitidezza nelle scene ad alto o basso movimento.
-- **Bitrate Personalizzato**: specifica un bitrate fisso (es. 8 Mbps) per controllare con precisione la dimensione finale del file.
-- **Regolazione Risoluzione e FPS**: scala la risoluzione (4K, 1440p, 1080p, 720p) e seleziona il frame rate desiderato (24, 30, 60 fps).
+### 1. H.264 e HEVC/H.265 con VideoToolbox
+- **Accelerazione hardware**: usa il Media Engine dei chip Apple per codificare molto più velocemente che via software.
+- **Profili**: per H.264 baseline, main e high; per HEVC main e main10 (10 bit), oppure scelta automatica.
+
+### 2. Apple ProRes
+Profili **422 Proxy, 422 LT, 422, 422 HQ, 4444 e 4444 XQ**, per chi vuole un formato intermedio fluido da usare nel montaggio.
+
+### 3. AV1 e VP9
+- **AV1 (con SVT-AV1)**: compressione di nuova generazione ad alta efficienza, adatta allo streaming e al web.
+- **VP9 (con libvpx)**: diffuso sul web, ideale con il contenitore WebM.
+
+rMux sa anche **leggere** video AV1 grazie al decoder dav1d.
+
+---
+
+## Controllo della qualità
+
+Nel pannello di codifica puoi scegliere:
+- **Qualità (CRF)**: qualità visiva costante; l'encoder assegna il bitrate necessario scena per scena.
+- **Bitrate medio**: un bitrate fisso in kbps, con l'opzione della **codifica a 2 passaggi** per una distribuzione migliore.
+- **Dimensione file**: indichi i megabyte desiderati e rMux calcola il bitrate per raggiungerli.
+
+Altre opzioni:
+- **Velocità** di codifica, da "Molto lento (qualità migliore)" a "Molto veloce (file più grande)";
+- **Frequenza fotogrammi**: come la sorgente oppure 23,976, 24, 25, 29,97, 30, 48, 50, 59,94 o 60 fps;
+- **Opzioni avanzate**: livello, intervallo tra i keyframe, numero di B-frame e titolo della traccia.
+
+Risoluzione, ritaglio e rotazione si regolano nella sezione dei filtri (vedi [Filtri, sottotitoli e unione](/progetti/rmux/docs/filtri-sottotitoli-e-unione)).

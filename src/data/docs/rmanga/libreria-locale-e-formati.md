@@ -1,66 +1,65 @@
 ---
-title: "Libreria Locale e Formati Supportati"
-description: "Come importare manga, ebook e file multimediali tramite l'app File, struttura delle cartelle e formati CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV e MP4."
+title: "Libreria locale e formati supportati"
+description: "Come importare manga, ebook e video con l'app File, come organizzare le cartelle e quali formati sono supportati: CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, MP4 e altri."
 project: "rmanga"
 order: 2
 section: "Libreria"
 ---
 
-## Accesso Diretto tramite l'app File
+## La cartella nell'app File
 
-rManga espone la propria cartella *Documents* direttamente nel filesystem di iOS e iPadOS. Puoi visualizzarla aprendo l'app **File** e navigando in:
+La cartella *Documents* di rManga è visibile nell'app **File**, in:
 
 ```text
 File › Sul mio iPhone (o Sul mio iPad) › rManga
 ```
 
-Puoi importare file multimediali trascinandoli da Mac tramite cavo o AirDrop, scaricandoli da Safari, o condividendoli da qualsiasi altra app tramite il foglio di condivisione nativo di iOS.
+Puoi copiarci i file dal Mac (via cavo o AirDrop), scaricarli con Safari o salvarli da altre app con il foglio di condivisione.
 
 ---
 
-## Formati Supportati per Categoria
+## Formati supportati
 
-| Categoria | Formati Supportati | Motore di Elaborazione |
+| Categoria | Formati | Come vengono letti |
 | :--- | :--- | :--- |
-| **Manga e Fumetti** | `.cbz`, `.zip`, `.cbr`, `.rar` (anche solidi), cartelle di immagini | `ArchivePageProvider`, `RARSolidReader`, `FolderPageProvider` |
-| **Ebook e Documenti** | `.epub` (EPUB 2 / 3), `.pdf`, `.fb2`, `.docx`, `.odt`, `.rtf`, `.txt`, `.md` | **Readium** (`EbookReaderView`), `TextBookFormats`, `PDFKit` |
-| **Video e Anime** | `.mp4`, `.m4v`, `.mov`, `.mkv`, `.webm`, `.avi`, `.ts`, flussi HLS `.m3u8` | **AVPlayer** (nativo Apple) e **libmpv** (MoltenVK Metal) |
+| **Manga e fumetti** | `.cbz`, `.zip`, `.cbr`, `.rar` (anche solidi), cartelle di immagini | `ArchivePageProvider`, `RARSolidReader`, `FolderPageProvider` |
+| **Ebook e documenti** | `.epub` (EPUB 2 e 3), `.fb2`, `.docx`, `.odt`, `.rtf`, `.html`, `.txt`, `.md` | Lettore di testo **Readium** (`EbookReaderView`); i formati diversi da EPUB vengono prima convertiti in EPUB |
+| **PDF ed EPUB illustrati** | `.pdf`, `.epub` fatti di immagini | Lettore dei fumetti (`PDFPageProvider`, `EPUBPageProvider`) |
+| **Video** | `.mp4`, `.m4v`, `.mov`, `.mkv`, `.webm`, `.avi`, `.ts`, flussi HLS `.m3u8` | **AVPlayer** di Apple e **libmpv** (MoltenVK su Metal) |
 
 ---
 
-## Organizzazione delle Cartelle della Libreria
+## Come organizzare le cartelle
 
-rManga adotta convenzioni intuitive per dedurre titolo, serie e volumi:
+rManga ricava titolo, serie e volumi dalla struttura delle cartelle:
 
-### 1. Opera Singola (Volume Unico, Libro o Film)
-Un file posizionato direttamente nella radice della cartella `rManga` viene interpretato come opera autonoma con un unico capitolo:
+### 1. Opera singola (volume unico, libro o film)
+Un file messo direttamente nella cartella `rManga` diventa una serie con un solo capitolo:
 ```text
 rManga/
 ├── Akira_Volume1.cbz      ← Serie manga con 1 volume
-├── 1984_GeorgeOrwell.epub ← Libro di testo/ebook completo
-└── IlMioVicinoTotoro.mkv  ← Film/episodio video singolo
+├── 1984_GeorgeOrwell.epub ← Libro completo
+└── IlMioVicinoTotoro.mkv  ← Film o episodio singolo
 ```
 
-### 2. Serie con Più Volumi o Capitoli
-Se raggruppi i file all'interno di una sottocartella, il nome della cartella diventa il titolo della serie e ciascun file un capitolo o episodio ordinato:
+### 2. Serie con più volumi o capitoli
+Se raggruppi i file in una sottocartella, il nome della cartella diventa il titolo della serie e ogni file un capitolo o episodio:
 ```text
 rManga/
 ├── Berserk/
 │   ├── Capitolo 001.cbz
 │   ├── Capitolo 002.cbz
-│   └── cover.jpg            ← Copertina personalizzata della serie
 ├── LaDivinaCommedia/
 │   ├── 01_Inferno.epub
 │   ├── 02_Purgatorio.epub
 │   └── 03_Paradiso.epub
 └── Frieren/
     ├── Episodio 01.mp4
-    ├── Episodio 02.mkv
-    └── subtitles_ep2.ass    ← Sottotitolo esterno stilizzato
+    └── Episodio 02.mkv
 ```
 
-### 3. Capitolo come Cartella di Immagini
-Se possiedi immagini già estratte (es. scansioni JPEG/PNG):
+### 3. Capitolo come cartella di immagini
+Se hai immagini già estratte (es. scansioni JPEG o PNG):
 ```text
 rManga/
 └── OnePiece/
@@ -72,6 +71,7 @@ rManga/
 
 ---
 
-## Metadati Automatici (ComicInfo.xml ed EPUB)
-- **Fumetti**: se all'interno dell'archivio CBZ o CBR è presente il file standard `ComicInfo.xml`, rManga ne estrae titolo ufficiale, sceneggiatore, disegnatore, trama e generi.
-- **Ebook**: per gli EPUB, titolo, autore, lingua e indice provengono dal package document (`content.opf`); la copertina ufficiale viene estratta direttamente dai metadati del libro.
+## Metadati automatici (ComicInfo.xml ed EPUB)
+- **Fumetti**: se l'archivio CBZ o CBR contiene il file standard `ComicInfo.xml`, rManga ne legge titolo della serie, autore, trama, generi, titolo e numero del capitolo e verso di lettura. Senza metadati valgono i nomi dei file.
+- **Ebook**: per gli EPUB, titolo, autore, descrizione, argomenti e verso di lettura vengono dai metadati del libro, e la copertina è quella che il libro dichiara (in mancanza, la prima pagina). Un EPUB da solo dà il nome alla serie; dentro una cartella è un volume.
+- **EPUB con DRM** (Adobe, Apple, Readium LCP) non si possono aprire: rManga lo segnala con un messaggio.

@@ -1,50 +1,47 @@
 ---
-title: "Installazione e Requisiti"
-description: "Requisiti di sistema, integrazione con Apple Photos (PhotoKit), gestione dei permessi sandbox e preferenze dell'app."
+title: "Installazione e requisiti"
+description: "Requisiti di sistema, integrazione con la libreria di Foto (PhotoKit), sandbox, sessione e impostazioni di rExif."
 project: "rexif"
 order: 2
 section: "Iniziare"
 ---
 
-## Requisiti di Sistema
+## Requisiti di sistema
 
-rExif è sviluppata con SwiftUI e framework nativi per macOS:
+- **Sistema operativo**: macOS 15 Sequoia o successivo (compreso macOS 26 Tahoe).
+- **Processore**: binario universale per Mac con Apple Silicon e con processore Intel a 64 bit.
 
-- **Sistema Operativo**: macOS 15.0 Sequoia o versioni successive (incluso macOS 26 Tahoe).
-- **Architettura Hardware**: Universal Binary per Apple Silicon (M1, M2, M3, M4 e varianti) e processori Intel a 64-bit.
-- **Memoria RAM**: 4 GB minimi (consigliati 8 GB o più per sessioni con oltre 10.000 foto caricate contemporaneamente).
-- **Spazio su Disco**: Circa 45 MB per l'applicazione.
-
-## Download e Distribuzione
+## Download
 
 L'app è disponibile sul **Mac App Store**:
-- Bundle ID: `com.dimpemekug.rexif`.
-- Categoria: Fotografia (`public.app-category.photography`) e Utility.
-- Gratuita al 100%: senza pubblicità, senza account, senza abbonamenti e senza acquisti in-app.
+- bundle ID `com.dimpemekug.rexif`;
+- categoria Fotografia;
+- gratuita: senza pubblicità, account, abbonamenti né acquisti in-app.
 
-## Integrazione con la Libreria Apple Foto
+## Integrazione con la libreria di Foto
 
-rExif supporta due diverse modalità di interazione con l'app Foto di macOS tramite il framework di sistema **PhotoKit**:
+rExif lavora con l'app Foto di macOS in due modi, tramite il framework di sistema **PhotoKit**.
 
-### 1. Aggiungi dalla Libreria Foto (`⌥⌘O`)
-- Apre il selettore multimediale nativo di macOS (`PhotosPicker`).
-- Gli elementi selezionati vengono caricati nell'app: puoi modificare la **data di scatto** e la **posizione geografica GPS**.
-- Quando premi **Salva** (`⌘S`), macOS mostra un'unica richiesta di conferma di sistema per autorizzare la modifica degli elementi direttamente all'interno della libreria Foto.
-- *Nota tecnica*: per le rigide regole di sicurezza imposte da Apple su PhotoKit, all'interno della libreria Foto è consentito modificare solo data e posizione; il file originale memorizzato nella libreria non viene alterato per gli altri campi.
+### 1. Aggiungi dalla libreria Foto (`⌥⌘O`)
+- Apre il selettore di foto di macOS.
+- Degli elementi scelti puoi modificare la **data di scatto** e la **posizione GPS**.
+- Quando premi **Salva** (`⌘S`), macOS chiede un'unica conferma per autorizzare la modifica degli elementi direttamente nella libreria di Foto.
+- *Nota*: PhotoKit permette di modificare solo data e posizione; il file originale conservato nella libreria non cambia.
 
-### 2. Esporta Originali da Foto (`⇧⌘E`)
-- Se desideri modificare anche autore, copyright, parole chiave, descrizioni o rinominare i file:
-- Questa funzione estrae gli originali non modificati dalla libreria Foto e li salva in una cartella a tua scelta sul disco.
-- I file vengono caricati automaticamente in rExif come file ordinari, sbloccando la modifica completa di tutti i metadati EXIF, IPTC e XMP.
+### 2. Esporta originali da Foto (`⇧⌘E`)
+- Se vuoi modificare anche autore, copyright, parole chiave e descrizione, o rinominare i file, usa questa funzione.
+- Gli originali vengono salvati in una cartella a tua scelta sul disco.
+- I file vengono poi aggiunti a rExif come file normali, con tutti i campi EXIF, IPTC e XMP modificabili.
 
-## Sandbox e Gestione della Sessione
+## Sandbox e sessione
 
-- **Accesso ai File**: rExif opera in Sandbox e accede solo ai file e alle cartelle esplicitamente aperti dall'utente tramite drag & drop o tramite la finestra Apri (`⌘O`).
-- **Ripristino Sessione**: Alla chiusura dell'app, i percorsi dei file e i relativi identificativi PhotoKit vengono memorizzati tramite segnalibri di sicurezza (`SessionStore`) in `UserDefaults`. Al riavvio successivo, rExif riapre automaticamente la sessione di lavoro precedente.
+- **Accesso ai file**: rExif lavora nella sandbox e accede solo ai file e alle cartelle che apri tu, con il trascinamento, con **Apri con** dal Finder o con il pannello **Aggiungi foto e video…** (`⌘O`). Per creare un file `.xmp` accanto a un file aggiunto da solo, al salvataggio rExif chiede l'accesso alla sua cartella.
+- **Sessione**: alla chiusura, i percorsi dei file e gli identificativi degli elementi di Foto vengono ricordati come segnalibri sicuri (`SessionStore`); al riavvio rExif riapre la sessione precedente. Puoi disattivare questa funzione nelle Impostazioni.
 
-## Impostazioni dell'Applicazione (`⌘,`)
+## Impostazioni (`⌘,`)
 
-Dalla finestra delle Impostazioni puoi configurare:
-- **Lingua**: Scelta tra *Sistema*, *Italiano* o *English* (richiede il riavvio dell'app).
-- **Aspetto (Tema)**: *Sistema*, *Chiaro* o *Scuro*.
-- **Aspetto Miniature**: Dimensione predefinita delle anteprime nella vista tabella.
+Nelle Impostazioni puoi scegliere:
+- **Lingua**: *Sistema*, *Italiano* o *English* (applicata al riavvio dell'app).
+- **Aspetto**: *Sistema*, *Chiaro* o *Scuro*.
+- **Miniature**: la dimensione delle miniature nella tabella.
+- **Sessione**: se riaprire all'avvio gli elementi della sessione precedente.

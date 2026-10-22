@@ -1,51 +1,61 @@
 ---
 title: "iOS vs Android Comparison"
-description: "In-depth technical and architectural comparison between DomoMeter for iOS and DomoMeter for Android."
+description: "Differences between the iOS and Android versions of DomoMeter: technologies, available features, data storage and interface."
 project: "domometer"
 order: 2
 section: "Platforms"
 ---
 
-## Two Native Implementations Compared
+## Two Native Versions
 
-While DomoMeter maintains identical consumption mathematics, precision, and an interchangeable backup structure across both ecosystems, the **iOS** and **Android** editions are implemented using native platform-specific toolkits to ensure optimal integration and performance.
+DomoMeter uses the same calculation model and the same backup format on both platforms, but each version is built with its system's native tools to follow its guidelines faithfully. The iOS version has a few extra features, listed in the table.
 
 ---
 
-## Comparison Matrix
+## Comparison Table
 
 | Feature | DomoMeter for iOS | DomoMeter for Android |
 | :--- | :--- | :--- |
-| **Language & Framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
-| **Design System** | Apple Human Interface Guidelines with optional retro monospace theme | Material 3, Material You Dynamic Color (Android 12+) |
-| **Minimum OS** | iOS 18.0+ | Android 8.0 (API 26)+ |
-| **Persistence Engine** | Structured JSON file in *Application Support* | SQLite relational database with **Room** |
-| **Internet Access** | **Optional** (only used for CloudKit sync if activated) | **None** (zero `INTERNET` permission in AndroidManifest) |
-| **Cloud Sync** | Apple CloudKit (`DomometerSnapshot` private database) | None (strictly offline-first) |
-| **Foldables & Tablets** | iPadOS Split View & Stage Manager adaptation | Dynamic hinge avoidance (`FoldingFeature`) & Navigation Rail |
-| **In-App Language** | Isolated custom bundle independent of iOS setting | Native per-app language integration via AppCompat |
-| **Backup Format** | JSON `schemaVersion: 1` (`domometer-backup`) | JSON `schemaVersion: 1` (`domometer-backup`) |
+| **Language and framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
+| **Design** | Apple guidelines, choice of accent color | Material 3, dynamic color (Material You) on Android 12+ |
+| **Minimum requirements** | iOS/iPadOS 18.0 or later | Android 8.0 (API 26) or later |
+| **Storage** | JSON document in *Application Support* | SQLite database with **Room** |
+| **Internet connection** | Only for iCloud, if enabled | **None** (no permissions in the manifest) |
+| **Sync** | iCloud (CloudKit, private database) | None, file backups only |
+| **Readings, F1/F2/F3 bands, profiles, yearly limits** | Yes | Yes |
+| **Notes and meter replacement** | Yes | No |
+| **Tariffs and bill estimate** | Yes, with tariff history and budget | No |
+| **Reading reminders** | Yes | No |
+| **CSV import and export** | Yes | No |
+| **Custom utilities and CO₂ estimate** | Yes | No |
+| **Large screens** | iPad | Tablets, landscape and foldables |
+| **App language** | Chosen in the app, independent of the system | Per-app language (AppCompat) |
+| **Backup format** | JSON `domometer-backup`, `schemaVersion: 1` | JSON `domometer-backup`, `schemaVersion: 1` |
+
+Both versions are available in seven languages (Italian, English, Spanish, Portuguese, French, German and Russian) and offer a light, dark or automatic theme.
 
 ---
 
-## Platform-Specific Details
+## Platform Details
 
 ### DomoMeter for iOS
-- **iCloud CloudKit Sync**: users can opt into syncing their meter records across iPhone and iPad seamlessly. The payload is stored in a private CloudKit record (`DomometerSnapshot`/`primary`). Push and pull operations resolve automatically via timestamp comparison (*last-write-wins*).
-- **Dual Visual Theme**: choose between modern Apple design system aesthetics or a retro industrial monospace look resembling physical meter LCDs.
-- **Dark Mode**: comprehensive support for system-wide light and dark mode across all views.
+- **iCloud sync**: you can turn on sync between iPhone and iPad. The whole archive is saved as a single record in your private CloudKit database; on each sync the most recent version wins. A dedicated page shows the account status, the last sync and any errors, and lets you sync right away.
+- **Costs and budget**: a tariff for each utility (unit price and monthly standing charge), monthly, bimonthly or six-monthly billing, tariff history and a spending budget.
+- **Reminders**: one notification per utility on the day and time you choose, every month, every few months or once a year.
+- **Navigation**: bottom bar or menu, six accent colors.
+- **Accessibility**: full VoiceOver and Dynamic Type support.
 
 ### DomoMeter for Android
-- **Strict Network Sandbox**: the Android build does not request the `android.permission.INTERNET` manifest permission. It is technically impossible for the app to send data across the network.
-- **Dynamic Material You Palette**: on Android 12+, interface colors are extracted algorithmically from the user's active device wallpaper.
-- **Adaptive Layout Engine**:
-  - Below **600dp** (portrait phones): clean bottom navigation bar.
-  - Above **600dp** (landscape phones & tablets): lateral **Navigation Rail** with two-column card arrangement.
-  - Above **840dp**: side-by-side list and detail panels.
-  - On **foldable devices**, `FoldingFeature` detects the physical hinge and divides panels cleanly so no text or controls are obscured by the fold.
+- **No network access**: the app declares no permissions at all, not even Internet. Data cannot leave the phone except through the backups you export.
+- **Material You**: on Android 12 or later the interface can take its colors from your wallpaper.
+- **Adaptive layout**:
+  - below **600 dp** (phones): bottom navigation bar and a single column;
+  - from **600 dp** up, or with the phone in landscape: side navigation rail and two columns of cards;
+  - from **840 dp** up: list and detail side by side;
+  - on **book-style foldables**, the split between the two panes falls on the hinge (`FoldingFeature`), so no content lands on the fold.
 
 ---
 
-## Universal Backup Portability
+## Compatible Backups
 
-Due to the unified backup schema, **a backup file exported from an iPhone can be restored directly on Android, and vice versa**. Readings are always serialized using universal base units (litres, kWh, Smc), ensuring that platform migrations never introduce rounding or truncation errors.
+Thanks to the shared format, **a backup created on iPhone imports unchanged on Android, and vice versa**. The file contains profiles, readings and settings, with values stored in base units (liters for water, kWh for electricity, Smc for gas). Data that exists only on iOS, such as tariffs, is ignored by the Android version.

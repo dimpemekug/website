@@ -1,67 +1,67 @@
 ---
-title: "Engine and Atomic Safety"
-description: "The technical architecture of rName's rename engine: two-phase atomic moves via temporary staging files, APFS case-change handling, automatic rollback, and Undo history."
+title: "Engine and Safety"
+description: "How rName's renaming engine works: two-phase operation with temporary names, case changes on APFS, automatic rollback and undo."
 project: "rname"
 order: 4
 section: "Safety & Architecture"
 ---
 
-## The Hazards of Direct Filesystem Renaming
+## The Risks of Renaming
 
-Modifying filenames directly at the operating system level is inherently delicate. If a tool executes renames in a single direct step (`rename(source, destination)`), three severe failure modes frequently occur:
+Renaming files is a delicate operation. If a utility renames files directly, in a single pass (`rename(source, destination)`), three kinds of problems are common:
 
-1. **Cyclic Swaps**: attempting to swap two filenames (`A` → `B` and `B` → `A`) fails on the very first step because destination `B` is already occupied by an existing file.
-2. **Case-Only Renames**: on standard macOS filesystems (**APFS** and **HFS+** formatted as _Case-Insensitive_), renaming `photo.jpg` to `Photo.jpg` fails or is silently ignored because the filesystem views both strings as referring to the same inode.
-3. **Mid-Batch Interruptions**: if a batch of 500 files halts at file 250 (due to a revoked permission or disconnected volume), the user is left with a half-renamed directory and no safe way to know which files were altered.
+1. **Name swaps**: swapping two files (`A` → `B` and `B` → `A`) fails immediately, because the destination `B` is still taken.
+2. **Case-only changes**: on the Mac's default file system (case-insensitive **APFS** or **HFS+**), renaming `archive.zip` to `Archive.zip` fails or is ignored, because to the file system both names are the same file.
+3. **Halfway interruptions**: if an operation on 500 files stops at file 250 (for example because of a revoked permission or an unplugged disk), you're left with a half-renamed set, not knowing which files were touched.
 
-rName eliminates all three failure modes through its **RenameExecutor** engine.
+rName avoids all of these with its renaming engine (`RenameExecutor`).
 
 ---
 
-## Two-Phase Atomic Execution
+## Two-Phase Renaming
 
-All disk operations run on background threads off the main actor, following a strict two-phase staging protocol:
+Disk operations run in the background, off the main thread, in two phases:
 
 ```
-[Original File] ──(Phase 1)──> [.rname-<UUID> Staging] ──(Phase 2)──> [Final Target Name]
+[Original file] ──(phase 1)──> [temporary .rname-<UUID>] ──(phase 2)──> [Final name]
 ```
 
-### Phase 1 — Staging to Unique Temporary Files
+### Phase 1: Temporary Names
 
-Each valid source file is first moved to a unique, hidden temporary file created in the same parent folder:
+Each file to rename first gets a unique hidden temporary name, in the same folder:
 
 ```
 photo.jpg  ──>  .rname-9B2A3D1E-548B-4FA3-88B1-9C3E14B82811
 ```
 
-This instantly frees the original filename in the filesystem namespace. Complex permutations, swaps (`A` → `B`, `B` → `A`), and multi-file cycles can now take place without collisions.
+This frees the original name right away, so swaps (`A` → `B` and `B` → `A`) and longer cycles happen without collisions.
 
-### Phase 2 — Moving to the Final Destination
+### Phase 2: Final Names
 
-Each temporary staging file is moved to its ultimate destination name:
+Then each temporary file gets its final name:
 
 ```
 .rname-9B2A3D1E-548B-4FA3-88B1-9C3E14B82811  ──>  Photo.jpg
 ```
 
-The filesystem readily accepts the new name (even for case-only changes) because the destination name is completely unbound.
+Now the file system accepts the new name, even when only the case changes, because the destination is free.
 
 ---
 
-## Automatic Emergency Rollback
+## Automatic Rollback
 
-If an error occurs during Phase 2 (such as an external drive suddenly becoming read-only):
+If a move fails during the second phase (for example because an external disk suddenly became read-only):
 
-- The engine catches the failure immediately.
-- The temporary staging file is **restored back to its original filename**.
-- No file is ever left stranded on disk with a `.rname-` prefix.
-- The user receives an informative summary detailing exactly what happened.
+- the engine catches the error right away;
+- the temporary file **goes back to its original name**;
+- no file is ever left on disk with the temporary `.rname-` name;
+- you get a summary explaining what went wrong.
 
 ---
 
-## Undo History (⌥⌘Z)
+## Undoing the Last Rename (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
 
-Every successful rename batch is recorded in memory as a `RenameOperation` struct, documenting the precise mapping between destination URLs and original filenames.
+Every successful rename is remembered, with each file's new and previous name.
 
-- If you realize you applied the wrong rule chain, simply press <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (or choose _Edit › Undo Rename_).
-- rName immediately executes the reverse plan in two phases, restoring every file in the batch back to its pre-rename state.
+- If you realize you applied the wrong rules, press <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (or choose _Rename › Undo Last Rename_).
+- rName runs the reverse operation, again in two phases, and brings every file back to the name it had before.

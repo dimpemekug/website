@@ -1,55 +1,57 @@
 ---
 title: "Confronto iOS e Android"
-description: "Architettura, persistenza, design system e differenze tecniche tra Horologe per iOS e Horologe per Android."
+description: "Tecnologie, archiviazione dei dati, sincronizzazione, aspetto e differenze tra Horologe per iOS e Horologe per Android."
 project: "horologe"
 order: 2
 section: "Piattaforme"
 ---
 
-## Due Versioni Native a Confronto
+## Due versioni native
 
-Horologe condivide tra **iOS** e **Android** lo stesso schema dati relazionale (schema v11), la stessa gestione delle cartelle immagini, lo stesso formato di backup compresso ZIP e la medesima precisione cronometrica. Ciascuna edizione sfrutta tuttavia le tecnologie e convenzioni più avanzate della rispettiva piattaforma.
+Horologe usa su **iOS** e **Android** lo stesso database SQLite (schema versione 11), la stessa cartella delle immagini e lo stesso formato di backup ZIP. Ciascuna versione segue però le tecnologie e le convenzioni della propria piattaforma.
 
 ---
 
-## Tabella Comparativa
+## Tabella comparativa
 
 | Caratteristica | Horologe per iOS | Horologe per Android |
 | :--- | :--- | :--- |
-| **Linguaggio e UI** | Swift 6, SwiftUI + `@Observable` | Kotlin 2.4, Jetpack Compose |
-| **Design System** | Apple HIG, layout adattivo iPhone & iPad | Material 3 (Palette Nera/Oro `#FFE600` e Material You) |
-| **Libreria Database** | **GRDB.swift** su SQLite (schema v11) | SQLite diretto nativo (`WatchDatabase.kt`, schema v11) |
-| **Foto e Allegati** | `Documents/watch_images/` con fallback path | `app_flutter/watch_images/` relativi |
-| **Sincronizzazione Cloud** | Apple CloudKit (multi-record, deduplicazione SHA-256) | Nessuna (rigorosamente offline-first) |
-| **Protezione App** | Sblocco biometrico Face ID / Touch ID | Sblocco biometrico tramite BiometricPrompt |
-| **Export Scheda PDF** | Motore nativo SwiftUI / Core Graphics | Motore nativo Android `PdfDocument` con font di sistema |
-| **Promemoria Revisioni** | Notifiche locali iOS via `UserNotifications` | `AlarmManager` con riprogrammazione al boot / aggiornamento |
-| **Formato Backup** | Archivio ZIP (`manifest.json` v3 + cartella foto) | Archivio ZIP (`manifest.json` v3 + cartella foto) |
+| **Linguaggio e UI** | Swift 6, SwiftUI con `@Observable` | Kotlin 2.4, Jetpack Compose |
+| **Design** | Linee guida Apple, layout adattivo per iPhone e iPad | Material 3: tema nero e giallo `#FFE600`, colori dinamici o un colore a scelta |
+| **Requisiti minimi** | iOS/iPadOS 17.0 o successivo | Android 7.0 (API 24) o successivo |
+| **Database** | **GRDB.swift** su SQLite (`Documents/horologe.db`) | SQLite nativo (`WatchDatabase.kt`, `app_flutter/horologe.db`) |
+| **Foto e allegati** | `Documents/watch_images/` | `app_flutter/watch_images/` |
+| **Sincronizzazione** | iCloud (CloudKit, database privato) | Nessuna, solo backup su file |
+| **Blocco dell'app** | Face ID / Touch ID | Impronta, volto o PIN (BiometricPrompt) |
+| **PDF** | Scheda del singolo orologio e inventario della collezione per l'assicurazione | Scheda del singolo orologio |
+| **Misura della precisione** | Assistente guidato in due letture o inserimento manuale | Inserimento manuale dello scarto |
+| **Promemoria revisioni** | Notifiche locali (`UserNotifications`) | `AlarmManager`, riprogrammati al riavvio e dopo ogni aggiornamento |
+| **Formato di backup** | ZIP con `manifest.json` (versione 3) e foto | ZIP con `manifest.json` (versione 3) e foto |
 
 ---
 
-## Dettagli Specifici per Piattaforma
+## Dettagli per piattaforma
 
 ### Horologe per iOS
-- **Sincronizzazione Intelligente su iCloud**:
-  - Il record `primary-v2` sincronizza il manifest JSON compatto (orologi, revisioni, giorni al polso, precisione).
-  - Le foto vengono caricate singolarmente con record `file-<sha256>`. Se una foto è già presente sul server, non viene ri-caricata (*content-addressable storage*).
-  - Meccanismo di **auto-retry contro il throttling (HTTP 429)**: in collezioni con centinaia di orologi e foto in alta definizione, CloudKit può applicare limiti di frequenza. Horologe gestisce `withServerRetry` rispettando `CKErrorRetryAfterKey` per evitare interruzioni o blocchi.
-- **Supporto iPad**: navigazione ottimizzata con barra laterale adattabile (`.sidebarAdaptable`) e visualizzazione a griglia espansa.
+- **Sincronizzazione iCloud**:
+  - il record `primary-v2` contiene un manifest JSON compatto con orologi, revisioni, giorni al polso e misurazioni;
+  - foto e allegati viaggiano come record separati `file-<sha256>`, identificati dal loro contenuto: un file già presente in iCloud non viene caricato di nuovo, e uno già presente sul dispositivo non viene riscaricato;
+  - con collezioni molto grandi CloudKit può limitare le richieste (HTTP 429): Horologe rispetta i tempi di attesa indicati dal server (`CKErrorRetryAfterKey`) e fa una pausa tra un gruppo di file e il successivo, così il primo caricamento arriva in fondo.
+- **iPad**: barra laterale adattiva e griglia più ampia.
+- **Diario al polso** con calendario mensile.
 
 ### Horologe per Android
-- **Palette Brand e Material 3 Dinamico**:
-  - Tema predefinito con elegante contrasto nero profondo e oro/giallo `#FFE600`.
-  - Stile *Personalizzato*: estrazione automatica della tavolozza dallo sfondo del dispositivo (Android 12+) oppure scelta tra 8 semi colore calcolati con `material-color-utilities`.
-- **Nessun Permesso di Rete**: l'app Android non richiede alcun permesso Internet: tutte le immagini e i database rimangono sigillati all'interno della sandbox del sistema operativo.
-- **Ripristino Allarmi con `MY_PACKAGE_REPLACED`**: quando l'app viene aggiornata dal Play Store, un broadcast receiver dedicato ricalcola e riprogramma immediatamente tutte le scadenze e i promemoria delle revisioni.
+- **Colori**: tema predefinito nero con il giallo `#FFE600`; in alternativa i colori dinamici presi dallo sfondo (Android 12+) o uno tra otto colori di base, da cui Material 3 ricava l'intera tavolozza.
+- **Nessun accesso a Internet**: l'app non chiede il permesso di rete; dati e foto restano nella memoria riservata dell'app.
+- **Promemoria affidabili**: dopo un riavvio del telefono o un aggiornamento dell'app (`MY_PACKAGE_REPLACED`), un ricevitore dedicato riprogramma tutti i promemoria delle revisioni.
+- **Schermi grandi**: layout per tablet e pieghevoli.
 
 ---
 
-## Interscambiabilità dei Backup ZIP
+## Backup intercambiabili
 
-L'archivio `.zip` generato da Horologe include:
-1. `manifest.json`: il dump completo della collezione in formato JSON versionato (versione 3).
-2. La cartella con tutte le immagini nominate in modo deterministico (`watch_1_cover.jpg`, `watch_1_image_1.jpg`, ecc.).
+L'archivio `.zip` di Horologe contiene:
+1. `manifest.json`: tutta la collezione in formato JSON (versione 3), con revisioni, giorni al polso e misurazioni di precisione;
+2. le foto e gli allegati, con nomi prevedibili (`watch_1_cover.jpg`, `watch_1_gallery_1.jpg`, `watch_1_att_1.pdf`…).
 
-**Puoi esportare la tua collezione da un iPhone e aprirla su un dispositivo Android, o viceversa, senza alcuna perdita di metadati, date, foto o storico interventi.**
+**Puoi esportare la collezione da un iPhone e importarla su Android, o viceversa, senza perdere dati, date, foto o storico degli interventi.**

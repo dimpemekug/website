@@ -1,49 +1,51 @@
 ---
-title: "Rinomina in Blocco ed Esportazione CSV"
-description: "Rinomina basata su modelli dinamici, esportazione e re-importazione metadati tramite fogli di calcolo CSV."
+title: "Rinomina in blocco ed esportazione CSV"
+description: "Rinomina dei file con modelli e segnaposto, esportazione e reimportazione dei metadati tramite fogli di calcolo CSV in rExif."
 project: "rexif"
 order: 6
 section: "Guide d'uso"
 ---
 
-## Ridenominazione File con Modelli Dinamici
+## Rinominare i file con un modello
 
-I file acquisiti con fotocamere reflex o smartphone presentano spesso nomi generici e poco leggibili (es. `_DSC8921.JPG` o `IMG_2024.CR3`).
+Le foto di fotocamere e smartphone hanno spesso nomi generici e poco leggibili (es. `_DSC8921.JPG` o `IMG_2024.CR3`).
 
-All'interno della finestra **Modifiche in blocco** (`⇧⌘D`), la scheda **Rinomina** permette di comporre modelli strutturati combinando testo personalizzato e token dinamici:
+Nella finestra **Modifiche in blocco** (`⇧⌘D`), la scheda **Rinomina** compone il nuovo nome con testo libero e gli stessi segnaposto dei campi di testo. I più utili:
 
-### Token di Rinomina Supportati
-
-| Token | Descrizione | Esempio Risultato |
+| Segnaposto | Descrizione | Esempio |
 | :--- | :--- | :--- |
-| `{data}` | Data di scatto compatta `YYYYMMDD` | `20261014` |
-| `{anno}` | Anno a 4 cifre | `2026` |
-| `{mese}` | Mese a 2 cifre | `10` |
-| `{giorno}` | Giorno a 2 cifre | `14` |
-| `{ora}` | Orario a 6 cifre `HHMMSS` | `183012` |
-| `{fotocamera}` | Modello della fotocamera | `Sony_A7IV` |
-| `{nome}` | Nome del file originario (senza estensione) | `_DSC8921` |
-| `{n}` o `{nnn}` | Contatore sequenziale progressivo | `001`, `002`... |
+| `{data}` | Data di scatto (AAAA-MM-GG) | `2026-10-14` |
+| `{anno}`, `{mese}`, `{giorno}` | Anno, mese e giorno di scatto | `2026`, `10`, `14` |
+| `{ora}` | Ora di scatto (HH.MM) | `18.30` |
+| `{secondi}` | Secondi dell'ora di scatto | `12` |
+| `{fotocamera}` | Marca e modello | `SONY ILCE-7M4` |
+| `{nome}` | Nome attuale del file, senza estensione | `_DSC8921` |
+| `{cartella}` | Nome della cartella | `Vacanze` |
+| `{n}` / `{nnn}` | Numero progressivo (1, 2… / 001, 002…) | `001` |
 
-### Esempio Pratico
-Impostando il modello `{data}_{ora}_{nnn}` su una selezione di foto:
-- `_DSC8921.JPG` $\rightarrow$ `20261014_183012_001.JPG`
-- `_DSC8922.JPG` $\rightarrow$ `20261014_183018_002.JPG`
+### Esempio
+Con il modello `{data}_{ora}_{nnn}`:
+- `_DSC8921.JPG` → `2026-10-14_18.30_001.JPG`
+- `_DSC8922.JPG` → `2026-10-14_18.30_002.JPG`
 
-Il nuovo nome compare immediatamente in arancione nella colonna della tabella. Il file effettivo sul disco viene rinominato solo quando premi **Salva** (`⌘S`).
+L'estensione resta quella del file. I caratteri non ammessi nei nomi (`/` e `:`) vengono sostituiti con un trattino e, se un nome è già usato nella stessa cartella, viene aggiunto un suffisso (`-2`, `-3`…). Il nuovo nome compare in arancione nella tabella; il file viene rinominato solo quando premi **Salva** (`⌘S`).
 
-## Esportazione Metadati in CSV
+## Esportare i metadati in CSV
 
-Dal menu dei comandi o premendo il pulsante nella barra degli strumenti, puoi esportare l'intero catalogo dei file caricati in formato **CSV**:
-- Menu: **File** > **Esporta metadati in CSV...**.
-- Vengono esportate tutte le colonne informative: percorso del file, data di scatto, data di digitalizzazione, date del filesystem, coordinate GPS (latitudine, longitudine, altitudine), toponimi, marca e modello fotocamera, ottica, autore, copyright, parole chiave e valutazione a stelle.
-- Il file CSV risultante può essere aperto e modificato con **Apple Numbers**, **Microsoft Excel**, o elaborato con script Python o database relazionali.
+Dal menu **File** › **Esporta metadati in CSV…** salvi i metadati degli elementi in un file **CSV** con queste colonne:
+- nome e percorso del file;
+- data di scatto, di digitalizzazione e date di creazione e modifica del file;
+- latitudine, longitudine e altitudine;
+- marca, modello, obiettivo, descrizione, autore, copyright, città, regione e paese;
+- parole chiave e valutazione.
 
-## Re-Importazione Modifiche da CSV
+Il file si apre con **Numbers**, **Excel** o con qualsiasi script.
 
-Se preferisci lavorare in ambiente tabellare:
-1. Apri il file CSV esportato in Numbers o Excel.
-2. Modifica descrizioni, date, coordinate o crediti di copyright nelle rispettive celle (lasciando inalterata la colonna del percorso file).
-3. Salva nuovamente il documento come file `.csv`.
-4. In rExif, scegli **File** > **Importa metadati da CSV...**.
-5. L'applicazione confronta i dati del foglio elettronico con i file aperti e carica tutte le discrepanze come modifiche in arancione, pronte per essere verificate ed applicate sul disco in un clic.
+## Reimportare le modifiche da CSV
+
+Se preferisci lavorare in un foglio di calcolo:
+1. apri il CSV esportato in Numbers o Excel;
+2. modifica descrizioni, date, coordinate o copyright nelle celle, senza toccare le colonne del percorso e del nome del file;
+3. salva di nuovo il documento in formato `.csv`;
+4. in rExif scegli **File** › **Importa metadati da CSV…**;
+5. rExif riconosce gli elementi dal percorso (o dal nome, se nella lista ce n'è uno solo con quel nome) e carica le differenze come modifiche in arancione, da controllare prima di salvare.

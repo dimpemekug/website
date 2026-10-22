@@ -1,42 +1,44 @@
 ---
 title: "macOS and Finder Integration"
-description: "Finder Quick Action services, Dock drag-and-drop, destination safety, and keyboard shortcuts in Resizo."
+description: "Finder service, dropping files on the Dock icon, destination folder, filename suffix and keyboard shortcuts in Resizo."
 project: "resizo"
 order: 4
 section: "Features"
 ---
 
-## Finder Quick Action and System Services
+## Finder Service
 
-Resizo integrates into macOS contextual menus via `FinderServiceProvider`:
+Resizo adds an item to the Finder's context menu through `FinderServiceProvider`:
 
-- **Right-Click in Finder**: select images in Finder, right-click and choose **Services › Resize with Resizo** (or via the *Quick Actions* menu).
-- **Auto-Launch**: Resizo launches and loads the selected items immediately, ready to run your active preset with a single click.
-
----
-
-## Dock Drag-and-Drop
-
-- **Dock Icon**: drop files or entire folders directly onto Resizo's Dock icon, even if the app is closed: it launches and populates the batch queue automatically.
-- **Main Canvas**: drag files in at any point. The list displays thumbnail previews, file names, input dimensions, and calculated output sizes.
+- **Right-click in the Finder**: select one or more images, right-click and choose **Services › Resize with Resizo**.
+- **Instant opening**: Resizo opens with the selected files already in the list, ready to be resized with the options you prefer.
 
 ---
 
-## Output Destinations & Suffix Safety
+## Dock and Drag and Drop
 
-To avoid accidental file overwrites:
-- **Save to Same Folder with Suffix**: adds a customizable suffix to the filename (e.g. `photo_resized.jpg` or `photo_web.jpg`).
-- **Save to Custom Destination Folder**: select a target directory (such as *Desktop* or *Exported Images*) to isolate outputs from source files.
+- **Dock icon**: drag files or folders onto Resizo's Dock icon, even when the app is closed: it launches and adds them to the list. **Open With…** from the Finder works too.
+- **Main window**: drag images or folders into the list at any time. Folders are scanned along with their subfolders, skipping hidden files; images already in the list are not added twice. The table shows the thumbnail and file name, original resolution and size, new size and processing status.
+
+---
+
+## Destination and Suffix
+
+To avoid accidental overwrites:
+- **Default folder**: if you don't pick one, files are saved to `Pictures/Resizo`.
+- **Folder of your choice**: you can set a different destination folder for all images, leaving the source folder untouched.
+- **Custom suffix**: a suffix is added to each file name (`-resized` by default, e.g. `photo-resized.jpg`). If a file with the same name already exists, Resizo creates a new one instead of overwriting it.
 
 ---
 
 ## Keyboard Shortcuts
 
-| Shortcut | Function |
+| Shortcut | Action |
 | :--- | :--- |
-| <kbd>⌘</kbd> <kbd>O</kbd> | Open files or folder from Finder |
-| <kbd>⌘</kbd> <kbd>R</kbd> | Execute "Resize & Save" |
-| <kbd>⌫</kbd> | Remove selected item from queue |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | Clear the entire queue |
-| <kbd>⌘</kbd> <kbd>,</kbd> | Open Preferences |
-| <kbd>⌘</kbd> <kbd>W</kbd> | Close window |
+| <kbd>⌘</kbd> <kbd>O</kbd> | Add images |
+| <kbd>⌘</kbd> <kbd>↩</kbd> | Resize and Save |
+| <kbd>⌘</kbd> <kbd>⌫</kbd> | Remove the selected images from the list |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Show or hide the options |
+| <kbd>⌘</kbd> <kbd>,</kbd> | Open Settings |
+
+The **Clear** button above the list removes every image from it without touching the files on disk. In Settings you can also choose the app language (Italian or English) and a light, dark or system appearance.

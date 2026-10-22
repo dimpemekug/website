@@ -1,6 +1,6 @@
 ---
 title: "Introduction to CodeVault"
-description: "Overview of CodeVault: modern snippet and notes manager for iOS and macOS built with SwiftData, CloudKit synchronization, and biometric security."
+description: "Overview of CodeVault: a library for code snippets and notes on iPhone, iPad and Mac, built with SwiftData, with iCloud sync and biometric lock."
 project: "codevault"
 order: 1
 section: "Getting Started"
@@ -8,33 +8,41 @@ section: "Getting Started"
 
 ## What is CodeVault
 
-**CodeVault** is a native application for **iOS 18+** and **macOS 15+** designed for developers, systems engineers, and students who want to organize their library of code snippets and technical notes in a fast, elegant, and secure environment.
+**CodeVault** is a native app for **iOS/iPadOS 18+** and **macOS 15 Sequoia+** designed for developers, sysadmins and students who want to keep their code snippets and technical notes in one place and find them in seconds.
 
-Engineered entirely in **Swift 6** using a modern **MVVM + SwiftData** architecture, CodeVault provides a first-class Apple platform experience: from an adaptive layout across iPhone, iPad, and Mac to automatic private iCloud synchronization via CloudKit.
+It is written in **Swift 6** with **SwiftUI** and **SwiftData** (MVVM architecture) and ships as a single universal app: one purchase covers iPhone, iPad and Mac, and your data syncs through your iCloud account.
 
 ---
 
-## Core Principles and Architecture
+## Principles and Architecture
 
-### 1. Absolute Privacy and Zero-Knowledge Design
-- **No proprietary servers**: your snippets and notes never transit through middleman servers or third-party databases.
-- **Personal iCloud**: sync is powered directly by your personal CloudKit private container (`iCloud.com.dimpemekug.codevault`).
-- **No telemetry or tracking**: the app contains zero analytics, external crash loggers, or ads.
+### 1. Privacy First
+- **No developer servers**: your snippets and notes never pass through intermediate servers or third-party databases.
+- **Your own iCloud**: sync uses the private CloudKit database of your Apple ID (container `iCloud.com.dimpemekug.codevault`), which the developer cannot access.
+- **No account, no telemetry**: no sign-up, analytics, third-party SDKs or ads.
 
-### 2. Modern Persistence: Versioned SwiftData Schema
-Local storage is powered by **SwiftData**, with a versioned schema (`SnippetSchemaV1`–`SnippetSchemaV9`) migrated through an explicit migration plan (`SnippetMigrationPlan`). This ensures strict data integrity and backward compatibility across app updates.
+### 2. SwiftData with a Versioned Schema
+Persistence relies on **SwiftData** with a versioned schema (`SnippetSchemaV1`–`SnippetSchemaV9`) and an explicit migration plan (`SnippetMigrationPlan`). Every app update carries your snippets, notes, categories and tags forward without losses.
 
-### 3. Seamless Multi-Platform Experience
-- **macOS**: three-column split view (collections sidebar, snippet list, central editor), native system keyboard shortcuts, `NSPasteboard` integration, and contextual menus.
-- **iPadOS**: full support for Split View, Stage Manager, and hardware keyboards.
-- **iOS**: fluid single-column navigation with haptic feedback, quick copy gestures, and instant biometric authentication.
+### 3. One Interface per Device
+- **On Mac**: a sidebar with the sections, multiple columns, menu bar commands with keyboard shortcuts and a dedicated Settings window (<kbd>⌘</kbd> <kbd>,</kbd>).
+- **On iPad**: sidebar and multiple columns, with hardware keyboard support.
+- **On iPhone**: compact navigation with a bottom tab bar or a toolbar menu (from iOS 26), haptic feedback and biometric unlock.
+
+### 4. Three Visual Styles
+In Settings you can pick one of three styles; they change only the look, never the features:
+- **Terminal** (default): dark and monospaced, with an amber accent.
+- **Typographic**: light and minimal, with large titles and card-free lists.
+- **Glass**: system surfaces and rounded cards, in line with Liquid Glass.
+
+The interface is available in Italian, English, German, Spanish, French, Portuguese and Russian; you can switch language in Settings without changing the system language.
 
 ---
 
 ## Quick Workflow
 
-1. **Create an item**: press <kbd>⌘</kbd> <kbd>N</kbd> (Mac/iPad) or tap `+` to add a new snippet or technical note.
-2. **Choose programming language**: select from over 20 supported languages for syntax highlighting and formatted code presentation.
-3. **Organize with folders and tags**: group related snippets into folders or assign rapid tags to categorize across projects.
-4. **Instant search**: type in the search bar to filter across titles, code content, descriptions, and tags in real time.
-5. **Copy or export**: copy code with one click or export your library as a JSON backup or Markdown collection.
+1. **Create a snippet**: press <kbd>⌘</kbd> <kbd>N</kbd> (Mac, or iPad with a keyboard) or tap `+`. For a note, use <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd>.
+2. **Pick the language**: choose one of the 20 supported languages; for a new snippet CodeVault tries to detect it from the code you type or paste.
+3. **Organize**: assign a category and one or more tags, and pin the items you use most.
+4. **Search**: full-text search looks at titles, descriptions, code, language, categories and tags.
+5. **Copy, share or export**: copy code with one tap, share it as Markdown or export the whole library to JSON or Markdown.

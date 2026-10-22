@@ -1,64 +1,60 @@
 ---
-title: "Sandbox and Folder Permissions"
-description: "How rName manages filesystem permissions within the macOS App Sandbox: why parent folder access is required, security-scoped bookmarks, and permissions management."
+title: "Permissions and App Sandbox"
+description: "How rName handles file system permissions in the macOS sandbox: why folder access is needed, security bookmarks and revoking authorizations."
 project: "rname"
 order: 5
 section: "Safety & Architecture"
 ---
 
-## Why rName Requires Folder Access
+## Why rName Asks for Folder Access
 
-When using an application protected by the **Apple App Sandbox** (mandatory for the Mac App Store), users might wonder why dragging individual files prompts for permission to the folder containing them.
+If you're new to apps that use the **App Sandbox** (required on the Mac App Store), you may wonder why, when you drag single files, the app asks for permission on the folder that contains them.
 
-The explanation is technical and tied directly to POSIX operating system standards and APFS filesystem mechanics:
+The reason is technical:
 
-> **Renaming a file executes the system `rename()` function, which requires write permissions on the containing parent folder, not merely on the individual file itself.**
+> **Renaming a file uses the `rename()` system call, which requires permission to write to the folder containing the file, not just to the file.**
 
-When you select or drop a single file through standard macOS dialogs, the sandbox grants read and write access to that individual file only. That permission **is insufficient to rename it**: attempting a rename would immediately fail with the macOS error:
-_“You do not have the necessary permissions to access the folder…”_.
+When you drag or select a single file, the sandbox lets the app read and modify that file. That permission **isn't enough to rename it**: the attempt would fail with the error _"You don't have permission to access…"_.
 
 ---
 
 ## Two Ways to Add Files
 
-rName handles this workflow smoothly and transparently:
+### 1. Recommended: Choose the Folder
 
-### 1. Recommended Method: Choose the Folder
+If you open the folder containing your files directly (with <kbd>⌘</kbd> <kbd>O</kbd>, by dragging it into the window or onto the Dock icon, or with _Open With…_ from the Finder):
 
-If you open the folder containing your files (via the <kbd>⌘</kbd> <kbd>O</kbd> shortcut, dragging the folder into the window or onto the Dock icon, or using _Open With…_ in Finder):
+- macOS immediately grants read and write permission on the folder and its contents;
+- the files are ready to rename, with no extra prompts.
 
-- macOS grants read-write access to the entire directory and all contained files in a single step.
-- All items load instantly and are immediately ready for renaming without further prompts.
+### 2. Single Files and the Padlock
 
-### 2. Adding Individual Files & Visual Feedback
+If instead you drag loose files from folders that aren't authorized yet:
 
-If you drag loose files from various folders that have not yet been granted permission:
-
-- Rows belonging to unauthorized directories display a **lock icon**.
-- A clear notification appears explaining the need for parent folder access, accompanied by a **Grant access** button.
-- A single click opens the Finder permission sheet to unlock that folder for the session.
+- files from folders without permission are marked with a **padlock**;
+- a notice explains why folder permission is needed, with a **Grant Access…** button;
+- one click opens the system panel to authorize the folder.
 
 ---
 
 ## Security-Scoped Bookmarks
 
-To ensure you never have to re-authorize the same working folder across app restarts, rName implements Apple's official `com.apple.security.files.bookmarks.app-scope` entitlement:
+So you don't have to authorize the same folder at every launch, rName uses Apple's `com.apple.security.files.bookmarks.app-scope` entitlement:
 
-1. When folder access is approved, the app generates an encrypted **security-scoped bookmark** for that directory.
-2. The bookmark is stored securely in app preferences (`FolderAccess.swift`).
-3. On every subsequent launch, rName automatically restores all active bookmarks. An authorized directory **will never prompt for permission again**.
+1. when you grant access, the app creates a **security bookmark** for that folder;
+2. the bookmark is saved in the app's preferences;
+3. at every launch rName restores the saved bookmarks: a folder you've authorized **never needs confirming again**.
 
 ---
 
-## Complete Control: Review and Revoke Permissions
+## Reviewing and Revoking Permissions
 
-In conventional applications, granted access rights remain invisible and difficult to audit.
+In many apps, granted permissions stay invisible and impossible to check.
 
-In rName, opening **Settings (<kbd>⌘</kbd> <kbd>,</kbd>) › Permissions**:
+In rName, from **Settings (<kbd>⌘</kbd> <kbd>,</kbd>) › Permissions**:
 
-- Displays an alphabetical list of all currently authorized folders on your Mac.
-- Shows the full disk path for each entry.
-- Lets you **selectively or completely revoke** any directory authorization with one click.
+- you see the list of every authorized folder, with its path;
+- you can **revoke** a single authorization or all of them, at any time.
 
 > [!NOTE]
-> Revoking a permission does not touch or modify any files on disk: it simply means that if you choose to rename files in that folder in the future, the app will request permission again.
+> Revoking a permission doesn't touch any file on disk: it simply means that next time you want to rename files in that folder, rName will ask for your consent again.

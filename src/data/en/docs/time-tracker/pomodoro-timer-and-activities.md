@@ -1,34 +1,45 @@
 ---
-title: "Pomodoro Timer and Activity Logs"
-description: "Pomodoro focus technique, system-clock timing, intelligent activity suggestion chips, and logging in Time Tracker."
+title: "Pomodoro Timer and Activity Log"
+description: "The focus timer anchored to the system clock, the Live Activity and ongoing notification, logging activities and title suggestions in Time Tracker."
 project: "time-tracker"
 order: 4
 section: "Productivity"
 ---
 
-## Integrated Pomodoro Timer
+## The Focus Timer
 
-The Pomodoro technique organizes work into dedicated focus sprints separated by intentional rest intervals:
+Time Tracker's **Pomodoro** panel is a stopwatch for focused work sessions:
 
-- **Custom Durations**: work sprints (default 25 minutes), short breaks (5 minutes), and long breaks (15 minutes).
-- **System-Clock Anchored**: rather than relying on unreliable software interval loops that drift when an OS throttles background apps, Time Tracker calculates elapsed time from an explicit target system timestamp.
-- **Immediate Project Binding**: each sprint is attached to a specific project and task label.
-
----
-
-## Live Activities and Foreground Notifications
-
-During an active focus sprint:
-- **iOS**: rendered via **Live Activities** and **Dynamic Island** with progress indicators and countdown timers.
-- **Android**: handled by a dedicated **Foreground Service** with ongoing notification buttons (*Pause*, *Resume*, *Stop*).
-- **Completion Alert**: a notification buzzes and chimes when time expires, prompting you to log hours and start your break.
+- **Activity and project**: choose the activity (activities are chips you can add and remove, e.g. *Focus*, *Code review*, *Study*) and the project the time goes to.
+- **Start, pause and stop**: start the stopwatch, pause it when needed and stop it when the session ends.
+- **Anchored to the system clock**: elapsed time doesn't depend on an in-memory count but on the saved start time, so it stays correct even if the app is suspended or closed.
+- **Saved as an activity**: when you stop the timer, the session is logged as an activity on the chosen project, with the activity name as its title. Sessions shorter than a minute aren't saved.
 
 ---
 
-## Fast Logging via Intelligent Suggestion Chips
+## Always Visible
 
-Typing identical activity labels daily (e.g. *Client Sync*, *PR Review*, *Design System Polish*) wastes time.
+While a session is running:
+- **inside the app**, a compact bar above the navigation, on every tab, shows the activity, project and time, with a quick pause; tapping it reopens the panel;
+- **on iOS**, a **Live Activity** in the Dynamic Island and on the Lock Screen, and a notification with quick pause and stop actions;
+- **on Android**, an **ongoing notification** with *Pause*, *Resume* and *Stop* buttons.
 
-Time Tracker provides **smart suggestion chips**:
-- Suggestion rankings weigh recent usage recency and historical frequency for the active project.
-- Tapping a chip auto-fills the title, allowing you to log completed tasks in under two seconds.
+Timer notifications can be turned off in Settings.
+
+---
+
+## Logging an Activity by Hand
+
+For hours logged after the fact, open the activity editor and enter:
+- **title**, **project** and **notes**;
+- the **date** and the **start and end time**, or turn on **daily total** and type the duration directly.
+
+On Android there's also a **quick add** at the top of the summary, with just title and project.
+
+---
+
+## Title Suggestions
+
+Typing the same titles every day (*Daily standup*, *Code review*, *Documentation*) wastes time. As you type, Time Tracker suggests titles you've already used:
+- the ranking weighs how often and how recently you've used each title;
+- tapping a suggestion fills in the field instantly.

@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Time Tracker"
-description: "Overview of Time Tracker: project organization, work activity logging, Pomodoro focus timer, and billing dashboard for iOS and Android."
+description: "Overview of Time Tracker: projects, activity log, focus timer and a dashboard with billable hours and revenue, for iOS and Android."
 project: "time-tracker"
 order: 1
 section: "Getting Started"
@@ -8,25 +8,28 @@ section: "Getting Started"
 
 ## What is Time Tracker
 
-**Time Tracker** is a native mobile application for **iOS** and **Android** designed for freelancers, developers, consultants, and students who want to track project hours accurately, boost focus, and streamline billing without friction.
+**Time Tracker** is a native app for **iPhone and iPad** and for **Android**, made for freelancers, developers, consultants and students who want to know exactly how much time they spend on projects and clients, and what that time is worth.
 
-Constructed using pure native frameworks (**SwiftUI** on iOS and **Jetpack Compose** on Android), Time Tracker unites daily activity tracking, a system-clock anchored Pomodoro timer, and a comprehensive business dashboard with hourly rates and tax computations.
+It is built with each platform's native tools (**SwiftUI** on iOS, **Jetpack Compose** on Android) and combines an activity log, a focus timer anchored to the system clock and a dashboard with hourly rates and VAT.
 
 ---
 
-## Key Modules
+## Main Modules
 
-### 1. Daily Activity Log
-Review your time entries grouped by calendar day with prominent total hours. Features instant search across titles, notes, and projects, along with swipe actions to quickly edit or delete entries.
+### 1. Activity Summary
+Your entries grouped by day, with total hours up front. You can search by title, notes and project, and swipe a row to edit or delete it.
 
-### 2. Project Management & Smart Colors
-Every project maintains a title, notes, timeline bounds, and archive state. Project palette colors are computed automatically from project titles via a deterministic mathematical algorithm, delivering harmonic contrast without requiring manual palette curation.
+### 2. Logging Activities
+Each activity is logged with a **start and end time** or as a **daily total**, when you already know how long it took. Your most used titles are offered as suggestions.
 
-### 3. Integrated Pomodoro Timer
-A deep-work timer anchored to the real-time system clock, offering compact persistent bars and platform-native integrations (Live Activities on iOS and continuous Foreground Services on Android).
+### 3. Projects
+Each project has a name, color, notes, start and end dates, and billing settings with an hourly rate and VAT. Finished projects can be archived.
 
-### 4. Billing Analytics & Dashboard
-Monitors cumulative hours, percentage distributions, billable quotas, and revenue estimates based on hourly rates and VAT tiers, exporting instant PDF summaries and CSV spreadsheets.
+### 4. Focus Timer (Pomodoro)
+A stopwatch anchored to the system clock, always visible in a compact bar inside the app and, outside it, in the Dynamic Island (iOS) or an ongoing notification (Android). When you stop it, the session becomes an activity on the chosen project.
 
-### 5. Open Data & Complete Privacy
-Your records stay local on your device and can be backed up or transferred anytime via an open, universal JSON format compatible between iOS and Android.
+### 5. Dashboard
+Hours by week, month, year or a custom range, hours per project, billable share and revenue, with PDF and CSV export.
+
+### 6. Your Data
+Data stays on your device; on iOS you can turn on sync with your iCloud. The JSON backup can be exported at any time and works across iOS and Android. The app is available in seven languages, with a light, dark or system theme and a choice of accent color.
