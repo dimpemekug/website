@@ -125,7 +125,7 @@ const docStructuredData = {
           {prevDoc ? (
             <a
               href={formatDocHref(prevDoc.slug)}
-              class="group flex flex-col p-4 rounded-xl border border-border/20 bg-muted/10 hover:bg-muted/20 hover:border-accent/40 transition-all"
+              class="group flex flex-col p-4 rounded-xl border border-border/20 bg-muted/5 transition-[border-color,background-color,box-shadow] duration-200 hover:bg-muted/20 hover:border-accent/40 hover:shadow-md hover:shadow-accent/5"
             >
               <span class="text-xs text-foreground/65 font-firacode mb-1">
                 {lang === "en" ? "← Previous" : "← Precedente"}
@@ -139,7 +139,7 @@ const docStructuredData = {
           {nextDoc ? (
             <a
               href={formatDocHref(nextDoc.slug)}
-              class="group flex flex-col items-end text-right p-4 rounded-xl border border-border/20 bg-muted/10 hover:bg-muted/20 hover:border-accent/40 transition-all sm:col-start-2"
+              class="group flex flex-col items-end text-right p-4 rounded-xl border border-border/20 bg-muted/5 transition-[border-color,background-color,box-shadow] duration-200 hover:bg-muted/20 hover:border-accent/40 hover:shadow-md hover:shadow-accent/5 sm:col-start-2"
             >
               <span class="text-xs text-foreground/65 font-firacode mb-1">
                 {lang === "en" ? "Next →" : "Successivo →"}

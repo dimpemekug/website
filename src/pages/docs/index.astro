@@ -59,7 +59,7 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
     <!-- Project Docs Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projectDocGroups.map(p => (
-        <div class="group relative rounded-2xl border border-border/20 bg-muted/10 p-6 hover:border-accent/40 hover:bg-muted/10 transition-all duration-200 flex flex-col justify-between">
+        <div class="group relative rounded-2xl border border-border/20 bg-muted/5 p-6 transition-[border-color,background-color,box-shadow] duration-200 hover:border-accent/40 hover:bg-muted/20 hover:shadow-md hover:shadow-accent/5 focus-within:border-accent/40 focus-within:bg-muted/20 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
               <h2 class="text-2xl font-bold text-foreground group-hover:text-accent transition-colors">

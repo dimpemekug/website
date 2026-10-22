@@ -34,12 +34,12 @@ const formatDate = (date: Date) =>
       </ul>
 
       {others.length > 0 && (
-        <ul class="flex flex-col rounded-2xl border border-border/20 bg-muted/10 px-4 py-1 backdrop-blur-sm">
+        <ul class="flex flex-col rounded-2xl border border-border/20 bg-muted/5 px-4 py-1 backdrop-blur-sm">
           {others.map(post => (
             <li class="border-b border-border/20 last:border-b-0">
               <a
                 href={getEntryPath(post)}
-                class="group/row flex flex-col gap-1 py-3.5 sm:flex-row sm:items-baseline sm:gap-4"
+                class="group/row -mx-2 flex flex-col gap-1 rounded-xl px-2 py-3.5 transition-colors duration-200 hover:bg-muted/20 sm:flex-row sm:items-baseline sm:gap-4"
               >
                 <time
                   datetime={post.data.pubDatetime.toISOString()}
