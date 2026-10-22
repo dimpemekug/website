@@ -26,6 +26,7 @@ const isActive = (section: string) =>
   sectionRoot === section || (section === "projects" && sectionRoot === "progetti");
 
 // Localized nav paths
+const navHome     = lang === "en" ? "/en"          : "/";
 const navPosts    = lang === "en" ? "/en/posts"    : "/posts";
 const navProjects = lang === "en" ? "/en/projects" : "/progetti";
 const navDocs     = lang === "en" ? "/en/docs"     : "/docs";
@@ -109,9 +110,9 @@ const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
           <ul class="hidden sm:flex sm:flex-row sm:items-center sm:gap-1">
             <li>
               <a
-                href={navPosts}
-                class:list={["nav-link", { "nav-active": isActive("posts") }]}
-                >{t("nav.posts")}</a
+                href={navHome}
+                class:list={["nav-link", { "nav-active": sectionRoot === "" }]}
+                >{t("nav.home")}</a
               >
             </li>
             <li>
@@ -126,6 +127,13 @@ const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
                 href={navDocs}
                 class:list={["nav-link", { "nav-active": sectionRoot === "docs" }]}
                 >Docs</a
+              >
+            </li>
+            <li>
+              <a
+                href={navPosts}
+                class:list={["nav-link", { "nav-active": isActive("posts") }]}
+                >{t("nav.posts")}</a
               >
             </li>
             <li>

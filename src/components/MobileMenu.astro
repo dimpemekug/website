@@ -21,6 +21,7 @@ const sectionRoot = currentPath.replace(/^\/en/, "").split("/").filter(Boolean)[
 const isActive = (section: string) =>
   sectionRoot === section || (section === "projects" && sectionRoot === "progetti");
 
+const navHome      = lang === "en" ? "/en"          : "/";
 const navPosts     = lang === "en" ? "/en/posts"    : "/posts";
 const navProjects  = lang === "en" ? "/en/projects" : "/progetti";
 const navDocs      = lang === "en" ? "/en/docs"     : "/docs";
@@ -48,12 +49,12 @@ const themeOptions = [
       <div class="mobile-menu-inner">
         <nav class="mobile-nav-links">
           <a
-            href={navPosts}
-            class:list={["mobile-nav-link", { active: isActive("posts") }]}
+            href={navHome}
+            class:list={["mobile-nav-link", { active: sectionRoot === "" }]}
             style="--i:0"
           >
             <span class="mobile-nav-indicator"></span>
-            <span>{t("nav.posts")}</span>
+            <span>{t("nav.home")}</span>
           </a>
           <a
             href={navProjects}
@@ -72,9 +73,17 @@ const themeOptions = [
             <span>Docs</span>
           </a>
           <a
+            href={navPosts}
+            class:list={["mobile-nav-link", { active: isActive("posts") }]}
+            style="--i:3"
+          >
+            <span class="mobile-nav-indicator"></span>
+            <span>{t("nav.posts")}</span>
+          </a>
+          <a
             href={navTags}
             class:list={["mobile-nav-link", { active: isActive("tags") }]}
-            style="--i:2"
+            style="--i:4"
           >
             <span class="mobile-nav-indicator"></span>
             <span>{t("nav.tags")}</span>
@@ -82,7 +91,7 @@ const themeOptions = [
           <a
             href={navAbout}
             class:list={["mobile-nav-link", { active: isActive("about") }]}
-            style="--i:3"
+            style="--i:5"
           >
             <span class="mobile-nav-indicator"></span>
             <span>{t("nav.about")}</span>
@@ -92,7 +101,7 @@ const themeOptions = [
               <a
                 href={navArchives}
                 class:list={["mobile-nav-link", { active: isActive("archives") }]}
-                style="--i:4"
+                style="--i:6"
               >
                 <span class="mobile-nav-indicator" />
                 <span>{t("nav.archives")}</span>
@@ -104,7 +113,7 @@ const themeOptions = [
               <a
                 href={navGalleries}
                 class:list={["mobile-nav-link", { active: isActive("galleries") }]}
-                style="--i:5"
+                style="--i:7"
               >
                 <span class="mobile-nav-indicator" />
                 <span>{t("nav.galleries")}</span>
