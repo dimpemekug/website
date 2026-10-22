@@ -1,0 +1,64 @@
+{
+  "captions": {
+    "01-home": {
+      "it": "La schermata principale con il calendario delle letture e le ultime letture",
+      "en": "The main screen with the reading calendar and latest readings"
+    },
+    "02-new-reading": {
+      "it": "Una nuova lettura inserita senza lasciare il riepilogo",
+      "en": "A new reading entered without leaving the summary"
+    },
+    "02-usage": {
+      "it": "Consumi del mese per ogni utenza e stima della bolletta",
+      "en": "This month's usage for each utility and bill estimate"
+    },
+    "02-utility": {
+      "it": "Il dettaglio di un'utenza con il consumo mensile rispetto al limite",
+      "en": "A utility's details with monthly usage against the limit"
+    },
+    "03-new-reading": {
+      "it": "Inserimento di una lettura, con il valore precedente sempre in vista",
+      "en": "Entering a reading, with the previous value always in view"
+    },
+    "03-statistics": {
+      "it": "Statistiche con il confronto anno su anno",
+      "en": "Statistics with the year-over-year comparison"
+    },
+    "03-utility": {
+      "it": "Il dettaglio di un'utenza con storico, grafici e fasce F1/F2/F3",
+      "en": "A utility's details with history, charts and F1/F2/F3 bands"
+    },
+    "04-settings": {
+      "it": "Impostazioni: profili abitazione, tema, stile grafico e utenze",
+      "en": "Settings: housing profiles, theme, visual style and utilities"
+    },
+    "04-statistics": {
+      "it": "Statistiche: consumi mensili e confronto con gli anni precedenti",
+      "en": "Statistics: monthly usage and comparison with previous years"
+    },
+    "05-dark": {
+      "it": "La schermata principale con il tema scuro",
+      "en": "The main screen in dark mode"
+    },
+    "05-settings": {
+      "it": "Impostazioni: profili abitazione, lingua, tema e stile grafico Moderno o Retrò",
+      "en": "Settings: housing profiles, language, theme and Modern or Retro visual style"
+    },
+    "06-backup": {
+      "it": "Backup e ripristino: esporta, condividi e importa i dati",
+      "en": "Backup and restore: export, share and import your data"
+    },
+    "06-settings": {
+      "it": "Impostazioni: profili abitazione, utenze, valuta, promemoria e backup",
+      "en": "Settings: housing profiles, utilities, currency, reminders and backups"
+    },
+    "07-dark": {
+      "it": "La schermata principale con il tema scuro",
+      "en": "The main screen in dark mode"
+    },
+    "android-tablet/01-home": {
+      "it": "Su tablet, riepilogo e dettaglio di un'utenza affiancati",
+      "en": "On a tablet, summary and utility details side by side"
+    }
+  }
+}

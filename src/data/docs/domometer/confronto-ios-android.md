@@ -17,7 +17,7 @@ DomoMeter usa lo stesso modello di calcolo e lo stesso formato di backup su entr
 | Caratteristica | DomoMeter per iOS | DomoMeter per Android |
 | :--- | :--- | :--- |
 | **Linguaggio e framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
-| **Design** | Linee guida Apple, colore d'accento a scelta | Material 3, colori dinamici (Material You) su Android 12+ |
+| **Design** | Linee guida Apple, colore d'accento a scelta | Material 3, stile Moderno o Retrò, colori dinamici (Material You) su Android 12+ |
 | **Requisiti minimi** | iOS/iPadOS 18.0 o successivo | Android 8.0 (API 26) o successivo |
 | **Archiviazione** | Documento JSON in *Application Support* | Database SQLite con **Room** |
 | **Connessione a Internet** | Solo per iCloud, se attivato | **Nessuna** (nessun permesso nel manifest) |
@@ -47,7 +47,7 @@ Entrambe le versioni sono disponibili in sette lingue (italiano, inglese, spagno
 
 ### DomoMeter per Android
 - **Nessun accesso alla rete**: l'app non dichiara alcun permesso, neppure quello per Internet. I dati non possono lasciare il telefono, se non tramite i backup che esporti tu.
-- **Material You**: su Android 12 o successivo l'interfaccia può prendere i colori dallo sfondo del dispositivo.
+- **Stile e colori**: nelle Impostazioni scegli lo stile grafico Moderno o Retrò; su Android 12 o successivo l'interfaccia può prendere i colori dallo sfondo del dispositivo (Material You).
 - **Layout adattivo**:
   - sotto i **600 dp** (telefoni): barra di navigazione in basso e una colonna;
   - da **600 dp** in su, o con il telefono in orizzontale: barra laterale (*navigation rail*) e due colonne di card;

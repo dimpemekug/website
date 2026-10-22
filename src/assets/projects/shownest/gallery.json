@@ -1,0 +1,28 @@
+{
+  "captions": {
+    "01-watchlist": {
+      "it": "La watchlist con il prossimo episodio di ogni serie",
+      "en": "The watchlist with the next episode of every show"
+    },
+    "02-detail": {
+      "it": "La scheda di una serie con le stagioni e i titoli simili",
+      "en": "A show's page with its seasons and similar titles"
+    },
+    "03-myshows": {
+      "it": "Le mie serie: in uscita, in corso, completate",
+      "en": "My Shows: coming up, in progress, completed"
+    },
+    "04-explore": {
+      "it": "Esplora: tendenze e suggerimenti in base a ciò che segui",
+      "en": "Explore: trending shows and picks based on what you follow"
+    },
+    "05-stats": {
+      "it": "Statistiche: tempo totale, episodi visti e andamento mensile",
+      "en": "Statistics: total time, episodes watched and monthly trend"
+    },
+    "06-dark": {
+      "it": "La watchlist con il tema scuro",
+      "en": "The watchlist in dark mode"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "captions": {
+    "01-table": {
+      "it": "La tabella con date, fotocamera, posizione e parole chiave di foto e video",
+      "en": "The table with dates, camera, location and keywords for photos and videos"
+    },
+    "02-dates": {
+      "it": "Modifiche in blocco delle date, con anteprima riga per riga",
+      "en": "Bulk date edits, with a row-by-row preview"
+    },
+    "03-location": {
+      "it": "Posizione dalla foto più vicina nel tempo o da una traccia GPX",
+      "en": "Location from the nearest photo in time or from a GPX track"
+    },
+    "04-copyright": {
+      "it": "Autore e copyright da un modello con segnaposto",
+      "en": "Author and copyright from a template with placeholders"
+    },
+    "05-rename": {
+      "it": "Rinomina in blocco con un modello basato sulla data di scatto",
+      "en": "Batch rename with a template based on the capture date"
+    },
+    "06-changes": {
+      "it": "Le modifiche in arancione, da controllare prima di salvare",
+      "en": "Changes in orange, to review before saving"
+    },
+    "07-map": {
+      "it": "La vista su mappa: si trascinano le foto senza posizione sul punto giusto",
+      "en": "The map view: drag photos without a location onto the right spot"
+    },
+    "08-dark": {
+      "it": "La mappa e l'inspector con l'aspetto scuro",
+      "en": "The map and inspector in dark mode"
+    }
+  }
+}

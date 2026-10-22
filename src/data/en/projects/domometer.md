@@ -26,6 +26,7 @@ DomoMeter comes from a real problem: keeping track of household utility use mean
 - **Several homes** — separate profiles for home, office or holiday home
 - **File backups** — export your data to JSON and import it again when needed, even when moving from iPhone to Android and back
 - **iOS only** — tariffs with bill estimates, tariff history and budget; reading reminders; notes and meter replacement; CSV export and import; optional iCloud sync
+- **Android only** — Modern or Retro visual style, Material You dynamic colors, layouts for tablets and foldables
 - **Privacy** — no account, no tracking; on Android the app doesn't connect to the Internet
 - **No subscription** — free, with no ads and no in-app purchases
 

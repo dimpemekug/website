@@ -1,0 +1,28 @@
+{
+  "captions": {
+    "01-batch": {
+      "it": "Decine di foto ridimensionate in un colpo solo, con lo stato di ognuna",
+      "en": "Dozens of photos resized at once, with each one's status"
+    },
+    "02-savings": {
+      "it": "Risultato dell'elaborazione con lo spazio risparmiato foto per foto e in totale",
+      "en": "Processing results with the space saved per photo and in total"
+    },
+    "03-drag-and-drop": {
+      "it": "La finestra vuota, pronta a ricevere immagini e cartelle trascinate",
+      "en": "The empty window, ready for dragged images and folders"
+    },
+    "04-presets": {
+      "it": "Gestione dei preset di dimensione: Web, Social, Email, Icona e i tuoi",
+      "en": "Managing size presets: Web, Social, Email, Icon and your own"
+    },
+    "05-privacy": {
+      "it": "Opzioni di uscita con i metadati EXIF e GPS rimossi di default",
+      "en": "Output options with EXIF and GPS metadata removed by default"
+    },
+    "06-dark": {
+      "it": "Resizo con l'aspetto scuro",
+      "en": "Resizo in dark mode"
+    }
+  }
+}

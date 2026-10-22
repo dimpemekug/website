@@ -1,0 +1,44 @@
+{
+  "captions": {
+    "01-calculator": {
+      "it": "Calcolatrice IPv4: rete, broadcast, host e vista binaria",
+      "en": "IPv4 calculator: network, broadcast, hosts and binary view"
+    },
+    "02-vlsm": {
+      "it": "Piano VLSM con le subnet dimensionate sul numero di host",
+      "en": "VLSM plan with subnets sized to the host counts"
+    },
+    "03-project": {
+      "it": "Un progetto di laboratorio con dispositivi, verifica e schema della rete",
+      "en": "A lab project with devices, checks and network diagram"
+    },
+    "04-device": {
+      "it": "Un router con interfacce, OSPF e route statiche",
+      "en": "A router with interfaces, OSPF and static routes"
+    },
+    "05-ipv6": {
+      "it": "Calcolatrice IPv6: compressione, prefissi ed EUI-64",
+      "en": "IPv6 calculator: compression, prefixes and EUI-64"
+    },
+    "06-guide": {
+      "it": "Un capitolo della guida alle reti",
+      "en": "A chapter of the networking guide"
+    },
+    "07-report": {
+      "it": "La verifica del laboratorio: errori e avvisi, ciascuno con la soluzione",
+      "en": "Lab verification: errors and warnings, each explained with its fix"
+    },
+    "08-config": {
+      "it": "La configurazione Cisco IOS commentata, pronta da incollare",
+      "en": "Commented Cisco IOS configuration, ready to paste"
+    },
+    "09-summary": {
+      "it": "Summary: il blocco che riassume più reti, con i bit in comune",
+      "en": "Summary: the block that sums up several networks, with the common bits"
+    },
+    "10-exercises": {
+      "it": "Un esercizio di subnetting con la soluzione passo per passo",
+      "en": "A subnetting exercise with a step-by-step solution"
+    }
+  }
+}

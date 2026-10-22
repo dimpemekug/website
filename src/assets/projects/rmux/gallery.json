@@ -1,0 +1,32 @@
+{
+  "captions": {
+    "01-trim": {
+      "it": "Taglio di un video sulla timeline, senza ricodifica",
+      "en": "Trimming a video on the timeline, without re-encoding"
+    },
+    "02-convert": {
+      "it": "Conversione in H.264, HEVC, AV1, VP9 o ProRes",
+      "en": "Converting to H.264, HEVC, AV1, VP9 or ProRes"
+    },
+    "03-audio": {
+      "it": "Le tracce audio una per una: copia, conversione, lingua e sincronizzazione",
+      "en": "Audio tracks one by one: copy, conversion, language and sync"
+    },
+    "04-subtitles": {
+      "it": "Sottotitoli SRT e ASS importati, sincronizzati e impressi nel video",
+      "en": "SRT and ASS subtitles imported, synced and burned into the video"
+    },
+    "05-crop": {
+      "it": "Ritaglio, rotazione, filtri e LUT con l'anteprima sul video",
+      "en": "Cropping, rotation, filters and LUTs, previewed on the video"
+    },
+    "06-merge": {
+      "it": "Unione di più clip in un solo file",
+      "en": "Merging several clips into one file"
+    },
+    "07-dark": {
+      "it": "rMux con l'aspetto scuro",
+      "en": "rMux in dark mode"
+    }
+  }
+}

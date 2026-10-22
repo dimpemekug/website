@@ -1,0 +1,477 @@
+---
+/**
+ * ProjectGallery — screenshot di un'app nella sua pagina progetto.
+ *
+ * Le immagini stanno in src/assets/projects/<slug>/<dispositivo>/*.webp e le didascalie in
+ * src/assets/projects/<slug>/gallery.json (`captions`, per nome del file, in it/en; una chiave
+ * `<dispositivo>/<nome>` vale solo per quel dispositivo). Le importa dai repo delle app
+ * .claude/skills/progetto-app/scripts/import_screenshots.mjs.
+ *
+ * Una scheda per dispositivo quando ce n'è più di uno; ogni scheda è un carosello a scorrimento
+ * nativo (scroll-snap) con altezza fissa, così screenshot verticali e orizzontali stanno nella
+ * stessa fila senza ritagli. Un clic apre la galleria a schermo intero di PhotoSwipe, caricata
+ * solo in quel momento.
+ */
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  slug: string;
+  title: string;
+  lang: "it" | "en";
+};
+
+const { slug, title, lang } = Astro.props;
+
+type Caption = { it: string; en: string };
+type Gallery = { captions: Record<string, Caption> };
+
+const galleries = import.meta.glob<Gallery>("/src/assets/projects/*/gallery.json", {
+  eager: true,
+  import: "default",
+});
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/projects/*/*/*.{webp,png,jpg}",
+  { eager: true }
+);
+
+const DEVICES = ["iphone", "ipad", "mac", "android", "android-tablet"] as const;
+const LABELS: Record<(typeof DEVICES)[number], Caption> = {
+  iphone: { it: "iPhone", en: "iPhone" },
+  ipad: { it: "iPad", en: "iPad" },
+  mac: { it: "Mac", en: "Mac" },
+  android: { it: "Android", en: "Android" },
+  "android-tablet": { it: "Tablet Android", en: "Android tablet" },
+};
+
+const gallery = galleries[`/src/assets/projects/${slug}/gallery.json`];
+
+let missingCaption = "";
+const allGroups = DEVICES.map(device => {
+  const prefix = `/src/assets/projects/${slug}/${device}/`;
+  const items = Object.entries(images)
+    .filter(([path]) => path.startsWith(prefix))
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([path, mod]) => {
+      const stem = path.slice(prefix.length).replace(/\.[^.]+$/, "");
+      const caption = gallery?.captions[`${device}/${stem}`] ?? gallery?.captions[stem];
+      if (!caption?.it || !caption?.en) missingCaption ||= stem;
+      return { src: mod.default, caption: caption?.[lang] ?? "" };
+    });
+  return { device, label: LABELS[device][lang], items };
+}).filter(group => group.items.length > 0);
+
+// Niente screenshot senza testo alternativo: finché manca una didascalia, il carosello non compare.
+if (missingCaption) {
+  console.warn(`ProjectGallery: carosello di "${slug}" nascosto, manca la didascalia it/en di "${missingCaption}" in src/assets/projects/${slug}/gallery.json`);
+}
+const groups = missingCaption ? [] : allGroups;
+
+const t = {
+  it: {
+    heading: "Schermate",
+    carousel: `Schermate di ${title}`,
+    tabs: "Dispositivo",
+    prev: "Schermata precedente",
+    next: "Schermata successiva",
+    open: (n: number, total: number) => `Apri la schermata ${n} di ${total} a schermo intero`,
+    hint: "Tocca un'immagine per ingrandirla",
+  },
+  en: {
+    heading: "Screenshots",
+    carousel: `${title} screenshots`,
+    tabs: "Device",
+    prev: "Previous screenshot",
+    next: "Next screenshot",
+    open: (n: number, total: number) => `Open screenshot ${n} of ${total} full screen`,
+    hint: "Tap an image to enlarge it",
+  },
+}[lang];
+
+// Altezza delle slide: 420 px su schermi larghi, 56% dell'altezza dello schermo sui telefoni.
+const sizesFor = (image: ImageMetadata) => {
+  const ratio = image.width / image.height;
+  return `(max-width: 640px) ${Math.round(56 * ratio)}vh, ${Math.round(420 * ratio)}px`;
+};
+const widths = [320, 640, 960, 1280];
+
+const pswpStrings = lang === "en"
+  ? { close: "Close", zoom: "Zoom", prev: "Previous", next: "Next", error: "The image could not be loaded." }
+  : { close: "Chiudi", zoom: "Ingrandisci", prev: "Precedente", next: "Successiva", error: "Impossibile caricare l'immagine." };
+---
+
+{groups.length > 0 && (
+  <section
+    class="project-gallery not-prose mb-10"
+    aria-labelledby={`pg-heading-${slug}`}
+    data-project-gallery
+    data-pswp-strings={JSON.stringify(pswpStrings)}
+  >
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+      <h2 id={`pg-heading-${slug}`} class="text-xl font-bold text-foreground">{t.heading}</h2>
+
+      {groups.length > 1 && (
+        <div class="pg-tabs" role="tablist" aria-label={t.tabs}>
+          {groups.map((group, index) => (
+            <button
+              type="button"
+              role="tab"
+              id={`pg-tab-${slug}-${group.device}`}
+              aria-controls={`pg-panel-${slug}-${group.device}`}
+              aria-selected={index === 0 ? "true" : "false"}
+              tabindex={index === 0 ? 0 : -1}
+              class="pg-tab"
+              data-pg-tab
+            >
+              {group.label}
+              <span class="pg-tab-count">{group.items.length}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+
+    {groups.map((group, index) => (
+      <div
+        id={`pg-panel-${slug}-${group.device}`}
+        class="pg-panel"
+        role={groups.length > 1 ? "tabpanel" : undefined}
+        aria-labelledby={groups.length > 1 ? `pg-tab-${slug}-${group.device}` : undefined}
+        hidden={index > 0}
+        data-pg-panel
+      >
+        <div
+          class="pg-carousel"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label={groups.length > 1 ? `${t.carousel} · ${group.label}` : t.carousel}
+        >
+          <ul class="pg-track" tabindex="0" data-pg-track>
+            {group.items.map((item, i) => (
+              <li class="pg-slide" aria-roledescription="slide" aria-label={`${i + 1} / ${group.items.length}`}>
+                <a
+                  href={item.src.src}
+                  data-pswp-width={item.src.width}
+                  data-pswp-height={item.src.height}
+                  aria-label={t.open(i + 1, group.items.length)}
+                  class="pg-link"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.caption}
+                    widths={widths}
+                    sizes={sizesFor(item.src)}
+                    loading={index === 0 && i < 2 ? "eager" : "lazy"}
+                    class="pg-image"
+                    style={`aspect-ratio: ${item.src.width} / ${item.src.height}`}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <button type="button" class="pg-nav pg-prev" aria-label={t.prev} data-pg-prev disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="pg-nav pg-next" aria-label={t.next} data-pg-next>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    ))}
+
+    <p class="mt-2 text-xs text-foreground/50">{t.hint}</p>
+  </section>
+)}
+
+<style>
+  .project-gallery {
+    --pg-height: 420px;
+  }
+  @media (max-width: 640px) {
+    .project-gallery {
+      --pg-height: 56vh;
+    }
+  }
+
+  .pg-tabs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid color-mix(in oklab, var(--border) 40%, transparent);
+    background: color-mix(in oklab, var(--muted) 15%, transparent);
+    max-width: 100%;
+  }
+  /* Sui telefoni le schede vanno su una riga a sé e si dividono lo spazio, andando a capo. */
+  @media (max-width: 640px) {
+    .pg-tabs {
+      display: flex;
+      width: 100%;
+    }
+    .pg-tab {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+    .pg-tab-count {
+      display: none;
+    }
+  }
+  .pg-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    border-radius: 9999px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: color-mix(in oklab, var(--foreground) 70%, transparent);
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .pg-tab:hover {
+    color: var(--accent);
+  }
+  .pg-tab[aria-selected="true"] {
+    background: var(--accent);
+    color: var(--background);
+  }
+  .pg-tab-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+  .pg-tab:focus-visible,
+  .pg-link:focus-visible,
+  .pg-nav:focus-visible,
+  .pg-track:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .pg-carousel {
+    position: relative;
+  }
+  .pg-track {
+    display: flex;
+    gap: 0.9rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.25rem;
+    padding: 0.25rem 0.25rem 0.75rem;
+    margin: 0;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklab, var(--foreground) 25%, transparent) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pg-slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+  .pg-link {
+    display: block;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in oklab, var(--border) 35%, transparent);
+    background: color-mix(in oklab, var(--muted) 20%, transparent);
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .pg-image {
+    display: block;
+    height: var(--pg-height);
+    width: auto;
+    max-width: none;
+  }
+  @media (hover: hover) {
+    .pg-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -12px color-mix(in oklab, var(--accent) 45%, transparent);
+    }
+  }
+
+  .pg-nav {
+    position: absolute;
+    top: calc(50% - 0.4rem);
+    transform: translateY(-50%);
+    display: none;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+    background: color-mix(in oklab, var(--background) 85%, transparent);
+    color: var(--foreground);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px -6px rgb(0 0 0 / 0.35);
+    transition: opacity 0.15s, color 0.15s;
+  }
+  .pg-nav svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .pg-nav:hover:not(:disabled) {
+    color: var(--accent);
+  }
+  .pg-nav:disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .pg-prev {
+    left: -0.6rem;
+  }
+  .pg-next {
+    right: -0.6rem;
+  }
+  /* Frecce solo dove c'è un puntatore: sul telefono si scorre col dito. */
+  @media (hover: hover) and (pointer: fine) {
+    .pg-nav {
+      display: grid;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pg-link,
+    .pg-tab,
+    .pg-nav {
+      transition: none;
+    }
+  }
+
+  /* Didascalia dentro PhotoSwipe */
+  :global(.pswp__pg-caption) {
+    position: absolute;
+    left: 50%;
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(90vw, 44rem);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.75rem;
+    background: rgb(0 0 0 / 0.55);
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    pointer-events: none;
+  }
+  :global(.pswp__pg-caption:empty) {
+    display: none;
+  }
+</style>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  let lightboxes: PhotoSwipeLightbox[] = [];
+
+  function setupCarousel(panel: HTMLElement) {
+    const track = panel.querySelector<HTMLElement>("[data-pg-track]");
+    const prev = panel.querySelector<HTMLButtonElement>("[data-pg-prev]");
+    const next = panel.querySelector<HTMLButtonElement>("[data-pg-next]");
+    if (!track || !prev || !next) return;
+
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+    };
+    const step = (direction: number) => {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      track.scrollBy({ left: direction * track.clientWidth * 0.8, behavior: reduce ? "auto" : "smooth" });
+    };
+    prev.addEventListener("click", () => step(-1));
+    next.addEventListener("click", () => step(1));
+    track.addEventListener("scroll", update, { passive: true });
+    new ResizeObserver(update).observe(track);
+    update();
+  }
+
+  function setupTabs(section: HTMLElement) {
+    const tabs = [...section.querySelectorAll<HTMLButtonElement>("[data-pg-tab]")];
+    const panels = [...section.querySelectorAll<HTMLElement>("[data-pg-panel]")];
+    if (tabs.length < 2) return;
+
+    const select = (index: number, focus = false) => {
+      tabs.forEach((tab, i) => {
+        const selected = i === index;
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        panels[i].hidden = !selected;
+      });
+      if (focus) tabs[index].focus();
+      // Il carosello appena mostrato riparte dall'inizio e ricalcola le frecce.
+      const track = panels[index].querySelector<HTMLElement>("[data-pg-track]");
+      track?.scrollTo({ left: 0 });
+      track?.dispatchEvent(new Event("scroll"));
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => select(i));
+      tab.addEventListener("keydown", event => {
+        const keys: Record<string, number> = {
+          ArrowRight: (i + 1) % tabs.length,
+          ArrowLeft: (i - 1 + tabs.length) % tabs.length,
+          Home: 0,
+          End: tabs.length - 1,
+        };
+        if (event.key in keys) {
+          event.preventDefault();
+          select(keys[event.key], true);
+        }
+      });
+    });
+  }
+
+  function setupLightbox(section: HTMLElement, panel: HTMLElement) {
+    const strings = JSON.parse(section.dataset.pswpStrings ?? "{}");
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: panel.querySelector<HTMLElement>("[data-pg-track]")!,
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+      bgOpacity: 0.92,
+      showHideAnimationType: "zoom",
+      wheelToZoom: true,
+      padding: { top: 48, bottom: 72, left: 16, right: 16 },
+      closeTitle: strings.close,
+      zoomTitle: strings.zoom,
+      arrowPrevTitle: strings.prev,
+      arrowNextTitle: strings.next,
+      errorMsg: strings.error,
+    });
+    lightbox.on("uiRegister", () => {
+      lightbox.pswp?.ui?.registerElement({
+        name: "pg-caption",
+        order: 9,
+        isButton: false,
+        appendTo: "root",
+        onInit: (element, pswp) => {
+          pswp.on("change", () => {
+            const img = pswp.currSlide?.data.element?.querySelector("img");
+            element.textContent = img?.getAttribute("alt") ?? "";
+          });
+        },
+      });
+    });
+    lightbox.init();
+    lightboxes.push(lightbox);
+  }
+
+  function init() {
+    document.querySelectorAll<HTMLElement>("[data-project-gallery]").forEach(section => {
+      setupTabs(section);
+      section.querySelectorAll<HTMLElement>("[data-pg-panel]").forEach(panel => {
+        setupCarousel(panel);
+        setupLightbox(section, panel);
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", init);
+  document.addEventListener("astro:before-swap", () => {
+    lightboxes.forEach(lightbox => lightbox.destroy());
+    lightboxes = [];
+  });
+</script>

@@ -9,6 +9,7 @@ import BackToTopButton from "@/components/BackToTopButton.astro";
 import { SITE } from "@/config";
 import TableOfContents from "@/components/TableOfContents.astro";
 import ProjectPrivacySupport from "@/components/ProjectPrivacySupport.astro";
+import ProjectGallery from "@/components/ProjectGallery.astro";
 
 type Props = {
   project: CollectionEntry<"projects"> | CollectionEntry<"projectsEn">;
@@ -167,6 +168,8 @@ const projectStructuredData = {
         )}
       </div>
     </header>
+
+    <ProjectGallery slug={project.id} title={title} lang={lang} />
 
     {hasDocs && (
       <div class="mb-10 rounded-2xl border border-accent/25 bg-accent/5 p-5 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

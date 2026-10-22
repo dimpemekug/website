@@ -1,0 +1,36 @@
+{
+  "captions": {
+    "01-browse": {
+      "it": "Dentro un archivio senza estrarlo: cartelle, dimensioni e tipi di file",
+      "en": "Inside an archive without extracting it: folders, sizes and file types"
+    },
+    "02-preview": {
+      "it": "Anteprima di un'immagine letta direttamente in memoria",
+      "en": "Preview of an image read straight from memory"
+    },
+    "03-protected": {
+      "it": "La richiesta della password per un archivio protetto",
+      "en": "The password prompt for a protected archive"
+    },
+    "04-create": {
+      "it": "Creazione di un archivio con password AES-256 e volumi",
+      "en": "Creating an archive with an AES-256 password and volumes"
+    },
+    "05-edit": {
+      "it": "Aggiunta e rimozione di file in un archivio esistente",
+      "en": "Adding and removing files in an existing archive"
+    },
+    "06-verify": {
+      "it": "Verifica dell'integrità di un archivio",
+      "en": "Verifying an archive's integrity"
+    },
+    "07-drop": {
+      "it": "La finestra di benvenuto: si trascina un archivio o dei file",
+      "en": "The welcome window: drop an archive or some files"
+    },
+    "08-dark": {
+      "it": "Ricerca in tutto l'archivio con l'aspetto scuro",
+      "en": "Searching the whole archive in dark mode"
+    }
+  }
+}

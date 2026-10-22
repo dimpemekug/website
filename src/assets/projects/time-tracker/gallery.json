@@ -1,0 +1,68 @@
+{
+  "captions": {
+    "01-summary": {
+      "it": "Il riepilogo con il calendario delle attività e le ore di oggi",
+      "en": "The summary with the activity calendar and today's hours"
+    },
+    "02-dashboard": {
+      "it": "La dashboard con le ore per progetto, la quota fatturabile e i ricavi",
+      "en": "The dashboard with hours per project, billable share and revenue"
+    },
+    "02-entries": {
+      "it": "Le attività raggruppate per giorno, con l'aggiunta rapida in cima",
+      "en": "Activities grouped by day, with quick add at the top"
+    },
+    "03-dashboard": {
+      "it": "La dashboard con le ore per progetto nel periodo scelto",
+      "en": "The dashboard with hours per project in the chosen period"
+    },
+    "03-projects": {
+      "it": "L'elenco dei progetti, attivi e archiviati",
+      "en": "The project list, active and archived"
+    },
+    "03-timer": {
+      "it": "Il timer di concentrazione su tablet",
+      "en": "The focus timer on a tablet"
+    },
+    "04-new-entry": {
+      "it": "Una nuova attività, con i titoli già usati proposti come suggerimenti",
+      "en": "A new activity, with previously used titles offered as suggestions"
+    },
+    "04-pomodoro": {
+      "it": "Il timer di concentrazione, con progetto e attività",
+      "en": "The focus timer, with project and activity"
+    },
+    "04-projects": {
+      "it": "L'elenco dei progetti e l'editor con tariffa oraria e IVA",
+      "en": "The project list and the editor with hourly rate and VAT"
+    },
+    "05-dark": {
+      "it": "La dashboard con il tema scuro",
+      "en": "The dashboard in dark mode"
+    },
+    "05-timer": {
+      "it": "Il timer di concentrazione, che registra il tempo come attività",
+      "en": "The focus timer, which logs the time as an activity"
+    },
+    "06-billing": {
+      "it": "La modifica di un progetto con tariffa oraria e IVA",
+      "en": "Editing a project with hourly rate and VAT"
+    },
+    "07-settings": {
+      "it": "Impostazioni: lingua, notifiche del timer, tema, colore d'accento e backup",
+      "en": "Settings: language, timer notifications, theme, accent color and backups"
+    },
+    "08-dark": {
+      "it": "La dashboard con il tema scuro",
+      "en": "The dashboard in dark mode"
+    },
+    "android/01-summary": {
+      "it": "Il riepilogo con le ore di oggi, della settimana e i ricavi",
+      "en": "The summary with today's and this week's hours and revenue"
+    },
+    "android-tablet/01-summary": {
+      "it": "Su tablet, l'elenco delle attività e l'editor affiancati",
+      "en": "On a tablet, the activity list and the editor side by side"
+    }
+  }
+}

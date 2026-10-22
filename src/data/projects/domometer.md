@@ -26,6 +26,7 @@ DomoMeter nasce da un problema concreto: tenere traccia dei consumi di casa sign
 - **Più abitazioni** — profili separati per casa, ufficio o seconda casa
 - **Backup su file** — esporta i dati in JSON e reimportali quando serve, anche passando da iPhone ad Android e viceversa
 - **Solo su iOS** — tariffe con stima della bolletta, storico delle tariffe e budget; promemoria di lettura; note e sostituzione del contatore; esportazione e importazione CSV; sincronizzazione iCloud facoltativa
+- **Solo su Android** — stile grafico Moderno o Retrò, colori dinamici di Material You, layout per tablet e pieghevoli
 - **Privacy** — nessun account, nessun tracciamento; su Android l'app non si connette a Internet
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 

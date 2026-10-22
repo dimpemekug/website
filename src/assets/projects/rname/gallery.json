@@ -1,0 +1,28 @@
+{
+  "captions": {
+    "01-preview": {
+      "it": "L'anteprima dei nomi nuovi accanto a quelli attuali",
+      "en": "The preview of new names next to the current ones"
+    },
+    "02-numbering": {
+      "it": "Una catena di regole con numerazione, pulizia e sostituzione",
+      "en": "A rule chain with numbering, clean-up and replace"
+    },
+    "03-presets": {
+      "it": "Il menu dei preset per richiamare una catena di regole",
+      "en": "The presets menu to recall a rule chain"
+    },
+    "04-permissions": {
+      "it": "I permessi sulle cartelle, da vedere e revocare",
+      "en": "Folder permissions, to review and revoke"
+    },
+    "05-dark": {
+      "it": "rName con l'aspetto scuro",
+      "en": "rName in dark mode"
+    },
+    "06-renamed": {
+      "it": "I file rinominati, con l'annullamento a portata di mano",
+      "en": "The renamed files, with undo at hand"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "captions": {
+    "01-collection": {
+      "it": "La collezione, con orologi indossati di recente e valore totale",
+      "en": "The collection, with recently worn watches and total value"
+    },
+    "02-detail": {
+      "it": "Scheda di un orologio con galleria e dati principali",
+      "en": "A watch's page with gallery and main details"
+    },
+    "03-statistics": {
+      "it": "Statistiche: valore della collezione nel tempo, marche e curiosità",
+      "en": "Statistics: collection value over time, brands and insights"
+    },
+    "04-care": {
+      "it": "Diario al polso, revisioni e grafico della precisione",
+      "en": "Wear log, services and accuracy chart"
+    },
+    "04-edit": {
+      "it": "Modifica di un orologio: marca, modello, referenza, anno e prezzo",
+      "en": "Editing a watch: brand, model, reference, year and price"
+    },
+    "05-dark": {
+      "it": "La collezione con il tema scuro",
+      "en": "The collection in dark mode"
+    },
+    "05-settings": {
+      "it": "Impostazioni: lingua, promemoria delle revisioni, blocco dell'app e backup",
+      "en": "Settings: language, service reminders, app lock and backup"
+    },
+    "06-custom": {
+      "it": "La collezione con il tema chiaro e un colore d'accento personalizzato",
+      "en": "The collection in light mode with a custom accent color"
+    },
+    "06-settings": {
+      "it": "Impostazioni: tema, blocco dell'app, promemoria, iCloud e backup",
+      "en": "Settings: theme, app lock, reminders, iCloud and backup"
+    },
+    "07-custom-settings": {
+      "it": "Scelta dello stile, del tema e di uno degli otto colori d'accento",
+      "en": "Choosing the style, theme and one of eight accent colors"
+    },
+    "07-list": {
+      "it": "La collezione in elenco, con stato e prezzo di ogni orologio",
+      "en": "The collection as a list, with each watch's status and price"
+    }
+  }
+}

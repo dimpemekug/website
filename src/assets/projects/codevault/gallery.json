@@ -1,0 +1,32 @@
+{
+  "captions": {
+    "01-home": {
+      "it": "Home in stile Terminale, con snippet e note recenti",
+      "en": "Home in the Terminal style, with recent snippets and notes"
+    },
+    "02-snippet": {
+      "it": "Uno snippet Swift con evidenziazione della sintassi e numeri di riga",
+      "en": "A Swift snippet with syntax highlighting and line numbers"
+    },
+    "03-styles": {
+      "it": "Home in stile Tipografico, chiaro ed essenziale",
+      "en": "Home in the Typographic style, light and minimal"
+    },
+    "04-list": {
+      "it": "Elenco degli snippet con elementi fissati, categorie e tag",
+      "en": "Snippet list with pinned items, categories and tags"
+    },
+    "05-note": {
+      "it": "Una nota Markdown con titoli, elenchi e codice",
+      "en": "A Markdown note with headings, lists and code"
+    },
+    "06-glass": {
+      "it": "Home in stile Vetro, con le superfici di sistema di iOS",
+      "en": "Home in the Glass style, with native iOS surfaces"
+    },
+    "07-settings": {
+      "it": "Impostazioni: stile, tema, lingua, editor e sincronizzazione",
+      "en": "Settings: style, theme, language, editor and sync"
+    }
+  }
+}

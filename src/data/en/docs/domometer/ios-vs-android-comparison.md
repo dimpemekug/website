@@ -17,7 +17,7 @@ DomoMeter uses the same calculation model and the same backup format on both pla
 | Feature | DomoMeter for iOS | DomoMeter for Android |
 | :--- | :--- | :--- |
 | **Language and framework** | Swift 6, SwiftUI | Kotlin 2.4, Jetpack Compose |
-| **Design** | Apple guidelines, choice of accent color | Material 3, dynamic color (Material You) on Android 12+ |
+| **Design** | Apple guidelines, choice of accent color | Material 3, Modern or Retro style, dynamic color (Material You) on Android 12+ |
 | **Minimum requirements** | iOS/iPadOS 18.0 or later | Android 8.0 (API 26) or later |
 | **Storage** | JSON document in *Application Support* | SQLite database with **Room** |
 | **Internet connection** | Only for iCloud, if enabled | **None** (no permissions in the manifest) |
@@ -47,7 +47,7 @@ Both versions are available in seven languages (Italian, English, Spanish, Portu
 
 ### DomoMeter for Android
 - **No network access**: the app declares no permissions at all, not even Internet. Data cannot leave the phone except through the backups you export.
-- **Material You**: on Android 12 or later the interface can take its colors from your wallpaper.
+- **Style and colors**: in Settings you choose a Modern or Retro visual style; on Android 12 or later the interface can take its colors from your wallpaper (Material You).
 - **Adaptive layout**:
   - below **600 dp** (phones): bottom navigation bar and a single column;
   - from **600 dp** up, or with the phone in landscape: side navigation rail and two columns of cards;

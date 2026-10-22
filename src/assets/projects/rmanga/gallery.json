@@ -1,0 +1,28 @@
+{
+  "captions": {
+    "01-library": {
+      "it": "La libreria con manga, fumetti e libri dai tuoi file",
+      "en": "The library with manga, comics and books from your own files"
+    },
+    "02-series": {
+      "it": "La pagina di una serie con capitoli, progressi e dettagli",
+      "en": "A series page with chapters, progress and details"
+    },
+    "03-reader": {
+      "it": "Il lettore di manga in modalità da destra a sinistra",
+      "en": "The manga reader in right-to-left mode"
+    },
+    "04-webtoon": {
+      "it": "Un webtoon a scorrimento verticale continuo",
+      "en": "A webtoon in continuous vertical scrolling"
+    },
+    "05-ebook": {
+      "it": "Un libro nel lettore di testo",
+      "en": "A book in the text reader"
+    },
+    "06-reader-settings": {
+      "it": "Le impostazioni di lettura: modalità, sfondo e orientamento",
+      "en": "Reading settings: mode, background and orientation"
+    }
+  }
+}

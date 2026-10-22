@@ -1,0 +1,68 @@
+{
+  "captions": {
+    "01-home": {
+      "it": "La home con le notizie principali e le sezioni per argomento",
+      "en": "The home screen with top stories and sections by topic"
+    },
+    "02-article": {
+      "it": "Un articolo, con testo nitido e foto",
+      "en": "An article, with crisp text and photos"
+    },
+    "02-lettore": {
+      "it": "Un articolo, con testo grande e senza distrazioni",
+      "en": "An article, with large text and no distractions"
+    },
+    "03-categories": {
+      "it": "Le categorie: tutte le sezioni del sito",
+      "en": "Categories: every section of the site"
+    },
+    "03-salvati-offline": {
+      "it": "Gli articoli salvati, disponibili anche senza connessione",
+      "en": "Saved articles, available even offline"
+    },
+    "04-categorie": {
+      "it": "Le categorie: tutte le rubriche di pt39.it",
+      "en": "Categories: all of pt39.it's columns"
+    },
+    "04-saved": {
+      "it": "Gli articoli salvati, leggibili anche senza connessione",
+      "en": "Saved articles, readable even offline"
+    },
+    "05-dark": {
+      "it": "La home con il tema scuro e il feed cronologico",
+      "en": "The home screen in dark mode with the chronological feed"
+    },
+    "05-impostazioni": {
+      "it": "Impostazioni: avvisi dei nuovi articoli, tema, stile e colori",
+      "en": "Settings: new-article alerts, theme, style and colors"
+    },
+    "05-ricerca": {
+      "it": "La ricerca tra gli articoli",
+      "en": "Searching the articles"
+    },
+    "06-appearance": {
+      "it": "Tema, colore d'accento, stile di lettura e aspetto del feed",
+      "en": "Theme, accent color, reading style and feed layout"
+    },
+    "06-home-tema-scuro": {
+      "it": "La home con il tema scuro",
+      "en": "The home screen in dark mode"
+    },
+    "06-impostazioni": {
+      "it": "Impostazioni: avvisi dei nuovi articoli, tema, stile e colori",
+      "en": "Settings: new-article alerts, theme, style and colors"
+    },
+    "07-home-tema-scuro": {
+      "it": "La home con il tema scuro",
+      "en": "The home screen in dark mode"
+    },
+    "08-lettore-tema-scuro": {
+      "it": "Un articolo con il tema scuro",
+      "en": "An article in dark mode"
+    },
+    "android-tablet/01-home": {
+      "it": "Su tablet, la home con la barra laterale",
+      "en": "On a tablet, the home screen with the sidebar"
+    }
+  }
+}

@@ -23,6 +23,7 @@
     "astro-seo": "^1.2.0",
     "dayjs": "^1.11.20",
     "lodash.kebabcase": "^4.1.1",
+    "photoswipe": "^5.4.4",
     "satori": "^0.26.0",
     "sharp": "^0.34.5",
     "slugify": "^1.6.9",
