@@ -103,7 +103,7 @@ const nextPost =
     <!-- Post header section -->
     <header class="post-header relative mb-10 text-center">
       <div class="post-hero-bg"></div>
-      <div class="relative z-10 rounded-3xl border border-border/20 bg-muted/5 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-12">
+      <div class="relative z-10 rounded-3xl border border-border/20 bg-muted/10 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-12">
         <!-- Title -->
         <h1
           transition:name={slugifyStr(title)}
@@ -118,7 +118,7 @@ const nextPost =
             tags.map((tag: string) => (
               <a
                 href={`/tags/${slugifyStr(tag)}/`}
-                class="post-tag-badge inline-flex items-center gap-1 rounded-full border border-accent/20 bg-accent/5 px-2.5 py-0.5 font-firacode text-xs text-accent transition-all duration-200 hover:border-accent/40 hover:bg-accent/10 hover:shadow-sm hover:shadow-accent/10"
+                class="post-tag-badge inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/5 px-2.5 py-0.5 font-firacode text-xs text-accent transition-all duration-200 hover:border-accent/40 hover:bg-accent/10 hover:shadow-sm hover:shadow-accent/10"
               >
                 <span class="opacity-50">#</span>
                 {tag}
@@ -133,7 +133,7 @@ const nextPost =
         >
           <!-- Author chip -->
           <div
-            class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
           >
             <svg
               class="size-3.5 text-accent/70"
@@ -152,7 +152,7 @@ const nextPost =
 
           <!-- Date chip -->
           <div
-            class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
           >
             <svg
               class="size-3.5 text-accent/70"
@@ -180,7 +180,7 @@ const nextPost =
           <!-- Reading time chip -->
           {readingTime && (
             <div
-              class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+              class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
             >
               <svg
                 class="size-3.5 text-accent/70"
@@ -201,7 +201,7 @@ const nextPost =
 
           <!-- Views chip -->
           <div
-            class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm"
           >
             <ViewCounter slug={`${lang}-${post.id}`} label={t("posts.views")} />
           </div>
@@ -210,7 +210,7 @@ const nextPost =
           <EditPost
             {hideEditPost}
             {post}
-            class="flex rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 opacity-70 backdrop-blur-sm transition-all duration-200 hover:border-accent/30 hover:opacity-100 [&>svg]:size-3.5"
+            class="flex rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 opacity-70 backdrop-blur-sm transition-all duration-200 hover:border-accent/30 hover:opacity-100 [&>svg]:size-3.5"
           />
         </div>
 
@@ -245,7 +245,7 @@ const nextPost =
         <div class="absolute inset-0 bg-linear-to-r from-transparent via-accent/40 to-accent/40 blur-[2px]"></div>
       </div>
       
-      <div class="relative z-10 flex items-center gap-2 font-firacode text-[10px] tracking-widest text-accent/40 uppercase select-none">
+      <div class="relative z-10 flex items-center gap-2 font-firacode text-xs tracking-widest text-accent/40 uppercase select-none">
         <span class="h-1.5 w-1.5 rounded-full bg-accent/50 shadow-[0_0_8px_var(--color-accent)]"></span>
         end
       </div>
@@ -266,7 +266,7 @@ const nextPost =
             <a
               href={`/tags/${slugifyStr(tag)}/`}
               tabindex="-1"
-              class="inline-flex items-center gap-1 rounded-full border border-border/25 bg-muted/10 px-2.5 py-1 font-firacode text-xs transition-all duration-200 hover:border-accent/40 hover:bg-accent/5 hover:text-accent"
+              class="inline-flex items-center gap-1 rounded-full border border-border/20 bg-muted/10 px-2.5 py-1 font-firacode text-xs transition-all duration-200 hover:border-accent/40 hover:bg-accent/5 hover:text-accent"
             >
               <span class="opacity-40">#</span>
               {tag}
@@ -309,11 +309,11 @@ const nextPost =
                 <line x1="19" y1="12" x2="5" y2="12" />
                 <polyline points="12 19 5 12 12 5" />
               </svg>
-              <span class="font-firacode text-[10px] tracking-wider text-foreground/35 uppercase">
+              <span class="font-firacode text-xs tracking-wider text-foreground/45 uppercase">
                 Previous
               </span>
             </div>
-            <span class="line-clamp-2 text-sm leading-snug font-medium text-foreground/70 transition-colors duration-200 group-hover:text-accent">
+            <span class="line-clamp-2 text-sm leading-snug font-medium text-foreground/65 transition-colors duration-200 group-hover:text-accent">
               {prevPost.title}
             </span>
           </a>
@@ -329,7 +329,7 @@ const nextPost =
           >
             <div class="post-nav-bg" />
             <div class="flex items-center gap-1.5">
-              <span class="font-firacode text-[10px] tracking-wider text-foreground/35 uppercase">
+              <span class="font-firacode text-xs tracking-wider text-foreground/45 uppercase">
                 Next
               </span>
               <svg
@@ -345,7 +345,7 @@ const nextPost =
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </div>
-            <span class="line-clamp-2 text-sm leading-snug font-medium text-foreground/70 transition-colors duration-200 group-hover:text-accent">
+            <span class="line-clamp-2 text-sm leading-snug font-medium text-foreground/65 transition-colors duration-200 group-hover:text-accent">
               {nextPost.title}
             </span>
           </a>

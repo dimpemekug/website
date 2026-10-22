@@ -69,14 +69,14 @@ const projectStructuredData = {
     <!-- Project header -->
     <header class="post-header relative mb-10 text-center">
       <div class="post-hero-bg"></div>
-      <div class="relative z-10 rounded-3xl border border-border/20 bg-muted/5 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-12">
+      <div class="relative z-10 rounded-3xl border border-border/20 bg-muted/10 px-6 py-8 backdrop-blur-md sm:px-10 sm:py-12">
 
         <h1 class="post-title text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-[2.75rem]">
           {title}
         </h1>
 
         {description && (
-          <p class="mt-3 text-base text-foreground/60 max-w-2xl mx-auto leading-relaxed">
+          <p class="mt-3 text-base text-foreground/65 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         )}
@@ -84,7 +84,7 @@ const projectStructuredData = {
         <!-- Metadata row -->
         <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
           <!-- Author chip -->
-          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
+          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
             <svg class="size-3.5 text-accent/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
@@ -93,7 +93,7 @@ const projectStructuredData = {
           </div>
 
           <!-- Date chip -->
-          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/25 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
+          <div class="inline-flex items-center gap-1.5 rounded-lg border border-border/20 bg-muted/10 px-2.5 py-1 backdrop-blur-sm">
             <svg class="size-3.5 text-accent/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -111,14 +111,14 @@ const projectStructuredData = {
             {hasDocs && (
               <a
                 href={lang === "en" ? `/en/projects/${project.id}/docs/` : `/progetti/${project.id}/docs/`}
-                class="inline-flex items-center gap-2 rounded-full border border-accent bg-accent/90 px-4 py-1.5 text-sm font-semibold text-background shadow-md shadow-accent/20 transition-all duration-200 hover:bg-accent hover:scale-[1.02]"
+                class="btn-primary"
               >
                 <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                   <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
                 <span>{lang === "en" ? "Wiki & Docs" : "Wiki & Documentazione"}</span>
-                <span class="rounded-full bg-background/25 px-1.5 py-0.2 text-[11px] font-firacode text-background">
+                <span class="rounded-full bg-background/25 px-1.5 py-0.2 text-xs font-firacode text-background">
                   {projectDocs.length}
                 </span>
               </a>
@@ -128,7 +128,7 @@ const projectStructuredData = {
                 href={appStore}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/8 px-4 py-1.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+                class="btn-secondary"
               >
                 <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -141,7 +141,7 @@ const projectStructuredData = {
                 href={playStore}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/8 px-4 py-1.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent/50 hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+                class="btn-secondary"
               >
                 <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M3.18 23.76c.3.17.64.22.98.14l12.35-7.13-2.79-2.79-10.54 9.78zM.34 1.18C.13 1.5 0 1.9 0 2.36v19.28c0 .46.13.86.34 1.18l.06.06 10.8-10.8v-.25L.4 1.12l-.06.06zM20.8 10.37l-2.8-1.62-3.14 3.14 3.14 3.14 2.82-1.63c.8-.46.8-1.22-.02-1.03zM3.18.24l12.35 7.13-2.79 2.79L2.2.38C2.5.06 2.88 0 3.18.24z"/>
@@ -154,7 +154,7 @@ const projectStructuredData = {
                 href={website}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 rounded-full border border-border/30 bg-muted/15 px-4 py-1.5 text-sm font-medium text-foreground/70 transition-all duration-200 hover:border-accent/40 hover:text-accent hover:shadow-sm"
+                class="btn border border-border/30 bg-muted/20 text-foreground/80 hover:border-accent/40 hover:text-accent"
               >
                 <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -172,7 +172,7 @@ const projectStructuredData = {
     <ProjectGallery slug={project.id} title={title} lang={lang} />
 
     {hasDocs && (
-      <div class="mb-10 rounded-2xl border border-accent/25 bg-accent/5 p-5 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="mb-10 rounded-2xl border border-accent/30 bg-accent/5 p-5 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div class="flex items-start gap-3.5">
           <div class="p-2.5 rounded-xl bg-accent/15 text-accent shrink-0 mt-0.5">
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -184,7 +184,7 @@ const projectStructuredData = {
             <h3 class="text-sm font-bold text-foreground">
               {lang === "en" ? `Official ${title} Wiki & Documentation` : `Wiki & Documentazione per ${title}`}
             </h3>
-            <p class="text-xs text-foreground/60 mt-0.5">
+            <p class="text-xs text-foreground/65 mt-0.5">
               {lang === "en"
                 ? `Explore ${projectDocs.length} dedicated guides covering installation, features, and shortcuts.`
                 : `Esplora ${projectDocs.length} guide e manuali dedicati con installazione, formati, sicurezza e scorciatoie.`}
@@ -193,7 +193,7 @@ const projectStructuredData = {
         </div>
         <a
           href={lang === "en" ? `/en/projects/${project.id}/docs/` : `/progetti/${project.id}/docs/`}
-          class="inline-flex items-center justify-center gap-1.5 shrink-0 px-4 py-2 rounded-xl border border-accent/40 bg-accent/10 text-accent font-semibold text-xs hover:bg-accent hover:text-background transition-all"
+          class="btn-secondary shrink-0"
         >
           <span>{lang === "en" ? "Browse Docs" : "Sfoglia la Documentazione"}</span>
           <span>→</span>
@@ -232,7 +232,7 @@ const projectStructuredData = {
       <div class="relative h-px flex-1 bg-linear-to-r from-transparent via-border/30 to-accent/20">
         <div class="absolute inset-0 bg-linear-to-r from-transparent via-accent/40 to-accent/40 blur-[2px]"></div>
       </div>
-      <div class="relative z-10 flex items-center gap-2 font-firacode text-[10px] tracking-widest text-accent/40 uppercase select-none">
+      <div class="relative z-10 flex items-center gap-2 font-firacode text-xs tracking-widest text-accent/40 uppercase select-none">
         <span class="h-1.5 w-1.5 rounded-full bg-accent/50 shadow-[0_0_8px_var(--color-accent)]"></span>
         end
       </div>
@@ -245,7 +245,7 @@ const projectStructuredData = {
     <div data-pagefind-ignore class="mt-6 flex justify-center">
       <a
         href={backHref}
-        class="inline-flex items-center gap-2 rounded-xl border border-border/25 bg-muted/10 px-5 py-2.5 text-sm font-medium text-foreground/70 transition-all duration-200 hover:border-accent/30 hover:text-accent hover:-translate-y-0.5"
+        class="inline-flex items-center gap-2 rounded-xl border border-border/20 bg-muted/10 px-5 py-2.5 text-sm font-medium text-foreground/65 transition-all duration-200 hover:border-accent/30 hover:text-accent hover:-translate-y-0.5"
       >
         <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="19" y1="12" x2="5" y2="12" />

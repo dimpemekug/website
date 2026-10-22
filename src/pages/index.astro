@@ -96,11 +96,11 @@ const pinnedProjects = pinnedProjectIds
 
           <!-- Description -->
           <p
-            class="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-foreground/75"
+            class="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-foreground/80"
           >
             {t("home.description_intro")} {t("home.description")}
           </p>
-          <p class="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-foreground/60">
+          <p class="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-foreground/65">
             {t("home.description_blog")}
           </p>
 
@@ -115,7 +115,7 @@ const pinnedProjects = pinnedProjectIds
             </a>
             <a
               href="/docs/"
-              class="inline-flex items-center gap-2 rounded-xl border border-border/40 bg-muted/15 px-5 py-2.5 text-sm font-semibold text-foreground backdrop-blur-md transition-all duration-200 hover:border-accent/40 hover:bg-muted/25"
+              class="inline-flex items-center gap-2 rounded-xl border border-border/30 bg-muted/20 px-5 py-2.5 text-sm font-semibold text-foreground backdrop-blur-md transition-all duration-200 hover:border-accent/40 hover:bg-muted/20"
             >
               <svg class="size-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -125,14 +125,14 @@ const pinnedProjects = pinnedProjectIds
             </a>
             <a
               href="/posts/"
-              class="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
+              class="inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-foreground/65 hover:text-accent transition-colors"
             >
               <span>Articoli ({posts.length}) →</span>
             </a>
           </div>
 
           <!-- Linear Highlights Bar -->
-          <div class="mt-8 pt-6 border-t border-border/20 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-foreground/50 font-firacode">
+          <div class="mt-8 pt-6 border-t border-border/20 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-foreground/45 font-firacode">
             <span class="flex items-center gap-1.5">
               <span class="size-1.5 rounded-full bg-accent"></span>
               <span>14 App e Progetti</span>
@@ -155,15 +155,15 @@ const pinnedProjects = pinnedProjectIds
         </div>
 
         <!-- Right Side: Latest Projects Card List (Linear style) -->
-        <div class="rounded-2xl border border-border/25 bg-muted/8 p-4.5 backdrop-blur-md shadow-xl shadow-black/5">
-          <div class="flex items-center justify-between mb-3.5 pb-2.5 border-b border-border/15">
+        <div class="rounded-2xl border border-border/20 bg-muted/10 p-4.5 backdrop-blur-md shadow-xl shadow-black/5">
+          <div class="flex items-center justify-between mb-3.5 pb-2.5 border-b border-border/20">
             <span class="text-xs font-bold text-foreground flex items-center gap-2">
               <span class="size-2 rounded-full bg-accent animate-pulse"></span>
               <span>Ultimi Progetti</span>
             </span>
             <a
               href="/progetti/"
-              class="text-[11px] font-firacode font-medium text-accent hover:underline flex items-center gap-1"
+              class="text-xs font-firacode font-medium text-accent hover:underline flex items-center gap-1"
             >
               <span>Tutti ({allProjects.length}) →</span>
             </a>
@@ -174,7 +174,7 @@ const pinnedProjects = pinnedProjectIds
               const hasDocs = projectsWithDocsSet.has(project.id);
               const tag = project.data.tags[0] ?? "macOS";
               return (
-                <li class="group/item relative rounded-xl border border-border/20 bg-background/50 p-3 transition-all duration-200 hover:border-accent/40 hover:bg-muted/15 hover:shadow-md hover:shadow-accent/5">
+                <li class="group/item relative rounded-xl border border-border/20 bg-background/50 p-3 transition-all duration-200 hover:border-accent/40 hover:bg-muted/20 hover:shadow-md hover:shadow-accent/5">
                   <div class="flex items-start justify-between gap-2">
                     <a
                       href={`/progetti/${project.id}/`}
@@ -188,13 +188,13 @@ const pinnedProjects = pinnedProjectIds
                       {hasDocs && (
                         <a
                           href={`/progetti/${project.id}/docs/`}
-                          class="inline-flex items-center gap-1 rounded-md border border-accent/30 bg-accent/10 px-1.5 py-0.5 text-[10px] font-firacode text-accent hover:bg-accent hover:text-white transition-colors"
+                          class="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-xs font-firacode text-accent hover:bg-accent hover:text-background transition-colors"
                           title="Apri documentazione"
                         >
                           <span>Docs</span>
                         </a>
                       )}
-                      <span class="text-[10px] font-firacode px-1.5 py-0.5 rounded-md border border-border/30 bg-muted/20 text-foreground/60">
+                      <span class="text-xs font-firacode px-1.5 py-0.5 rounded-md border border-border/30 bg-muted/20 text-foreground/65">
                         {tag}
                       </span>
                     </div>
@@ -208,9 +208,9 @@ const pinnedProjects = pinnedProjectIds
             })}
           </ul>
 
-          <div class="mt-3.5 pt-3 border-t border-border/15 flex items-center justify-between text-xs">
-            <span class="text-foreground/50 text-[11px]">Software nativi & utility</span>
-            <a href="/docs/" class="text-[11px] font-medium text-accent hover:underline flex items-center gap-1">
+          <div class="mt-3.5 pt-3 border-t border-border/20 flex items-center justify-between text-xs">
+            <span class="text-foreground/45 text-xs">Software nativi & utility</span>
+            <a href="/docs/" class="text-xs font-medium text-accent hover:underline flex items-center gap-1">
               <span>Knowledge Base</span>
               <span>→</span>
             </a>
@@ -252,7 +252,7 @@ const pinnedProjects = pinnedProjectIds
             const { title, description, appStore, playStore, website } = project.data;
 
             return (
-              <div class="group relative rounded-xl border border-border/25 bg-muted/8 p-4 sm:p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-muted/12 hover:shadow-lg hover:shadow-accent/10 flex flex-col justify-between">
+              <div class="group relative rounded-xl border border-border/20 bg-muted/10 p-4 sm:p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-muted/10 hover:shadow-lg hover:shadow-accent/10 flex flex-col justify-between">
                 <div>
                   <!-- Card Header: Title & Badges -->
                   <div class="flex items-center justify-between gap-3 mb-2">
@@ -266,7 +266,7 @@ const pinnedProjects = pinnedProjectIds
                     {hasDocs && (
                       <a
                         href={`/progetti/${project.id}/docs/`}
-                        class="relative z-10 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/15 px-2.5 py-0.5 text-[10px] font-firacode font-semibold text-accent hover:bg-accent hover:text-white transition-all shadow-xs shrink-0"
+                        class="relative z-10 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/15 px-2.5 py-0.5 text-xs font-firacode font-semibold text-accent hover:bg-accent hover:text-background transition-all shadow-xs shrink-0"
                         title="Apri la documentazione"
                       >
                         <span>Docs</span>
@@ -276,20 +276,20 @@ const pinnedProjects = pinnedProjectIds
                   </div>
 
                   <!-- Description -->
-                  <p class="text-xs text-foreground/70 leading-relaxed line-clamp-2 mb-3.5 select-text">
+                  <p class="text-xs text-foreground/65 leading-relaxed line-clamp-2 mb-3.5 select-text">
                     {description}
                   </p>
                 </div>
 
                 <!-- Footer: Actions Row -->
-                <div class="pt-3 border-t border-border/15 flex items-center justify-between gap-2 relative z-10 text-xs">
+                <div class="pt-3 border-t border-border/20 flex items-center justify-between gap-2 relative z-10 text-xs">
                   <div class="flex items-center gap-1.5">
                     {appStore && (
                       <a
                         href={appStore}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/15 font-medium text-[11px] text-foreground/70 hover:border-accent/40 hover:text-accent transition-colors"
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/20 font-medium text-xs text-foreground/65 hover:border-accent/40 hover:text-accent transition-colors"
                         title="Vedi su App Store"
                       >
                         <svg class="size-3" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -301,7 +301,7 @@ const pinnedProjects = pinnedProjectIds
                         href={playStore}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/15 font-medium text-[11px] text-foreground/70 hover:border-accent/40 hover:text-accent transition-colors"
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/20 font-medium text-xs text-foreground/65 hover:border-accent/40 hover:text-accent transition-colors"
                         title="Vedi su Google Play"
                       >
                         <span>Play Store</span>
@@ -312,7 +312,7 @@ const pinnedProjects = pinnedProjectIds
                         href={website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/15 font-medium text-[11px] text-foreground/70 hover:border-accent/40 hover:text-accent transition-colors"
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border/30 bg-muted/20 font-medium text-xs text-foreground/65 hover:border-accent/40 hover:text-accent transition-colors"
                         title="Visita sito web"
                       >
                         <span>Web</span>
@@ -346,7 +346,7 @@ const pinnedProjects = pinnedProjectIds
             <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
               Documentazione & Wiki per ogni Progetto
             </h2>
-            <p class="mt-2 text-sm text-foreground/70 leading-relaxed">
+            <p class="mt-2 text-sm text-foreground/65 leading-relaxed">
               Esplora i manuali d'uso, le guide all'installazione, i dettagli sui formati supportati e le scorciatoie da tastiera per tutte le applicazioni e utility.
             </p>
           </div>

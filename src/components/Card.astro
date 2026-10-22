@@ -92,7 +92,7 @@ if (SITE.showCoverImages) {
 
     // Default posts styling
     !isGallery && !featured && [
-      "border-border/25 bg-muted/10",
+      "border-border/20 bg-muted/10",
       "hover:border-accent/40 hover:bg-accent/5 focus-within:border-accent/40 focus-within:bg-accent/5",
       "hover:shadow-accent/10 focus-within:shadow-accent/10",
     ],
@@ -100,7 +100,7 @@ if (SITE.showCoverImages) {
     // Featured generic posts styling
     !isGallery && featured && [
       "border-accent/40 bg-accent/8",
-      "hover:border-accent/60 hover:bg-accent/15 focus-within:border-accent/60 focus-within:bg-accent/15",
+      "hover:border-accent/40 hover:bg-accent/15 focus-within:border-accent/40 focus-within:bg-accent/15",
       "hover:shadow-accent/20 focus-within:shadow-accent/20",
       "shadow-[0_0_25px_-5px_color-mix(in_srgb,var(--accent)_20%,transparent)]",
     ],
@@ -191,10 +191,10 @@ if (SITE.showCoverImages) {
       </a>
       
       <!-- Meta row: date + reading time -->
-      <div class="relative z-20 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none text-xs text-foreground/60">
+      <div class="relative z-20 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 pointer-events-none text-xs text-foreground/65">
         <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} />
         {readingTime && (
-          <span class="flex items-center gap-1 text-xs text-foreground/60 whitespace-nowrap">
+          <span class="flex items-center gap-1 text-xs text-foreground/65 whitespace-nowrap">
             <IconClock class="size-3.5 shrink-0" aria-hidden="true" />
             {readingTime}
           </span>
@@ -203,14 +203,14 @@ if (SITE.showCoverImages) {
 
       <p
         id={descriptionId}
-        class="relative z-20 mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/75 pointer-events-auto select-text"
+        class="relative z-20 mt-3 line-clamp-3 text-sm leading-relaxed text-foreground/80 pointer-events-auto select-text"
       >
         {description}
       </p>
     </div>
 
     <!-- Tags & Arrow Row -->
-    <div class="relative z-20 mt-5 pt-3.5 border-t border-border/15 flex items-center justify-between gap-2 pointer-events-auto">
+    <div class="relative z-20 mt-5 pt-3.5 border-t border-border/20 flex items-center justify-between gap-2 pointer-events-auto">
       {SITE.showTagsInCards && tags.length > 0 ? (
         <ul class="flex flex-wrap gap-1.5">
           {tags.slice(0, 3).map((tag: string) => (
@@ -219,13 +219,13 @@ if (SITE.showCoverImages) {
                 href={`/tags/${slugifyStr(tag)}/`}
                 class:list={[
                   "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5",
-                  "text-[11px] font-medium font-firacode",
+                  "text-xs font-medium font-firacode",
                   "border transition-colors duration-200",
                   isGallery
                     ? "border-purple-500/25 bg-purple-500/8 text-purple-400/80 hover:border-purple-500/50 hover:bg-purple-500/15 hover:text-purple-400"
                     : featured
                       ? "border-amber-500/25 bg-amber-500/8 text-amber-500/80 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-500"
-                      : "border-border/30 bg-muted/15 text-foreground/60 hover:border-accent/40 hover:bg-accent/10 hover:text-accent",
+                      : "border-border/30 bg-muted/20 text-foreground/65 hover:border-accent/40 hover:bg-accent/10 hover:text-accent",
                 ]}
               >
                 <span aria-hidden="true" class="opacity-60">#</span>{tag}

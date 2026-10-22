@@ -24,7 +24,7 @@ const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
 
 <aside class="doc-sidebar w-full lg:w-64 shrink-0">
   <!-- Mobile toggle bar -->
-  <div class="lg:hidden mb-4 p-3 rounded-xl border border-border/20 bg-muted/5 flex items-center justify-between">
+  <div class="lg:hidden mb-4 p-3 rounded-xl border border-border/20 bg-muted/10 flex items-center justify-between">
     <div class="flex items-center gap-2 text-sm font-medium">
       <span class="size-2 rounded-full bg-accent animate-pulse"></span>
       <span>{projectName} Docs</span>
@@ -47,14 +47,14 @@ const docsLabel = lang === "en" ? "Documentation" : "Documentazione";
     <div class="pb-4 border-b border-border/20">
       <a
         href={backHref}
-        class="inline-flex items-center gap-1.5 text-xs text-foreground/70 hover:text-accent transition-colors font-medium mb-2.5"
+        class="inline-flex items-center gap-1.5 text-xs text-foreground/65 hover:text-accent transition-colors font-medium mb-2.5"
       >
         {backLabel}
       </a>
       <div class="flex items-center justify-between">
         <h2 class="text-lg font-bold tracking-tight text-foreground flex items-center gap-2">
           <span>{projectName}</span>
-          <span class="text-[10px] uppercase font-firacode px-1.5 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-semibold">
+          <span class="text-xs uppercase font-firacode px-1.5 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-semibold">
             Docs
           </span>
         </h2>

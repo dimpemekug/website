@@ -15,17 +15,17 @@ const label = lang === "en" ? "Table of Contents" : "Indice";
 {filtered.length > 1 && (
   <nav
     id="toc"
-    class="toc-nav mb-8 rounded-2xl border border-border/25 bg-muted/8 px-5 py-4 backdrop-blur-sm"
+    class="toc-nav mb-8 rounded-2xl border border-border/20 bg-muted/10 px-5 py-4 backdrop-blur-sm"
     data-pagefind-ignore
     aria-label={label}
   >
     <div class="toc-header mb-3 flex items-center justify-between">
-      <span class="font-firacode text-[11px] font-bold tracking-widest text-accent uppercase select-none">
+      <span class="font-firacode text-xs font-bold tracking-widest text-accent uppercase select-none">
         {label}
       </span>
       <button
         id="toc-toggle"
-        class="toc-toggle-btn ml-auto flex items-center gap-1 rounded-md px-2 py-0.5 font-firacode text-[10px] text-foreground/60 transition-colors hover:text-accent md:hidden"
+        class="toc-toggle-btn ml-auto flex items-center gap-1 rounded-md px-2 py-0.5 font-firacode text-xs text-foreground/65 transition-colors hover:text-accent md:hidden"
         aria-expanded="true"
         aria-controls="toc-list"
       >
@@ -46,7 +46,7 @@ const label = lang === "en" ? "Table of Contents" : "Indice";
             ]}
             data-toc-link
           >
-            <span class="toc-num mt-0.5 shrink-0 font-firacode text-[10px] text-accent/60 transition-colors duration-150 group-hover:text-accent">
+            <span class="toc-num mt-0.5 shrink-0 font-firacode text-xs text-accent/60 transition-colors duration-150 group-hover:text-accent">
               {String(i + 1).padStart(2, "0")}
             </span>
             <span class="toc-text">{h.text}</span>

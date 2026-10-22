@@ -42,20 +42,20 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
 
   <main id="main-content" class="app-layout pt-4 pb-20">
     <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero relative overflow-hidden rounded-3xl border border-border/25 bg-muted/8 p-8 sm:p-10 backdrop-blur-md mb-10">
+    <div class="page-hero relative overflow-hidden rounded-3xl border border-border/20 bg-muted/10 p-8 sm:p-10 backdrop-blur-md mb-10">
       <div class="pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-gradient-to-b from-accent/20 to-transparent blur-3xl opacity-70" aria-hidden="true"></div>
       <div class="relative z-10">
-        <div class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-firacode text-xs font-semibold text-accent mb-3.5">
+        <div class="badge mb-3.5">
           <span class="size-2 rounded-full bg-accent animate-pulse"></span>
           <span>KNOWLEDGE BASE & GUIDE UFFICIALI</span>
         </div>
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
           <span class="glow-text">Documentazione & Wiki</span>
         </h1>
-        <p class="text-sm sm:text-base text-foreground/70 leading-relaxed max-w-xl">
+        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
           Manuali d'uso, guide all'installazione, riferimenti per la privacy e scorciatoie da tastiera per tutti i software e i progetti.
         </p>
-        <div class="mt-5 pt-5 border-t border-border/15 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/60">
+        <div class="mt-5 pt-5 border-t border-border/20 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/65">
           <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
             <span class="size-1.5 rounded-full bg-accent"></span>
             <span>{projectsWithDocs.length} Progetti con Wiki</span>
@@ -71,25 +71,25 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
     <!-- Project Docs Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projectDocGroups.map(p => (
-        <div class="group relative rounded-2xl border border-border/25 bg-muted/5 p-6 hover:border-accent/40 hover:bg-muted/10 transition-all duration-200 flex flex-col justify-between">
+        <div class="group relative rounded-2xl border border-border/20 bg-muted/10 p-6 hover:border-accent/40 hover:bg-muted/10 transition-all duration-200 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
               <h2 class="text-2xl font-bold text-foreground group-hover:text-accent transition-colors">
                 {p.title}
               </h2>
-              <span class="text-xs font-firacode px-2 py-0.5 rounded-md border border-border/30 bg-muted/15 text-foreground/70">
+              <span class="text-xs font-firacode px-2 py-0.5 rounded-md border border-border/30 bg-muted/20 text-foreground/65">
                 {p.docsCount} {p.docsCount === 1 ? "guida" : "guide"}
               </span>
             </div>
 
             {p.description && (
-              <p class="text-sm text-foreground/70 line-clamp-3 mb-5 leading-relaxed">
+              <p class="text-sm text-foreground/65 line-clamp-3 mb-5 leading-relaxed">
                 {p.description}
               </p>
             )}
 
             <!-- Quick list of guides -->
-            <ul class="space-y-1.5 mb-6 text-xs text-foreground/60 border-t border-border/15 pt-4">
+            <ul class="space-y-1.5 mb-6 text-xs text-foreground/65 border-t border-border/20 pt-4">
               {p.docs.slice(0, 4).map(d => {
                 const docSlug = d.id === p.id || d.id === `${p.id}/index`
                   ? "index"
@@ -105,7 +105,7 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
                 );
               })}
               {p.docs.length > 4 && (
-                <li class="text-[11px] text-foreground/40 italic">
+                <li class="text-xs text-foreground/45 italic">
                   + altre {p.docs.length - 4} pagine...
                 </li>
               )}
@@ -115,7 +115,7 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
           <div class="flex items-center justify-between pt-4 border-t border-border/20">
             <a
               href={`/progetti/${p.id}/`}
-              class="text-xs text-foreground/50 hover:text-foreground transition-colors"
+              class="text-xs text-foreground/45 hover:text-foreground transition-colors"
             >
               Scheda app
             </a>

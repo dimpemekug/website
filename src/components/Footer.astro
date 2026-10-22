@@ -52,7 +52,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
           <span class="sr-only">{SITE.title}</span>
         </a>
         <p
-          class="max-w-xs text-center font-firacode text-[11px] leading-relaxed tracking-wide text-foreground/55 sm:text-start"
+          class="max-w-xs text-center font-firacode text-xs leading-relaxed tracking-wide text-foreground/65 sm:text-start"
         >
           {t("footer.tagline")}
         </p>
@@ -62,7 +62,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
       <nav class="flex flex-col items-center gap-3 sm:items-end" aria-labelledby={socialHeadingId}>
         <p
           id={socialHeadingId}
-          class="font-firacode text-[10px] tracking-wider text-foreground/55 uppercase select-none"
+          class="font-firacode text-xs tracking-wider text-foreground/65 uppercase select-none"
           >{t("footer.connect")}</p
         >
         <ul class="flex items-center gap-2" role="list">
@@ -98,14 +98,14 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     <div
       class="mt-4 flex flex-col items-center justify-between gap-2 sm:flex-row"
     >
-      <p class="font-firacode text-[11px] tracking-wide text-foreground/50">
+      <p class="font-firacode text-xs tracking-wide text-foreground/45">
         &copy; {currentYear}
         {SITE.title}. {t("footer.rights")}
       </p>
       <a
         href="/rss.xml"
         target="_blank"
-        class="group flex items-center gap-1.5 font-firacode text-[11px] tracking-wide text-foreground/45 transition-colors duration-300 hover:text-accent"
+        class="group flex items-center gap-1.5 font-firacode text-xs tracking-wide text-foreground/45 transition-colors duration-300 hover:text-accent"
         aria-label={t("footer.rss")}
         title={t("footer.rss")}
       >

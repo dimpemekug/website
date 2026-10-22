@@ -62,6 +62,13 @@ html[data-theme="dark"] {
 }
 
 @layer base {
+  /* `.app-prose` è il testo di articoli, pagine progetto e privacy: prende spaziature e
+     dimensioni dal plugin di tipografia. Senza questa riga (persa il 2026-10-18) quelle pagine
+     restavano con paragrafi attaccati e titoli grandi quanto il testo. */
+  .app-prose {
+    @apply prose;
+  }
+
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose,
   .prose {

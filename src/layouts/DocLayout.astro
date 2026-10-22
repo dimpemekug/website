@@ -100,7 +100,7 @@ const docStructuredData = {
             <span class="text-xs font-firacode px-2 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-medium">
               {projectName}
             </span>
-            <span class="text-xs text-foreground/60 font-firacode">
+            <span class="text-xs text-foreground/65 font-firacode">
               / docs / {currentSlug}
             </span>
           </div>
@@ -110,7 +110,7 @@ const docStructuredData = {
           </h1>
 
           {description && (
-            <p class="mt-3 text-base sm:text-lg text-foreground/85 leading-relaxed">
+            <p class="mt-3 text-base sm:text-lg text-foreground/80 leading-relaxed">
               {description}
             </p>
           )}
@@ -124,7 +124,7 @@ const docStructuredData = {
         )}
 
         <!-- Article Prose Content -->
-        <div class="app-prose prose prose-base max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-strong:text-foreground prose-code:text-foreground prose-a:text-accent hover:prose-a:underline prose-code:rounded prose-code:bg-muted/20 prose-code:border prose-code:border-border/40 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-firacode prose-pre:border prose-pre:border-border/30 prose-table:border-collapse prose-th:border-b prose-th:border-border/30 prose-td:border-b prose-td:border-border/15">
+        <div class="app-prose max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-strong:text-foreground prose-code:text-foreground prose-code:rounded prose-code:bg-muted/20 prose-code:border prose-code:border-border/30 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-firacode prose-pre:border prose-pre:border-border/30 prose-table:border-collapse prose-th:border-b prose-th:border-border/30 prose-td:border-b prose-td:border-border/20">
           <slot />
         </div>
 
@@ -133,9 +133,9 @@ const docStructuredData = {
           {prevDoc ? (
             <a
               href={formatDocHref(prevDoc.slug)}
-              class="group flex flex-col p-4 rounded-xl border border-border/20 bg-muted/5 hover:bg-muted/15 hover:border-accent/40 transition-all"
+              class="group flex flex-col p-4 rounded-xl border border-border/20 bg-muted/10 hover:bg-muted/20 hover:border-accent/40 transition-all"
             >
-              <span class="text-xs text-foreground/70 font-firacode mb-1">
+              <span class="text-xs text-foreground/65 font-firacode mb-1">
                 {lang === "en" ? "← Previous" : "← Precedente"}
               </span>
               <span class="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
@@ -147,9 +147,9 @@ const docStructuredData = {
           {nextDoc ? (
             <a
               href={formatDocHref(nextDoc.slug)}
-              class="group flex flex-col items-end text-right p-4 rounded-xl border border-border/20 bg-muted/5 hover:bg-muted/15 hover:border-accent/40 transition-all sm:col-start-2"
+              class="group flex flex-col items-end text-right p-4 rounded-xl border border-border/20 bg-muted/10 hover:bg-muted/20 hover:border-accent/40 transition-all sm:col-start-2"
             >
-              <span class="text-xs text-foreground/70 font-firacode mb-1">
+              <span class="text-xs text-foreground/65 font-firacode mb-1">
                 {lang === "en" ? "Next →" : "Successivo →"}
               </span>
               <span class="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
@@ -164,7 +164,7 @@ const docStructuredData = {
       {hasToc && (
         <aside class="hidden xl:block">
           <div class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-4 border-l border-border/20 scrollbar-thin">
-            <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/60 font-firacode mb-3">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-foreground/65 font-firacode mb-3">
               {lang === "en" ? "On this page" : "In questa pagina"}
             </h3>
             <ul class="space-y-1 text-xs">
@@ -174,7 +174,7 @@ const docStructuredData = {
                   <li class:list={[{ "pl-3": h.depth === 3 }]}>
                     <a
                       href={`#${h.slug}`}
-                      class="block py-1 text-foreground/75 hover:text-accent transition-colors truncate"
+                      class="block py-1 text-foreground/80 hover:text-accent transition-colors truncate"
                     >
                       {h.text}
                     </a>
