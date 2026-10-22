@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import { SITE } from "@/config";
 
 const allDocs = await getCollection("docs", ({ data }) => !data.draft);
@@ -40,33 +41,20 @@ const projectDocGroups = projectsWithDocs.map(projectId => {
   <Header />
   <Breadcrumb />
 
-  <main id="main-content" class="app-layout pt-4 pb-20">
-    <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero relative overflow-hidden rounded-3xl border border-border/20 bg-muted/10 p-8 sm:p-10 backdrop-blur-md mb-10">
-      <div class="pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-gradient-to-b from-accent/20 to-transparent blur-3xl opacity-70" aria-hidden="true"></div>
-      <div class="relative z-10">
-        <div class="badge mb-3.5">
-          <span class="size-2 rounded-full bg-accent animate-pulse"></span>
-          <span>KNOWLEDGE BASE & GUIDE UFFICIALI</span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
-          <span class="glow-text">Documentazione & Wiki</span>
-        </h1>
-        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
-          Manuali d'uso, guide all'installazione, riferimenti per la privacy e scorciatoie da tastiera per tutti i software e i progetti.
-        </p>
-        <div class="mt-5 pt-5 border-t border-border/20 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/65">
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-            <span class="size-1.5 rounded-full bg-accent"></span>
-            <span>{projectsWithDocs.length} Progetti con Wiki</span>
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-            <span class="size-1.5 rounded-full bg-emerald-400"></span>
-            <span>{allDocs.length} Articoli & Guide</span>
-          </span>
-        </div>
-      </div>
-    </div>
+  <main id="main-content" class="app-layout pb-20">
+    <PageHero variant="list" eyebrow="KNOWLEDGE BASE & GUIDE UFFICIALI" title="Documentazione & Wiki">
+      <Fragment slot="description">Manuali d'uso, guide all'installazione, riferimenti per la privacy e scorciatoie da tastiera per tutti i software e i progetti.</Fragment>
+      <Fragment slot="stats">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
+          <span class="size-1.5 rounded-full bg-accent"></span>
+          <span>{projectsWithDocs.length} Progetti con Wiki</span>
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
+          <span class="size-1.5 rounded-full bg-emerald-400"></span>
+          <span>{allDocs.length} Articoli & Guide</span>
+        </span>
+      </Fragment>
+    </PageHero>
 
     <!-- Project Docs Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

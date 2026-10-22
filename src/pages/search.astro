@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import { SITE } from "@/config";
 import { useTranslations } from "@/i18n/utils";
 
@@ -15,22 +16,9 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">
-    <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero" data-page-hero>
-      <div class="aurora-mouse" data-hero-mouse></div>
-      <div class="relative z-10 max-w-2xl">
-        <div class="badge mb-3.5">
-          <span class="size-2 rounded-full bg-accent animate-pulse"></span>
-          <span>MOTORE DI RICERCA</span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
-          <span class="glow-text">{t("search.title")}</span>
-        </h1>
-        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
-          {t("search.description")}
-        </p>
-      </div>
-    </div>
+    <PageHero variant="list" eyebrow="MOTORE DI RICERCA" title={t("search.title")}>
+      <Fragment slot="description">{t("search.description")}</Fragment>
+    </PageHero>
 
     <!-- Search container -->
     <div class="search-container" data-search-card>

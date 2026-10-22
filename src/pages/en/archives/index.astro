@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import IconGallery from "@/assets/icons/IconGallery.svg";
 import { getEntryPath } from "@/utils/contentEntry";
 import { slugifyStr } from "@/utils/slugify";
@@ -42,31 +43,18 @@ const yearGroups = Object.entries(
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">
-    <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero" data-page-hero>
-      <div class="aurora-mouse" data-hero-mouse></div>
-      <div class="relative z-10 max-w-2xl">
-        <div class="badge mb-3.5">
-          <span class="size-2 rounded-full bg-accent animate-pulse"></span>
-          <span>CHRONOLOGICAL ARCHIVE</span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
-          <span class="glow-text">{t("archives.title")}</span>
-        </h1>
-        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
-          {t("archives.description")}
-        </p>
-        <div class="mt-5 pt-5 border-t border-border/20 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/65">
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-            <span class="size-1.5 rounded-full bg-accent"></span>
-            <span>{totalPosts} Total Articles</span>
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-            <span>{yearGroups.length} {yearGroups.length === 1 ? t("archives.year") : t("archives.years")} recorded</span>
-          </span>
-        </div>
-      </div>
-    </div>
+    <PageHero variant="list" eyebrow="CHRONOLOGICAL ARCHIVE" title={t("archives.title")}>
+      <Fragment slot="description">{t("archives.description")}</Fragment>
+      <Fragment slot="stats">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
+          <span class="size-1.5 rounded-full bg-accent"></span>
+          <span>{totalPosts} Total Articles</span>
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
+          <span>{yearGroups.length} {yearGroups.length === 1 ? t("archives.year") : t("archives.years")} recorded</span>
+        </span>
+      </Fragment>
+    </PageHero>
 
     <!-- Timeline -->
     <div class="timeline">

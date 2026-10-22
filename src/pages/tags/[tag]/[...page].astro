@@ -5,6 +5,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
@@ -54,33 +55,21 @@ const nextURL = page.url.next ? new URL(page.url.next, SITE.website).toString() 
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">
 
-    <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero" data-page-hero>
-      <div class="aurora-mouse" data-hero-mouse></div>
-      <div class="relative z-10 max-w-2xl">
-        <div class="badge mb-3.5">
-          <span class="size-2 rounded-full bg-accent animate-pulse"></span>
-          <span>TAG DEL BLOG</span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
-          <span class="glow-text" transition:name={tag}>#{tagName}</span>
-        </h1>
-        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
-          Tutti gli articoli e approfondimenti pubblicati con il tag #{tagName}.
-        </p>
-        <div class="mt-5 pt-5 border-t border-border/20 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/65">
+    <PageHero variant="list" eyebrow="TAG DEL BLOG" transitionName={tag}>
+      <Fragment slot="title">#{tagName}</Fragment>
+      <Fragment slot="description">Tutti gli articoli e approfondimenti pubblicati con il tag #{tagName}.</Fragment>
+      <Fragment slot="stats">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
+          <span class="size-1.5 rounded-full bg-accent"></span>
+          <span>{page.total} {page.total === 1 ? "articolo" : "articoli"}</span>
+        </span>
+        {page.lastPage > 1 && (
           <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-            <span class="size-1.5 rounded-full bg-accent"></span>
-            <span>{page.total} {page.total === 1 ? "articolo" : "articoli"}</span>
+            <span>Pagina {page.currentPage}/{page.lastPage}</span>
           </span>
-          {page.lastPage > 1 && (
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border/30 bg-muted/20">
-              <span>Pagina {page.currentPage}/{page.lastPage}</span>
-            </span>
-          )}
-        </div>
-      </div>
-    </div>
+        )}
+      </Fragment>
+    </PageHero>
 
     <!-- Posts -->
     {page.data.length === 0 ? (

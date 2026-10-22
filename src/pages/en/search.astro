@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import { SITE } from "@/config";
 ---
 
@@ -11,22 +12,9 @@ import { SITE } from "@/config";
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">
-    <!-- Hero (Linear Modern Glass) -->
-    <div class="page-hero" data-page-hero>
-      <div class="aurora-mouse" data-hero-mouse></div>
-      <div class="relative z-10 max-w-2xl">
-        <div class="badge mb-3.5">
-          <span class="size-2 rounded-full bg-accent animate-pulse"></span>
-          <span>FULL-TEXT SEARCH</span>
-        </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
-          <span class="glow-text">Search</span>
-        </h1>
-        <p class="text-sm sm:text-base text-foreground/65 leading-relaxed max-w-xl">
-          Find any article, technical tutorial, or project note on the blog.
-        </p>
-      </div>
-    </div>
+    <PageHero variant="list" eyebrow="FULL-TEXT SEARCH" title="Search">
+      <Fragment slot="description">Find any article, technical tutorial, or project note on the blog.</Fragment>
+    </PageHero>
     <div id="search" class="premium-search mt-4"></div>
   </main>
   <Footer />

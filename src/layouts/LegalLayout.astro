@@ -1,23 +1,51 @@
 ---
 import type { MarkdownLayoutProps } from "astro";
+import { getCollection } from "astro:content";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import PageHero from "@/components/PageHero.astro";
 import Layout from "./Layout.astro";
 import { SITE } from "@/config";
 
 type Props = MarkdownLayoutProps<{ title: string; description?: string }>;
 
 const { frontmatter } = Astro.props;
+
+// Le privacy stanno in /progetti/<slug>/privacy/ e /en/projects/<slug>/privacy/: l'intestazione
+// riprende quella delle documentazioni, con il nome dell'app e un link alla sua pagina.
+const match = Astro.url.pathname.match(/^\/(en\/projects|progetti)\/([^/]+)\//);
+const isEn = match?.[1] === "en/projects";
+const slug = match?.[2];
+const projects = slug ? await getCollection(isEn ? "projectsEn" : "projects") : [];
+const project = projects.find(p => p.id === slug);
+const projectHref = slug ? (isEn ? `/en/projects/${slug}/` : `/progetti/${slug}/`) : undefined;
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`} description={frontmatter.description}>
   <Header />
   <Breadcrumb />
-  <main id="main-content" class="app-layout mt-8 pb-12">
-    <article class="app-prose mx-auto max-w-app">
-      <slot />
-    </article>
+  <main id="main-content" class="app-layout pb-12">
+    <div class="mx-auto max-w-app">
+      <PageHero variant="plain" title={frontmatter.title}>
+        {project && (
+          <Fragment slot="before">
+            <a
+              href={projectHref}
+              class="text-xs font-firacode px-2 py-0.5 rounded-md border border-accent/30 bg-accent/10 text-accent font-medium hover:bg-accent/15"
+            >
+              {project.data.title}
+            </a>
+            <span class="text-xs text-foreground/65 font-firacode">/ privacy</span>
+          </Fragment>
+        )}
+        {frontmatter.description && <Fragment slot="description">{frontmatter.description}</Fragment>}
+      </PageHero>
+
+      <article class="app-prose max-w-app">
+        <slot />
+      </article>
+    </div>
   </main>
   <Footer />
 </Layout>

@@ -1,0 +1,180 @@
+---
+/**
+ * PageHero — l'intestazione di ogni pagina, in quattro varianti:
+ *
+ * - `landing`: home e Chi sono. Aperta, senza riquadro: etichetta, titolo grande con sfumatura
+ *   (slot `title`), contenuto libero (slot predefinito), riga di punti salienti (slot `stats`),
+ *   altro contenuto sotto (slot `footer`) e colonna facoltativa a destra (slot `aside`).
+ *   `class` sostituisce lo spazio sopra e sotto (predefinito `pb-14`).
+ * - `list`: pagine elenco (Articoli, Progetti, Docs, Archivio, Tag, Cerca…). Riquadro allineato a
+ *   sinistra: etichetta, titolo, descrizione (slot `description`) e pillole (slot `stats`).
+ * - `detail`: articolo e pagina progetto. Stesso riquadro di `list`, centrato; sotto il titolo il
+ *   contenuto libero (tag, metadati, pulsanti).
+ * - `plain`: documentazioni e privacy. Senza riquadro: percorso (slot `before`), titolo e descrizione.
+ *
+ * Scala dei titoli: `landing` 36/60/72 px (home) o 36/48/60 px (`size="md"`, Chi sono); `list` e
+ * `detail` 30/48 px; `plain` 30/36 px. Lo spazio sotto è sempre 40 px (32 px per `plain`).
+ */
+type Props = {
+  variant: "landing" | "list" | "detail" | "plain";
+  /** Testo dell'etichetta sopra il titolo (landing, list). */
+  eyebrow?: string;
+  /** Titolo come testo; in alternativa lo slot `title`. */
+  title?: string;
+  /** Nome per le transizioni di pagina, sul titolo. */
+  transitionName?: string;
+  /** Solo `landing`: dimensione del titolo. */
+  size?: "lg" | "md";
+  class?: string;
+};
+
+const { variant, eyebrow, title, transitionName, size = "lg", class: className } = Astro.props;
+const hasAside = Astro.slots.has("aside");
+const hasStats = Astro.slots.has("stats");
+const hasDescription = Astro.slots.has("description");
+---
+
+{variant === "landing" && (
+  <section class:list={["relative overflow-x-clip", className ?? "pb-14"]}>
+    <div class="page-hero-landing-glow" aria-hidden="true"></div>
+    <div class:list={["relative z-10", hasAside ? "grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start" : "max-w-3xl"]}>
+      <div>
+        {eyebrow && (
+          <div class="badge mb-4 backdrop-blur-md">
+            <span class="relative flex size-2">
+              <span class="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:animate-none"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-accent"></span>
+            </span>
+            <span>{eyebrow}</span>
+          </div>
+        )}
+        <h1
+          class:list={[
+            "hero-title font-extrabold tracking-tight text-foreground mb-4",
+            size === "lg" ? "text-4xl sm:text-6xl xl:text-7xl leading-[1.08]" : "text-4xl sm:text-5xl lg:text-6xl leading-[1.1]",
+          ]}
+        >
+          {title ?? <slot name="title" />}
+        </h1>
+        <slot />
+        {hasStats && (
+          <div class="mt-8 pt-6 border-t border-border/20 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-foreground/65 font-firacode">
+            <slot name="stats" />
+          </div>
+        )}
+        <slot name="footer" />
+      </div>
+      {hasAside && <slot name="aside" />}
+    </div>
+  </section>
+)}
+
+{(variant === "list" || variant === "detail") && (
+  <header
+    class:list={["page-hero", variant === "detail" && "text-center", className]}
+    data-page-hero
+  >
+    <div class="aurora-mouse" data-hero-mouse></div>
+    <div class:list={["relative z-10", variant === "list" ? "max-w-2xl" : "mx-auto max-w-3xl"]}>
+      {eyebrow && (
+        <div class="badge mb-3.5">
+          <span class="size-2 rounded-full bg-accent animate-pulse motion-reduce:animate-none"></span>
+          <span>{eyebrow}</span>
+        </div>
+      )}
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-3">
+        {transitionName ? (
+          <span class="glow-text" transition:name={transitionName}>{title ?? <slot name="title" />}</span>
+        ) : (
+          <span class="glow-text">{title ?? <slot name="title" />}</span>
+        )}
+      </h1>
+      {hasDescription && (
+        <p class:list={["text-sm sm:text-base text-foreground/65 leading-relaxed", variant === "list" ? "max-w-xl" : "mx-auto max-w-2xl"]}>
+          <slot name="description" />
+        </p>
+      )}
+      {hasStats && (
+        <div class="mt-5 pt-5 border-t border-border/20 flex flex-wrap items-center gap-3 text-xs font-firacode text-foreground/65">
+          <slot name="stats" />
+        </div>
+      )}
+      <slot />
+    </div>
+  </header>
+)}
+
+{variant === "plain" && (
+  <header class:list={["mb-8 pb-6 border-b border-border/20", className]}>
+    {Astro.slots.has("before") && (
+      <div class="inline-flex items-center gap-2 mb-3">
+        <slot name="before" />
+      </div>
+    )}
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+      {title ?? <slot name="title" />}
+    </h1>
+    {hasDescription && (
+      <p class="mt-3 text-base sm:text-lg text-foreground/80 leading-relaxed">
+        <slot name="description" />
+      </p>
+    )}
+    <slot />
+  </header>
+)}
+
+<style>
+  /* Alone radiale, largo al massimo quanto la sezione: si spegne prima dei bordi laterali e
+     sopra sconfina (la sezione taglia solo in orizzontale), così non si vede nessun taglio netto. */
+  .page-hero-landing-glow {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    width: min(700px, calc(100% - 5rem));
+    height: 360px;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      ellipse at top,
+      color-mix(in srgb, var(--accent) 22%, transparent),
+      transparent 70%
+    );
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  /* Riflesso che scorre sul titolo della variante landing. */
+  .hero-title {
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      color-mix(in oklab, var(--accent) 50%, var(--foreground)) 20%,
+      var(--foreground) 35%,
+      var(--foreground) 65%,
+      color-mix(in oklab, var(--accent) 50%, var(--foreground)) 80%,
+      var(--accent) 100%
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hero-shimmer 6s ease-in-out infinite;
+  }
+
+  @keyframes hero-shimmer {
+    0%,
+    100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-title {
+      animation: none;
+      background: none;
+      -webkit-text-fill-color: var(--foreground);
+    }
+  }
+</style>
