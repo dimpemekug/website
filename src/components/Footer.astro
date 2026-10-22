@@ -144,6 +144,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
         <ul class="footer-list" role="list">
           {resourceLinks.map(link => <li><a href={link.href} class="footer-link">{link.label}</a></li>)}
           <li><a href="/rss.xml" target="_blank" class="footer-link">{t("footer.rss")}</a></li>
+          <li><a href={localePath(lang, "/privacy")} class="footer-link">{t("footer.privacy")}</a></li>
         </ul>
       </nav>
     </div>
