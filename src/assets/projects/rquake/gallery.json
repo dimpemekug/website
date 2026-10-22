@@ -1,0 +1,40 @@
+{
+  "captions": {
+    "01-list": {
+      "it": "Elenco con l'ultimo evento in primo piano e le sequenze in corso",
+      "en": "List with the latest event at the top and the ongoing sequences"
+    },
+    "02-detail": {
+      "it": "Scheda di un terremoto: ora locale e UTC, profondità, magnitudo e coordinate",
+      "en": "Earthquake details: local and UTC time, depth, magnitude and coordinates"
+    },
+    "03-intensity": {
+      "it": "Intensità stimata nei luoghi salvati, altre fonti ed eventi entro 50 km",
+      "en": "Estimated intensity at saved places, other sources and events within 50 km"
+    },
+    "04-sequence": {
+      "it": "La sequenza dell'Italia centrale 2016 con mappa e magnitudo nel tempo",
+      "en": "The 2016 Central Italy sequence with map and magnitude over time"
+    },
+    "05-map": {
+      "it": "Mappa dell'Italia con gli epicentri colorati per magnitudo e raggruppati",
+      "en": "Map of Italy with epicentres coloured by magnitude and grouped together"
+    },
+    "06-faults": {
+      "it": "Faglie attive e confini delle placche sulla mappa, con la legenda per tipo",
+      "en": "Active faults and plate boundaries on the map, with a legend by type"
+    },
+    "07-world": {
+      "it": "Area Mondo con il tema scuro e le sequenze in corso nel mondo",
+      "en": "World area in dark mode with the ongoing sequences worldwide"
+    },
+    "08-stats": {
+      "it": "Statistiche del periodo: totali, medie e grafico degli eventi al giorno",
+      "en": "Statistics for the period: totals, averages and a chart of events per day"
+    },
+    "09-settings": {
+      "it": "Impostazioni con area, magnitudo, periodo, luoghi salvati e avvisi",
+      "en": "Settings with area, magnitude, period, saved places and alerts"
+    }
+  }
+}
