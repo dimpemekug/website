@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
 import Datetime from "./Datetime.astro";
+import ProjectIcon from "./ProjectIcon.astro";
 import StoreStatus from "./StoreStatus.astro";
 
 type Props = {
@@ -48,7 +49,9 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
 >
   <div class="relative z-5 p-4 sm:p-5">
     <div class="flex items-center justify-between gap-2">
-      <a
+      <div class="flex min-w-0 items-center gap-3">
+        <ProjectIcon id={project.id} />
+        <a
         href={href}
         class="text-lg font-semibold text-foreground transition-colors duration-200 group-hover/card:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
         aria-labelledby={headingId}
@@ -56,7 +59,8 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
       >
         <h2 id={headingId}>{title}</h2>
         <span class="absolute -inset-4 sm:-inset-5 z-10" aria-hidden="true"></span>
-      </a>
+        </a>
+      </div>
 
       {hasDocs && (
         <a

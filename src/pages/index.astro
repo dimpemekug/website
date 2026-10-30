@@ -1,4 +1,5 @@
 ---
+import ProjectIcon from "@/components/ProjectIcon.astro";
 import StoreStatus from "@/components/StoreStatus.astro";
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
@@ -228,12 +229,15 @@ const pinnedProjects = pinnedProjectIds
                 <div>
                   <!-- Card Header: Title & Badges -->
                   <div class="flex items-center justify-between gap-3 mb-2">
+                    <div class="flex min-w-0 items-center gap-3">
+                      <ProjectIcon id={project.id} />
                     <h3 class="text-base sm:text-lg font-bold tracking-tight text-foreground group-hover:text-accent transition-colors">
                       <a href={`/progetti/${project.id}/`} class="focus-visible:outline-none">
                         <span class="absolute inset-0 rounded-xl z-0" aria-hidden="true"></span>
                         {title}
                       </a>
                     </h3>
+                    </div>
 
                     {hasDocs && (
                       <a

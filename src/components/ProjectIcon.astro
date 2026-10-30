@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+const icons = import.meta.glob<{ default: ImageMetadata }>("/src/assets/projects/*/icon{,-dark}.webp");
+const light = icons[`/src/assets/projects/${id}/icon.webp`];
+const dark = icons[`/src/assets/projects/${id}/icon-dark.webp`];
+const size = "size-10 shrink-0 rounded-[22%]";
+---
+
+{light && dark && (
+  <>
+    <Image src={(await light()).default} alt="" width={40} height={40} densities={[1, 2]} class:list={[size, "dark:hidden"]} />
+    <Image src={(await dark()).default} alt="" width={40} height={40} densities={[1, 2]} class:list={[size, "hidden dark:block"]} />
+  </>
+)}
