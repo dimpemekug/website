@@ -4,6 +4,7 @@ description: "App per iPhone e iPad che mostra i terremoti in Italia (INGV) e ne
 pubDatetime: 2026-10-22T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "terremoti", "privacy"]
+appStore: "https://apps.apple.com/app/rquake/id6825829743"
 privacyDataTypes: "i filtri delle ricerche inviati alle fonti dei dati, la posizione (facoltativa), i luoghi salvati e le preferenze dell'app"
 privacyStorageNote: "Posizione, luoghi salvati e preferenze restano sul dispositivo e non arrivano mai allo sviluppatore. Per cercare gli eventi vicini le coordinate vengono inviate alla fonte dei dati (INGV, USGS, EMSC o GFZ GEOFON) arrotondate a circa 1 km; non ci sono account, analytics né tracciamento."
 privacyUpdatedAt: "20 ottobre 2026"

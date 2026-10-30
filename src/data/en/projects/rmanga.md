@@ -4,6 +4,7 @@ description: "Reader for iPhone and iPad for manga, comics, books, and animated 
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "reading", "privacy"]
+storeStatus: "testing"
 privacyDataTypes: "your library with progress, bookmarks, and highlights, the files you import, downloaded chapters and episodes, the sources and extensions you install, your personal servers (with credentials in the Keychain), and the app's preferences"
 privacyStorageNote: "Your library and progress stay on your device and, only if you turn on sync, in your private iCloud. The app only connects to the sources, servers, and services you add or use."
 privacyUpdatedAt: "October 13, 2026"

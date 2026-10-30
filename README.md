@@ -40,7 +40,7 @@ I principi guida del progetto e del software ospitato sono:
 
 - **Blog (`/posts`, `/en/posts`)**: riflessioni, note tecniche e articoli di approfondimento su intelligenza artificiale, modelli on-device, cybersecurity, architetture local-first, sviluppo Apple e tendenze tecnologiche.
 - **Progetti (`/progetti`, `/en/projects`)**: vetrina di tutte le applicazioni native e dei progetti web realizzati, con badge di disponibilità su App Store e Google Play Store, collegamenti alla documentazione e schede informative sulla privacy dedicate per ciascuna app (`/progetti/<app>/privacy/`).
-- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **rZip**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **rManga**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
+- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **Archiva**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **rManga**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
 - **Chi sono (`/about`, `/en/about`)**: panoramica del profilo dello sviluppatore, tecnologie impiegate (Swift, SwiftUI, Flutter, Dart, Astro, PHP) e canali di contatto.
 - **Archivio cronologico (`/archives`, `/en/archives`)**: indice temporale di tutti gli articoli pubblicati raggruppati per anno.
 - **Esplorazione per Tag (`/tags`, `/en/tags`)**: navigazione trasversale per argomenti e parole chiave con conteggio e paginazione.
@@ -56,7 +56,7 @@ Il sito documenta e ospita le schede ufficiali delle seguenti applicazioni:
 | Applicazione                                          | Piattaforme        | Descrizione sintetica                                                                                                     | Docs |
 | ----------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- | :--: |
 | **[rExif](src/data/projects/rexif.md)**               | macOS              | Editor batch di metadati EXIF, IPTC, coordinate GPS e date per foto e video con anteprima in tempo reale.                 |  ✅  |
-| **[rZip](src/data/projects/rzip.md)**                 | macOS              | Ispezione, estrazione e creazione di archivi compressi (ZIP, RAR, 7z) anche protetti o multi-volume.                      |  ✅  |
+| **[Archiva](src/data/projects/archiva.md)**                 | macOS              | Ispezione, estrazione e creazione di archivi compressi (ZIP, RAR, 7z) anche protetti o multi-volume.                      |  ✅  |
 | **[rName](src/data/projects/rname.md)**               | macOS              | Ridenominazione in blocco di file e cartelle combinando regole modulari, anteprima dal vivo e storico annullamenti.       |  ✅  |
 | **[rMux](src/data/projects/rmux.md)**                 | macOS              | Taglio, ritaglio, conversione e unione video senza ricodifica (stream copy via FFmpeg), gestione audio e sottotitoli.     |  ✅  |
 | **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di immagini, conversione da formato HEIC e rimozione automatica dei metadati sensibili.           |  ✅  |

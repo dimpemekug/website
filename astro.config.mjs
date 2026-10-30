@@ -54,12 +54,31 @@ export default defineConfig({
     }),
   ],
 
-  // The project was published as "remuxly" before it was renamed to rMux
+  // The project was published as "remuxly" before it was renamed to rMux,
+  // and as "rzip" before it was renamed to Archiva
   redirects: {
     "/progetti/remuxly": "/progetti/rmux/",
     "/progetti/remuxly/privacy": "/progetti/rmux/privacy/",
     "/en/projects/remuxly": "/en/projects/rmux/",
     "/en/projects/remuxly/privacy": "/en/projects/rmux/privacy/",
+    "/progetti/rzip": "/progetti/archiva/",
+    "/progetti/rzip/privacy": "/progetti/archiva/privacy/",
+    "/en/projects/rzip": "/en/projects/archiva/",
+    "/en/projects/rzip/privacy": "/en/projects/archiva/privacy/",
+    "/progetti/rzip/docs/archivi-protetti": "/progetti/archiva/docs/archivi-protetti/",
+    "/progetti/rzip/docs/creazione-modifica": "/progetti/archiva/docs/creazione-modifica/",
+    "/progetti/rzip/docs/formati-supportati": "/progetti/archiva/docs/formati-supportati/",
+    "/progetti/rzip/docs/gestione-archivi": "/progetti/archiva/docs/gestione-archivi/",
+    "/progetti/rzip/docs": "/progetti/archiva/docs/",
+    "/progetti/rzip/docs/installazione": "/progetti/archiva/docs/installazione/",
+    "/progetti/rzip/docs/scorciatoie": "/progetti/archiva/docs/scorciatoie/",
+    "/en/projects/rzip/docs/archive-management": "/en/projects/archiva/docs/archive-management/",
+    "/en/projects/rzip/docs/creation-and-editing": "/en/projects/archiva/docs/creation-and-editing/",
+    "/en/projects/rzip/docs/encrypted-archives": "/en/projects/archiva/docs/encrypted-archives/",
+    "/en/projects/rzip/docs": "/en/projects/archiva/docs/",
+    "/en/projects/rzip/docs/installation": "/en/projects/archiva/docs/installation/",
+    "/en/projects/rzip/docs/shortcuts": "/en/projects/archiva/docs/shortcuts/",
+    "/en/projects/rzip/docs/supported-formats": "/en/projects/archiva/docs/supported-formats/",
   },
 
   i18n: {

@@ -57,6 +57,7 @@ const projectSchema = z.object({
   tags: z.array(z.string()).default([]),
   appStore: z.url().optional(),
   playStore: z.url().optional(),
+  storeStatus: z.enum(["testing", "coming-soon"]).optional(),
   website: z.url().optional(),
   privacyDataTypes: z.string().optional(),
   privacyStorageNote: z.string().optional(),

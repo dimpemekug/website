@@ -43,6 +43,8 @@ export const ui = {
     "projects.app_store": "App Store",
     "projects.play_store": "Google Play",
     "projects.website": "Sito web",
+    "projects.status.testing": "In fase di test",
+    "projects.status.coming-soon": "In arrivo",
     "projects.empty": "Nessun progetto ancora. Presto in arrivo.",
     // About
     "about.title": "Chi sono",
@@ -144,6 +146,8 @@ export const ui = {
     "projects.app_store": "App Store",
     "projects.play_store": "Google Play",
     "projects.website": "Website",
+    "projects.status.testing": "In testing",
+    "projects.status.coming-soon": "Coming soon",
     "projects.empty": "No projects yet. Coming soon.",
     // About
     "about.title": "About",

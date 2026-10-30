@@ -1,4 +1,5 @@
 ---
+import StoreStatus from "@/components/StoreStatus.astro";
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
@@ -38,7 +39,7 @@ const latestProjects = [...allProjects]
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime())
   .slice(0, 4);
 
-const pinnedProjectIds = ["rzip", "rexif", "codevault", "rmux", "netcalc", "resizo"];
+const pinnedProjectIds = ["archiva", "rexif", "codevault", "rmux", "netcalc", "resizo"];
 const pinnedProjects = pinnedProjectIds
   .map(id => allProjects.find(project => project.id === id))
   .filter((project): project is (typeof allProjects)[number] => Boolean(project));
@@ -220,7 +221,7 @@ const pinnedProjects = pinnedProjectIds
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {pinnedProjects.map(project => {
             const hasDocs = projectsWithDocsSet.has(project.id);
-            const { title, description, appStore, playStore, website } = project.data;
+            const { title, description, appStore, playStore, storeStatus, website } = project.data;
 
             return (
               <div class="group relative rounded-xl border border-border/20 bg-muted/10 p-4 sm:p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-muted/10 hover:shadow-lg hover:shadow-accent/10 flex flex-col justify-between">
@@ -277,6 +278,9 @@ const pinnedProjects = pinnedProjectIds
                       >
                         <span>Play Store</span>
                       </a>
+                    )}
+                    {storeStatus && (
+                      <StoreStatus status={storeStatus} lang="it" class="rounded-md px-2 py-0.5 text-xs" />
                     )}
                     {website && (
                       <a

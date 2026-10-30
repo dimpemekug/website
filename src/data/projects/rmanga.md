@@ -4,6 +4,7 @@ description: "Lettore per iPhone e iPad di manga, fumetti, libri e serie animate
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "lettura", "privacy"]
+storeStatus: "testing"
 privacyDataTypes: "la libreria con progressi, segnalibri ed evidenziazioni, i file che importi, i capitoli e gli episodi scaricati, le sorgenti e le estensioni che installi, i tuoi server personali (con le credenziali nel Portachiavi) e le preferenze dell'app"
 privacyStorageNote: "Libreria e progressi restano sul dispositivo e, solo se attivi la sincronizzazione, nel tuo iCloud privato. L'app si collega soltanto alle sorgenti, ai server e ai servizi che aggiungi o usi tu."
 privacyUpdatedAt: "13 ottobre 2026"

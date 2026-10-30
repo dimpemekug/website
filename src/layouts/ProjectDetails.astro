@@ -1,4 +1,5 @@
 ---
+import StoreStatus from "@/components/StoreStatus.astro";
 import { render, getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
@@ -18,7 +19,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, description, pubDatetime, appStore, playStore, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
+const { title, description, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -96,7 +97,7 @@ const projectStructuredData = {
 
       <!-- Store links -->
       <!-- Store & Docs links -->
-      {(hasDocs || appStore || playStore || website) && (
+      {(hasDocs || appStore || playStore || storeStatus || website) && (
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           {hasDocs && (
             <a
@@ -138,6 +139,9 @@ const projectStructuredData = {
               </svg>
               Google Play
             </a>
+          )}
+          {storeStatus && (
+            <StoreStatus status={storeStatus} lang={lang} class="rounded-lg px-4 py-2 text-sm" />
           )}
           {website && (
             <a

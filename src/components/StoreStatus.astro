@@ -1,0 +1,17 @@
+---
+import { useTranslations } from "@/i18n/utils";
+
+export interface Props {
+  status: "testing" | "coming-soon";
+  lang?: "it" | "en";
+  class?: string;
+}
+
+const { status, lang = "it", class: className = "" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<span class:list={["inline-flex items-center gap-1.5 border border-dashed border-border/40 font-medium text-foreground/65", className]}>
+  <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+  {t(`projects.status.${status}`)}
+</span>

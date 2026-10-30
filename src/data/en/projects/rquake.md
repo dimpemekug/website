@@ -4,6 +4,7 @@ description: "iPhone and iPad app showing earthquakes in Italy (INGV) and worldw
 pubDatetime: 2026-10-22T00:00:00+02:00
 draft: false
 tags: ["iOS", "mobile", "earthquakes", "privacy"]
+appStore: "https://apps.apple.com/app/rquake/id6825829743"
 privacyDataTypes: "the search filters sent to the data sources, your location (optional), your saved places and the app's preferences"
 privacyStorageNote: "Your location, saved places and preferences stay on your device and never reach the developer. To find nearby events the coordinates are sent to the data source (INGV, USGS, EMSC or GFZ GEOFON) rounded to about 1 km; there are no accounts, analytics or tracking."
 privacyUpdatedAt: "October 20, 2026"
