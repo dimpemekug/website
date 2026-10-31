@@ -12,7 +12,7 @@ draft: false
 related:
   - deepfake-verifica-identita-digitale-2026
   - web-ricerca-ai-risposte-generate
-  - dati-sintetici-addestramento-ai-2026
+  - tagliare-video-senza-ricodifica-mac
 ---
 
 Until recently, AI-generated video was easy to spot at a glance: warped hands, unnatural motion, clips that fell apart into visual artifacts after a few seconds. In 2026 that gap has nearly closed. The latest generation of text-to-video models produces coherent scenes with plausible physics and shot-to-shot continuity, to the point where telling real footage apart from generated footage has become a job for specialists.

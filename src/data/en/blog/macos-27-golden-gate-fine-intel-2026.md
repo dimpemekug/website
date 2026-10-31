@@ -12,7 +12,7 @@ draft: false
 related:
   - chip-ai-personalizzati-big-tech-2026
   - windows-10-fine-aggiornamenti-estesi-2026
-  - local-first-app-offline-sincronizzazione-2026
+  - tagliare-video-senza-ricodifica-mac
 relatedProjects:
   - rmux
 ---

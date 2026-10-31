@@ -12,7 +12,7 @@ draft: false
 related:
   - deepfake-verifica-identita-digitale-2026
   - web-ricerca-ai-risposte-generate
-  - dati-sintetici-addestramento-ai-2026
+  - tagliare-video-senza-ricodifica-mac
 ---
 
 Fino a poco tempo fa i video generati dall'AI si riconoscevano a colpo d'occhio: mani sbagliate, movimenti innaturali, clip che duravano pochi secondi prima di sgretolarsi in artefatti visivi. Nel 2026 quella distanza si è quasi azzerata. Le ultime generazioni di modelli text-to-video producono scene coerenti, con fisica plausibile e continuità tra le inquadrature, al punto che distinguere un girato reale da uno generato è diventato un esercizio per pochi esperti.
