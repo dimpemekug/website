@@ -1,5 +1,7 @@
 ---
 title: "rManga"
+seoTitle: "rManga: Manga and Comics Reader for iPhone and iPad"
+applicationCategory: "EntertainmentApplication"
 description: "Reader for iPhone and iPad for manga, comics, books, and animated series: your files, your Komga, Kavita, Suwayomi, and Jellyfin servers, and OPDS catalogs, in one library. In beta on TestFlight. Free, with no ads or in-app purchases."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

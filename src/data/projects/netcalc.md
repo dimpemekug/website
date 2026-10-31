@@ -1,5 +1,7 @@
 ---
 title: "NetCalc Pro"
+seoTitle: "NetCalc Pro: calcolo IPv4/IPv6 e subnetting su iPhone e Mac"
+applicationCategory: "DeveloperApplication"
 description: "App per iPhone, iPad e Mac per le reti: calcolo IPv4/IPv6, quattro strumenti avanzati, subnetting e VLSM, comandi Cisco IOS con switching avanzato, schema di topologia e verifica di laboratorio. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

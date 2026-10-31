@@ -161,24 +161,25 @@ html[data-theme="dark"] {
       @apply opacity-75;
     }
 
+    .table-scroll {
+      @apply my-6 overflow-x-auto;
+    }
+
     table {
-      @apply w-full table-auto border-collapse;
+      @apply my-0 w-full table-auto border-collapse;
 
       th,
       td {
         @apply border border-border p-2 text-foreground;
-        word-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
-        overflow-wrap: break-word;
       }
 
       th {
         @apply py-1.5 font-bold;
       }
 
-      code {
-        @apply break-all sm:break-normal;
+      td:has(kbd),
+      td code {
+        @apply whitespace-nowrap;
       }
     }
 

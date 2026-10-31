@@ -8,6 +8,7 @@ import TableOfContents from "@/components/TableOfContents.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import PageHero from "@/components/PageHero.astro";
 import type { BreadcrumbItem } from "@/utils/breadcrumbs";
+import { breadcrumbStructuredData } from "@/utils/breadcrumbStructuredData";
 import { SITE } from "@/config";
 
 interface Props {
@@ -56,17 +57,24 @@ const formatDocHref = (slug: string) => {
   return lang === "en" ? `/en/projects/${projectId}/docs/${slug}/` : `/progetti/${projectId}/docs/${slug}/`;
 };
 
-const docStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  headline: `${title} - ${projectName}`,
-  description: description ?? `${title} - Documentazione per ${projectName}`,
-  inLanguage: lang === "en" ? "en-US" : "it-IT",
-  author: {
-    "@type": "Person",
-    name: SITE.author,
+const docStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: `${title} - ${projectName}`,
+    description: description ?? `${title} - Documentazione per ${projectName}`,
+    url: new URL(Astro.url.pathname, SITE.website).href,
+    inLanguage: lang === "en" ? "en-US" : "it-IT",
+    author: {
+      "@type": "Person",
+      name: SITE.author,
+    },
   },
-};
+  breadcrumbStructuredData([
+    { name: "Home", href: lang === "en" ? "/en/" : "/" },
+    ...breadcrumbItems.map(({ label, href }) => ({ name: label, href })),
+  ]),
+];
 ---
 
 <Layout

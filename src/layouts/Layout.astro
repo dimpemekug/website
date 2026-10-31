@@ -28,7 +28,7 @@ type Props = {
   noindex?: boolean;
   nofollow?: boolean;
   robotsExtras?: string;
-  structuredData?: Record<string, unknown> | null;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[] | null;
   languageAlternates?: { href: string | URL; hrefLang: string }[];
   tags?: string[];
   articleSection?: string;
@@ -171,13 +171,8 @@ const finalStructuredData = structuredDataProp ?? (
           "@type": "WebSite",
           name: SITE.title,
           url: SITE.website,
-          description: SITE.desc,
+          description,
           inLanguage: lang === "it" ? "it-IT" : "en-US",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: `${SITE.website}search/?q={search_term_string}`,
-            "query-input": "required name=search_term_string",
-          },
         }
       : rawPath === "/about" || rawPath === "/en/about"
         ? {

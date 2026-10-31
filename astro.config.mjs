@@ -1,5 +1,6 @@
 // @ts-check
 
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, envField, fontProviders } from 'astro/config';
@@ -9,6 +10,8 @@ import tailwindcss from '@tailwindcss/vite';
 import expressiveCode from 'astro-expressive-code';
 
 import { SITE } from './src/config';
+import { postLastmod } from './src/utils/postLastmod';
+import rehypeTableScroll from './src/utils/rehypeTableScroll';
 
 const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 const customSite = process.env.SITE_URL;
@@ -21,6 +24,7 @@ const isProjectPage =
   repositoryName !== `${repositoryOwner}.github.io`;
 
 const resolvedSite = customSite || SITE.website;
+const lastmodByPath = postLastmod();
 
 const resolvedBase =
   customBase || (isGitHubActions && isProjectPage && repositoryName ? `/${repositoryName}` : '/');
@@ -33,6 +37,9 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: "hover",
   },
+  markdown: {
+    processor: unified({ rehypePlugins: [rehypeTableScroll] }),
+  },
   integrations: [
     expressiveCode(),
     mdx(),
@@ -40,6 +47,7 @@ export default defineConfig({
       filter: page => {
         if (!SITE.showArchives && (page.endsWith("/archives") || page.endsWith("/archives/"))) return false;
         if (page.endsWith("/search") || page.endsWith("/search/")) return false;
+        if (page.endsWith("/tags") || page.endsWith("/tags/")) return false;
         if (page.endsWith("/404") || page.endsWith("/404.html")) return false;
         return true;
       },
@@ -49,6 +57,10 @@ export default defineConfig({
           it: "it",
           en: "en",
         },
+      },
+      serialize: item => {
+        const lastmod = lastmodByPath.get(new URL(item.url).pathname);
+        return lastmod ? { ...item, lastmod } : item;
       },
       xslURL: "/sitemap.xsl",
     }),

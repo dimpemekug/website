@@ -15,6 +15,7 @@ interface Props {
   archivesLabel: string;
   archivesActive: boolean;
   showArchives: boolean;
+  showTags: boolean;
   moreLabel: string;
   accentLabel: string;
   showThemeToggle: boolean;
@@ -32,6 +33,7 @@ const {
   archivesLabel,
   archivesActive,
   showArchives,
+  showTags,
   moreLabel,
   accentLabel,
   showThemeToggle,
@@ -60,10 +62,14 @@ const themeOptions = [
     <IconDots class="size-4.5" />
   </button>
   <div id="more-popover" class="more-popover" role="menu" aria-label={moreLabel} hidden>
-    <a href={tagsHref} role="menuitem" class:list={["more-item", { "more-item-active": tagsActive }]}>
-      <IconHash class="size-4 opacity-70" />
-      <span>{tagsLabel}</span>
-    </a>
+    {
+      showTags && (
+        <a href={tagsHref} role="menuitem" class:list={["more-item", { "more-item-active": tagsActive }]}>
+          <IconHash class="size-4 opacity-70" />
+          <span>{tagsLabel}</span>
+        </a>
+      )
+    }
     {
       showArchives && (
         <a href={archivesHref} role="menuitem" class:list={["more-item", { "more-item-active": archivesActive }]}>

@@ -1,5 +1,7 @@
 ---
 title: "PT39 News"
+seoTitle: "PT39 News: Local News from Bagnoli Irpino and Irpinia"
+applicationCategory: "NewsApplication"
 description: "Local news mobile app for Bagnoli Irpino and the Irpinia region, by Circolo Palazzo Tenta 39. No registration, no third-party tracking. Free, with no ads or in-app purchases."
 pubDatetime: 2025-11-03T00:00:00+01:00
 draft: false

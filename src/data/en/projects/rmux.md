@@ -1,5 +1,7 @@
 ---
 title: "rMux"
+seoTitle: "rMux: Trim, Convert and Merge Videos on Mac"
+applicationCategory: "MultimediaApplication"
 description: "Mac app to trim, convert, and merge videos, without re-encoding whenever possible. Audio tracks, subtitles, cropping, filters, and a job queue. Fully offline, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-09-14T00:00:00+02:00
 draft: false

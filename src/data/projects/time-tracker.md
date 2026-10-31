@@ -1,5 +1,7 @@
 ---
 title: "Time Tracker"
+seoTitle: "Time Tracker: registra il tempo su progetti e clienti"
+applicationCategory: "BusinessApplication"
 description: "App per iPhone, iPad e Android per registrare il tempo dedicato a progetti e clienti: timer di concentrazione, tariffe orarie e IVA, dashboard e report PDF e CSV. Nessun account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2025-12-01T00:00:00+01:00
 draft: false

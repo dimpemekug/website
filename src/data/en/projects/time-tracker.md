@@ -1,5 +1,7 @@
 ---
 title: "Time Tracker"
+seoTitle: "Time Tracker: Log Time for Projects and Clients"
+applicationCategory: "BusinessApplication"
 description: "App for iPhone, iPad and Android to log the time you spend on projects and clients: focus timer, hourly rates and VAT, dashboard and PDF and CSV reports. No account. Free, with no ads or in-app purchases."
 pubDatetime: 2025-12-01T00:00:00+01:00
 draft: false

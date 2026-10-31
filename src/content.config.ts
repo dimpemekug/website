@@ -51,6 +51,8 @@ const galleries = defineCollection({
 
 const projectSchema = z.object({
   title: z.string(),
+  seoTitle: z.string().optional(),
+  applicationCategory: z.string().optional(),
   description: z.string(),
   pubDatetime: z.date(),
   draft: z.boolean().optional(),

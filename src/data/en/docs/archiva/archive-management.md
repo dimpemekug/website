@@ -26,7 +26,7 @@ Press <kbd>Space</kbd> or <kbd>⌘</kbd> <kbd>Y</kbd> to open the macOS Quick Lo
 
 ## Compact View
 
-<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>L</kbd> switches from the full view to a small window, with the list in rows and the essential commands. Creating and converting have their compact version too.
+<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>L</kbd> switches from the full view to a small window, with the list in rows and the essential commands: add, convert and verify sit in the header. Creating and converting have their compact version too.
 
 ## Inspecting Apps and Packages (`BundleInspector`)
 

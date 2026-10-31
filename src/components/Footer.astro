@@ -30,7 +30,7 @@ const exploreLinks = [
 
 const resourceLinks = [
   ...(SITE.showArchives ? [{ href: localePath(lang, "/archives"), label: t("nav.archives") }] : []),
-  { href: localePath(lang, "/tags"), label: t("nav.tags") },
+  ...(SITE.showTags ? [{ href: localePath(lang, "/tags"), label: t("nav.tags") }] : []),
   { href: localePath(lang, "/search"), label: t("nav.search") },
 ];
 

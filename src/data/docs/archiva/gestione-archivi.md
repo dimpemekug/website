@@ -26,7 +26,7 @@ Premendo <kbd>Spazio</kbd> o <kbd>⌘</kbd> <kbd>Y</kbd> si apre il pannello di 
 
 ## Vista compatta
 
-Con <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>L</kbd> passi dalla vista completa a una finestra piccola, con l'elenco a righe e i comandi essenziali. Anche la creazione e la conversione hanno la loro versione compatta.
+Con <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>L</kbd> passi dalla vista completa a una finestra piccola, con l'elenco a righe e i comandi essenziali: aggiungi, converti e verifica stanno nell'intestazione. Anche la creazione e la conversione hanno la loro versione compatta.
 
 ## Ispezione di app e pacchetti (`BundleInspector`)
 

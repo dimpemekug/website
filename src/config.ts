@@ -11,10 +11,11 @@ export const SITE = {
   postPerPage: 12,
   scheduledPostMargin: 15 * 60 * 1000,
   showArchives: true,
+  showTags: false,
   showGalleries: false,
   showGalleriesInIndex: false,
   showBackButton: true,
-  showTagsInCards: true,
+  showTagsInCards: false,
   showCoverImages: false,
   indexPostsGrid: true,
   heroTerminalPrompt: {

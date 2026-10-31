@@ -5,6 +5,8 @@ import { generateOgImageForTag } from "@/utils/generateOgImages";
 import { SITE } from "@/config";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  if (!SITE.showTags) return [];
+
   const [blogPosts, galleryPosts] = await Promise.all([
     getCollection("blog"),
     SITE.showGalleries && SITE.showGalleriesInIndex

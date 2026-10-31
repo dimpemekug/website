@@ -1,5 +1,7 @@
 ---
 title: "Horologe"
+seoTitle: "Horologe: Catalog Your Watch Collection"
+applicationCategory: "LifestyleApplication"
 description: "Mobile app to catalog and manage your watch collection. Stats, status & wishlist, wear log, and biometric lock. Local database, free, with no ads or in-app purchases."
 pubDatetime: 2026-02-11T00:00:00+01:00
 draft: false

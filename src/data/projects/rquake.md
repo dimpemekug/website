@@ -1,5 +1,7 @@
 ---
 title: "rQuake"
+seoTitle: "rQuake: terremoti in Italia e nel mondo su iPhone e iPad"
+applicationCategory: "ReferenceApplication"
 description: "App per iPhone e iPad che mostra i terremoti in Italia (INGV) e nel mondo (USGS, EMSC o GFZ GEOFON), con intensità stimata, sequenze sismiche, archivio, faglie sulla mappa e avvisi. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-22T00:00:00+02:00
 draft: false

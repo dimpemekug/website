@@ -1,5 +1,7 @@
 ---
 title: "WP PT39"
+seoTitle: "WP PT39: WordPress Theme for Magazines and News Sites"
+applicationCategory: "DeveloperApplication"
 description: "Editorial WordPress theme for digital magazines and news sites, with a fully Customizer-driven homepage, dark mode, GDPR cookie consent, and built-in SEO. Written in plain PHP."
 pubDatetime: 2026-02-24T00:00:00+01:00
 draft: false

@@ -1,5 +1,7 @@
 ---
 title: "Archiva"
+seoTitle: "Archiva: Open ZIP, RAR and 7z Archives on Mac"
+applicationCategory: "UtilitiesApplication"
 description: "Mac app for compressed archives: look inside ZIP, RAR, 7z, and many other formats without extracting them, open protected or multi-part archives, and create your own with passwords and volumes. No account, no Internet. Free, with no ads or in-app purchases."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

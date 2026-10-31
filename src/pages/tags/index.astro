@@ -11,6 +11,10 @@ import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
+if (!SITE.showTags) {
+  return Astro.redirect("/posts/");
+}
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 

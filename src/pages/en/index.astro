@@ -46,7 +46,10 @@ const pinnedProjects = pinnedProjectIds
   .filter((project): project is (typeof allProjects)[number] => Boolean(project));
 ---
 
-<Layout title={SITE.title} description="Apps and websites. Clean code, clear ideas.">
+<Layout
+  title={`Apps for iPhone, Mac and Android | ${SITE.title}`}
+  description="Free apps for iPhone, iPad, Mac and Android, with no ads or in-app purchases, custom websites, and articles on AI and digital security."
+>
   <Header />
 
   <main id="main-content" data-layout="index" class="relative app-layout">

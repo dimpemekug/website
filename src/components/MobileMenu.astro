@@ -80,14 +80,18 @@ const themeOptions = [
             <span class="mobile-nav-indicator"></span>
             <span>{t("nav.posts")}</span>
           </a>
-          <a
-            href={navTags}
-            class:list={["mobile-nav-link", { active: isActive("tags") }]}
-            style="--i:4"
-          >
-            <span class="mobile-nav-indicator"></span>
-            <span>{t("nav.tags")}</span>
-          </a>
+          {
+            SITE.showTags && (
+              <a
+                href={navTags}
+                class:list={["mobile-nav-link", { active: isActive("tags") }]}
+                style="--i:4"
+              >
+                <span class="mobile-nav-indicator"></span>
+                <span>{t("nav.tags")}</span>
+              </a>
+            )
+          }
           <a
             href={navAbout}
             class:list={["mobile-nav-link", { active: isActive("about") }]}

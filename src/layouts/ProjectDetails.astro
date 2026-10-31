@@ -1,4 +1,5 @@
 ---
+import { breadcrumbStructuredData } from "@/utils/breadcrumbStructuredData";
 import StoreStatus from "@/components/StoreStatus.astro";
 import { render, getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
@@ -19,7 +20,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, description, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
+const { title, seoTitle, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -32,26 +33,38 @@ const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
 const backHref = lang === "en" ? "/en/projects/" : "/progetti/";
 const backLabel = lang === "en" ? "All projects" : "Tutti i progetti";
 const websiteLabel = lang === "en" ? "Website" : "Sito web";
-const projectStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: title,
-  description,
-  applicationCategory: "SoftwareApplication",
-  operatingSystem: appStore ? "iOS, macOS" : playStore ? "Android" : "All",
-  ...(website && { url: website }),
-  ...(appStore && { installUrl: appStore }),
-  ...(playStore && { downloadUrl: playStore }),
-  inLanguage: lang === "it" ? "it-IT" : "en-US",
-  author: {
-    "@type": "Person",
-    name: SITE.author,
+const operatingSystems = ["iOS", "macOS", "Android", "WordPress"].filter(os => tags.includes(os));
+const projectStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: title,
+    description,
+    url: new URL(Astro.url.pathname, SITE.website).href,
+    applicationCategory,
+    operatingSystem: operatingSystems.join(", "),
+    ...(appStore && { installUrl: appStore }),
+    ...(playStore && { downloadUrl: playStore }),
+    ...(website && { sameAs: website }),
+    ...((appStore || playStore || storeStatus) && {
+      offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    }),
+    inLanguage: lang === "it" ? "it-IT" : "en-US",
+    author: {
+      "@type": "Person",
+      name: SITE.author,
+    },
   },
-};
+  breadcrumbStructuredData([
+    { name: "Home", href: lang === "en" ? "/en/" : "/" },
+    { name: lang === "en" ? "Projects" : "Progetti", href: backHref },
+    { name: title },
+  ]),
+];
 ---
 
 <Layout
-  title={`${title} | ${SITE.title}`}
+  title={seoTitle ?? `${title} | ${SITE.title}`}
   ogTitle={title}
   description={description}
   tags={project.data.tags}

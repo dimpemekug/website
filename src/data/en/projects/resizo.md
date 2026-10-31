@@ -1,5 +1,7 @@
 ---
 title: "Resizo"
+seoTitle: "Resizo: Batch Resize Photos on Mac"
+applicationCategory: "MultimediaApplication"
 description: "Mac app to batch-resize photos: by pixels, percentage, or preset, with HEIC-to-JPEG conversion and EXIF metadata removal. Fully offline, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false
