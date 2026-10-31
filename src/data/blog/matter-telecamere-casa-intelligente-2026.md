@@ -1,5 +1,6 @@
 ---
 title: "Matter e le telecamere: l'ultimo silo della casa intelligente sta cedendo"
+seoTitle: "Matter e telecamere: l'ultimo silo della casa intelligente"
 description: "Con Matter 1.5 telecamere e videocitofoni entrano nello standard comune della casa connessa. Cosa significa per chi ha già lampadine e termostati di marche diverse, perché il video resta il pezzo più difficile e cosa controllare prima di comprare."
 pubDatetime: 2026-09-17T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - iot
   - privacy
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - wifi-8-router-affidabilita-2026
 ---
 
 Chi ha messo insieme una casa connessa un pezzo alla volta conosce il problema: le lampadine di una marca, il termostato di un'altra, le prese di una terza, e tre app diverse per accenderle. Matter è nato nel 2022 proprio per questo, e negli anni ha assorbito luci, prese, sensori, serrature, elettrodomestici. Un pezzo però era rimasto fuori, ed era il più delicato: le telecamere.

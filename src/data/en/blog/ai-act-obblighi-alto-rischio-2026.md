@@ -1,5 +1,6 @@
 ---
 title: "The AI Act, August 2026: what actually changes for developers"
+seoTitle: "The AI Act, August 2026: what changes for developers"
 description: As of this month, obligations for high-risk AI systems become fully applicable across the European Union. It isn't just a legal problem anymore — it's a problem of architecture, documentation, and process.
 pubDatetime: 2026-08-10T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - compliance
   - enterprise
 draft: false
+related:
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - intelligenza-artificiale-2026-maturita
 ---
 
 For two years the AI Act was mostly a conference topic: distant deadlines, generic obligations, a regulation everyone knew was coming but that touched few people's day-to-day work writing software. That status changes this month: obligations for high-risk systems become fully applicable, and "high-risk" in the text covers more than most expect — not just medical diagnostics or autonomous vehicles, but hiring screening, credit scoring, and management of critical infrastructure. If your product touches one of these areas, compliance stops being a theoretical exercise.

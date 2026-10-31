@@ -1,5 +1,6 @@
 ---
 title: "Occhiali smart e computing spaziale: la nuova corsa dopo lo smartphone"
+seoTitle: "Occhiali smart e computing spaziale: il dopo smartphone"
 description: Da Meta ad Apple, i grandi nomi della tecnologia stanno scommettendo sugli occhiali smart come prossima piattaforma di calcolo personale. Ecco cosa sanno fare davvero oggi e cosa li separa ancora dallo smartphone.
 pubDatetime: 2026-05-25T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - ar-vr
   - spatial-computing
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - smartphone-riparabilita-ecodesign-2026
+  - world-model-ai-simulazione-2026
 ---
 
 Ogni pochi anni l'industria tecnologica annuncia "il prossimo grande dispositivo dopo lo smartphone", e per molto tempo si è trattato più che altro di promesse. Nel 2026 qualcosa è cambiato: gli **occhiali smart** e i dispositivi per il cosiddetto **computing spaziale** hanno smesso di essere demo da fiera per diventare prodotti che le persone comprano e usano davvero, anche se la rivoluzione completa è ancora lontana dall'essere compiuta.

@@ -35,7 +35,9 @@ const totalPosts = page.total;
 const metaTitle = page.currentPage > 1
   ? `${t("posts.title")} (${t("posts.page")} ${page.currentPage} / ${page.lastPage}) | ${SITE.title}`
   : `${t("posts.title")} | ${SITE.title}`;
-const metaDesc = t("posts.description");
+const metaDesc = page.currentPage > 1
+  ? `${t("posts.description")} ${t("posts.page")} ${page.currentPage}.`
+  : t("posts.description");
 
 const prevURL = page.url.prev ? new URL(page.url.prev.replace("/posts/", "/en/posts/"), SITE.website).toString() : undefined;
 const nextURL = page.url.next ? new URL(page.url.next.replace("/posts/", "/en/posts/"), SITE.website).toString() : undefined;

@@ -1,5 +1,6 @@
 ---
 title: "Custom AI chips: why Big Tech is designing its own processors"
+seoTitle: "Custom AI chips: why Big Tech designs its own processors"
 description: Google, Amazon, Microsoft, and Meta are investing billions to build proprietary AI chips and cut their dependence on Nvidia. Here's why it makes sense, and just how hard it really is.
 pubDatetime: 2026-07-17T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - semiconductors
   - cloud-computing
 draft: false
+related:
+  - ai-energia-nucleare-2026
+  - modelli-ai-on-device-2026
+  - macos-27-golden-gate-fine-intel-2026
 ---
 
 For years, anyone who wanted to train or run large-scale AI models essentially had one choice: buy Nvidia GPUs, in ever-growing quantities and at ever-higher prices. In 2026 that dependence is starting to crack, not because Nvidia has fallen behind, but because the companies consuming the most AI compute in the world have decided it's worth designing their own chips.

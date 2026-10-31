@@ -1,5 +1,6 @@
 ---
 title: "Cyber Resilience Act: exploited vulnerabilities must now be reported within 24 hours"
+seoTitle: "Cyber Resilience Act: report exploited flaws within 24 hours"
 description: "As of September 11, 2026, the first obligations of the EU cybersecurity rules for digital products apply: anyone selling software or connected devices in the Union must report exploited vulnerabilities and severe incidents. What changes, and how to prepare."
 pubDatetime: 2026-09-11T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - open-source
 featured: true
 draft: false
+related:
+  - ai-act-obblighi-alto-rischio-2026
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
 ---
 
 For years, the security of an app or a connected device was mostly a matter of goodwill: conscientious vendors published patches and advisories, the others could stay quiet and hope nobody noticed. With the Cyber Resilience Act (EU Regulation 2024/2847), that choice is gone. The regulation has been in force since December 2024 but applies in stages: most obligations arrive in December 2027, while today, September 11, 2026, the first piece goes live. Arguably the most concrete one: the duty to report.

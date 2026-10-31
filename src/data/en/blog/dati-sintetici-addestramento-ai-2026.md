@@ -1,5 +1,6 @@
 ---
 title: "Synthetic data: AI increasingly trained on data it generated itself"
+seoTitle: "Synthetic data: AI trained on data it generated itself"
 description: The web's supply of human-written text no longer satisfies the biggest models' appetite for data. The industry's answer is to generate the missing data with AI itself — a convenient fix that carries a risk rarely discussed.
 pubDatetime: 2026-08-06T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - machine-learning
   - privacy
 draft: false
+related:
+  - world-model-ai-simulazione-2026
+  - modelli-ai-on-device-2026
+  - ai-act-obblighi-alto-rischio-2026
 ---
 
 For years the recipe for a better model was simple: more data, pulled from the public web, written by actual people. The problem is that source isn't infinite, and for the largest models it's approaching its limits — not so much in raw volume as in data of sufficient quality on specific tasks, from verifiable mathematical reasoning to correct, well-documented code. The industry's answer has been to generate what's missing itself: use one model to produce examples, verify them where possible, and use them to train another. In just a few years, synthetic data has gone from a niche shortcut to a central component of many training pipelines.

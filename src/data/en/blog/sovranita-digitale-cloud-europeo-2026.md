@@ -1,5 +1,6 @@
 ---
 title: "Digital sovereignty: what moving your data to Europe actually means"
+seoTitle: "Digital sovereignty: what moving data to Europe really means"
 description: European cloud, models trained in-house, data residency requirements. Behind a word that has become a slogan sit concrete technical choices — and trade-offs worth understanding before adopting them.
 pubDatetime: 2026-07-31T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cloud-computing
   - privacy
 draft: false
+related:
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - eudi-wallet-identita-digitale-europea-2026
+  - local-first-app-offline-sincronizzazione-2026
 ---
 
 "Digital sovereignty" is one of those phrases that turns up everywhere and means something different depending on who says it. For a public body it's a procurement requirement; for a company it's a line in a compliance questionnaire; for whoever builds the software it is, far more concretely, the question of where your servers actually run, who can read the data passing through them, and what happens if that provider changes its terms one day. In 2026 the conversation has left the legal department and landed on architecture decisions.

@@ -1,5 +1,6 @@
 ---
 title: "Robot umanoidi: perché il 2026 li sta facendo uscire dai laboratori"
+seoTitle: "Robot umanoidi: perché nel 2026 escono dai laboratori"
 description: Da Tesla Optimus a Figure, i robot umanoidi stanno lasciando i video dimostrativi per entrare in magazzini e fabbriche reali. Ecco a che punto siamo davvero e cosa resta da risolvere.
 pubDatetime: 2026-06-30T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - automation
   - manufacturing
 draft: false
+related:
+  - world-model-ai-simulazione-2026
+  - intelligenza-artificiale-agentica-2026
+  - batterie-stato-solido-auto-elettriche-2026
 ---
 
 Per anni i robot umanoidi sono stati soprattutto un esercizio di stile: video patinati di prototipi che camminano, ballano o aprono una porta, seguiti da anni di silenzio prima del prossimo annuncio. Nel 2026 questo schema si sta rompendo. Diverse aziende — da quelle storiche della robotica alle startup nate negli ultimi tre anni — hanno cominciato a dispiegare robot umanoidi in ambienti di lavoro reali, non solo davanti a una telecamera, e i numeri delle prime unità operative si contano ormai a migliaia.

@@ -1,5 +1,6 @@
 ---
 title: "La fame di energia dell'AI riaccende il dibattito sul nucleare"
+seoTitle: "L'energia per l'AI riaccende il dibattito sul nucleare"
 description: I data center per addestrare e far girare i modelli AI consumano energia a ritmi mai visti prima. Ecco perché le grandi aziende tech stanno firmando accordi diretti con centrali nucleari e mini-reattori.
 pubDatetime: 2026-06-30T09:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - nuclear-energy
   - data-centers
 draft: false
+related:
+  - chip-ai-personalizzati-big-tech-2026
+  - intelligenza-artificiale-2026-maturita
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 C'è un dettaglio che raramente compare negli annunci sui nuovi modelli AI: quanta energia serve per addestrarli e farli girare. Nel 2026 quel dettaglio è diventato impossibile da ignorare. La crescita della domanda di calcolo per l'intelligenza artificiale sta mettendo sotto pressione le reti elettriche in diverse regioni, al punto che alcune grandi aziende tecnologiche hanno smesso di limitarsi a comprare energia rinnovabile certificata e hanno iniziato a firmare accordi diretti con operatori di centrali nucleari.

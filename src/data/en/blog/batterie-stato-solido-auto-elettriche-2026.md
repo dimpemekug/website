@@ -1,5 +1,6 @@
 ---
 title: "Solid-state batteries: the technology that could reshape electric cars in 2026"
+seoTitle: "Solid-state batteries: how they could reshape electric cars"
 description: More range, faster charging, and a lower fire risk. Solid-state batteries are moving out of research labs and into the first pilot production lines. Here's where things actually stand.
 pubDatetime: 2026-05-16T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - batteries
   - automotive
 draft: false
+related:
+  - ai-energia-nucleare-2026
+  - smartphone-riparabilita-ecodesign-2026
+  - robot-umanoidi-2026
 ---
 
 For more than a decade, lithium-ion batteries have made the modern electric car possible, but they remain a compromise: range limited by weight, charging times still far from a quick gas-station fill-up, and a rare but real risk of overheating. In 2026, the technology many saw as the real way past those limits — **solid-state batteries** — is finally moving out of research labs and into the first pilot production lines.

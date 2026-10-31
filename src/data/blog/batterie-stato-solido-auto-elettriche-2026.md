@@ -1,5 +1,6 @@
 ---
 title: "Batterie allo stato solido: la tecnologia che potrebbe cambiare le auto elettriche nel 2026"
+seoTitle: "Batterie allo stato solido: come cambiano le auto elettriche"
 description: Più autonomia, ricariche più veloci e meno rischio di incendio. Le batterie allo stato solido stanno passando dai laboratori alle prime linee di produzione in serie. Ecco a che punto siamo davvero.
 pubDatetime: 2026-05-16T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - batteries
   - automotive
 draft: false
+related:
+  - ai-energia-nucleare-2026
+  - smartphone-riparabilita-ecodesign-2026
+  - robot-umanoidi-2026
 ---
 
 Per più di un decennio le batterie agli ioni di litio hanno reso possibile l'auto elettrica moderna, ma restano un compromesso: autonomia limitata dal peso, tempi di ricarica ancora lontani da quelli di un pieno di benzina, e un rischio — raro ma reale — di surriscaldamento. Nel 2026 la tecnologia che molti consideravano la vera promessa per superare questi limiti, le **batterie allo stato solido**, sta finalmente uscendo dai laboratori di ricerca per entrare nelle prime linee di produzione pilota.

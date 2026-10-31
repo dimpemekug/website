@@ -1,5 +1,6 @@
 ---
 title: "Windows 10, ultimo giro: cosa fare prima della fine degli aggiornamenti estesi"
+seoTitle: "Windows 10: cosa fare prima della fine degli aggiornamenti"
 description: Il supporto ordinario è finito a ottobre 2025 e il programma di aggiornamenti di sicurezza estesi per i privati si chiude a metà ottobre 2026. Le opzioni reali per chi ha ancora un PC con Windows 10, dal passaggio a Windows 11 alle alternative.
 pubDatetime: 2026-09-06T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cybersecurity
   - operating-systems
 draft: false
+related:
+  - macos-27-golden-gate-fine-intel-2026
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - smartphone-riparabilita-ecodesign-2026
 ---
 
 Un anno fa, il 14 ottobre 2025, Windows 10 ha smesso di ricevere il supporto ordinario. Per molti non è cambiato nulla, e non per distrazione: Microsoft ha offerto ai privati un anno di aggiornamenti di sicurezza estesi (ESU), in Europa senza costi per chi accede con un account Microsoft. Quell'anno di tregua finisce il 13 ottobre 2026. Mancano poco più di cinque settimane, ed è il momento giusto per decidere con calma invece di scoprirlo a cose fatte.

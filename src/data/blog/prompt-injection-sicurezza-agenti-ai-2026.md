@@ -1,5 +1,6 @@
 ---
 title: "Prompt injection: la vulnerabilità degli agenti AI che non si chiude con una patch"
+seoTitle: "Prompt injection: la falla degli agenti AI senza patch"
 description: Quando un assistente legge email, pagine web e documenti, qualsiasi testo può trasformarsi in un ordine. Perché la prompt injection è diventata il problema di sicurezza principale dei sistemi basati su modelli linguistici, e come limitarne i danni.
 pubDatetime: 2026-09-09T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - llm
   - ai-agents
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - browser-agentici-ai-2026
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
 ---
 
 Vent'anni fa l'informatica ha imparato una lezione a caro prezzo: mai mescolare dati e comandi. La SQL injection esisteva perché un campo di testo scritto da un utente poteva finire eseguito come istruzione dal database. I modelli linguistici hanno riportato quel problema al centro della scena, con una differenza scomoda: per un LLM istruzioni e dati sono, per costruzione, la stessa cosa. Sono tutto testo.

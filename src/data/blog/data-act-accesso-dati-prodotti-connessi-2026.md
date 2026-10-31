@@ -1,5 +1,6 @@
 ---
 title: "Data Act: da settembre i dispositivi connessi devono aprire i loro dati"
+seoTitle: "Data Act: i dispositivi connessi devono aprire i loro dati"
 description: "Dal 12 settembre 2026 auto, elettrodomestici, macchinari e app collegate immessi sul mercato devono rendere i dati disponibili a chi li usa, in un formato leggibile da una macchina. Cosa cambia con il Data Act per chi compra e per chi sviluppa."
 pubDatetime: 2026-09-18T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - cloud-computing
 featured: true
 draft: false
+related:
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - matter-telecamere-casa-intelligente-2026
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 Un'auto moderna produce centinaia di parametri al secondo, una caldaia connessa sa esattamente quante ore ha lavorato, una macchina agricola registra consumi e guasti prima ancora che l'operatore se ne accorga. Fino a ieri quei dati erano quasi sempre di chi aveva costruito il dispositivo: l'utente li vedeva solo nella misura in cui l'app ufficiale glieli mostrava. Dal 12 settembre 2026 non è più così, almeno in Europa.

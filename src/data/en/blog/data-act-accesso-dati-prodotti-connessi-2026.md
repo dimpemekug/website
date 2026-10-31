@@ -1,5 +1,6 @@
 ---
 title: "Data Act: since September, connected devices must open up their data"
+seoTitle: "Data Act: connected devices must now open up their data"
 description: "From September 12, 2026, cars, appliances, machinery, and companion apps placed on the market must make their data available to the people who use them, in a machine-readable format. What the Data Act changes for buyers and for developers."
 pubDatetime: 2026-09-18T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - cloud-computing
 featured: true
 draft: false
+related:
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - matter-telecamere-casa-intelligente-2026
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 A modern car produces hundreds of parameters a second, a connected boiler knows exactly how many hours it has worked, a farm machine logs consumption and faults before the operator notices anything. Until yesterday that data almost always belonged to whoever built the device: users saw as much of it as the official app chose to show them. Since September 12, 2026, that is no longer the case, at least in Europe.

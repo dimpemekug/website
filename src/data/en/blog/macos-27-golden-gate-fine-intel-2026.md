@@ -8,6 +8,12 @@ tags:
   - software-development
 featured: true
 draft: false
+related:
+  - chip-ai-personalizzati-big-tech-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
+  - local-first-app-offline-sincronizzazione-2026
+relatedProjects:
+  - rmux
 ---
 
 On September 14 Apple released macOS 27, Golden Gate, and with it closed a transition that started in June 2020. It is the first version of macOS that runs exclusively on Macs with Apple silicon: no Intel Mac can install it, not even the 2019 Mac Pro. Six years flat from the announcement, which for an architecture change is remarkably fast.

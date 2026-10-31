@@ -1,5 +1,6 @@
 ---
 title: "Dall'hype ai risultati: il 2026 sarà davvero l'anno della maturità dell'intelligenza artificiale?"
+seoTitle: "Dall'hype ai risultati: il 2026 è l'anno dell'AI matura?"
 description: Aziende e sviluppatori passano dalla sperimentazione a casi d'uso concreti e misurabili. Analizziamo dati, ostacoli e segnali che indicano la maturità dell'AI nel 2026.
 pubDatetime: 2026-06-02T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - roi
 featured: true
 draft: false
+related:
+  - agenti-ai-colleghi-digitali-2026
+  - ai-act-obblighi-alto-rischio-2026
+  - ai-energia-nucleare-2026
 ---
 
 Negli ultimi anni, ogni gennaio è arrivato accompagnato dalla stessa previsione: "questo sarà l'anno in cui l'intelligenza artificiale smetterà di essere un esperimento e diventerà un risultato di business misurabile". Lo si è detto così tante volte che è diventato quasi un luogo comune. Eppure, guardando ai dati e ai progetti realmente in produzione nel 2026, qualcosa di diverso sembra effettivamente essere successo: il baricentro si è spostato dalla domanda "cosa può fare l'AI?" alla domanda "quanto valore ha effettivamente generato finora?".

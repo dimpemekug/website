@@ -1,5 +1,6 @@
 ---
 title: "Coding agents: when the AI stops suggesting and starts writing"
+seoTitle: "Coding agents: when AI stops suggesting and starts writing"
 description: Developer assistants have gone from completing a single line to opening pull requests on their own. Here's what actually changes in day-to-day development work, and which habits become non-negotiable.
 pubDatetime: 2026-07-24T08:00:00Z
 tags:
@@ -7,6 +8,12 @@ tags:
   - software-development
   - developer-tools
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - agenti-ai-colleghi-digitali-2026
+  - prompt-injection-sicurezza-agenti-ai-2026
+relatedProjects:
+  - codevault
 ---
 
 The first leap happened a few years ago, when the editor started finishing the line we were typing. The second arrived more quietly: today the same tool no longer waits for the cursor. It reads the whole repository, opens the files it needs, runs the tests, fixes what it broke, and proposes a complete change. In 2026 the question is no longer whether AI can write code, but how much of the development cycle it makes sense to delegate.

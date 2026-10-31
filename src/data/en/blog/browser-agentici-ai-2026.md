@@ -7,6 +7,10 @@ tags:
   - browser
   - web-automation
 draft: false
+related:
+  - prompt-injection-sicurezza-agenti-ai-2026
+  - intelligenza-artificiale-agentica-2026
+  - web-ricerca-ai-risposte-generate
 ---
 
 For twenty years, the browser has been a fundamentally passive tool: it displayed web pages, and the person in front of the screen decided what to read and where to click. In 2026, that balance is starting to genuinely shift. A new generation of browsers, built around an integrated AI agent rather than a simple address bar, promises to book a flight, compare prices across multiple sites, or fill out a bureaucratic form while the user simply types what they want to achieve.
@@ -41,7 +45,7 @@ A traditional conversational assistant tells you what to do. An agentic browser 
 ## The problems still unsolved
 
 1. **Sites built for humans, not for agents.** CAPTCHAs, pop-ups, layouts that keep changing: many web pages are specifically designed to slow automation down, and agents run into them constantly.
-2. **Prompt injection from visited pages.** A malicious web page can hide instructions designed to manipulate the agent as it browses — an attack vector that didn't exist with chatbots isolated in a chat window.
+2. **[Prompt injection](/en/posts/prompt-injection-sicurezza-agenti-ai-2026/) from visited pages.** A malicious web page can hide instructions designed to manipulate the agent as it browses — an attack vector that didn't exist with chatbots isolated in a chat window.
 3. **Payments and authentication.** Handing an agent your credentials or payment details raises questions about who's responsible when something goes wrong, and how reliably spending limits are actually enforced.
 4. **Trust and control.** Many users are happy to be advised, but remain cautious about handing over direct control of their online actions, especially around purchases or sensitive data.
 

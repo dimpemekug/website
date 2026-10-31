@@ -1,5 +1,6 @@
 ---
 title: "Chip AI su misura: perché le Big Tech progettano i propri processori"
+seoTitle: "Chip AI su misura: perché le Big Tech li progettano da sole"
 description: Google, Amazon, Microsoft e Meta stanno investendo miliardi per costruire chip AI proprietari e ridurre la dipendenza da Nvidia. Ecco perché conviene farlo, e quanto è davvero difficile.
 pubDatetime: 2026-07-17T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - semiconductors
   - cloud-computing
 draft: false
+related:
+  - ai-energia-nucleare-2026
+  - modelli-ai-on-device-2026
+  - macos-27-golden-gate-fine-intel-2026
 ---
 
 Per anni, chi voleva addestrare o far girare modelli AI di grandi dimensioni aveva sostanzialmente una sola scelta: comprare GPU Nvidia, in quantità sempre maggiori e a prezzi sempre più alti. Nel 2026 quella dipendenza sta iniziando a incrinarsi, non perché Nvidia sia arretrata, ma perché le aziende che consumano più calcolo AI al mondo hanno deciso che conviene progettarsi i chip da sole.

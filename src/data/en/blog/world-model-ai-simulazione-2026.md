@@ -1,5 +1,6 @@
 ---
 title: "World models: the AI that tries to understand the world instead of just describing it"
+seoTitle: "World models: the AI that tries to understand the world"
 description: A language model predicts the next word. A world model tries to predict what happens next in a real scene. It's a precise technical difference, and it's why robotics is looking elsewhere than chatbots.
 pubDatetime: 2026-08-07T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - robotics
   - generative-ai
 draft: false
+related:
+  - robot-umanoidi-2026
+  - dati-sintetici-addestramento-ai-2026
+  - intelligenza-artificiale-agentica-2026
 ---
 
 A language model is trained to predict the next word in a piece of text. That works surprisingly well for generating coherent sentences, but it never had to know that a spilled glass tips over because of gravity, or that an object behind another one stays there even after it leaves the frame. A world model exists to fill exactly that gap: it's trained to predict how a scene evolves — visually, physically, spatially — given its current state and a possible action. It doesn't generate plausible text, it generates the plausible consequence of an event in the world.

@@ -1,5 +1,6 @@
 ---
 title: "Computer quantistici e cybersicurezza: perché il 2026 potrebbe essere un anno decisivo"
+seoTitle: "Computer quantistici e cybersicurezza: perché il 2026 conta"
 description: Tra i progressi sui qubit corretti e la migrazione alla crittografia post-quantistica, il 2026 segna una svolta per la sicurezza informatica nell'era del calcolo quantistico.
 pubDatetime: 2026-06-18T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cybersecurity
   - cryptography
 draft: false
+related:
+  - passkey-addio-password-2026
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 Per anni il calcolo quantistico è stato trattato come una promessa lontana, buona per i titoli dei giornali ma irrilevante per chi scrive codice o protegge infrastrutture oggi. Nel 2026 quella distanza si è ridotta in modo brusco, su due fronti che si stanno intrecciando: i progressi tecnici nei processori quantistici e l'inizio reale della migrazione verso una crittografia capace di resistere a quei processori.

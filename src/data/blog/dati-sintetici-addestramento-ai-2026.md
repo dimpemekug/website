@@ -1,5 +1,6 @@
 ---
 title: "Dati sintetici: l'AI che si allena sempre più su dati che ha generato da sola"
+seoTitle: "Dati sintetici: l'AI che si allena su dati generati da sola"
 description: Il web di testo scritto da persone non basta più a soddisfare la fame di dati dei modelli più grandi. La risposta dell'industria è generare i dati mancanti con l'AI stessa — una soluzione comoda che porta con sé un rischio poco discusso.
 pubDatetime: 2026-08-06T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - machine-learning
   - privacy
 draft: false
+related:
+  - world-model-ai-simulazione-2026
+  - modelli-ai-on-device-2026
+  - ai-act-obblighi-alto-rischio-2026
 ---
 
 Per anni la ricetta per un modello migliore è stata semplice: più dati, presi dal web pubblico, scritti da persone in carne e ossa. Il problema è che quella fonte non è infinita, e per i modelli più grandi si sta avvicinando ai suoi limiti — non tanto in volume assoluto, quanto in dati di qualità sufficiente su compiti specifici, dal ragionamento matematico verificabile al codice corretto e ben documentato. La risposta che l'industria ha trovato è generare da sé quello che manca: usare un modello per produrre esempi, verificarli quando possibile, e usarli per addestrarne un altro. I dati sintetici sono passati in pochi anni da scorciatoia di nicchia a componente centrale di molte pipeline di addestramento.

@@ -7,6 +7,12 @@ tags:
   - software-development
   - developer-tools
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - agenti-ai-colleghi-digitali-2026
+  - prompt-injection-sicurezza-agenti-ai-2026
+relatedProjects:
+  - codevault
 ---
 
 Il primo salto lo abbiamo visto qualche anno fa, quando l'editor ha iniziato a completare la riga che stavamo scrivendo. Il secondo è arrivato più silenziosamente: oggi lo stesso strumento non aspetta più il cursore. Legge l'intero repository, apre i file che gli servono, esegue i test, corregge quello che ha rotto e propone una modifica completa. Nel 2026 la domanda non è più se l'AI sappia scrivere codice, ma quanta parte del ciclo di sviluppo abbia senso delegarle.

@@ -1,5 +1,6 @@
 ---
 title: "AI that runs on your phone: why on-device models are the new trend"
+seoTitle: "AI on your phone: why on-device models are trending"
 description: Smartphone and laptop makers are shifting more and more AI features from the cloud to the device itself. More privacy, less latency, no connection required — here's why small local models have become a hot topic.
 pubDatetime: 2026-04-16T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - edge-ai
   - privacy
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - chip-ai-personalizzati-big-tech-2026
+  - local-first-app-offline-sincronizzazione-2026
 ---
 
 For years, "using AI" meant almost the same thing every time: send a request to a remote server and wait for a response. In 2026 that pattern is changing fast. Smartphones, laptops, and even some wearables now ship with chips purpose-built to run compact AI models directly on the device, without touching the cloud.

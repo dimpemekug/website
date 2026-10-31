@@ -1,5 +1,6 @@
 ---
 title: "Cyber Resilience Act: da oggi le vulnerabilità sfruttate vanno segnalate entro 24 ore"
+seoTitle: "Cyber Resilience Act: segnalare le vulnerabilità in 24 ore"
 description: "Dall'11 settembre 2026 scattano i primi obblighi del regolamento europeo sulla cybersicurezza dei prodotti digitali: chi vende software o dispositivi connessi nell'Unione deve segnalare vulnerabilità sfruttate e incidenti gravi. Cosa cambia e come prepararsi."
 pubDatetime: 2026-09-11T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - open-source
 featured: true
 draft: false
+related:
+  - ai-act-obblighi-alto-rischio-2026
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
 ---
 
 Per anni la sicurezza di un'app o di un dispositivo connesso è stata soprattutto una questione di buona volontà: chi era scrupoloso pubblicava patch e avvisi, chi non lo era poteva tacere e sperare che nessuno se ne accorgesse. Con il Cyber Resilience Act (Regolamento UE 2024/2847) quella scelta non esiste più. Il regolamento è in vigore da dicembre 2024 ma si applica per gradi: la maggior parte degli obblighi arriverà a dicembre 2027, mentre oggi, 11 settembre 2026, parte il primo pezzo. Forse il più concreto di tutti: l'obbligo di segnalare.

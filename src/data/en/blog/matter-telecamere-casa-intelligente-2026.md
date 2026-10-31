@@ -1,5 +1,6 @@
 ---
 title: "Matter and cameras: the smart home's last silo is finally cracking"
+seoTitle: "Matter and cameras: the smart home's last silo is cracking"
 description: With Matter 1.5, cameras and video doorbells finally join the common standard for connected homes. What that means if you already own bulbs and thermostats from different brands, why video is the hardest piece, and what to check before you buy.
 pubDatetime: 2026-09-17T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - iot
   - privacy
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - wifi-8-router-affidabilita-2026
 ---
 
 Anyone who has built a connected home one piece at a time knows the problem: bulbs from one brand, a thermostat from another, plugs from a third, and three different apps to turn them on. Matter was created in 2022 for exactly this, and over the years it has absorbed lights, plugs, sensors, locks, and appliances. One piece stayed outside, though, and it was the most delicate one: cameras.

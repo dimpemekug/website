@@ -1,5 +1,6 @@
 ---
 title: "Digital coworkers: what changes when an AI agent has an account like yours"
+seoTitle: "AI agents as coworkers: what changes with their own account"
 description: No longer a tool you open when you need it, but an identity that works autonomously inside the organization, with a calendar, an inbox, and access to internal systems. What it actually means to bring an AI agent onto a team.
 pubDatetime: 2026-08-09T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - enterprise
   - automation
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - prompt-injection-sicurezza-agenti-ai-2026
+  - agenti-di-codice-sviluppo-software-2026
 ---
 
 Until recently, an AI assistant at work was a browser tab: you opened it when you needed it, then closed it. In 2026, in a growing number of organizations, that shape has changed. An AI agent gets a company account, an email address, access to a subset of internal tools, and works on assigned tasks even while nobody is watching. It's no longer a tool you open — it's an identity operating inside the organization, with permissions and responsibilities that need defining like any other access grant.

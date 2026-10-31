@@ -1,5 +1,6 @@
 ---
 title: "Local-first: le app che funzionano offline e sincronizzano dopo"
+seoTitle: "Local-first: app che funzionano offline e sincronizzano dopo"
 description: "I dati sul dispositivo, il server come copia e non come padrone. Nel 2026 il local-first ha librerie mature, motori di sincronizzazione in produzione e una track dedicata al FOSDEM. Cosa vuol dire, cosa si guadagna e dove fa ancora male."
 pubDatetime: 2026-09-14T08:00:00Z
 tags:
@@ -7,6 +8,12 @@ tags:
   - developer-tools
   - privacy
 draft: false
+related:
+  - modelli-ai-on-device-2026
+  - sovranita-digitale-cloud-europeo-2026
+  - memoria-assistenti-ai-2026
+relatedProjects:
+  - codevault
 ---
 
 Se il treno entra in galleria, quasi tutte le app che usi smettono di essere app e diventano schermate di errore. È una scelta di architettura, non una legge di natura: da quindici anni il modo normale di costruire software è mettere i dati su un server e dare al dispositivo una finestra da cui guardarli. Il movimento *local-first* propone di rovesciare quella relazione, e nel 2026 ha smesso di essere un discorso da convegno.

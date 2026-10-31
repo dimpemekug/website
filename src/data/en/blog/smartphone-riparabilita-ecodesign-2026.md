@@ -1,5 +1,6 @@
 ---
 title: "Smartphones that last longer: what the EU ecodesign rules change"
+seoTitle: "Smartphones that last longer: the EU ecodesign rules"
 description: Guaranteed updates for years, available spare parts, tougher batteries, and a label that grades repairability. Just over a year after the EU rules took effect, here's what to look at before buying a phone.
 pubDatetime: 2026-09-03T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - right-to-repair
   - sustainability
 draft: false
+related:
+  - batterie-stato-solido-auto-elettriche-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
+  - satelliti-smartphone-direct-to-cell-2026
 ---
 
 For years, a smartphone's lifespan was decided by three things almost never printed on the box: how long the manufacturer would update the software, how long the battery would hold up, and whether fixing a cracked screen would cost less than buying a new phone. Since June 20, 2025, those factors have been legal requirements in the European Union, and a year on, the phones in stores are starting to show the effects.

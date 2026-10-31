@@ -1,5 +1,6 @@
 ---
 title: "AI-generated video goes viral in 2026 (and gets harder to spot)"
+seoTitle: "AI-generated video goes viral (and gets harder to spot)"
 description: Video generation models have gone from rough, few-second clips to footage that's nearly indistinguishable from real filming. Here's why AI video is one of the most searched topics right now, and what it means for creators, media, and advertising.
 pubDatetime: 2026-04-07T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - video
   - content-creation
 draft: false
+related:
+  - deepfake-verifica-identita-digitale-2026
+  - web-ricerca-ai-risposte-generate
+  - dati-sintetici-addestramento-ai-2026
 ---
 
 Until recently, AI-generated video was easy to spot at a glance: warped hands, unnatural motion, clips that fell apart into visual artifacts after a few seconds. In 2026 that gap has nearly closed. The latest generation of text-to-video models produces coherent scenes with plausible physics and shot-to-shot continuity, to the point where telling real footage apart from generated footage has become a job for specialists.

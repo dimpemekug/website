@@ -7,6 +7,12 @@ tags:
   - hardware
   - networking
 draft: false
+related:
+  - matter-telecamere-casa-intelligente-2026
+  - satelliti-smartphone-direct-to-cell-2026
+  - ai-dispositivi-quotidiani-smart-home
+relatedProjects:
+  - netcalc
 ---
 
 For twenty years, every generation of Wi-Fi arrived with the same argument: a bigger number than the one before. Wi-Fi 8, which reaches shelves over the next few months, breaks the tradition — the theoretical peak stays where Wi-Fi 7 left it, around 23 Gbps — and moves the promise onto different ground: making the connection work well when the signal is weak, the house is full of devices, and you are in the wrong room.

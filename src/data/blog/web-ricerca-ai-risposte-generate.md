@@ -1,5 +1,6 @@
 ---
 title: "Il Web dopo i motori di ricerca: siamo entrati nell'era delle risposte generate dall'AI?"
+seoTitle: "Il Web dopo i motori di ricerca: l'era delle risposte AI"
 description: AI Overviews, ChatGPT Search e Perplexity stanno ridefinendo come troviamo informazioni online. Cosa significa per utenti, siti web e content creator nel 2026.
 pubDatetime: 2026-06-24T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - seo
   - geo
 draft: false
+related:
+  - browser-agentici-ai-2026
+  - video-ai-generativa-2026
+  - memoria-assistenti-ai-2026
 ---
 
 Per oltre vent'anni, "cercare qualcosa online" ha significato una cosa precisa: digitare una query, ricevere una pagina di link blu, cliccarne uno. Quel modello, su cui si è costruita un'intera economia di contenuti e pubblicità, sta cambiando più velocemente di quanto chiunque si aspettasse. Sempre più spesso, la risposta arriva direttamente nella pagina dei risultati — o in una chat — senza bisogno di visitare alcun sito.

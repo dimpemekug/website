@@ -1,5 +1,6 @@
 ---
 title: "Sovranità digitale: cosa significa davvero spostare i dati in Europa"
+seoTitle: "Sovranità digitale: cosa vuol dire spostare i dati in Europa"
 description: Cloud europeo, modelli AI addestrati in casa, requisiti di residenza dei dati. Dietro una parola diventata slogan ci sono scelte tecniche concrete, e compromessi che vale la pena conoscere prima di adottarle.
 pubDatetime: 2026-07-31T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cloud-computing
   - privacy
 draft: false
+related:
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - eudi-wallet-identita-digitale-europea-2026
+  - local-first-app-offline-sincronizzazione-2026
 ---
 
 "Sovranità digitale" è una di quelle espressioni che compaiono ovunque e significano cose diverse a seconda di chi le pronuncia. Per un ente pubblico è un requisito di gara; per un'azienda è una voce in un questionario di conformità; per chi costruisce software è, molto più concretamente, la domanda su dove girino i propri server, chi possa leggere i dati che ci passano e cosa succeda se quel fornitore un giorno cambia condizioni. Nel 2026 la conversazione è uscita dagli uffici legali ed è arrivata sulle decisioni di architettura.

@@ -1,5 +1,6 @@
 ---
 title: "Windows 10, last call: what to do before extended updates end"
+seoTitle: "Windows 10: what to do before extended updates end"
 description: Mainstream support ended in October 2025, and the extended security updates program for home users closes in mid-October 2026. The real options for anyone still on a Windows 10 PC, from moving to Windows 11 to the alternatives.
 pubDatetime: 2026-09-06T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cybersecurity
   - operating-systems
 draft: false
+related:
+  - macos-27-golden-gate-fine-intel-2026
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - smartphone-riparabilita-ecodesign-2026
 ---
 
 A year ago, on October 14, 2025, Windows 10 lost mainstream support. For many people nothing changed, and not out of neglect: Microsoft offered home users a year of Extended Security Updates (ESU), free in Europe for anyone signing in with a Microsoft account. That year of grace ends on October 13, 2026. It's a little over five weeks away, which makes this the right moment to decide calmly rather than find out after the fact.

@@ -1,5 +1,6 @@
 ---
 title: "AI Act, agosto 2026: cosa cambia davvero per chi sviluppa software"
+seoTitle: "AI Act, agosto 2026: cosa cambia per chi sviluppa software"
 description: Da questo mese gli obblighi per i sistemi AI ad alto rischio diventano pienamente applicabili nell'Unione Europea. Non è solo un problema legale — è un problema di architettura, documentazione e processo.
 pubDatetime: 2026-08-10T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - compliance
   - enterprise
 draft: false
+related:
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - data-act-accesso-dati-prodotti-connessi-2026
+  - intelligenza-artificiale-2026-maturita
 ---
 
 Per due anni l'AI Act è stato soprattutto un argomento da conferenza: scadenze lontane, obblighi generici, un regolamento che si sapeva sarebbe arrivato ma che nella pratica quotidiana di chi scrive software toccava in pochi. Questo mese cambia lo status: gli obblighi per i sistemi ad alto rischio diventano pienamente applicabili, e "alto rischio" nel testo copre più cose di quanto ci si aspetti — non solo diagnosi mediche o veicoli autonomi, ma anche selezione del personale, valutazione del credito, gestione di infrastrutture critiche. Se il tuo prodotto tocca una di queste aree, la conformità non è più un esercizio teorico.

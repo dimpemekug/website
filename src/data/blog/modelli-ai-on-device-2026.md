@@ -1,5 +1,6 @@
 ---
 title: "L'AI che gira sul telefono: perché i modelli on-device sono il nuovo trend"
+seoTitle: "AI sul telefono: perché crescono i modelli on-device"
 description: "I produttori di smartphone e laptop stanno spostando sempre più funzioni AI dal cloud al dispositivo. Più privacy, meno latenza e nessuna connessione necessaria: ecco perché i piccoli modelli locali sono diventati un argomento caldissimo."
 pubDatetime: 2026-04-16T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - edge-ai
   - privacy
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - chip-ai-personalizzati-big-tech-2026
+  - local-first-app-offline-sincronizzazione-2026
 ---
 
 Per anni "usare l'AI" ha significato quasi sempre la stessa cosa: mandare una richiesta a un server remoto e aspettare la risposta. Nel 2026 questo schema sta cambiando rapidamente. Smartphone, laptop e perfino alcuni dispositivi indossabili integrano chip pensati apposta per far girare modelli AI compatti direttamente in locale, senza passare dal cloud.

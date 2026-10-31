@@ -1,5 +1,6 @@
 ---
 title: "EUDI Wallet: Europe's identity wallet reaches its deadline in scattered order"
+seoTitle: "EUDI Wallet: Europe's identity wallet reaches its deadline"
 description: "By December 24, 2026, every EU country must offer a digital wallet for identity and documents. Italy's IT-Wallet is among the furthest ahead, while many others will be late. What it does, what it guarantees, and what changes for developers."
 pubDatetime: 2026-10-22T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - compliance
   - mobile
 draft: false
+related:
+  - deepfake-verifica-identita-digitale-2026
+  - passkey-addio-password-2026
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 Two months to go until the date the European digital identity regulation set long ago: by December 24, 2026, every member state must make at least one **European Digital Identity Wallet**, the EUDI Wallet, available to its citizens. It is a phone app that holds identity documents, driving licences, diplomas, and certificates, and lets you prove who you are — online and in person — while showing only what is needed. On paper it is one of the EU's most ambitious digital projects. In practice, the deadline is arriving with countries in very scattered order.

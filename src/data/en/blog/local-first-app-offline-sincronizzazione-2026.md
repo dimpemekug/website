@@ -7,6 +7,12 @@ tags:
   - developer-tools
   - privacy
 draft: false
+related:
+  - modelli-ai-on-device-2026
+  - sovranita-digitale-cloud-europeo-2026
+  - memoria-assistenti-ai-2026
+relatedProjects:
+  - codevault
 ---
 
 When the train enters a tunnel, most of the apps you use stop being apps and turn into error screens. That is an architectural choice, not a law of nature: for fifteen years the normal way to build software has been to put the data on a server and give the device a window to look at it through. The *local-first* movement proposes flipping that relationship, and in 2026 it stopped being a conference topic.

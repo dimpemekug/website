@@ -1,5 +1,6 @@
 ---
 title: "Assistants that remember: what changes when AI stops starting from zero"
+seoTitle: "Assistants that remember: when AI stops starting from zero"
 description: After years of conversations that vanished with every new session, AI assistants are starting to carry around a memory of who you are and what you've already said. It's convenient — but it relocates a question that had so far been easy to postpone.
 pubDatetime: 2026-08-08T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - personalization
   - privacy
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - modelli-ai-on-device-2026
+  - dati-sintetici-addestramento-ai-2026
 ---
 
 For years the most frustrating limit of an AI assistant wasn't how much it knew, but how much it forgot. Every new conversation started from zero: you had to repeat the context, restate your preferences, correct the same mistake you'd already flagged the week before. In 2026 that's changing: more and more assistants now keep a memory that spans sessions, built up over time from what you've said and how you reacted to their answers. The result is more convenient. But it introduces a question that had so far been easy to postpone: where that memory lives, and who decides what goes into it.

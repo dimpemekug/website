@@ -1,5 +1,6 @@
 ---
 title: "Deepfake e verifica d'identità: la nuova corsa alla sicurezza digitale"
+seoTitle: "Deepfake e verifica d'identità: la corsa alla sicurezza"
 description: Con i deepfake sempre più realistici, banche, aziende e piattaforme social stanno correndo a rafforzare i sistemi di verifica dell'identità. Ecco perché l'argomento è in cima alle ricerche del settore cybersecurity nel 2026.
 pubDatetime: 2026-04-24T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cybersecurity
   - digital-identity
 draft: false
+related:
+  - eudi-wallet-identita-digitale-europea-2026
+  - passkey-addio-password-2026
+  - video-ai-generativa-2026
 ---
 
 Una videochiamata con il volto e la voce del proprio amministratore delegato che autorizza un bonifico milionario. Una telefonata che sembra arrivare da un familiare in difficoltà, con la sua voce esatta. Questi non sono più scenari ipotetici: nel 2026 sono diventati casi reali, e il numero di tentativi di frode basati su deepfake è cresciuto abbastanza da spingere banche, aziende e piattaforme a ripensare da zero i propri sistemi di verifica dell'identità.

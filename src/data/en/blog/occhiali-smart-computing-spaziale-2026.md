@@ -1,5 +1,6 @@
 ---
 title: "Smart glasses and spatial computing: the new race after the smartphone"
+seoTitle: "Smart glasses and spatial computing: the race after phones"
 description: From Meta to Apple, the biggest names in tech are betting on smart glasses as the next personal computing platform. Here's what they can actually do today, and what still separates them from the smartphone.
 pubDatetime: 2026-05-25T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - ar-vr
   - spatial-computing
 draft: false
+related:
+  - ai-dispositivi-quotidiani-smart-home
+  - smartphone-riparabilita-ecodesign-2026
+  - world-model-ai-simulazione-2026
 ---
 
 Every few years, the tech industry announces "the next big device after the smartphone," and for a long time that was mostly a promise. In 2026, something shifted: **smart glasses** and devices for so-called **spatial computing** have stopped being trade-show demos and become products people actually buy and use — even if the full revolution is still far from complete.

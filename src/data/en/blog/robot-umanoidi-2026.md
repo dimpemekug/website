@@ -1,5 +1,6 @@
 ---
 title: "Humanoid robots: why 2026 is finally getting them out of the lab"
+seoTitle: "Humanoid robots: why 2026 is getting them out of the lab"
 description: From Tesla Optimus to Figure, humanoid robots are moving past polished demo videos and into real warehouses and factory floors. Here's where things actually stand, and what's still unsolved.
 pubDatetime: 2026-06-30T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - automation
   - manufacturing
 draft: false
+related:
+  - world-model-ai-simulazione-2026
+  - intelligenza-artificiale-agentica-2026
+  - batterie-stato-solido-auto-elettriche-2026
 ---
 
 For years, humanoid robots were mostly a style exercise: glossy videos of prototypes walking, dancing, or opening a door, followed by long stretches of silence before the next announcement. In 2026 that pattern is breaking down. Several companies — from established robotics players to startups founded in just the last three years — have started deploying humanoid robots in real work environments, not just in front of a camera, and the number of operational units in the field is now counted in the thousands.

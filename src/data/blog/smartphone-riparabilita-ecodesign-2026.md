@@ -1,5 +1,6 @@
 ---
 title: "Smartphone che durano di più: cosa cambiano le regole europee sull'ecodesign"
+seoTitle: "Smartphone che durano di più: le regole UE sull'ecodesign"
 description: Aggiornamenti garantiti per anni, ricambi disponibili, batterie più resistenti e un'etichetta che dà un voto alla riparabilità. A poco più di un anno dall'entrata in vigore delle regole UE, cosa conviene guardare prima di comprare un telefono.
 pubDatetime: 2026-09-03T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - right-to-repair
   - sustainability
 draft: false
+related:
+  - batterie-stato-solido-auto-elettriche-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
+  - satelliti-smartphone-direct-to-cell-2026
 ---
 
 Per anni la vita di uno smartphone è stata decisa da tre fattori quasi mai scritti sulla scatola: per quanto tempo il produttore avrebbe aggiornato il software, quanto sarebbe durata la batteria e se, in caso di schermo rotto, ripararlo sarebbe costato meno che ricomprarlo. Dal 20 giugno 2025 nell'Unione Europea quei fattori sono diventati requisiti di legge, e dopo un anno i telefoni che si trovano in negozio iniziano a mostrarne gli effetti.

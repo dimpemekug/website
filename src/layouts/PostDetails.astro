@@ -1,5 +1,5 @@
 ---
-import { render, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -29,6 +29,7 @@ const t = useTranslations(lang);
 
 const {
   title,
+  seoTitle,
   author,
   description,
   ogImage: initOgImage,
@@ -64,7 +65,7 @@ const ogImage = ogImageUrl
   : undefined;
 
 const layoutProps = {
-  title: `${title} | ${SITE.title}`,
+  title: seoTitle ?? (`${title} | ${SITE.title}`.length <= 60 ? `${title} | ${SITE.title}` : title),
   ogTitle: title,
   author,
   description,
@@ -79,6 +80,11 @@ const layoutProps = {
 };
 
 /* ========== Prev/Next Posts ========== */
+
+const relatedPosts = post.data.related.flatMap(id => posts.filter(entry => entry.id === id));
+const relatedProjects = await getCollection(lang === "en" ? "projectsEn" : "projects", ({ id }) =>
+  post.data.relatedProjects.includes(id)
+);
 
 const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
   id,
@@ -275,6 +281,39 @@ const nextPost =
       <!-- Share links -->
       <ShareLinks />
     </div>
+
+    <!-- Related articles -->
+    {
+      (relatedPosts.length > 0 || relatedProjects.length > 0) && (
+        <section class="mt-2" aria-labelledby="related-posts-title">
+          <h2 id="related-posts-title" class="mb-3 text-lg font-semibold text-foreground">
+            {t("posts.related")}
+          </h2>
+          <ul class="space-y-2">
+            {relatedPosts.map(related => (
+              <li>
+                <a
+                  href={`${getPath(related.id, related.filePath, true, lang)}/`}
+                  class="text-foreground/80 underline decoration-border/50 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent/50"
+                >
+                  {related.data.title}
+                </a>
+              </li>
+            ))}
+            {relatedProjects.map(project => (
+              <li>
+                <a
+                  href={lang === "en" ? `/en/projects/${project.id}/` : `/progetti/${project.id}/`}
+                  class="text-foreground/80 underline decoration-border/50 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent/50"
+                >
+                  {project.data.seoTitle ?? project.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <!-- Decorative separator before prev/next -->
     <div class="my-6 flex items-center gap-3" aria-hidden="true">

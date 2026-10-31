@@ -1,5 +1,6 @@
 ---
 title: "World model: l'AI che prova a capire il mondo invece di limitarsi a descriverlo"
+seoTitle: "World model: l'AI che prova a capire il mondo"
 description: Un modello linguistico prevede la parola successiva. Un world model prova a prevedere cosa succede dopo in una scena reale. È una differenza tecnica precisa, ed è il motivo per cui la robotica sta guardando altrove rispetto ai chatbot.
 pubDatetime: 2026-08-07T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - robotics
   - generative-ai
 draft: false
+related:
+  - robot-umanoidi-2026
+  - dati-sintetici-addestramento-ai-2026
+  - intelligenza-artificiale-agentica-2026
 ---
 
 Un modello linguistico è addestrato a prevedere la parola successiva in un testo. Funziona sorprendentemente bene per generare frasi coerenti, ma non ha mai avuto bisogno di sapere che un bicchiere versato si rovescia per gravità, o che un oggetto dietro un altro resta lì anche quando esce dall'inquadratura. Un world model nasce per colmare esattamente quella lacuna: è addestrato a prevedere come evolve una scena — visiva, fisica, spaziale — dato lo stato attuale e un'azione possibile. Non genera testo plausibile, genera la conseguenza plausibile di un evento nel mondo.

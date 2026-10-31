@@ -1,5 +1,6 @@
 ---
 title: "Deepfakes and identity verification: the new race for digital security"
+seoTitle: "Deepfakes and identity verification: the new security race"
 description: As deepfakes get more convincing, banks, companies, and social platforms are racing to harden their identity verification systems. Here's why the topic is at the top of cybersecurity searches in 2026.
 pubDatetime: 2026-04-24T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - cybersecurity
   - digital-identity
 draft: false
+related:
+  - eudi-wallet-identita-digitale-europea-2026
+  - passkey-addio-password-2026
+  - video-ai-generativa-2026
 ---
 
 A video call with the face and voice of a company's own CEO authorizing a multi-million-dollar wire transfer. A phone call that sounds exactly like a relative in distress, using their real voice. These aren't hypothetical scenarios anymore: in 2026 they've become real cases, and the volume of deepfake-based fraud attempts has grown enough to push banks, companies, and platforms to rethink their identity verification systems from the ground up.

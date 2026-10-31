@@ -1,5 +1,6 @@
 ---
 title: "AI Agentica: come gli assistenti intelligenti stanno passando dalle risposte all'azione"
+seoTitle: "AI agentica: dalle risposte degli assistenti all'azione"
 description: Gli agenti AI capaci di pianificare ed eseguire compiti in autonomia sono una delle tendenze tecnologiche più discusse del 2026. Ecco come funzionano e dove si usano già.
 pubDatetime: 2026-06-29T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - llm
 featured: true
 draft: false
+related:
+  - agenti-ai-colleghi-digitali-2026
+  - browser-agentici-ai-2026
+  - prompt-injection-sicurezza-agenti-ai-2026
 ---
 
 Fino a poco tempo fa, un assistente AI faceva una cosa sola: rispondere. Gli davi un prompt, lui produceva testo, e la palla tornava nelle tue mani per ogni singolo passo successivo. Nel 2026 questo schema è ormai la minoranza dei casi d'uso. La tendenza che sta dominando le conversazioni tecniche — dalle conferenze di settore ai team di prodotto delle big tech — è l'**AI agentica**: sistemi che non si limitano a suggerire una risposta, ma pianificano una sequenza di passi, li eseguono usando strumenti reali, valutano il risultato e correggono la rotta da soli.

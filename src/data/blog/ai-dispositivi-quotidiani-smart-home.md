@@ -1,5 +1,6 @@
 ---
 title: "L'intelligenza artificiale entra nei dispositivi quotidiani: dalla Smart TV al frigorifero"
+seoTitle: "AI nei dispositivi quotidiani: dalla Smart TV al frigorifero"
 description: Dai chip NPU nei PC alle smart TV e agli elettrodomestici, l'AI on-device sta uscendo dal cloud per entrare nella vita di tutti i giorni. Ecco cosa cambia per privacy e prestazioni.
 pubDatetime: 2026-06-10T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - iot
   - smart-home
 draft: false
+related:
+  - modelli-ai-on-device-2026
+  - matter-telecamere-casa-intelligente-2026
+  - chip-ai-personalizzati-big-tech-2026
 ---
 
 Quando si parla di intelligenza artificiale, l'immagine che viene in mente è quasi sempre la stessa: un data center enorme, server pieni di GPU, un modello gigantesco da qualche parte nel cloud. Ma negli ultimi mesi una tendenza parallela e meno appariscente sta guadagnando terreno con altrettanta forza: l'AI che gira **direttamente dentro i dispositivi** che usiamo ogni giorno — il telefono, la TV, persino il frigorifero.
@@ -23,7 +28,7 @@ Quando si parla di intelligenza artificiale, l'immagine che viene in mente è qu
 
 ## Cos'è davvero l'edge AI
 
-Si parla di **edge AI** (o AI on-device) quando un modello di intelligenza artificiale viene eseguito localmente, sul dispositivo stesso, invece di inviare i dati a un server remoto per elaborarli e ricevere una risposta. Per anni questo è stato possibile solo per compiti molto semplici, perché i modelli capaci davvero servivano potenza di calcolo che un dispositivo di consumo non poteva offrire.
+Si parla di **edge AI** (o [AI on-device](/posts/modelli-ai-on-device-2026/)) quando un modello di intelligenza artificiale viene eseguito localmente, sul dispositivo stesso, invece di inviare i dati a un server remoto per elaborarli e ricevere una risposta. Per anni questo è stato possibile solo per compiti molto semplici, perché i modelli capaci davvero servivano potenza di calcolo che un dispositivo di consumo non poteva offrire.
 
 Quello che è cambiato è duplice: da un lato i modelli sono diventati più piccoli ed efficienti senza perdere troppa qualità; dall'altro i produttori hanno iniziato a integrare hardware dedicato — le **NPU (Neural Processing Unit)** — pensato apposta per eseguire calcoli di intelligenza artificiale in modo veloce e con consumi energetici molto più contenuti rispetto a una CPU o GPU generica.
 

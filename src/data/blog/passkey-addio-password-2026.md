@@ -1,5 +1,6 @@
 ---
 title: "Passkey: il 2026 è l'anno in cui le password iniziano davvero a sparire"
+seoTitle: "Passkey: nel 2026 le password iniziano davvero a sparire"
 description: Apple, Google e Microsoft hanno reso le passkey il metodo di accesso predefinito sui loro servizi. Ecco come funzionano, perché sono più sicure di una password e cosa cambia per chi gestisce account online.
 pubDatetime: 2026-05-08T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - passkeys
   - passwordless
 draft: false
+related:
+  - eudi-wallet-identita-digitale-europea-2026
+  - deepfake-verifica-identita-digitale-2026
+  - windows-10-fine-aggiornamenti-estesi-2026
 ---
 
 Per decenni la password è stata l'unico vero standard per accedere a un account online, nonostante sia anche uno dei suoi anelli più deboli: riutilizzata, scritta su un foglietto, rubata con un'email di phishing ben fatta. Nel 2026 questo equilibrio sta finalmente cambiando. Le **passkey** sono passate da funzionalità sperimentale a opzione predefinita su gran parte dei servizi più usati, e per la prima volta milioni di persone stanno effettivamente accedendo ai propri account senza digitare nulla.

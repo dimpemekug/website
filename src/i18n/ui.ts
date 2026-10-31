@@ -33,10 +33,11 @@ export const ui = {
     "home.projects_title": "Progetti ed App in evidenza",
     // Posts
     "posts.title": "Articoli",
-    "posts.description": "Note, guide e riflessioni sullo sviluppo.",
+    "posts.description": "Articoli su intelligenza artificiale, sicurezza digitale, privacy e software: cosa cambia davvero per chi usa e sviluppa tecnologia.",
     "posts.read_more": "Leggi →",
     "posts.min_read": "min di lettura",
     "posts.views": "Visualizzazioni",
+    "posts.related": "Articoli correlati",
     // Projects
     "projects.title": "Progetti",
     "projects.description": "App e siti web che ho sviluppato.",
@@ -51,7 +52,7 @@ export const ui = {
     // Search
     "search.title": "Cerca",
     "search.placeholder": "Cerca articoli...",
-    "search.description": "Trova qualsiasi articolo, tutorial o idea nel blog.",
+    "search.description": "Cerca tra tutti gli articoli del sito: intelligenza artificiale, sicurezza digitale, privacy e sviluppo software.",
     "search.aria": "Cerca nel sito",
     "search.close": "Chiudi la ricerca",
     "search.close_label": "chiudi",
@@ -92,7 +93,7 @@ export const ui = {
     "home.terminal_path": "/benvenuti su",
     "home.explore_posts": "Esplora tutti gli articoli",
     // Archives
-    "archives.description": "Un viaggio attraverso tutto ciò che ho pubblicato, organizzato nel tempo.",
+    "archives.description": "Tutti gli articoli pubblicati sul sito in ordine di data: intelligenza artificiale, sicurezza digitale, privacy e software.",
     "archives.year": "anno",
     "archives.years": "anni",
     // Tags
@@ -133,10 +134,11 @@ export const ui = {
     "home.explore_posts": "Explore all posts",
     // Posts
     "posts.title": "Posts",
-    "posts.description": "Notes, guides and reflections on development.",
+    "posts.description": "Articles on artificial intelligence, digital security, privacy, and software: what really changes for people who use and build technology.",
     "posts.read_more": "Read →",
     "posts.min_read": "min read",
     "posts.views": "Views",
+    "posts.related": "Related articles",
     "posts.page": "Page",
     "posts.empty": "No posts yet",
     "posts.empty_desc": "Come back later to read our upcoming articles.",
@@ -154,7 +156,7 @@ export const ui = {
     // Search
     "search.title": "Search",
     "search.placeholder": "Search posts...",
-    "search.description": "Find any article, tutorial, or idea on the blog.",
+    "search.description": "Search every article on the site: artificial intelligence, digital security, privacy, and software development.",
     "search.aria": "Search the site",
     "search.close": "Close search",
     "search.close_label": "close",
@@ -163,7 +165,7 @@ export const ui = {
     "search.navigate_hint": "navigate",
     // Archives
     "archives.title": "Archives",
-    "archives.description": "A journey through everything I've published, organized over time.",
+    "archives.description": "Every article published on the site, by date: artificial intelligence, digital security, privacy, and software.",
     "archives.year": "year",
     "archives.years": "years",
     // Tags

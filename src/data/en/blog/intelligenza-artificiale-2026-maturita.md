@@ -1,5 +1,6 @@
 ---
 title: "From hype to results: will 2026 really be the year AI grows up?"
+seoTitle: "From hype to results: is 2026 the year AI grows up?"
 description: Companies and developers are shifting from experimentation to concrete, measurable use cases. We look at the data, the obstacles, and the signals pointing to AI maturity in 2026.
 pubDatetime: 2026-06-02T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - roi
 featured: true
 draft: false
+related:
+  - agenti-ai-colleghi-digitali-2026
+  - ai-act-obblighi-alto-rischio-2026
+  - ai-energia-nucleare-2026
 ---
 
 Every January for the past few years has arrived with the same prediction: "this will be the year artificial intelligence stops being an experiment and becomes a measurable business outcome." It's been said so often it's nearly become a cliché. And yet, looking at the data and the projects actually running in production in 2026, something genuinely different seems to have happened: the center of gravity has shifted from "what can AI do?" to "how much value has it actually generated so far?"

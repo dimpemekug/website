@@ -12,7 +12,7 @@ const projects = (await getCollection("projectsEn", ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
 ---
 
-<Layout title={`Projects | ${SITE.title}`} description="Apps and websites I have built.">
+<Layout title={`Projects | ${SITE.title}`} description="Free apps for iPhone, iPad, Mac and Android, with no ads or in-app purchases, plus websites built with privacy in mind.">
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-4">

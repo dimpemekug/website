@@ -1,5 +1,6 @@
 ---
 title: "Smartphone via satellite: quando il segnale arriva dallo spazio"
+seoTitle: "Smartphone via satellite: il segnale arriva dallo spazio"
 description: "Messaggi, posizione e più avanti anche dati, senza un'antenna a terra nel raggio di chilometri: il collegamento diretto tra satelliti e telefoni comuni esce dalla fase sperimentale. Cosa funziona già, cosa no, e perché conta anche in città."
 pubDatetime: 2026-08-31T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - connectivity
   - mobile
 draft: false
+related:
+  - wifi-8-router-affidabilita-2026
+  - smartphone-riparabilita-ecodesign-2026
+  - occhiali-smart-computing-spaziale-2026
 ---
 
 Per decenni il telefono satellitare è stato un oggetto per spedizioni polari e navi in mezzo all'oceano: grosso, costoso, con un'antenna ingombrante e un abbonamento a parte. Oggi la stessa funzione sta arrivando, in forma ridotta, dentro gli smartphone che abbiamo già in tasca. Non per telefonare dal deserto, almeno non ancora, ma per qualcosa di più semplice e spesso più importante: mandare un messaggio quando le antenne a terra non ci sono.

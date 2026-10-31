@@ -1,5 +1,6 @@
 ---
 title: "The Web after search engines: have we entered the era of AI-generated answers?"
+seoTitle: "The Web after search engines: the era of AI answers"
 description: AI Overviews, ChatGPT Search, and Perplexity are redefining how we find information online. What it means for users, websites, and content creators in 2026.
 pubDatetime: 2026-06-24T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - seo
   - geo
 draft: false
+related:
+  - browser-agentici-ai-2026
+  - video-ai-generativa-2026
+  - memoria-assistenti-ai-2026
 ---
 
 For more than two decades, "searching for something online" meant one specific thing: type a query, get a page of blue links, click one. That model — on top of which an entire economy of content and advertising was built — is changing faster than almost anyone expected. More and more often, the answer now shows up directly on the results page, or inside a chat, with no need to visit a website at all.

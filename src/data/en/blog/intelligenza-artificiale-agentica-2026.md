@@ -1,5 +1,6 @@
 ---
 title: "Agentic AI: how intelligent assistants are moving from answers to action"
+seoTitle: "Agentic AI: how assistants move from answers to action"
 description: AI agents that can plan and execute multi-step tasks on their own are one of the defining tech trends of 2026. Here's how they work and where they're already in use.
 pubDatetime: 2026-06-29T08:00:00Z
 tags:
@@ -8,6 +9,10 @@ tags:
   - llm
 featured: true
 draft: false
+related:
+  - agenti-ai-colleghi-digitali-2026
+  - browser-agentici-ai-2026
+  - prompt-injection-sicurezza-agenti-ai-2026
 ---
 
 Until recently, an AI assistant did one thing: answer. You gave it a prompt, it produced text, and the ball came back to you for every single next step. In 2026 that pattern is now a minority of real-world use cases. The trend dominating technical conversations — from industry conferences to product teams at every major tech company — is **agentic AI**: systems that don't just suggest an answer, but plan a sequence of steps, execute them using real tools, evaluate the outcome, and correct course on their own.

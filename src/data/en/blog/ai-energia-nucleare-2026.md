@@ -1,5 +1,6 @@
 ---
 title: "AI's energy hunger is putting nuclear power back on the table"
+seoTitle: "AI's energy hunger puts nuclear power back on the table"
 description: The data centers that train and run AI models are consuming power at a pace never seen before. Here's why big tech companies are now signing direct deals with nuclear plants and small modular reactors.
 pubDatetime: 2026-06-30T09:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - nuclear-energy
   - data-centers
 draft: false
+related:
+  - chip-ai-personalizzati-big-tech-2026
+  - intelligenza-artificiale-2026-maturita
+  - sovranita-digitale-cloud-europeo-2026
 ---
 
 There's a detail that rarely shows up in announcements about new AI models: how much energy it takes to train and run them. In 2026, that detail has become impossible to ignore. The growing compute demand for AI is straining power grids in several regions, to the point where some major tech companies have stopped relying solely on buying certified renewable energy and started signing direct deals with nuclear plant operators instead.

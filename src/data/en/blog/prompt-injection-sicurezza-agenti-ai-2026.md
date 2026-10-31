@@ -1,5 +1,6 @@
 ---
 title: "Prompt injection: the AI agent vulnerability no patch can close"
+seoTitle: "Prompt injection: the AI agent flaw no patch can close"
 description: When an assistant reads emails, web pages, and documents, any text can turn into a command. Why prompt injection has become the main security problem of systems built on language models, and how to limit the damage.
 pubDatetime: 2026-09-09T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - llm
   - ai-agents
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - browser-agentici-ai-2026
+  - cyber-resilience-act-segnalazione-vulnerabilita-2026
 ---
 
 Twenty years ago, computing learned an expensive lesson: never mix data and commands. SQL injection existed because a text field typed by a user could end up executed as an instruction by the database. Language models have brought that problem back to center stage, with an awkward twist: for an LLM, instructions and data are by design the same thing. It's all text.

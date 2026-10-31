@@ -1,5 +1,6 @@
 ---
 title: "AI is moving into everyday devices: from the Smart TV to the fridge"
+seoTitle: "AI in everyday devices: from the Smart TV to the fridge"
 description: From NPU chips in PCs to smart TVs and home appliances, on-device AI is leaving the cloud behind and becoming part of everyday life. Here's what changes for privacy and performance.
 pubDatetime: 2026-06-10T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - iot
   - smart-home
 draft: false
+related:
+  - modelli-ai-on-device-2026
+  - matter-telecamere-casa-intelligente-2026
+  - chip-ai-personalizzati-big-tech-2026
 ---
 
 When people talk about artificial intelligence, the image that comes to mind is almost always the same: a massive data center, racks full of GPUs, a giant model running somewhere in the cloud. But over the past few months, a parallel and far less flashy trend has been gaining just as much momentum: AI running **directly inside the devices** we use every day — the phone, the TV, even the fridge.
@@ -23,7 +28,7 @@ When people talk about artificial intelligence, the image that comes to mind is 
 
 ## What edge AI actually is
 
-**Edge AI** (or on-device AI) refers to running an artificial intelligence model locally, on the device itself, instead of sending data to a remote server to process it and wait for a response. For years this was only feasible for very simple tasks, because models capable of anything more demanding needed computing power no consumer device could offer.
+**Edge AI** (or [on-device AI](/en/posts/modelli-ai-on-device-2026/)) refers to running an artificial intelligence model locally, on the device itself, instead of sending data to a remote server to process it and wait for a response. For years this was only feasible for very simple tasks, because models capable of anything more demanding needed computing power no consumer device could offer.
 
 What's changed is twofold: on one hand, models have become smaller and more efficient without losing too much quality; on the other, manufacturers have started integrating dedicated hardware — **NPUs (Neural Processing Units)** — built specifically to run AI workloads quickly and at a fraction of the power draw of a general-purpose CPU or GPU.
 

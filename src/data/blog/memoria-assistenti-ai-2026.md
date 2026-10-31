@@ -1,5 +1,6 @@
 ---
 title: "Assistenti che ricordano: cosa cambia quando l'AI non riparte mai da zero"
+seoTitle: "Assistenti che ricordano: quando l'AI non riparte da zero"
 description: Dopo anni di conversazioni che finivano nel nulla a ogni sessione, gli assistenti AI iniziano a portarsi dietro un ricordo di chi sei e di cosa hai già detto. È comodo, ma sposta altrove una domanda che finora si era rimandata.
 pubDatetime: 2026-08-08T08:00:00Z
 tags:
@@ -7,6 +8,10 @@ tags:
   - personalization
   - privacy
 draft: false
+related:
+  - intelligenza-artificiale-agentica-2026
+  - modelli-ai-on-device-2026
+  - dati-sintetici-addestramento-ai-2026
 ---
 
 Per anni il limite più frustrante di un assistente AI non è stato quanto sapesse, ma quanto dimenticasse. Ogni nuova conversazione ripartiva da zero: bisognava ripetere il contesto, ricordare le preferenze, correggere di nuovo lo stesso errore già segnalato la settimana prima. Nel 2026 questo sta cambiando: sempre più assistenti mantengono una memoria che attraversa le sessioni, costruita nel tempo a partire da ciò che hai detto e da come hai reagito alle risposte. Il risultato è più comodo. Ma introduce una domanda che finora si era potuta rimandare: dove vive quel ricordo, e chi decide cosa contiene.
