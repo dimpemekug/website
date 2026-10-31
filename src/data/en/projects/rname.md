@@ -2,6 +2,7 @@
 title: "rName"
 seoTitle: "rName: Batch Rename Files on Mac"
 applicationCategory: "UtilitiesApplication"
+seoDescription: "Batch rename files on your Mac with eight combinable rules, a live preview, and undo. Offline, no account. Free, with no ads or in-app purchases."
 description: "Mac app to batch rename files: eight rules to combine, an always-visible preview, conflict checks, and undo. Fully offline, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-09-18T00:00:00+02:00
 draft: false

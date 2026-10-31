@@ -1,6 +1,7 @@
 ---
 title: "Windows 10, ultimo giro: cosa fare prima della fine degli aggiornamenti estesi"
 seoTitle: "Windows 10: cosa fare prima della fine degli aggiornamenti"
+seoDescription: "Il supporto ordinario è finito a ottobre 2025 e il programma di aggiornamenti di sicurezza estesi per i privati si chiude a metà ottobre 2026."
 description: Il supporto ordinario è finito a ottobre 2025 e il programma di aggiornamenti di sicurezza estesi per i privati si chiude a metà ottobre 2026. Le opzioni reali per chi ha ancora un PC con Windows 10, dal passaggio a Windows 11 alle alternative.
 pubDatetime: 2026-09-06T08:00:00Z
 tags:

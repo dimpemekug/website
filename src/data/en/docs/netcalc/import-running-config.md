@@ -1,6 +1,6 @@
 ---
 title: "Running-Config Import & Comparison"
-description: "How to import, parse, and compare live Cisco IOS running configurations in NetCalc Pro: device reconstruction, stanza-by-stanza Config Diff, and missing command copying."
+description: "How to import and compare live Cisco IOS configurations in NetCalc Pro: device reconstruction, Config Diff, and missing command copying."
 project: "netcalc"
 order: 6
 section: "Cisco IOS Integration"

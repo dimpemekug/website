@@ -1,6 +1,7 @@
 ---
 title: "Prompt injection: la vulnerabilità degli agenti AI che non si chiude con una patch"
 seoTitle: "Prompt injection: la falla degli agenti AI senza patch"
+seoDescription: "Quando un assistente legge email, pagine web e documenti, qualsiasi testo può trasformarsi in un ordine."
 description: Quando un assistente legge email, pagine web e documenti, qualsiasi testo può trasformarsi in un ordine. Perché la prompt injection è diventata il problema di sicurezza principale dei sistemi basati su modelli linguistici, e come limitarne i danni.
 pubDatetime: 2026-09-09T08:00:00Z
 tags:

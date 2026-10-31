@@ -1,6 +1,7 @@
 ---
 title: "Prompt injection: the AI agent vulnerability no patch can close"
 seoTitle: "Prompt injection: the AI agent flaw no patch can close"
+seoDescription: "When an assistant reads emails, web pages, and documents, any text can turn into a command."
 description: When an assistant reads emails, web pages, and documents, any text can turn into a command. Why prompt injection has become the main security problem of systems built on language models, and how to limit the damage.
 pubDatetime: 2026-09-09T08:00:00Z
 tags:

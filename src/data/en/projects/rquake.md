@@ -2,6 +2,7 @@
 title: "rQuake"
 seoTitle: "rQuake: Earthquakes in Italy and Worldwide"
 applicationCategory: "ReferenceApplication"
+seoDescription: "Earthquakes in Italy (INGV) and worldwide on iPhone and iPad, with estimated shaking, faults on the map, and alerts. Free, with no ads."
 description: "iPhone and iPad app showing earthquakes in Italy (INGV) and worldwide (USGS, EMSC or GFZ GEOFON), with estimated shaking, seismic sequences, an archive, faults on the map and alerts. Free, with no ads or in-app purchases."
 pubDatetime: 2026-10-22T00:00:00+02:00
 draft: false

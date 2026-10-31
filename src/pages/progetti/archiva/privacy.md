@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - Archiva"
-description: "Informativa completa sulla privacy dell'app Archiva: quali dati vengono trattati e perché archivi e file non lasciano mai il Mac e come vengono gestite le password."
+description: "Privacy dell'app Archiva: quali dati vengono trattati e perché archivi e file non lasciano mai il Mac e come vengono gestite le password."
 ---
 
 Ultimo aggiornamento: 8 ottobre 2026

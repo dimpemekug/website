@@ -1,6 +1,6 @@
 ---
 title: "Elenco, filtri e fonti"
-description: "La scheda Terremoti di rQuake: ultimo evento, riepilogo, filtri per area, magnitudo e periodo, ricerca, ordinamento, aggiornamento e scelta della fonte per il resto del mondo."
+description: "La scheda Terremoti di rQuake: ultimo evento, riepilogo, filtri per area, magnitudo e periodo, ricerca, ordinamento e scelta della fonte."
 project: "rquake"
 order: 2
 section: "Guide d'uso"

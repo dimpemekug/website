@@ -2,6 +2,7 @@
 title: "rManga"
 seoTitle: "rManga: lettore di manga e fumetti per iPhone e iPad"
 applicationCategory: "EntertainmentApplication"
+seoDescription: "Leggi manga, fumetti e libri su iPhone e iPad: file locali, server Komga, Kavita e Jellyfin e cataloghi OPDS. In beta su TestFlight, gratuita."
 description: "Lettore per iPhone e iPad di manga, fumetti, libri e serie animate: i tuoi file, i tuoi server Komga, Kavita, Suwayomi e Jellyfin e i cataloghi OPDS, in un'unica libreria. In beta su TestFlight. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

@@ -1,6 +1,7 @@
 ---
 title: "Synthetic data: AI increasingly trained on data it generated itself"
 seoTitle: "Synthetic data: AI trained on data it generated itself"
+seoDescription: "The web's supply of human-written text no longer satisfies the biggest models' appetite for data."
 description: The web's supply of human-written text no longer satisfies the biggest models' appetite for data. The industry's answer is to generate the missing data with AI itself — a convenient fix that carries a risk rarely discussed.
 pubDatetime: 2026-08-06T08:00:00Z
 tags:

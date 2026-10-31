@@ -1,6 +1,7 @@
 ---
 title: "Matter e le telecamere: l'ultimo silo della casa intelligente sta cedendo"
 seoTitle: "Matter e telecamere: l'ultimo silo della casa intelligente"
+seoDescription: "Con Matter 1.5 telecamere e videocitofoni entrano nello standard comune della casa connessa."
 description: "Con Matter 1.5 telecamere e videocitofoni entrano nello standard comune della casa connessa. Cosa significa per chi ha già lampadine e termostati di marche diverse, perché il video resta il pezzo più difficile e cosa controllare prima di comprare."
 pubDatetime: 2026-09-17T08:00:00Z
 tags:

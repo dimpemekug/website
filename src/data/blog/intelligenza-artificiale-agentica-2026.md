@@ -1,6 +1,7 @@
 ---
 title: "AI Agentica: come gli assistenti intelligenti stanno passando dalle risposte all'azione"
 seoTitle: "AI agentica: dalle risposte degli assistenti all'azione"
+seoDescription: "Gli agenti AI capaci di pianificare ed eseguire compiti in autonomia sono una delle tendenze tecnologiche più discusse del 2026."
 description: Gli agenti AI capaci di pianificare ed eseguire compiti in autonomia sono una delle tendenze tecnologiche più discusse del 2026. Ecco come funzionano e dove si usano già.
 pubDatetime: 2026-06-29T08:00:00Z
 tags:

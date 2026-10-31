@@ -1,6 +1,7 @@
 ---
 title: "Smartphones that last longer: what the EU ecodesign rules change"
 seoTitle: "Smartphones that last longer: the EU ecodesign rules"
+seoDescription: "Guaranteed updates for years, available spare parts, tougher batteries, and a label that grades repairability."
 description: Guaranteed updates for years, available spare parts, tougher batteries, and a label that grades repairability. Just over a year after the EU rules took effect, here's what to look at before buying a phone.
 pubDatetime: 2026-09-03T08:00:00Z
 tags:

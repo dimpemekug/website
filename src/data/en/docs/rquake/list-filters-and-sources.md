@@ -1,6 +1,6 @@
 ---
 title: "List, filters and sources"
-description: "rQuake's Earthquakes tab: latest event, summary, filters by area, magnitude and period, search, sorting, refreshing and the choice of source for the rest of the world."
+description: "rQuake's Earthquakes tab: latest event, summary, filters by area, magnitude and period, search, sorting, and the choice of data source."
 project: "rquake"
 order: 2
 section: "User Guides"

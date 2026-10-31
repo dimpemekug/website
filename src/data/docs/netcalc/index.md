@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a NetCalc Pro"
-description: "Panoramica di NetCalc Pro per Mac, iPad e iPhone: calcolo IPv4/IPv6, pianificatore subnetting e VLSM, quattro strumenti di rete, generatore di configurazioni Cisco IOS, topologia e linter."
+description: "Panoramica di NetCalc Pro per Mac, iPad e iPhone: calcolo IPv4/IPv6, subnetting e VLSM, strumenti di rete, comandi Cisco IOS, topologia e linter."
 project: "netcalc"
 order: 1
 section: "Iniziare"

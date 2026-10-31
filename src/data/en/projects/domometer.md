@@ -2,6 +2,7 @@
 title: "DomoMeter"
 seoTitle: "DomoMeter: Track Electricity, Gas and Water Use"
 applicationCategory: "UtilitiesApplication"
+seoDescription: "Track electricity, gas, and water use on iPhone, iPad, and Android, with time bands and charts. Data stays on your device. Free, with no ads."
 description: "App for iPhone, iPad and Android to keep track of electricity, gas and water use from your meter readings, with F1/F2/F3 bands, charts and yearly limits. Data on your device, no account. Free, with no ads or in-app purchases."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false

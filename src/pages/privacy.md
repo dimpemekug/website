@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy"
-description: "Come il sito dimpemekug.com tratta i dati di chi lo visita: niente cookie e niente strumenti di analisi, solo i log tecnici dell'hosting, le immagini degli articoli e i messaggi email."
+description: "Come dimpemekug.com tratta i dati di chi lo visita: niente cookie né analisi, solo log tecnici dell'hosting, immagini degli articoli e messaggi email."
 ---
 
 Ultimo aggiornamento: 22 ottobre 2026

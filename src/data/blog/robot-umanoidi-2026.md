@@ -1,6 +1,7 @@
 ---
 title: "Robot umanoidi: perché il 2026 li sta facendo uscire dai laboratori"
 seoTitle: "Robot umanoidi: perché nel 2026 escono dai laboratori"
+seoDescription: "Da Tesla Optimus a Figure, i robot umanoidi stanno lasciando i video dimostrativi per entrare in magazzini e fabbriche reali."
 description: Da Tesla Optimus a Figure, i robot umanoidi stanno lasciando i video dimostrativi per entrare in magazzini e fabbriche reali. Ecco a che punto siamo davvero e cosa resta da risolvere.
 pubDatetime: 2026-06-30T08:00:00Z
 tags:

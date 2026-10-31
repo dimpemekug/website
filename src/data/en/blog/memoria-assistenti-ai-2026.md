@@ -1,6 +1,7 @@
 ---
 title: "Assistants that remember: what changes when AI stops starting from zero"
 seoTitle: "Assistants that remember: when AI stops starting from zero"
+seoDescription: "AI assistants are starting to remember who you are and what you've said. It's convenient, but it raises a question that was easy to postpone."
 description: After years of conversations that vanished with every new session, AI assistants are starting to carry around a memory of who you are and what you've already said. It's convenient — but it relocates a question that had so far been easy to postpone.
 pubDatetime: 2026-08-08T08:00:00Z
 tags:

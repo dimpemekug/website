@@ -1,6 +1,6 @@
 ---
 title: "Progetti, Topologia ed Esportazione"
-description: "Gestione dei progetti di laboratorio in NetCalc Pro, diagramma di topologia automatico, report PDF con CoreGraphics, esportazione CSV/TXT e sincronizzazione CloudKit."
+description: "Progetti di laboratorio in NetCalc Pro: diagramma di topologia, report PDF, esportazione CSV/TXT e sincronizzazione CloudKit."
 project: "netcalc"
 order: 8
 section: "Gestione e Condivisione"

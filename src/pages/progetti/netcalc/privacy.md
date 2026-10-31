@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - NetCalc Pro"
-description: "Informativa completa sulla privacy dell'app NetCalc Pro: quali dati vengono trattati e perché calcoli e progetti restano sui tuoi dispositivi e nel tuo iCloud privato."
+description: "Privacy dell'app NetCalc Pro: quali dati vengono trattati e perché calcoli e progetti restano sui tuoi dispositivi e nel tuo iCloud privato."
 ---
 
 Ultimo aggiornamento: 14 ottobre 2026

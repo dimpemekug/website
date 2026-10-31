@@ -1,6 +1,7 @@
 ---
 title: "Smart glasses and spatial computing: the new race after the smartphone"
 seoTitle: "Smart glasses and spatial computing: the race after phones"
+seoDescription: "From Meta to Apple, the biggest names in tech are betting on smart glasses as the next personal computing platform."
 description: From Meta to Apple, the biggest names in tech are betting on smart glasses as the next personal computing platform. Here's what they can actually do today, and what still separates them from the smartphone.
 pubDatetime: 2026-05-25T08:00:00Z
 tags:

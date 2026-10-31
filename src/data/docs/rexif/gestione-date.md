@@ -1,6 +1,6 @@
 ---
 title: "Gestione e correzione delle date"
-description: "Spostamento di intervalli, correzione dell'orologio della fotocamera, date dai nomi dei file o da Google Takeout e allineamento delle date del file system in rExif."
+description: "Spostamento di intervalli, correzione dell'orologio della fotocamera, date dai nomi dei file o da Google Takeout e date del file system in rExif."
 project: "rexif"
 order: 3
 section: "Guide d'uso"

@@ -2,6 +2,7 @@
 title: "rMux"
 seoTitle: "rMux: taglia, converti e unisci video su Mac"
 applicationCategory: "MultimediaApplication"
+seoDescription: "Taglia, converti e unisci video sul Mac, senza ricodificare quando possibile. Tracce audio e sottotitoli, offline, gratuita e senza pubblicità."
 description: "App per Mac per tagliare, convertire e unire video, senza ricodificare quando possibile. Tracce audio, sottotitoli, ritaglio, filtri e coda di lavoro. Completamente offline e senza account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-09-14T00:00:00+02:00
 draft: false

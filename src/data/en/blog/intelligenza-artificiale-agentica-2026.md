@@ -1,6 +1,7 @@
 ---
 title: "Agentic AI: how intelligent assistants are moving from answers to action"
 seoTitle: "Agentic AI: how assistants move from answers to action"
+seoDescription: "AI agents that can plan and execute multi-step tasks on their own are one of the defining tech trends of 2026."
 description: AI agents that can plan and execute multi-step tasks on their own are one of the defining tech trends of 2026. Here's how they work and where they're already in use.
 pubDatetime: 2026-06-29T08:00:00Z
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Video generato dall'AI: nel 2026 diventa virale (e indistinguibile)"
 seoTitle: "Video generato dall'AI: virale e indistinguibile nel 2026"
+seoDescription: "I modelli di generazione video sono passati da clip di pochi secondi e poco realistiche a contenuti quasi indistinguibili da un girato reale."
 description: I modelli di generazione video sono passati da clip di pochi secondi e poco realistiche a contenuti quasi indistinguibili da un girato reale. Ecco perché l'AI video è uno degli argomenti più cercati del momento e cosa significa per creator, media e pubblicità.
 pubDatetime: 2026-04-07T08:00:00Z
 tags:

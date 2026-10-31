@@ -1,5 +1,6 @@
 ---
 title: "Smartphones via satellite: when the signal comes from space"
+seoDescription: "Messages, location, and eventually data, with no ground antenna for miles around."
 description: Messages, location, and eventually data, with no ground antenna for miles around. Direct links between satellites and ordinary phones are leaving the experimental phase. What already works, what doesn't, and why it matters even for city dwellers.
 pubDatetime: 2026-08-31T08:00:00Z
 tags:

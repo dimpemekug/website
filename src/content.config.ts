@@ -16,6 +16,7 @@ const blogSchema = ({ image }: SchemaContext) =>
     modDatetime: z.date().optional().nullable(),
     title: z.string(),
     seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
     related: z.array(z.string()).default([]),
     relatedProjects: z.array(z.string()).default([]),
     featured: z.boolean().optional(),
@@ -55,6 +56,7 @@ const galleries = defineCollection({
 const projectSchema = z.object({
   title: z.string(),
   seoTitle: z.string().optional(),
+  seoDescription: z.string().optional(),
   applicationCategory: z.string().optional(),
   description: z.string(),
   pubDatetime: z.date(),

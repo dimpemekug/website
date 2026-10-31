@@ -1,5 +1,6 @@
 ---
 title: "Local-first: apps that work offline and sync later"
+seoDescription: "Data on the device, the server as a copy: what local-first means in 2026, what you gain, and where it still hurts."
 description: Data on the device, the server as a copy rather than an owner. After years of prototypes, 2026 finds local-first with mature libraries, sync engines in production, and its own track at FOSDEM. What it means, what you gain, and where it still hurts.
 pubDatetime: 2026-09-14T08:00:00Z
 tags:

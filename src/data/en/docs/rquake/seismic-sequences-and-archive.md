@@ -1,6 +1,6 @@
 ---
 title: "Seismic sequences and archive"
-description: "How rQuake groups shocks into sequences with the Gardner and Knopoff method, and how to use the archive with well-known earthquakes and the search by area, dates and magnitude."
+description: "How rQuake groups shocks into sequences with the Gardner and Knopoff method, and how to use the archive and search by area, dates, and magnitude."
 project: "rquake"
 order: 5
 section: "Features"

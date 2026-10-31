@@ -1,6 +1,7 @@
 ---
 title: "Digital coworkers: what changes when an AI agent has an account like yours"
 seoTitle: "AI agents as coworkers: what changes with their own account"
+seoDescription: "An AI agent with a calendar, an inbox, and access to internal systems: what it actually means to bring one onto a team."
 description: No longer a tool you open when you need it, but an identity that works autonomously inside the organization, with a calendar, an inbox, and access to internal systems. What it actually means to bring an AI agent onto a team.
 pubDatetime: 2026-08-09T08:00:00Z
 tags:

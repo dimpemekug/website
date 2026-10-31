@@ -1,6 +1,6 @@
 ---
 title: "Local Library and Supported Formats"
-description: "How to import manga, ebooks and videos with the Files app, how to organize folders and which formats are supported: CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, MP4 and more."
+description: "How to import manga, ebooks and videos with the Files app, organize folders, and which formats are supported: CBZ, CBR, EPUB, PDF, MKV, MP4 and more."
 project: "rmanga"
 order: 2
 section: "Library"

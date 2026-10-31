@@ -1,6 +1,7 @@
 ---
 title: "Digital sovereignty: what moving your data to Europe actually means"
 seoTitle: "Digital sovereignty: what moving data to Europe really means"
+seoDescription: "European cloud, in-house models, data residency: the concrete choices and trade-offs behind a word that has become a slogan."
 description: European cloud, models trained in-house, data residency requirements. Behind a word that has become a slogan sit concrete technical choices — and trade-offs worth understanding before adopting them.
 pubDatetime: 2026-07-31T08:00:00Z
 tags:

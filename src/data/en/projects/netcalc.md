@@ -2,6 +2,7 @@
 title: "NetCalc Pro"
 seoTitle: "NetCalc Pro: IPv4/IPv6 Subnet Calculator for iPhone and Mac"
 applicationCategory: "DeveloperApplication"
+seoDescription: "IPv4/IPv6 calculators, VLSM planning, Cisco IOS commands, and topology diagrams on iPhone, iPad, and Mac. Free, with no ads or in-app purchases."
 description: "Networking app for iPhone, iPad, and Mac: IPv4/IPv6 calculators, four advanced tools, VLSM planning, Cisco IOS with advanced switching, topology diagram, and lab linter. Free, with no ads or in-app purchases."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

@@ -1,8 +1,10 @@
 ---
 title: "The AI Act, August 2026: what actually changes for developers"
 seoTitle: "The AI Act, August 2026: what changes for developers"
-description: As of this month, obligations for high-risk AI systems become fully applicable across the European Union. It isn't just a legal problem anymore — it's a problem of architecture, documentation, and process.
+seoDescription: "The Digital Omnibus delays high-risk AI obligations to December 2027, but the work stays the same: architecture, documentation, and process."
+description: Obligations for high-risk AI systems have slipped to December 2027, but the work remains. It isn't just a legal problem anymore — it's a problem of architecture, documentation, and process.
 pubDatetime: 2026-08-10T08:00:00Z
+modDatetime: 2026-10-31T08:00:00Z
 tags:
   - ai-regulation
   - compliance
@@ -14,7 +16,7 @@ related:
   - intelligenza-artificiale-2026-maturita
 ---
 
-For two years the AI Act was mostly a conference topic: distant deadlines, generic obligations, a regulation everyone knew was coming but that touched few people's day-to-day work writing software. That status changes this month: obligations for high-risk systems become fully applicable, and "high-risk" in the text covers more than most expect — not just medical diagnostics or autonomous vehicles, but hiring screening, credit scoring, and management of critical infrastructure. If your product touches one of these areas, compliance stops being a theoretical exercise.
+For two years the AI Act was mostly a conference topic: distant deadlines, generic obligations, a regulation everyone knew was coming but that touched few people's day-to-day work writing software. The calendar has now changed: the Digital Omnibus, Regulation (EU) 2026/1744, moved the obligations for high-risk systems from August 2, 2026 to December 2, 2027, and to August 2, 2028 for those embedded in regulated products. Most transparency obligations, on the other hand, apply from August 2, 2026. The delay moves the deadline, not the work: "high-risk" in the text covers more than most expect — not just medical diagnostics or autonomous vehicles, but hiring screening, credit scoring, and management of critical infrastructure. If your product touches one of these areas, compliance stops being a theoretical exercise.
 
 <figure>
   <img
@@ -22,7 +24,7 @@ For two years the AI Act was mostly a conference topic: distant deadlines, gener
     alt="Low-angle view of the pediment and columns of an institutional building"
   />
   <figcaption class="text-center">
-    The text of the regulation arrived years ago. What arrives now are the practical consequences of ignoring it.
+    The text of the regulation arrived years ago. The practical consequences of ignoring it are only postponed.
   </figcaption>
 </figure>
 

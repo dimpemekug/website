@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - rMux"
-description: "Informativa completa sulla privacy dell'app rMux: quali dati vengono trattati, come vengono gestiti i video e perché nessun dato lascia il Mac."
+description: "Privacy dell'app rMux: quali dati vengono trattati, come vengono gestiti i video e perché nessun dato lascia il Mac."
 ---
 
 Ultimo aggiornamento: 17 settembre 2026

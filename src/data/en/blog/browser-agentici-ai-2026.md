@@ -1,5 +1,6 @@
 ---
 title: "Agentic browsers: the AI that browses the web for you"
+seoDescription: "The new generation of AI-powered browsers doesn't just answer questions. It clicks, fills out forms, and completes purchases on your behalf."
 description: The new generation of AI-powered browsers doesn't just answer questions. It clicks, fills out forms, and completes purchases on your behalf. Here's how they actually work, and where they still trip up.
 pubDatetime: 2026-07-10T08:00:00Z
 tags:

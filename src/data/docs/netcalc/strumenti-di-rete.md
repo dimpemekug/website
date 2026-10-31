@@ -1,6 +1,6 @@
 ---
 title: "Strumenti di Rete Avanzati"
-description: "Guida ai quattro strumenti di NetCalc Pro: Route Summary con comandi Cisco, convertitore Intervallo a CIDR con ACL, simulatore Wildcard e ACL, e confronto reti con Longest Prefix Match."
+description: "I quattro strumenti di NetCalc Pro: Route Summary, convertitore Intervallo a CIDR, simulatore Wildcard e ACL e confronto reti con Longest Prefix Match."
 project: "netcalc"
 order: 4
 section: "Strumenti e Calcolo"

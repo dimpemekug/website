@@ -1,6 +1,6 @@
 ---
 title: "Pianificazione VLSM Best-Fit"
-description: "Algoritmo best-fit descending in NetCalc Pro: pianificazione a lunghezza variabile, allocazione efficiente dello spazio IP, calcolo dello spreco, mappa scalabile e generazione automatica di topologie interconnesse."
+description: "Algoritmo best-fit descending in NetCalc Pro: pianificazione a lunghezza variabile, calcolo dello spreco, mappa scalabile e topologie interconnesse."
 project: "netcalc"
 order: 3
 section: "Calcolo e Pianificazione"

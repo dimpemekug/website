@@ -1,6 +1,7 @@
 ---
 title: "Dati sintetici: l'AI che si allena sempre più su dati che ha generato da sola"
 seoTitle: "Dati sintetici: l'AI che si allena su dati generati da sola"
+seoDescription: "Il web di testo scritto da persone non basta più a soddisfare la fame di dati dei modelli più grandi."
 description: Il web di testo scritto da persone non basta più a soddisfare la fame di dati dei modelli più grandi. La risposta dell'industria è generare i dati mancanti con l'AI stessa — una soluzione comoda che porta con sé un rischio poco discusso.
 pubDatetime: 2026-08-06T08:00:00Z
 tags:

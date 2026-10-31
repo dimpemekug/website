@@ -1,6 +1,6 @@
 ---
 title: "Timer Pomodoro e registro attività"
-description: "Il timer di concentrazione ancorato all'orologio di sistema, la Live Activity e la notifica continua, la registrazione delle attività e i suggerimenti dei titoli in Time Tracker."
+description: "Il timer di concentrazione ancorato all'orologio di sistema, la Live Activity, la registrazione delle attività e i suggerimenti dei titoli in Time Tracker."
 project: "time-tracker"
 order: 4
 section: "Produttività"

@@ -1,6 +1,7 @@
 ---
 title: "Sovranità digitale: cosa significa davvero spostare i dati in Europa"
 seoTitle: "Sovranità digitale: cosa vuol dire spostare i dati in Europa"
+seoDescription: "Cloud europeo, modelli AI addestrati in casa, requisiti di residenza dei dati."
 description: Cloud europeo, modelli AI addestrati in casa, requisiti di residenza dei dati. Dietro una parola diventata slogan ci sono scelte tecniche concrete, e compromessi che vale la pena conoscere prima di adottarle.
 pubDatetime: 2026-07-31T08:00:00Z
 tags:

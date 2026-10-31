@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/LegalLayout.astro
 title: "Privacy Policy"
-description: "How the dimpemekug.com website handles visitor data: no cookies and no analytics, only the hosting provider's technical logs, the article images, and email messages."
+description: "How dimpemekug.com handles visitor data: no cookies and no analytics, only hosting technical logs, the article images, and email messages."
 ---
 
 Last updated: October 22, 2026

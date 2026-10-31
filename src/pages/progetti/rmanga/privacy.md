@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - rManga"
-description: "Informativa completa sulla privacy dell'app rManga: quali dati vengono trattati, a quali sorgenti e server si collega e come funziona la sincronizzazione iCloud facoltativa."
+description: "Privacy dell'app rManga: quali dati vengono trattati, a quali sorgenti e server si collega e come funziona la sincronizzazione iCloud facoltativa."
 ---
 
 Ultimo aggiornamento: 13 ottobre 2026

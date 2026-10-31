@@ -1,7 +1,7 @@
 ---
 layout: ../../../../layouts/LegalLayout.astro
 title: "rQuake Privacy Policy"
-description: "Full privacy policy for the rQuake app: what it sends to the seismological sources, why your location and saved places stay on your device, and what is never collected."
+description: "rQuake privacy policy: what it sends to the seismological sources, why your location and saved places stay on your device, and what is never collected."
 ---
 
 Last updated: 20 October 2026

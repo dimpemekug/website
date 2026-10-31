@@ -1,6 +1,7 @@
 ---
 title: "EUDI Wallet: il portafoglio d'identità europeo arriva alla scadenza in ordine sparso"
 seoTitle: "EUDI Wallet: il portafoglio d'identità europeo alla scadenza"
+seoDescription: "Entro il 24 dicembre 2026 ogni Stato dell'Unione deve offrire un portafoglio digitale per identità e documenti."
 description: "Entro il 24 dicembre 2026 ogni Stato dell'Unione deve offrire un portafoglio digitale per identità e documenti. L'Italia con IT-Wallet è tra i più avanti, molti altri arriveranno in ritardo. Cosa fa, cosa garantisce e cosa cambia per chi sviluppa."
 pubDatetime: 2026-10-22T08:00:00Z
 tags:

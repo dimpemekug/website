@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - Resizo"
-description: "Informativa completa sulla privacy dell'app Resizo: quali dati vengono trattati, come vengono gestiti i metadati delle immagini e perché nessun dato lascia il Mac."
+description: "Privacy dell'app Resizo: quali dati vengono trattati, come vengono gestiti i metadati delle immagini e perché nessun dato lascia il Mac."
 ---
 
 Ultimo aggiornamento: 11 settembre 2026

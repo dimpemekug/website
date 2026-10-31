@@ -1,6 +1,6 @@
 ---
 title: "Luoghi salvati e avvisi"
-description: "Come aggiungere luoghi in rQuake, con raggio e avvisi propri, e come funzionano le notifiche dei nuovi terremoti: magnitudo, area, ore di silenzio, riepiloghi e limiti del controllo in background."
+description: "Come aggiungere luoghi in rQuake e come funzionano le notifiche dei nuovi terremoti: magnitudo, area, ore di silenzio, riepiloghi e limiti in background."
 project: "rquake"
 order: 6
 section: "Funzionalità"

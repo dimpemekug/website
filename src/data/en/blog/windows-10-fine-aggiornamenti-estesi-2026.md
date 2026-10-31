@@ -1,6 +1,7 @@
 ---
 title: "Windows 10, last call: what to do before extended updates end"
 seoTitle: "Windows 10: what to do before extended updates end"
+seoDescription: "Mainstream support ended in October 2025, and the extended security updates program for home users closes in mid-October 2026."
 description: Mainstream support ended in October 2025, and the extended security updates program for home users closes in mid-October 2026. The real options for anyone still on a Windows 10 PC, from moving to Windows 11 to the alternatives.
 pubDatetime: 2026-09-06T08:00:00Z
 tags:

@@ -2,6 +2,7 @@
 title: "Archiva"
 seoTitle: "Archiva: app per aprire ZIP, RAR e 7z su Mac"
 applicationCategory: "UtilitiesApplication"
+seoDescription: "App per Mac per gli archivi: guarda dentro ZIP, RAR e 7z senza estrarli, apri quelli protetti e creane di nuovi. Gratuita e senza pubblicità."
 description: "App per Mac per gli archivi compressi: guarda dentro ZIP, RAR, 7z e molti altri formati senza estrarli, apri archivi protetti o in più parti e crea i tuoi con password e volumi. Senza account e senza connessione. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false

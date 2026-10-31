@@ -2,6 +2,7 @@
 title: "DomoMeter"
 seoTitle: "DomoMeter: consumi di luce, gas e acqua su iPhone e Android"
 applicationCategory: "UtilitiesApplication"
+seoDescription: "Controlla i consumi di luce, gas e acqua su iPhone, iPad e Android, con fasce F1/F2/F3 e grafici. Dati sul dispositivo, gratuita e senza pubblicità."
 description: "App per iPhone, iPad e Android per tenere sotto controllo i consumi di luce, gas e acqua dalle letture dei contatori, con fasce F1/F2/F3, grafici e limiti annuali. Dati sul dispositivo, nessun account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-05-04T00:00:00+02:00
 draft: false

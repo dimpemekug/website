@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Resizo"
-description: "Panoramica di Resizo per Mac: ridimensionamento di immagini in blocco, conversione da HEIC a JPEG, rimozione dei metadati EXIF e funzionamento interamente offline."
+description: "Panoramica di Resizo per Mac: ridimensionamento di immagini in blocco, conversione da HEIC a JPEG, rimozione dei metadati EXIF, tutto offline."
 project: "resizo"
 order: 1
 section: "Iniziare"

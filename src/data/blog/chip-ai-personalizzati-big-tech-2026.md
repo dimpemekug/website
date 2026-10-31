@@ -1,6 +1,7 @@
 ---
 title: "Chip AI su misura: perché le Big Tech progettano i propri processori"
 seoTitle: "Chip AI su misura: perché le Big Tech li progettano da sole"
+seoDescription: "Google, Amazon, Microsoft e Meta stanno investendo miliardi per costruire chip AI proprietari e ridurre la dipendenza da Nvidia."
 description: Google, Amazon, Microsoft e Meta stanno investendo miliardi per costruire chip AI proprietari e ridurre la dipendenza da Nvidia. Ecco perché conviene farlo, e quanto è davvero difficile.
 pubDatetime: 2026-07-17T08:00:00Z
 tags:

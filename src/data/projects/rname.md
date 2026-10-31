@@ -2,6 +2,7 @@
 title: "rName"
 seoTitle: "rName: rinomina file in blocco su Mac"
 applicationCategory: "UtilitiesApplication"
+seoDescription: "Rinomina file in blocco sul Mac con otto regole da combinare, anteprima e annullamento. Offline e senza account, gratuita e senza pubblicità."
 description: "App per Mac per rinominare file in blocco: otto regole da combinare, anteprima sempre visibile, controllo dei conflitti e annullamento. Completamente offline e senza account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-09-18T00:00:00+02:00
 draft: false

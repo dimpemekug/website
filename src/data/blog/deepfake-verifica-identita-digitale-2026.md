@@ -1,6 +1,7 @@
 ---
 title: "Deepfake e verifica d'identità: la nuova corsa alla sicurezza digitale"
 seoTitle: "Deepfake e verifica d'identità: la corsa alla sicurezza"
+seoDescription: "Con i deepfake sempre più realistici, banche, aziende e piattaforme social stanno correndo a rafforzare i sistemi di verifica dell'identità."
 description: Con i deepfake sempre più realistici, banche, aziende e piattaforme social stanno correndo a rafforzare i sistemi di verifica dell'identità. Ecco perché l'argomento è in cima alle ricerche del settore cybersecurity nel 2026.
 pubDatetime: 2026-04-24T08:00:00Z
 tags:

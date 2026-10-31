@@ -2,6 +2,7 @@
 title: "CodeVault"
 seoTitle: "CodeVault: snippet di codice su iPhone, iPad e Mac"
 applicationCategory: "DeveloperApplication"
+seoDescription: "Salva e ritrova snippet di codice e note tecniche su iPhone, iPad e Mac, con 20 linguaggi e sincronizzazione iCloud. Gratuita e senza pubblicità."
 description: "App per iPhone, iPad e Mac per salvare, organizzare e ritrovare snippet di codice e note tecniche. Evidenziazione della sintassi in 20 linguaggi, sincronizzazione iCloud e blocco biometrico. Gratuita, senza pubblicità né acquisti in-app, nessun account."
 pubDatetime: 2026-09-12T00:00:00+02:00
 draft: false

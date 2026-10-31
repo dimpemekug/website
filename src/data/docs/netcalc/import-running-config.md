@@ -1,6 +1,6 @@
 ---
 title: "Importazione e Confronto Running-Config"
-description: "Come importare, analizzare e confrontare configurazioni Cisco IOS reali con NetCalc Pro: ricostruzione apparati, Config Diff blocco per blocco e copia dei comandi mancanti."
+description: "Importare e confrontare configurazioni Cisco IOS reali con NetCalc Pro: ricostruzione apparati, Config Diff e copia dei comandi mancanti."
 project: "netcalc"
 order: 6
 section: "Integrazione Cisco IOS"

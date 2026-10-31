@@ -1,6 +1,6 @@
 ---
 title: "Calcolatrice IPv4, IPv6 e Subnetting"
-description: "Guida alle funzionalità di calcolo IP di NetCalc Pro: quattro modalità di inserimento, ispezione binaria a 32 bit, spiegazione passo-passo Come si calcola, cronologia recenti e modulo IPv6."
+description: "Calcolo IP in NetCalc Pro: quattro modalità di inserimento, ispezione binaria a 32 bit, spiegazione passo-passo, cronologia e modulo IPv6."
 project: "netcalc"
 order: 2
 section: "Calcolo e Pianificazione"

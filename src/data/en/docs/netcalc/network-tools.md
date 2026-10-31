@@ -1,6 +1,6 @@
 ---
 title: "Advanced Network Tools"
-description: "Guide to NetCalc Pro's four network tools: Route Summary with Cisco commands, Range to CIDR converter with ACLs, Wildcard & ACL packet simulator, and Network Comparison with Longest Prefix Match."
+description: "NetCalc Pro's four network tools: Route Summary, Range to CIDR converter, Wildcard and ACL simulator, and Network Comparison with Longest Prefix Match."
 project: "netcalc"
 order: 4
 section: "Tools & Calculation"

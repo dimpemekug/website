@@ -1,6 +1,7 @@
 ---
 title: "Matter and cameras: the smart home's last silo is finally cracking"
 seoTitle: "Matter and cameras: the smart home's last silo is cracking"
+seoDescription: "With Matter 1.5, cameras and video doorbells finally join the common standard for connected homes."
 description: With Matter 1.5, cameras and video doorbells finally join the common standard for connected homes. What that means if you already own bulbs and thermostats from different brands, why video is the hardest piece, and what to check before you buy.
 pubDatetime: 2026-09-17T08:00:00Z
 tags:

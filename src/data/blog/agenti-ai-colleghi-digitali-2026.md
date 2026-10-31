@@ -1,6 +1,7 @@
 ---
 title: "Colleghi digitali: cosa cambia quando un agente AI ha un account come il tuo"
 seoTitle: "Agenti AI come colleghi: cosa cambia con un account proprio"
+seoDescription: "Un agente AI con calendario, casella di posta e accessi ai sistemi interni: cosa significa davvero integrarlo in un team."
 description: Non più uno strumento aperto quando serve, ma un'identità che lavora in autonomia dentro l'organizzazione, con un calendario, una casella di posta e un accesso ai sistemi interni. Cosa significa davvero integrare un agente AI in un team.
 pubDatetime: 2026-08-09T08:00:00Z
 tags:

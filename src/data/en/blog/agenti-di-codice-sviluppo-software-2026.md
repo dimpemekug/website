@@ -1,6 +1,7 @@
 ---
 title: "Coding agents: when the AI stops suggesting and starts writing"
 seoTitle: "Coding agents: when AI stops suggesting and starts writing"
+seoDescription: "Developer assistants have gone from completing a single line to opening pull requests on their own."
 description: Developer assistants have gone from completing a single line to opening pull requests on their own. Here's what actually changes in day-to-day development work, and which habits become non-negotiable.
 pubDatetime: 2026-07-24T08:00:00Z
 tags:

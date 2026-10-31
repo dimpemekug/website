@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a rMux"
-description: "Panoramica di rMux per Mac: editor video leggero con taglio senza ricodifica, transcodifica con accelerazione hardware VideoToolbox, tracce audio, sottotitoli, filtri e unione di clip."
+description: "Panoramica di rMux per Mac: taglio senza ricodifica, transcodifica con accelerazione hardware VideoToolbox, tracce audio, sottotitoli, filtri e unione."
 project: "rmux"
 order: 1
 section: "Iniziare"

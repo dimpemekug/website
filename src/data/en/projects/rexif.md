@@ -2,6 +2,7 @@
 title: "rExif"
 seoTitle: "rExif: Edit Photo and Video Metadata on Mac"
 applicationCategory: "MultimediaApplication"
+seoDescription: "Fix capture dates, GPS location, author, and keywords of photos and videos on your Mac, even across thousands of files. Free, with no ads."
 description: "Mac app to fix the metadata of photos and videos: capture date, GPS location, author, copyright, keywords, and file names, on one photo or thousands at once, with a preview of every change. No account, no tracking. Free, with no ads or in-app purchases."
 pubDatetime: 2026-10-08T00:00:00+02:00
 draft: false

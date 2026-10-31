@@ -1,6 +1,7 @@
 ---
 title: "Computer quantistici e cybersicurezza: perché il 2026 potrebbe essere un anno decisivo"
 seoTitle: "Computer quantistici e cybersicurezza: perché il 2026 conta"
+seoDescription: "Tra qubit corretti e migrazione alla crittografia post-quantistica, il 2026 segna una svolta per la sicurezza informatica."
 description: Tra i progressi sui qubit corretti e la migrazione alla crittografia post-quantistica, il 2026 segna una svolta per la sicurezza informatica nell'era del calcolo quantistico.
 pubDatetime: 2026-06-18T08:00:00Z
 tags:

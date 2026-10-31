@@ -1,6 +1,6 @@
 ---
 title: "Catena di regole"
-description: "Le 8 regole di rinomina di rName: sostituzione anche con espressioni regolari (protette dal backtracking catastrofico), inserimento, rimozione, numerazione, maiuscole, date, estensioni e pulizia."
+description: "Le 8 regole di rinomina di rName: sostituzione anche con espressioni regolari, inserimento, rimozione, numerazione, maiuscole, date, estensioni e pulizia."
 project: "rname"
 order: 2
 section: "Regole e Modifiche"

@@ -1,6 +1,7 @@
 ---
 title: "Smartphone via satellite: quando il segnale arriva dallo spazio"
 seoTitle: "Smartphone via satellite: il segnale arriva dallo spazio"
+seoDescription: "Messaggi e posizione senza antenne a terra: il collegamento diretto tra satelliti e telefoni comuni. Cosa funziona già e cosa no."
 description: "Messaggi, posizione e più avanti anche dati, senza un'antenna a terra nel raggio di chilometri: il collegamento diretto tra satelliti e telefoni comuni esce dalla fase sperimentale. Cosa funziona già, cosa no, e perché conta anche in città."
 pubDatetime: 2026-08-31T08:00:00Z
 tags:

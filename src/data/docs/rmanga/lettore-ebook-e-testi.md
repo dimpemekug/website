@@ -1,6 +1,6 @@
 ---
 title: "Lettore di ebook e libri di testo"
-description: "Il lettore di testo basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown: temi, caratteri, impaginazione, segnalibri, evidenziazioni e ricerca in rManga."
+description: "Il lettore basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown: temi, caratteri, segnalibri, evidenziazioni e ricerca in rManga."
 project: "rmanga"
 order: 4
 section: "Ebook"

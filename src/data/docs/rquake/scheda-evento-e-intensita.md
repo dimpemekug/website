@@ -1,6 +1,6 @@
 ---
 title: "Scheda dell'evento e intensità stimata"
-description: "Cosa mostra la scheda di un terremoto in rQuake: dati dell'evento, intensità stimata sulla scala Mercalli, confronto con le altre fonti, eventi vicini e collegamenti."
+description: "La scheda di un terremoto in rQuake: dati dell'evento, intensità stimata sulla scala Mercalli, confronto tra le fonti, eventi vicini e collegamenti."
 project: "rquake"
 order: 3
 section: "Guide d'uso"

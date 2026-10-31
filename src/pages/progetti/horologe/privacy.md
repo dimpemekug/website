@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - Horologe"
-description: "Informativa completa sulla privacy dell'app Horologe: quali dati vengono trattati, dove restano e come funzionano la sincronizzazione iCloud facoltativa su iOS e il backup di Android."
+description: "Privacy dell'app Horologe: quali dati vengono trattati, dove restano e come funzionano la sincronizzazione iCloud facoltativa su iOS e il backup di Android."
 ---
 
 Ultimo aggiornamento: 13 ottobre 2026

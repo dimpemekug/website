@@ -1,8 +1,10 @@
 ---
 title: "AI Act, agosto 2026: cosa cambia davvero per chi sviluppa software"
 seoTitle: "AI Act, agosto 2026: cosa cambia per chi sviluppa software"
-description: Da questo mese gli obblighi per i sistemi AI ad alto rischio diventano pienamente applicabili nell'Unione Europea. Non è solo un problema legale — è un problema di architettura, documentazione e processo.
+seoDescription: "Il Digital Omnibus rinvia gli obblighi ad alto rischio al dicembre 2027, ma il lavoro da fare non cambia: architettura, documentazione e processo."
+description: Gli obblighi per i sistemi AI ad alto rischio slittano al dicembre 2027, ma il lavoro da fare resta. Non è solo un problema legale — è un problema di architettura, documentazione e processo.
 pubDatetime: 2026-08-10T08:00:00Z
+modDatetime: 2026-10-31T08:00:00Z
 tags:
   - ai-regulation
   - compliance
@@ -14,7 +16,7 @@ related:
   - intelligenza-artificiale-2026-maturita
 ---
 
-Per due anni l'AI Act è stato soprattutto un argomento da conferenza: scadenze lontane, obblighi generici, un regolamento che si sapeva sarebbe arrivato ma che nella pratica quotidiana di chi scrive software toccava in pochi. Questo mese cambia lo status: gli obblighi per i sistemi ad alto rischio diventano pienamente applicabili, e "alto rischio" nel testo copre più cose di quanto ci si aspetti — non solo diagnosi mediche o veicoli autonomi, ma anche selezione del personale, valutazione del credito, gestione di infrastrutture critiche. Se il tuo prodotto tocca una di queste aree, la conformità non è più un esercizio teorico.
+Per due anni l'AI Act è stato soprattutto un argomento da conferenza: scadenze lontane, obblighi generici, un regolamento che si sapeva sarebbe arrivato ma che nella pratica quotidiana di chi scrive software toccava in pochi. Ora il calendario è cambiato: il Digital Omnibus, il regolamento (UE) 2026/1744, ha rinviato gli obblighi per i sistemi ad alto rischio dal 2 agosto 2026 al 2 dicembre 2027, e al 2 agosto 2028 per quelli integrati in prodotti regolamentati. Dal 2 agosto 2026 si applica invece gran parte degli obblighi di trasparenza. Il rinvio sposta la scadenza, non il lavoro: "alto rischio" nel testo copre più cose di quanto ci si aspetti — non solo diagnosi mediche o veicoli autonomi, ma anche selezione del personale, valutazione del credito, gestione di infrastrutture critiche. Se il tuo prodotto tocca una di queste aree, la conformità non è più un esercizio teorico.
 
 <figure>
   <img
@@ -22,7 +24,7 @@ Per due anni l'AI Act è stato soprattutto un argomento da conferenza: scadenze 
     alt="Vista dal basso del frontone e delle colonne di un edificio istituzionale"
   />
   <figcaption class="text-center">
-    Il testo del regolamento è arrivato anni fa. Quello che arriva ora sono le conseguenze pratiche di ignorarlo.
+    Il testo del regolamento è arrivato anni fa. Le conseguenze pratiche di ignorarlo sono solo rimandate.
   </figcaption>
 </figure>
 

@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - rName"
-description: "Informativa completa sulla privacy dell'app rName: quali dati vengono trattati, come vengono gestiti i file e perché nessun dato lascia il Mac."
+description: "Privacy dell'app rName: quali dati vengono trattati, come vengono gestiti i file e perché nessun dato lascia il Mac."
 ---
 
 Ultimo aggiornamento: 12 ottobre 2026

@@ -1,6 +1,6 @@
 ---
 title: "Permessi e App Sandbox"
-description: "Come rName gestisce i permessi del file system nella sandbox di macOS: perché serve l'accesso alla cartella, segnalibri di sicurezza e revoca delle autorizzazioni."
+description: "Come rName gestisce i permessi nella sandbox di macOS: perché serve l'accesso alla cartella, segnalibri di sicurezza e revoca delle autorizzazioni."
 project: "rname"
 order: 5
 section: "Sicurezza e Sistema"

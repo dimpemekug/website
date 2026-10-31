@@ -1,6 +1,6 @@
 ---
 title: "Sequenze sismiche e archivio"
-description: "Come rQuake raggruppa le scosse in sequenze con il metodo di Gardner e Knopoff, e come usare l'archivio con gli eventi famosi e la ricerca per area, date e magnitudo."
+description: "Come rQuake raggruppa le scosse in sequenze con il metodo di Gardner e Knopoff e come usare l'archivio, con eventi famosi e ricerca per area e date."
 project: "rquake"
 order: 5
 section: "Funzionalità"

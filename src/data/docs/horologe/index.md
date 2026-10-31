@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Horologe"
-description: "Panoramica di Horologe: catalogo per collezioni di orologi su iOS e Android, con foto, storico delle revisioni, registro di precisione, giorni al polso e dati che restano tuoi."
+description: "Panoramica di Horologe: catalogo di orologi su iOS e Android, con foto, storico delle revisioni, registro di precisione e giorni al polso."
 project: "horologe"
 order: 1
 section: "Iniziare"

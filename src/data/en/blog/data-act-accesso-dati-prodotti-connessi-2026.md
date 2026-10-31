@@ -1,6 +1,7 @@
 ---
 title: "Data Act: since September, connected devices must open up their data"
 seoTitle: "Data Act: connected devices must now open up their data"
+seoDescription: "From September 12, 2026, cars, appliances, and companion apps must make their data available to users. What the Data Act changes."
 description: "From September 12, 2026, cars, appliances, machinery, and companion apps placed on the market must make their data available to the people who use them, in a machine-readable format. What the Data Act changes for buyers and for developers."
 pubDatetime: 2026-09-18T08:00:00Z
 tags:

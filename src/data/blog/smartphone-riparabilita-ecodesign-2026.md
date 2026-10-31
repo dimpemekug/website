@@ -1,6 +1,7 @@
 ---
 title: "Smartphone che durano di più: cosa cambiano le regole europee sull'ecodesign"
 seoTitle: "Smartphone che durano di più: le regole UE sull'ecodesign"
+seoDescription: "Aggiornamenti garantiti per anni, ricambi disponibili, batterie più resistenti e un'etichetta che dà un voto alla riparabilità."
 description: Aggiornamenti garantiti per anni, ricambi disponibili, batterie più resistenti e un'etichetta che dà un voto alla riparabilità. A poco più di un anno dall'entrata in vigore delle regole UE, cosa conviene guardare prima di comprare un telefono.
 pubDatetime: 2026-09-03T08:00:00Z
 tags:

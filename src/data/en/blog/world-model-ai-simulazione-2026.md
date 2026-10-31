@@ -1,6 +1,7 @@
 ---
 title: "World models: the AI that tries to understand the world instead of just describing it"
 seoTitle: "World models: the AI that tries to understand the world"
+seoDescription: "A language model predicts the next word. A world model tries to predict what happens next in a real scene."
 description: A language model predicts the next word. A world model tries to predict what happens next in a real scene. It's a precise technical difference, and it's why robotics is looking elsewhere than chatbots.
 pubDatetime: 2026-08-07T08:00:00Z
 tags:

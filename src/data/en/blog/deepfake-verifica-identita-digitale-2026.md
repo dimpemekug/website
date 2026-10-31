@@ -1,6 +1,7 @@
 ---
 title: "Deepfakes and identity verification: the new race for digital security"
 seoTitle: "Deepfakes and identity verification: the new security race"
+seoDescription: "As deepfakes get more convincing, banks, companies, and social platforms are racing to harden their identity verification systems."
 description: As deepfakes get more convincing, banks, companies, and social platforms are racing to harden their identity verification systems. Here's why the topic is at the top of cybersecurity searches in 2026.
 pubDatetime: 2026-04-24T08:00:00Z
 tags:

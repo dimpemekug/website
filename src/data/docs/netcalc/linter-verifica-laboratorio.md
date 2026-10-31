@@ -1,6 +1,6 @@
 ---
 title: "Verifica Laboratorio (Network Linter)"
-description: "Diagnostica proattiva per laboratori CCNA: trova conflitti di IP, subnet sovrapposte, next-hop non raggiungibili, errori OSPFv3, HSRP, sub-interfacce e anomalie DHCP."
+description: "Diagnostica per laboratori CCNA: conflitti di IP, subnet sovrapposte, next-hop non raggiungibili, errori OSPFv3, HSRP, sub-interfacce e DHCP."
 project: "netcalc"
 order: 7
 section: "Diagnostica e Verifica"

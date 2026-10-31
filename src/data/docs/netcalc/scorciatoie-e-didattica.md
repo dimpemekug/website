@@ -1,6 +1,6 @@
 ---
 title: "Didattica, Esercizi e Widget"
-description: "Esercizi di subnetting interattivi a 9 tipologie, guida didattica alle reti in 21 capitoli, glossario ampliato, widget, controlli del Centro di Controllo e scorciatoie."
+description: "Esercizi di subnetting a 9 tipologie, guida alle reti in 21 capitoli, glossario, widget, controlli del Centro di Controllo e scorciatoie."
 project: "netcalc"
 order: 9
 section: "Riferimento e Didattica"

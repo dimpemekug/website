@@ -1,6 +1,7 @@
 ---
 title: "Passkey: il 2026 è l'anno in cui le password iniziano davvero a sparire"
 seoTitle: "Passkey: nel 2026 le password iniziano davvero a sparire"
+seoDescription: "Apple, Google e Microsoft hanno reso le passkey il metodo di accesso predefinito sui loro servizi."
 description: Apple, Google e Microsoft hanno reso le passkey il metodo di accesso predefinito sui loro servizi. Ecco come funzionano, perché sono più sicure di una password e cosa cambia per chi gestisce account online.
 pubDatetime: 2026-05-08T08:00:00Z
 tags:

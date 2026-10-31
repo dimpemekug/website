@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - rExif"
-description: "Informativa completa sulla privacy dell'app rExif: quali dati vengono trattati, come vengono modificati i file e perché foto e video non lasciano mai il Mac."
+description: "Privacy dell'app rExif: quali dati vengono trattati, come vengono modificati i file e perché foto e video non lasciano mai il Mac."
 ---
 
 Ultimo aggiornamento: 7 ottobre 2026

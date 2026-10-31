@@ -1,6 +1,7 @@
 ---
 title: "Passkeys: 2026 is the year passwords actually start disappearing"
 seoTitle: "Passkeys: 2026 is when passwords start disappearing"
+seoDescription: "Apple, Google, and Microsoft have made passkeys the default sign-in method across their services."
 description: Apple, Google, and Microsoft have made passkeys the default sign-in method across their services. Here's how they work, why they're more secure than a password, and what it means for anyone managing online accounts.
 pubDatetime: 2026-05-08T08:00:00Z
 tags:

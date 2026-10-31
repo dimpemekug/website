@@ -1,6 +1,6 @@
 ---
 title: "VLSM Best-Fit Planning"
-description: "Best-fit descending algorithm in NetCalc Pro: variable-length subnet planning, address allocation, waste calculations, dynamic zooming map, and automatic interconnected router topology builder."
+description: "Best-fit descending in NetCalc Pro: variable-length subnet planning, waste calculations, dynamic map, and automatic router topology building."
 project: "netcalc"
 order: 3
 section: "Calculation & Planning"

@@ -1,5 +1,6 @@
 ---
 title: "Wi-Fi 8: the first routers arrive now, the standard in 2028"
+seoDescription: "The next generation of Wi-Fi no longer promises higher peak speed, but fewer dropped packets, lower latency, and better coverage at the edges of your home."
 description: The next generation of Wi-Fi no longer promises higher peak speed, but fewer dropped packets, lower latency, and better coverage at the edges of your home. The first devices land in October, final certification is two years away. Is it worth waiting?
 pubDatetime: 2026-09-15T08:00:00Z
 tags:

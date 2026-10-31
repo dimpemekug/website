@@ -1,6 +1,7 @@
 ---
 title: "L'intelligenza artificiale entra nei dispositivi quotidiani: dalla Smart TV al frigorifero"
 seoTitle: "AI nei dispositivi quotidiani: dalla Smart TV al frigorifero"
+seoDescription: "Dai chip NPU nei PC alle smart TV e agli elettrodomestici, l'AI on-device sta uscendo dal cloud per entrare nella vita di tutti i giorni."
 description: Dai chip NPU nei PC alle smart TV e agli elettrodomestici, l'AI on-device sta uscendo dal cloud per entrare nella vita di tutti i giorni. Ecco cosa cambia per privacy e prestazioni.
 pubDatetime: 2026-06-10T08:00:00Z
 tags:

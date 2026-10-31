@@ -1,6 +1,6 @@
 ---
 title: "Introduction to NetCalc Pro"
-description: "Overview of NetCalc Pro for Mac, iPad, and iPhone: IPv4/IPv6 calculation, subnetting and VLSM, four network tools, Cisco IOS generator, topology diagram, and linter."
+description: "Overview of NetCalc Pro for Mac, iPad, and iPhone: IPv4/IPv6 calculation, subnetting and VLSM, network tools, Cisco IOS generator, topology, and linter."
 project: "netcalc"
 order: 1
 section: "Getting Started"

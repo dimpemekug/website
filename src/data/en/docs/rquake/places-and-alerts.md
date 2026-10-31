@@ -1,6 +1,6 @@
 ---
 title: "Saved places and alerts"
-description: "How to add places in rQuake, each with its own radius and alerts, and how notifications for new earthquakes work: magnitude, area, quiet hours, summaries and the limits of background checks."
+description: "How to add places in rQuake and how new earthquake notifications work: magnitude, area, quiet hours, summaries, and background check limits."
 project: "rquake"
 order: 6
 section: "Features"

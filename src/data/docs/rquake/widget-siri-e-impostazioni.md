@@ -1,6 +1,6 @@
 ---
 title: "Widget, Siri e impostazioni"
-description: "I widget di rQuake per la schermata Home e di blocco con le loro opzioni, i comandi di Siri e Comandi rapidi, e le impostazioni di aspetto, lingua e informazioni."
+description: "I widget di rQuake per la schermata Home e di blocco, i comandi di Siri e Comandi rapidi e le impostazioni di aspetto, lingua e informazioni."
 project: "rquake"
 order: 7
 section: "Riferimento"

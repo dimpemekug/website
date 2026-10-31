@@ -1,6 +1,7 @@
 ---
 title: "Solid-state batteries: the technology that could reshape electric cars in 2026"
 seoTitle: "Solid-state batteries: how they could reshape electric cars"
+seoDescription: "More range, faster charging, and a lower fire risk. Solid-state batteries are moving out of research labs and into the first pilot production lines."
 description: More range, faster charging, and a lower fire risk. Solid-state batteries are moving out of research labs and into the first pilot production lines. Here's where things actually stand.
 pubDatetime: 2026-05-16T08:00:00Z
 tags:

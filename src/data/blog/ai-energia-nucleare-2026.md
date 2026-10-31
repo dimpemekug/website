@@ -1,6 +1,7 @@
 ---
 title: "La fame di energia dell'AI riaccende il dibattito sul nucleare"
 seoTitle: "L'energia per l'AI riaccende il dibattito sul nucleare"
+seoDescription: "I data center per addestrare e far girare i modelli AI consumano energia a ritmi mai visti prima."
 description: I data center per addestrare e far girare i modelli AI consumano energia a ritmi mai visti prima. Ecco perché le grandi aziende tech stanno firmando accordi diretti con centrali nucleari e mini-reattori.
 pubDatetime: 2026-06-30T09:00:00Z
 tags:

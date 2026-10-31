@@ -1,6 +1,6 @@
 ---
 title: "Lab Verification (Network Linter)"
-description: "Proactive diagnostics for CCNA labs: detects IP conflicts, overlapping subnets, unreachable next hops, OSPFv3 issues, HSRP inconsistencies, sub-interfaces, and DHCP flaws."
+description: "Diagnostics for CCNA labs: detects IP conflicts, overlapping subnets, unreachable next hops, OSPFv3 issues, HSRP problems, and DHCP flaws."
 project: "netcalc"
 order: 7
 section: "Diagnostics & Verification"

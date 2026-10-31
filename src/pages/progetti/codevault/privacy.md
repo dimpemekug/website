@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - CodeVault"
-description: "Informativa completa sulla privacy dell'app CodeVault: quali dati vengono trattati, come funziona la sincronizzazione iCloud e perché lo sviluppatore non riceve alcun dato."
+description: "Privacy dell'app CodeVault: quali dati vengono trattati, come funziona la sincronizzazione iCloud e perché lo sviluppatore non riceve alcun dato."
 ---
 
 Ultimo aggiornamento: 12 ottobre 2026

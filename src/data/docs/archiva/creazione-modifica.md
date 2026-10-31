@@ -1,6 +1,6 @@
 ---
 title: "Creazione, modifica e conversione"
-description: "Creazione di archivi, aggiunta ed eliminazione di file con copia di sicurezza nel Cestino, esclusione automatica dei file di sistema di macOS e conversione di formato in Archiva."
+description: "Creazione di archivi, aggiunta ed eliminazione di file con copia di sicurezza nel Cestino, esclusione dei file di macOS e conversione in Archiva."
 project: "archiva"
 order: 4
 section: "Guide d'uso"

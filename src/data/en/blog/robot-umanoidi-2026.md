@@ -1,6 +1,7 @@
 ---
 title: "Humanoid robots: why 2026 is finally getting them out of the lab"
 seoTitle: "Humanoid robots: why 2026 is getting them out of the lab"
+seoDescription: "From Tesla Optimus to Figure, humanoid robots are moving past polished demo videos and into real warehouses and factory floors."
 description: From Tesla Optimus to Figure, humanoid robots are moving past polished demo videos and into real warehouses and factory floors. Here's where things actually stand, and what's still unsolved.
 pubDatetime: 2026-06-30T08:00:00Z
 tags:

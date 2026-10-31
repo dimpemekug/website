@@ -1,6 +1,6 @@
 ---
 title: "Introduction to rMux"
-description: "Overview of rMux for Mac: a lightweight video editor with re-encode-free trimming, VideoToolbox hardware transcoding, audio tracks, subtitles, filters and clip merging."
+description: "Overview of rMux for Mac: re-encode-free trimming, VideoToolbox hardware transcoding, audio tracks, subtitles, filters, and clip merging."
 project: "rmux"
 order: 1
 section: "Getting Started"

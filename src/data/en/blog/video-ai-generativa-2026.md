@@ -1,6 +1,7 @@
 ---
 title: "AI-generated video goes viral in 2026 (and gets harder to spot)"
 seoTitle: "AI-generated video goes viral (and gets harder to spot)"
+seoDescription: "Video generation models have gone from rough, few-second clips to footage that's nearly indistinguishable from real filming."
 description: Video generation models have gone from rough, few-second clips to footage that's nearly indistinguishable from real filming. Here's why AI video is one of the most searched topics right now, and what it means for creators, media, and advertising.
 pubDatetime: 2026-04-07T08:00:00Z
 tags:

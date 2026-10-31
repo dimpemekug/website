@@ -1,6 +1,6 @@
 ---
 title: "Generazione Configurazioni Cisco IOS"
-description: "Motore di generazione CLI Cisco IOS in NetCalc Pro: interfacce IPv4/IPv6, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, Port Security, DHCP, ACL e NAT."
+description: "Generazione CLI Cisco IOS in NetCalc Pro: interfacce IPv4/IPv6, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, DHCP, ACL e NAT."
 project: "netcalc"
 order: 5
 section: "Integrazione Cisco IOS"

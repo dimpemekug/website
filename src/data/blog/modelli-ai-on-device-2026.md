@@ -1,6 +1,7 @@
 ---
 title: "L'AI che gira sul telefono: perché i modelli on-device sono il nuovo trend"
 seoTitle: "AI sul telefono: perché crescono i modelli on-device"
+seoDescription: "I produttori di smartphone e laptop stanno spostando sempre più funzioni AI dal cloud al dispositivo."
 description: "I produttori di smartphone e laptop stanno spostando sempre più funzioni AI dal cloud al dispositivo. Più privacy, meno latenza e nessuna connessione necessaria: ecco perché i piccoli modelli locali sono diventati un argomento caldissimo."
 pubDatetime: 2026-04-16T08:00:00Z
 tags:

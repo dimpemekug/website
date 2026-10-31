@@ -1,6 +1,6 @@
 ---
 title: "Rule Chain"
-description: "rName's 8 renaming rules: replace, including regular expressions protected from catastrophic backtracking, insert, remove, numbering, letter case, dates, extensions and clean-up."
+description: "rName's 8 renaming rules: replace with optional regular expressions, insert, remove, numbering, letter case, dates, extensions, and clean-up."
 project: "rname"
 order: 2
 section: "Rules & Editing"

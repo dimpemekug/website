@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - ShowNest"
-description: "Informativa completa sulla privacy dell'app ShowNest: quali dati vengono trattati, dove sono salvati e come funziona la sincronizzazione iCloud opzionale."
+description: "Privacy dell'app ShowNest: quali dati vengono trattati, dove sono salvati e come funziona la sincronizzazione iCloud opzionale."
 ---
 
 Ultimo aggiornamento: 22 luglio 2026

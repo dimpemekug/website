@@ -1,6 +1,7 @@
 ---
 title: "Custom AI chips: why Big Tech is designing its own processors"
 seoTitle: "Custom AI chips: why Big Tech designs its own processors"
+seoDescription: "Google, Amazon, Microsoft, and Meta are investing billions to build proprietary AI chips and cut their dependence on Nvidia."
 description: Google, Amazon, Microsoft, and Meta are investing billions to build proprietary AI chips and cut their dependence on Nvidia. Here's why it makes sense, and just how hard it really is.
 pubDatetime: 2026-07-17T08:00:00Z
 tags:

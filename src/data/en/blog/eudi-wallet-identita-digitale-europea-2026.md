@@ -1,6 +1,7 @@
 ---
 title: "EUDI Wallet: Europe's identity wallet reaches its deadline in scattered order"
 seoTitle: "EUDI Wallet: Europe's identity wallet reaches its deadline"
+seoDescription: "By December 24, 2026, every EU country must offer a digital wallet for identity and documents."
 description: "By December 24, 2026, every EU country must offer a digital wallet for identity and documents. Italy's IT-Wallet is among the furthest ahead, while many others will be late. What it does, what it guarantees, and what changes for developers."
 pubDatetime: 2026-10-22T08:00:00Z
 tags:

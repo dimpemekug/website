@@ -1,5 +1,6 @@
 ---
 title: "Agenti di codice: quando l'AI non suggerisce più, ma scrive"
+seoDescription: "Gli assistenti per programmatori sono passati dal completare una riga all'aprire pull request da soli."
 description: Gli assistenti per programmatori sono passati dal completare una riga all'aprire pull request da soli. Cosa cambia davvero nel lavoro quotidiano di chi sviluppa, e quali abitudini diventano indispensabili.
 pubDatetime: 2026-07-24T08:00:00Z
 tags:

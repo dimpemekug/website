@@ -1,6 +1,7 @@
 ---
 title: "AI's energy hunger is putting nuclear power back on the table"
 seoTitle: "AI's energy hunger puts nuclear power back on the table"
+seoDescription: "The data centers that train and run AI models are consuming power at a pace never seen before."
 description: The data centers that train and run AI models are consuming power at a pace never seen before. Here's why big tech companies are now signing direct deals with nuclear plants and small modular reactors.
 pubDatetime: 2026-06-30T09:00:00Z
 tags:

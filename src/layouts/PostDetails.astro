@@ -30,6 +30,7 @@ const t = useTranslations(lang);
 const {
   title,
   seoTitle,
+  seoDescription,
   author,
   description,
   ogImage: initOgImage,
@@ -68,7 +69,7 @@ const layoutProps = {
   title: seoTitle ?? (`${title} | ${SITE.title}`.length <= 60 ? `${title} | ${SITE.title}` : title),
   ogTitle: title,
   author,
-  description,
+  description: seoDescription ?? description,
   pubDatetime,
   modDatetime,
   canonicalURL,

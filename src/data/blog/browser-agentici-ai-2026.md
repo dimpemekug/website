@@ -1,5 +1,6 @@
 ---
 title: "Browser agentici: l'AI che naviga il web al posto tuo"
+seoDescription: "I nuovi browser con AI integrata non si limitano a rispondere a domande. Cliccano, compilano moduli e completano acquisti al posto dell'utente."
 description: I nuovi browser con AI integrata non si limitano a rispondere a domande. Cliccano, compilano moduli e completano acquisti al posto dell'utente. Ecco come funzionano davvero e dove si inceppano ancora.
 pubDatetime: 2026-07-10T08:00:00Z
 tags:

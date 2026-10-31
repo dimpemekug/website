@@ -1,6 +1,7 @@
 ---
 title: "AI that runs on your phone: why on-device models are the new trend"
 seoTitle: "AI on your phone: why on-device models are trending"
+seoDescription: "Smartphone and laptop makers are shifting more and more AI features from the cloud to the device itself."
 description: Smartphone and laptop makers are shifting more and more AI features from the cloud to the device itself. More privacy, less latency, no connection required — here's why small local models have become a hot topic.
 pubDatetime: 2026-04-16T08:00:00Z
 tags:

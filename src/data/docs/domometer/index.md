@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a DomoMeter"
-description: "Panoramica di DomoMeter: monitoraggio dei consumi domestici di luce, gas e acqua su iOS e Android, con ripartizione dei consumi tra i mesi, fasce orarie e dati che restano sul dispositivo."
+description: "Panoramica di DomoMeter: consumi domestici di luce, gas e acqua su iOS e Android, con ripartizione tra i mesi, fasce orarie e dati sul dispositivo."
 project: "domometer"
 order: 1
 section: "Iniziare"

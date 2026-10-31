@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - rQuake"
-description: "Informativa completa sulla privacy dell'app rQuake: quali dati invia alle fonti sismologiche, perché posizione e luoghi salvati restano sul dispositivo e cosa non viene raccolto."
+description: "Privacy dell'app rQuake: quali dati invia alle fonti sismologiche, perché posizione e luoghi salvati restano sul dispositivo e cosa non viene raccolto."
 ---
 
 Ultimo aggiornamento: 20 ottobre 2026

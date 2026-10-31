@@ -1,6 +1,6 @@
 ---
 title: "Introduction to DomoMeter"
-description: "Overview of DomoMeter: tracking household electricity, gas and water use on iOS and Android, with usage split across months, time bands and data that stays on your device."
+description: "Overview of DomoMeter: household electricity, gas, and water use on iOS and Android, with usage split across months, time bands, and on-device data."
 project: "domometer"
 order: 1
 section: "Getting Started"

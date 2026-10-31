@@ -2,6 +2,7 @@
 title: "Resizo"
 seoTitle: "Resizo: ridimensiona foto in batch su Mac"
 applicationCategory: "MultimediaApplication"
+seoDescription: "Ridimensiona foto in batch sul Mac, converti HEIC in JPEG e rimuovi i metadati EXIF. Offline e senza account, gratuita e senza pubblicità."
 description: "App per Mac per ridimensionare foto in batch: pixel, percentuale o preset, conversione HEIC in JPEG e rimozione dei metadati EXIF. Completamente offline e senza account. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-09-11T00:00:00+02:00
 draft: false

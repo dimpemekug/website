@@ -1,6 +1,7 @@
 ---
 title: "Occhiali smart e computing spaziale: la nuova corsa dopo lo smartphone"
 seoTitle: "Occhiali smart e computing spaziale: il dopo smartphone"
+seoDescription: "Da Meta ad Apple, i grandi nomi della tecnologia stanno scommettendo sugli occhiali smart come prossima piattaforma di calcolo personale."
 description: Da Meta ad Apple, i grandi nomi della tecnologia stanno scommettendo sugli occhiali smart come prossima piattaforma di calcolo personale. Ecco cosa sanno fare davvero oggi e cosa li separa ancora dallo smartphone.
 pubDatetime: 2026-05-25T08:00:00Z
 tags:

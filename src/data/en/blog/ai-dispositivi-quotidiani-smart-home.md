@@ -1,6 +1,7 @@
 ---
 title: "AI is moving into everyday devices: from the Smart TV to the fridge"
 seoTitle: "AI in everyday devices: from the Smart TV to the fridge"
+seoDescription: "From NPU chips in PCs to smart TVs and home appliances, on-device AI is leaving the cloud behind and becoming part of everyday life."
 description: From NPU chips in PCs to smart TVs and home appliances, on-device AI is leaving the cloud behind and becoming part of everyday life. Here's what changes for privacy and performance.
 pubDatetime: 2026-06-10T08:00:00Z
 tags:

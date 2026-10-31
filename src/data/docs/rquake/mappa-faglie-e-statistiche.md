@@ -1,6 +1,6 @@
 ---
 title: "Mappa, faglie e statistiche"
-description: "La mappa degli epicentri di rQuake, con raggruppamenti, eventi recenti, stile ibrido, faglie attive e confini delle placche, e la scheda Statistiche con i suoi grafici."
+description: "La mappa degli epicentri di rQuake, con raggruppamenti, faglie attive e confini delle placche, e la scheda Statistiche con i suoi grafici."
 project: "rquake"
 order: 4
 section: "Guide d'uso"

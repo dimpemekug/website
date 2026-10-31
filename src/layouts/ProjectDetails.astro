@@ -20,7 +20,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, seoTitle, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
+const { title, seoTitle, seoDescription, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -66,7 +66,7 @@ const projectStructuredData = [
 <Layout
   title={seoTitle ?? `${title} | ${SITE.title}`}
   ogTitle={title}
-  description={description}
+  description={seoDescription ?? description}
   tags={project.data.tags}
   articleSection="Projects"
   pubDatetime={pubDatetime}

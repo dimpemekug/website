@@ -1,6 +1,6 @@
 ---
 title: "Libreria locale e formati supportati"
-description: "Come importare manga, ebook e video con l'app File, come organizzare le cartelle e quali formati sono supportati: CBZ, CBR, EPUB, PDF, FB2, DOCX, MKV, MP4 e altri."
+description: "Come importare manga, ebook e video con l'app File, organizzare le cartelle e quali formati sono supportati: CBZ, CBR, EPUB, PDF, MKV, MP4 e altri."
 project: "rmanga"
 order: 2
 section: "Libreria"

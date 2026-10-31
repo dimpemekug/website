@@ -1,6 +1,7 @@
 ---
 title: "Assistenti che ricordano: cosa cambia quando l'AI non riparte mai da zero"
 seoTitle: "Assistenti che ricordano: quando l'AI non riparte da zero"
+seoDescription: "Dopo anni di conversazioni che finivano nel nulla a ogni sessione, gli assistenti AI iniziano a portarsi dietro un ricordo di chi sei e di cosa hai già detto."
 description: Dopo anni di conversazioni che finivano nel nulla a ogni sessione, gli assistenti AI iniziano a portarsi dietro un ricordo di chi sei e di cosa hai già detto. È comodo, ma sposta altrove una domanda che finora si era rimandata.
 pubDatetime: 2026-08-08T08:00:00Z
 tags:

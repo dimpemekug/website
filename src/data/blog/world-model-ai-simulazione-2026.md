@@ -1,6 +1,7 @@
 ---
 title: "World model: l'AI che prova a capire il mondo invece di limitarsi a descriverlo"
 seoTitle: "World model: l'AI che prova a capire il mondo"
+seoDescription: "Un modello linguistico prevede la parola successiva. Un world model prova a prevedere cosa succede dopo in una scena reale."
 description: Un modello linguistico prevede la parola successiva. Un world model prova a prevedere cosa succede dopo in una scena reale. È una differenza tecnica precisa, ed è il motivo per cui la robotica sta guardando altrove rispetto ai chatbot.
 pubDatetime: 2026-08-07T08:00:00Z
 tags:
