@@ -1,17 +1,17 @@
 ---
 title: "Local Library and Supported Formats"
 description: "How to import manga, ebooks and videos with the Files app, organize folders, and which formats are supported: CBZ, CBR, EPUB, PDF, MKV, MP4 and more."
-project: "rmanga"
+project: "legendum"
 order: 2
 section: "Library"
 ---
 
 ## The Folder in the Files App
 
-rManga's *Documents* folder is visible in the **Files** app, under:
+Legendum's *Documents* folder is visible in the **Files** app, under:
 
 ```text
-Files › On My iPhone (or On My iPad) › rManga
+Files › On My iPhone (or On My iPad) › Legendum
 ```
 
 You can copy files there from your Mac (via cable or AirDrop), download them with Safari or save them from other apps with the share sheet.
@@ -31,12 +31,12 @@ You can copy files there from your Mac (via cable or AirDrop), download them wit
 
 ## Organizing Folders
 
-rManga works out title, series and volumes from the folder structure:
+Legendum works out title, series and volumes from the folder structure:
 
 ### 1. Single Work (One-Shot, Book or Film)
-A file placed directly in the `rManga` folder becomes a series with a single chapter:
+A file placed directly in the `Legendum` folder becomes a series with a single chapter:
 ```text
-rManga/
+Legendum/
 ├── Akira_Volume1.cbz      ← Manga series with 1 volume
 ├── 1984_GeorgeOrwell.epub ← Complete book
 └── MyNeighborTotoro.mkv   ← Film or single episode
@@ -45,7 +45,7 @@ rManga/
 ### 2. Series with Several Volumes or Chapters
 If you group files in a subfolder, the folder name becomes the series title and each file a chapter or episode:
 ```text
-rManga/
+Legendum/
 ├── Berserk/
 │   ├── Chapter 001.cbz
 │   └── Chapter 002.cbz
@@ -61,7 +61,7 @@ rManga/
 ### 3. Chapter as an Image Folder
 If you have already-extracted images (e.g. JPEG or PNG scans):
 ```text
-rManga/
+Legendum/
 └── OnePiece/
     └── Chapter 1000/
         ├── 01.jpg
@@ -72,6 +72,6 @@ rManga/
 ---
 
 ## Automatic Metadata (ComicInfo.xml and EPUB)
-- **Comics**: if a CBZ or CBR archive contains the standard `ComicInfo.xml` file, rManga reads the series title, author, synopsis, genres, chapter title and number and reading direction from it. Without metadata, file names are used.
+- **Comics**: if a CBZ or CBR archive contains the standard `ComicInfo.xml` file, Legendum reads the series title, author, synopsis, genres, chapter title and number and reading direction from it. Without metadata, file names are used.
 - **Ebooks**: for EPUBs, title, author, description, subjects and reading direction come from the book's metadata, and the cover is the one the book declares (or the first page if there isn't one). An EPUB on its own names the series; inside a folder it's a volume.
-- **DRM-protected EPUBs** (Adobe, Apple, Readium LCP) can't be opened: rManga tells you so with a message.
+- **DRM-protected EPUBs** (Adobe, Apple, Readium LCP) can't be opened: Legendum tells you so with a message.

@@ -1,14 +1,14 @@
 ---
 title: "Lettore di manga e webtoon"
-description: "Modalità di lettura per manga e fumetti occidentali, scorrimento continuo dei webtoon, ingrandimento con Core ML e Testo attivo in rManga."
-project: "rmanga"
+description: "Modalità di lettura per manga e fumetti occidentali, scorrimento continuo dei webtoon, ingrandimento con Core ML e Testo attivo in Legendum."
+project: "legendum"
 order: 3
 section: "Fumetti"
 ---
 
 ## Versi di lettura
 
-Il lettore di rManga si adatta a ogni tipo di fumetto. In tutte le modalità puoi ingrandire con un pizzico o un doppio tocco, e un tocco singolo mostra o nasconde i controlli.
+Il lettore di Legendum si adatta a ogni tipo di fumetto. In tutte le modalità puoi ingrandire con un pizzico o un doppio tocco, e un tocco singolo mostra o nasconde i controlli.
 
 ### 1. Da destra a sinistra (manga)
 Il verso dei manga giapponesi: un tocco sul lato sinistro dello schermo o uno scorrimento verso destra porta alla pagina successiva, rispettando l'impaginazione originale.
@@ -27,8 +27,8 @@ Pensato per i fumetti digitali verticali:
 ## Funzioni del lettore
 
 ### Doppia pagina e pagine larghe
-- **Doppia pagina su iPad**: con l'iPad in orizzontale, rManga affianca due pagine come in un volume aperto; la copertina resta da sola e, in modalità manga, la pagina successiva va a sinistra. Si disattiva dal menu del lettore o dalle Impostazioni.
-- **Dividi le pagine larghe**: se una scansione contiene due pagine affiancate, rManga può mostrarne una metà alla volta, nel verso di lettura della serie.
+- **Doppia pagina su iPad**: con l'iPad in orizzontale, Legendum affianca due pagine come in un volume aperto; la copertina resta da sola e, in modalità manga, la pagina successiva va a sinistra. Si disattiva dal menu del lettore o dalle Impostazioni.
+- **Dividi le pagine larghe**: se una scansione contiene due pagine affiancate, Legendum può mostrarne una metà alla volta, nel verso di lettura della serie.
 
 ### Ingrandimento con Core ML
 Nessun modello è incluso, ma puoi importare il tuo modello Core ML (`.mlmodel` o `.mlpackage`) nelle impostazioni di lettura. Viene compilato all'importazione e applicato alle pagine con una risoluzione inferiore al limite scelto, per renderle più nitide.

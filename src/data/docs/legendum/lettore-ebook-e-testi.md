@@ -1,14 +1,14 @@
 ---
 title: "Lettore di ebook e libri di testo"
-description: "Il lettore basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown: temi, caratteri, segnalibri, evidenziazioni e ricerca in rManga."
-project: "rmanga"
+description: "Il lettore basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown: temi, caratteri, segnalibri, evidenziazioni e ricerca in Legendum."
+project: "legendum"
 order: 4
 section: "Ebook"
 ---
 
 ## Il lettore di testo (Readium)
 
-Per i libri fatti di testo rManga usa **Readium** (`EPUBNavigatorViewController`), il toolkit open source di riferimento per gli ebook. I PDF e gli EPUB fatti di immagini si sfogliano invece con il lettore dei fumetti.
+Per i libri fatti di testo Legendum usa **Readium** (`EPUBNavigatorViewController`), il toolkit open source di riferimento per gli ebook. I PDF e gli EPUB fatti di immagini si sfogliano invece con il lettore dei fumetti.
 
 Con Readium:
 - le posizioni nel libro (circa una ogni mille caratteri) sono le stesse su ogni dispositivo, qualunque sia lo schermo o il carattere scelto;

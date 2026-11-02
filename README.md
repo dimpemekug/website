@@ -40,7 +40,7 @@ I principi guida del progetto e del software ospitato sono:
 
 - **Blog (`/posts`, `/en/posts`)**: riflessioni, note tecniche e articoli di approfondimento su intelligenza artificiale, modelli on-device, cybersecurity, architetture local-first, sviluppo Apple e tendenze tecnologiche.
 - **Progetti (`/progetti`, `/en/projects`)**: vetrina di tutte le applicazioni native e dei progetti web realizzati, con badge di disponibilità su App Store e Google Play Store, collegamenti alla documentazione e schede informative sulla privacy dedicate per ciascuna app (`/progetti/<app>/privacy/`).
-- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **Archiva**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **rManga**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
+- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **Archiva**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **Legendum**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
 - **Chi sono (`/about`, `/en/about`)**: panoramica del profilo dello sviluppatore, tecnologie impiegate (Swift, SwiftUI, Flutter, Dart, Astro, PHP) e canali di contatto.
 - **Archivio cronologico (`/archives`, `/en/archives`)**: indice temporale di tutti gli articoli pubblicati raggruppati per anno.
 - **Esplorazione per Tag (`/tags`, `/en/tags`)**: navigazione trasversale per argomenti e parole chiave con conteggio e paginazione.
@@ -62,7 +62,7 @@ Il sito documenta e ospita le schede ufficiali delle seguenti applicazioni:
 | **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di immagini, conversione da formato HEIC e rimozione automatica dei metadati sensibili.           |  ✅  |
 | **[CodeVault](src/data/projects/codevault.md)**       | iOS, iPadOS, macOS | Gestione di snippet di codice e note tecniche con syntax highlighting per 20+ linguaggi, blocco Face ID e sync iCloud.    |  ✅  |
 | **[NetCalc Pro](src/data/projects/netcalc.md)**       | iOS, iPadOS, macOS | Calcolatore di reti IPv4/IPv6, subnetting VLSM, validazione laboratori e generazione comandi per switch/router Cisco IOS. |  ✅  |
-| **[rManga](src/data/projects/rmanga.md)**             | iOS, iPadOS        | Lettore per manga, fumetti, libri e anime con supporto server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS.         |  ✅  |
+| **[Legendum](src/data/projects/legendum.md)**         | iOS, iPadOS        | Lettore per manga, fumetti, libri e anime con supporto server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS.         |  ✅  |
 | **[ShowNest](src/data/projects/shownest.md)**         | iOS                | Tracker per serie TV ed episodi basato su dati TMDB con notifiche uscite e sincronizzazione iCloud.                       |  ✅  |
 | **[DomoMeter](src/data/projects/domometer.md)**       | iOS, Android       | Monitoraggio dei consumi domestici di luce, gas e acqua con statistiche storiche e dashboard locale.                      |  ✅  |
 | **[Horologe](src/data/projects/horologe.md)**         | iOS, Android       | Gestione della propria collezione di orologi con storico manutenzioni, statistiche, wishlist e registro al polso.         |  ✅  |

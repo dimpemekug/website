@@ -1,12 +1,12 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
-title: "Informativa sulla Privacy - rManga"
-description: "Privacy dell'app rManga: quali dati vengono trattati, a quali sorgenti e server si collega e come funziona la sincronizzazione iCloud facoltativa."
+title: "Informativa sulla Privacy - Legendum"
+description: "Privacy dell'app Legendum: quali dati vengono trattati, a quali sorgenti e server si collega e come funziona la sincronizzazione iCloud facoltativa."
 ---
 
 Ultimo aggiornamento: 13 ottobre 2026
 
-Questa Informativa sulla Privacy descrive come **rManga** tratta i dati.
+Questa Informativa sulla Privacy descrive come **Legendum** tratta i dati.
 
 ## Sintesi
 
@@ -20,7 +20,7 @@ Questa Informativa sulla Privacy descrive come **rManga** tratta i dati.
 
 ## Dati trattati dall'app
 
-rManga tratta esclusivamente:
+Legendum tratta esclusivamente:
 
 - la libreria: serie, capitoli ed episodi aggiunti dall'utente, con copertine, progressi di lettura e di visione, segnalibri ed evidenziazioni nei libri
 - i file che l'utente importa: fumetti, libri e documenti (CBZ, CBR, EPUB, PDF, FB2, testo e altri), sottotitoli, modelli per il miglioramento delle immagini, backup
@@ -31,13 +31,13 @@ rManga tratta esclusivamente:
 
 ## Raccolta dei dati
 
-Lo sviluppatore non raccoglie, non riceve, non vende e non condivide dati dell'utente. rManga non ha server propri: comunica solo con i servizi descritti in «Connessioni di rete».
+Lo sviluppatore non raccoglie, non riceve, non vende e non condivide dati dell'utente. Legendum non ha server propri: comunica solo con i servizi descritti in «Connessioni di rete».
 
 ## Connessioni di rete
 
 - **Sorgenti ed estensioni.** Le estensioni vengono scaricate dai repository che l'utente aggiunge (l'app non include né propone alcun repository) e contattano i siti dei contenuti per cercare serie, elencare capitoli e scaricare pagine o video. Questi siti sono gestiti da terze parti, che ricevono le richieste necessarie (ad esempio i termini di ricerca e l'indirizzo IP) e le trattano secondo le proprie regole. Lo sviluppatore non gestisce né controlla questi siti.
 - **Server personali.** Suwayomi, Komga, Kavita, Jellyfin e i cataloghi OPDS sono server dell'utente o da lui scelti, raggiunti con le credenziali che l'utente inserisce, anche sulla rete locale.
-- **Pagine web delle sorgenti.** Alcuni siti richiedono una verifica (ad esempio Cloudflare) o un accesso: rManga li apre in una vista web, e i cookie che quei siti impostano vengono conservati per le richieste successive.
+- **Pagine web delle sorgenti.** Alcuni siti richiedono una verifica (ad esempio Cloudflare) o un accesso: Legendum li apre in una vista web, e i cookie che quei siti impostano vengono conservati per le richieste successive.
 - **Informazioni sugli episodi.** Per i tempi di sigla e riepilogo da saltare e per titoli e anteprime degli episodi, l'app interroga AniList (con il titolo della serie), AniSkip, Anira e Kitsu (con l'identificativo della serie e il numero dell'episodio). Non vengono inviati dati dell'utente.
 
 ## Sincronizzazione iCloud
@@ -52,7 +52,7 @@ Se l'utente attiva gli aggiornamenti in background, l'app controlla periodicamen
 
 ## Permessi del dispositivo
 
-rManga può chiedere l'accesso a:
+Legendum può chiedere l'accesso a:
 
 - rete locale, per raggiungere i server personali dell'utente
 - notifiche, per gli avvisi dei nuovi capitoli
@@ -61,7 +61,7 @@ L'app non richiede l'accesso a posizione, fotocamera, microfono, libreria Foto, 
 
 ## Condivisione dei dati
 
-rManga non condivide dati dell'utente con lo sviluppatore o con terze parti per analytics, pubblicità, profilazione o tracciamento. Le sole comunicazioni verso l'esterno sono quelle descritte in «Connessioni di rete», avviate dalle sorgenti, dai server e dalle funzioni che l'utente usa.
+Legendum non condivide dati dell'utente con lo sviluppatore o con terze parti per analytics, pubblicità, profilazione o tracciamento. Le sole comunicazioni verso l'esterno sono quelle descritte in «Connessioni di rete», avviate dalle sorgenti, dai server e dalle funzioni che l'utente usa.
 
 ## Conservazione dei dati
 
@@ -85,7 +85,7 @@ Poiché lo sviluppatore non riceve né conserva alcun dato, non può accedere, c
 
 ## Minori
 
-rManga non è rivolta specificamente ai minori e non raccoglie dati personali di alcun utente, minori compresi. I contenuti disponibili dipendono dalle sorgenti e dai server che l'utente aggiunge.
+Legendum non è rivolta specificamente ai minori e non raccoglie dati personali di alcun utente, minori compresi. I contenuti disponibili dipendono dalle sorgenti e dai server che l'utente aggiunge.
 
 ## Sicurezza
 

@@ -1,14 +1,14 @@
 ---
 title: "Manga and Webtoon Reader"
-description: "Reading modes for manga and Western comics, continuous webtoon scrolling, Core ML upscaling and Live Text in rManga."
-project: "rmanga"
+description: "Reading modes for manga and Western comics, continuous webtoon scrolling, Core ML upscaling and Live Text in Legendum."
+project: "legendum"
 order: 3
 section: "Comics"
 ---
 
 ## Reading Directions
 
-rManga's reader adapts to every kind of comic. In every mode you can zoom with a pinch or a double tap, and a single tap shows or hides the controls.
+Legendum's reader adapts to every kind of comic. In every mode you can zoom with a pinch or a double tap, and a single tap shows or hides the controls.
 
 ### 1. Right to Left (Manga)
 The direction of Japanese manga: a tap on the left side of the screen or a swipe to the right goes to the next page, respecting the original layout.
@@ -27,8 +27,8 @@ Designed for vertical digital comics:
 ## Reader Features
 
 ### Double Page and Wide Pages
-- **Double page on iPad**: with the iPad in landscape, rManga shows two pages side by side like an open book; the cover stays on its own and, in manga mode, the next page goes on the left. Turn it off from the reader menu or Settings.
-- **Split wide pages**: if a scan contains two pages side by side, rManga can show one half at a time, in the series' reading direction.
+- **Double page on iPad**: with the iPad in landscape, Legendum shows two pages side by side like an open book; the cover stays on its own and, in manga mode, the next page goes on the left. Turn it off from the reader menu or Settings.
+- **Split wide pages**: if a scan contains two pages side by side, Legendum can show one half at a time, in the series' reading direction.
 
 ### Core ML Upscaling
 No model is included, but you can import your own Core ML model (`.mlmodel` or `.mlpackage`) in the reading settings. It's compiled on import and applied to pages below the resolution limit you choose, to make them sharper.

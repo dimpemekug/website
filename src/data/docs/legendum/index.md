@@ -1,20 +1,20 @@
 ---
-title: "Introduzione a rManga"
-description: "Panoramica di rManga per iPhone e iPad: un'unica app per leggere manga, fumetti ed ebook e guardare anime, senza tracciamento."
-project: "rmanga"
+title: "Introduzione a Legendum"
+description: "Panoramica di Legendum per iPhone e iPad: un'unica app per leggere manga, fumetti ed ebook e guardare anime, senza tracciamento."
+project: "legendum"
 order: 1
 section: "Iniziare"
 ---
 
-## Cos'è rManga
+## Cos'è Legendum
 
-**rManga** è un'app nativa per **iPhone e iPad (iOS/iPadOS 26+)**, in italiano e in inglese, che riunisce in un'unica libreria tre mondi:
+**Legendum** è un'app nativa per **iPhone e iPad (iOS/iPadOS 26+)**, in italiano e in inglese, che riunisce in un'unica libreria tre mondi:
 
 1. **Manga e fumetti**: manga, fumetti occidentali e webtoon a scorrimento verticale, da file locali, estensioni e server.
 2. **Ebook e libri di testo**: un lettore di testo basato su Readium per EPUB, FB2, DOCX, ODT, RTF, HTML, TXT e Markdown, con impaginazione, segnalibri, evidenziazioni e ricerca; i PDF e gli EPUB illustrati si sfogliano come fumetti.
 3. **Anime e video**: un player con due motori (AVPlayer di Apple e libmpv su Metal per MKV e simili), moduli video Sora, server Jellyfin, salto delle sigle con AniSkip e sottotitoli ASS/SSA con il loro stile.
 
-Sviluppata in **SwiftUI e SwiftData** con il design *Liquid Glass*, rManga non ospita né distribuisce contenuti: legge i tuoi file e si collega alle fonti che scegli tu.
+Sviluppata in **SwiftUI e SwiftData** con il design *Liquid Glass*, Legendum non ospita né distribuisce contenuti: legge i tuoi file e si collega alle fonti che scegli tu.
 
 ---
 
@@ -26,7 +26,7 @@ Sviluppata in **SwiftUI e SwiftData** con il design *Liquid Glass*, rManga non o
 - **Credenziali nel Portachiavi**: password e token dei server (Jellyfin, Suwayomi, Komga, Kavita) restano nel Portachiavi di iOS e non finiscono né nei backup né in iCloud.
 
 ### 2. Un solo modello per media diversi
-In rManga ogni opera è un `Manga` e i suoi contenuti (capitoli di fumetti, volumi di libri o episodi) sono `Chapter`:
+In Legendum ogni opera è un `Manga` e i suoi contenuti (capitoli di fumetti, volumi di libri o episodi) sono `Chapter`:
 - Per i **fumetti**, il progresso corrisponde alla pagina letta.
 - Per gli **ebook**, il progresso usa le posizioni di Readium (circa una ogni mille caratteri), uguali su ogni dispositivo.
 - Per i **video**, la posizione è salvata al secondo, e un episodio conta come visto oltre il 90% della durata.
@@ -42,6 +42,6 @@ Le schermate sono state misurate e ottimizzate per evitare gli scatti (*animatio
 
 ## Per iniziare
 
-1. **Importa i tuoi file**: copia archivi di manga, libri o video nella cartella `rManga` dell'app **File**.
+1. **Importa i tuoi file**: copia archivi di manga, libri o video nella cartella `Legendum` dell'app **File**.
 2. **Collega le tue fonti**: aggiungi repository di estensioni Aidoku o Paperback, moduli video Sora o il tuo server (Komga, Kavita, Suwayomi o Jellyfin). Nessun repository è incluso nell'app.
 3. **Leggi o guarda**: sfoglia un manga da destra a sinistra, scorri un webtoon in verticale, evidenzia un passaggio in un ebook o avvia un episodio con sottotitoli e Picture in Picture.

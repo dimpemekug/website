@@ -1,14 +1,14 @@
 ---
 title: "Anime and Video"
-description: "rManga's video player: two engines (AVPlayer and libmpv for MKV), Sora modules, Jellyfin, intro skipping with AniSkip, ASS subtitles and Picture in Picture."
-project: "rmanga"
+description: "Legendum's video player: two engines (AVPlayer and libmpv for MKV), Sora modules, Jellyfin, intro skipping with AniSkip, ASS subtitles and Picture in Picture."
+project: "legendum"
 order: 5
 section: "Anime & Video"
 ---
 
 ## The Player
 
-rManga has its own video player, built for anime, series and films, that goes beyond the limits of the iOS system player:
+Legendum has its own video player, built for anime, series and films, that goes beyond the limits of the iOS system player:
 
 - **Two engines**:
   - **Apple's AVPlayer**: for HLS (`.m3u8`), MP4 and MOV, with Picture in Picture (which starts on its own when you go to the Home Screen), AirPlay and background audio with controls on the Lock Screen and in Control Center.
@@ -20,7 +20,7 @@ rManga has its own video player, built for anime, series and films, that goes be
 ## Sora Video Modules
 
 You can add video sources with **Sora modules**:
-- **Adding**: paste the module's JSON address in *Explore › More › Get Extensions › Sora*, or open an `rmanga://add-module?url=…` link. From the same menu, **Play Video Address** opens any `.m3u8` or `.mp4`.
+- **Adding**: paste the module's JSON address in *Explore › More › Get Extensions › Sora*, or open a `legendum://add-module?url=…` link. From the same menu, **Play Video Address** opens any `.m3u8` or `.mp4`.
 - **Multiple servers**: the module offers the available servers, with the headers they need; the chosen server is remembered for the series and, if a stream won't start, you can switch to another.
 - **Episodes in the library**: series sit in the library like manga. Each episode has a 16:9 frame, a bar showing how much you've watched, its length and title; for anime, missing titles and images are filled in from Anira (or Kitsu).
 - **Downloads**: episodes download in the background (HLS as `.movpkg`, or the `.mp4` file) so you can watch offline; for HLS playlists choose the maximum quality (1080p, 720p or 480p) in Settings › Video.
@@ -31,7 +31,7 @@ You can add video sources with **Sora modules**:
 ## Intro Skipping with AniSkip and AniList
 
 No more fast-forwarding by hand at the start of every episode:
-1. **Series lookup**: rManga finds the series' MyAnimeList ID by searching its title on AniList, once per series.
+1. **Series lookup**: Legendum finds the series' MyAnimeList ID by searching its title on AniList, once per series.
 2. **Times from AniSkip**: it fetches the user-submitted times of:
    - **opening**;
    - **recap**;

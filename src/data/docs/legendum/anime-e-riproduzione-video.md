@@ -1,14 +1,14 @@
 ---
 title: "Anime e video"
-description: "Il player video di rManga: due motori (AVPlayer e libmpv per MKV), moduli Sora, Jellyfin, salto delle sigle con AniSkip, sottotitoli ASS e Picture in Picture."
-project: "rmanga"
+description: "Il player video di Legendum: due motori (AVPlayer e libmpv per MKV), moduli Sora, Jellyfin, salto delle sigle con AniSkip, sottotitoli ASS e Picture in Picture."
+project: "legendum"
 order: 5
 section: "Anime e Video"
 ---
 
 ## Il player
 
-rManga ha un player video suo, pensato per anime, serie e film, che supera i limiti del player di sistema di iOS:
+Legendum ha un player video suo, pensato per anime, serie e film, che supera i limiti del player di sistema di iOS:
 
 - **Due motori**:
   - **AVPlayer di Apple**: per HLS (`.m3u8`), MP4 e MOV, con Picture in Picture (che parte da solo andando alla schermata Home), AirPlay e audio in background con i controlli sulla schermata di blocco e nel Centro di Controllo.
@@ -20,7 +20,7 @@ rManga ha un player video suo, pensato per anime, serie e film, che supera i lim
 ## Moduli video Sora
 
 Puoi aggiungere fonti video con i **moduli Sora**:
-- **Aggiunta**: incolla l'indirizzo del JSON del modulo in *Esplora › Altro › Ottieni estensioni › Sora*, oppure apri un link `rmanga://add-module?url=…`. Dallo stesso menu, **Riproduci indirizzo video** apre un qualsiasi `.m3u8` o `.mp4`.
+- **Aggiunta**: incolla l'indirizzo del JSON del modulo in *Esplora › Altro › Ottieni estensioni › Sora*, oppure apri un link `legendum://add-module?url=…`. Dallo stesso menu, **Riproduci indirizzo video** apre un qualsiasi `.m3u8` o `.mp4`.
 - **Più server**: il modulo propone i server disponibili, con gli header necessari; il server scelto viene ricordato per la serie e, se uno stream non parte, puoi passare a un altro.
 - **Episodi in libreria**: le serie stanno in libreria come i manga. Ogni episodio ha un fotogramma 16:9, la barra di quanto hai visto, la durata e il titolo; per gli anime titoli e immagini mancanti vengono completati da Anira (o Kitsu).
 - **Download**: gli episodi si scaricano in background (HLS come `.movpkg`, oppure il file `.mp4`) per guardarli senza connessione; per le playlist HLS scegli la qualità massima (1080p, 720p o 480p) in Impostazioni › Video.
@@ -31,7 +31,7 @@ Puoi aggiungere fonti video con i **moduli Sora**:
 ## Salto delle sigle con AniSkip e AniList
 
 Niente più avanti veloce a mano all'inizio di ogni episodio:
-1. **Riconoscimento della serie**: rManga trova l'ID MyAnimeList della serie cercando il titolo su AniList, una volta per serie.
+1. **Riconoscimento della serie**: Legendum trova l'ID MyAnimeList della serie cercando il titolo su AniList, una volta per serie.
 2. **Tempi da AniSkip**: recupera i tempi, segnati dagli utenti, di:
    - **sigla iniziale**;
    - **riassunto**;

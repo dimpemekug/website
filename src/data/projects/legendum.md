@@ -1,6 +1,6 @@
 ---
-title: "rManga"
-seoTitle: "rManga: lettore di manga e fumetti per iPhone e iPad"
+title: "Legendum"
+seoTitle: "Legendum: lettore di manga e fumetti per iPhone e iPad"
 applicationCategory: "EntertainmentApplication"
 seoDescription: "Leggi manga, fumetti e libri su iPhone e iPad: file locali, server Komga, Kavita e Jellyfin e cataloghi OPDS. In beta su TestFlight, gratuita."
 description: "Lettore per iPhone e iPad di manga, fumetti, libri e serie animate: i tuoi file, i tuoi server Komga, Kavita, Suwayomi e Jellyfin e i cataloghi OPDS, in un'unica libreria. In beta su TestFlight. Gratuita, senza pubblicità né acquisti in-app."
@@ -11,14 +11,14 @@ storeStatus: "testing"
 privacyDataTypes: "la libreria con progressi, segnalibri ed evidenziazioni, i file che importi, i capitoli e gli episodi scaricati, le sorgenti e le estensioni che installi, i tuoi server personali (con le credenziali nel Portachiavi) e le preferenze dell'app"
 privacyStorageNote: "Libreria e progressi restano sul dispositivo e, solo se attivi la sincronizzazione, nel tuo iCloud privato. L'app si collega soltanto alle sorgenti, ai server e ai servizi che aggiungi o usi tu."
 privacyUpdatedAt: "13 ottobre 2026"
-privacyUrl: "/progetti/rmanga/privacy/"
+privacyUrl: "/progetti/legendum/privacy/"
 ---
 
-## Cos'è rManga
+## Cos'è Legendum
 
-rManga è il lettore per la tua collezione di manga, fumetti e libri, e per le serie animate: i file che possiedi, i tuoi server e i cataloghi che scegli, in un'unica libreria su iPhone e iPad.
+Legendum è il lettore per la tua collezione di manga, fumetti e libri, e per le serie animate: i file che possiedi, i tuoi server e i cataloghi che scegli, in un'unica libreria su iPhone e iPad.
 
-rManga non ospita né distribuisce contenuti: legge solo quelli che aggiungi tu.
+Legendum non ospita né distribuisce contenuti: legge solo quelli che aggiungi tu.
 
 ## Funzionalità principali
 
@@ -35,4 +35,4 @@ rManga non ospita né distribuisce contenuti: legge solo quelli che aggiungi tu.
 
 ## Piattaforme
 
-Per **iPhone** e **iPad** con iOS/iPadOS 26 o successivi. All'inizio rManga è disponibile come **beta su TestFlight**: l'app di Apple per provare le versioni in anteprima.
+Per **iPhone** e **iPad** con iOS/iPadOS 26 o successivi. All'inizio Legendum è disponibile come **beta su TestFlight**: l'app di Apple per provare le versioni in anteprima.

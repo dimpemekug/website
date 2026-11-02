@@ -1,14 +1,14 @@
 ---
 title: "Ebook and Text Reader"
-description: "The Readium-based text reader for EPUB, FB2, DOCX, ODT, RTF, HTML, TXT and Markdown: themes, fonts, pagination, bookmarks, highlights and search in rManga."
-project: "rmanga"
+description: "The Readium-based text reader for EPUB, FB2, DOCX, ODT, RTF, HTML, TXT and Markdown: themes, fonts, pagination, bookmarks, highlights and search in Legendum."
+project: "legendum"
 order: 4
 section: "Ebooks"
 ---
 
 ## The Text Reader (Readium)
 
-For text-based books rManga uses **Readium** (`EPUBNavigatorViewController`), the reference open-source toolkit for ebooks. PDFs and image-based EPUBs are paged through with the comic reader instead.
+For text-based books Legendum uses **Readium** (`EPUBNavigatorViewController`), the reference open-source toolkit for ebooks. PDFs and image-based EPUBs are paged through with the comic reader instead.
 
 With Readium:
 - positions in the book (roughly one every thousand characters) are the same on every device, whatever the screen or font;

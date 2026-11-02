@@ -1,14 +1,14 @@
 ---
 title: "Servers, Extensions and Sync"
-description: "Connecting to Jellyfin, Suwayomi, Komga and Kavita servers, Aidoku and Paperback extensions, iCloud sync and backups in rManga."
-project: "rmanga"
+description: "Connecting to Jellyfin, Suwayomi, Komga and Kavita servers, Aidoku and Paperback extensions, iCloud sync and backups in Legendum."
+project: "legendum"
 order: 6
 section: "Networking & Sync"
 ---
 
 ## Personal Servers
 
-rManga connects to the main self-hosted servers (Settings › Sources › Add Server):
+Legendum connects to the main self-hosted servers (Settings › Sources › Add Server):
 
 ### 1. Jellyfin (10.9+)
 - Add the server with its address, username and password; the access token stays in the iOS Keychain.
@@ -24,7 +24,7 @@ rManga connects to the main self-hosted servers (Settings › Sources › Add Se
 
 ## Aidoku and Paperback Extensions
 
-rManga runs extensions from two ecosystems inside the app. No repository is included: you add them yourself, with a link or by pasting the address.
+Legendum runs extensions from two ecosystems inside the app. No repository is included: you add them yourself, with a link or by pasting the address.
 - **Aidoku (`.aix`)**: run with a WebAssembly runtime (**WasmKit**), with home, lists, search with filters, details, chapters, source settings, login and reassembly of protected pages with CoreGraphics.
 - **Paperback 0.9 (`index.js`)**: run with **JavaScriptCore**, with home sections, search with sorting, details, chapters, source settings and Cloudflare verification.
 - **Updates**: extensions and video modules update on their own (this can be turned off), and from *Settings › Sources* you can check for updates whenever you like.
@@ -35,4 +35,4 @@ rManga runs extensions from two ecosystems inside the app. No repository is incl
 
 - **iCloud**: library, progress, settings, repositories and installed extensions sync across devices signed in to the same iCloud account; for each chapter the furthest point wins. Downloaded chapters, local series (they're files on that device) and passwords don't sync.
 - **Storage**: in *Settings › Storage* you see how much space downloads, covers, converted books, caches and temporary files take, and you can clear each cache. With **Delete after reading** (never, right away, after a day or after a week), downloads of read chapters and watched episodes are removed automatically.
-- **Backups**: in *Settings › Data › Backups* you create, import, share and restore `.rmbackup` backups with your library, history and progress, repositories, installed extensions, servers (without passwords) and settings. The files live in `rManga/Backups` in the Files app. When restoring you choose what to bring back; the library is replaced, but rManga first saves a backup of the current one. Aidoku backups (`.aib`) can be imported too.
+- **Backups**: in *Settings › Data › Backups* you create, import, share and restore `.lgbackup` backups with your library, history and progress, repositories, installed extensions, servers (without passwords) and settings. The files live in `Legendum/Backups` in the Files app. When restoring you choose what to bring back; the library is replaced, but Legendum first saves a backup of the current one. Aidoku backups (`.aib`) can be imported too.

@@ -67,7 +67,8 @@ export default defineConfig({
   ],
 
   // The project was published as "remuxly" before it was renamed to rMux,
-  // and as "rzip" before it was renamed to Archiva
+  // as "rzip" before it was renamed to Archiva,
+  // and as "rmanga" before it was renamed to Legendum
   redirects: {
     "/progetti/remuxly": "/progetti/rmux/",
     "/progetti/remuxly/privacy": "/progetti/rmux/privacy/",
@@ -91,6 +92,22 @@ export default defineConfig({
     "/en/projects/rzip/docs/installation": "/en/projects/archiva/docs/installation/",
     "/en/projects/rzip/docs/shortcuts": "/en/projects/archiva/docs/shortcuts/",
     "/en/projects/rzip/docs/supported-formats": "/en/projects/archiva/docs/supported-formats/",
+    "/progetti/rmanga": "/progetti/legendum/",
+    "/progetti/rmanga/privacy": "/progetti/legendum/privacy/",
+    "/progetti/rmanga/docs/anime-e-riproduzione-video": "/progetti/legendum/docs/anime-e-riproduzione-video/",
+    "/progetti/rmanga/docs": "/progetti/legendum/docs/",
+    "/progetti/rmanga/docs/lettore-ebook-e-testi": "/progetti/legendum/docs/lettore-ebook-e-testi/",
+    "/progetti/rmanga/docs/lettore-manga-e-webtoon": "/progetti/legendum/docs/lettore-manga-e-webtoon/",
+    "/progetti/rmanga/docs/libreria-locale-e-formati": "/progetti/legendum/docs/libreria-locale-e-formati/",
+    "/progetti/rmanga/docs/server-estensioni-e-sync": "/progetti/legendum/docs/server-estensioni-e-sync/",
+    "/en/projects/rmanga": "/en/projects/legendum/",
+    "/en/projects/rmanga/privacy": "/en/projects/legendum/privacy/",
+    "/en/projects/rmanga/docs/anime-and-video-playback": "/en/projects/legendum/docs/anime-and-video-playback/",
+    "/en/projects/rmanga/docs/ebook-and-text-reader": "/en/projects/legendum/docs/ebook-and-text-reader/",
+    "/en/projects/rmanga/docs": "/en/projects/legendum/docs/",
+    "/en/projects/rmanga/docs/local-library-and-formats": "/en/projects/legendum/docs/local-library-and-formats/",
+    "/en/projects/rmanga/docs/manga-and-webtoon-reader": "/en/projects/legendum/docs/manga-and-webtoon-reader/",
+    "/en/projects/rmanga/docs/servers-extensions-and-sync": "/en/projects/legendum/docs/servers-extensions-and-sync/",
   },
 
   i18n: {
