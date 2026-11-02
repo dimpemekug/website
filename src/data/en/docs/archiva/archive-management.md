@@ -22,7 +22,7 @@ When you select a file, the info panel shows its preview:
 - images, PDF documents, text and source code are read directly in memory (with libarchive or `7zz e -so`), without writing temporary files to disk;
 - other types (documents, video, audio, fonts) go through Quick Look, which only opens real files: Archiva writes a copy to a private temporary folder and deletes it when the preview is no longer needed.
 
-Press <kbd>Space</kbd> or <kbd>⌘</kbd> <kbd>Y</kbd> to open the macOS Quick Look panel, always on a temporary copy. The size limit for images and PDFs is set in Settings (from 10 to 250 MB).
+Press <kbd>Space</kbd> or <kbd>⌘</kbd> <kbd>Y</kbd> to open the macOS Quick Look panel, always on a temporary copy. The size limit for images and PDFs is set in Settings (from 10 to 250 MB); images over 250 million pixels are not shown.
 
 ## Compact View
 

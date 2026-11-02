@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Archiva"
-description: "Overview of Archiva for macOS: dual engine (libarchive and 7-Zip), in-memory previews and no network access."
+description: "Overview of Archiva for macOS: dual engine (libarchive and 7-Zip), in-memory previews and no Internet connection."
 project: "archiva"
 order: 1
 section: "Getting Started"
@@ -29,7 +29,7 @@ Archiva combines two engines for compatibility and speed:
 
 ## Principles
 
-1. **No network access**: the app has no network entitlement (`com.apple.security.network.client`). No file, name or password ever leaves your Mac, and the bundled `7zz` runs in the same sandbox with no connection.
+1. **No Internet connection**: Archiva contains no networking code and does not communicate with any server. The `com.apple.security.network.client` entitlement is there only because, inside the sandbox, Quick Look needs it to show documents such as Word, Excel and RTF. No file, name or password ever leaves your Mac, and the bundled `7zz`, which runs in the same sandbox, does not connect either.
 2. **No temporary files just for reading**: opening an archive writes nothing to disk; previews of images, PDFs and text in the info panel read content in memory (with libarchive or `7zz e -so`). Quick Look only opens real files: for the file you choose to view, Archiva writes a copy to a private temporary folder and deletes it when the preview is no longer needed.
 3. **Extraction only on request, never overwriting**: files already in the destination are never overwritten (the new one gets a number, e.g. `Folder 2`). If the archive has a single item at its root it's extracted directly, otherwise into a folder named after the archive.
 

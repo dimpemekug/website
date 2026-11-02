@@ -4,7 +4,7 @@ title: "Archiva Privacy Policy"
 description: "Full privacy policy for the Archiva app: what data is processed and why archives and files never leave your Mac and how passwords are handled."
 ---
 
-Last updated: October 8, 2026
+Last updated: November 2, 2026
 
 This Privacy Policy describes how **Archiva** handles data.
 
@@ -14,7 +14,7 @@ This Privacy Policy describes how **Archiva** handles data.
 - No analytics tools are used
 - No advertising SDKs or third-party SDKs are used
 - No user tracking takes place
-- Archiva does not connect to the Internet: the app has no permission to use the network
+- Archiva does not connect to the Internet and does not communicate with any server
 - Archives and files are read, created, and edited entirely on your Mac and are never sent to any server, the developer's or anyone else's
 
 ## Data the app handles
@@ -30,13 +30,15 @@ Archiva handles only:
 
 ## Data collection
 
-The developer does not collect, receive, transmit, sell, or share any user data. Archiva does not communicate with any server, the developer's or a third party's: the app has no permission to use the network.
+The developer does not collect, receive, transmit, sell, or share any user data. Archiva does not communicate with any server, the developer's or a third party's.
 
 All data stays on your Mac.
 
 ## Archives and files
 
-Opening an archive extracts nothing to disk: the file list and the previews (images, PDFs, text) are read in memory.
+Opening an archive extracts nothing to disk: the file list and the previews of images, PDFs, and text are read in memory.
+
+Other file types are previewed with macOS Quick Look, which needs a file: for the selected item only, Archiva writes it to a private temporary folder inside the app's container and deletes it when the preview closes.
 
 Files are written to disk only when you ask for it:
 
@@ -69,6 +71,8 @@ Archiva runs inside the macOS sandbox and can access only the files and folders 
 Some features need access to a whole folder: reading archives split into several volumes, extracting next to the archive, creating an archive in several volumes. In these cases Archiva asks for it with a system panel. Authorized folders are listed in Settings › Advanced, where you can remove them.
 
 To reopen recent archives and authorized folders after a restart, the app saves a security-scoped bookmark.
+
+Archiva declares the outgoing network permission only because macOS requires it to show documents such as Word, Excel, and RTF with Quick Look inside the sandbox. The app does not use it to connect to the Internet.
 
 Archiva does not request access to the camera, microphone, contacts, calendars, location, Photos library, or biometric authentication.
 

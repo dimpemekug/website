@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Archiva"
-description: "Panoramica di Archiva per macOS: doppio motore (libarchive e 7-Zip), anteprima dei contenuti in memoria e nessun accesso alla rete."
+description: "Panoramica di Archiva per macOS: doppio motore (libarchive e 7-Zip), anteprima dei contenuti in memoria e nessuna connessione a Internet."
 project: "archiva"
 order: 1
 section: "Iniziare"
@@ -29,7 +29,7 @@ Archiva combina due motori per offrire compatibilità e velocità:
 
 ## Principi
 
-1. **Nessun accesso alla rete**: l'app non ha l'entitlement di rete (`com.apple.security.network.client`). Nessun file, nome o password lascia il Mac, e anche il `7zz` incluso gira nella stessa sandbox senza connessione.
+1. **Nessuna connessione a Internet**: Archiva non contiene codice di rete e non comunica con alcun server. L'entitlement `com.apple.security.network.client` c'è solo perché, in sandbox, Quick Look lo richiede per mostrare documenti come Word, Excel e RTF. Nessun file, nome o password lascia il Mac, e anche il `7zz` incluso, che gira nella stessa sandbox, non si connette.
 2. **Nessun file temporaneo per la sola lettura**: aprire un archivio non scrive nulla su disco; le anteprime di immagini, PDF e testi nel pannello informazioni leggono il contenuto in memoria (con libarchive o `7zz e -so`). Quick Look apre solo file veri: per il file che scegli di vedere, Archiva ne scrive una copia in una cartella temporanea privata e la cancella quando l'anteprima non serve più.
 3. **Estrazione solo su richiesta, senza sovrascrivere**: i file già presenti nella destinazione non vengono mai sovrascritti (il nuovo prende un numero, es. `Cartella 2`). Se l'archivio contiene un solo elemento alla radice viene estratto direttamente, altrimenti in una cartella con il nome dell'archivio.
 

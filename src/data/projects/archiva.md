@@ -9,8 +9,8 @@ draft: false
 tags: ["macOS", "desktop", "utility", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "gli archivi che apri e il loro contenuto, i file e le cartelle che scegli per creare o modificare un archivio, i file creati su tua richiesta, le password degli archivi protetti (solo in memoria, mai salvate) e le preferenze dell'app"
-privacyStorageNote: "Gli archivi vengono letti, creati e modificati interamente sul Mac: Archiva non ha il permesso di usare la rete e i tuoi file non lasciano mai il computer."
-privacyUpdatedAt: "8 ottobre 2026"
+privacyStorageNote: "Gli archivi vengono letti, creati e modificati interamente sul Mac: Archiva non si connette a Internet e i tuoi file non lasciano mai il computer."
+privacyUpdatedAt: "2 novembre 2026"
 privacyUrl: "/progetti/archiva/privacy/"
 ---
 

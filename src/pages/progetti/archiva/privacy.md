@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - Archiva"
 description: "Privacy dell'app Archiva: quali dati vengono trattati e perché archivi e file non lasciano mai il Mac e come vengono gestite le password."
 ---
 
-Ultimo aggiornamento: 8 ottobre 2026
+Ultimo aggiornamento: 2 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **Archiva** tratta i dati.
 
@@ -14,7 +14,7 @@ Questa Informativa sulla Privacy descrive come **Archiva** tratta i dati.
 - Non vengono utilizzati strumenti di analytics
 - Non vengono utilizzati SDK pubblicitari né SDK di terze parti
 - Non viene effettuato alcun tracciamento dell'utente
-- Archiva non si connette a Internet: l'app non ha il permesso di usare la rete
+- Archiva non si connette a Internet e non comunica con alcun server
 - Gli archivi e i file vengono letti, creati e modificati interamente sul Mac e non vengono mai inviati a server, né dello sviluppatore né di terze parti
 
 ## Dati trattati dall'app
@@ -30,13 +30,15 @@ Archiva tratta esclusivamente:
 
 ## Raccolta dei dati
 
-Lo sviluppatore non raccoglie, non riceve, non trasmette, non vende e non condivide dati dell'utente. Archiva non comunica con alcun server, né dello sviluppatore né di terze parti: l'app non ha il permesso di usare la rete.
+Lo sviluppatore non raccoglie, non riceve, non trasmette, non vende e non condivide dati dell'utente. Archiva non comunica con alcun server, né dello sviluppatore né di terze parti.
 
 Tutti i dati restano sul Mac dell'utente.
 
 ## Archivi e file
 
-Aprire un archivio non estrae nulla su disco: l'elenco dei file e le anteprime (immagini, PDF, testi) vengono letti in memoria.
+Aprire un archivio non estrae nulla su disco: l'elenco dei file e le anteprime di immagini, PDF e testi vengono letti in memoria.
+
+Gli altri tipi di file si vedono in anteprima con Quick Look di macOS, che ha bisogno di un file: solo per la voce selezionata, Archiva lo scrive in una cartella temporanea privata all'interno del contenitore dell'app e lo elimina quando l'anteprima si chiude.
 
 I file vengono scritti su disco solo quando l'utente lo chiede:
 
@@ -69,6 +71,8 @@ Archiva funziona all'interno della sandbox di macOS e può accedere solo ai file
 Alcune funzioni hanno bisogno dell'accesso a una cartella intera: leggere gli archivi divisi in più volumi, estrarre accanto all'archivio, creare un archivio in più volumi. In questi casi Archiva lo chiede con un pannello di sistema. Le cartelle autorizzate sono elencate in Impostazioni › Avanzate, da cui si possono rimuovere.
 
 Per riaprire gli archivi recenti e le cartelle autorizzate dopo un riavvio, l'app salva un riferimento di sicurezza (security-scoped bookmark).
+
+Archiva dichiara il permesso di connessione in uscita solo perché macOS lo richiede per mostrare con Quick Look, all'interno della sandbox, documenti come Word, Excel e RTF. L'app non lo usa per connettersi a Internet.
 
 Archiva non richiede l'accesso a fotocamera, microfono, contatti, calendari, posizione, libreria Foto o autenticazione biometrica.
 

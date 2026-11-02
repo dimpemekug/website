@@ -22,7 +22,7 @@ Selezionando un file, il pannello informazioni ne mostra l'anteprima:
 - immagini, documenti PDF, testi e codice sorgente vengono letti direttamente in memoria (con libarchive o con `7zz e -so`), senza scrivere file temporanei su disco;
 - gli altri tipi (documenti, video, audio, font) passano da Quick Look, che apre solo file veri: Archiva ne scrive una copia in una cartella temporanea privata e la cancella quando l'anteprima non serve più.
 
-Premendo <kbd>Spazio</kbd> o <kbd>⌘</kbd> <kbd>Y</kbd> si apre il pannello di Quick Look di macOS, sempre su una copia temporanea. Il limite di dimensione per immagini e PDF si regola nelle Impostazioni (da 10 a 250 MB).
+Premendo <kbd>Spazio</kbd> o <kbd>⌘</kbd> <kbd>Y</kbd> si apre il pannello di Quick Look di macOS, sempre su una copia temporanea. Il limite di dimensione per immagini e PDF si regola nelle Impostazioni (da 10 a 250 MB); le immagini oltre i 250 milioni di pixel non vengono mostrate.
 
 ## Vista compatta
 

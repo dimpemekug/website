@@ -9,8 +9,8 @@ draft: false
 tags: ["macOS", "desktop", "utility", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "the archives you open and their contents, the files and folders you choose to create or edit an archive, the files created at your request, passwords of protected archives (in memory only, never saved), and the app's preferences"
-privacyStorageNote: "Archives are read, created, and edited entirely on your Mac: Archiva has no permission to use the network, and your files never leave your computer."
-privacyUpdatedAt: "October 8, 2026"
+privacyStorageNote: "Archives are read, created, and edited entirely on your Mac: Archiva does not connect to the Internet, and your files never leave your computer."
+privacyUpdatedAt: "November 2, 2026"
 privacyUrl: "/en/projects/archiva/privacy/"
 ---
 
