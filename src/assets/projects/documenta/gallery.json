@@ -1,0 +1,44 @@
+{
+  "captions": {
+    "01-pages": {
+      "it": "Un racconto su pagina con intestazione, immagine e nota a piè di pagina, la struttura a sinistra e l'inspector Stile a destra",
+      "en": "A story on the page with header, image and footnote, the outline on the left and the Style inspector on the right"
+    },
+    "02-formats": {
+      "it": "Un rapporto DOCX con tabella, elenchi puntati e numerati e note a piè di pagina",
+      "en": "A DOCX report with a table, bulleted and numbered lists and footnotes"
+    },
+    "03-long-documents": {
+      "it": "Una tesi su pagine affiancate: titoli numerati, sommario, indice delle figure e struttura nella barra laterale",
+      "en": "A thesis on side-by-side pages: numbered headings, table of contents, table of figures and the outline in the sidebar"
+    },
+    "04-tables": {
+      "it": "Un bilancio con celle unite, righe a bande, totali calcolati con le formule e la scheda Tabella dell'inspector",
+      "en": "A budget with merged cells, banded rows, totals from formulas and the Table tab of the inspector"
+    },
+    "05-objects": {
+      "it": "Un notiziario con titolo WordArt ad arco, forme raggruppate, due colonne a metà pagina e immagine con il testo attorno",
+      "en": "A newsletter with an arched WordArt headline, grouped shapes, two columns from mid-page and an image with text wrapped around it"
+    },
+    "06-layout": {
+      "it": "Un programma con bordo della pagina, tabulazioni con puntini, righello, guide e la scheda Pagina",
+      "en": "A programme with a page border, dot-leader tabs, ruler, guides and the Page tab"
+    },
+    "07-review": {
+      "it": "Commenti nel margine e revisioni di due autori, con la registrazione delle modifiche attiva nella barra di stato",
+      "en": "Margin comments and tracked changes from two authors, with change tracking on in the status bar"
+    },
+    "08-writing": {
+      "it": "La scheda Documento con leggibilità e parole più usate, e l'obiettivo di parole nella barra di stato",
+      "en": "The Document tab with readability and most frequent words, and the word goal in the status bar"
+    },
+    "09-templates": {
+      "it": "La finestra di benvenuto con i dieci modelli pronti",
+      "en": "The welcome window with the ten ready-made templates"
+    },
+    "10-focus": {
+      "it": "Modalità Focus con tema scuro e pagina scura: resta in evidenza solo il paragrafo che stai scrivendo",
+      "en": "Focus Mode with dark theme and dark page: only the paragraph you're writing stays highlighted"
+    }
+  }
+}
