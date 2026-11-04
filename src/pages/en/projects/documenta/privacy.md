@@ -4,7 +4,7 @@ title: "Documenta Privacy Policy"
 description: "Privacy policy for Documenta for Mac: no data collected, no Internet access, and documents and preferences that stay on your Mac."
 ---
 
-*Updated October 24, 2026*
+*Updated November 4, 2026*
 
 Documenta is a Mac app that does not collect, store or transmit any personal data.
 
@@ -16,7 +16,10 @@ Documenta is a Mac app that does not collect, store or transmit any personal dat
 
 ## Data that stays on your Mac
 
-- **Preferences** (zoom, ruler, inspector, word count) in the app settings.
+- **Preferences** (zoom, ruler, inspector, word count, personal text replacements) in the app settings.
+- **Personal dictionary**: the words you add, in the app settings; they are also taught to the macOS spell checker, which keeps them on your Mac.
+- **Personal templates**: the documents you save as a template, in the app's Application Support folder.
+- **Performance reports**: through MetricKit, macOS gives the app anonymous reports on launch times, hangs and crashes. The app keeps them for about a month in its Application Support folder and does not send them to anyone.
 - **Recent documents**: managed by macOS in the File menu.
 
 None of this data is read by us or sent anywhere.

@@ -27,7 +27,7 @@ From the **Format › Font** menu and the Font section of the inspector:
 
 - **Bold** (<kbd>⌘</kbd> <kbd>B</kbd>), **Italic** (<kbd>⌘</kbd> <kbd>I</kbd>), **Underline** (<kbd>⌘</kbd> <kbd>U</kbd>), **Strikethrough** and **Double Strikethrough**.
 - Single, double, thick, dotted, dashed or wavy underline, with its own color.
-- **Small Caps** and **All Caps**: the text stays as typed and is shown in capitals. The case commands (UPPERCASE, lowercase, Title Case, Sentence case) instead really change the text.
+- **Small Caps** and **All Caps**: the text stays as typed and is shown in capitals. **Change Case** instead really changes the text (UPPERCASE, lowercase, Title Case, Sentence case).
 - **Superscript** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>=</kbd>) and **Subscript** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>-</kbd>), **Bigger** (<kbd>⌘</kbd> <kbd>+</kbd>) and **Smaller** (<kbd>⌘</kbd> <kbd>-</kbd>).
 - Text color, highlight, letter spacing, **Effects** (letter outline and shadow).
 - **Copy Style** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>C</kbd>) and **Paste Style** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>V</kbd>) carry font and paragraph formatting from one place to another; **Clear Formatting** brings the text back to its paragraph style.

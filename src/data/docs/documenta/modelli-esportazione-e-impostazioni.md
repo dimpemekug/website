@@ -40,7 +40,7 @@ I dieci modelli pronti:
 - **Controlla ogni testo nella sua lingua**: il testo a cui hai dato una lingua (Formato › Lingua) si controlla con il suo dizionario.
 - **Dizionario personale**: le parole aggiunte (clic con il tasto destro › **Aggiungi al dizionario personale**) non sono mai segnate come errori, in nessuna lingua. L'elenco si importa e si esporta.
 - **Sostituzioni**: virgolette e trattini tipografici, link riconosciuti mentre scrivi, e **sostituzioni personali**: una parola o un simbolo diventa il testo scelto quando scrivi uno spazio o un segno di punteggiatura dopo. <kbd>⌘</kbd> <kbd>Z</kbd> rimette quello che hai scritto.
-- **Trova e sostituisci…** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd>): maiuscole e minuscole, parole intere, espressione regolare, solo nella selezione; si cerca e si sostituisce anche la formattazione (stile di paragrafo, grassetto, corsivo, sottolineato, evidenziato). Senza testo da cercare si cerca solo il formato. Per una ricerca veloce c'è la barra di ricerca di <kbd>⌘</kbd> <kbd>F</kbd>.
+- **Trova e sostituisci…** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd>): distingui maiuscole e minuscole, parole intere, espressione regolare, solo nella selezione; si cerca e si sostituisce anche la formattazione (stile di paragrafo, grassetto, corsivo, sottolineato, evidenziato). Senza testo da cercare si cerca solo il formato. Per una ricerca veloce c'è la barra di ricerca di <kbd>⌘</kbd> <kbd>F</kbd>.
 - **Modifica › Leggi ad alta voce** legge dalla selezione, o dal cursore alla fine, con la voce di sistema della lingua del testo; la parola letta si evidenzia. Scrivere ferma la lettura.
 - **Modifica › Cerca nel dizionario** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>D</kbd>).
 

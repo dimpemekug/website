@@ -8,9 +8,9 @@ pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "desktop", "productivity", "privacy"]
 storeStatus: "coming-soon"
-privacyDataTypes: "the documents you open, edit and save, the app's preferences (zoom, ruler, inspector, word count) and the list of recent documents managed by macOS"
+privacyDataTypes: "the documents you open, edit and save, the app's preferences (zoom, ruler, inspector, word count, personal text replacements), the personal dictionary, personal templates, anonymous performance reports (MetricKit) kept for about a month, and the list of recent documents managed by macOS"
 privacyStorageNote: "Documenta has no network access: the macOS sandbox prevents any connection. Documents stay on your Mac, or in the cloud service you choose, such as iCloud Drive."
-privacyUpdatedAt: "October 24, 2026"
+privacyUpdatedAt: "November 4, 2026"
 privacyUrl: "/en/projects/documenta/privacy/"
 ---
 

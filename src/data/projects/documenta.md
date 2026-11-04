@@ -8,9 +8,9 @@ pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "desktop", "produttività", "privacy"]
 storeStatus: "coming-soon"
-privacyDataTypes: "i documenti che apri, modifichi e salvi, le preferenze dell'app (zoom, righello, inspector, conteggio parole) e l'elenco dei documenti recenti gestito da macOS"
+privacyDataTypes: "i documenti che apri, modifichi e salvi, le preferenze dell'app (zoom, righello, inspector, conteggio parole, sostituzioni personali), il dizionario personale, i modelli personali, rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese e l'elenco dei documenti recenti gestito da macOS"
 privacyStorageNote: "Documenta non ha accesso alla rete: la sandbox di macOS le impedisce qualsiasi connessione. I documenti restano sul Mac, o nel servizio cloud che scegli tu, come iCloud Drive."
-privacyUpdatedAt: "24 ottobre 2026"
+privacyUpdatedAt: "4 novembre 2026"
 privacyUrl: "/progetti/documenta/privacy/"
 ---
 

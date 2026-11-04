@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - Documenta"
 description: "Informativa sulla privacy di Documenta per Mac: nessun dato raccolto, nessun accesso a Internet, documenti e preferenze che restano sul tuo Mac."
 ---
 
-*Aggiornata al 24 ottobre 2026*
+*Aggiornata al 4 novembre 2026*
 
 Documenta è un'app per Mac che non raccoglie, non memorizza e non trasmette alcun dato personale.
 
@@ -16,7 +16,10 @@ Documenta è un'app per Mac che non raccoglie, non memorizza e non trasmette alc
 
 ## Dati che restano sul Mac
 
-- **Preferenze** (zoom, righello, inspector, conteggio parole) nelle impostazioni dell'app.
+- **Preferenze** (zoom, righello, inspector, conteggio parole, sostituzioni personali del testo) nelle impostazioni dell'app.
+- **Dizionario personale**: le parole che aggiungi, nelle impostazioni dell'app; vengono anche insegnate al correttore ortografico di macOS, che le tiene sul Mac.
+- **Modelli personali**: i documenti che salvi come modello, nella cartella Application Support dell'app.
+- **Rapporti sulle prestazioni**: macOS consegna all'app, tramite MetricKit, rapporti anonimi su tempi di avvio, blocchi e arresti anomali. L'app li conserva per circa un mese nella cartella Application Support e non li invia a nessuno.
 - **Documenti recenti**: gestiti da macOS nel menu Archivio.
 
 Nessuno di questi dati viene letto da noi né inviato altrove.
