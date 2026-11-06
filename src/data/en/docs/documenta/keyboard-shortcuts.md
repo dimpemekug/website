@@ -2,11 +2,13 @@
 title: "Keyboard shortcuts"
 description: "Every keyboard shortcut in Documenta for Mac: file, edit, format, insert, objects and view."
 project: "documenta"
-order: 10
+order: 11
 section: "Reference"
 ---
 
 The standard macOS shortcuts work as well: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</kbd> <kbd>O</kbd>, <kbd>⌘</kbd> <kbd>S</kbd>, <kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⌘</kbd> <kbd>F</kbd>, <kbd>⌘</kbd> <kbd>,</kbd> and so on.
+
+On iPad with a keyboard, the same shortcuts work for styles, alignment, indents, lists, comments, tracked changes, Advanced Find and printing.
 
 ## File and edit
 

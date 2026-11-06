@@ -8,14 +8,16 @@ section: "Iniziare"
 
 ## Cos'è Documenta
 
-**Documenta** è un elaboratore di testi nativo per Mac, scritto in SwiftUI e AppKit. Si scrive su pagine impaginate come sulla carta e si aprono, modificano e salvano i documenti nel loro formato: Word (`.docx` e `.doc`), OpenDocument (`.odt`), RTF e testo semplice.
+**Documenta** è un elaboratore di testi per Mac, iPhone e iPad, scritto in SwiftUI con AppKit sul Mac e UIKit su iPhone e iPad. Si scrive su pagine impaginate come sulla carta e si aprono, modificano e salvano i documenti nel loro formato: Word (`.docx` e `.doc`), OpenDocument (`.odt`), RTF e testo semplice.
 
-**Requisiti**: macOS 15 Sequoia o successivo, Mac con Apple silicon o Intel. L'interfaccia è in italiano e in inglese; la lingua si sceglie in **Impostazioni › Generali › Lingua dell'app** (serve riavviare l'app).
+**Requisiti**: sul Mac macOS 15 Sequoia o successivo e un chip Apple (Apple silicon: l'app non gira sui Mac con Intel); su iPhone e iPad iOS e iPadOS 26 o successivo. L'interfaccia è in italiano e in inglese; sul Mac la lingua si sceglie in **Impostazioni › Generali › Lingua dell'app** (serve riavviare l'app).
+
+Questa guida descrive l'app per Mac; cosa cambia su iPhone e iPad è in [iPhone e iPad](/progetti/documenta/docs/iphone-e-ipad).
 
 ## Principi
 
 1. **Il file resta nel suo formato.** DOCX e ODT hanno un lettore e uno scrittore propri: non passano dagli importatori di macOS, che perdono immagini, link e tabelle. Un documento aperto si salva nello stesso formato. Cosa si conserva formato per formato è in [Formati e compatibilità](/progetti/documenta/docs/formati-e-compatibilita).
-2. **Niente rete.** L'app gira nella sandbox di macOS senza il permesso di collegarsi a Internet: niente account, analytics o SDK di terze parti. I documenti restano sul Mac o nel servizio cloud che scegli tu, come iCloud Drive.
+2. **Niente server.** L'app non si collega a server, né propri né di terzi: niente account, analytics o SDK di terze parti. Sul Mac la sandbox non le permette di collegarsi a Internet. I documenti restano sul dispositivo, nella cartella Documenta del tuo iCloud Drive o nel servizio cloud che scegli tu.
 3. **Sempre annullabile.** Annulla e ripristina non hanno limiti; anche le operazioni su tabelle, oggetti e capitoli si annullano in un solo passo.
 
 ## La finestra del documento
@@ -39,8 +41,6 @@ Dal menu **Vista**:
 - **Modalità Focus** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd>): i pannelli si nascondono e il testo fuori dal paragrafo del cursore si schiarisce, note e immagini comprese.
 - **Mostra righello** (<kbd>⌘</kbd> <kbd>R</kbd>) e **Mostra conteggio parole**.
 
-Il documento più lungo che si impagina è di 2000 pagine: oltre, una barra lo segnala e il testo dopo l'ultima pagina si vede solo nella vista Senza pagina. Il testo resta comunque nel documento e si salva.
-
 ## Prossimi passi
 
 - [Formati e compatibilità](/progetti/documenta/docs/formati-e-compatibilita): cosa si apre, cosa si salva e cosa si perde.
@@ -50,4 +50,5 @@ Il documento più lungo che si impagina è di 2000 pagine: oltre, una barra lo s
 - [Tabelle](/progetti/documenta/docs/tabelle) e [Oggetti sulla pagina](/progetti/documenta/docs/oggetti-sulla-pagina).
 - [Commenti e revisioni](/progetti/documenta/docs/commenti-e-revisioni).
 - [Modelli, salvataggio e impostazioni](/progetti/documenta/docs/modelli-esportazione-e-impostazioni).
+- [iPhone e iPad](/progetti/documenta/docs/iphone-e-ipad): l'app per iPhone e iPad e le differenze dal Mac.
 - [Scorciatoie da tastiera](/progetti/documenta/docs/scorciatoie).

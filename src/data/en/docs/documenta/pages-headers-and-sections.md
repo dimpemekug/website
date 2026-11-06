@@ -29,7 +29,7 @@ Fields can also go into the text with **Insert › Field**: Page Number, Page Co
 
 ## Text columns
 
-In the **Text Columns** section of the Page tab: number of columns, **Space Between Columns** and, with **Equal Widths** off, the width of each column. In Pageless view the text runs in a single column.
+In the **Text Columns** section of the Page tab: one to three columns, **Space Between Columns** and, with **Equal Widths** off, the width of each column. In Pageless view the text runs in a single column.
 
 ## Sections
 

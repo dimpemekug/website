@@ -1,41 +1,40 @@
 ---
 title: "Documenta"
-seoTitle: "Documenta: scrivi e modifica file Word e ODT su Mac"
+seoTitle: "Documenta: Word e ODT su Mac, iPhone e iPad"
 applicationCategory: "BusinessApplication"
-seoDescription: "Elaboratore di testi per Mac: pagine come su carta, file Word, ODT e RTF aperti e salvati nel loro formato. Gratuita e senza pubblicità."
-description: "Elaboratore di testi per Mac: pagine come su carta, tabelle, note, commenti e revisioni, e documenti Word, OpenDocument e RTF aperti e salvati nel loro formato. Gratuita, senza pubblicità né acquisti in-app."
+seoDescription: "Elaboratore di testi per Mac, iPhone e iPad: pagine come su carta, file Word, ODT e RTF aperti e salvati nel loro formato. Gratuita e senza pubblicità."
+description: "Elaboratore di testi per Mac, iPhone e iPad: pagine come su carta, tabelle, note, commenti e revisioni, e documenti Word, OpenDocument e RTF aperti e salvati nel loro formato. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
-tags: ["macOS", "desktop", "produttività", "privacy"]
+tags: ["macOS", "iOS", "produttività", "privacy"]
 storeStatus: "coming-soon"
-privacyDataTypes: "i documenti che apri, modifichi e salvi, le preferenze dell'app (zoom, righello, inspector, conteggio parole, sostituzioni personali), il dizionario personale, i modelli personali, rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese e l'elenco dei documenti recenti gestito da macOS"
-privacyStorageNote: "Documenta non ha accesso alla rete: la sandbox di macOS le impedisce qualsiasi connessione. I documenti restano sul Mac, o nel servizio cloud che scegli tu, come iCloud Drive."
-privacyUpdatedAt: "4 novembre 2026"
+privacyDataTypes: "i documenti che apri, modifichi e salvi; su iPhone e iPad la fotocamera per scansionare i fogli e le foto che scegli tu; le preferenze dell'app (con le sostituzioni personali e il nome dell'autore di commenti e revisioni), il dizionario personale e, sul Mac, i modelli personali e rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese"
+privacyStorageNote: "Documenta non si collega a server, né propri né di terzi. I documenti restano sul dispositivo, nella cartella Documenta del tuo iCloud Drive o nel servizio cloud che scegli tu; il testo delle scansioni e delle foto è riconosciuto sul dispositivo."
+privacyUpdatedAt: "6 novembre 2026"
 privacyUrl: "/progetti/documenta/privacy/"
 ---
 
 ## Cos'è Documenta
 
-Documenta è un elaboratore di testi nativo per Mac. Scrivi su pagine impaginate come sulla carta, con margini, intestazioni e note, e apri, modifichi e salvi i documenti che ricevi nel loro formato: Word, OpenDocument, RTF o testo semplice. DOCX e ODT si leggono e si scrivono senza passare da una conversione, così stili, tabelle, immagini e impostazioni della pagina restano al loro posto.
+Documenta è un elaboratore di testi per Mac, iPhone e iPad. Scrivi su pagine impaginate come sulla carta, con margini, intestazioni e note, e apri, modifichi e salvi i documenti che ricevi nel loro formato: Word, OpenDocument, RTF o testo semplice. DOCX e ODT si leggono e si scrivono senza passare da una conversione, così stili, tabelle, immagini e impostazioni della pagina restano al loro posto. Con iCloud Drive e Handoff riprendi un documento sull'altro dispositivo.
 
 ## Funzionalità principali
 
-- **I tuoi formati**: documenti Word (.docx e .doc), OpenDocument (.odt), RTF e testo semplice, aperti e salvati così come sono; esportazione in PDF, EPUB, pagina web e Markdown
-- **Pagine vere**: margini e righello, verticale od orizzontale, una pagina sotto l'altra o due affiancate; formati da A3 a Tabloid, colonne di testo, bordo della pagina, filigrana, numeri di riga e sillabazione automatica
-- **Intestazioni e piè di pagina**: in tre parti, con numero di pagina e totale, diversi sulla prima pagina e sulle pagine pari, da scrivere direttamente sulla pagina con un doppio clic
-- **Sezioni**: carta, orientamento, colonne e intestazioni diversi in parti diverse del documento; le colonne cambiano anche a metà pagina
-- **Documenti lunghi**: titoli numerati, sommario e indice delle figure con i numeri di pagina, didascalie numerate, riferimenti incrociati, segnalibri, note a piè di pagina e di chiusura
-- **Commenti e revisioni**: commenti nel margine, come in Word e LibreOffice; registra le tue modifiche e accetta o rifiuta quelle degli altri
-- **Struttura nella barra laterale**: un clic porta a un titolo, un trascinamento sposta un capitolo intero
-- **Tabelle**: celle unite, bordi e sfondi per cella, stili pronti, prima riga ripetuta su ogni pagina, righe da ordinare e formule come `=SUM(ABOVE)`
-- **Oggetti sulla pagina**: caselle di testo, WordArt con testo curvo, forme e immagini con il testo attorno; si ruotano, si raggruppano, si allineano e si distribuiscono
-- **Formattazione completa**: undici stili di paragrafo modificabili per ogni documento, stili di carattere, copia e incolla stile, elenchi su più livelli, tabulazioni con puntini, capolettera, sfondo e bordi dei paragrafi
-- **Scrittura**: trova e sostituisci anche per formattazione e con espressioni regolari, controllo ortografico nella lingua di ogni parte del testo, dizionario personale, lettura ad alta voce, obiettivo di parole, tempo di lettura e indice di leggibilità
-- **Parti da un modello**: dieci modelli pronti nella finestra di benvenuto (lettera, rapporto, tesi, curriculum…) e i tuoi documenti salvati come modelli personali
-- **Modalità Focus e pagina scura**: resta in evidenza solo il paragrafo che stai scrivendo; la pagina scura vale solo sullo schermo
-- **Privata**: nessun account, nessuna connessione a Internet, i documenti non lasciano il Mac; interfaccia in italiano e in inglese
+- **I tuoi formati**: documenti Word (.docx e .doc), OpenDocument (.odt), RTF e testo semplice, aperti e salvati così come sono; esportazione in PDF, EPUB, pagina web e Markdown. Su iPhone e iPad i .doc si aprono in un documento Word nuovo
+- **Pagine vere**: margini e righello, verticale od orizzontale, formati da A3 a Tabloid, colonne di testo e sezioni con carta, colonne e intestazioni diverse; oppure il testo senza pagina, largo quanto la finestra o lo schermo
+- **Intestazioni e piè di pagina**: in tre parti, con numero di pagina e totale, diversi sulla prima pagina e sulle pagine pari; bordo della pagina, filigrana, numeri di riga e sillabazione. Si impostano sul Mac; su iPhone e iPad quelli dei documenti si vedono e si conservano
+- **Documenti lunghi**: titoli numerati, sommario e indice delle figure, didascalie numerate, riferimenti incrociati, segnalibri, note a piè di pagina e di chiusura, struttura dei titoli nella barra laterale
+- **Commenti e revisioni**: commenti nel margine con le risposte, come in Word e LibreOffice; registra le tue modifiche e accetta o rifiuta quelle degli altri
+- **Tabelle**: celle unite, bordi e sfondi per cella, stili pronti, prima riga ripetuta su ogni pagina e righe da ordinare; sul Mac anche formule come `=SUM(ABOVE)`
+- **Oggetti sulla pagina**: caselle di testo, forme e immagini con il testo attorno, da ruotare, raggruppare e allineare; sul Mac anche il WordArt con il testo curvo
+- **Formattazione completa**: undici stili di paragrafo, stili di carattere, elenchi su più livelli, tabulazioni con puntini, capolettera, sfondo e bordi dei paragrafi
+- **Scrittura**: trova e sostituisci anche per formattazione e con espressioni regolari, controllo ortografico nella lingua di ogni parte del testo, sostituzioni personali, lettura ad alta voce, tempo di lettura e indice di leggibilità
+- **Dieci modelli pronti**: lettera, rapporto, tesi, curriculum, preventivo e altri; sul Mac anche i tuoi documenti salvati come modelli personali
+- **Solo sul Mac**: Modalità Focus, pagina scura, obiettivo di parole, menu completi e scorciatoie da tastiera
+- **Solo su iPhone e iPad**: barra di formato sopra la tastiera, scansione dei fogli con la fotocamera e testo dalle foto, disegni e scrittura a mano con l'Apple Pencil; su iPad struttura, pagine e inspector affiancati, barra dei menu e scorciatoie con la tastiera
+- **Privata**: nessun account e nessun dato raccolto, i documenti restano sul dispositivo o nel tuo iCloud Drive; interfaccia in italiano e in inglese
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
-Disponibile su **macOS** 15 Sequoia o successivo, per Mac con Apple silicon e Intel.
+Disponibile su **Mac** con chip Apple (Apple silicon) e macOS 15 Sequoia o successivo, e su **iPhone** e **iPad** con iOS e iPadOS 26 o successivo.

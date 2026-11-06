@@ -9,10 +9,10 @@ section: "Review"
 ## Comments
 
 - **Insert › Comment** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd>) puts a comment on the selected text.
-- Commented text is highlighted in yellow (on screen only) and a mark in the right margin of the page opens the comment box, with author, date and text. You edit or delete it there.
-- The author is the name of the Mac user.
+- Commented text is highlighted in yellow (on screen only) and a bubble in the right margin of the page opens the comment, with author, date, text and replies. You edit, delete or reply there.
+- The author is the name of the Mac user; on iPhone and iPad you set it in the app's Settings.
 
-Comments are kept in DOCX and ODT and read from those written in Word and LibreOffice. The comment's plain text is kept, not its formatting or replies. In RTF, DOC and plain text, comments are lost.
+Comments are kept in DOCX and ODT and read from those written in Word and LibreOffice. The comment's plain text is kept, not its formatting, and so are the replies. In RTF, DOC and plain text, comments are lost.
 
 ## Tracking changes
 
@@ -22,6 +22,7 @@ With tracking on:
 
 - typed, pasted or dragged text is an **insertion**, underlined in the author's color;
 - deleted or replaced text stays, **struck through**;
+- a bar in the left margin marks the changed paragraphs;
 - a formatting change (bold, font, color, style…) is marked with the previous formatting;
 - deletions of whole paragraphs and table rows are tracked too.
 

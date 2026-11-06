@@ -39,6 +39,78 @@
     "10-focus": {
       "it": "Modalità Focus con tema scuro e pagina scura: resta in evidenza solo il paragrafo che stai scrivendo",
       "en": "Focus Mode with dark theme and dark page: only the paragraph you're writing stays highlighted"
+    },
+    "01-formats": {
+      "it": "Un rapporto DOCX su iPhone con tabella, elenchi e note a piè di pagina",
+      "en": "A DOCX report on iPhone with a table, lists and footnotes"
+    },
+    "02-write": {
+      "it": "Scrittura senza pagina su iPhone, con stile, grassetto e allineamento nella barra sopra la tastiera",
+      "en": "Pageless writing on iPhone, with style, bold and alignment in the bar above the keyboard"
+    },
+    "03-format": {
+      "it": "Il foglio Formato su iPhone, con le schede Testo, Paragrafo, Pagina e Documento",
+      "en": "The Format sheet on iPhone, with the Text, Paragraph, Page and Document tabs"
+    },
+    "04-long-documents": {
+      "it": "Una tesi su iPhone con sommario e indice delle figure",
+      "en": "A thesis on iPhone with a table of contents and a table of figures"
+    },
+    "05-tables": {
+      "it": "Un bilancio su iPhone con il cursore in tabella e la scheda Tabella",
+      "en": "A budget on iPhone with the cursor in a table and the Table tab"
+    },
+    "06-objects": {
+      "it": "Un notiziario su iPhone con titolo WordArt, forme raggruppate, due colonne e un'immagine con il testo attorno",
+      "en": "A newsletter on iPhone with a WordArt headline, grouped shapes, two columns and an image with text wrapped around it"
+    },
+    "07-layout": {
+      "it": "Un programma su iPhone con bordo della pagina e tabulazioni, e la scheda Pagina",
+      "en": "A programme on iPhone with a page border and tabs, and the Page tab"
+    },
+    "08-review": {
+      "it": "Commenti e revisioni su iPhone, con il riquadro dei commenti",
+      "en": "Comments and tracked changes on iPhone, with the comments panel"
+    },
+    "08-templates": {
+      "it": "La schermata iniziale su iPad: Crea documento, i dieci modelli e i documenti della cartella Documenta",
+      "en": "The start screen on iPad: Create Document, the ten templates and the documents in the Documenta folder"
+    },
+    "iphone/09-dark": {
+      "it": "Il saggio su iPhone in modalità scura, con il foglio Paragrafo",
+      "en": "The essay on iPhone in dark mode, with the Paragraph sheet"
+    },
+    "ipad/01-pages": {
+      "it": "Su iPad la struttura a sinistra, le pagine al centro e l'inspector Testo a destra",
+      "en": "On iPad, the outline on the left, the pages in the middle and the Text inspector on the right"
+    },
+    "ipad/02-formats": {
+      "it": "Un rapporto DOCX su iPad con struttura e inspector Paragrafo",
+      "en": "A DOCX report on iPad with the outline and the Paragraph inspector"
+    },
+    "ipad/03-long-documents": {
+      "it": "Una tesi su iPad con sommario, indice delle figure, struttura e scheda Documento",
+      "en": "A thesis on iPad with table of contents, table of figures, outline and Document tab"
+    },
+    "ipad/04-tables": {
+      "it": "Un bilancio su iPad con il cursore in tabella e la scheda Tabella",
+      "en": "A budget on iPad with the cursor in a table and the Table tab"
+    },
+    "ipad/05-objects": {
+      "it": "Un notiziario su iPad con titolo WordArt, forme raggruppate, colonne a metà pagina e immagine con il testo attorno",
+      "en": "A newsletter on iPad with a WordArt headline, grouped shapes, columns from mid-page and an image with text wrapped around it"
+    },
+    "ipad/06-layout": {
+      "it": "Un programma su iPad con bordo della pagina, tabulazioni e la scheda Pagina",
+      "en": "A programme on iPad with a page border, tabs and the Page tab"
+    },
+    "ipad/07-review": {
+      "it": "Commenti e revisioni su iPad, con il riquadro dei commenti",
+      "en": "Comments and tracked changes on iPad, with the comments panel"
+    },
+    "ipad/09-dark": {
+      "it": "Il saggio su iPad in modalità scura, con l'inspector Testo",
+      "en": "The essay on iPad in dark mode, with the Text inspector"
     }
   }
 }

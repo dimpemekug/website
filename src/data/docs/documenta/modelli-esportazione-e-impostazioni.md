@@ -31,6 +31,8 @@ I dieci modelli pronti:
 
 ## Salvataggio
 
+- I documenti si salvano dove vuoi; nella cartella **Documenta** di iCloud Drive li trovi anche su iPhone e iPad. Con **Handoff** un documento aperto in iCloud Drive si riprende sull'altro dispositivo.
+
 - Con il **salvataggio automatico** (attivo all'inizio) i documenti già salvati una volta si salvano da soli mentre scrivi, ogni 60 secondi se non scegli un altro intervallo (da 5 a 600), e quando li chiudi. Restano disponibili le versioni di macOS (**Archivio › Ripristina a**).
 - Spento in **Impostazioni › File**, i documenti si salvano solo con **Archivio › Salva** (<kbd>⌘</kbd> <kbd>S</kbd>) e, chiudendo un documento modificato, Documenta chiede se salvarlo.
 

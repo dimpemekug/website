@@ -9,10 +9,10 @@ section: "Revisione"
 ## Commenti
 
 - **Inserisci › Commento** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd>) mette un commento sul testo selezionato.
-- Il testo commentato è evidenziato in giallo (solo sullo schermo) e un segno nel margine destro della pagina apre il riquadro del commento, con autore, data e testo. Lì si modifica o si elimina.
-- L'autore è il nome dell'utente del Mac.
+- Il testo commentato è evidenziato in giallo (solo sullo schermo) e un fumetto nel margine destro della pagina apre il commento, con autore, data, testo e risposte. Lì si modifica, si elimina o si risponde.
+- L'autore è il nome dell'utente del Mac; su iPhone e iPad si sceglie nelle Impostazioni dell'app.
 
-I commenti si conservano in DOCX e ODT e si leggono da quelli scritti in Word e LibreOffice. Si conserva il testo semplice del commento, non la sua formattazione né le risposte. In RTF, DOC e testo semplice i commenti si perdono.
+I commenti si conservano in DOCX e ODT e si leggono da quelli scritti in Word e LibreOffice. Si conservano il testo semplice del commento, non la sua formattazione, e le risposte. In RTF, DOC e testo semplice i commenti si perdono.
 
 ## Registrare le modifiche
 
@@ -22,6 +22,7 @@ Con la registrazione attiva:
 
 - il testo scritto, incollato o trascinato è un **inserimento**, sottolineato nel colore dell'autore;
 - il testo cancellato o sostituito resta, **barrato**;
+- una barra nel margine sinistro segna i paragrafi cambiati;
 - un cambio di formattazione (grassetto, carattere, colore, stile…) si segna con la formattazione di prima;
 - si registrano anche le cancellazioni di paragrafi interi e di righe di tabella.
 

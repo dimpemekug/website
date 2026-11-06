@@ -17,7 +17,7 @@ section: "Iniziare"
 | Testo formattato con allegati (`.rtfd`) | ✓ | — | macOS, con le immagini |
 | Testo semplice (`.txt`) | ✓ | ✓ | macOS |
 
-Un documento aperto si salva nel suo formato. Per i documenti nuovi il formato proposto al primo salvataggio si sceglie in **Impostazioni › File › Formato predefinito per i nuovi documenti** (DOCX all'inizio).
+Un documento aperto si salva nel suo formato. Su iPhone e iPad i `.doc` si aprono in un documento Word nuovo (`.docx`) e non si salvano come `.doc`; vedi [iPhone e iPad](/progetti/documenta/docs/iphone-e-ipad). Per i documenti nuovi il formato proposto al primo salvataggio si sceglie in **Impostazioni › File › Formato predefinito per i nuovi documenti** (DOCX all'inizio).
 
 ## Cosa si conserva in DOCX e ODT
 
@@ -48,7 +48,7 @@ Dal menu **Archivio**:
 
 ## Limiti noti
 
-- Dei commenti si conserva il testo semplice, non la formattazione né le risposte.
+- Dei commenti si conserva il testo semplice, non la formattazione; le risposte si conservano in DOCX e ODT.
 - Un cambio di formattazione registrato da LibreOffice si può solo accettare: ODF non salva la formattazione di prima.
 - Oggetti: i gruppi dentro un gruppo diventano un gruppo solo; le forme libere si mostrano, ma le curve diventano segmenti fitti. Il WordArt ha sei curve: le altre forme di Word diventano la più simile.
 - Sezioni: nella stessa pagina cambiano solo le colonne; carta, margini e intestazioni cambiano dalla pagina seguente.

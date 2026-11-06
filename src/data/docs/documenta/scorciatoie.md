@@ -2,11 +2,13 @@
 title: "Scorciatoie da tastiera"
 description: "Tutte le scorciatoie da tastiera di Documenta per Mac: archivio, modifica, formato, inserimento, oggetti e vista."
 project: "documenta"
-order: 10
+order: 11
 section: "Riferimento"
 ---
 
 Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</kbd> <kbd>O</kbd>, <kbd>⌘</kbd> <kbd>S</kbd>, <kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⌘</kbd> <kbd>F</kbd>, <kbd>⌘</kbd> <kbd>,</kbd> e così via.
+
+Su iPad con una tastiera valgono le stesse scorciatoie per stili, allineamento, rientri, elenchi, commenti, revisioni, Trova avanzato e stampa.
 
 ## Archivio e modifica
 

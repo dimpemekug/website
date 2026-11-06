@@ -29,7 +29,7 @@ I campi si inseriscono anche nel testo con **Inserisci › Campo**: Numero di pa
 
 ## Colonne di testo
 
-Nella sezione **Colonne di testo** della scheda Pagina: numero di colonne, **Spazio tra le colonne** e, togliendo **Larghezze uguali**, la larghezza di ogni colonna. Senza pagina il testo va su una colonna sola.
+Nella sezione **Colonne di testo** della scheda Pagina: da una a tre colonne, **Spazio tra le colonne** e, togliendo **Larghezze uguali**, la larghezza di ogni colonna. Senza pagina il testo va su una colonna sola.
 
 ## Sezioni
 

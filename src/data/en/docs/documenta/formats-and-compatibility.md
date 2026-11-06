@@ -17,7 +17,7 @@ section: "Getting Started"
 | Rich text with attachments (`.rtfd`) | ✓ | — | macOS, with images |
 | Plain text (`.txt`) | ✓ | ✓ | macOS |
 
-An opened document is saved in its own format. For new documents, the format offered on the first save is set in **Settings › File › Default format for new documents** (DOCX to start with).
+An opened document is saved in its own format. On iPhone and iPad, `.doc` files open in a new Word document (`.docx`) and aren't saved as `.doc`; see [iPhone and iPad](/en/projects/documenta/docs/iphone-and-ipad). For new documents, the format offered on the first save is set in **Settings › File › Default format for new documents** (DOCX to start with).
 
 ## What DOCX and ODT keep
 
@@ -48,7 +48,7 @@ From the **File** menu:
 
 ## Known limits
 
-- Comments keep their plain text, not their formatting or replies.
+- Comments keep their plain text, not their formatting; replies are kept in DOCX and ODT.
 - A formatting change tracked by LibreOffice can only be accepted: ODF doesn't save the previous formatting.
 - Objects: groups inside a group become a single group; freeform shapes are shown, but curves become dense segments. WordArt has six curves: Word's other shapes become the closest one.
 - Sections: on the same page only the columns change; paper, margins and headers change from the next page.

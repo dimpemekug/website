@@ -31,6 +31,8 @@ The ten ready-made templates:
 
 ## Saving
 
+- Documents are saved wherever you like; in the **Documenta** folder of iCloud Drive you also find them on iPhone and iPad. With **Handoff**, a document open from iCloud Drive can be picked up on your other device.
+
 - With **Save automatically** (on to start with), documents saved at least once save themselves while you type, every 60 seconds unless you choose another interval (from 5 to 600), and when you close them. macOS versions stay available (**File › Revert To**).
 - Turned off in **Settings › File**, documents are saved only with **File › Save** (<kbd>⌘</kbd> <kbd>S</kbd>) and, when you close a modified document, Documenta asks whether to save it.
 
