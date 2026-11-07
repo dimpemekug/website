@@ -43,7 +43,7 @@ I dieci modelli pronti:
 - **Dizionario personale**: le parole aggiunte (clic con il tasto destro › **Aggiungi al dizionario personale**) non sono mai segnate come errori, in nessuna lingua. L'elenco si importa e si esporta.
 - **Sostituzioni**: virgolette e trattini tipografici, link riconosciuti mentre scrivi, e **sostituzioni personali**: una parola o un simbolo diventa il testo scelto quando scrivi uno spazio o un segno di punteggiatura dopo. <kbd>⌘</kbd> <kbd>Z</kbd> rimette quello che hai scritto.
 - **Trova e sostituisci…** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd>): distingui maiuscole e minuscole, parole intere, espressione regolare, solo nella selezione; si cerca e si sostituisce anche la formattazione (stile di paragrafo, grassetto, corsivo, sottolineato, evidenziato). Senza testo da cercare si cerca solo il formato. Per una ricerca veloce c'è la barra di ricerca di <kbd>⌘</kbd> <kbd>F</kbd>.
-- **Modifica › Leggi ad alta voce** legge dalla selezione, o dal cursore alla fine, con la voce di sistema della lingua del testo; la parola letta si evidenzia. Scrivere ferma la lettura.
+- **Modifica › Leggi ad alta voce** legge dalla selezione, o dal cursore alla fine, con la voce di sistema della lingua del testo, o con la voce e la velocità scelte in **Impostazioni › Scrittura**; la parola letta si evidenzia. Scrivere ferma la lettura.
 - **Modifica › Cerca nel dizionario** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>D</kbd>).
 
 ## Le schede delle Impostazioni
@@ -51,9 +51,9 @@ I dieci modelli pronti:
 **Documenta › Impostazioni** (<kbd>⌘</kbd> <kbd>,</kbd>):
 
 - **Generali**: lingua dell'app, cosa fare all'avvio (finestra di benvenuto, documento vuoto o niente), zoom predefinito, Documenta come app predefinita per i documenti, ripristino delle impostazioni iniziali.
-- **Aspetto**: aspetto di finestre e barre (automatico, chiaro, scuro), aspetto della pagina, Senza pagina, layout di pagina, disposizione dell'inspector e pannelli delle finestre nuove.
-- **Scrittura**: ortografia e grammatica, dizionario personale, sostituzioni, incolla con lo stile del documento, conteggio delle parole e velocità di lettura.
+- **Aspetto**: aspetto di finestre e barre (automatico, chiaro, scuro), aspetto della pagina, Senza pagina, layout di pagina, disposizione dell'inspector (Riquadri, Schede, Sezioni, Icone) e pannelli delle finestre nuove.
+- **Scrittura**: ortografia e grammatica, dizionario personale, sostituzioni, incolla con lo stile del documento, conteggio delle parole, velocità di lettura, voce e velocità della lettura ad alta voce.
 - **Testo e caratteri**: carattere, dimensione, interlinea e spaziatura dei documenti vuoti nuovi; numero di pagina nel piè di pagina dei documenti nuovi.
-- **Pagina**: carta, orientamento e margini (Normali, Stretti, Ampi o Personalizzati) dei documenti nuovi, guide di layout e delle colonne, unità di misura.
+- **Pagina**: carta, orientamento e margini (Normali, Stretti, Ampi o Personalizzati) dei documenti nuovi, guide di layout e delle colonne, unità di misura (centimetri, pollici o punti).
 - **File**: formato predefinito dei documenti nuovi, salvataggio automatico, avviso dei font non installati.
 - **Modelli**: i modelli personali.

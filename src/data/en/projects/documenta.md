@@ -28,9 +28,10 @@ Documenta is a word processor for Mac, iPhone and iPad. Write on pages laid out 
 - **Tables**: merged cells, per-cell borders and shading, ready-made styles, first row repeated on every page and sortable rows; on the Mac also formulas like `=SUM(ABOVE)`
 - **Objects on the page**: text boxes, shapes and images with text wrapping around them, to rotate, group and align; on the Mac also WordArt with curved text
 - **Complete formatting**: eleven paragraph styles, character styles, multilevel lists, dot-leader tabs, drop caps, paragraph shading and borders
-- **Writing tools**: find and replace by formatting too and with regular expressions, spell checking in the language of each part of the text, custom replacements, read aloud, reading time and a readability score
+- **Writing tools**: find and replace by formatting too and with regular expressions, spell checking in the language of each part of the text, custom replacements, read aloud in the voice you choose, reading time, a word goal and a readability score
 - **Ten ready-made templates**: letter, report, thesis, résumé, quote and more; on the Mac also your own documents saved as templates
-- **Mac only**: Focus Mode, dark page, word goal, full menus and keyboard shortcuts
+- **Light or dark page**: the dark page for the evening applies on screen only; measurements in centimeters, inches or points
+- **Mac only**: Focus Mode, full menus and keyboard shortcuts
 - **iPhone and iPad only**: a formatting bar above the keyboard, scanning paper sheets with the camera and text from photos, drawings and handwriting with Apple Pencil; on iPad the outline, pages and inspector side by side, a menu bar and keyboard shortcuts
 - **Private**: no account and no data collected, your documents stay on your device or in your iCloud Drive; interface in English and Italian
 - **No subscription**: free, with no ads and no in-app purchases

@@ -12,7 +12,7 @@ Documenta per iPhone e iPad apre, modifica e salva gli stessi documenti del Mac,
 
 All'apertura compaiono **Crea documento**, **Apri…**, i dieci modelli del Mac con l'anteprima della prima pagina e, sotto, il browser dei file del sistema: recenti, condivisi, iCloud Drive e gli altri servizi. I documenti si aprono anche dall'app File. Il pulsante **Documenti** in alto a sinistra torna a questa schermata.
 
-I documenti nella cartella **Documenta** di iCloud Drive si ritrovano sul Mac; con **Handoff** un documento in iCloud Drive aperto su un dispositivo si riprende sull'altro. Il salvataggio è automatico.
+I documenti nuovi vanno nella cartella **Documenta** di iCloud Drive o sul dispositivo, in Word, OpenDocument o RTF, come scegli in **Impostazioni › Documenti nuovi**. Quelli nella cartella Documenta di iCloud Drive si ritrovano sul Mac; con **Handoff** un documento in iCloud Drive aperto su un dispositivo si riprende sull'altro. Il salvataggio è automatico.
 
 ## Scrivere su iPhone
 
@@ -42,7 +42,16 @@ Il riconoscimento del testo avviene sul dispositivo; le foto si scelgono con il 
 - **Commenti**: il riquadro con tutti i commenti in ordine, con autore, data e risposte; toccandone uno si va al testo commentato. Si aprono anche toccando un fumetto nel margine.
 - **Trova**, **Trova e sostituisci** e **Trova avanzato**: espressioni regolari, accenti ignorati, solo nella selezione, ricerca e sostituzione del formato, come sul Mac.
 - **Condividi**: **Stampa…** e **Esporta come** PDF, Word (DOCX), OpenDocument (ODT), RTF, pagina web (HTML), Markdown, EPUB e testo semplice, da salvare in File o mandare con AirDrop e Mail.
-- **Impostazioni**: controllo dell'ortografia, correzione automatica, virgolette e trattini tipografici, sostituzioni mentre scrivi (le stesse del Mac) e il nome dell'autore di commenti e revisioni.
+- **Impostazioni**, divise in pagine:
+  - **Scrittura**: correzione automatica, virgolette e trattini tipografici, link riconosciuti mentre scrivi, Incolla adattando lo stile;
+  - **Correttore**: controllo dell'ortografia, lingua, controllo di ogni testo nella sua lingua e dizionario personale;
+  - **Sostituzioni**: le sostituzioni mentre scrivi, le stesse del Mac;
+  - **Documenti nuovi**: dove salvarli, formato, foglio, orientamento, margini, numero di pagina e carattere;
+  - **Pagina e misure**: aspetto della pagina (chiaro, scuro o automatico, la scelta iniziale) e unità di misura;
+  - **Lettura**: velocità di lettura, obiettivo di parole e voce e velocità della lettura ad alta voce;
+  - in fondo il nome dell'autore di commenti e revisioni e **Ripristina impostazioni predefinite**.
+
+Il tempo di lettura e l'avanzamento verso l'obiettivo di parole sono nella scheda Documento del foglio Formato.
 
 ## Differenze dal Mac
 
@@ -53,7 +62,8 @@ Il riconoscimento del testo avviene sul dispositivo; le foto si scelgono con il 
 | Intestazioni e piè di pagina, bordo pagina, filigrana, numeri di riga, sillabazione | si impostano | si vedono e si conservano |
 | WordArt, formule nelle tabelle | si inseriscono | si vedono e si conservano |
 | Modelli | pronti e personali | pronti |
-| Modalità Focus, pagina scura, obiettivo di parole | ✓ | — |
+| Pagina scura, obiettivo di parole | ✓ | ✓ |
+| Modalità Focus | ✓ | — |
 | Scansione dei fogli, testo da immagine, disegni a mano | — | ✓ |
 | Barra dei menu e scorciatoie | ✓ | iPad con tastiera |
 | Commenti con risposte, revisioni | ✓ | ✓ |

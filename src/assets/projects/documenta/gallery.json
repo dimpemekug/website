@@ -111,6 +111,10 @@
     "ipad/09-dark": {
       "it": "Il saggio su iPad in modalità scura, con l'inspector Testo",
       "en": "The essay on iPad in dark mode, with the Text inspector"
+    },
+    "09-dark": {
+      "it": "Il saggio in modalità scura, con la pagina scura",
+      "en": "The essay in dark mode, with the dark page"
     }
   }
 }

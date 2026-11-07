@@ -12,7 +12,7 @@ Page settings are in the **Page** tab of the inspector; the most common ones are
 
 - **Paper Size**: A3, A4, A5, B5, US Letter, US Legal and Tabloid, or a custom size.
 - **Portrait** or **Landscape**.
-- **Margins** in the Paper and Margins section, in centimeters or inches (**Settings › Page › Units**).
+- **Margins** in the Paper and Margins section, in centimeters, inches or points (**Settings › Page › Unit of measure**).
 
 For new documents, paper, orientation and margins are set in **Settings › Page › New Documents**. That's also where you turn on the **layout guides** (the margins of the text area) and the **column guides**, which don't print.
 

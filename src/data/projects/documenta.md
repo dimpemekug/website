@@ -28,9 +28,10 @@ Documenta è un elaboratore di testi per Mac, iPhone e iPad. Scrivi su pagine im
 - **Tabelle**: celle unite, bordi e sfondi per cella, stili pronti, prima riga ripetuta su ogni pagina e righe da ordinare; sul Mac anche formule come `=SUM(ABOVE)`
 - **Oggetti sulla pagina**: caselle di testo, forme e immagini con il testo attorno, da ruotare, raggruppare e allineare; sul Mac anche il WordArt con il testo curvo
 - **Formattazione completa**: undici stili di paragrafo, stili di carattere, elenchi su più livelli, tabulazioni con puntini, capolettera, sfondo e bordi dei paragrafi
-- **Scrittura**: trova e sostituisci anche per formattazione e con espressioni regolari, controllo ortografico nella lingua di ogni parte del testo, sostituzioni personali, lettura ad alta voce, tempo di lettura e indice di leggibilità
+- **Scrittura**: trova e sostituisci anche per formattazione e con espressioni regolari, controllo ortografico nella lingua di ogni parte del testo, sostituzioni personali, lettura ad alta voce con la voce che scegli, tempo di lettura, obiettivo di parole e indice di leggibilità
 - **Dieci modelli pronti**: lettera, rapporto, tesi, curriculum, preventivo e altri; sul Mac anche i tuoi documenti salvati come modelli personali
-- **Solo sul Mac**: Modalità Focus, pagina scura, obiettivo di parole, menu completi e scorciatoie da tastiera
+- **Pagina chiara o scura**: la pagina scura per la sera vale solo sullo schermo; misure in centimetri, pollici o punti
+- **Solo sul Mac**: Modalità Focus, menu completi e scorciatoie da tastiera
 - **Solo su iPhone e iPad**: barra di formato sopra la tastiera, scansione dei fogli con la fotocamera e testo dalle foto, disegni e scrittura a mano con l'Apple Pencil; su iPad struttura, pagine e inspector affiancati, barra dei menu e scorciatoie con la tastiera
 - **Privata**: nessun account e nessun dato raccolto, i documenti restano sul dispositivo o nel tuo iCloud Drive; interfaccia in italiano e in inglese
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app

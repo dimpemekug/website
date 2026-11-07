@@ -25,6 +25,7 @@ Questa guida descrive l'app per Mac; cosa cambia su iPhone e iPad è in [iPhone 
 - **Barra degli strumenti**: stile di paragrafo, font e dimensione, grassetto, corsivo, sottolineato, colore ed evidenziazione, allineamento, elenchi, tabella, casella di testo, forme e il pulsante <kbd>+</kbd> per gli altri inserimenti.
 - **Struttura** (a sinistra, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>): i titoli del documento, rientrati per livello. Vedi [Documenti lunghi](/progetti/documenta/docs/documenti-lunghi).
 - **Inspector** (a destra, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd>): raccoglie testo, paragrafo, pagina, documento e l'oggetto o la tabella selezionati. In **Impostazioni › Aspetto › Disposizione dell'inspector** si sceglie come mostrarlo:
+  - **Riquadri** (la scelta iniziale): le schede di Pages con le sezioni in riquadri arrotondati, come su iPad;
   - **Schede**: Stile, Pagina e Documento, come in Pages, più una scheda per la tabella o l'oggetto selezionato;
   - **Sezioni**: una colonna di sezioni da aprire e chiudere;
   - **Icone**: una barra con un'icona per categoria; il pannello Tabella compare quando il cursore è in una tabella.

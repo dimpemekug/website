@@ -12,7 +12,7 @@ Documenta for iPhone and iPad opens, edits and saves the same documents as the M
 
 At launch you see **Create Document**, **Open…**, the Mac's ten templates with a preview of their first page and, below, the system file browser: recents, shared, iCloud Drive and other services. Documents also open from the Files app. The **Documents** button at the top left goes back to this screen.
 
-Documents in the **Documenta** folder of iCloud Drive show up on the Mac too; with **Handoff**, a document from iCloud Drive open on one device can be picked up on the other. Saving is automatic.
+New documents go to the **Documenta** folder of iCloud Drive or onto the device, as Word, OpenDocument or RTF, as you choose in **Settings › New Documents**. Those in the Documenta folder of iCloud Drive show up on the Mac too; with **Handoff**, a document from iCloud Drive open on one device can be picked up on the other. Saving is automatic.
 
 ## Writing on iPhone
 
@@ -42,7 +42,16 @@ Text recognition happens on the device; photos are picked with the system picker
 - **Comments**: the panel with all comments in order, with author, date and replies; tapping one takes you to the commented text. It also opens when you tap a bubble in the margin.
 - **Find**, **Find and Replace** and **Advanced Find**: regular expressions, ignoring accents, in selection only, finding and replacing formatting, as on the Mac.
 - **Share**: **Print…** and **Export As** PDF, Word (DOCX), OpenDocument (ODT), RTF, web page (HTML), Markdown, EPUB and plain text, to save in Files or send with AirDrop and Mail.
-- **Settings**: spell checking, automatic correction, smart quotes and dashes, replacements while typing (the same as on the Mac) and the author name for comments and tracked changes.
+- **Settings**, split into pages:
+  - **Writing**: automatic correction, smart quotes and dashes, links detected while typing, Paste and Match Style;
+  - **Spelling**: spell checking, language, checking each text in its own language and the personal dictionary;
+  - **Substitutions**: replacements while typing, the same as on the Mac;
+  - **New Documents**: where to save them, format, paper, orientation, margins, page number and font;
+  - **Page and Units**: page appearance (light, dark or automatic, the initial choice) and unit of measure;
+  - **Reading**: reading speed, word goal, and the voice and speed for read aloud;
+  - at the bottom, the author name for comments and tracked changes and **Restore Default Settings**.
+
+Reading time and progress toward the word goal are in the Document tab of the Format sheet.
 
 ## Differences from the Mac
 
@@ -53,7 +62,8 @@ Text recognition happens on the device; photos are picked with the system picker
 | Headers and footers, page border, watermark, line numbers, hyphenation | set up | shown and kept |
 | WordArt, table formulas | inserted | shown and kept |
 | Templates | ready-made and your own | ready-made |
-| Focus Mode, dark page, word goal | ✓ | — |
+| Dark page, word goal | ✓ | ✓ |
+| Focus Mode | ✓ | — |
 | Scanning sheets, text from image, hand drawings | — | ✓ |
 | Menu bar and shortcuts | ✓ | iPad with keyboard |
 | Comments with replies, tracked changes | ✓ | ✓ |

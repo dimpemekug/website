@@ -12,7 +12,7 @@ Le impostazioni della pagina stanno nella scheda **Pagina** dell'inspector; le p
 
 - **Formato carta**: A3, A4, A5, B5, US Letter, US Legal e Tabloid, o una misura personalizzata.
 - **Verticale** od **Orizzontale**.
-- **Margini** nella sezione Carta e margini, in centimetri o pollici (**Impostazioni › Pagina › Unità**).
+- **Margini** nella sezione Carta e margini, in centimetri, pollici o punti (**Impostazioni › Pagina › Unità di misura**).
 
 Per i documenti nuovi carta, orientamento e margini si scelgono in **Impostazioni › Pagina › Documenti nuovi**. Da lì si accendono anche le **guide di layout** (i margini dell'area di testo) e le **guide delle colonne**, che non si stampano.
 

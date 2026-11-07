@@ -43,7 +43,7 @@ The ten ready-made templates:
 - **Personal Dictionary**: words you add (right-click › **Add to Personal Dictionary**) are never marked as errors, in any language. The list can be imported and exported.
 - **Substitutions**: smart quotes and dashes, links detected while typing, and **Custom Replacements**: a word or symbol becomes the text you choose when you type a space or punctuation mark after it. <kbd>⌘</kbd> <kbd>Z</kbd> brings back what you typed.
 - **Find and Replace…** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd>): match case, whole words, regular expression, in selection only; formatting can be found and replaced too (paragraph style, bold, italic, underline, highlight). With no text to find, only the formatting is searched. For a quick search there is the find bar on <kbd>⌘</kbd> <kbd>F</kbd>.
-- **Edit › Read Aloud** reads from the selection, or from the cursor to the end, with the system voice for the text's language; the word being read is highlighted. Typing stops the reading.
+- **Edit › Read Aloud** reads from the selection, or from the cursor to the end, with the system voice for the text's language, or with the voice and speed chosen in **Settings › Writing**; the word being read is highlighted. Typing stops the reading.
 - **Edit › Look Up in Dictionary** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>D</kbd>).
 
 ## The Settings tabs
@@ -51,9 +51,9 @@ The ten ready-made templates:
 **Documenta › Settings** (<kbd>⌘</kbd> <kbd>,</kbd>):
 
 - **General**: app language, what to do at launch (welcome window, blank document or nothing), default zoom, Documenta as the default app for documents, restoring the defaults.
-- **Appearance**: look of windows and bars (automatic, light, dark), page appearance, Pageless, page layout, inspector layout and panels for new windows.
-- **Writing**: spelling and grammar, personal dictionary, substitutions, pasting with the document's style, word count and reading speed.
+- **Appearance**: look of windows and bars (automatic, light, dark), page appearance, Pageless, page layout, inspector layout (Cards, Tabs, Sections, Icons) and panels for new windows.
+- **Writing**: spelling and grammar, personal dictionary, substitutions, pasting with the document's style, word count, reading speed, and the voice and speed for read aloud.
 - **Text and Fonts**: font, size, line spacing and paragraph spacing of new blank documents; page number in the footer of new documents.
-- **Page**: paper, orientation and margins (Normal, Narrow, Wide or Custom) for new documents, layout and column guides, unit of measure.
+- **Page**: paper, orientation and margins (Normal, Narrow, Wide or Custom) for new documents, layout and column guides, unit of measure (centimeters, inches or points).
 - **File**: default format for new documents, autosave, warning about missing fonts.
 - **Templates**: your own templates.

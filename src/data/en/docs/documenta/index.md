@@ -25,6 +25,7 @@ This guide describes the Mac app; what changes on iPhone and iPad is in [iPhone 
 - **Toolbar**: paragraph style, font and size, bold, italic, underline, color and highlight, alignment, lists, table, text box, shapes and the <kbd>+</kbd> button for other insertions.
 - **Outline** (on the left, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>): the document's headings, indented by level. See [Long documents](/en/projects/documenta/docs/long-documents).
 - **Inspector** (on the right, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd>): text, paragraph, page, document and the selected object or table. In **Settings › Appearance › Inspector layout** you choose how it looks:
+  - **Cards** (the initial choice): Pages-style tabs with the sections in rounded cards, as on iPad;
   - **Tabs**: Style, Page and Document, as in Pages, plus a tab for the selected table or object;
   - **Sections**: one column of sections you expand and collapse;
   - **Icons**: a bar with one icon per category; the Table panel appears when the cursor is in a table.
