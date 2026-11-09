@@ -13,7 +13,7 @@ tags:
   - mobile
   - software-development
   - ai
-draft: true
+draft: false
 ---
 
 On September 14, 2026 Apple released iOS 27 and iPadOS 27, alongside [macOS 27 Golden Gate](/en/posts/macos-27-golden-gate-fine-intel-2026/). The feature Apple built its whole presentation around is Siri AI, an assistant rewritten from scratch that can hold a conversation. If you are reading from Europe, though, start with one detail: on iPhones and iPads sold in the European Union Siri AI is not available, and Apple has not given a date. The rest of the update is there, and it is more useful than the silence on the European side suggests.
