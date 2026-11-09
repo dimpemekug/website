@@ -7,7 +7,7 @@ description: "Elaboratore di testi per Mac, iPhone e iPad: pagine come su carta,
 pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "iOS", "produttività", "privacy"]
-storeStatus: "coming-soon"
+appStore: "https://apps.apple.com/app/documenta-elaboratore-testi/id6832269539"
 privacyDataTypes: "i documenti che apri, modifichi e salvi; su iPhone e iPad la fotocamera per scansionare i fogli e le foto che scegli tu; le preferenze dell'app (con le sostituzioni personali e il nome dell'autore di commenti e revisioni), il dizionario personale e, sul Mac, i modelli personali e rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese"
 privacyStorageNote: "Documenta non si collega a server, né propri né di terzi. I documenti restano sul dispositivo, nella cartella Documenta del tuo iCloud Drive o nel servizio cloud che scegli tu; il testo delle scansioni e delle foto è riconosciuto sul dispositivo."
 privacyUpdatedAt: "6 novembre 2026"
@@ -38,4 +38,4 @@ Documenta è un elaboratore di testi per Mac, iPhone e iPad. Scrivi su pagine im
 
 ## Piattaforme
 
-Disponibile su **Mac** con chip Apple (Apple silicon) e macOS 15 Sequoia o successivo, e su **iPhone** e **iPad** con iOS e iPadOS 26 o successivo.
+Disponibile sull'App Store per **iPhone** e **iPad** con iOS e iPadOS 26 o successivo. La versione per **Mac**, con chip Apple (Apple silicon) e macOS 15 Sequoia o successivo, è in revisione e arriverà nella stessa pagina dello store.

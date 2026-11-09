@@ -7,7 +7,7 @@ description: "Word processor for Mac, iPhone and iPad: pages like on paper, tabl
 pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "iOS", "productivity", "privacy"]
-storeStatus: "coming-soon"
+appStore: "https://apps.apple.com/app/documenta-elaboratore-testi/id6832269539"
 privacyDataTypes: "the documents you open, edit and save; on iPhone and iPad, the camera to scan paper sheets and the photos you choose; the app's preferences (including personal text replacements and the author name for comments and tracked changes), the personal dictionary and, on the Mac, personal templates and anonymous performance reports (MetricKit) kept for about a month"
 privacyStorageNote: "Documenta doesn't connect to any server, ours or anyone else's. Documents stay on your device, in the Documenta folder of your iCloud Drive or in the cloud service you choose; text from scans and photos is recognized on the device."
 privacyUpdatedAt: "November 6, 2026"
@@ -38,4 +38,4 @@ Documenta is a word processor for Mac, iPhone and iPad. Write on pages laid out 
 
 ## Platforms
 
-Available for **Mac** with Apple silicon and macOS 15 Sequoia or later, and for **iPhone** and **iPad** with iOS and iPadOS 26 or later.
+Available on the App Store for **iPhone** and **iPad** with iOS and iPadOS 26 or later. The **Mac** version, for Apple silicon and macOS 15 Sequoia or later, is in review and will arrive on the same App Store page.

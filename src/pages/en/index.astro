@@ -40,7 +40,7 @@ const latestProjects = [...allProjects]
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime())
   .slice(0, 4);
 
-const pinnedProjectIds = ["archiva", "rexif", "codevault", "rmux", "netcalc", "resizo"];
+const pinnedProjectIds = ["documenta", "archiva", "rexif", "codevault", "rmux", "netcalc"];
 const pinnedProjects = pinnedProjectIds
   .map(id => allProjects.find(project => project.id === id))
   .filter((project): project is (typeof allProjects)[number] => Boolean(project));
