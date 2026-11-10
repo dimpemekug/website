@@ -1,0 +1,52 @@
+{
+  "captions": {
+    "01-write": {
+      "it": "Una nota nel WYSIWYG: titoli, citazione NOTE, voci da spuntare, testo evidenziato e collegamenti tra le note",
+      "en": "A note in WYSIWYG: headings, a NOTE callout, checklist items, highlighted text and links between notes"
+    },
+    "02-math": {
+      "it": "Formule LaTeX e un diagramma Mermaid disegnati nel testo, con l'obiettivo di parole nella barra di stato",
+      "en": "LaTeX formulas and a Mermaid diagram drawn in the text, with the word goal in the status bar"
+    },
+    "03-preview": {
+      "it": "L'editor di codice con i numeri di riga e l'anteprima affiancata, con una citazione TIP e un diagramma di sequenza",
+      "en": "The code editor with line numbers and the preview side by side, with a TIP callout and a sequence diagram"
+    },
+    "iphone/03-preview": {
+      "it": "L'editor di codice con i numeri di riga e l'anteprima sotto il testo, con una citazione TIP",
+      "en": "The code editor with line numbers and the preview below the text, with a TIP callout"
+    },
+    "04-table": {
+      "it": "Una tabella con le colonne allineate e un blocco di codice Python colorato",
+      "en": "A table with aligned columns and a highlighted Python code block"
+    },
+    "05-backlinks": {
+      "it": "Le note che citano quella aperta, nella scheda Collegamenti della barra laterale",
+      "en": "The notes that link to the open one, in the Backlinks tab of the sidebar"
+    },
+    "iphone/05-backlinks": {
+      "it": "Le note che citano quella aperta, nel foglio dei collegamenti in entrata",
+      "en": "The notes that link to the open one, in the Backlinks sheet"
+    },
+    "06-graph": {
+      "it": "Il grafo delle note della cartella, con i colori delle sottocartelle",
+      "en": "The note graph of the folder, colored by subfolder"
+    },
+    "07-outline": {
+      "it": "La struttura dei titoli accanto al testo, con il titolo al cursore evidenziato",
+      "en": "The heading outline beside the text, with the heading at the cursor highlighted"
+    },
+    "08-search": {
+      "it": "La ricerca nel testo di tutte le note, con le opzioni maiuscole, parola intera ed espressione regolare",
+      "en": "Full-text search across all notes, with match case, whole word and regular expression options"
+    },
+    "09-goto": {
+      "it": "Vai alla nota: l'elenco delle note della cartella da aprire per nome",
+      "en": "Go to Note: the folder's notes, to open by name"
+    },
+    "10-dark": {
+      "it": "La stessa nota con formule e diagramma nel tema scuro",
+      "en": "The same note with formulas and diagram in the dark theme"
+    }
+  }
+}
