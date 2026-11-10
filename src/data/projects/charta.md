@@ -9,7 +9,7 @@ draft: false
 tags: ["macOS", "iOS", "produttività", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "i documenti Markdown che apri o crei, le cartelle che apri come aree di lavoro con le immagini che contengono, i file che esporti e le preferenze dell'app"
-privacyStorageNote: "Charta non contiene codice che si collega a Internet: i documenti restano dove li salvi e le preferenze sul dispositivo. L'unica eccezione sono le immagini con un indirizzo web scritte nei tuoi documenti, che l'anteprima scarica dal loro sito come farebbe un browser."
+privacyStorageNote: "I documenti restano dove li salvi e le preferenze sul dispositivo; nessuna richiesta va allo sviluppatore. Charta si collega a Internet solo per le immagini con un indirizzo web scritte nei tuoi documenti, che editor e anteprima scaricano dal loro sito come farebbe un browser, senza cookie e senza conservarle su disco."
 privacyUpdatedAt: "10 novembre 2026"
 privacyUrl: "/progetti/charta/privacy/"
 ---

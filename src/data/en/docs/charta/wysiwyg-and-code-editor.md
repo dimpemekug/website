@@ -16,7 +16,7 @@ These take the place of their text when the cursor isn't on them:
 
 - **tables**, with aligned columns;
 - **math** and **Mermaid diagrams**, drawn as in the preview;
-- **images** on a line of their own, if the file is on disk (images with a web address only show in the preview).
+- **images** on a line of their own, both files on disk and images with a web address, which Charta downloads like the preview does. An image that can't be read leaves its text; after a network error Charta tries again a minute later.
 
 Checklist boxes are checked with a click (or a tap); the file only changes from `[ ]` to `[x]`.
 

@@ -60,6 +60,10 @@ Sul Mac <kbd>⌘</kbd> <kbd>+</kbd> e <kbd>⌘</kbd> <kbd>-</kbd> cambiano insie
 
 Lo stile vale anche per l'esportazione in HTML e PDF. Su iPhone e iPad la disposizione dell'anteprima si sceglie dal menu con l'occhio della barra.
 
+## Riconoscimenti
+
+Le licenze di KaTeX e Mermaid, le librerie incluse per formule e diagrammi, con versione e sito: sul Mac in **Aiuto › Riconoscimenti**, su iPhone e iPad in fondo alle Impostazioni.
+
 ## Cosa resta sul dispositivo
 
 Le impostazioni, le impostazioni dei progetti, i progetti fissati e recenti e le note recenti restano nelle preferenze dell'app sul dispositivo; non passano da un dispositivo all'altro. L'[informativa sulla privacy](/progetti/charta/privacy/) spiega cosa tratta l'app.

@@ -16,7 +16,7 @@ Prendono il posto del loro testo, quando il cursore non è lì:
 
 - **tabelle**, con le colonne allineate;
 - **formule** e **diagrammi Mermaid**, disegnati come nell'anteprima;
-- **immagini** da sole su una riga, se il file è sul disco (le immagini con un indirizzo web si vedono solo nell'anteprima).
+- **immagini** da sole su una riga, sia i file sul disco sia le immagini con un indirizzo web, che Charta scarica come l'anteprima. Un'immagine che non si riesce a leggere lascia il suo testo; dopo un errore di rete Charta riprova dopo un minuto.
 
 Le caselle delle voci da spuntare si spuntano con un clic (o un tocco); il file cambia solo da `[ ]` a `[x]`.
 

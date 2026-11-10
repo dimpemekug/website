@@ -9,7 +9,7 @@ draft: false
 tags: ["macOS", "iOS", "productivity", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "the Markdown documents you open or create, the folders you open as workspaces with the images they contain, the files you export and the app's preferences"
-privacyStorageNote: "Charta contains no code that connects to the Internet: documents stay where you save them and preferences stay on your device. The only exception is images with a web address written in your documents, which the preview downloads from their site as a browser would."
+privacyStorageNote: "Documents stay where you save them and preferences stay on your device; no request goes to the developer. Charta only connects to the Internet for images with a web address written in your documents, which the editor and preview download from their site as a browser would, with no cookies and without storing them on disk."
 privacyUpdatedAt: "November 10, 2026"
 privacyUrl: "/en/projects/charta/privacy/"
 ---

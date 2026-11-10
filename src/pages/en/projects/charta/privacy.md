@@ -33,7 +33,7 @@ The developer does not collect, receive, transmit, sell, or share any user data.
 
 ## Internet connections
 
-Charta contains no code that connects to the Internet. The only exception depends on the content of your documents: if a document references an image by its web address (for example `![](https://…)`), the preview downloads it from that site, as a browser would. The image's site receives the request with your device's IP address, but no data from the document.
+Charta connects to the Internet in one case only, which depends on the content of your documents: if a document references an image by its web address (for example `![](https://…)`), the editor and the preview download it from that site to show it, as a browser would. The image's site receives the request with your device's IP address, but no data from the document; the app sends no cookies and does not store the image on disk. No request goes to the developer.
 
 Formulas (KaTeX) and diagrams (Mermaid) are drawn with libraries bundled in the app, with no connection.
 

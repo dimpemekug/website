@@ -60,6 +60,10 @@ On the Mac, <kbd>⌘</kbd> <kbd>+</kbd> and <kbd>⌘</kbd> <kbd>-</kbd> change b
 
 The style is also used when exporting to HTML and PDF. On iPhone and iPad, choose the preview layout from the eye menu in the toolbar.
 
+## Acknowledgements
+
+The licenses of KaTeX and Mermaid, the libraries bundled for math and diagrams, with version and website: on the Mac in **Help › Acknowledgements**, on iPhone and iPad at the bottom of Settings.
+
 ## What stays on your device
 
 Settings, project settings, pinned and recent projects and recent notes stay in the app's preferences on your device; they don't sync between devices. The [privacy policy](/en/projects/charta/privacy/) explains what the app handles.
