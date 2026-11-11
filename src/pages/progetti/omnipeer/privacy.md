@@ -30,6 +30,7 @@ OmniPeer usa reti decentralizzate gestite da terzi, su cui lo sviluppatore non h
 - **Reti P2P (eD2k, Kad, BitTorrent, DHT, tracker)**: il tuo indirizzo IP, le porte in uso e gli identificativi (hash) dei file che scarichi o condividi sono visibili ai server eD2k, ai nodi Kad e DHT, ai tracker e agli altri peer. Le parti dei file già scaricate vengono condivise con gli altri peer finché il trasferimento resta nell'elenco.
 - **Ricerca**: il testo che cerchi viene inviato ai server eD2k connessi, ai nodi della rete Kad e, per la ricerca BitTorrent, al servizio esterno apibay.org.
 - **Liste di server e nodi**: quando le aggiorni, OmniPeer scarica i file `server.met` e `nodes.dat` dagli indirizzi indicati nell'app (predefinito: upd.emule-security.org).
+- **Aggiornamenti**: con il controllo automatico attivo, OmniPeer scarica una volta al giorno da GitHub (raw.githubusercontent.com) l'elenco delle versioni pubblicate; con «Controlla aggiornamenti…» lo fa quando lo chiedi tu. Se installi una versione nuova, il file dell'app arriva da GitHub. GitHub vede il tuo indirizzo IP e la versione di OmniPeer; nessun altro dato del Mac viene inviato. Il controllo automatico si spegne in Impostazioni › Generale › Aggiornamenti.
 - **PCP, NAT-PMP e UPnP**: se attivo, l'app chiede al router della rete locale di aprire le porte indicate nelle Impostazioni e di comunicarle il suo indirizzo esterno, che resta sul Mac.
 
 Questi soggetti trattano i dati secondo le proprie regole. L'app e il suo motore interno comunicano tra loro solo sul Mac (indirizzo 127.0.0.1).

@@ -32,6 +32,6 @@ OmniPeer is a peer-to-peer client for Mac that uses two networks in the same win
 
 ## Requirements
 
-A Mac with Apple silicon and macOS 14 Sonoma or later. OmniPeer is not on the Mac App Store: download it as a disk image (DMG) signed with Developer ID and notarized by Apple from the [releases page on GitHub](https://github.com/dimpemekug/OmniPeer-releases/releases/latest). It is free, with no ads or in-app purchases, and needs no account. The interface is in English and Italian.
+A Mac with Apple silicon and macOS 14 Sonoma or later. OmniPeer is not on the Mac App Store: download it as a disk image (DMG) signed with Developer ID and notarized by Apple from the [releases page on GitHub](https://github.com/dimpemekug/OmniPeer-releases/releases/latest); after that it updates itself (see [Settings](/en/projects/omnipeer/docs/settings#updates)). It is free, with no ads or in-app purchases, and needs no account. The interface is in English and Italian.
 
 Like every P2P client, OmniPeer shares the parts of the files you download with other peers and makes your IP address visible: use it only for content you have the right to download and share. Details in the [privacy policy](/en/projects/omnipeer/privacy/).

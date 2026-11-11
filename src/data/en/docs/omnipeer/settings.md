@@ -17,6 +17,11 @@ Open Settings with **OmniPeer › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>) or
 | Download Folder | Downloads | **Choose...** opens the Finder |
 | Prevent the Mac from sleeping during active downloads | on | the Mac doesn't sleep while a download is running |
 | Show a system notification when a file completes | on | the notification is generated on your Mac |
+| Automatically check for updates | on | once a day; **Check Now** checks right away |
+
+## Updates
+
+OmniPeer updates itself with Sparkle: when a new version is available, it shows what's new and installs it in one click, then reopens; transfers resume on their own. Besides automatic checks, you can look for a new version with **OmniPeer › Check for Updates…** or **Check Now** in the General tab. The list of versions and the files come from GitHub: see the [privacy policy](/en/projects/omnipeer/privacy/).
 
 ## Connection & Ports
 

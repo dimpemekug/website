@@ -17,6 +17,11 @@ Le impostazioni si aprono con **OmniPeer › Impostazioni…** (<kbd>⌘</kbd> <
 | Cartella di Download | Download | **Scegli...** apre il Finder |
 | Previeni lo stop/sleep del Mac durante i download attivi | attiva | il Mac non va in stop finché c'è un download in corso |
 | Mostra notifica di sistema al completamento di un file | attiva | la notifica è generata sul Mac |
+| Controlla automaticamente gli aggiornamenti | attiva | una volta al giorno; **Controlla ora** cerca subito |
+
+## Aggiornamenti
+
+OmniPeer si aggiorna con Sparkle: quando c'è una versione nuova mostra le novità e la installa con un clic, poi si riapre; i trasferimenti riprendono da soli. Oltre al controllo automatico, puoi cercare una versione nuova con **OmniPeer › Controlla aggiornamenti…** o con **Controlla ora** nella scheda Generale. L'elenco delle versioni e i file arrivano da GitHub: vedi l'[informativa sulla privacy](/progetti/omnipeer/privacy/).
 
 ## Connessione & Porte
 

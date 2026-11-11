@@ -35,6 +35,7 @@ Un link già presente nell'elenco non viene aggiunto due volte: OmniPeer selezio
 - **Dal browser**: OmniPeer si registra per i link `magnet:` e `ed2k://`. Un clic su uno di questi link in una pagina web apre OmniPeer e aggiunge il download.
 - **Incolla nell'elenco**: con l'elenco dei trasferimenti attivo, <kbd>⌘</kbd> <kbd>V</kbd> aggiunge il link negli appunti senza aprire il pannello, nella cartella di download predefinita.
 - **Trascina**: trascina un file `.torrent` sull'elenco dei trasferimenti.
+- **Dal Finder e dal Dock**: fai doppio clic su un file `.torrent` nel Finder, o trascinalo sull'icona di OmniPeer nel Dock. Il download compare nella finestra già aperta; se OmniPeer è chiusa, si apre e lo aggiunge. Se un'altra app apre i `.torrent` con il doppio clic, scegli OmniPeer con **Archivio › Ottieni informazioni › Apri con › Modifica tutto**.
 - **Elenco vuoto**: finché non ci sono trasferimenti, la finestra mostra i pulsanti **Incolla link** e **Scegli file .torrent…**; se negli appunti c'è un link, compare un riquadro con il suo nome e il pulsante **Aggiungi**.
 - **Dalla ricerca**: vedi [Ricerca e filtro anti-spam](/progetti/omnipeer/docs/ricerca-e-filtro-anti-spam).
 

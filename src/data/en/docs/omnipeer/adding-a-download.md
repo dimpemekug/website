@@ -35,6 +35,7 @@ A link that's already in the list isn't added twice: OmniPeer selects the existi
 - **From the browser**: OmniPeer registers for `magnet:` and `ed2k://` links. Clicking one of these links on a web page opens OmniPeer and adds the download.
 - **Paste into the list**: with the transfer list active, <kbd>⌘</kbd> <kbd>V</kbd> adds the link on the clipboard without opening the panel, to the default download folder.
 - **Drag**: drop a `.torrent` file on the transfer list.
+- **From the Finder and the Dock**: double-click a `.torrent` file in the Finder, or drop it on the OmniPeer icon in the Dock. The download appears in the window that's already open; if OmniPeer is closed, it opens and adds it. If another app opens `.torrent` files on double-click, choose OmniPeer with **File › Get Info › Open with › Change All**.
 - **Empty list**: while there are no transfers, the window shows the **Paste link** and **Choose .torrent file…** buttons; if there's a link on the clipboard, a box appears with its name and an **Add** button.
 - **From search**: see [Search and anti-spam filter](/en/projects/omnipeer/docs/search-and-anti-spam-filter).
 

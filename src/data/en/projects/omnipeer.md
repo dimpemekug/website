@@ -9,7 +9,7 @@ draft: false
 tags: ["macOS", "networking", "P2P", "privacy"]
 download: "https://github.com/dimpemekug/OmniPeer-releases/releases/latest"
 privacyDataTypes: "the app's preferences, the list of transfers and eD2k servers, the files you download and, for the P2P networks to work, the IP address and file identifiers visible to other participants"
-privacyStorageNote: "Preferences, transfers and downloaded files stay on your Mac and no data reaches the developer. Like every P2P client, OmniPeer makes your IP address visible to peers, servers and nodes on the networks; search terms go to eD2k servers, Kad nodes and, for BitTorrent, to apibay.org."
+privacyStorageNote: "Preferences, transfers and downloaded files stay on your Mac and no data reaches the developer. Like every P2P client, OmniPeer makes your IP address visible to peers, servers and nodes on the networks; search terms go to eD2k servers, Kad nodes and, for BitTorrent, to apibay.org; update checks download the list of versions from GitHub."
 privacyUpdatedAt: "November 11, 2026"
 privacyUrl: "/en/projects/omnipeer/privacy/"
 ---
@@ -20,7 +20,7 @@ OmniPeer is a peer-to-peer client for Mac that brings the **eD2k** network (serv
 
 ## Key Features
 
-- **One link, any network**: magnet links, ed2k links and `.torrent` files, detected automatically; links opened in the browser go straight to the app, `.torrent` files can be dropped on the window, and if there's a link on the clipboard OmniPeer offers it
+- **One link, any network**: magnet links, ed2k links and `.torrent` files, detected automatically; links opened in the browser go straight to the app, `.torrent` files can be dropped on the window or opened from the Finder and the Dock, and if there's a link on the clipboard OmniPeer offers it
 - **Block bar**: in each transfer's details, the completed, incoming and missing pieces, and the ones no source has
 - **Transfer details**: a grid of every piece, statistics, connected peers with their client and speed; for eD2k, the MD4 and AICH hashes, ready to copy with one click
 - **A tidy list**: sections by status (downloading, seeding, completed, paused), a network filter, pause and resume one or all transfers
@@ -30,6 +30,7 @@ OmniPeer is a peer-to-peer client for Mac that brings the **eD2k** network (serv
 - **Router ports**: opened automatically with PCP, NAT-PMP or UPnP, with the state of each port and warnings for double NAT and CGNAT
 - **Trackerless BitTorrent**: DHT and peer exchange (PEX), encrypted connections
 - **Menu bar**: speeds, active downloads, pause all and speed limits one click away
+- **Updates from the app**: OmniPeer looks for new versions on its own and installs them in one click, also from **OmniPeer › Check for Updates…**
 - **Made for the Mac**: a notification when a download finishes, no sleep while you download, light or dark theme, interface in English and Italian
 - **Private**: no account and no data sent to the developer
 - **No subscription**: free, with no ads and no in-app purchases
@@ -38,4 +39,4 @@ Like every P2P client, OmniPeer shares the parts of the files you download with 
 
 ## Platforms
 
-**Mac** with Apple silicon and macOS 14 Sonoma or later; it does not run on Intel Macs. OmniPeer is not on the Mac App Store: download it as a disk image (DMG) signed with Developer ID and notarized by Apple from the [releases page on GitHub](https://github.com/dimpemekug/OmniPeer-releases/releases/latest).
+**Mac** with Apple silicon and macOS 14 Sonoma or later; it does not run on Intel Macs. OmniPeer is not on the Mac App Store: download it as a disk image (DMG) signed with Developer ID and notarized by Apple from the [releases page on GitHub](https://github.com/dimpemekug/OmniPeer-releases/releases/latest). Later versions arrive from within the app.
