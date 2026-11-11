@@ -13,7 +13,7 @@ section: "Iniziare"
 
 ## Mac App Store
 
-L'app è pensata e firmata per il **Mac App Store**:
+Archiva si scarica dal [Mac App Store](https://apps.apple.com/it/app/archiva-gestore-di-archivi/id6829807401):
 - bundle ID `com.dimpemekug.archiva`;
 - categoria Utility;
 - gratuita, senza pubblicità, senza account e senza tracciamento.

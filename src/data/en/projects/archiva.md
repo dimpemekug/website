@@ -7,7 +7,7 @@ description: "Mac app for compressed archives: look inside ZIP, RAR, 7z, and man
 pubDatetime: 2026-10-13T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "utility", "privacy"]
-storeStatus: "coming-soon"
+appStore: "https://apps.apple.com/it/app/archiva-gestore-di-archivi/id6829807401"
 privacyDataTypes: "the archives you open and their contents, the files and folders you choose to create or edit an archive, the files created at your request, passwords of protected archives (in memory only, never saved), and the app's preferences"
 privacyStorageNote: "Archives are read, created, and edited entirely on your Mac: Archiva does not connect to the Internet, and your files never leave your computer."
 privacyUpdatedAt: "November 2, 2026"
@@ -36,4 +36,4 @@ Archiva is the archive app for your Mac: look inside ZIP, RAR, 7z, and many othe
 
 ## Platforms
 
-Coming to the Mac App Store for **macOS** 26 Tahoe or later, on Macs with Apple silicon and Intel.
+Available on the Mac App Store for **macOS** 26 Tahoe or later, on Macs with Apple silicon and Intel.

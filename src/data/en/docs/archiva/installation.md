@@ -13,7 +13,7 @@ section: "Getting Started"
 
 ## Mac App Store
 
-The app is built and signed for the **Mac App Store**:
+Archiva is available on the [Mac App Store](https://apps.apple.com/app/archiva-gestore-di-archivi/id6829807401):
 - bundle ID `com.dimpemekug.archiva`;
 - Utilities category;
 - free, with no ads, no account and no tracking.
