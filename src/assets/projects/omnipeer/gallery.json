@@ -1,0 +1,44 @@
+{
+  "captions": {
+    "01-transfers": {
+      "it": "L'elenco dei trasferimenti eD2k e BitTorrent, con la barra a blocchi e la griglia dei pezzi di un download",
+      "en": "The list of eD2k and BitTorrent transfers, with the block bar and piece grid of one download"
+    },
+    "02-peers": {
+      "it": "La scheda Peer di un download BitTorrent: client, indirizzo, velocità e avanzamento di ogni peer",
+      "en": "The Peers tab of a BitTorrent download: client, address, speed and progress of each peer"
+    },
+    "03-add": {
+      "it": "Il pannello Aggiungi con un link ed2k riconosciuto, il nome del file e la cartella di destinazione",
+      "en": "The Add panel with a recognized ed2k link, the file name and the destination folder"
+    },
+    "04-search": {
+      "it": "Una ricerca su tutte le reti, con fonti, dimensione e rete di ogni risultato",
+      "en": "A search across all networks, with the sources, size and network of each result"
+    },
+    "05-spam": {
+      "it": "Il filtro anti-spam mostra con un'etichetta di rischio un eseguibile camuffato, un video troppo piccolo e un falso codec",
+      "en": "The anti-spam filter labels a disguised executable, a video that's too small and a fake codec as risky"
+    },
+    "06-servers": {
+      "it": "L'elenco dei server eD2k con ping, utenti e file indicizzati, aggiornabile da server.met",
+      "en": "The eD2k server list with ping, users and indexed files, which can be updated from server.met"
+    },
+    "07-kad": {
+      "it": "La pagina Rete Kad: stato, nodi, porte aperte sul router e bootstrap da un nodo o da nodes.dat",
+      "en": "The Kad Network page: status, nodes, ports opened on the router and bootstrap from a node or nodes.dat"
+    },
+    "08-ports": {
+      "it": "Le impostazioni delle porte e dei limiti di velocità",
+      "en": "The port and speed limit settings"
+    },
+    "09-menubar": {
+      "it": "Le impostazioni delle reti P2P e il riquadro della barra dei menu con velocità e download attivi",
+      "en": "The P2P network settings and the menu bar panel with speeds and active downloads"
+    },
+    "10-dark": {
+      "it": "I dettagli di un download eD2k nel tema scuro: statistiche, hash MD4 e fonti",
+      "en": "The details of an eD2k download in dark mode: statistics, MD4 hash and sources"
+    }
+  }
+}

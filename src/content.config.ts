@@ -66,6 +66,8 @@ const projectSchema = z.object({
   playStore: z.url().optional(),
   storeStatus: z.enum(["testing", "coming-soon"]).optional(),
   website: z.url().optional(),
+  // Download diretto fuori dagli store (es. DMG su GitHub Releases)
+  download: z.url().optional(),
   privacyDataTypes: z.string().optional(),
   privacyStorageNote: z.string().optional(),
   privacyUpdatedAt: z.string().optional(),

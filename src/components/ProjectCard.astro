@@ -13,7 +13,7 @@ type Props = {
 };
 
 const { project, href, lang = "it", featured = false } = Astro.props;
-const { title, description, pubDatetime, appStore, playStore, storeStatus, website } = project.data;
+const { title, description, pubDatetime, appStore, playStore, storeStatus, website, download } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -23,6 +23,7 @@ const hasDocs = projectDocs.length > 0;
 const appStoreLabel = "App Store";
 const playStoreLabel = "Google Play";
 const websiteLabel = lang === "en" ? "Website" : "Sito web";
+const downloadLabel = lang === "en" ? "Download" : "Scarica";
 
 const headingId = `project-${slugifyStr(String(project.id))}-title`;
 const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
@@ -85,7 +86,7 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
       {description}
     </p>
 
-    {(hasDocs || appStore || playStore || storeStatus || website) && (
+    {(hasDocs || appStore || playStore || download || storeStatus || website) && (
       <div class="relative z-20 mt-4 flex flex-wrap gap-2 pointer-events-auto">
         {hasDocs && (
           <a
@@ -94,6 +95,16 @@ const descriptionId = `project-${slugifyStr(String(project.id))}-description`;
           >
             <span>Wiki & Docs</span>
             <span class="text-xs font-firacode opacity-75">({projectDocs.length})</span>
+          </a>
+        )}
+        {download && (
+          <a
+            href={download}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-muted/20 px-3 py-1 text-xs font-medium text-foreground/65 transition-colors hover:border-accent/40 hover:text-accent"
+          >
+            {downloadLabel}
           </a>
         )}
         {appStore && (

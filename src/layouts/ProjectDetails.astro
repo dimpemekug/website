@@ -20,7 +20,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, seoTitle, seoDescription, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
+const { title, seoTitle, seoDescription, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, download, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -33,6 +33,7 @@ const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
 const backHref = lang === "en" ? "/en/projects/" : "/progetti/";
 const backLabel = lang === "en" ? "All projects" : "Tutti i progetti";
 const websiteLabel = lang === "en" ? "Website" : "Sito web";
+const downloadLabel = lang === "en" ? "Download from GitHub" : "Scarica da GitHub";
 const operatingSystems = ["iOS", "macOS", "Android", "WordPress"].filter(os => tags.includes(os));
 const projectStructuredData = [
   {
@@ -45,8 +46,9 @@ const projectStructuredData = [
     operatingSystem: operatingSystems.join(", "),
     ...(appStore && { installUrl: appStore }),
     ...(playStore && { downloadUrl: playStore }),
+    ...(download && { downloadUrl: download }),
     ...(website && { sameAs: website }),
-    ...((appStore || playStore || storeStatus) && {
+    ...((appStore || playStore || download || storeStatus) && {
       offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     }),
     inLanguage: lang === "it" ? "it-IT" : "en-US",
@@ -110,7 +112,7 @@ const projectStructuredData = [
 
       <!-- Store links -->
       <!-- Store & Docs links -->
-      {(hasDocs || appStore || playStore || storeStatus || website) && (
+      {(hasDocs || appStore || playStore || download || storeStatus || website) && (
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           {hasDocs && (
             <a
@@ -125,6 +127,21 @@ const projectStructuredData = [
               <span class="rounded-full bg-background/25 px-1.5 py-0.2 text-xs font-firacode text-background">
                 {projectDocs.length}
               </span>
+            </a>
+          )}
+          {download && (
+            <a
+              href={download}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              {downloadLabel}
             </a>
           )}
           {appStore && (
