@@ -40,11 +40,12 @@ I principi guida del progetto e del software ospitato sono:
 
 - **Blog (`/posts`, `/en/posts`)**: riflessioni, note tecniche e articoli di approfondimento su intelligenza artificiale, modelli on-device, cybersecurity, architetture local-first, sviluppo Apple e tendenze tecnologiche.
 - **Progetti (`/progetti`, `/en/projects`)**: vetrina di tutte le applicazioni native e dei progetti web realizzati, con badge di disponibilità su App Store e Google Play Store, collegamenti alla documentazione e schede informative sulla privacy dedicate per ciascuna app (`/progetti/<app>/privacy/`).
-- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (tra cui **rExif**, **Archiva**, **rName**, **rMux**, **Resizo**, **CodeVault**, **NetCalc Pro**, **Legendum**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
+- **Documentazione (`/docs`, `/en/docs`)**: manuali d'uso interattivi per le applicazioni (**rExif**, **Archiva**, **rName**, **rMux**, **Resizo**, **OmniPeer**, **Charta**, **Documenta**, **CodeVault**, **NetCalc Pro**, **Legendum**, **rQuake**, **ShowNest**, **DomoMeter**, **Horologe**, **Time Tracker**), con navigazione a capitoli, scorciatoie da tastiera e guide passo-passo.
 - **Chi sono (`/about`, `/en/about`)**: panoramica del profilo dello sviluppatore, tecnologie impiegate (Swift, SwiftUI, Flutter, Dart, Astro, PHP) e canali di contatto.
 - **Archivio cronologico (`/archives`, `/en/archives`)**: indice temporale di tutti gli articoli pubblicati raggruppati per anno.
 - **Esplorazione per Tag (`/tags`, `/en/tags`)**: navigazione trasversale per argomenti e parole chiave con conteggio e paginazione.
 - **Ricerca offline (`/search`, `/en/search`)**: motore di ricerca full-text client-side istantaneo powered by Pagefind.
+- **Privacy del sito (`/privacy`, `/en/privacy`)**: informativa sulla privacy del sito stesso, in italiano e inglese.
 - **Galleria fotografica (`/galleries`)**: raccolta fotografica personale (gestibile via feature flag in configurazione).
 
 ---
@@ -53,22 +54,30 @@ I principi guida del progetto e del software ospitato sono:
 
 Il sito documenta e ospita le schede ufficiali delle seguenti applicazioni:
 
-| Applicazione                                          | Piattaforme        | Descrizione sintetica                                                                                                     | Docs |
-| ----------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- | :--: |
-| **[rExif](src/data/projects/rexif.md)**               | macOS              | Editor batch di metadati EXIF, IPTC, coordinate GPS e date per foto e video con anteprima in tempo reale.                 |  ✅  |
-| **[Archiva](src/data/projects/archiva.md)**                 | macOS              | Ispezione, estrazione e creazione di archivi compressi (ZIP, RAR, 7z) anche protetti o multi-volume.                      |  ✅  |
-| **[rName](src/data/projects/rname.md)**               | macOS              | Ridenominazione in blocco di file e cartelle combinando regole modulari, anteprima dal vivo e storico annullamenti.       |  ✅  |
-| **[rMux](src/data/projects/rmux.md)**                 | macOS              | Taglio, ritaglio, conversione e unione video senza ricodifica (stream copy via FFmpeg), gestione audio e sottotitoli.     |  ✅  |
-| **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di immagini, conversione da formato HEIC e rimozione automatica dei metadati sensibili.           |  ✅  |
-| **[CodeVault](src/data/projects/codevault.md)**       | iOS, iPadOS, macOS | Gestione di snippet di codice e note tecniche con syntax highlighting per 20+ linguaggi, blocco Face ID e sync iCloud.    |  ✅  |
-| **[NetCalc Pro](src/data/projects/netcalc.md)**       | iOS, iPadOS, macOS | Calcolatore di reti IPv4/IPv6, subnetting VLSM, validazione laboratori e generazione comandi per switch/router Cisco IOS. |  ✅  |
-| **[Legendum](src/data/projects/legendum.md)**         | iOS, iPadOS        | Lettore per manga, fumetti, libri e anime con supporto server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS.         |  ✅  |
-| **[ShowNest](src/data/projects/shownest.md)**         | iOS                | Tracker per serie TV ed episodi basato su dati TMDB con notifiche uscite e sincronizzazione iCloud.                       |  ✅  |
-| **[DomoMeter](src/data/projects/domometer.md)**       | iOS, Android       | Monitoraggio dei consumi domestici di luce, gas e acqua con statistiche storiche e dashboard locale.                      |  ✅  |
-| **[Horologe](src/data/projects/horologe.md)**         | iOS, Android       | Gestione della propria collezione di orologi con storico manutenzioni, statistiche, wishlist e registro al polso.         |  ✅  |
-| **[Time Tracker](src/data/projects/time-tracker.md)** | iOS, Android       | Tracciamento del tempo speso su attività e commesse con esportazione report PDF e backup locale in JSON.                  |  ✅  |
-| **[PT39 News](src/data/projects/pt39-news.md)**       | iOS, Android       | Informazione locale e attualità per il comune di Bagnoli Irpino e l'Irpinia a cura del Circolo Palazzo Tenta 39.          |  —   |
-| **[WP PT39](src/data/projects/wp-pt39.md)**           | WordPress / PHP    | Tema editoriale leggero in PHP puro per riviste e portali di news con dark mode e conformità GDPR cookie.                 |  —   |
+| Applicazione                                          | Piattaforme        | Descrizione sintetica                                                                                                           | Docs |
+| ----------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- | :--: |
+| **[rExif](src/data/projects/rexif.md)**               | macOS              | Correzione dei metadati di foto e video (data di scatto, GPS, autore, copyright, parole chiave) con anteprima di ogni modifica. |  ✅  |
+| **[Archiva](src/data/projects/archiva.md)**           | macOS              | Ispezione, estrazione e creazione di archivi compressi (ZIP, RAR, 7z e altri) anche protetti o multi-volume. ¹                  |  ✅  |
+| **[rName](src/data/projects/rname.md)**               | macOS              | Ridenominazione in blocco di file con otto regole combinabili, anteprima, controllo dei conflitti e annullamento.               |  ✅  |
+| **[rMux](src/data/projects/rmux.md)**                 | macOS              | Taglio, conversione e unione di video senza ricodifica quando possibile, con tracce audio, sottotitoli e coda di lavoro.        |  ✅  |
+| **[Resizo](src/data/projects/resizo.md)**             | macOS              | Ridimensionamento batch di foto, conversione HEIC in JPEG e rimozione dei metadati EXIF.                                        |  ✅  |
+| **[OmniPeer](src/data/projects/omnipeer.md)**         | macOS              | Client P2P per le reti eD2k, Kad e BitTorrent con link magnet/ed2k, file `.torrent`, ricerca e filtro anti-spam.                |  ✅  |
+| **[Charta](src/data/projects/charta.md)**             | iOS, iPadOS, macOS | Editor Markdown con testo formattato o anteprima affiancata, note collegate, formule, diagrammi ed export Word/EPUB. ¹          |  ✅  |
+| **[Documenta](src/data/projects/documenta.md)**       | iOS, iPadOS, macOS | Elaboratore di testi con pagine, tabelle, note, commenti e revisioni; apre e salva Word, OpenDocument e RTF.                    |  ✅  |
+| **[CodeVault](src/data/projects/codevault.md)**       | iOS, iPadOS, macOS | Snippet di codice e note tecniche con evidenziazione della sintassi in 20 linguaggi, blocco biometrico e sync iCloud.           |  ✅  |
+| **[NetCalc Pro](src/data/projects/netcalc.md)**       | iOS, iPadOS, macOS | Calcolo IPv4/IPv6, subnetting e VLSM, comandi Cisco IOS, schema di topologia e verifica di laboratorio.                         |  ✅  |
+| **[Legendum](src/data/projects/legendum.md)**         | iOS, iPadOS        | Lettore di manga, fumetti, libri e anime con server Komga, Kavita, Suwayomi, Jellyfin e cataloghi OPDS. ²                       |  ✅  |
+| **[rQuake](src/data/projects/rquake.md)**             | iOS, iPadOS        | Terremoti in Italia (INGV) e nel mondo (USGS, EMSC, GFZ) con intensità stimata, sequenze, faglie sulla mappa e avvisi.          |  ✅  |
+| **[ShowNest](src/data/projects/shownest.md)**         | iOS                | Tracker di serie TV ed episodi con dati TMDB, avvisi per i nuovi episodi e sincronizzazione iCloud.                             |  ✅  |
+| **[DomoMeter](src/data/projects/domometer.md)**       | iOS, Android       | Consumi di luce, gas e acqua dalle letture dei contatori, con fasce F1/F2/F3, grafici e limiti annuali.                         |  ✅  |
+| **[Horologe](src/data/projects/horologe.md)**         | iOS, Android       | Collezione di orologi con statistiche, stato, wishlist, registro al polso e blocco biometrico.                                  |  ✅  |
+| **[Time Tracker](src/data/projects/time-tracker.md)** | iOS, Android       | Tempo dedicato a progetti e clienti con timer di concentrazione, tariffe e IVA, dashboard e report PDF/CSV.                     |  ✅  |
+| **[PT39 News](src/data/projects/pt39-news.md)**       | iOS, Android       | Informazione locale per Bagnoli Irpino e l'Irpinia, a cura del Circolo Palazzo Tenta 39.                                        |  —   |
+| **[WP PT39](src/data/projects/wp-pt39.md)**           | WordPress / PHP    | Tema editoriale in PHP puro per magazine e siti di news, con homepage dal Customizer, dark mode e cookie consent GDPR.          |  —   |
+
+¹ Non ancora sugli store (`storeStatus: "coming-soon"`). ² In beta su TestFlight (`storeStatus: "testing"`).
+
+Tutte le app sono gratuite, senza pubblicità né acquisti in-app. Lo stato sugli store si imposta nel frontmatter del progetto con `appStore`, `playStore` o, in loro assenza, `storeStatus` (`testing` oppure `coming-soon`).
 
 ---
 
