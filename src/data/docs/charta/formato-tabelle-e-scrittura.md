@@ -10,7 +10,7 @@ Ogni comando scrive Markdown nel testo: puoi sempre vedere e correggere i segni 
 
 ## Formato
 
-Sul Mac nel menu **Formato**, su iPhone e iPad nel menu con il simbolo «Aa» della barra e nella [barra sopra la tastiera](/progetti/charta/docs/iphone-e-ipad).
+Sul Mac nel menu **Formato** della barra dei menu e della barra della finestra, su iPhone e iPad nel menu **Formato** della barra e nella [barra sopra la tastiera](/progetti/charta/docs/iphone-e-ipad).
 
 - **Grassetto**, **Corsivo**, **Barrato**, **Codice**, **Evidenziato**: con una selezione mettono o tolgono i segni attorno; senza selezione valgono per la parola sotto il cursore, o lasciano i segni vuoti con il cursore in mezzo.
 - **Titolo**: da **Testo normale** a **Titolo 6**, sulle righe selezionate.
@@ -21,7 +21,7 @@ Le scorciatoie sono in [Scorciatoie da tastiera](/progetti/charta/docs/scorciato
 
 ## Inserisci
 
-Sul Mac nel menu **Inserisci**, su iPhone e iPad nel menu «Aa» e nel pulsante **+** sopra la tastiera:
+Sul Mac nel menu **Inserisci** (e nel menu **Formato** della barra), su iPhone e iPad nel menu **Formato** e nel pulsante **+** sopra la tastiera:
 
 - **Link**: `[testo](url)`. Se hai selezionato un indirizzo, diventa la destinazione e il cursore va nel testo.
 - **Collegamento a una nota**: `[[…]]`, con le proposte delle note della cartella.
@@ -30,6 +30,19 @@ Sul Mac nel menu **Inserisci**, su iPhone e iPad nel menu «Aa» e nel pulsante 
 - **Blocco di codice**, **Formula**, **Diagramma Mermaid**: attorno alle righe selezionate o vuoti al cursore.
 - **Nota a piè di pagina**: il richiamo `[^n]` al cursore e la nota in fondo al documento, con il cursore nella nota.
 - **Separatore**: una riga `---`.
+
+## Il menu del tasto destro
+
+Un clic con il tasto destro nel testo (su iPhone e iPad il menu che compare toccando il testo o selezionandolo) mostra prima i comandi di Charta per ciò che sta sotto il cursore, poi quelli del sistema:
+
+- **su un collegamento `[[nota]]`**: **Apri «…»**, **Collegamenti in entrata** e **Rinomina la nota…** (nelle cartelle), sul Mac **Apri in una finestra a parte**; se la nota non esiste, **Crea la nota «…»**. Poi **Copia collegamento** e **Togli il collegamento**;
+- **su un link**: **Apri link** (o **Vai al titolo** per un link interno), **Copia indirizzo**, **Modifica link…**, che seleziona l'indirizzo, e **Togli il collegamento**, che lascia il testo;
+- **con del testo selezionato**, in una cartella: **Crea nota dalla selezione** sposta il testo in una nota nuova accanto e lascia al suo posto il collegamento; **Collega a una nota…** trasforma la selezione in `[[|testo]]` e propone le note; **Cerca nella cartella** la cerca in tutte le note;
+- **in una tabella**: i sottomenu **Riga** (**Inserisci riga sopra**, **Inserisci riga sotto**, **Elimina riga**) e **Colonna** (inserisci a sinistra o a destra, elimina, allinea), e **Formatta tabella**;
+- **in una voce da spuntare**: **Spunta** o **Togli la spunta**, **Spunta tutte** e **Togli tutte le spunte** (anche le voci annidate);
+- **su un titolo**: **Copia collegamento al titolo** (un `[[nota#titolo]]` nelle cartelle, un link `#titolo` in un documento) e **Sposta la sezione in su** o **in giù**, che scambia il titolo e il suo testo con la sezione vicina dello stesso livello;
+- **in un blocco di codice**: **Copia il codice** e il sottomenu **Lingua**; **in una formula o un diagramma**: **Copia il sorgente**; **su un richiamo di nota**: **Vai alla nota a piè di pagina**;
+- **nel testo normale**: i sottomenu **Formato** e **Trasforma in** (testo, titoli, elenchi, citazione).
 
 ## Elenchi e citazioni
 
@@ -46,7 +59,7 @@ Con il cursore in una tabella:
 - **Sposta riga in su/in giù** e **Sposta colonna a sinistra/a destra**, sul Mac con <kbd>⌥</kbd> <kbd>⌘</kbd> e le frecce;
 - **Allinea a sinistra**, **al centro**, **a destra** per la colonna del cursore (dal menu della barra di stato; sul Mac anche in **Formato › Tabella**).
 
-Sul Mac i comandi sono in **Formato › Tabella** e nel menu della barra di stato; su iPhone e iPad nel menu **Modifica tabella** sopra la tastiera e nel menu della barra di stato.
+Sul Mac i comandi sono in **Formato › Tabella**, nel menu della barra di stato e nel tasto destro; su iPhone e iPad nel menu **Modifica tabella** sopra la tastiera, nel menu **Formato** della barra (con il cursore in una tabella), nel menu della barra di stato e nel menu del testo.
 
 ## Incollare
 

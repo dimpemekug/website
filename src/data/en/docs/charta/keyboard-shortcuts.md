@@ -64,6 +64,12 @@ The standard macOS shortcuts also work: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</k
 | Bigger Text · Smaller Text | <kbd>⌘</kbd> <kbd>+</kbd> · <kbd>⌘</kbd> <kbd>-</kbd> |
 | Actual Size | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>0</kbd> |
 
+## Window
+
+| Command | Shortcut |
+|---|---|
+| Welcome to Charta | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>1</kbd> |
+
 ## In the text
 
 | Key | Effect |

@@ -28,17 +28,19 @@ The code editor shows the Markdown itself, in a monospaced font, with:
 
 - syntax colors, including inside code blocks in about thirty languages;
 - line numbers and the current line highlighted (turn them off in **Settings › Editor**);
-- the **preview**, in three layouts: **Editor Only**, **Editor and Preview** side by side, **Preview Only**.
+- the **preview**, beside the text (**Code and Preview**) or on its own (**Preview Only**).
 
-On the Mac the commands are in the **View** menu: **Show Side-by-Side Preview** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>) and **Preview Only** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd>). Drag the divider between editor and preview to resize them. On iPhone the preview sits below the text, on iPad beside it; choose the layout from the eye button in the toolbar.
+On the Mac the commands are also in the **View** menu: **Show Side-by-Side Preview** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>) and **Preview Only** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd>); on iPhone and iPad **Preview Only** is in the toolbar's **More** (…) menu. Drag the divider between editor and preview to resize them. On iPhone the preview sits below the text, on iPad beside it.
 
 With **Synchronized Scrolling** on, text and preview scroll together both ways. On the Mac, double-clicking a block in the preview moves the cursor to its line in the text. You can also check boxes in the preview, and `[[note]]` links open the note.
 
 The preview uses one of the three styles in **Settings › Preview › Style**: **GitHub**, **Paper** (serif, centered headings, for long texts) and **Compact**. The same style is used when exporting to HTML and PDF. HTML written in documents is shown without scripts.
 
-## Switching modes
+## The view switcher
 
-<kbd>⌘</kbd> <kbd>E</kbd> (also on iPad with a keyboard) or the two-mode button in the toolbar. The cursor stays at the same place in the text. The default mode is set in **Settings › General › Open documents in**; in a folder, the [project settings](/en/projects/charta/docs/folders-and-linked-notes) can choose another one for the first note.
+The view switcher has three choices: **WYSIWYG**, **Code Editor** and **Code and Preview**. It sits on the right of the toolbar, as three icons; on iPhone it's in the **More** (…) menu. With **Settings › General › View Switcher** › **In the Status Bar** it moves to the bottom right, with the short words **WYSIWYG**, **Code** and **Side by Side** (a menu on iPhone). In **Preview Only** the switcher marks no choice.
+
+<kbd>⌘</kbd> <kbd>E</kbd> (also on iPad with a keyboard) switches between WYSIWYG and the code editor, and brings back the preview layout you had. The cursor stays at the same place in the text. The default mode is set in **Settings › General › Open documents in**; in a folder, the [project settings](/en/projects/charta/docs/folders-and-linked-notes) can choose another one for the first note.
 
 ## Heading outline and backlinks
 
@@ -51,4 +53,5 @@ At the bottom of the window:
 - on the left, the **block type at the cursor** (Text, Heading 2, Table, Code…), with a menu that changes: headings, lists and quote for text, table commands for tables, the language for code blocks;
 - the **word goal** or the word count (see [Formatting, tables and writing](/en/projects/charta/docs/formatting-tables-and-writing));
 - characters, lines and reading time (on iPhone only words and reading time);
-- in the code editor with the preview, the synchronized scrolling switch.
+- in the code editor with the preview, the synchronized scrolling switch;
+- on the right, if you chose it, the view switcher.

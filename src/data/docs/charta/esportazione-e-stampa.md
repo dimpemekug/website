@@ -9,7 +9,7 @@ section: "Condividere"
 Il documento resta in Markdown; le esportazioni sono file nuovi, scritti dove scegli tu.
 
 - **Mac**: **Archivio › Esporta come HTML…**, **Esporta come PDF…**, **Esporta come Word (DOCX)…**, **Esporta come EPUB…** e **Stampa…** (<kbd>⌘</kbd> <kbd>P</kbd>). Il file si salva con il pannello di salvataggio.
-- **iPhone e iPad**: le stesse voci nel menu con l'occhio della barra. Il file passa dal foglio di condivisione: lo salvi in File, lo mandi con AirDrop o Mail, o lo apri in un'altra app.
+- **iPhone e iPad**: le stesse voci nel menu **Altro** (…) della barra. Il file passa dal foglio di condivisione: lo salvi in File, lo mandi con AirDrop o Mail, o lo apri in un'altra app.
 
 ## HTML
 

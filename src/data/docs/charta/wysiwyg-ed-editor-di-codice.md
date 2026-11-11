@@ -28,17 +28,19 @@ L'editor di codice mostra il Markdown così com'è, in un carattere a spaziatura
 
 - i colori della sintassi, anche dentro i blocchi di codice di una trentina di linguaggi;
 - i numeri di riga e la riga corrente evidenziata (si spengono in **Impostazioni › Editor**);
-- l'**anteprima**, che si dispone in tre modi: **Solo editor**, **Editor e anteprima** affiancati, **Solo anteprima**.
+- l'**anteprima**, accanto al testo (**Codice e anteprima**) o da sola (**Solo anteprima**).
 
-Sul Mac i comandi sono nel menu **Vista**: **Mostra anteprima affiancata** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>) e **Solo anteprima** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd>). Il divisore tra editor e anteprima si trascina. Su iPhone l'anteprima sta sotto il testo, su iPad accanto; la disposizione si sceglie dal pulsante con l'occhio nella barra.
+Sul Mac i comandi sono anche nel menu **Vista**: **Mostra anteprima affiancata** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>P</kbd>) e **Solo anteprima** (<kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd>); su iPhone e iPad **Solo anteprima** è nel menu **Altro** (…) della barra. Il divisore tra editor e anteprima si trascina. Su iPhone l'anteprima sta sotto il testo, su iPad accanto.
 
 Con **Scorrimento sincronizzato** attivo, testo e anteprima scorrono insieme in entrambe le direzioni. Sul Mac un doppio clic su un blocco dell'anteprima porta il cursore alla sua riga nel testo. Nell'anteprima si spuntano anche le caselle, e i collegamenti `[[nota]]` aprono la nota.
 
 L'anteprima usa uno dei tre stili di **Impostazioni › Anteprima › Stile**: **GitHub**, **Carta** (con grazie, titoli centrati, per i testi lunghi) e **Compatto**. Lo stesso stile vale per l'esportazione in HTML e PDF. L'HTML scritto nei documenti viene mostrato senza script.
 
-## Passare da un modo all'altro
+## Il selettore della vista
 
-<kbd>⌘</kbd> <kbd>E</kbd> (anche su iPad con la tastiera) o il pulsante dei due modi nella barra. Il cursore resta nello stesso punto del testo. Il modo predefinito si sceglie in **Impostazioni › Generali › Apri i documenti in**; in una cartella, le [impostazioni del progetto](/progetti/charta/docs/cartelle-e-note-collegate) possono sceglierne un altro per la prima nota.
+Il selettore della vista ha tre scelte: **WYSIWYG**, **Editor di codice** e **Codice e anteprima**. Sta a destra nella barra in alto, come tre icone; su iPhone è nel menu **Altro** (…). Con **Impostazioni › Generali › Selettore della vista** › **Nella barra di stato** passa in basso a destra, con le parole brevi **WYSIWYG**, **Codice** e **Affiancati** (su iPhone un menu). In **Solo anteprima** il selettore non segna nessuna scelta.
+
+<kbd>⌘</kbd> <kbd>E</kbd> (anche su iPad con la tastiera) passa dal WYSIWYG all'editor di codice e ritorno, e riprende la disposizione dell'anteprima che avevi. Il cursore resta nello stesso punto del testo. Il modo predefinito si sceglie in **Impostazioni › Generali › Apri i documenti in**; in una cartella, le [impostazioni del progetto](/progetti/charta/docs/cartelle-e-note-collegate) possono sceglierne un altro per la prima nota.
 
 ## Struttura dei titoli e collegamenti in entrata
 
@@ -51,4 +53,5 @@ In fondo alla finestra:
 - a sinistra il **tipo di blocco al cursore** (Testo, Titolo 2, Tabella, Codice…), con un menu che cambia: titoli, elenchi e citazione per il testo, i comandi per le tabelle, la lingua per i blocchi di codice;
 - l'**obiettivo di parole** o il conteggio delle parole (vedi [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura));
 - caratteri, righe e minuti di lettura (su iPhone solo parole e tempo di lettura);
-- nell'editor di codice con l'anteprima, l'interruttore dello scorrimento sincronizzato.
+- nell'editor di codice con l'anteprima, l'interruttore dello scorrimento sincronizzato;
+- a destra, se l'hai scelto, il selettore della vista.

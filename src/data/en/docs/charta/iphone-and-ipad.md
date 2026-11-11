@@ -19,12 +19,14 @@ At launch Charta shows your documents like the Files app, with two actions:
 
 ## The toolbar
 
-- the two-mode button, **WYSIWYG** and **Code Editor**;
-- **Aa**: the **Format** menu, with styles, headings, lists, insert items and table commands;
-- the eye, **View** menu: the preview layout (**Editor Only**, **Editor and Preview**, **Preview Only**), **Synchronized Scrolling**, **Outline**, the exports and **Print…**;
-- in folders, **Backlinks**.
+To the right of the title, in the same order as on the Mac:
 
-**Settings** is in a document's toolbar menu and in a folder's **More** (…) menu, next to **Note Graph**, **New Folder** and **Sort By**.
+- **Format**: styles, headings, lists, insert items and, with the cursor in a table, table commands;
+- on iPad, the **view switcher**: **WYSIWYG**, **Code Editor**, **Code and Preview** (unless you moved it to the status bar);
+- on iPad, **Outline**; in folders, **Backlinks**;
+- **More** (…): **Preview Only**, **Synchronized Scrolling** (in the code editor), the exports, **Print…** and, in documents, **Settings**. On iPhone, where there's less room, it also holds the view switcher and **Outline**.
+
+In folders, **Settings** is in the sidebar's **More** (…) menu, next to **Note Graph**, **New Folder** and **Sort By**.
 
 On iPhone the preview sits below the text, and the outline and backlinks open in a sheet; on iPad the preview sits beside the text and the sidebar stays alongside it.
 
@@ -41,7 +43,7 @@ While you type, the bar above the keyboard shows, from the left:
 
 While you type a `[[…` link, the bar shows the matching notes instead (or headings, after `#`): tap one to complete the link.
 
-With text selected, the edit menu also has **Format** (bold, italic, strikethrough, code, link); on a link there's **Open Link**.
+The menu that appears when you tap or select text starts with Charta's commands for what's under the cursor, the same as right-clicking on the Mac: links, tables, checklist items, headings, code, **Format** and **Turn Into**. See [Formatting, tables and writing](/en/projects/charta/docs/formatting-tables-and-writing).
 
 ## With a hardware keyboard
 
@@ -56,12 +58,12 @@ Hold <kbd>⌘</kbd> on iPad to see the list.
 
 | | Mac | iPhone and iPad |
 |---|---|---|
-| Format and Insert menus with shortcuts | Yes | "Aa" menu and the bar above the keyboard |
+| Welcome window | Yes | Launch screen |
+| Format and Insert menus with shortcuts | Yes | Toolbar Format menu and the bar above the keyboard |
 | Focus Mode and Typewriter Mode | Yes | No |
 | Documents in tabs | Yes | No |
 | Bigger and smaller text from the keyboard | Yes | Size in Settings |
 | Highlight current line (option) | Yes | Always on |
-| Reload notes changed by other apps (option) | Yes | Always on |
 | Copy Link [[…]] and Show in Finder | Yes | No |
 | Images pasted into a document opened on its own | Yes, after allowing the folder | Folders only |
 | Export | Save panel | Share sheet |

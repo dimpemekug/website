@@ -6,7 +6,7 @@ order: 8
 section: "Riferimento"
 ---
 
-Sul Mac: **Charta › Impostazioni…** (<kbd>⌘</kbd> <kbd>,</kbd>), con le schede **Generali**, **Editor** e **Anteprima**. Su iPhone e iPad: **Impostazioni** nel menu della barra di un documento o nel menu **Altro** di una cartella, in un'unica pagina. Le impostazioni valgono per tutti i documenti; quelle di un singolo progetto sono in [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate).
+Sul Mac: **Charta › Impostazioni…** (<kbd>⌘</kbd> <kbd>,</kbd>), con le schede **Generali**, **Editor** e **Anteprima**. Su iPhone e iPad: **Impostazioni** nel menu **Altro** (…) della barra di un documento o della barra laterale di una cartella, in un'unica pagina. Le impostazioni valgono per tutti i documenti; quelle di un singolo progetto sono in [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate).
 
 ## Generali
 
@@ -15,8 +15,10 @@ Sul Mac: **Charta › Impostazioni…** (<kbd>⌘</kbd> <kbd>,</kbd>), con le sc
 | Apri i documenti in | WYSIWYG, Editor di codice | WYSIWYG |
 | Apri i documenti in schede (Mac) | i documenti si aprono come schede della finestra attiva | attiva |
 | Aspetto | Sistema, Chiaro, Scuro | Sistema |
+| All'avvio (Mac) | Finestra di benvenuto, Documento nuovo, Niente: cosa mostra Charta quando non riapre finestre né file | Finestra di benvenuto |
+| Selettore della vista | Nella barra in alto, Nella barra di stato | Nella barra in alto |
 | Lingua | Sistema, Italiano, English | Sistema |
-| Ricarica le note cambiate da altre app (Mac) | nelle cartelle, una nota senza modifiche da salvare si ricarica | attiva |
+| Ricarica senza chiedere i file cambiati da altre app | un file senza modifiche da salvare si ricarica da solo; spenta, Charta chiede; con modifiche da salvare chiede sempre | spenta |
 
 La lingua nuova vale dal prossimo avvio: sul Mac c'è **Riavvia ora**, su iPhone e iPad basta chiudere e riaprire Charta.
 
@@ -58,7 +60,7 @@ Sul Mac <kbd>⌘</kbd> <kbd>+</kbd> e <kbd>⌘</kbd> <kbd>-</kbd> cambiano insie
 | Nell'editor di codice (Mac) | Solo editor, Editor e anteprima affiancati, Solo anteprima | affiancati |
 | Scorrimento sincronizzato | | attivo |
 
-Lo stile vale anche per l'esportazione in HTML e PDF. Su iPhone e iPad la disposizione dell'anteprima si sceglie dal menu con l'occhio della barra.
+Lo stile vale anche per l'esportazione in HTML e PDF. Su iPhone e iPad la disposizione si sceglie con il selettore della vista.
 
 ## Riconoscimenti
 

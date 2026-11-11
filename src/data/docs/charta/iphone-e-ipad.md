@@ -19,12 +19,14 @@ I file `.md` si aprono anche toccandoli nell'app File. Nella finestra di un docu
 
 ## La barra della finestra
 
-- il pulsante dei due modi, **WYSIWYG** ed **Editor di codice**;
-- **Aa**: il menu **Formato**, con stili, titoli, elenchi, inserimenti e i comandi delle tabelle;
-- l'occhio, menu **Vista**: la disposizione dell'anteprima (**Solo editor**, **Editor e anteprima**, **Solo anteprima**), **Scorrimento sincronizzato**, **Struttura**, le esportazioni e **Stampa…**;
-- nelle cartelle, **Collegamenti in entrata**.
+A destra del titolo, nello stesso ordine del Mac:
 
-Le **Impostazioni** sono nel menu della barra di un documento e nel menu **Altro** (…) di una cartella, accanto a **Grafo delle note**, **Nuova cartella** e **Ordina per**.
+- **Formato**: stili, titoli, elenchi, inserimenti e, con il cursore in una tabella, i comandi delle tabelle;
+- su iPad, il **selettore della vista**: **WYSIWYG**, **Editor di codice**, **Codice e anteprima** (se non l'hai spostato nella barra di stato);
+- su iPad, **Struttura**; nelle cartelle, **Collegamenti in entrata**;
+- **Altro** (…): **Solo anteprima**, **Scorrimento sincronizzato** (nell'editor di codice), le esportazioni, **Stampa…** e, nei documenti, **Impostazioni**. Su iPhone, dove c'è meno posto, ci sono anche il selettore della vista e **Struttura**.
+
+Nelle cartelle le **Impostazioni** sono nel menu **Altro** (…) della barra laterale, accanto a **Grafo delle note**, **Nuova cartella** e **Ordina per**.
 
 Su iPhone l'anteprima sta sotto il testo e la struttura e i collegamenti in entrata si aprono in un foglio; su iPad l'anteprima sta accanto e la barra laterale resta affiancata al testo.
 
@@ -41,7 +43,7 @@ Quando scrivi, sopra la tastiera compaiono, da sinistra:
 
 Mentre scrivi un collegamento `[[…`, la barra mostra al loro posto le note (o i titoli, dopo `#`) che corrispondono: un tocco completa il collegamento.
 
-Con del testo selezionato, il menu di modifica ha anche **Formato** (grassetto, corsivo, barrato, codice, link); su un link c'è **Apri link**.
+Il menu che compare toccando o selezionando il testo ha prima i comandi di Charta per ciò che sta sotto il cursore, gli stessi del tasto destro sul Mac: collegamenti, tabelle, voci da spuntare, titoli, codice, **Formato** e **Trasforma in**. Vedi [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura).
 
 ## Con una tastiera esterna
 
@@ -56,12 +58,12 @@ Tieni premuto <kbd>⌘</kbd> su iPad per vedere l'elenco.
 
 | | Mac | iPhone e iPad |
 |---|---|---|
-| Menu Formato e Inserisci con scorciatoie | Sì | Menu «Aa» e barra sopra la tastiera |
+| Finestra di benvenuto | Sì | Schermata iniziale |
+| Menu Formato e Inserisci con scorciatoie | Sì | Menu Formato della barra e barra sopra la tastiera |
 | Modalità Focus e Macchina da scrivere | Sì | No |
 | Documenti in schede | Sì | No |
 | Ingrandisci e riduci testo da tastiera | Sì | Dimensione nelle Impostazioni |
 | Evidenzia la riga corrente (opzione) | Sì | Sempre attiva |
-| Ricarica le note cambiate da altre app (opzione) | Sì | Sempre attiva |
 | Copia collegamento [[…]] e Mostra nel Finder | Sì | No |
 | Immagini incollate in un documento aperto da solo | Sì, dopo il permesso sulla cartella | Solo nelle cartelle |
 | Esportazione | Pannello di salvataggio | Foglio di condivisione |

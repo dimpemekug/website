@@ -9,7 +9,7 @@ section: "Sharing"
 The document stays in Markdown; exports are new files, written where you choose.
 
 - **Mac**: **File › Export as HTML…**, **Export as PDF…**, **Export as Word (DOCX)…**, **Export as EPUB…** and **Print…** (<kbd>⌘</kbd> <kbd>P</kbd>). The file is saved with the save panel.
-- **iPhone and iPad**: the same items in the eye menu of the toolbar. The file goes through the share sheet: save it to Files, send it with AirDrop or Mail, or open it in another app.
+- **iPhone and iPad**: the same items in the toolbar's **More** (…) menu. The file goes through the share sheet: save it to Files, send it with AirDrop or Mail, or open it in another app.
 
 ## HTML
 

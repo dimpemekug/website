@@ -10,7 +10,7 @@ Every command writes Markdown into the text: you can always see and fix the mark
 
 ## Format
 
-On the Mac in the **Format** menu; on iPhone and iPad in the "Aa" menu of the toolbar and in the [bar above the keyboard](/en/projects/charta/docs/iphone-and-ipad).
+On the Mac in the **Format** menu of the menu bar and of the window's toolbar; on iPhone and iPad in the toolbar's **Format** menu and in the [bar above the keyboard](/en/projects/charta/docs/iphone-and-ipad).
 
 - **Bold**, **Italic**, **Strikethrough**, **Code**, **Highlight**: with a selection they add or remove the marks around it; without one they apply to the word under the cursor, or leave empty marks with the cursor in between.
 - **Heading**: from **Body Text** to **Heading 6**, on the selected lines.
@@ -21,7 +21,7 @@ Shortcuts are listed in [Keyboard shortcuts](/en/projects/charta/docs/keyboard-s
 
 ## Insert
 
-On the Mac in the **Insert** menu; on iPhone and iPad in the "Aa" menu and in the **+** button above the keyboard:
+On the Mac in the **Insert** menu (and in the toolbar's **Format** menu); on iPhone and iPad in the **Format** menu and in the **+** button above the keyboard:
 
 - **Link**: `[text](url)`. If you selected an address, it becomes the destination and the cursor moves to the text.
 - **Link to a Note**: `[[…]]`, with suggestions from the folder's notes.
@@ -30,6 +30,19 @@ On the Mac in the **Insert** menu; on iPhone and iPad in the "Aa" menu and in th
 - **Code Block**, **Formula**, **Mermaid Diagram**: around the selected lines, or empty at the cursor.
 - **Footnote**: the `[^n]` reference at the cursor and the note at the end of the document, with the cursor in the note.
 - **Divider**: a `---` line.
+
+## The right-click menu
+
+Right-clicking in the text (on iPhone and iPad, the menu that appears when you tap or select text) shows Charta's commands for what's under the cursor first, then the system's:
+
+- **on a `[[note]]` link**: **Open "…"**, **Backlinks** and **Rename Note…** (in folders), on the Mac **Open in a Separate Window**; if the note doesn't exist, **Create Note "…"**. Then **Copy Link** and **Remove Link**;
+- **on a link**: **Open Link** (or **Go to Heading** for an internal link), **Copy Address**, **Edit Link…**, which selects the address, and **Remove Link**, which keeps the text;
+- **with text selected**, in a folder: **New Note from Selection** moves the text into a new note next to this one and leaves the link in its place; **Link to a Note…** turns the selection into `[[|text]]` and suggests notes; **Search in Folder** searches every note for it;
+- **in a table**: the **Row** (**Insert Row Above**, **Insert Row Below**, **Delete Row**) and **Column** (insert left or right, delete, align) submenus, and **Format Table**;
+- **in a checklist item**: **Check** or **Uncheck**, **Check All** and **Uncheck All** (nested items included);
+- **on a heading**: **Copy Link to Heading** (a `[[note#heading]]` in folders, a `#heading` link in a document) and **Move Section Up** or **Down**, which swaps the heading and its text with the neighboring section of the same level;
+- **in a code block**: **Copy Code** and the **Language** submenu; **in math or a diagram**: **Copy Source**; **on a footnote reference**: **Go to Footnote**;
+- **in plain text**: the **Format** and **Turn Into** submenus (text, headings, lists, quote).
 
 ## Lists and quotes
 
@@ -46,7 +59,7 @@ With the cursor in a table:
 - **Move Row Up/Down** and **Move Column Left/Right**, on the Mac with <kbd>⌥</kbd> <kbd>⌘</kbd> and the arrow keys;
 - **Align Left**, **Align Center**, **Align Right** for the cursor's column (from the status bar menu; on the Mac also in **Format › Table**).
 
-On the Mac the commands are in **Format › Table** and in the status bar menu; on iPhone and iPad in the **Edit Table** menu above the keyboard and in the status bar menu.
+On the Mac the commands are in **Format › Table**, in the status bar menu and in the right-click menu; on iPhone and iPad in the **Edit Table** menu above the keyboard, in the toolbar's **Format** menu (with the cursor in a table), in the status bar menu and in the text menu.
 
 ## Pasting
 

@@ -6,7 +6,7 @@ order: 8
 section: "Reference"
 ---
 
-On the Mac: **Charta › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>), with the **General**, **Editor** and **Preview** tabs. On iPhone and iPad: **Settings** in a document's toolbar menu or in a folder's **More** menu, on a single page. Settings apply to every document; those of a single project are covered in [Folders and linked notes](/en/projects/charta/docs/folders-and-linked-notes).
+On the Mac: **Charta › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>), with the **General**, **Editor** and **Preview** tabs. On iPhone and iPad: **Settings** in the **More** (…) menu of a document's toolbar or of a folder's sidebar, on a single page. Settings apply to every document; those of a single project are covered in [Folders and linked notes](/en/projects/charta/docs/folders-and-linked-notes).
 
 ## General
 
@@ -15,8 +15,10 @@ On the Mac: **Charta › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>), with the *
 | Open documents in | WYSIWYG, Code Editor | WYSIWYG |
 | Open documents in tabs (Mac) | documents open as tabs of the active window | on |
 | Appearance | System, Light, Dark | System |
+| At Launch (Mac) | Welcome Window, New Document, Nothing: what Charta shows when it doesn't reopen windows or files | Welcome Window |
+| View Switcher | In the Toolbar, In the Status Bar | In the Toolbar |
 | Language | System, Italiano, English | System |
-| Reload Notes Changed by Other Apps (Mac) | in folders, a note with no unsaved changes reloads | on |
+| Reload Files Changed by Other Apps Without Asking | a file with no unsaved changes reloads by itself; off, Charta asks; with unsaved changes it always asks | off |
 
 A new language takes effect at the next launch: on the Mac there's **Restart Now**, on iPhone and iPad just close and reopen Charta.
 
@@ -58,7 +60,7 @@ On the Mac, <kbd>⌘</kbd> <kbd>+</kbd> and <kbd>⌘</kbd> <kbd>-</kbd> change b
 | In the Code Editor (Mac) | Editor Only, Editor and Preview Side by Side, Preview Only | side by side |
 | Synchronized Scrolling | | on |
 
-The style is also used when exporting to HTML and PDF. On iPhone and iPad, choose the preview layout from the eye menu in the toolbar.
+The style is also used when exporting to HTML and PDF. On iPhone and iPad, choose the layout with the view switcher.
 
 ## Acknowledgements
 

@@ -13,12 +13,14 @@ Charta è un editor Markdown per Mac, iPhone e iPad. Lavora su normali file di t
 - **WYSIWYG**: vedi il testo già formattato. I segni del Markdown (`**`, `#`, `[…](…)`) compaiono solo dove c'è il cursore e spariscono quando ti sposti. Tabelle, formule, diagrammi e immagini sono disegnati nel testo.
 - **Editor di codice**: il Markdown così com'è, con i colori della sintassi e i numeri di riga, e l'anteprima accanto o sotto.
 
-Si passa da un modo all'altro con <kbd>⌘</kbd> <kbd>E</kbd> o con il pulsante nella barra della finestra. Il modo con cui si aprono i documenti si sceglie in **Impostazioni › Generali › Apri i documenti in**. Dettagli in [WYSIWYG ed editor di codice](/progetti/charta/docs/wysiwyg-ed-editor-di-codice).
+Si passa da un modo all'altro con <kbd>⌘</kbd> <kbd>E</kbd> o con il selettore della vista nella barra della finestra, che ha anche **Codice e anteprima**. Il modo con cui si aprono i documenti si sceglie in **Impostazioni › Generali › Apri i documenti in**. Dettagli in [WYSIWYG ed editor di codice](/progetti/charta/docs/wysiwyg-ed-editor-di-codice).
 
 ## File singoli e cartelle
 
-- **Un file**: sul Mac con **Archivio › Apri…** o dal Finder, su iPhone e iPad dall'app File o dalla schermata iniziale di Charta.
+- **Un file**: sul Mac dalla finestra di benvenuto, con **Archivio › Apri…** o dal Finder; su iPhone e iPad dall'app File o dalla schermata iniziale di Charta.
 - **Una cartella**: con **Archivio › Apri cartella…** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd>) sul Mac, o **Apri cartella** nella schermata iniziale su iPhone e iPad. La cartella diventa un progetto, con l'albero delle note, la ricerca, i collegamenti `[[nota]]` e il grafo. Vedi [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate).
+
+Sul Mac, all'avvio, la finestra **Benvenuto in Charta** ha **Nuovo documento**, **Apri cartella…** e, a destra, i progetti e i documenti recenti; si riapre da **Finestra › Benvenuto in Charta** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>1</kbd>).
 
 Nelle cartelle le note si salvano da sole poco dopo ogni modifica. Sul Mac, sotto il titolo della finestra, compare lo stato del salvataggio (per esempio «Salvato 2 min fa»).
 
@@ -26,7 +28,7 @@ Nelle cartelle le note si salvano da sole poco dopo ogni modifica. Sul Mac, sott
 
 - [WYSIWYG ed editor di codice](/progetti/charta/docs/wysiwyg-ed-editor-di-codice): i due modi, l'anteprima, la struttura dei titoli e la barra di stato
 - [Markdown supportato](/progetti/charta/docs/markdown-supportato): tabelle, formule, diagrammi, note, front matter e le altre estensioni
-- [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura): menu, elenchi, tabelle, incolla, obiettivo di parole, Focus e Macchina da scrivere
+- [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura): menu, tasto destro, elenchi, tabelle, incolla, obiettivo di parole, Focus e Macchina da scrivere
 - [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate): progetti, collegamenti, grafo, ricerca e immagini
 - [Esportazione e stampa](/progetti/charta/docs/esportazione-e-stampa): HTML, PDF, Word ed EPUB
 - [iPhone e iPad](/progetti/charta/docs/iphone-e-ipad): la barra sopra la tastiera e le differenze dal Mac

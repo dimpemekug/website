@@ -64,6 +64,12 @@ Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</
 | Ingrandisci testo · Riduci testo | <kbd>⌘</kbd> <kbd>+</kbd> · <kbd>⌘</kbd> <kbd>-</kbd> |
 | Dimensione originale | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>0</kbd> |
 
+## Finestra
+
+| Comando | Scorciatoia |
+|---|---|
+| Benvenuto in Charta | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>1</kbd> |
+
 ## Nel testo
 
 | Tasto | Effetto |

@@ -22,9 +22,17 @@ Se una cartella è stata spostata o non è più raggiungibile, la finestra lo di
 
 ## Note e cartelle
 
-Il pulsante **+** (**Nuovo**) crea una **Nuova nota** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>N</kbd> sul Mac) o una **Nuova cartella**, e ha **Ordina per** **Nome** o **Data di modifica**. Il menu contestuale di una nota o di una cartella ha, sul Mac, **Nuova nota qui**, **Nuova cartella qui**, **Apri in una finestra a parte**, **Apri con il progetto**, **Copia collegamento [[…]]**, **Rinomina…**, **Mostra nel Finder** e **Sposta nel Cestino**; su iPhone e iPad **Nuova nota qui**, **Apri con il progetto**, **Rinomina** ed **Elimina**. Le note eliminate vanno nel Cestino quando il sistema lo consente.
+Il pulsante **+** (**Nuovo**) crea una **Nuova nota** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>N</kbd> sul Mac) o una **Nuova cartella**, e ha **Ordina per** **Nome** o **Data di modifica**. Nel testo, il tasto destro su un collegamento `[[nota]]` apre, rinomina o crea la nota e mostra i suoi collegamenti in entrata; su una selezione crea una nota nuova con quel testo (vedi [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura)).
 
-Le note si salvano da sole poco dopo l'ultimo tasto. Se un'altra app cambia una nota che non ha modifiche da salvare, Charta la ricarica (sul Mac si può spegnere in **Impostazioni › Generali › Ricarica le note cambiate da altre app**).
+Il menu contestuale di una nota o di una cartella nella barra ha, sul Mac, **Nuova nota qui**, **Nuova cartella qui**, **Apri in una finestra a parte**, **Apri con il progetto**, **Copia collegamento [[…]]**, **Rinomina…**, **Mostra nel Finder** e **Sposta nel Cestino**; su iPhone e iPad **Nuova nota qui**, **Apri con il progetto**, **Rinomina** ed **Elimina**. Le note eliminate vanno nel Cestino quando il sistema lo consente.
+
+Le note si salvano da sole poco dopo l'ultimo tasto.
+
+### File cambiati da altre app
+
+Se un'altra app (o un servizio di sincronizzazione) cambia il file aperto, Charta lo dice: «… è stato cambiato da un'altra app», con **Ricarica** per vedere la versione nuova o **Tieni questa versione** per riscrivere il file con il testo di Charta. Se hai modifiche non ancora salvate, l'avviso lo dice, e il salvataggio automatico della nota aspetta la tua risposta. La ricarica cambia solo il tratto diverso e si può annullare. Vale per le note delle cartelle e per i documenti aperti da soli, su Mac, iPhone e iPad.
+
+Con **Impostazioni › Generali › Ricarica senza chiedere i file cambiati da altre app** (spenta all'inizio), un file senza modifiche da salvare si ricarica da solo; con modifiche da salvare Charta chiede sempre.
 
 ## Collegamenti tra le note
 

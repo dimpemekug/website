@@ -22,9 +22,17 @@ If a folder was moved or can no longer be reached, the window says so and offers
 
 ## Notes and folders
 
-The **+** button (**New**) creates a **New Note** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>N</kbd> on the Mac) or a **New Folder**, and has **Sort By** **Name** or **Date Modified**. The context menu of a note or folder has, on the Mac, **New Note Here**, **New Folder Here**, **Open in a Separate Window**, **Open with Project**, **Copy Link [[…]]**, **Rename…**, **Show in Finder** and **Move to Trash**; on iPhone and iPad **New Note Here**, **Open with Project**, **Rename** and **Delete**. Deleted notes go to the Trash when the system allows it.
+The **+** button (**New**) creates a **New Note** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>N</kbd> on the Mac) or a **New Folder**, and has **Sort By** **Name** or **Date Modified**. In the text, right-clicking a `[[note]]` link opens, renames or creates the note and shows its backlinks; on a selection it creates a new note with that text (see [Formatting, tables and writing](/en/projects/charta/docs/formatting-tables-and-writing)).
 
-Notes save themselves shortly after your last keystroke. If another app changes a note that has no unsaved changes, Charta reloads it (on the Mac you can turn this off in **Settings › General › Reload Notes Changed by Other Apps**).
+The context menu of a note or folder in the sidebar has, on the Mac, **New Note Here**, **New Folder Here**, **Open in a Separate Window**, **Open with Project**, **Copy Link [[…]]**, **Rename…**, **Show in Finder** and **Move to Trash**; on iPhone and iPad **New Note Here**, **Open with Project**, **Rename** and **Delete**. Deleted notes go to the Trash when the system allows it.
+
+Notes save themselves shortly after your last keystroke.
+
+### Files changed by other apps
+
+If another app (or a sync service) changes the open file, Charta tells you: "… was changed by another app", with **Reload** to see the new version or **Keep This Version** to rewrite the file with Charta's text. If you have unsaved changes, the alert says so, and the note's autosave waits for your answer. Reloading only changes the part that differs and can be undone. This applies to notes in folders and to documents opened on their own, on Mac, iPhone and iPad.
+
+With **Settings › General › Reload Files Changed by Other Apps Without Asking** (off at first), a file with no unsaved changes reloads by itself; with unsaved changes Charta always asks.
 
 ## Links between notes
 
