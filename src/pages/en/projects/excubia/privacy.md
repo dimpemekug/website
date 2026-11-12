@@ -4,7 +4,7 @@ title: "Excubia Privacy Policy"
 description: "Full privacy policy for the Excubia app: what connection data the filter handles, why it stays on your Mac and when the app goes online."
 ---
 
-Last updated: November 7, 2026
+Last updated: November 12, 2026
 
 This Privacy Policy describes how **Excubia** handles data.
 

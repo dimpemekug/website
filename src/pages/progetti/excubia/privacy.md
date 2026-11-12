@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - Excubia"
 description: "Informativa completa sulla privacy dell'app Excubia: quali dati delle connessioni tratta il filtro, perché restano sul Mac e quando l'app si collega a internet."
 ---
 
-Ultimo aggiornamento: 7 novembre 2026
+Ultimo aggiornamento: 12 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **Excubia** tratta i dati.
 

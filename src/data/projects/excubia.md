@@ -10,7 +10,7 @@ tags: ["macOS", "rete", "sicurezza", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "i dati delle connessioni (app, destinazione, porta, protocollo, direzione, ora ed esito), i nomi host ricavati dalle risposte DNS, le regole, le impostazioni e le liste di blocco che aggiungi; mai il contenuto delle connessioni"
 privacyStorageNote: "Regole, impostazioni, liste di blocco e registro restano sul Mac e nessun dato arriva allo sviluppatore. Il registro è tenuto in memoria, o su disco per 1, 7 o 30 giorni se lo scegli. L'app si collega a internet solo per scaricare le liste di blocco che aggiungi."
-privacyUpdatedAt: "7 novembre 2026"
+privacyUpdatedAt: "12 novembre 2026"
 privacyUrl: "/progetti/excubia/privacy/"
 ---
 

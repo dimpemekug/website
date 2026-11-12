@@ -10,7 +10,7 @@ tags: ["macOS", "networking", "security", "privacy"]
 storeStatus: "coming-soon"
 privacyDataTypes: "connection data (app, destination, port, protocol, direction, time and outcome), host names read from DNS responses, and the rules, settings and blocklists you add; never the content of connections"
 privacyStorageNote: "Rules, settings, blocklists and the log stay on your Mac and no data reaches the developer. The log is kept in memory, or on disk for 1, 7 or 30 days if you choose. The app only goes online to download the blocklists you add."
-privacyUpdatedAt: "November 7, 2026"
+privacyUpdatedAt: "November 12, 2026"
 privacyUrl: "/en/projects/excubia/privacy/"
 ---
 
