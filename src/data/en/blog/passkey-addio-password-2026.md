@@ -12,7 +12,7 @@ draft: false
 related:
   - eudi-wallet-identita-digitale-europea-2026
   - deepfake-verifica-identita-digitale-2026
-  - windows-10-fine-aggiornamenti-estesi-2026
+  - torrent-sicuri-mac-2026
 ---
 
 For decades, the password has been the one true standard for accessing an online account — despite also being one of its weakest links: reused everywhere, written on a sticky note, stolen with a well-crafted phishing email. In 2026, that balance is finally shifting. **Passkeys** have gone from an experimental feature to the default option across most widely used services, and for the first time, millions of people are actually logging into their accounts without typing anything at all.

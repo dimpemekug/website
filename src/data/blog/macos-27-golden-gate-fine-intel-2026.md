@@ -11,7 +11,7 @@ featured: true
 draft: false
 related:
   - ios-27-ipados-27-cosa-cambia-2026
-  - windows-10-fine-aggiornamenti-estesi-2026
+  - torrent-sicuri-mac-2026
   - tagliare-video-senza-ricodifica-mac
 relatedProjects:
   - rmux

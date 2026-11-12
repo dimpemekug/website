@@ -6,7 +6,7 @@ description: Togliere l'inizio e la fine di un filmato non dovrebbe costare qual
 pubDatetime: 2026-10-31T08:00:00Z
 related:
   - macos-27-golden-gate-fine-intel-2026
-  - video-ai-generativa-2026
+  - aprire-rar-protetto-mac
   - local-first-app-offline-sincronizzazione-2026
 relatedProjects:
   - rmux

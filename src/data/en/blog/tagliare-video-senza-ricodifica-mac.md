@@ -6,7 +6,7 @@ description: Removing the start and end of a clip shouldn't cost you quality or 
 pubDatetime: 2026-10-31T08:00:00Z
 related:
   - macos-27-golden-gate-fine-intel-2026
-  - video-ai-generativa-2026
+  - aprire-rar-protetto-mac
   - local-first-app-offline-sincronizzazione-2026
 relatedProjects:
   - rmux
