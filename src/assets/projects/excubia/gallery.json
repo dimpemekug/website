@@ -1,0 +1,44 @@
+{
+  "captions": {
+    "01-prompt": {
+      "it": "Avviso per un'app senza regola: destinazione, porta, firma e i pulsanti Blocca e Consenti",
+      "en": "Alert for an app without a rule: destination, port, signature and the Block and Allow buttons"
+    },
+    "02-connections": {
+      "it": "Registro delle connessioni, con l'app, la destinazione, il motivo e l'esito di ognuna",
+      "en": "Connection log, with the app, destination, reason and outcome of each one"
+    },
+    "03-by-app": {
+      "it": "Connessioni raggruppate per app, con destinazioni, dati scambiati, consentite e bloccate",
+      "en": "Connections grouped by app, with destinations, data used, allowed and blocked"
+    },
+    "04-rules": {
+      "it": "Regole per app e per host, con l'insieme di regole attivo in alto",
+      "en": "Rules by app and by host, with the active rule set at the top"
+    },
+    "05-blocklists": {
+      "it": "Liste di blocco scaricate da un indirizzo o da file, con il numero di domini",
+      "en": "Blocklists downloaded from an address or from a file, with their number of domains"
+    },
+    "06-panel": {
+      "it": "Pannello nella barra dei menu: stato e rete, attività delle app, Mac sveglio",
+      "en": "Menu bar panel: status and network, app activity, Keep Awake"
+    },
+    "07-overview": {
+      "it": "Panoramica con protezione, contatori e dati scambiati da ogni app",
+      "en": "Overview with protection, counters and the data each app exchanges"
+    },
+    "08-settings": {
+      "it": "Impostazioni: profilo Standard o Esperto, modalità, avvisi e registro",
+      "en": "Settings: Standard or Expert profile, mode, alerts and log"
+    },
+    "09-welcome": {
+      "it": "Guida al primo avvio, che spiega cosa fa Excubia",
+      "en": "First-launch tour explaining what Excubia does"
+    },
+    "10-dark": {
+      "it": "Connessioni per app con il tema scuro",
+      "en": "Connections by app in dark appearance"
+    }
+  }
+}
