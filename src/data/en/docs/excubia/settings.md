@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-description: "All of Excubia's settings: profile, mode and protection, alerts and timeout, log, encrypted DNS, notifications, menu bar, appearance, language, network filter and data."
+description: "Excubia's settings: profile, mode, alerts and timeout, log, encrypted DNS, notifications, menu bar, appearance, network filter and data."
 project: "excubia"
 order: 12
 section: "Reference"

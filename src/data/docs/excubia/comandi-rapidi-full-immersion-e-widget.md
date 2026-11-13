@@ -1,6 +1,6 @@
 ---
 title: "Comandi rapidi, Full immersion e widget"
-description: "Le azioni di Excubia in Comandi rapidi e Siri, il filtro Full immersion che cambia modalità e insieme di regole, il widget, i link excubia:// e le notifiche dei blocchi."
+description: "Excubia in Comandi rapidi e Siri, il filtro Full immersion che cambia modalità e regole, il widget, i link excubia:// e le notifiche dei blocchi."
 project: "excubia"
 order: 11
 section: "Mac"

@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - Charta"
-description: "Informativa sulla privacy di Charta per Mac, iPhone e iPad: nessun account e nessun dato raccolto, documenti Markdown sul dispositivo, formule e diagrammi senza rete."
+description: "Privacy di Charta per Mac, iPhone e iPad: nessun account e nessun dato raccolto, documenti Markdown sul dispositivo, formule e diagrammi senza rete."
 ---
 
 Ultimo aggiornamento: 10 novembre 2026

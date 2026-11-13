@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Excubia"
-description: "Cos'è Excubia, il firewall per le app del Mac: come funziona il filtro di rete, com'è fatta la finestra, cosa succede al primo avvio e dove trovare il resto della guida."
+description: "Cos'è Excubia, il firewall per le app del Mac: come funziona il filtro di rete, com'è fatta la finestra e cosa succede al primo avvio."
 project: "excubia"
 order: 1
 section: "Iniziare"

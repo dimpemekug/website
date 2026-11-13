@@ -2,6 +2,8 @@
 import { ClientRouter } from "astro:transitions";
 import {
   PUBLIC_GOOGLE_SITE_VERIFICATION,
+  PUBLIC_SOCIAL_GITHUB,
+  PUBLIC_SOCIAL_LINKEDIN,
   PUBLIC_SOCIAL_X,
 } from "astro:env/client";
 import { Font } from "astro:assets";
@@ -9,6 +11,8 @@ import { SEO } from "astro-seo";
 import { SITE } from "@/config";
 import SearchModal from "@/components/SearchModal.astro";
 import { getLangFromUrl, getAlternateUrl } from "@/i18n/utils";
+import { pairedPath } from "@/utils/pageIndex";
+import { breadcrumbStructuredData } from "@/utils/breadcrumbStructuredData";
 import "@/styles/global.css";
 
 type Props = {
@@ -102,8 +106,9 @@ const languageAlternates =
   (canonicalURL && !noindex
     ? (() => {
         const currentPath = canonicalURL.pathname;
-        const itPath = lang === "it" ? currentPath : getAlternateUrl(currentPath, "it");
-        const enPath = lang === "en" ? currentPath : getAlternateUrl(currentPath, "en");
+        // Docs have translated slugs: use their real counterpart, not a prefix swap
+        const itPath = lang === "it" ? currentPath : (pairedPath(currentPath, "it") ?? getAlternateUrl(currentPath, "it"));
+        const enPath = lang === "en" ? currentPath : (pairedPath(currentPath, "en") ?? getAlternateUrl(currentPath, "en"));
 
         const itHref = new URL(itPath, SITE.website).href;
         const enHref = new URL(enPath, SITE.website).href;
@@ -135,9 +140,24 @@ const twitterHandle = (() => {
   return SITE.author ? (SITE.author.startsWith("@") ? SITE.author : `@${SITE.author}`) : undefined;
 })();
 
+// The person behind the site and the apps, shared by the home, the about page and the posts
+const personId = new URL("/#person", SITE.website).href;
+const sameAs = [PUBLIC_SOCIAL_GITHUB, PUBLIC_SOCIAL_X, PUBLIC_SOCIAL_LINKEDIN]
+  .map(url => url?.trim())
+  .filter((url): url is string => Boolean(url && /^https?:\/\//.test(url)));
+const person = {
+  "@type": "Person",
+  "@id": personId,
+  name: SITE.author,
+  url: SITE.website,
+  description: SITE.desc,
+  ...(sameAs.length > 0 && { sameAs }),
+};
+const postsHref = lang === "en" ? "/en/posts/" : "/posts/";
+
 const finalStructuredData = structuredDataProp ?? (
   isArticle
-    ? {
+    ? [{
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         mainEntityOfPage: {
@@ -153,38 +173,40 @@ const finalStructuredData = structuredDataProp ?? (
         inLanguage: lang === "it" ? "it-IT" : "en-US",
         ...(tags && tags.length > 0 && { keywords: tags.join(", ") }),
         author: [
-          {
-            "@type": "Person",
-            name: author,
-            ...(profile && { url: profile }),
-          },
+          author === SITE.author
+            ? { "@type": "Person", "@id": personId, name: author, url: SITE.website }
+            : { "@type": "Person", name: author, ...(profile && { url: profile }) },
         ],
-        publisher: {
-          "@type": "Person",
-          name: author,
-          ...(profile && { url: profile }),
-        },
-      }
+        publisher: { "@id": personId },
+      },
+      breadcrumbStructuredData([
+        { name: "Home", href: lang === "en" ? "/en/" : "/" },
+        { name: "Blog", href: postsHref },
+        { name: ogTitle },
+      ]),
+    ]
     : rawPath === "" || rawPath === "/en"
       ? {
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: SITE.title,
-          url: SITE.website,
-          description,
-          inLanguage: lang === "it" ? "it-IT" : "en-US",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": new URL("/#website", SITE.website).href,
+              name: SITE.title,
+              url: SITE.website,
+              description,
+              inLanguage: lang === "it" ? "it-IT" : "en-US",
+              publisher: { "@id": personId },
+            },
+            person,
+          ],
         }
       : rawPath === "/about" || rawPath === "/en/about"
         ? {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
             inLanguage: lang === "it" ? "it-IT" : "en-US",
-            mainEntity: {
-              "@type": "Person",
-              name: author,
-              description: SITE.desc,
-              ...(profile && { url: profile }),
-            },
+            mainEntity: person,
           }
         : null
 );

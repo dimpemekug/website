@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/LegalLayout.astro
 title: "Informativa sulla Privacy - Documenta"
-description: "Informativa sulla privacy di Documenta per Mac, iPhone e iPad: nessun dato raccolto, fotocamera e foto solo su tua scelta, documenti sul dispositivo o nel tuo iCloud Drive."
+description: "Privacy di Documenta per Mac, iPhone e iPad: nessun dato raccolto, fotocamera e foto solo su tua scelta, documenti sul dispositivo o su iCloud Drive."
 ---
 
 *Aggiornata al 6 novembre 2026*

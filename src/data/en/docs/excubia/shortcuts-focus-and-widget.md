@@ -1,6 +1,6 @@
 ---
 title: "Shortcuts, Focus and widget"
-description: "Excubia's actions in Shortcuts and Siri, the Focus filter that changes mode and rule set, the widget, excubia:// links and notifications for blocked connections."
+description: "Excubia in Shortcuts and Siri, the Focus filter that changes mode and rule set, the widget, excubia:// links and notifications for blocks."
 project: "excubia"
 order: 11
 section: "Mac"

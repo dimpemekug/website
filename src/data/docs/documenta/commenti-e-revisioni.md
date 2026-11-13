@@ -1,6 +1,6 @@
 ---
 title: "Commenti e revisioni"
-description: "Commenti nel margine e registrazione delle modifiche in Documenta: aggiungere, modificare ed eliminare commenti, accettare o rifiutare le revisioni, compatibilità con Word e LibreOffice."
+description: "Commenti nel margine e revisioni in Documenta: aggiungere, modificare ed eliminare commenti, accettare o rifiutare modifiche, compatibili con Word."
 project: "documenta"
 order: 8
 section: "Revisione"

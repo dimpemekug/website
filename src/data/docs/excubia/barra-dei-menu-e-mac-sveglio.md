@@ -1,6 +1,6 @@
 ---
 title: "Barra dei menu e Mac sveglio"
-description: "Il pannello di Excubia nella barra dei menu: stato, modalità, blocco a tempo, rete e dati scambiati, attività delle app, velocità al posto dell'icona e la funzione Mac sveglio."
+description: "Il pannello di Excubia nella barra dei menu: stato, modalità, blocco a tempo, rete, attività delle app, velocità al posto dell'icona e Mac sveglio."
 project: "excubia"
 order: 10
 section: "Mac"

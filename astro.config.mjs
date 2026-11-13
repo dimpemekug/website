@@ -11,6 +11,7 @@ import expressiveCode from 'astro-expressive-code';
 
 import { SITE } from './src/config';
 import { postLastmod } from './src/utils/postLastmod';
+import { pageIndex } from './src/utils/pageIndex';
 import rehypeTableScroll from './src/utils/rehypeTableScroll';
 
 const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
@@ -24,7 +25,8 @@ const isProjectPage =
   repositoryName !== `${repositoryOwner}.github.io`;
 
 const resolvedSite = customSite || SITE.website;
-const lastmodByPath = postLastmod();
+const pages = pageIndex();
+const lastmodByPath = new Map([...pages.lastmod, ...postLastmod()]);
 
 const resolvedBase =
   customBase || (isGitHubActions && isProjectPage && repositoryName ? `/${repositoryName}` : '/');
@@ -59,8 +61,18 @@ export default defineConfig({
         },
       },
       serialize: item => {
-        const lastmod = lastmodByPath.get(new URL(item.url).pathname);
-        return lastmod ? { ...item, lastmod } : item;
+        const path = new URL(item.url).pathname;
+        const lastmod = lastmodByPath.get(path);
+        // The i18n option only pairs URLs that differ by the /en prefix:
+        // projects (/progetti ↔ /en/projects) and docs (translated slugs) need their real pair
+        const pair = pages.alternates.get(path);
+        const links = pair
+          ? [
+              { lang: "it", url: new URL(pair.it, resolvedSite).href },
+              { lang: "en", url: new URL(pair.en, resolvedSite).href },
+            ]
+          : item.links;
+        return { ...item, ...(links && { links }), ...(lastmod && { lastmod }) };
       },
       xslURL: "/sitemap.xsl",
     }),

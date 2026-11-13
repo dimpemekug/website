@@ -1,6 +1,6 @@
 ---
 title: "Adding a download"
-description: "How to add a download in OmniPeer: magnet and ed2k links, .torrent files, the clipboard, the browser and drag and drop, with the file name and destination folder."
+description: "Adding a download in OmniPeer: magnet and ed2k links, .torrent files, the clipboard, the browser and drag and drop, with name and destination."
 project: "omnipeer"
 order: 2
 section: "Getting started"

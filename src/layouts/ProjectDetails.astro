@@ -13,6 +13,7 @@ import TableOfContents from "@/components/TableOfContents.astro";
 import ProjectPrivacySupport from "@/components/ProjectPrivacySupport.astro";
 import ProjectGallery from "@/components/ProjectGallery.astro";
 import PageHero from "@/components/PageHero.astro";
+import { getImage } from "astro:assets";
 
 type Props = {
   project: CollectionEntry<"projects"> | CollectionEntry<"projectsEn">;
@@ -35,6 +36,25 @@ const backLabel = lang === "en" ? "All projects" : "Tutti i progetti";
 const websiteLabel = lang === "en" ? "Website" : "Sito web";
 const downloadLabel = lang === "en" ? "Download from GitHub" : "Scarica da GitHub";
 const operatingSystems = ["iOS", "macOS", "Android", "WordPress"].filter(os => tags.includes(os));
+const projectPath = lang === "en" ? `/en/projects/${project.id}/` : `/progetti/${project.id}/`;
+const ogImage = `${projectPath}og.png`;
+
+// Up to three screenshots for the structured data, Mac first, then phone
+const screenshotModules = import.meta.glob<{ default: ImageMetadata }>("/src/assets/projects/*/*/*.{webp,png,jpg}", { eager: true });
+const screenshotURLs = await Promise.all(
+  ["mac", "iphone", "android", "ipad", "android-tablet"]
+    .flatMap(device =>
+      Object.keys(screenshotModules)
+        .filter(path => path.startsWith(`/src/assets/projects/${project.id}/${device}/`))
+        .sort()
+    )
+    .slice(0, 3)
+    .map(async path => {
+      const image = await getImage({ src: screenshotModules[path].default, width: 1280, format: "webp" });
+      return new URL(image.src, SITE.website).href;
+    })
+);
+
 const projectStructuredData = [
   {
     "@context": "https://schema.org",
@@ -43,6 +63,8 @@ const projectStructuredData = [
     description,
     url: new URL(Astro.url.pathname, SITE.website).href,
     applicationCategory,
+    image: new URL(ogImage, SITE.website).href,
+    ...(screenshotURLs.length > 0 && { screenshot: screenshotURLs }),
     operatingSystem: operatingSystems.join(", "),
     ...(appStore && { installUrl: appStore }),
     ...(playStore && { downloadUrl: playStore }),
@@ -69,9 +91,8 @@ const projectStructuredData = [
   title={seoTitle ?? `${title} | ${SITE.title}`}
   ogTitle={title}
   description={seoDescription ?? description}
-  tags={project.data.tags}
-  articleSection="Projects"
-  pubDatetime={pubDatetime}
+  ogImage={ogImage}
+  ogImageAlt={title}
   structuredData={projectStructuredData}
   scrollSmooth={true}
 >

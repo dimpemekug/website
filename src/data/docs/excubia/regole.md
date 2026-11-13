@@ -1,6 +1,6 @@
 ---
 title: "Regole"
-description: "Le regole di Excubia: per app, dominio, nome con asterisco, indirizzo, intervallo CIDR, rete locale e porta; quale regola vince, firma, regole temporanee, copie, esportazione e uso."
+description: "Le regole di Excubia per app, dominio, asterisco, indirizzo, CIDR, rete locale e porta: quale vince, firma, regole temporanee, copie ed esportazione."
 project: "excubia"
 order: 5
 section: "Regole"

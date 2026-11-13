@@ -1,6 +1,6 @@
 ---
 title: "Modalità e profili"
-description: "Le quattro modalità di Excubia (Chiedi, Consenti in silenzio, Blocca in silenzio, Blocca tutto), il blocco a tempo e la differenza tra i profili Standard ed Esperto."
+description: "Le quattro modalità di Excubia (Chiedi, Consenti o Blocca in silenzio, Blocca tutto), il blocco a tempo e i profili Standard ed Esperto."
 project: "excubia"
 order: 4
 section: "Funzionalità"

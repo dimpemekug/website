@@ -8,12 +8,13 @@ import IntroAudioCompact from "./IntroAudioCompact.astro";
 import MoreMenu from "./MoreMenu.astro";
 import { SITE } from "@/config";
 import { getLangFromUrl, useTranslations, getAlternateUrl } from "@/i18n/utils";
+import { pairedPath } from "@/utils/pageIndex";
 
 const { pathname } = Astro.url;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const alternateLang = lang === "it" ? "en" : "it";
-const alternateUrl = getAlternateUrl(Astro.url, alternateLang);
+const alternateUrl = pairedPath(Astro.url.pathname, alternateLang) ?? getAlternateUrl(Astro.url, alternateLang);
 
 // Remove trailing slash from current pathname if exists
 const currentPath =

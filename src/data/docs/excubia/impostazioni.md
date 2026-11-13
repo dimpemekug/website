@@ -1,6 +1,6 @@
 ---
 title: "Impostazioni"
-description: "Tutte le impostazioni di Excubia: profilo, modalità e protezione, avvisi e tempo limite, registro, DNS cifrato, notifiche, barra dei menu, aspetto, lingua, filtro di rete e dati."
+description: "Le impostazioni di Excubia: profilo, modalità, avvisi e tempo limite, registro, DNS cifrato, notifiche, barra dei menu, aspetto, filtro di rete e dati."
 project: "excubia"
 order: 12
 section: "Riferimento"

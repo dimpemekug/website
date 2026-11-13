@@ -1,6 +1,6 @@
 ---
 title: "Comments and tracked changes"
-description: "Margin comments and change tracking in Documenta: adding, editing and deleting comments, accepting or rejecting changes, compatibility with Word and LibreOffice."
+description: "Margin comments and tracked changes in Documenta: adding, editing and deleting comments, accepting or rejecting changes, Word compatible."
 project: "documenta"
 order: 8
 section: "Review"

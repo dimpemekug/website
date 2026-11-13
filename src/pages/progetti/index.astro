@@ -7,12 +7,36 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import PageHero from "@/components/PageHero.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import { SITE } from "@/config";
+import { breadcrumbStructuredData } from "@/utils/breadcrumbStructuredData";
 
 const projects = (await getCollection("projects", ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime());
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Progetti",
+    url: new URL("/progetti/", SITE.website).href,
+    inLanguage: "it-IT",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: project.data.title,
+        url: new URL(`/progetti/${project.id}/`, SITE.website).href,
+      })),
+    },
+  },
+  breadcrumbStructuredData([
+    { name: "Home", href: "/" },
+    { name: "Progetti" },
+  ]),
+];
 ---
 
-<Layout title={`Progetti | ${SITE.title}`} description="App gratuite per iPhone, iPad, Mac e Android, senza pubblicità né acquisti in-app, e siti web sviluppati con attenzione alla privacy.">
+<Layout structuredData={structuredData} title={`Progetti | ${SITE.title}`} description="App gratuite per iPhone, iPad, Mac e Android, senza pubblicità né acquisti in-app, e siti web sviluppati con attenzione alla privacy.">
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-4">

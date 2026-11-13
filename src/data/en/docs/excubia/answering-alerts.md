@@ -1,6 +1,6 @@
 ---
 title: "Answering alerts"
-description: "Excubia's alerts: what they show about the app, destination, port and signature, how to choose scope and duration, grouped alerts, the timeout and a changed signature."
+description: "Excubia's alerts: app, destination, port and signature, choosing scope and duration, grouped alerts, the timeout and a changed signature."
 project: "excubia"
 order: 3
 section: "Features"

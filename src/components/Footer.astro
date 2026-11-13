@@ -7,6 +7,7 @@ import { SITE } from "@/config";
 import Logo from "./Logo.astro";
 import IconRss from "@/assets/icons/IconRss.svg";
 import { getLangFromUrl, useTranslations, getAlternateUrl, localePath } from "@/i18n/utils";
+import { pairedPath } from "@/utils/pageIndex";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -47,7 +48,7 @@ const socialLinks = SOCIALS.map(social => ({
 }));
 
 const alternateLang = lang === "it" ? "en" : "it";
-const alternateUrl = getAlternateUrl(Astro.url, alternateLang);
+const alternateUrl = pairedPath(Astro.url.pathname, alternateLang) ?? getAlternateUrl(Astro.url, alternateLang);
 
 type Props = {
   noMarginTop?: boolean;

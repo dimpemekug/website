@@ -1,6 +1,6 @@
 ---
 title: "Registro delle connessioni"
-description: "Il registro di Excubia: elenco e vista per app, motivi delle decisioni, regole dal clic destro, conservazione fino a 30 giorni, esportazione in CSV e dati scambiati."
+description: "Il registro di Excubia: elenco e vista per app, motivi delle decisioni, regole dal clic destro, 30 giorni di storico, esportazione CSV e dati scambiati."
 project: "excubia"
 order: 9
 section: "Rete"

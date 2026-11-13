@@ -6,6 +6,7 @@ import IconDeviceDesktop from "@/assets/icons/IconDeviceDesktop.svg";
 import { SITE } from "@/config";
 import AccentPicker from "./AccentPicker.astro";
 import { getLangFromUrl, useTranslations, getAlternateUrl } from "@/i18n/utils";
+import { pairedPath } from "@/utils/pageIndex";
 
 interface Props {
   currentPath: string;
@@ -15,7 +16,7 @@ const { currentPath } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const alternateLang = lang === "it" ? "en" : "it";
-const alternateUrl = getAlternateUrl(Astro.url, alternateLang);
+const alternateUrl = pairedPath(Astro.url.pathname, alternateLang) ?? getAlternateUrl(Astro.url, alternateLang);
 
 const sectionRoot = currentPath.replace(/^\/en/, "").split("/").filter(Boolean)[0] ?? "";
 const isActive = (section: string) =>

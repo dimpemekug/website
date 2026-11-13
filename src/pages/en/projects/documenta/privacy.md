@@ -1,7 +1,7 @@
 ---
 layout: ../../../../layouts/LegalLayout.astro
 title: "Documenta Privacy Policy"
-description: "Privacy policy for Documenta for Mac, iPhone and iPad: no data collected, camera and photos only when you choose, documents on your device or in your iCloud Drive."
+description: "Documenta privacy policy for Mac, iPhone and iPad: no data collected, camera and photos only when you choose, files on device or in iCloud Drive."
 ---
 
 *Updated November 6, 2026*

@@ -1,6 +1,6 @@
 ---
 title: "eD2k servers and the Kad network"
-description: "The eD2k network in OmniPeer: the server list, updating from server.met, connecting, and the Kad network with status, nodes, bootstrap from a known node or nodes.dat."
+description: "The eD2k network in OmniPeer: server list, server.met updates, connecting, and the Kad network with status, nodes and bootstrap from nodes.dat."
 project: "omnipeer"
 order: 5
 section: "Networks"

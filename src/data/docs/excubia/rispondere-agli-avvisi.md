@@ -1,6 +1,6 @@
 ---
 title: "Rispondere agli avvisi"
-description: "Gli avvisi di Excubia: cosa mostrano su app, destinazione, porta e firma, come scegliere ambito e durata, gli avvisi raggruppati, il tempo limite e la firma cambiata."
+description: "Gli avvisi di Excubia: app, destinazione, porta e firma, come scegliere ambito e durata, avvisi raggruppati, tempo limite e firma cambiata."
 project: "excubia"
 order: 3
 section: "Funzionalità"

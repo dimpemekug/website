@@ -1,6 +1,6 @@
 ---
 title: "Introduction to OmniPeer"
-description: "What OmniPeer, the eD2k, Kad and BitTorrent client for Mac, is: how the window is laid out, what happens on first launch and where to find the rest of the guide."
+description: "What OmniPeer, the eD2k, Kad and BitTorrent client for Mac, is: how the window is laid out and what happens on first launch."
 project: "omnipeer"
 order: 1
 section: "Getting started"

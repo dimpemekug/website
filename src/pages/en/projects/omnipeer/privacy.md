@@ -1,7 +1,7 @@
 ---
 layout: ../../../../layouts/LegalLayout.astro
 title: "OmniPeer Privacy Policy"
-description: "Privacy policy for OmniPeer for Mac: no account and no data sent to the developer, what the eD2k, Kad and BitTorrent networks can see, and what stays on your Mac."
+description: "OmniPeer for Mac privacy policy: no account, no data sent to the developer, what the eD2k, Kad and BitTorrent networks see, what stays on your Mac."
 ---
 
 Last updated: November 11, 2026

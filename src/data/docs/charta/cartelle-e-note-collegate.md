@@ -1,6 +1,6 @@
 ---
 title: "Cartelle e note collegate"
-description: "Aprire una cartella come progetto, l'albero delle note, i collegamenti [[nota]], i collegamenti in entrata, il grafo, Vai alla nota, trova e sostituisci, le immagini e le impostazioni dei progetti."
+description: "Aprire una cartella come progetto in Charta: albero delle note, collegamenti [[nota]] e in entrata, grafo, Vai alla nota, trova e sostituisci, immagini."
 project: "charta"
 order: 5
 section: "Cartelle"

@@ -1,6 +1,6 @@
 ---
 title: "Liste di blocco e DNS cifrato"
-description: "Le liste di blocco di Excubia: formati supportati, liste consigliate, aggiornamento quotidiano, come sbloccare un dominio dal registro e il blocco del DNS cifrato delle app."
+description: "Le liste di blocco di Excubia: formati, liste consigliate, aggiornamento quotidiano, sblocco di un dominio dal registro e blocco del DNS cifrato."
 project: "excubia"
 order: 8
 section: "Rete"

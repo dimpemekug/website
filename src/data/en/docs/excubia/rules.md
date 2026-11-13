@@ -1,6 +1,6 @@
 ---
 title: "Rules"
-description: "Excubia's rules: by app, domain, name with an asterisk, address, CIDR range, local network and port; which rule wins, signatures, temporary rules, backups, export and usage."
+description: "Excubia's rules by app, domain, wildcard, address, CIDR range, local network and port: which rule wins, signatures, temporary rules and export."
 project: "excubia"
 order: 5
 section: "Rules"
