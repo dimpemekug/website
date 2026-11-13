@@ -109,6 +109,9 @@ export function pageIndex(): PageIndex {
       sources.set(`${PROJECTS_ROUTE[lang]}${route}/`, file);
     }
   }
+  const listPair = { it: PROJECTS_ROUTE.it, en: PROJECTS_ROUTE.en };
+  alternates.set(listPair.it, listPair);
+  alternates.set(listPair.en, listPair);
   for (const path of sources.keys()) {
     if (!path.startsWith(PROJECTS_ROUTE.it) || alternates.has(path)) continue;
     const en = path.replace(PROJECTS_ROUTE.it, PROJECTS_ROUTE.en);
