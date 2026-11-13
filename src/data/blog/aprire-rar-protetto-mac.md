@@ -6,7 +6,7 @@ pubDatetime: 2026-11-12T09:00:00Z
 related:
   - torrent-sicuri-mac-2026
   - tagliare-video-senza-ricodifica-mac
-  - macos-27-golden-gate-fine-intel-2026
+  - note-markdown-collegate-mac-iphone
 relatedProjects:
   - archiva
 tags:

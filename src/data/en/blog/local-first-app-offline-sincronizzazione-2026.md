@@ -11,7 +11,7 @@ draft: false
 related:
   - modelli-ai-on-device-2026
   - sovranita-digitale-cloud-europeo-2026
-  - memoria-assistenti-ai-2026
+  - note-markdown-collegate-mac-iphone
 relatedProjects:
   - codevault
 ---
