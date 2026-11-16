@@ -18,8 +18,9 @@ section: "Iniziare"
 
 ### 1. Nessun progetto: apri e modifica
 rMux non crea file di progetto. Il flusso è diretto:
-- apri il video trascinandolo nella finestra o sull'icona nel Dock, con **Apri con…** dal Finder o con **File › Apri Video…**;
-- imposta inizio e fine del taglio con <kbd>⌘</kbd> <kbd>I</kbd> e <kbd>⌘</kbd> <kbd>O</kbd>;
+- apri il video trascinandolo nella finestra o sull'icona nel Dock, con **Apri con…** dal Finder, con **File › Apri Video…** o dall'elenco dei video recenti;
+- imposta inizio e fine del taglio sulla timeline, con <kbd>⌘</kbd> <kbd>I</kbd> e <kbd>⌘</kbd> <kbd>O</kbd>;
+- se serve, cambia codifica, dimensioni, sottotitoli e audio dalle sezioni della barra laterale: ognuna segnala cosa hai cambiato e si riporta com'era con **Ripristina**;
 - esporta (<kbd>⌘</kbd> <kbd>↩</kbd>): rMux salva un nuovo file e non modifica mai l'originale.
 
 ### 2. Taglio senza perdita di qualità
@@ -42,3 +43,5 @@ L'app funziona in App Sandbox e completamente offline: nessun caricamento, nessu
 - **Ritagliare e correggere** l'immagine: ritaglio, ridimensionamento, rotazione, filtri e LUT.
 - **Unire più video** in un unico file.
 - **Mettere in coda** più esportazioni e continuare a lavorare.
+
+Per i tasti e le impostazioni vedi [Anteprima, tastiera e impostazioni](/progetti/rmux/docs/anteprima-tastiera-e-impostazioni).

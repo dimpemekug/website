@@ -8,7 +8,7 @@ section: "Audio"
 
 ## Audio Tracks One by One
 
-A video file often contains several audio streams (different languages, commentary, 5.1 surround). rMux's **Audio Inspector** shows each track with its own settings:
+A video file often contains several audio streams (different languages, commentary, 5.1 surround). rMux's **Audio** section shows each track with its own settings:
 
 - **Include or exclude**: turn a track off to leave it out of the exported file. Excluding every track gives you a silent video.
 - **Copy**: the track is copied as is, with no loss.
@@ -34,4 +34,4 @@ For each track you can edit:
 
 ## Extracting a Track
 
-**Extract…** saves an audio track to a separate file without re-encoding: rMux copies it into a Matroska audio file (`.mka`), which accepts any codec. Likewise, in the Video Inspector you can use **Extract Video…** to save the video track alone, without audio.
+**Extract…** saves an audio track to a separate file without re-encoding: rMux copies it into a Matroska audio file (`.mka`), which accepts any codec. Likewise, in the **Video** section you can use **Extract Video…** to save the video track alone, without audio.

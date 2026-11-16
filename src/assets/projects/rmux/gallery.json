@@ -1,8 +1,8 @@
 {
   "captions": {
     "01-trim": {
-      "it": "Taglio di un video sulla timeline, senza ricodifica",
-      "en": "Trimming a video on the timeline, without re-encoding"
+      "it": "Taglio sulla timeline con i fotogrammi del video, senza ricodifica",
+      "en": "Trimming on a timeline that shows the video's frames, without re-encoding"
     },
     "02-convert": {
       "it": "Conversione in H.264, HEVC, AV1, VP9 o ProRes",
@@ -20,13 +20,17 @@
       "it": "Ritaglio, rotazione, filtri e LUT con l'anteprima sul video",
       "en": "Cropping, rotation, filters and LUTs, previewed on the video"
     },
-    "06-merge": {
-      "it": "Unione di più clip in un solo file",
-      "en": "Merging several clips into one file"
+    "06-compare": {
+      "it": "Confronto prima e dopo dei filtri, con un cursore da trascinare sull'immagine",
+      "en": "Before and after comparison of the filters, with a slider dragged across the picture"
     },
-    "07-dark": {
-      "it": "rMux con l'aspetto scuro",
-      "en": "rMux in dark mode"
+    "07-merge": {
+      "it": "Unione di più clip in un solo file, con un'anteprima di ognuna",
+      "en": "Merging several clips into one file, with a thumbnail of each"
+    },
+    "08-dark": {
+      "it": "rMux con l'aspetto scuro e il riepilogo delle tracce del file",
+      "en": "rMux in dark mode, with the summary of the file's tracks"
     }
   }
 }

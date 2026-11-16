@@ -1,38 +1,43 @@
 ---
-title: "Coda di esportazione e Dock"
-description: "Coda di esportazione in background, avanzamento sull'icona del Dock, notifiche e scorciatoie da tastiera personalizzabili in rMux."
+title: "Esportazione, coda e Dock"
+description: "Riepilogo prima di esportare, dimensione stimata, velocità e tempo rimanente, coda di lavoro riordinabile, avanzamento nel Dock e notifiche in rMux."
 project: "rmux"
 order: 6
 section: "Produttività"
 ---
 
-## Coda di lavoro in background
+## Prima di esportare
 
-Con rMux non devi aspettare la fine di un'esportazione per passare al video successivo:
-- **Esporta subito** con **Esporta…** (<kbd>⌘</kbd> <kbd>↩</kbd>), oppure usa **Aggiungi alla coda** per mettere l'esportazione in fila.
+Sotto la timeline, una riga riassume cosa uscirà: il formato, se il video viene copiato o ricodificato, il numero di segmenti e di filtri e, quando le impostazioni lo permettono, la **dimensione stimata** del file. Accanto scegli il formato del file e avvii l'esportazione.
+
+Nella barra laterale, ogni sezione (**Video**, **Dimensioni**, **Sottotitoli**, **Audio**) mostra un piccolo segno quando l'hai cambiata rispetto al file aperto, per esempio il codec scelto o il numero di filtri attivi. Il pulsante **Ripristina** in cima al pannello delle impostazioni riporta quella sezione com'era.
+
+---
+
+## Esportare subito o mettere in coda
+
+- **Esporta…** (<kbd>⌘</kbd> <kbd>↩</kbd>) avvia subito l'esportazione. Durante il lavoro vedi la percentuale, la **velocità** (per esempio 2,3×) e il **tempo rimanente**. Al termine puoi **aprire** il file o mostrarlo nel Finder.
+- **Aggiungi alla coda** mette l'esportazione in fila, così puoi passare al video successivo.
 - **Più finestre**: puoi aprire più video in finestre diverse e preparare tagli diversi in parallelo.
-- **La coda prosegue** anche se chiudi la finestra del video, e viene salvata tra un avvio e l'altro.
-- Nella finestra **Coda di lavoro** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>J</kbd>) vedi l'avanzamento di ogni esportazione, puoi avviare la coda, rimuovere singoli lavori o togliere quelli completati.
+
+---
+
+## La coda di lavoro
+
+Nella finestra **Coda di lavoro** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>J</kbd>):
+- ogni riga mostra lo stato (in attesa, in pausa, completata, non riuscita, annullata) e una barra di avanzamento; per un lavoro non riuscito c'è anche il motivo;
+- trascina le righe per **cambiare l'ordine** dei lavori in attesa;
+- con il clic secondario puoi **rimettere in coda** un lavoro, mostrarlo nel Finder o rimuoverlo;
+- in basso **Avvia coda**, **Interrompi coda** (ferma l'esportazione in corso, quelle in attesa restano) e **Rimuovi completati**.
+
+La coda prosegue anche se chiudi la finestra del video, e viene salvata tra un avvio e l'altro.
 
 ---
 
 ## Dock e notifiche
 
 - **Avanzamento sul Dock**: durante le esportazioni, sull'icona di rMux nel Dock compare una barra di avanzamento.
-- **Notifica al termine**: quando un'esportazione o l'intera coda finisce, macOS mostra una notifica (con suono) che indica se è andata a buon fine. Dalla barra laterale puoi poi aprire il file con **Mostra nel Finder**.
+- **Notifica al termine**: quando rMux è in secondo piano e un'esportazione, un'unione o la coda finisce, macOS mostra una notifica che dice se è andata a buon fine. Si disattiva in **Impostazioni › Esportazione**.
+- **Al termine**: sempre in **Impostazioni › Esportazione** puoi far sì che, finita un'esportazione dalla finestra principale, rMux mostri il file nel Finder o lo apra.
 
----
-
-## Scorciatoie da tastiera
-
-| Scorciatoia | Funzione |
-| :--- | :--- |
-| <kbd>⌘</kbd> <kbd>I</kbd> | Imposta il punto In |
-| <kbd>⌘</kbd> <kbd>O</kbd> | Imposta il punto Out |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd> | Cancella i contrassegni |
-| <kbd>⌥</kbd> <kbd>←</kbd> / <kbd>⌥</kbd> <kbd>→</kbd> | Vai al keyframe precedente o successivo |
-| <kbd>⌘</kbd> <kbd>↩</kbd> | Esporta |
-| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>J</kbd> | Apri la coda di lavoro |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Mostra o nascondi l'inspector |
-
-Tutte tranne <kbd>⌘</kbd> <kbd>↩</kbd> e <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> si possono **riassegnare** nelle Impostazioni: fai clic sul campo della scorciatoia e premi la nuova combinazione.
+Le scorciatoie da tastiera sono raccolte in [Anteprima, tastiera e impostazioni](/progetti/rmux/docs/anteprima-tastiera-e-impostazioni).

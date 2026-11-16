@@ -18,8 +18,9 @@ It is written in **SwiftUI** following Apple's guidelines and bundles **FFmpeg a
 
 ### 1. No Projects: Open and Edit
 rMux creates no project files. The workflow is direct:
-- open a video by dragging it into the window or onto the Dock icon, with **Open With…** from the Finder or with **File › Open Video…**;
-- set the start and end of the cut with <kbd>⌘</kbd> <kbd>I</kbd> and <kbd>⌘</kbd> <kbd>O</kbd>;
+- open a video by dragging it into the window or onto the Dock icon, with **Open With…** from the Finder, with **File › Open Video…**, or from the recent videos list;
+- set the start and end of the cut on the timeline, with <kbd>⌘</kbd> <kbd>I</kbd> and <kbd>⌘</kbd> <kbd>O</kbd>;
+- if needed, change encoding, dimensions, subtitles, and audio from the sidebar sections: each one shows what you changed and goes back to how it was with **Reset**;
 - export (<kbd>⌘</kbd> <kbd>↩</kbd>): rMux saves a new file and never modifies the original.
 
 ### 2. Trimming Without Quality Loss
@@ -42,3 +43,5 @@ The app runs in the App Sandbox and fully offline: no uploads, no account, no tr
 - **Crop and correct** the picture: cropping, resizing, rotation, filters and LUTs.
 - **Merge several videos** into one file.
 - **Queue** several exports and keep working.
+
+For keys and settings, see [Preview, Keyboard, and Settings](/en/projects/rmux/docs/preview-keyboard-and-settings).

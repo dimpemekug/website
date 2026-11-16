@@ -4,7 +4,7 @@ title: "rMux Privacy Policy"
 description: "Full privacy policy for the rMux app: what data is processed, how videos are handled, and why no data ever leaves your Mac."
 ---
 
-Last updated: September 17, 2026
+Last updated: November 16, 2026
 
 This Privacy Policy describes how **rMux** handles data.
 
@@ -25,7 +25,8 @@ rMux only handles:
 - the files the user chooses to use while editing: subtitles (SRT, ASS/SSA) and LUT color tables (.cube)
 - the files the app creates at the user's request: exported or merged videos, extracted audio, video, or subtitle tracks, frames saved as images, subtitles saved as SRT
 - the job queue: queued exports, with the paths of the files involved and the chosen settings (format, encoding, trim, filters, tracks)
-- app preferences: default format and codec, default destination folder, interface language, and keyboard shortcuts
+- the recent videos list: the name, path, and security-scoped bookmark of the most recently opened videos (eight at most), shown in the empty window and in File › Open Recent
+- app preferences: default format and codec, default destination folder, exported file name suffix, interface language and appearance, keyboard shortcuts, preview volume, and the other choices in Settings
 
 Videos are read and processed locally on the Mac, including through the FFmpeg components bundled with the app (see "Third-party components").
 
@@ -53,13 +54,13 @@ rMux offers no sync features and does not use iCloud. If the user opens videos f
 
 ## Notifications
 
-rMux can show a local notification when an export finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time in System Settings › Notifications. Notifications are generated on the Mac: no push notification service is used.
+rMux can show a local notification when an export, a merge, or the job queue finishes. macOS asks for permission the first time it is needed, and it can be revoked at any time in System Settings › Notifications; notifications can also be turned off in rMux, in Settings › Export. Notifications are generated on the Mac: no push notification service is used.
 
 ## Device permissions
 
 rMux runs inside the macOS sandbox and can only access the files and folders the user explicitly chooses, by dragging, opening, or selecting them in a system panel.
 
-To reopen a video or write to the chosen folder even after a restart (for example for queued exports), the app saves a security-scoped bookmark to those files and folders.
+To reopen a video or write to the chosen folder even after a restart (for example for queued exports or recent videos), the app saves a security-scoped bookmark to those files and folders. The bookmark gives read-only access to the opened videos and stays on the Mac.
 
 The app does not request access to the camera, microphone, Photos library, contacts, calendars, location, or biometric authentication, and has no network access.
 
@@ -74,6 +75,7 @@ No data leaves the Mac through the app.
 The app stores locally on the Mac:
 
 - the preferences (`UserDefaults`) listed in "Data the app handles"
+- the recent videos list, also in the preferences, with the videos' security-scoped bookmarks
 - the job queue, in a file inside the app's container (Application Support), together with the security-scoped bookmarks of the files involved
 - the files created at the user's request, in the chosen destination
 
@@ -81,7 +83,9 @@ The app stores locally on the Mac:
 
 - Exported files are ordinary user files: they stay where they were saved until the user moves or deletes them, even after the app is uninstalled.
 - Exports can be removed from the job queue (Tools › Job Queue).
-- Uninstalling the app removes the saved preferences and job queue, within the limits of operating system behavior.
+- The recent videos list is cleared with "Clear List" (empty window or Settings › General) or with File › Open Recent › Clear Menu; turning off "Remember opened videos" empties the list and stops it from filling up again.
+- "Restore Default Settings…" (Settings › General) clears the saved preferences, except the language and the recent videos list.
+- Uninstalling the app removes the saved preferences, recent videos list, and job queue, within the limits of operating system behavior.
 
 Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
 

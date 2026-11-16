@@ -8,9 +8,9 @@ section: "Conversion"
 
 ## Copy or Transcode
 
-In the **Video Inspector** you choose, for the video track:
+In the **Video** section of the settings panel you choose, for the video track:
 - **Copy**: the video is copied without re-encoding (only the container or duration changes).
-- **Transcode**: the video is re-encoded with the encoder and settings you pick.
+- **Transcode**: the video is re-encoded with the encoder and settings you pick. The suggested encoder is **HEVC**; you can change it in **Settings › Export › Video Encoder**.
 
 The file format (**MP4, MOV, MKV, WebM or AVI**) is chosen next to the export button. If a container doesn't support a codec, rMux warns you before exporting.
 

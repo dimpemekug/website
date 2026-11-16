@@ -6,11 +6,11 @@ order: 3
 section: "Conversione"
 ---
 
-## Copy o Transcode
+## Copia o Ricodifica
 
-Nell'**Inspector Video** scegli per la traccia video:
-- **Copy**: il video viene copiato senza ricodifica (cambia solo il contenitore o la durata).
-- **Transcode**: il video viene ricodificato con l'encoder e le impostazioni che scegli.
+Nella sezione **Video** del pannello delle impostazioni scegli per la traccia video:
+- **Copia**: il video viene copiato senza ricodifica (cambia solo il contenitore o la durata).
+- **Ricodifica**: il video viene ricodificato con l'encoder e le impostazioni che scegli. L'encoder proposto è **HEVC**; puoi cambiarlo in **Impostazioni › Esportazione › Encoder video**.
 
 Il formato del file (**MP4, MOV, MKV, WebM o AVI**) si sceglie accanto al pulsante di esportazione. Se un contenitore non supporta un codec, rMux te lo segnala prima di esportare.
 

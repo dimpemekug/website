@@ -8,9 +8,9 @@ pubDatetime: 2026-09-14T00:00:00+02:00
 draft: false
 tags: ["macOS", "desktop", "video", "privacy"]
 appStore: "https://apps.apple.com/app/rmux/id6813485133?mt=12"
-privacyDataTypes: "video che scegli di aprire, file usati durante la modifica (sottotitoli SRT e ASS/SSA, LUT .cube), file creati su tua richiesta, coda di lavoro e preferenze dell'app (formato e codec predefiniti, cartella di destinazione, lingua, scorciatoie)"
+privacyDataTypes: "video che scegli di aprire, file usati durante la modifica (sottotitoli SRT e ASS/SSA, LUT .cube), file creati su tua richiesta, coda di lavoro, elenco dei video recenti e preferenze dell'app (formato e codec predefiniti, cartella di destinazione, lingua, aspetto, scorciatoie, volume dell'anteprima)"
 privacyStorageNote: "L'app non ha accesso alla rete: i video vengono elaborati interamente sul Mac, anche tramite i componenti FFmpeg inclusi, e non vengono mai caricati su alcun server. Gli originali non vengono mai modificati."
-privacyUpdatedAt: "17 settembre 2026"
+privacyUpdatedAt: "16 novembre 2026"
 privacyUrl: "/progetti/rmux/privacy/"
 ---
 
@@ -20,16 +20,18 @@ rMux è l'editor video essenziale per il Mac: apri un filmato, taglia le parti c
 
 ## Funzionalità principali
 
-- **Taglia senza perdere qualità**: imposta inizio e fine sulla timeline, con i fotogrammi chiave segnati, e salva solo la parte che ti serve in pochi secondi, senza ricodifica
+- **Taglia senza perdere qualità**: imposta inizio e fine sulla timeline, anche in più segmenti, e salva solo la parte che ti serve in pochi secondi, senza ricodifica
+- **Timeline precisa**: fotogrammi del video, righello con i tempi o il timecode, fotogrammi chiave segnati e zoom con il trackpad; Spazio, J, K, L e le frecce per spostarti fotogramma per fotogramma, ⌘Z per annullare
 - **Cambia contenitore**: MP4, MOV, MKV, WebM e AVI, lasciando intatti video e audio
 - **Converti come vuoi**: H.264 e HEVC con l'accelerazione hardware del Mac, oppure AV1, VP9 e ProRes, a qualità costante, bitrate con doppia passata o dimensione del file di destinazione, con opzioni avanzate per livello, intervallo tra i fotogrammi chiave e titolo della traccia
 - **Ogni traccia sotto controllo**: per ogni traccia audio scegli se copiarla, convertirla (AAC, AC3, MP3, Opus, FLAC, PCM) o escluderla; regola il volume in dB, correggi il ritardo tra audio e video anche senza ricodificare, modifica lingua, titolo e traccia predefinita o estrai una traccia in un file separato
 - **Sottotitoli come vuoi tu**: importa file SRT e ASS/SSA, anche con codifiche dei caratteri datate, aggiungili come traccia attivabile o imprimili nell'immagine con dimensione, colore e posizione a tua scelta, sposta i tempi, modifica le singole battute e salva in SRT, oppure estrai i sottotitoli già presenti nel video
-- **Ritaglia e correggi**: ritaglio direttamente sull'anteprima, ridimensionamento, rotazione e capovolgimento, deinterlacciamento, riduzione del rumore, nitidezza, correzione colore e LUT .cube, con anteprima prima/dopo; salva un fotogramma come immagine o estrai il video senza audio
-- **Unisci più video**: metti in fila più clip e uniscile in un unico file, senza ricodificare quando sono compatibili; altrimenti rMux le uniforma alla risoluzione e alla frequenza dei fotogrammi della prima
-- **Lavora in background**: metti in coda più esportazioni e continua a lavorare — la coda prosegue anche chiudendo la finestra — con avanzamento sull'icona nel Dock e notifica al termine
+- **Ritaglia e correggi**: ritaglio direttamente sull'anteprima, ridimensionamento, rotazione e capovolgimento, deinterlacciamento, riduzione del rumore, nitidezza, correzione colore e LUT .cube, con il confronto prima/dopo affiancato o con un cursore da trascinare sull'immagine; salva un fotogramma come immagine o estrai il video senza audio
+- **Unisci più video**: metti in fila più clip, con un'anteprima di ognuna, e uniscile in un unico file, senza ricodificare quando sono compatibili; altrimenti rMux le uniforma alla risoluzione e alla frequenza dei fotogrammi della prima
+- **Lavora in background**: prima di esportare vedi la dimensione stimata del file, poi velocità e tempo rimanente; metti in coda più esportazioni, riordinale e continua a lavorare — la coda prosegue anche chiudendo la finestra — con avanzamento sull'icona nel Dock e notifica al termine
 - **Originali al sicuro**: rMux crea sempre un nuovo file, senza mai modificare l'originale
-- **Integrata con macOS**: trascinamento nella finestra o sull'icona nel Dock, "Apri con…" dal Finder, scorciatoie da tastiera personalizzabili
+- **Integrata con macOS**: trascinamento nella finestra o sull'icona nel Dock, "Apri con…" dal Finder, video recenti, scorciatoie da tastiera personalizzabili
+- **Modifiche sotto controllo**: ogni sezione dice cosa hai cambiato e si riporta com'era con un clic
 - **Tema chiaro, scuro o automatico**: interfaccia in italiano e in inglese
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 

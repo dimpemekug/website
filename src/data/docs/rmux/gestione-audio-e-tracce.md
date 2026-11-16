@@ -8,11 +8,11 @@ section: "Audio"
 
 ## Le tracce audio una per una
 
-Un file video contiene spesso più flussi audio (lingue diverse, commento, audio surround 5.1). L'**Inspector Audio** di rMux mostra ogni traccia con le sue impostazioni:
+Un file video contiene spesso più flussi audio (lingue diverse, commento, audio surround 5.1). La sezione **Audio** di rMux mostra ogni traccia con le sue impostazioni:
 
 - **Includi o escludi**: disattiva una traccia per non portarla nel file esportato. Escludendo tutte le tracce ottieni un video muto.
-- **Copy**: la traccia viene copiata così com'è, senza perdite.
-- **Transcode**: la traccia viene convertita in **AAC, AC3, MP3, Opus, FLAC o PCM**, con bitrate, canali (come la sorgente, mono, stereo o 5.1) e frequenza di campionamento (come la sorgente, 44,1 o 48 kHz).
+- **Copia**: la traccia viene copiata così com'è, senza perdite.
+- **Ricodifica**: la traccia viene convertita in **AAC, AC3, MP3, Opus, FLAC o PCM**, con bitrate, canali (come la sorgente, mono, stereo o 5.1) e frequenza di campionamento (come la sorgente, 44,1 o 48 kHz).
 
 ---
 
@@ -34,4 +34,4 @@ Per ogni traccia puoi modificare:
 
 ## Estrarre una traccia
 
-Con **Estrai…** salvi una traccia audio in un file separato, senza ricodifica: rMux la copia in un file Matroska audio (`.mka`), che accetta qualsiasi codec. Allo stesso modo, nell'Inspector Video puoi usare **Estrai video…** per salvare la sola traccia video, senza audio.
+Con **Estrai…** salvi una traccia audio in un file separato, senza ricodifica: rMux la copia in un file Matroska audio (`.mka`), che accetta qualsiasi codec. Allo stesso modo, nella sezione **Video** puoi usare **Estrai video…** per salvare la sola traccia video, senza audio.
