@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - rExif"
 description: "Privacy dell'app rExif: quali dati vengono trattati, come vengono modificati i file e perché foto e video non lasciano mai il Mac."
 ---
 
-Ultimo aggiornamento: 7 ottobre 2026
+Ultimo aggiornamento: 16 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **rExif** tratta i dati.
 
@@ -27,7 +27,8 @@ rExif tratta esclusivamente:
 - i file che l'utente sceglie di usare durante la modifica: tracce GPX, file JSON di Google Takeout che si trovano accanto alle foto, file CSV da importare, file .xmp esistenti accanto ai file
 - i file che l'app crea su richiesta dell'utente: file .xmp accanto ai file che non si possono riscrivere, file CSV esportati, copie senza dati personali, originali esportati dalla libreria Foto
 - la sessione: l'elenco degli elementi aperti, per riaprirli all'avvio successivo (disattivabile in Impostazioni)
-- le preferenze dell'app: lingua dell'interfaccia, aspetto, dimensione delle miniature, colonne della tabella
+- le cartelle recenti: le ultime cinque cartelle aggiunte, per riaprirle con un clic quando la lista è vuota
+- le preferenze dell'app: lingua dell'interfaccia, aspetto, dimensione delle miniature, date compatte, colonne della tabella
 
 ## Raccolta dei dati
 
@@ -78,7 +79,7 @@ rExif non offre funzioni di sincronizzazione e non usa iCloud. Se l'utente modif
 
 rExif funziona all'interno della sandbox di macOS e può accedere solo ai file e alle cartelle che l'utente sceglie esplicitamente, trascinandoli, aprendoli o selezionandoli in un pannello di sistema. Per rinominare un file o creare il suo .xmp serve l'accesso alla cartella: se l'utente ha aggiunto solo singoli file, rExif lo chiede con un pannello di sistema.
 
-Per riaprire la sessione dopo un riavvio, l'app salva un riferimento di sicurezza (security-scoped bookmark) ai file e alle cartelle aggiunti.
+Per riaprire la sessione e le cartelle recenti dopo un riavvio, l'app salva un riferimento di sicurezza (security-scoped bookmark) ai file e alle cartelle aggiunti.
 
 L'app può chiedere l'accesso alla libreria Foto (vedi sopra). Non richiede l'accesso a fotocamera, microfono, contatti, calendari, posizione del Mac o autenticazione biometrica. Le posizioni mostrate e modificate sono quelle registrate nelle foto, non quella del Mac.
 
@@ -96,14 +97,16 @@ L'app salva localmente sul Mac:
 
 - le preferenze (`UserDefaults`) elencate nella sezione "Dati trattati dall'app"
 - la sessione: percorsi dei file, identificativi degli elementi di Foto e riferimenti di sicurezza dei file e delle cartelle aggiunti
+- le cartelle recenti: percorso e riferimento di sicurezza delle ultime cinque cartelle aggiunte
 - le eventuali copie di recupero di un salvataggio interrotto, nella cartella Application Support del contenitore dell'app
 - i file creati su richiesta dell'utente, nella destinazione scelta
 
 ## Conservazione e cancellazione
 
 - Le modifiche salvate fanno parte dei file dell'utente e restano anche dopo la disinstallazione dell'app.
-- La sessione si cancella svuotando la lista (Archivio › Svuota lista) o disattivando "Riapri all'avvio gli elementi della sessione precedente" in Impostazioni.
-- La disinstallazione dell'app rimuove preferenze e sessione, nei limiti del comportamento del sistema operativo.
+- La sessione si cancella svuotando la lista (Archivio › Svuota lista) o disattivando "Riapri gli elementi della sessione precedente" in Impostazioni › Generale.
+- Le cartelle recenti si cancellano con "Cancella elenco" in Impostazioni › Generale.
+- La disinstallazione dell'app rimuove preferenze, sessione e cartelle recenti, nei limiti del comportamento del sistema operativo.
 
 Poiché lo sviluppatore non riceve né conserva alcun dato, non può accedere, correggere o cancellare i dati dell'utente per suo conto.
 

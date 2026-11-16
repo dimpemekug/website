@@ -4,7 +4,7 @@ title: "rExif Privacy Policy"
 description: "Full privacy policy for the rExif app: what data is processed, how files are edited, and why your photos and videos never leave your Mac."
 ---
 
-Last updated: October 7, 2026
+Last updated: November 16, 2026
 
 This Privacy Policy describes how **rExif** handles data.
 
@@ -27,7 +27,8 @@ rExif handles only:
 - the files you choose to use while editing: GPX tracks, Google Takeout JSON files located next to your photos, CSV files to import, existing .xmp files next to your files
 - the files the app creates at your request: .xmp files next to files that can't be rewritten, exported CSV files, copies without personal data, originals exported from the Photos library
 - the session: the list of open items, so they reopen at the next launch (can be turned off in Settings)
-- the app's preferences: interface language, appearance, thumbnail size, table columns
+- recent folders: the last five folders you added, so you can reopen them with a click when the list is empty
+- the app's preferences: interface language, appearance, thumbnail size, compact dates, table columns
 
 ## Data collection
 
@@ -78,7 +79,7 @@ rExif offers no sync features and does not use iCloud. If you edit files in a fo
 
 rExif runs inside the macOS App Sandbox and can only access the files and folders you explicitly choose, by dragging, opening, or selecting them in a system panel. Renaming a file or creating its .xmp requires access to its folder: if you only added individual files, rExif asks for it with a system panel.
 
-To reopen the session after a restart, the app saves a security-scoped bookmark to the files and folders you added.
+To reopen the session and recent folders after a restart, the app saves a security-scoped bookmark to the files and folders you added.
 
 The app may ask for access to your Photos library (see above). It does not request access to the camera, microphone, contacts, calendars, your Mac's location, or biometric authentication. The locations shown and edited are those recorded in your photos, not your Mac's location.
 
@@ -96,14 +97,16 @@ The app stores locally on your Mac:
 
 - the preferences (`UserDefaults`) listed under "Data the app handles"
 - the session: file paths, Photos item identifiers, and security-scoped bookmarks to the files and folders you added
+- recent folders: the path and security-scoped bookmark of the last five folders you added
 - any recovery copies from an interrupted save, in the Application Support folder inside the app's container
 - the files created at your request, at the destination you chose
 
 ## Retention and deletion
 
 - Saved changes are part of your files and remain after the app is uninstalled.
-- The session is cleared by emptying the list (File › Clear List) or by turning off "Reopen items from the previous session at launch" in Settings.
-- Uninstalling the app removes its preferences and session, within the limits of how the operating system behaves.
+- The session is cleared by emptying the list (File › Clear List) or by turning off "Reopen the items from the previous session" in Settings › General.
+- Recent folders are cleared with "Clear List" in Settings › General.
+- Uninstalling the app removes its preferences, session, and recent folders, within the limits of how the operating system behaves.
 
 Because the developer receives and stores no data, the developer cannot access, correct, or delete user data on your behalf.
 
