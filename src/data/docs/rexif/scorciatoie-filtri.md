@@ -1,6 +1,6 @@
 ---
-title: "Scorciatoie e selezioni rapide"
-description: "Elenco completo delle scorciatoie da tastiera di rExif e dei criteri del menu Seleziona per lavorare più in fretta."
+title: "Scorciatoie, filtri e selezioni rapide"
+description: "Le scorciatoie da tastiera di rExif, i filtri della casella di ricerca e i criteri del menu Seleziona per trovare in fretta le foto da correggere."
 project: "rexif"
 order: 9
 section: "Riferimento"
@@ -19,12 +19,12 @@ Le funzioni principali di rExif hanno una scorciatoia da tastiera:
 | **Salva modifiche** | `⌘ + S` | Scrive su disco tutte le modifiche evidenziate in arancione |
 | **Svuota lista** | `⇧ + ⌘ + ⌫` | Toglie tutti gli elementi dalla finestra (i file su disco restano intatti, `⌘Z` li rimette) |
 | **Mostra nel Finder** | `⇧ + ⌘ + R` | Mostra i file selezionati nella loro cartella del Finder |
-| **Impostazioni** | `⌘ + ,` | Apre le impostazioni (lingua, aspetto, miniature, sessione) |
+| **Impostazioni** | `⌘ + ,` | Apre le impostazioni (generale, aspetto, avanzate, informazioni) |
 
 ### Modifiche e metadati
 | Azione | Scorciatoia | Descrizione |
 | :--- | :--- | :--- |
-| **Modifiche in blocco…** | `⇧ + ⌘ + D` | Apre il pannello batch con anteprima riga per riga |
+| **Modifiche in blocco…** | `⇧ + ⌘ + D` | Apre la finestra delle modifiche in blocco, con l'anteprima di ogni elemento |
 | **Allinea tutte le date alla data di scatto** | `⇧ + ⌘ + L` | Copia la data di scatto nella data di digitalizzazione e nelle date del file |
 | **Copia metadati** | `⌥ + ⌘ + C` | Copia i metadati della foto selezionata negli appunti |
 | **Incolla metadati** | `⌥ + ⌘ + V` | Incolla tutti i metadati copiati sulla selezione (dal menu puoi incollarne anche solo una parte) |
@@ -41,6 +41,14 @@ Le funzioni principali di rExif hanno una scorciatoia da tastiera:
 | **Ingrandisci miniature** | `⌘ + +` | Aumenta la dimensione delle miniature nella tabella |
 | **Riduci miniature** | `⌘ + -` | Riduce la dimensione delle miniature nella tabella |
 | **Anteprima rapida** | `Spazio` | Mostra l'anteprima Quick Look degli elementi selezionati |
+
+## Filtri nella ricerca
+
+La casella di ricerca nella barra degli strumenti (*Nome, fotocamera, autore…*) cerca nel nome del file, nella fotocamera e nell'obiettivo, nella descrizione, nell'autore, nel copyright, nel luogo (città, regione, paese) e nelle parole chiave.
+
+Mentre scrivi, sotto la casella compaiono anche dei filtri: sceglierne uno lo aggiunge alla casella come un'etichetta. I filtri disponibili sono **Modificati**, **Senza GPS**, **Con GPS**, **Senza data**, **Date sospette**, **Date del file diverse**, **Solo foto**, **Solo video**, **Libreria Foto** ed **Errori**, con gli stessi criteri delle voci del menu Seleziona descritte sotto.
+
+Con più filtri, o con un filtro e del testo, la tabella e la mappa mostrano solo gli elementi che li soddisfano tutti. Le modifiche in blocco, se non hai selezionato niente, valgono per gli elementi visibili.
 
 ## Il menu Seleziona
 

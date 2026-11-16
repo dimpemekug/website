@@ -19,7 +19,7 @@ rExif permette sia di togliere singoli campi dai file originali, sia di esportar
 
 Se vuoi ripulire direttamente i tuoi file:
 - **Posizione**: seleziona le foto e scegli **Rimuovi posizione** dal menu contestuale (oppure usa il pulsante accanto alle coordinate nell'inspector). Latitudine, longitudine e altitudine vengono cancellate.
-- **Autore e copyright**: seleziona gli elementi e cancella i campi nell'inspector o con la scheda Testo delle modifiche in blocco.
+- **Autore e copyright**: seleziona gli elementi e cancella i campi nell'inspector o con la sezione **Testo** delle modifiche in blocco.
 - **Nessuna sorpresa**: le rimozioni compaiono in arancione come qualsiasi altra modifica e diventano effettive solo quando premi **Salva** (`⌘S`).
 
 ## Esporta copie senza dati personali

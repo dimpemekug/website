@@ -37,11 +37,27 @@ rExif works with the macOS Photos app in two ways, through Apple's **PhotoKit** 
 
 - **File access**: rExif runs in the sandbox and only accesses the files and folders you open, by dragging, with **Open With** from the Finder or with the **Add Photos and Videos…** panel (`⌘O`). To create an `.xmp` file next to a file you added on its own, rExif asks for access to its folder when saving.
 - **Session**: on quit, file paths and Photos item identifiers are remembered as secure bookmarks (`SessionStore`); on the next launch rExif reopens the previous session. You can turn this off in Settings.
+- **Recent folders**: rExif remembers the last five folders you added, with a secure bookmark. When the list is empty they appear in the window and reopen with a click; you can clear them in Settings.
 
 ## Settings (`⌘,`)
 
-In Settings you can choose:
-- **Language**: *System*, *Italian* or *English* (applied when the app restarts).
-- **Appearance**: *System*, *Light* or *Dark*.
-- **Thumbnails**: the size of thumbnails in the table.
-- **Session**: whether to reopen the previous session's items at launch.
+Settings has four tabs.
+
+### General
+- **Language**: *System*, *Italiano* or *English*. The new language is used at the next launch; **Restart Now** reopens the app right away (with unsaved changes it won't restart: save or revert them first). Dates and numbers always follow the format of the region chosen in System Settings.
+- **Reopen the items from the previous session**: reopens the files and folders in the list at launch. Unsaved changes are not kept.
+- **Recent Folders**: how many are remembered, with a **Clear List** button.
+
+### Appearance
+- **Theme**: *System*, *Light* or *Dark*.
+- **Thumbnails**: *Small*, *Medium* or *Large*, with a preview of the row height.
+- **Compact dates**: shorter dates in the table columns, so they take up less space.
+- **Columns, order and widths**: **Revert** goes back to the default columns. You can also show or hide columns by right-clicking the headers.
+- **Animations**: follow the system. With *Reduce Motion* turned on in System Settings › Accessibility › Display, the map and panels don't animate.
+
+### Advanced
+- **Thumbnails in memory**: the memory limit for thumbnails, with a **Clear** button. Thumbnails are regenerated when needed and released automatically if the Mac needs memory.
+- **Parallel reads**: automatic, depending on the disk: six files at a time on the internal disk, three on an external disk, two on a network volume.
+
+### About
+The app's version and build, and a privacy summary.

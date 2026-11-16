@@ -16,9 +16,17 @@ You can assign a location in several ways:
 - **Pasted coordinates**: copy coordinates from Google Maps or Apple Maps (e.g. `45.4642, 9.1900`) and paste them into the location field in the inspector.
 - **Search by name**: type the name of a place or an address (`MKLocalSearch`) to center the map and assign the coordinates with a click.
 
+At the top of the inspector, below the preview, an item with a location shows a mini map: click it to go to the **Location** section.
+
+## The As Map View
+
+In the **As Map** view every item with a location appears with its thumbnail. Photos taken in the same spot form a group, with the number of shots on the thumbnail: a click selects the whole group, and the groups split apart as you zoom in. **Show All** fits every item in view again.
+
+The **Without Location** panel lists the items that still have no coordinates: drag them onto the map. The **From Photos Taken Nearby in Time** button gives each one the location of the GPS-tagged photo taken within 30 minutes.
+
 ## Bulk Location (`⇧⌘D`)
 
-In the **Bulk Edit** window, the *Location* tab works out each item's location from one of these sources.
+In the **Bulk Edit** window, the **Location** section works out each item's location from one of these sources.
 
 ### From the Nearest Photo in Time
 If on a trip you shot with a camera without GPS alongside a smartphone that records location:
@@ -27,7 +35,7 @@ If on a trip you shot with a camera without GPS alongside a smartphone that reco
 
 ### From a GPX Track
 If you have a `.gpx` track recorded with a sports watch, fitness app or navigator:
-1. choose the GPX file in the tab;
+1. choose the GPX file in the section;
 2. rExif interpolates between the track points to find the location matching each photo's capture time.
 
 ### From Google Takeout JSON

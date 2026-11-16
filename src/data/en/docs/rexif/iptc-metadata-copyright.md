@@ -46,7 +46,7 @@ With **Only if the field is empty** the template only applies to items that don'
 
 ## Find and Replace
 
-In the same tab you can find and replace text in a chosen field (e.g. only Description or only Copyright) across hundreds of photos, case-sensitive or not. Results show in orange before you save.
+In the same section you can find and replace text in a chosen field (e.g. only Description or only Copyright) across hundreds of photos, case-sensitive or not. Results show in orange before you save.
 
 ## Keywords
 

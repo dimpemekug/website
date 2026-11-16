@@ -32,7 +32,20 @@ It's designed to fix the most common problems in photo and video libraries quick
 
 From the toolbar or with a shortcut you can switch between two modes:
 - **As Table** (`⌃⌘1`): full list with resizable thumbnails (`⌘+`, `⌘-`), sortable columns and multiple selection.
-- **As Map** (`⌃⌘2`): every item with a location on an Apple Maps map, each with its own pin.
+- **As Map** (`⌃⌘2`): every item with a location on an Apple Maps map, shown with its thumbnail. Photos taken in the same spot are grouped into one thumbnail with the number of shots; zoom in and the groups split apart.
+
+The search field in the toolbar searches file name, camera, lens, description, author, copyright, place, and keywords, and accepts filters (see [Shortcuts, Filters and Quick Selections](/en/projects/rexif/docs/shortcuts-and-filters)).
+
+## Bulk Edit (`⇧⌘D`)
+
+The **Bulk Edit** window works on the selected items, or, if nothing is selected, on every item visible in the list (those that pass the search and filters). It has three columns:
+- on the left, the **Dates**, **Location**, **Text**, and **File Name** sections, each with a line saying what it does;
+- in the middle, the options of the chosen operation;
+- on the right, the **Preview**, which shows every item before and after and updates as you change the options.
+
+**Apply** brings the changes into the list, in orange: files only change when you press **Save**. After applying, a message appears at the bottom with an undo button that reverts the bulk edit you just made; it stays for about ten seconds, and after that you can always use `⌘Z`.
+
+With many items the preview is calculated in the background, and applying, adding large folders and saving show their progress in a panel: the window stays usable.
 
 ## Next Steps
 
@@ -43,4 +56,4 @@ From the toolbar or with a shortcut you can switch between two modes:
 - [Batch Renaming and CSV](/en/projects/rexif/docs/batch-rename-export): rename templates and metadata export and import as CSV.
 - [Clean-Up and Copies Without Personal Data](/en/projects/rexif/docs/metadata-scrubbing): exporting copies to share.
 - [Formats and XMP Sidecars](/en/projects/rexif/docs/formats-and-sidecars): technical details on MOV/MP4, RAW and known limits.
-- [Shortcuts and Quick Selections](/en/projects/rexif/docs/shortcuts-and-filters): keyboard shortcuts and the Select menu.
+- [Shortcuts, Filters and Quick Selections](/en/projects/rexif/docs/shortcuts-and-filters): keyboard shortcuts, search filters and the Select menu.

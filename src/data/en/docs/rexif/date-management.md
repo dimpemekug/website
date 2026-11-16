@@ -19,7 +19,7 @@ rExif handles four dates separately for every file:
 
 ## Bulk Date Editing (`⇧⌘D`)
 
-In the **Bulk Edit** window (`⇧⌘D` or the *Metadata* menu), the dates tab offers several modes. Each item gets a value calculated from its own data, with a row-by-row preview.
+In the **Bulk Edit** window (`⇧⌘D` or the *Metadata* menu), the **Dates** section offers several modes. Each item gets a value calculated from its own data, and the preview shows each one's date before and after.
 
 ### 1. Shift by an Interval
 Useful when the camera clock was wrong or never switched to daylight saving time. Enter a change in days, hours, minutes and seconds, positive or negative: each item keeps its distance from the others.

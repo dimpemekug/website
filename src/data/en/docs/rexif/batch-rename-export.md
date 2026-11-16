@@ -10,7 +10,7 @@ section: "User Guides"
 
 Photos from cameras and smartphones often have generic, hard-to-read names (e.g. `_DSC8921.JPG` or `IMG_2024.CR3`).
 
-In the **Bulk Edit** window (`⇧⌘D`), the **Rename** tab builds the new name from free text and the same placeholders as the text fields. The most useful ones:
+In the **Bulk Edit** window (`⇧⌘D`), the **File Name** section builds the new name from free text and the same placeholders as the text fields. The most useful ones:
 
 | Placeholder | Description | Example |
 | :--- | :--- | :--- |

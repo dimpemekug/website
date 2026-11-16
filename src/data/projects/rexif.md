@@ -23,16 +23,18 @@ rExif è l'editor di metadati per foto e video sul Mac. Data sbagliata, posizion
 - **Date giuste, anche in blocco**: sposta tutte le date di un intervallo, ad esempio quando l'orologio della fotocamera era indietro di un'ora, oppure correggilo partendo da una foto di cui conosci l'ora esatta
 - **Date da dove servono**: ricavate dal nome del file (IMG_20230514_123456, WhatsApp, screenshot, Pixel…), dal nome della cartella o dai JSON di Google Takeout; date in sequenza, quelle mancanti riempite dai vicini, cambio di fuso orario
 - **Date del file allineate**: creazione e modifica del file portate alla data di scatto in un clic
-- **Posizione sulla mappa**: trascini le foto sulla mappa per assegnare la posizione, oppure cerchi un luogo per nome
+- **Posizione sulla mappa**: trascini le foto sulla mappa per assegnare la posizione, oppure cerchi un luogo per nome; le foto scattate nello stesso posto si raggruppano, con il numero di scatti
 - **Posizione automatica**: dalla foto più vicina nel tempo, da una traccia GPX (Strava, Garmin…) o da Google Takeout; città, regione e paese ricavati dalle coordinate
 - **Copie da condividere**: esporti copie senza posizione né dati personali
 - **Testo e parole chiave**: fotocamera, obiettivo, descrizione, autore e copyright; modelli con segnaposto come "© {anno} Mario Rossi" e trova e sostituisci su tutti gli elementi; parole chiave e valutazione a stelle, lette anche da Lightroom
 - **Rinomina in blocco**: con un modello, ad esempio `{data}_{nnn}`
-- **Lavora veloce**: tabella con colonne personalizzabili, ricerca e selezione rapida (senza data, senza posizione, date sospette, per fotocamera…); copia i metadati da una foto e incollali su altre; esporta e importa in CSV per correggerli in un foglio di calcolo
-- **Controlla prima di salvare**: ogni modifica si annulla, si ripete o si ripristina; Anteprima rapida con la barra spaziatrice
+- **Modifiche in blocco chiare**: le operazioni sono divise in date, posizione, testo e nome file, e l'anteprima mostra ogni elemento, prima e dopo, mentre cambi le opzioni; se cambi idea, annulli dal messaggio che conferma la modifica o con <kbd>⌘</kbd> <kbd>Z</kbd>
+- **Lavora veloce**: tabella con colonne personalizzabili e ricerca su nome, fotocamera, autore, luogo e parole chiave; filtri nella ricerca e selezione rapida (modificati, senza data, senza posizione, date sospette, solo video, per fotocamera…); copia i metadati da una foto e incollali su altre; esporta e importa in CSV per correggerli in un foglio di calcolo
+- **Controlla prima di salvare**: ogni modifica si annulla, si ripete o si ripristina; Anteprima rapida con la barra spaziatrice; nell'inspector una mappa in miniatura e gli errori di lettura o salvataggio in evidenza
+- **Pensata per librerie grandi**: le cartelle con migliaia di foto compaiono a blocchi mentre rExif le esamina, senza bloccare la finestra; ricerca, ordinamento e miniature restano rapidi
 - **Tutti i formati**: JPEG, HEIC, PNG e TIFF riscritti senza ricomprimere l'immagine; MOV, MP4 e M4V senza ricodificare; RAW (CR2, NEF, ARW…) e AVI, MKV, MTS restano intatti e i metadati vanno in un `.xmp` accanto, letto da Lightroom, Bridge e Premiere
 - **Libreria Foto**: modifichi data e posizione direttamente in Foto, oppure esporti gli originali
-- **Integrata con macOS**: trascinamento nella finestra o sull'icona nel Dock, "Apri con…" dal Finder, riapertura della sessione precedente
+- **Integrata con macOS**: trascinamento nella finestra o sull'icona nel Dock, "Apri con…" dal Finder, cartelle recenti, riapertura della sessione precedente; rispetta Riduci movimento delle impostazioni di Accessibilità
 - **Tema chiaro, scuro o automatico**: interfaccia in italiano e in inglese
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 

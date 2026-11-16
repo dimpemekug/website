@@ -19,7 +19,7 @@ rExif gestisce separatamente quattro date per ciascun file:
 
 ## Modifiche in blocco delle date (`⇧⌘D`)
 
-Nella finestra **Modifiche in blocco** (`⇧⌘D` o menu *Metadati*), la scheda delle date offre diverse modalità. Ogni elemento riceve un valore calcolato dai propri dati, con anteprima riga per riga.
+Nella finestra **Modifiche in blocco** (`⇧⌘D` o menu *Metadati*), la sezione **Date** offre diverse modalità. Ogni elemento riceve un valore calcolato dai propri dati, e l'anteprima mostra la data prima e dopo per ciascuno.
 
 ### 1. Sposta di un intervallo
 Utile quando l'orologio della fotocamera era sbagliato o non era passato all'ora legale. Indica una variazione in giorni, ore, minuti e secondi, positiva o negativa: ogni elemento mantiene la sua distanza dagli altri.

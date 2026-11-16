@@ -37,11 +37,27 @@ rExif lavora con l'app Foto di macOS in due modi, tramite il framework di sistem
 
 - **Accesso ai file**: rExif lavora nella sandbox e accede solo ai file e alle cartelle che apri tu, con il trascinamento, con **Apri con** dal Finder o con il pannello **Aggiungi foto e video…** (`⌘O`). Per creare un file `.xmp` accanto a un file aggiunto da solo, al salvataggio rExif chiede l'accesso alla sua cartella.
 - **Sessione**: alla chiusura, i percorsi dei file e gli identificativi degli elementi di Foto vengono ricordati come segnalibri sicuri (`SessionStore`); al riavvio rExif riapre la sessione precedente. Puoi disattivare questa funzione nelle Impostazioni.
+- **Cartelle recenti**: rExif ricorda le ultime cinque cartelle aggiunte, con un segnalibro sicuro. Quando la lista è vuota compaiono nella finestra e si riaprono con un clic; le cancelli dalle Impostazioni.
 
 ## Impostazioni (`⌘,`)
 
-Nelle Impostazioni puoi scegliere:
-- **Lingua**: *Sistema*, *Italiano* o *English* (applicata al riavvio dell'app).
-- **Aspetto**: *Sistema*, *Chiaro* o *Scuro*.
-- **Miniature**: la dimensione delle miniature nella tabella.
-- **Sessione**: se riaprire all'avvio gli elementi della sessione precedente.
+Le Impostazioni hanno quattro schede.
+
+### Generale
+- **Lingua**: *Sistema*, *Italiano* o *English*. La nuova lingua si usa al prossimo avvio; con **Riavvia ora** l'app si riapre subito (con modifiche non salvate non si riavvia: prima vanno salvate o ripristinate). Date e numeri seguono comunque il formato della regione scelta in Impostazioni di Sistema.
+- **Riapri gli elementi della sessione precedente**: riapre all'avvio file e cartelle della lista. Le modifiche non salvate non vengono conservate.
+- **Cartelle recenti**: quante ne sono ricordate, con il pulsante **Cancella elenco**.
+
+### Aspetto
+- **Tema**: *Sistema*, *Chiaro* o *Scuro*.
+- **Miniature**: *Piccole*, *Medie* o *Grandi*, con un'anteprima dell'altezza delle righe.
+- **Date compatte**: date più corte nelle colonne della tabella, che così occupano meno spazio.
+- **Colonne, ordine e larghezze**: **Ripristina** torna alle colonne iniziali. Le colonne si mostrano o nascondono anche con un clic destro sulle intestazioni.
+- **Animazioni**: seguono il sistema. Con *Riduci movimento* attivo in Impostazioni di Sistema › Accessibilità › Monitor, mappa e pannelli non si animano.
+
+### Avanzate
+- **Miniature in memoria**: il limite di memoria per le miniature, con il pulsante **Svuota**. Le miniature si rigenerano quando servono e si liberano da sole se il Mac ha bisogno di memoria.
+- **Letture in parallelo**: automatiche, in base al disco: sei file insieme sul disco interno, tre su un disco esterno, due su un volume di rete.
+
+### Informazioni
+Versione e build dell'app e un riepilogo della privacy.

@@ -19,7 +19,7 @@ rExif lets you both remove single fields from the original files and export alre
 
 To clean up your files directly:
 - **Location**: select the photos and choose **Remove Location** from the context menu (or use the button next to the coordinates in the inspector). Latitude, longitude and altitude are cleared.
-- **Author and copyright**: select the items and clear the fields in the inspector or with the Text tab of Bulk Edit.
+- **Author and copyright**: select the items and clear the fields in the inspector or with the **Text** section of Bulk Edit.
 - **No surprises**: removals show in orange like any other change and take effect only when you press **Save** (`⌘S`).
 
 ## Export Copies Without Personal Data

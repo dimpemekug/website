@@ -10,7 +10,7 @@ section: "Guide d'uso"
 
 Le foto di fotocamere e smartphone hanno spesso nomi generici e poco leggibili (es. `_DSC8921.JPG` o `IMG_2024.CR3`).
 
-Nella finestra **Modifiche in blocco** (`⇧⌘D`), la scheda **Rinomina** compone il nuovo nome con testo libero e gli stessi segnaposto dei campi di testo. I più utili:
+Nella finestra **Modifiche in blocco** (`⇧⌘D`), la sezione **Nome file** compone il nuovo nome con testo libero e gli stessi segnaposto dei campi di testo. I più utili:
 
 | Segnaposto | Descrizione | Esempio |
 | :--- | :--- | :--- |

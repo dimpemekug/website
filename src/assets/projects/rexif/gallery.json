@@ -5,8 +5,8 @@
       "en": "The table with dates, camera, location and keywords for photos and videos"
     },
     "02-dates": {
-      "it": "Modifiche in blocco delle date, con anteprima riga per riga",
-      "en": "Bulk date edits, with a row-by-row preview"
+      "it": "Modifiche in blocco delle date, con l'anteprima di ogni foto prima e dopo",
+      "en": "Bulk date edits, with a before-and-after preview of each photo"
     },
     "03-location": {
       "it": "Posizione dalla foto più vicina nel tempo o da una traccia GPX",
@@ -25,8 +25,8 @@
       "en": "Changes in orange, to review before saving"
     },
     "07-map": {
-      "it": "La vista su mappa: si trascinano le foto senza posizione sul punto giusto",
-      "en": "The map view: drag photos without a location onto the right spot"
+      "it": "La vista su mappa, con le foto dello stesso posto raggruppate e quelle senza posizione da trascinare",
+      "en": "The map view, with photos from the same spot grouped and those without a location ready to drag"
     },
     "08-dark": {
       "it": "La mappa e l'inspector con l'aspetto scuro",

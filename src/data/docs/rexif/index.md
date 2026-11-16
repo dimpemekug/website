@@ -32,7 +32,20 @@ section: "Iniziare"
 
 Dalla barra degli strumenti o con una scorciatoia puoi passare da una modalità all'altra:
 - **Come tabella** (`⌃⌘1`): elenco completo con miniature ridimensionabili (`⌘+`, `⌘-`), colonne ordinabili e selezione multipla.
-- **Come mappa** (`⌃⌘2`): tutti gli elementi con una posizione su una mappa di Apple Maps, ciascuno con il suo segnaposto.
+- **Come mappa** (`⌃⌘2`): tutti gli elementi con una posizione su una mappa di Apple Maps, con la loro miniatura. Le foto scattate nello stesso posto si raggruppano in un'unica miniatura con il numero di scatti; avvicinandoti i gruppi si separano.
+
+La casella di ricerca nella barra degli strumenti cerca per nome del file, fotocamera, obiettivo, descrizione, autore, copyright, luogo e parole chiave, e accetta dei filtri (vedi [Scorciatoie, filtri e selezioni rapide](/progetti/rexif/docs/scorciatoie-filtri)).
+
+## Modifiche in blocco (`⇧⌘D`)
+
+La finestra **Modifiche in blocco** lavora sugli elementi selezionati, o, se non ne hai selezionato nessuno, su tutti quelli visibili nella lista (cioè che passano ricerca e filtri). È divisa in tre colonne:
+- a sinistra le sezioni **Date**, **Posizione**, **Testo** e **Nome file**, ciascuna con una riga che dice cosa fa;
+- al centro le opzioni dell'operazione scelta;
+- a destra l'**Anteprima**, che mostra ogni elemento prima e dopo e si aggiorna mentre cambi le opzioni.
+
+**Applica** porta le modifiche nella lista, in arancione: i file cambiano solo quando premi **Salva**. Dopo l'applicazione compare in basso un messaggio con il pulsante **Annulla**, che toglie la modifica in blocco appena fatta; resta visibile per circa dieci secondi, poi puoi sempre usare `⌘Z`.
+
+Con molti elementi l'anteprima si calcola in background, e l'applicazione, l'aggiunta di cartelle grandi e il salvataggio mostrano l'avanzamento in un pannello: la finestra resta utilizzabile.
 
 ## Prossimi passi
 
@@ -43,4 +56,4 @@ Dalla barra degli strumenti o con una scorciatoia puoi passare da una modalità 
 - [Rinomina in blocco e CSV](/progetti/rexif/docs/rinomina-esportazione-batch): modelli di rinomina ed esportazione e importazione dei metadati in CSV.
 - [Pulizia e copie senza dati personali](/progetti/rexif/docs/pulizia-metadati): esportazione di copie da condividere.
 - [Formati e sidecar XMP](/progetti/rexif/docs/formati-e-sidecar): dettagli tecnici su MOV/MP4, RAW e limiti noti.
-- [Scorciatoie e selezioni rapide](/progetti/rexif/docs/scorciatoie-filtri): elenco delle scorciatoie da tastiera e del menu Seleziona.
+- [Scorciatoie, filtri e selezioni rapide](/progetti/rexif/docs/scorciatoie-filtri): scorciatoie da tastiera, filtri nella ricerca e menu Seleziona.

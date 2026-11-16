@@ -46,7 +46,7 @@ Con l'opzione **Solo se il campo è vuoto** il modello si applica solo agli elem
 
 ## Trova e sostituisci
 
-Nella stessa scheda puoi cercare e sostituire un testo in un campo a scelta (es. solo Descrizione o solo Copyright) su centinaia di foto, distinguendo o no maiuscole e minuscole. I risultati compaiono in arancione prima del salvataggio.
+Nella stessa sezione puoi cercare e sostituire un testo in un campo a scelta (es. solo Descrizione o solo Copyright) su centinaia di foto, distinguendo o no maiuscole e minuscole. I risultati compaiono in arancione prima del salvataggio.
 
 ## Parole chiave
 

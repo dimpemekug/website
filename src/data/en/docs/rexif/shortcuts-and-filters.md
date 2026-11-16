@@ -1,6 +1,6 @@
 ---
-title: "Shortcuts and Quick Selections"
-description: "Complete list of rExif keyboard shortcuts and of the Select menu criteria to work faster."
+title: "Shortcuts, Filters and Quick Selections"
+description: "rExif keyboard shortcuts, search field filters and the Select menu criteria, to quickly find the photos that need fixing."
 project: "rexif"
 order: 9
 section: "Reference"
@@ -19,12 +19,12 @@ The main features of rExif have a keyboard shortcut:
 | **Save Changes** | `⌘ + S` | Writes every orange change to disk |
 | **Clear List** | `⇧ + ⌘ + ⌫` | Removes every item from the window (files on disk stay intact, `⌘Z` brings them back) |
 | **Show in Finder** | `⇧ + ⌘ + R` | Shows the selected files in their Finder folder |
-| **Settings** | `⌘ + ,` | Opens settings (language, appearance, thumbnails, session) |
+| **Settings** | `⌘ + ,` | Opens settings (General, Appearance, Advanced, About) |
 
 ### Editing and Metadata
 | Action | Shortcut | Description |
 | :--- | :--- | :--- |
-| **Bulk Edit…** | `⇧ + ⌘ + D` | Opens the bulk panel with a row-by-row preview |
+| **Bulk Edit…** | `⇧ + ⌘ + D` | Opens the Bulk Edit window, with a preview of every item |
 | **Align All Dates to Date Taken** | `⇧ + ⌘ + L` | Copies the date taken to the date digitized and the file dates |
 | **Copy Metadata** | `⌥ + ⌘ + C` | Copies the selected photo's metadata |
 | **Paste Metadata** | `⌥ + ⌘ + V` | Pastes all copied metadata onto the selection (from the menu you can paste just part of it) |
@@ -41,6 +41,14 @@ The main features of rExif have a keyboard shortcut:
 | **Bigger thumbnails** | `⌘ + +` | Increases thumbnail size in the table |
 | **Smaller thumbnails** | `⌘ + -` | Decreases thumbnail size in the table |
 | **Quick Look** | `Space` | Shows the Quick Look preview of the selected items |
+
+## Filters in Search
+
+The search field in the toolbar (*Name, camera, author…*) searches the file name, camera and lens, description, author, copyright, place (city, state, country), and keywords.
+
+As you type, filters also appear below the field: choosing one adds it to the field as a token. The available filters are **Modified**, **No GPS**, **With GPS**, **No Date**, **Suspicious Dates**, **Different File Dates**, **Photos Only**, **Videos Only**, **Photos Library**, and **Errors**, with the same criteria as the Select menu items described below.
+
+With several filters, or a filter and some text, the table and the map only show the items that match all of them. If nothing is selected, bulk edits apply to the visible items.
 
 ## The Select Menu
 
