@@ -1,26 +1,42 @@
 {
   "captions": {
     "01-batch": {
-      "it": "Decine di foto ridimensionate in un colpo solo, con lo stato di ognuna",
-      "en": "Dozens of photos resized at once, with each one's status"
+      "it": "Dodici foto in elenco con la misura originale, quella nuova e quanto si riduce ciascuna",
+      "en": "Twelve photos listed with their original size, the new size and how much each one shrinks"
     },
     "02-savings": {
-      "it": "Risultato dell'elaborazione con lo spazio risparmiato foto per foto e in totale",
-      "en": "Processing results with the space saved per photo and in total"
+      "it": "Fine lavoro: il peso di ogni foto salvata e il riepilogo con i megabyte prima e dopo",
+      "en": "Batch finished: the size of each saved photo and a summary of megabytes before and after"
     },
     "03-drag-and-drop": {
       "it": "La finestra vuota, pronta a ricevere immagini e cartelle trascinate",
       "en": "The empty window, ready for dragged images and folders"
     },
     "04-presets": {
-      "it": "Gestione dei preset di dimensione: Web, Social, Email, Icona e i tuoi",
-      "en": "Managing size presets: Web, Social, Email, Icon and your own"
+      "it": "Gestione dei preset: quali mostrare nella barra laterale, in che ordine, e preset nuovi",
+      "en": "Managing presets: which ones appear in the sidebar, in what order, and new presets"
     },
-    "05-privacy": {
-      "it": "Opzioni di uscita con i metadati EXIF e GPS rimossi di default",
-      "en": "Output options with EXIF and GPS metadata removed by default"
+    "05-quick-look": {
+      "it": "Anteprima rapida di un'immagine dell'elenco con la barra spaziatrice",
+      "en": "Quick Look on an image in the list with the Space bar"
     },
-    "06-dark": {
+    "06-file-size": {
+      "it": "Ridimensionamento al 50% con il peso stimato dei file in fondo al pannello delle opzioni",
+      "en": "Scaling to 50% with the estimated file size at the bottom of the options panel"
+    },
+    "07-destinations": {
+      "it": "Il menu della destinazione: Immagini › Resizo, accanto all'originale o una cartella a scelta",
+      "en": "The destination menu: Pictures › Resizo, next to the original, or a folder of your choice"
+    },
+    "08-settings": {
+      "it": "Impostazioni › Elaborazione: aggiunta delle immagini, cosa fare a fine lavoro e immagini elaborate insieme",
+      "en": "Settings › Processing: adding images, what to do when finished, and images processed at once"
+    },
+    "09-privacy": {
+      "it": "Impostazioni › Informazioni con versione, requisiti e la sintesi della privacy",
+      "en": "Settings › About with version, requirements and the privacy summary"
+    },
+    "10-dark": {
       "it": "Resizo con l'aspetto scuro",
       "en": "Resizo in dark mode"
     }

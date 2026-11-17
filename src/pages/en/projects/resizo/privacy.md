@@ -4,7 +4,7 @@ title: "Resizo Privacy Policy"
 description: "Full privacy policy for the Resizo app: what data is processed, how image metadata is handled, and why no data ever leaves your Mac."
 ---
 
-Last updated: September 11, 2026
+Last updated: November 17, 2026 (version 1.1.0)
 
 This Privacy Policy describes how **Resizo** handles data.
 
@@ -24,7 +24,8 @@ Resizo only handles:
 
 - the images the user chooses to resize: dragged into the window or onto the Dock icon, chosen with "Add Images…", opened with "Open With…" from the Finder, or sent with the "Resize with Resizo" service
 - the resized copies the app creates at the user's request
-- app preferences: resize mode, percentage, aspect ratio lock, output format, JPEG quality, file name suffix, metadata option, chosen destination folder, size presets, language, and theme
+- app preferences: resize mode, percentage, aspect ratio lock, output format, JPEG quality, file name suffix, metadata option, chosen destination, size presets, language, theme, keyboard shortcuts, startup options, and the other choices in Settings (for example what to do when processing ends)
+- the list of folders the user has authorized for saving images next to the originals
 
 Images are read and processed in memory on the Mac. The list of open images is not saved and is cleared when the app quits.
 
@@ -36,9 +37,9 @@ All data stays on the user's Mac.
 
 ## Images and metadata
 
-Resizo never modifies the original images: it always creates a new file, without overwriting existing files, in the Pictures › Resizo folder or in another folder chosen by the user.
+Resizo never modifies the original images: it always creates a new file, without overwriting existing files, in the Pictures › Resizo folder, in another folder chosen by the user, or, if the user chooses so, in the same folder as the original.
 
-By default, exported copies do **not** include the original's metadata (EXIF, GPS coordinates, capture date and time, camera model, color profile). The user can choose to keep it by turning on "Keep original metadata (EXIF, GPS, color)" in the resize panel; in that case the metadata is copied to the new file as is, always and only on the Mac.
+By default, exported copies do **not** include the original's metadata (EXIF, GPS coordinates, capture date and time, camera model, color profile). The user can choose to keep it by turning on "Keep metadata" in the options panel; in that case the metadata is copied to the new file as is, always and only on the Mac.
 
 ## Third-party services
 
@@ -50,7 +51,7 @@ Resizo offers no sync features and does not use iCloud. If the user chooses a de
 
 ## Notifications
 
-Resizo does not send notifications.
+If the user allows it, Resizo shows a local notification when processing finishes while the app is in the background (for example "12 images saved"). macOS asks for permission the first time it is needed, and the notification can be turned off in Settings › Processing. Notifications are generated on the Mac: they go through no server and contain no file names or images.
 
 ## Device permissions
 
@@ -58,6 +59,7 @@ Resizo runs inside the macOS sandbox and can only access:
 
 - the files and folders the user explicitly chooses (by dragging, opening, or selecting them in a system panel), to read images and save resized copies
 - the user's Pictures folder, to save copies to the default destination folder Pictures › Resizo
+- the folders the user explicitly authorizes in a system panel to save copies next to the originals; the list can be reviewed and revoked in Settings › Permissions
 
 The app does not request access to the camera, microphone, Photos library, contacts, calendars, location, or biometric authentication, and has no network access.
 
@@ -71,13 +73,13 @@ No data leaves the Mac through the app.
 
 The app stores locally on the Mac:
 
-- the preferences (`UserDefaults`) listed in "Data the app handles"; for the destination folder chosen by the user, a security-scoped bookmark is saved so the app can keep writing to it between launches
+- the preferences (`UserDefaults`) listed in "Data the app handles"; for the destination folder chosen by the user and for authorized folders, a security-scoped bookmark is saved so the app can keep writing to them between launches
 - the resized copies, in the chosen destination folder
 
 ## Retention and deletion
 
 - Resized copies are ordinary user files: they stay where they were saved until the user moves or deletes them, even after the app is uninstalled.
-- Preferences can be reset to their defaults in Settings › General › "Restore Default Settings"; presets are managed in Settings › Presets.
+- Preferences can be reset to their defaults in Settings › General › "Restore Default Settings"; presets are managed in Settings › Presets; authorized folders are revoked in Settings › Permissions.
 - Uninstalling the app removes the saved preferences, within the limits of operating system behavior.
 
 Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
