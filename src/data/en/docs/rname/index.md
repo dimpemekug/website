@@ -26,7 +26,7 @@ The preview table always compares each file's original name with the one worked 
 
 - **No network connections**: the app uses no `URLSession`, third-party SDKs or analytics libraries.
 - **No account**: no sign-ups, credentials or subscriptions.
-- **Content stays private**: rName never reads what's inside your files; it only uses the name, path, size and creation and modification dates provided by the file system.
+- **Content stays private**: rName never changes what's inside your files. It uses the name, path, size and creation and modification dates provided by the file system; for images it shows the thumbnail macOS prepares and, only when the chain contains the _Photo metadata_ rule, reads their EXIF metadata. Everything stays on your Mac.
 
 ### 3. Two-Phase Renaming
 
@@ -41,18 +41,20 @@ Renaming a file requires write permission on the **folder that contains it**, no
 ## How to Use It
 
 1. **Add files**: drag a folder or some files into the window, or press <kbd>⌘</kbd> <kbd>O</kbd> to choose a folder.
-2. **Build the rule chain**: click one or more of the 8 rules in the sidebar (e.g. _Numbering_, _Letter case_, _Replace_), or pick a preset from the menu at the bottom of the sidebar.
+2. **Build the rule chain**: click one or more of the 9 rules in the sidebar (e.g. _Numbering_, _Photo metadata_, _Replace_), or pick a preset from the menu at the bottom of the sidebar.
 3. **Check the preview**: files ready to go are marked in green, with the new name next to the old one. If needed, double-click a file to type its name by hand.
 4. **Rename**: press <kbd>⌘</kbd> <kbd>↩</kbd> to apply the changes on disk.
-5. **Undo if you change your mind**: press <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> to bring every file from the last operation back to its previous name.
+5. **Undo if you change your mind**: press <kbd>⌘</kbd> <kbd>Z</kbd> to bring every file from the last operation back to its previous name, and <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> to rename them again.
+
+On first launch, a four-page introduction sums up these steps. You can reopen it from _Help › Show the Introduction_, and the full guide is in _Help › rName Help_ (<kbd>⌘</kbd> <kbd>?</kbd>).
 
 ---
 
 ## Documentation Map
 
-- [Rule Chain](/en/projects/rname/docs/rule-chain-and-modes): the 8 rules, scope and regular expressions.
+- [Rule Chain](/en/projects/rname/docs/rule-chain-and-modes): the 9 rules, scope, regular expressions and photo metadata.
 - [Preview and Conflicts](/en/projects/rname/docs/preview-and-conflict-resolution): preview states, duplicate protection and per-row manual editing.
-- [Engine and Safety](/en/projects/rname/docs/engine-and-atomic-safety): two-phase renaming, swaps and case changes on APFS, undo.
+- [Engine and Safety](/en/projects/rname/docs/engine-and-atomic-safety): two-phase renaming, swaps and case changes on APFS, undo and redo.
 - [Permissions and App Sandbox](/en/projects/rname/docs/sandbox-and-folder-permissions): why folder access is needed, security bookmarks and revoking permissions.
-- [Presets and Settings](/en/projects/rname/docs/presets-and-preferences): built-in presets, your own presets and options (<kbd>⌘</kbd> <kbd>,</kbd>).
-- [Shortcuts and macOS Integration](/en/projects/rname/docs/shortcuts-and-finder-integration): keyboard shortcuts, Dock and "Open With".
+- [Presets and Settings](/en/projects/rname/docs/presets-and-preferences): built-in presets, your own presets and the eight Settings panes (<kbd>⌘</kbd> <kbd>,</kbd>).
+- [Shortcuts and macOS Integration](/en/projects/rname/docs/shortcuts-and-finder-integration): customisable keyboard shortcuts, Dock, "Open With" and the guide.

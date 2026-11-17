@@ -59,9 +59,13 @@ If a move fails during the second phase (for example because an external disk su
 
 ---
 
-## Undoing the Last Rename (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
+## Undo and redo (<kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
 
-Every successful rename is remembered, with each file's new and previous name.
+Every successful rename is remembered, with each file's new and previous name, in the window's undo list, like in any Mac app.
 
-- If you realize you applied the wrong rules, press <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (or choose _Rename › Undo Last Rename_).
+- If you realize you applied the wrong rules, press <kbd>⌘</kbd> <kbd>Z</kbd> (_Edit › Undo_), or the **Undo** button that appears at the bottom of the window after renaming.
 - rName runs the reverse operation, again in two phases, and brings every file back to the name it had before.
+- You can step back through several operations by pressing <kbd>⌘</kbd> <kbd>Z</kbd> again.
+- <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (_Redo_) renames the files again, if you change your mind.
+- Undo works even after the files have left the list, for example if in _Settings › Renaming_ you chose to remove the renamed files or clear the list.
+- The _Rename › Undo Last Rename_ command (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>) is still there, and its shortcut can be changed in _Settings › Shortcuts_.

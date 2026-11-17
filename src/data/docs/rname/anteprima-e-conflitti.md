@@ -14,6 +14,12 @@ In rName **nulla viene scritto sul disco in background**.
 
 La tabella centrale mostra in tempo reale ogni file aggiunto, con il nome originale accanto a quello proposto dalla catena di regole. Cambiare un parametro, aggiungere una regola o invertirne due ricalcola all'istante tutta l'anteprima, senza toccare i file.
 
+Con migliaia di file l'anteprima si calcola in background e la lista resta fluida. Anche le cartelle grandi si leggono in background: in fondo alla finestra compare _Lettura dei file…_, con _Annulla_ per interrompere l'importazione.
+
+### Filtri e ricerca
+
+Sopra la tabella, i pulsanti _Tutti_, _Da rinominare_, _Problemi_ e _Invariati_ mostrano solo i file in quello stato, con il loro numero accanto; il campo _Cerca nei nomi_ restringe la lista ai file che contengono un testo. Anche i contatori in fondo alla finestra sono filtri: fai clic su uno per vedere solo quei file. Filtri e ricerca cambiano solo cosa vedi: la rinomina riguarda sempre tutti i file pronti.
+
 ---
 
 ## Gli stati dell'anteprima

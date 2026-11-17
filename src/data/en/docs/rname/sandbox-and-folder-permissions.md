@@ -54,7 +54,8 @@ In many apps, granted permissions stay invisible and impossible to check.
 In rName, from **Settings (<kbd>⌘</kbd> <kbd>,</kbd>) › Permissions**:
 
 - you see the list of every authorized folder, with its path;
-- you can **revoke** a single authorization or all of them, at any time.
+- you can **revoke** a single authorization or all of them, at any time;
+- with **Allow Folders or Disks…** you can grant access in advance to a parent folder, such as your home folder, or to a whole disk: the permission covers everything inside it, and rName no longer asks for the folders within.
 
 > [!NOTE]
 > Revoking a permission doesn't touch any file on disk: it simply means that next time you want to rename files in that folder, rName will ask for your consent again.

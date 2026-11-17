@@ -4,7 +4,7 @@ title: "rName Privacy Policy"
 description: "Full privacy policy for the rName app: what data is processed, how files are handled, and why no data ever leaves your Mac."
 ---
 
-Last updated: October 12, 2026
+Last updated: November 17, 2026
 
 This Privacy Policy describes how **rName** handles data.
 
@@ -16,22 +16,31 @@ This Privacy Policy describes how **rName** handles data.
 - No user tracking takes place
 - The app does not connect to the Internet: it has no network permission, so macOS prevents any connection
 - Files are renamed entirely on the Mac and are never uploaded to servers, whether the developer's or third parties'
-- rName does not open the contents of files: it reads the name, size, and dates, not what is inside
+- rName does not change the contents of files: it reads their name, size, and dates; for photos, it reads EXIF metadata only for the "Photo metadata" rule, on the Mac
 
 ## Data the app handles
 
 rName only handles:
 
 - the files and folders the user chooses: dragged into the window or onto the Dock icon, chosen with "Choose a Folder…" or "Add Individual Files…", or opened with "Open With…" from the Finder
-- for each file: its name, path, size, and creation and modification dates. The dates are used to sort the list and by the "Date and time" rule
-- app preferences: appearance, language, default sort order, file and rule options, saved presets
+- for each file: its name, path, size, and creation and modification dates. The dates are used to sort the list and by the "Date and time" and "Photo metadata" rules
+- for images, only when the chain contains the "Photo metadata" rule: the EXIF metadata the rule can put in the name (date taken, camera, lens, dimensions, ISO, focal length)
+- app preferences: appearance, language, default sort order, file, renaming, and rule options, files to ignore, custom shortcuts, saved presets, and whether the introduction has been seen
 
-rName **does not read the contents of files**: it does not open their data, extract embedded
-metadata (EXIF and the like), or create previews. The only operation it performs on disk is
-changing a file's name, at the user's explicit request.
+rName **does not change the contents of files**. Beyond the name, size, and dates, it reads
+only two things, both on the Mac:
+
+- the **EXIF metadata of images**, read without opening the whole image and only when the
+  user uses the "Photo metadata" rule. It is used to compute the new name, kept in memory
+  while the app is open, and never saved or transmitted;
+- the **thumbnails** shown next to the names in the list, prepared by macOS (Quick Look)
+  and kept in memory only while the app is open.
+
+The only operation it performs on disk is changing a file's name, at the user's explicit
+request.
 
 The list of open files is not saved and is cleared when the app quits. Rules are kept
-between launches only if the user turns on the corresponding option in Settings › Files.
+between launches only if the user turns on the corresponding option in Settings › Renaming.
 
 ## Data collection
 
@@ -94,11 +103,11 @@ rName does not share user data with the developer or with third parties, for any
 
 The app stores locally on the Mac, in its own container:
 
-- preferences: appearance, language, default sort order, file and rule options, saved presets
-- the rules in use, only if the user turns on the option in Settings › Files
+- preferences: appearance, language, default sort order, file, renaming, and rule options, files to ignore, custom shortcuts, saved presets, and whether the introduction has been seen
+- the rules in use, only if the user turns on the option in Settings › Renaming
 - folder permissions, as security-scoped bookmarks (see "Folder permissions")
 
-The list of open files is not saved.
+The list of open files, photo metadata, and thumbnails are not saved.
 
 ## Retention and deletion
 

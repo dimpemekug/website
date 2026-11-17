@@ -54,7 +54,8 @@ In molte app i permessi concessi restano invisibili e impossibili da controllare
 In rName, da **Impostazioni (<kbd>⌘</kbd> <kbd>,</kbd>) › Permessi**:
 
 - vedi l'elenco di tutte le cartelle autorizzate, con il loro percorso;
-- puoi **revocare** una singola autorizzazione o tutte insieme, in qualsiasi momento.
+- puoi **revocare** una singola autorizzazione o tutte insieme, in qualsiasi momento;
+- con **Autorizza cartelle o dischi…** puoi concedere in anticipo l'accesso a una cartella superiore, per esempio la cartella Inizio, o a un disco intero: il permesso copre tutto ciò che contiene, e rName non chiede più nulla per le cartelle al suo interno.
 
 > [!NOTE]
 > Revocare un permesso non tocca alcun file sul disco: semplicemente, la prossima volta che vorrai rinominare file in quella cartella, rName ti chiederà di nuovo il consenso.

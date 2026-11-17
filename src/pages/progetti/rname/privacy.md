@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - rName"
 description: "Privacy dell'app rName: quali dati vengono trattati, come vengono gestiti i file e perché nessun dato lascia il Mac."
 ---
 
-Ultimo aggiornamento: 12 ottobre 2026
+Ultimo aggiornamento: 17 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **rName** tratta i dati.
 
@@ -16,23 +16,32 @@ Questa Informativa sulla Privacy descrive come **rName** tratta i dati.
 - Non viene effettuato alcun tracciamento dell'utente
 - L'app non si connette a Internet: non ha il permesso di rete, quindi macOS le impedisce qualsiasi connessione
 - I file vengono rinominati interamente sul Mac e non vengono mai caricati su server, né dello sviluppatore né di terze parti
-- rName non apre il contenuto dei file: legge il nome, la dimensione e le date, non ciò che c'è dentro
+- rName non modifica il contenuto dei file: ne legge il nome, la dimensione e le date; delle foto legge i metadati EXIF solo per la regola «Metadati foto», sul Mac
 
 ## Dati trattati dall'app
 
 rName tratta esclusivamente:
 
 - i file e le cartelle che l'utente sceglie: trascinati nella finestra o sull'icona nel Dock, scelti con «Scegli una cartella…» o «Aggiungi singoli file…», oppure aperti con «Apri con…» dal Finder
-- di ciascun file: il nome, il percorso, la dimensione e le date di creazione e modifica. Queste ultime servono a ordinare l'elenco e alla regola «Data e ora»
-- le preferenze dell'app: aspetto, lingua, ordinamento predefinito, opzioni sui file e sulle regole, preset salvati
+- di ciascun file: il nome, il percorso, la dimensione e le date di creazione e modifica. Queste ultime servono a ordinare l'elenco e alle regole «Data e ora» e «Metadati foto»
+- delle immagini, solo quando nella catena c'è la regola «Metadati foto»: i metadati EXIF che la regola può inserire nel nome (data di scatto, fotocamera, obiettivo, dimensioni, ISO, lunghezza focale)
+- le preferenze dell'app: aspetto, lingua, ordinamento predefinito, opzioni sui file, sulla rinomina e sulle regole, file da ignorare, scorciatoie personalizzate, preset salvati e se l'introduzione è già stata vista
 
-rName **non legge il contenuto dei file**: non ne apre i dati, non ne estrae metadati interni
-(EXIF e simili) e non ne crea anteprime. L'unica operazione che compie sul disco è cambiare
-il nome di un file, su richiesta esplicita dell'utente.
+rName **non modifica il contenuto dei file**. Le uniche letture oltre a nome, dimensione e
+date sono due, ed entrambe avvengono sul Mac:
+
+- i **metadati EXIF delle immagini**, letti senza aprire l'immagine intera e solo quando
+  l'utente usa la regola «Metadati foto». Servono a calcolare il nome nuovo, restano in
+  memoria finché l'app è aperta e non vengono salvati né trasmessi;
+- le **miniature** mostrate accanto ai nomi nell'elenco, preparate da macOS (Quick Look) e
+  tenute in memoria solo finché l'app è aperta.
+
+L'unica operazione che compie sul disco è cambiare il nome di un file, su richiesta esplicita
+dell'utente.
 
 L'elenco dei file aperti non viene salvato e si svuota alla chiusura dell'app. Le regole
 vengono conservate fra un avvio e l'altro solo se l'utente attiva l'opzione corrispondente
-in Impostazioni › File.
+in Impostazioni › Rinomina.
 
 ## Raccolta dei dati
 
@@ -96,11 +105,11 @@ rName non condivide dati dell'utente con lo sviluppatore o con terze parti, per 
 
 L'app salva localmente sul Mac, nel proprio contenitore:
 
-- le preferenze: aspetto, lingua, ordinamento predefinito, opzioni sui file e sulle regole, preset salvati
-- le regole in uso, solo se l'utente attiva l'opzione in Impostazioni › File
+- le preferenze: aspetto, lingua, ordinamento predefinito, opzioni sui file, sulla rinomina e sulle regole, file da ignorare, scorciatoie personalizzate, preset salvati e se l'introduzione è già stata vista
+- le regole in uso, solo se l'utente attiva l'opzione in Impostazioni › Rinomina
 - i permessi sulle cartelle, come segnalibri con ambito di sicurezza (vedi «Permessi sulle cartelle»)
 
-L'elenco dei file aperti non viene salvato.
+L'elenco dei file aperti, i metadati delle foto e le miniature non vengono salvati.
 
 ## Conservazione e cancellazione
 

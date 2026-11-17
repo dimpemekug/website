@@ -1,6 +1,6 @@
 ---
 title: "Catena di regole"
-description: "Le 8 regole di rinomina di rName: sostituzione anche con espressioni regolari, inserimento, rimozione, numerazione, maiuscole, date, estensioni e pulizia."
+description: "Le 9 regole di rinomina di rName: sostituzione con espressioni regolari, inserimento, rimozione, numerazione, maiuscole, date, metadati EXIF ed estensioni."
 project: "rname"
 order: 2
 section: "Regole e Modifiche"
@@ -16,7 +16,7 @@ Le regole vengono eseguite dall'alto verso il basso: ciascuna riceve il risultat
 
 - **Attiva e disattiva**: ogni regola della catena ha un interruttore per spegnerla temporaneamente, senza eliminarla né riconfigurarla.
 - **Riordina**: trascina una regola in alto o in basso per cambiarne l'ordine di esecuzione.
-- **Aggiungi con un clic**: la sezione _Aggiungi una regola_ mostra le 8 regole disponibili; un clic ne aggiunge una in fondo alla catena e ne apre le impostazioni. La sezione si può richiudere quando la catena si allunga.
+- **Aggiungi con un clic**: la sezione _Aggiungi una regola_ mostra le 9 regole disponibili; un clic ne aggiunge una in fondo alla catena e ne apre le impostazioni. La sezione si può richiudere quando la catena si allunga.
 
 ---
 
@@ -30,7 +30,7 @@ Ogni regola può agire su una parte precisa del nome:
 
 ---
 
-## Le 8 regole
+## Le 9 regole
 
 ### 1. Sostituisci
 
@@ -87,7 +87,18 @@ Inserisce una data nel nome dei file:
 - **Formato**: uno schema di formato personalizzabile (es. `yyyy-MM-dd`, `yyyyMMdd`, `yyyy-MM-dd_HHmm`); con anno, mese e giorno in quest'ordine, il Finder ordina i file per data.
 - **Posizione e separatore**: all'inizio, alla fine o in una posizione precisa del nome.
 
-### 7. Estensione
+### 7. Metadati foto
+
+Inserisce nel nome un dato salvato dentro la foto (EXIF):
+
+- **Dato da inserire**: _Data di scatto_, _Fotocamera_, _Obiettivo_, _Dimensioni_, _ISO_ o _Lunghezza focale_. Per esempio `2026-07-14` (con il formato `yyyy-MM-dd`), `Canon EOS R6`, `4032x3024`, `ISO200`, `35mm`.
+- **Formato**: per la data di scatto, gli stessi formati della regola _Data e ora_, oppure uno schema personalizzato. Se la foto indica il proprio fuso orario, la data usa quello.
+- **Posizione e separatore**: all'inizio, alla fine o dopo un certo numero di caratteri.
+- **Se il dato manca**: _Lascia il nome com'è_, _Usa questo testo_ (per esempio `senza-data`) oppure, solo per la data di scatto, _Usa la data di creazione del file_.
+
+rName legge i metadati sul Mac, senza aprire l'immagine intera, e solo dai file che macOS riconosce come immagini. Video, documenti e foto senza quel dato seguono la scelta fatta in _Se il dato manca_. I caratteri che non possono stare in un nome di file vengono sostituiti: un obiettivo `EF24-70mm f/2.8L` diventa `EF24-70mm f-2.8L`.
+
+### 8. Estensione
 
 Gestisce l'estensione dei file:
 
@@ -96,7 +107,7 @@ Gestisce l'estensione dei file:
 - **Rendi maiuscola**: converte l'estensione in maiuscolo.
 - **Rimuovi**: elimina l'estensione dal nome.
 
-### 8. Pulizia nome
+### 9. Pulizia nome
 
 Ripulisce i nomi prima di pubblicarli sul web o di archiviarli:
 

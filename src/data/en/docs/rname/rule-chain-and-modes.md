@@ -1,6 +1,6 @@
 ---
 title: "Rule Chain"
-description: "rName's 8 renaming rules: replace with optional regular expressions, insert, remove, numbering, letter case, dates, extensions, and clean-up."
+description: "rName's 9 renaming rules: replace with regular expressions, insert, remove, numbering, letter case, dates, photo EXIF metadata, and extensions."
 project: "rname"
 order: 2
 section: "Rules & Editing"
@@ -16,7 +16,7 @@ Rules run from top to bottom: each receives the result of the previous one and a
 
 - **Turn on and off**: every rule in the chain has a switch to disable it temporarily, without deleting or reconfiguring it.
 - **Reorder**: drag a rule up or down to change the order in which it runs.
-- **Add with one click**: the _Add a rule_ section shows the 8 available rules; a click adds one at the end of the chain and opens its settings. The section can be collapsed when the chain gets long.
+- **Add with one click**: the _Add a rule_ section shows the 9 available rules; a click adds one at the end of the chain and opens its settings. The section can be collapsed when the chain gets long.
 
 ---
 
@@ -30,7 +30,7 @@ Each rule can act on a specific part of the name:
 
 ---
 
-## The 8 Rules
+## The 9 Rules
 
 ### 1. Replace
 
@@ -87,7 +87,18 @@ Inserts a date into file names:
 - **Format**: a customizable format pattern (e.g. `yyyy-MM-dd`, `yyyyMMdd`, `yyyy-MM-dd_HHmm`); with year, month and day in that order, the Finder sorts files by date.
 - **Position and separator**: at the start, at the end or at a precise position in the name.
 
-### 7. Extension
+### 7. Photo Metadata
+
+Inserts a piece of data saved inside the photo (EXIF):
+
+- **Data to insert**: _Date taken_, _Camera_, _Lens_, _Dimensions_, _ISO_, or _Focal length_. For example `2026-07-14` (with the `yyyy-MM-dd` format), `Canon EOS R6`, `4032x3024`, `ISO200`, `35mm`.
+- **Format**: for the date taken, the same formats as the _Date and time_ rule, or a custom pattern. If the photo records its own time zone, the date uses it.
+- **Position and separator**: at the start, at the end, or after a given number of characters.
+- **If the data is missing**: _Leave the name unchanged_, _Use this text_ (for example `no-date`), or, for the date taken only, _Use the file's creation date_.
+
+rName reads the metadata on your Mac, without opening the whole image, and only from files macOS recognises as images. Videos, documents, and photos without that data follow the choice made in _If the data is missing_. Characters that can't appear in a file name are replaced: a lens called `EF24-70mm f/2.8L` becomes `EF24-70mm f-2.8L`.
+
+### 8. Extension
 
 Manages file extensions:
 
@@ -96,7 +107,7 @@ Manages file extensions:
 - **Make upper case**: converts the extension to upper case.
 - **Remove**: deletes the extension from the name.
 
-### 8. Clean Up Name
+### 9. Clean Up Name
 
 Tidies names before publishing them on the web or archiving them:
 

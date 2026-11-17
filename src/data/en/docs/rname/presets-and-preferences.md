@@ -1,6 +1,6 @@
 ---
 title: "Presets and Settings"
-description: "rName's 4 built-in presets, creating your own presets and the 6 Settings panes (⌘,)."
+description: "rName's 4 built-in presets, creating your own presets and the 8 Settings panes (⌘,), from shortcuts to files to ignore."
 project: "rname"
 order: 6
 section: "Configuration & Presets"
@@ -57,43 +57,53 @@ For anyone publishing files on a website or server:
 
 ## Settings (<kbd>⌘</kbd> <kbd>,</kbd>)
 
-<kbd>⌘</kbd> <kbd>,</kbd> (or _rName › Settings…_) opens six panes.
+<kbd>⌘</kbd> <kbd>,</kbd> (or _rName › Settings…_) opens eight panes.
 
 ### 1. General
 
-- **Appearance**: _System_, _Light_ or _Dark_. The appearance applies to every app window, alerts and open panels included.
+- **Appearance**: _System_, _Light_ or _Dark_, picked from three window thumbnails. The appearance applies at once to every app window, alerts and open panels included.
 - **Language**: _System_, _Italian_ or _English_. Switching requires restarting the app, which rName offers to do for you.
-- **Reset**: restores preferences to their factory values, without touching presets, permissions and saved rules.
+- **Restore Default Settings**: returns every option in the panes, shortcuts included, to its factory value, without touching presets, folder permissions and saved rules.
 
 ### 2. Files
 
-- **Default sorting**: how to sort the list (manual order, name, creation date, modification date, size or kind).
-- **Include subfolders**: also scans folders inside the opened folder.
-- **Include hidden files**: shows and renames files starting with a dot (`.`) too.
-- **Rename folders too**: applies the rules to folders as well as files.
-- **Confirm before renaming**: asks for confirmation before writing to disk (off by default; it applies to the button, the menu and the shortcut).
-- **Remember rules on quit**: keeps the rule chain from one session to the next.
+- **When you add files**: _Add them to the list_ (default) or _Replace the list_.
+- **Sort the list by**: _Manual order_, _Name_ (default), _Date created_, _Date modified_, _Size_ or _Kind_. The order of the list decides the sequence used by numbering.
+- **Opening a folder**:
+  - _Include subfolders_: also scans the folders inside the opened folder (off by default);
+  - _Include hidden files_: shows and renames files starting with a dot (`.`) too (off by default);
+  - _Rename folders too_: also adds to the list the folders inside the opened folder (on by default). When rName visits subfolders, folders are always left alone, because renaming them would change the path of the files they hold.
+- **Ignore**: extensions or file names to leave out when you open a folder, separated by commas (for example `xmp, aae, Thumbs.db`). Useful for the sidecar files some cameras and apps add. A file you choose on its own is always added.
 
-### 3. Rules
+### 3. Renaming
 
-The starting values used when you add a new rule:
+- **Ask for confirmation before renaming**: one more step before writing to disk (off by default; applies to the button, the menu and the shortcut).
+- **Then**: what happens to the list after renaming: _Keep the files in the list_ (default), _Remove the renamed files_ or _Clear the list_. <kbd>⌘</kbd> <kbd>Z</kbd> undoes a rename even after the files have left the list.
+- **Play a sound when done**: a system sound when renaming finishes.
+- **Remember the rules on quit**: the chain of rules is back the next time you open rName. Files are never remembered.
 
-- default separator (e.g. `_` or `-`);
-- number of digits for numbering (e.g. 2 or 3);
-- date format, with a preview of the result.
+### 4. Rules
 
-### 4. Presets
+The starting values used when you add a new rule. Changing them never touches rules already in the chain, nor saved presets.
 
-The list of built-in and personal presets, where you can:
+- **Separator**: _Underscore_ (`_`, default), _Hyphen_ (`-`), _Space_ or _None_.
+- **Numbering**: start value (0 to 99,999), step (1 to 1,000) and digits (1 to 12; default 2).
+- **Date format**: `yyyy-MM-dd` (default), `yyyyMMdd`, `dd-MM-yyyy`, `yyyy-MM`, `yyyy-MM-dd HH.mm` or `HH.mm.ss`.
 
-- rename your presets;
-- delete them;
-- change their order.
+A _Preview_ box shows what a numbered name and a dated name would look like.
 
-### 5. Permissions
+### 5. Presets
 
-The authorized folders, with the option to revoke one permission or all of them.
+The list of _Built-in_ presets and _Yours_. Right-click one of yours to rename, apply or delete it; drag them to change their order.
 
-### 6. About
+### 6. Shortcuts
 
-App version, identifier, copyright and a privacy note (the app works completely offline).
+The shortcuts of rName's commands, ready to change: click a shortcut and press the new keys. <kbd>Esc</kbd> cancels, <kbd>⌫</kbd> removes the shortcut. Details in [Shortcuts and macOS Integration](/en/projects/rname/docs/shortcuts-and-finder-integration).
+
+### 7. Permissions
+
+The authorized folders, with the option to revoke one permission (_Revoke_) or all of them (_Revoke All…_), and the _Allow Folders or Disks…_ button to grant access in advance to a parent folder or a whole disk. Details in [Permissions and App Sandbox](/en/projects/rname/docs/sandbox-and-folder-permissions).
+
+### 8. Information
+
+App version, identifier and a privacy note: rName collects no data and makes no network connections.

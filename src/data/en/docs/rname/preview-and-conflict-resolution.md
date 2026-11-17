@@ -14,6 +14,12 @@ In rName **nothing is written to disk in the background**.
 
 The central table shows every added file in real time, with its original name next to the one proposed by the rule chain. Changing a setting, adding a rule or swapping two of them instantly recalculates the whole preview, without touching any files.
 
+With thousands of files, the preview is computed in the background and the list stays smooth. Large folders are read in the background too: _Reading files…_ appears at the bottom of the window, with _Cancel_ to stop the import.
+
+### Filters and search
+
+Above the table, the _All_, _To rename_, _Problems_ and _Unchanged_ buttons show only the files in that state, with their number next to them; the _Search names_ field narrows the list to the files containing some text. The counters at the bottom of the window are filters too: click one to see only those files. Filters and search only change what you see: renaming always applies to every file that is ready.
+
 ---
 
 ## Preview States

@@ -26,7 +26,7 @@ La tabella di anteprima confronta sempre il nome originale di ogni file con quel
 
 - **Nessuna connessione di rete**: l'app non usa `URLSession`, SDK di terze parti o librerie di analisi.
 - **Nessun account**: niente registrazioni, credenziali o abbonamenti.
-- **Contenuti al sicuro**: rName non legge il contenuto dei file; usa solo nome, percorso, dimensione e date di creazione e modifica forniti dal file system.
+- **Contenuti al sicuro**: rName non modifica il contenuto dei file. Usa nome, percorso, dimensione e date di creazione e modifica forniti dal file system; per le immagini mostra la miniatura che prepara macOS e, solo quando nella catena c'è la regola _Metadati foto_, ne legge i metadati EXIF. Tutto resta sul Mac.
 
 ### 3. Rinomina in due fasi
 
@@ -41,18 +41,20 @@ Per rinominare un file serve il permesso di scrittura sulla **cartella che lo co
 ## Come si usa
 
 1. **Aggiungi i file**: trascina una cartella o alcuni file nella finestra, oppure premi <kbd>⌘</kbd> <kbd>O</kbd> per scegliere una cartella.
-2. **Componi la catena di regole**: fai clic su una o più delle 8 regole nella barra laterale (es. _Numerazione_, _Maiuscole/minuscole_, _Sostituisci_), oppure scegli un preset dal menu in fondo alla barra.
+2. **Componi la catena di regole**: fai clic su una o più delle 9 regole nella barra laterale (es. _Numerazione_, _Metadati foto_, _Sostituisci_), oppure scegli un preset dal menu in fondo alla barra.
 3. **Controlla l'anteprima**: i file pronti sono segnati in verde, con il nuovo nome accanto al vecchio. Se serve, fai doppio clic su un file per scriverne il nome a mano.
 4. **Rinomina**: premi <kbd>⌘</kbd> <kbd>↩</kbd> per applicare le modifiche sul disco.
-5. **Annulla se cambi idea**: premi <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> per riportare tutti i file dell'ultima operazione al nome di prima.
+5. **Annulla se cambi idea**: premi <kbd>⌘</kbd> <kbd>Z</kbd> per riportare tutti i file dell'ultima operazione al nome di prima, e <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> per rinominarli di nuovo.
+
+Al primo avvio un'introduzione in quattro pagine riassume questi passi. Puoi riaprirla da _Aiuto › Mostra l'introduzione_, e la guida completa è in _Aiuto › Guida di rName_ (<kbd>⌘</kbd> <kbd>?</kbd>).
 
 ---
 
 ## Mappa della documentazione
 
-- [Catena di regole](/progetti/rname/docs/catena-di-regole): le 8 regole, l'ambito di applicazione e le espressioni regolari.
+- [Catena di regole](/progetti/rname/docs/catena-di-regole): le 9 regole, l'ambito di applicazione, le espressioni regolari e i metadati delle foto.
 - [Anteprima e conflitti](/progetti/rname/docs/anteprima-e-conflitti): stati dell'anteprima, protezione dai duplicati e modifica manuale riga per riga.
-- [Motore e sicurezza](/progetti/rname/docs/motore-e-sicurezza): rinomina in due fasi, scambi e maiuscole su APFS, annullamento.
+- [Motore e sicurezza](/progetti/rname/docs/motore-e-sicurezza): rinomina in due fasi, scambi e maiuscole su APFS, annulla e ripeti.
 - [Permessi e App Sandbox](/progetti/rname/docs/permessi-sandbox): perché serve l'accesso alla cartella, segnalibri di sicurezza e revoca dei permessi.
-- [Preset e impostazioni](/progetti/rname/docs/preset-e-impostazioni): preset predefiniti, preset personali e opzioni (<kbd>⌘</kbd> <kbd>,</kbd>).
-- [Scorciatoie e integrazione con macOS](/progetti/rname/docs/scorciatoie-e-finder): scorciatoie da tastiera, Dock e «Apri con».
+- [Preset e impostazioni](/progetti/rname/docs/preset-e-impostazioni): preset predefiniti, preset personali e gli otto pannelli delle Impostazioni (<kbd>⌘</kbd> <kbd>,</kbd>).
+- [Scorciatoie e integrazione con macOS](/progetti/rname/docs/scorciatoie-e-finder): scorciatoie da tastiera personalizzabili, Dock, «Apri con» e guida.

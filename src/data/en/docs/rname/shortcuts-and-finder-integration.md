@@ -1,6 +1,6 @@
 ---
 title: "Shortcuts and macOS Integration"
-description: "Keyboard shortcuts, Finder and Dock integration, dragging files and interface design choices in rName."
+description: "rName's keyboard shortcuts and how to change them, Finder and Dock integration, dragging files, the built-in guide and interface choices."
 project: "rname"
 order: 7
 section: "Reference"
@@ -19,12 +19,27 @@ rName fits naturally into **macOS**: keyboard, drag and drop, system menus and t
 | <kbd>⌘</kbd> <kbd>O</kbd> | File | Choose a folder |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> | File | Add individual files to the list |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>⌫</kbd> | File | Clear the list |
+| <kbd>⌘</kbd> <kbd>Z</kbd> | Edit | **Undo** the last rename, even several in a row |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit | **Redo** the undone rename |
 | <kbd>⌘</kbd> <kbd>↩</kbd> | Rename | **Apply the rename** to the files that are ready |
-| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Rename | **Undo the last rename** |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Rename | Undo the last rename |
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View | Show or hide the rule settings |
+| <kbd>⌘</kbd> <kbd>?</kbd> | Help | Open rName Help |
 | <kbd>⌘</kbd> <kbd>,</kbd> | rName | Open Settings |
 
-From the _Rename_ menu you can also add a rule, remove all rules and restore hand-typed names.
+From the _Rename_ menu you can also add a rule, remove all rules and restore hand-typed names. From the _Help_ menu you can reopen the first-launch introduction (_Show the Introduction_).
+
+### Changing shortcuts
+
+In _Settings › Shortcuts_ you can change the shortcut of six commands: _Choose a Folder…_, _Add Individual Files…_, _Apply Rename_, _Undo Last Rename_, _Clear the List_ and _Show or Hide Rule Settings_.
+
+- Click the shortcut and press the new keys; <kbd>Esc</kbd> cancels, <kbd>⌫</kbd> removes the shortcut from the command.
+- A shortcut must use at least <kbd>⌘</kbd> or <kbd>⌃</kbd>, or a function key (<kbd>F1</kbd>–<kbd>F20</kbd>).
+- rName refuses combinations already used by another of its commands or by a system command (for example <kbd>⌘</kbd> <kbd>Q</kbd>, <kbd>⌘</kbd> <kbd>W</kbd>, <kbd>⌘</kbd> <kbd>C</kbd>) and tells you which one.
+- Undo (<kbd>⌘</kbd> <kbd>Z</kbd>), Redo (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>) and Settings (<kbd>⌘</kbd> <kbd>,</kbd>) stay as on every Mac.
+- Next to a changed shortcut, a button restores the original one; _Restore All Shortcuts_ brings them all back to their factory values.
+
+Menus, button tooltips and the guide always show the shortcuts in use.
 
 ---
 

@@ -5,24 +5,32 @@
       "en": "The preview of new names next to the current ones"
     },
     "02-numbering": {
-      "it": "Una catena di regole con numerazione, pulizia e sostituzione",
-      "en": "A rule chain with numbering, clean-up and replace"
+      "it": "La regola Numerazione con inizio, passo, cifre e separatore",
+      "en": "The Numbering rule with start, step, digits and separator"
     },
-    "03-presets": {
+    "03-photo-metadata": {
+      "it": "La regola Metadati foto mette la data di scatto davanti al nome; le immagini senza EXIF restano com'erano",
+      "en": "The Photo metadata rule puts the date taken before the name; images without EXIF data stay as they were"
+    },
+    "04-presets": {
       "it": "Il menu dei preset per richiamare una catena di regole",
       "en": "The presets menu to recall a rule chain"
     },
-    "04-permissions": {
+    "05-settings": {
+      "it": "Il pannello Scorciatoie delle Impostazioni, con i comandi dei menu da personalizzare",
+      "en": "The Shortcuts settings pane, with menu commands to customise"
+    },
+    "06-permissions": {
       "it": "I permessi sulle cartelle, da vedere e revocare",
       "en": "Folder permissions, to review and revoke"
     },
-    "05-dark": {
+    "07-renamed": {
+      "it": "I file appena rinominati, con il pulsante Annulla in fondo alla finestra",
+      "en": "The files just renamed, with the Undo button at the bottom of the window"
+    },
+    "08-dark": {
       "it": "rName con l'aspetto scuro",
       "en": "rName in dark mode"
-    },
-    "06-renamed": {
-      "it": "I file rinominati, con l'annullamento a portata di mano",
-      "en": "The renamed files, with undo at hand"
     }
   }
 }

@@ -59,9 +59,13 @@ Se nella seconda fase uno spostamento fallisce (per esempio perché un disco est
 
 ---
 
-## Annullare l'ultima rinomina (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
+## Annullare e ripetere (<kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>)
 
-Ogni rinomina riuscita viene ricordata, con il nome di arrivo e quello di partenza di ciascun file.
+Ogni rinomina riuscita viene ricordata, con il nome di arrivo e quello di partenza di ciascun file, nell'elenco di annullamento della finestra, come in ogni app del Mac.
 
-- Se ti accorgi di aver applicato le regole sbagliate, premi <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (oppure scegli _Rinomina › Annulla ultima rinomina_).
+- Se ti accorgi di aver applicato le regole sbagliate, premi <kbd>⌘</kbd> <kbd>Z</kbd> (_Composizione › Annulla_), oppure il pulsante **Annulla** che compare in fondo alla finestra dopo la rinomina.
 - rName esegue l'operazione inversa, sempre in due fasi, e riporta tutti i file al nome che avevano prima.
+- Puoi risalire più operazioni di seguito, premendo di nuovo <kbd>⌘</kbd> <kbd>Z</kbd>.
+- <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> (_Ripeti_) rinomina di nuovo i file, se cambi idea.
+- L'annullamento funziona anche dopo che i file sono usciti dalla lista, per esempio se in _Impostazioni › Rinomina_ hai scelto di togliere i file rinominati o di svuotarla.
+- Resta anche il comando _Rinomina › Annulla ultima rinomina_ (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>Z</kbd>), la cui scorciatoia si può cambiare in _Impostazioni › Scorciatoie_.
