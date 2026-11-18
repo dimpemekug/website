@@ -12,6 +12,7 @@ import "@pagefind/default-ui/css/ui.css";
 import type { ContentEntry } from "@/utils/contentEntry";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
+import { withTrailingSlash } from "@/utils/rehypeTrailingSlash";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -41,11 +42,11 @@ const metaDesc = page.currentPage > 1
   ? `${t("posts.description")} ${t("posts.page")} ${page.currentPage}.`
   : t("posts.description");
 
-const prevURL = page.url.prev ? new URL(page.url.prev, SITE.website).toString() : undefined;
-const nextURL = page.url.next ? new URL(page.url.next, SITE.website).toString() : undefined;
+const prevURL = page.url.prev ? new URL(withTrailingSlash(page.url.prev), SITE.website).toString() : undefined;
+const nextURL = page.url.next ? new URL(withTrailingSlash(page.url.next), SITE.website).toString() : undefined;
 ---
 
-<Layout title={metaTitle} description={metaDesc} prev={prevURL} next={nextURL}>
+<Layout title={metaTitle} description={metaDesc} prev={prevURL} next={nextURL} noindex={page.currentPage > 1}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-4">

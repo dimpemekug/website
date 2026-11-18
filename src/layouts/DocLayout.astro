@@ -37,9 +37,9 @@ const {
   lang = "it",
 } = Astro.props;
 
-const projectsHref = lang === "en" ? "/en/projects" : "/progetti";
-const projectHref = lang === "en" ? `/en/projects/${projectId}` : `/progetti/${projectId}`;
-const docsRootHref = lang === "en" ? `/en/projects/${projectId}/docs` : `/progetti/${projectId}/docs`;
+const projectsHref = lang === "en" ? "/en/projects/" : "/progetti/";
+const projectHref = lang === "en" ? `/en/projects/${projectId}/` : `/progetti/${projectId}/`;
+const docsRootHref = lang === "en" ? `/en/projects/${projectId}/docs/` : `/progetti/${projectId}/docs/`;
 
 const breadcrumbItems: BreadcrumbItem[] = [
   { label: lang === "en" ? "Projects" : "Progetti", href: projectsHref },

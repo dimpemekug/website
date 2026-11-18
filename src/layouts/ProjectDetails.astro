@@ -14,6 +14,8 @@ import ProjectPrivacySupport from "@/components/ProjectPrivacySupport.astro";
 import ProjectGallery from "@/components/ProjectGallery.astro";
 import PageHero from "@/components/PageHero.astro";
 import { getImage } from "astro:assets";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { getPath } from "@/utils/getPath";
 
 type Props = {
   project: CollectionEntry<"projects"> | CollectionEntry<"projectsEn">;
@@ -27,6 +29,11 @@ const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
   : await getCollection("docs", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id);
 const hasDocs = projectDocs.length > 0;
+
+// Articles that declare this app in `relatedProjects`: the link back from the app page
+const relatedPosts = getSortedPosts(
+  await getCollection(lang === "en" ? "blogEn" : "blog", ({ data }) => data.relatedProjects.includes(project.id))
+);
 
 const { Content, headings } = await render(project);
 const hasToc = headings.filter(h => h.depth === 2 || h.depth === 3).length > 1;
@@ -269,6 +276,26 @@ const projectStructuredData = [
         {privacyUpdatedAt}
         {privacyUrl}
       />
+    )}
+
+    {relatedPosts.length > 0 && (
+      <section class="mt-12" aria-labelledby="project-posts-title" data-pagefind-ignore>
+        <h2 id="project-posts-title" class="mb-3 text-lg font-semibold text-foreground">
+          {lang === "en" ? `Articles about ${title}` : `Articoli su ${title}`}
+        </h2>
+        <ul class="space-y-2">
+          {relatedPosts.map(post => (
+            <li>
+              <a
+                href={`${getPath(post.id, post.filePath, true, lang)}/`}
+                class="text-foreground/80 underline decoration-border/50 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent/50"
+              >
+                {post.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     )}
 
     <!-- End separator -->

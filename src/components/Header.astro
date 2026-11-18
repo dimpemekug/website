@@ -27,14 +27,14 @@ const isActive = (section: string) =>
   sectionRoot === section || (section === "projects" && sectionRoot === "progetti");
 
 // Localized nav paths
-const navHome     = lang === "en" ? "/en"          : "/";
-const navPosts    = lang === "en" ? "/en/posts"    : "/posts";
-const navProjects = lang === "en" ? "/en/projects" : "/progetti";
-const navDocs     = lang === "en" ? "/en/docs"     : "/docs";
-const navTags     = lang === "en" ? "/en/tags"     : "/tags";
-const navAbout    = lang === "en" ? "/en/about"    : "/about";
-const navArchives = lang === "en" ? "/en/archives" : "/archives";
-const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
+const navHome     = lang === "en" ? "/en/"          : "/";
+const navPosts    = lang === "en" ? "/en/posts/"    : "/posts/";
+const navProjects = lang === "en" ? "/en/projects/" : "/progetti/";
+const navDocs     = lang === "en" ? "/en/docs/"     : "/docs/";
+const navTags     = lang === "en" ? "/en/tags/"     : "/tags/";
+const navAbout    = lang === "en" ? "/en/about/"    : "/about/";
+const navArchives = lang === "en" ? "/en/archives/" : "/archives/";
+const navGalleries = lang === "en" ? "/en/galleries/" : "/galleries/";
 ---
 
 <a
@@ -59,7 +59,7 @@ const navGalleries = lang === "en" ? "/en/galleries" : "/galleries";
       >
         <!-- Logo -->
         <a
-          href={lang === "en" ? "/en" : "/"}
+          href={lang === "en" ? "/en/" : "/"}
           class="group relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl shrink-0"
         >
           <Logo class="text-xl sm:text-2xl" />

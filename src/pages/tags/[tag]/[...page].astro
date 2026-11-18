@@ -11,6 +11,7 @@ import Pagination from "@/components/Pagination.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
+import { withTrailingSlash } from "@/utils/rehypeTrailingSlash";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   if (!SITE.showTags) return [];
@@ -48,8 +49,8 @@ const tagDescription = page.currentPage > 1
   ? `Tutti gli articoli con il tag "${tagName}" su ${SITE.title} (Pagina ${page.currentPage} di ${page.lastPage}).`
   : `Tutti gli articoli con il tag "${tagName}" su ${SITE.title}.`;
 
-const prevURL = page.url.prev ? new URL(page.url.prev, SITE.website).toString() : undefined;
-const nextURL = page.url.next ? new URL(page.url.next, SITE.website).toString() : undefined;
+const prevURL = page.url.prev ? new URL(withTrailingSlash(page.url.prev), SITE.website).toString() : undefined;
+const nextURL = page.url.next ? new URL(withTrailingSlash(page.url.next), SITE.website).toString() : undefined;
 ---
 
 <Layout title={metaTitle} description={tagDescription} ogImage={tagOgImage} prev={prevURL} next={nextURL}>

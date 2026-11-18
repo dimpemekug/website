@@ -49,7 +49,7 @@ const yearGroups = Object.entries(
 ).sort(([a], [b]) => Number(b) - Number(a));
 ---
 
-<Layout title={`${t("archives.title")} | ${SITE.title}`} description={t("archives.description")}>
+<Layout title={`${t("archives.title")} | ${SITE.title}`} description={t("archives.description")} noindex={true}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">

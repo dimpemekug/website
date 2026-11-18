@@ -22,14 +22,14 @@ const sectionRoot = currentPath.replace(/^\/en/, "").split("/").filter(Boolean)[
 const isActive = (section: string) =>
   sectionRoot === section || (section === "projects" && sectionRoot === "progetti");
 
-const navHome      = lang === "en" ? "/en"          : "/";
-const navPosts     = lang === "en" ? "/en/posts"    : "/posts";
-const navProjects  = lang === "en" ? "/en/projects" : "/progetti";
-const navDocs      = lang === "en" ? "/en/docs"     : "/docs";
-const navTags      = lang === "en" ? "/en/tags"     : "/tags";
-const navAbout     = lang === "en" ? "/en/about"    : "/about";
-const navArchives  = lang === "en" ? "/en/archives" : "/archives";
-const navGalleries = lang === "en" ? "/en/galleries": "/galleries";
+const navHome      = lang === "en" ? "/en/"          : "/";
+const navPosts     = lang === "en" ? "/en/posts/"    : "/posts/";
+const navProjects  = lang === "en" ? "/en/projects/" : "/progetti/";
+const navDocs      = lang === "en" ? "/en/docs/"     : "/docs/";
+const navTags      = lang === "en" ? "/en/tags/"     : "/tags/";
+const navAbout     = lang === "en" ? "/en/about/"    : "/about/";
+const navArchives  = lang === "en" ? "/en/archives/" : "/archives/";
+const navGalleries = lang === "en" ? "/en/galleries/": "/galleries/";
 
 const themeOptions = [
   { value: "system", label: t("nav.theme_system"), Icon: IconDeviceDesktop },

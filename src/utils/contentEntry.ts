@@ -20,8 +20,8 @@ export const getEntryPath = (
   entry: Pick<ContentEntry, "collection" | "id" | "filePath">
 ) =>
   isGalleryEntry(entry)
-    ? `/galleries/${getGallerySlug(entry.id)}`
-    : getPath(entry.id, entry.filePath, true, isEnglishBlogEntry(entry) ? "en" : "it");
+    ? `/galleries/${getGallerySlug(entry.id)}/`
+    : `${getPath(entry.id, entry.filePath, true, isEnglishBlogEntry(entry) ? "en" : "it")}/`;
 
 export const getEntryPublishedMs = (entry: ContentEntry) => {
   const modDatetime = "modDatetime" in entry.data ? entry.data.modDatetime : null;

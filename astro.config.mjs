@@ -13,6 +13,7 @@ import { SITE } from './src/config';
 import { postLastmod } from './src/utils/postLastmod';
 import { pageIndex } from './src/utils/pageIndex';
 import rehypeTableScroll from './src/utils/rehypeTableScroll';
+import rehypeTrailingSlash from "./src/utils/rehypeTrailingSlash";
 
 const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
 const customSite = process.env.SITE_URL;
@@ -40,17 +41,19 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   markdown: {
-    processor: unified({ rehypePlugins: [rehypeTableScroll] }),
+    processor: unified({ rehypePlugins: [rehypeTableScroll, rehypeTrailingSlash] }),
   },
   integrations: [
     expressiveCode(),
     mdx(),
     sitemap({
       filter: page => {
-        if (!SITE.showArchives && (page.endsWith("/archives") || page.endsWith("/archives/"))) return false;
-        if (page.endsWith("/search") || page.endsWith("/search/")) return false;
-        if (page.endsWith("/tags") || page.endsWith("/tags/")) return false;
-        if (page.endsWith("/404") || page.endsWith("/404.html")) return false;
+        const path = new URL(page).pathname.replace(/\/?$/, "/");
+        // Pages marked noindex stay out of the sitemap: archives and the post list after page 1
+        // only repeat links found elsewhere, galleries are not meant to rank
+        if (/^(\/en)?\/(archives|search|tags|galleries)\/$/.test(path)) return false;
+        if (/^(\/en)?\/posts\/\d+\/$/.test(path)) return false;
+        if (path.startsWith("/404")) return false;
         return true;
       },
       i18n: {

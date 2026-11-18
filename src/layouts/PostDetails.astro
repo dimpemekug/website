@@ -329,7 +329,7 @@ const nextPost =
       {
         prevPost ? (
           <a
-            href={getPath(prevPost.id, prevPost.filePath, true, lang)}
+            href={`${getPath(prevPost.id, prevPost.filePath, true, lang)}/`}
             class="post-nav-link group relative flex flex-col gap-1 rounded-2xl border border-border/20 px-5 py-4 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
           >
             <div class="post-nav-bg" />
@@ -361,7 +361,7 @@ const nextPost =
       {
         nextPost && (
           <a
-            href={getPath(nextPost.id, nextPost.filePath, true, lang)}
+            href={`${getPath(nextPost.id, nextPost.filePath, true, lang)}/`}
             class="post-nav-link group relative col-start-2 flex flex-col items-end gap-1 rounded-2xl border border-border/20 px-5 py-4 text-end transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
           >
             <div class="post-nav-bg" />
