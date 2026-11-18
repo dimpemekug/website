@@ -7,7 +7,7 @@ description: "Markdown editor for Mac, iPhone and iPad: write with your text alr
 pubDatetime: 2026-11-10T00:00:00+01:00
 draft: false
 tags: ["macOS", "iOS", "productivity", "privacy"]
-storeStatus: "coming-soon"
+appStore: "https://apps.apple.com/app/charta-editor-markdown/id6833536082"
 privacyDataTypes: "the Markdown documents you open or create, the folders you open as workspaces with the images they contain, the files you export and the app's preferences"
 privacyStorageNote: "Documents stay where you save them and preferences stay on your device; no request goes to the developer. Charta only connects to the Internet for images with a web address written in your documents, which the editor and preview download from their site as a browser would, with no cookies and without storing them on disk."
 privacyUpdatedAt: "November 10, 2026"
@@ -38,4 +38,4 @@ Charta is a Markdown editor for Mac, iPhone and iPad that lets you write the sam
 
 ## Platforms
 
-**Mac** with Apple silicon and macOS 26 or later, **iPhone** and **iPad** with iOS and iPadOS 26 or later. One free download works on all your devices. Charta is coming soon to the App Store.
+Available on the App Store for **iPhone** and **iPad** with iOS and iPadOS 26 or later. The **Mac** version, for Apple silicon with macOS 26 or later, will arrive on the same store page: one free download will work on all your devices.
