@@ -13,7 +13,7 @@ draft: false
 related:
   - cyber-resilience-act-segnalazione-vulnerabilita-2026
   - matter-telecamere-casa-intelligente-2026
-  - sovranita-digitale-cloud-europeo-2026
+  - leggere-contatori-luce-gas-acqua
 ---
 
 Un'auto moderna produce centinaia di parametri al secondo, una caldaia connessa sa esattamente quante ore ha lavorato, una macchina agricola registra consumi e guasti prima ancora che l'operatore se ne accorga. Fino a ieri quei dati erano quasi sempre di chi aveva costruito il dispositivo: l'utente li vedeva solo nella misura in cui l'app ufficiale glieli mostrava. Dal 12 settembre 2026 non è più così, almeno in Europa.

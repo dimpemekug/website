@@ -12,7 +12,7 @@ draft: false
 related:
   - intelligenza-artificiale-agentica-2026
   - browser-agentici-ai-2026
-  - cyber-resilience-act-segnalazione-vulnerabilita-2026
+  - agenti-ai-mac-accesso-completo-disco-macos-27-3
 ---
 
 Twenty years ago, computing learned an expensive lesson: never mix data and commands. SQL injection existed because a text field typed by a user could end up executed as an instruction by the database. Language models have brought that problem back to center stage, with an awkward twist: for an LLM, instructions and data are by design the same thing. It's all text.

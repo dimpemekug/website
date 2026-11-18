@@ -13,7 +13,7 @@ draft: false
 related:
   - cyber-resilience-act-segnalazione-vulnerabilita-2026
   - matter-telecamere-casa-intelligente-2026
-  - sovranita-digitale-cloud-europeo-2026
+  - leggere-contatori-luce-gas-acqua
 ---
 
 A modern car produces hundreds of parameters a second, a connected boiler knows exactly how many hours it has worked, a farm machine logs consumption and faults before the operator notices anything. Until yesterday that data almost always belonged to whoever built the device: users saw as much of it as the official app chose to show them. Since September 12, 2026, that is no longer the case, at least in Europe.

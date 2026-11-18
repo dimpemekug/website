@@ -7,7 +7,7 @@ pubDatetime: 2026-11-18T08:00:00Z
 related:
   - aprire-rar-protetto-mac
   - local-first-app-offline-sincronizzazione-2026
-  - deepfake-verifica-identita-digitale-2026
+  - data-scatto-sbagliata-foto-mac
 relatedProjects:
   - rexif
   - resizo
