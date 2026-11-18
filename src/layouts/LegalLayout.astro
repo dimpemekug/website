@@ -22,7 +22,7 @@ const project = projects.find(p => p.id === slug);
 const projectHref = slug ? (isEn ? `/en/projects/${slug}/` : `/progetti/${slug}/`) : undefined;
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`} description={frontmatter.description}>
+<Layout title={`${frontmatter.title} | ${SITE.title}`} description={frontmatter.description} noindex={true}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-12">

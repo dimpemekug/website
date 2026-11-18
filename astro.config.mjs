@@ -53,6 +53,8 @@ export default defineConfig({
         // only repeat links found elsewhere, galleries are not meant to rank
         if (/^(\/en)?\/(archives|search|tags|galleries)\/$/.test(path)) return false;
         if (/^(\/en)?\/posts\/\d+\/$/.test(path)) return false;
+        // Privacy policies must stay reachable for the stores, but never rank: keep them out of the queue
+        if (path.endsWith("/privacy/")) return false;
         if (path.startsWith("/404")) return false;
         return true;
       },
