@@ -11,7 +11,7 @@ draft: false
 related:
   - wifi-8-router-affidabilita-2026
   - smartphone-riparabilita-ecodesign-2026
-  - occhiali-smart-computing-spaziale-2026
+  - terremoti-magnitudo-intensita-fonti-ufficiali
 ---
 
 For decades, the satellite phone was gear for polar expeditions and ships in mid-ocean: bulky, expensive, with a clunky antenna and a separate subscription. Today the same capability is arriving, in scaled-down form, inside the smartphones already in our pockets. Not for calling home from the desert, at least not yet, but for something simpler and often more important: sending a message when there are no ground antennas around.

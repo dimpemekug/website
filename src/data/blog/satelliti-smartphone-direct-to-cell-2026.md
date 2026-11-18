@@ -12,7 +12,7 @@ draft: false
 related:
   - wifi-8-router-affidabilita-2026
   - smartphone-riparabilita-ecodesign-2026
-  - occhiali-smart-computing-spaziale-2026
+  - terremoti-magnitudo-intensita-fonti-ufficiali
 ---
 
 Per decenni il telefono satellitare è stato un oggetto per spedizioni polari e navi in mezzo all'oceano: grosso, costoso, con un'antenna ingombrante e un abbonamento a parte. Oggi la stessa funzione sta arrivando, in forma ridotta, dentro gli smartphone che abbiamo già in tasca. Non per telefonare dal deserto, almeno non ancora, ma per qualcosa di più semplice e spesso più importante: mandare un messaggio quando le antenne a terra non ci sono.
