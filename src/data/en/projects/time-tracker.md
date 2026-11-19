@@ -23,10 +23,10 @@ Time Tracker is for anyone who needs to know exactly where their time goes, and 
 
 - **Activities in seconds** — with a start and end time or as a daily total, with titles you've used before offered as suggestions
 - **Projects** — color, notes, start and end dates, hourly rate and VAT; finished projects can be archived
-- **Pomodoro timer** — a stopwatch anchored to the system clock, always visible in a bar inside the app and, outside it, in the Dynamic Island (iOS) or a notification with Pause, Resume and Stop (Android); when you stop it, the session becomes an activity. On iOS a ring in the project's color fills up toward the end of each 25-minute cycle, and you can undo a session right after it's saved
-- **Summary** — activities grouped by day, with search across title, notes and project. On iOS search also filters by one or more projects, a swipe on an activity resumes it with the timer, **Duplicate to Today** copies it to today's date, and new activities start on the last project you used
-- **Activity calendar** (iOS only) — a year of work in one grid; tap a day to see its hours and show only that day in the list
-- **Dashboard** — hours by week, month, year or a custom range, hours per project, billable share and revenue; on iOS also a comparison with the previous period and a trend chart
+- **Pomodoro timer** — a stopwatch anchored to the system clock, always visible in a bar inside the app and, outside it, in the Dynamic Island (iOS) or a notification with Pause, Resume and Stop (Android); when you stop it, the session becomes an activity. A ring in the project's color fills up toward the end of each cycle, and you can undo a session right after it's saved. A cycle lasts 25 minutes; on Android you can choose from 15 to 90
+- **Summary** — activities grouped by day, with search across title, notes and project. Search also filters by one or more projects, a swipe on an activity resumes it with the timer, **Duplicate to Today** copies it to today's date, and new activities start on the last project you used
+- **Activity calendar** — a year of work in one grid; tap a day to see its hours and show only that day in the list
+- **Dashboard** — hours by week, month, year or a custom range, hours per project, billable share and revenue; with a comparison with the previous period and a trend chart
 - **PDF and CSV reports** — to send to clients or open in a spreadsheet
 - **JSON backup** — export and import your data whenever you like, even between iPhone and Android; on iOS there's also optional iCloud sync
 - **Your way** — light, dark or system theme, a choice of accent color, seven languages

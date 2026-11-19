@@ -11,7 +11,7 @@ section: "Analytics & Data"
 The **Dashboard** tab turns logged hours into clear information:
 
 - **Headline total**: the hours worked in the chosen period.
-- **Comparison and trend** (iOS): below the total, the percentage change *vs. previous period* (the week, month or year before, or a custom range of the same length right before it) and a bar chart of hours per day, or per month when the period is longer than two months. Days with no activity stay in the chart, at zero.
+- **Comparison and trend**: below the total, the percentage change *vs. previous period* (the week, month or year before, or a custom range of the same length right before it) and a bar chart of hours per day, or per month when the period is longer than two months. Days with no activity stay in the chart, at zero.
 - **Hours per project**: charts and percentages showing how work is spread across projects and clients.
 - **Billable share**: separates the hours of projects with billing turned on from non-billable ones (e.g. training or internal work).
 - **Revenue**: for each billable project, hours multiplied by the hourly rate, VAT included.

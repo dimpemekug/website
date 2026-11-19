@@ -8,7 +8,7 @@ section: "Platforms"
 
 ## Two Native Versions
 
-Both versions of Time Tracker have the same hours, rate and VAT calculations and the same backup format, and each closely follows its own platform's conventions. The features that came to iOS with version 1.3.0 (the Pomodoro ring, Resume and Duplicate to Today, the activity calendar, the comparison and trend in the Dashboard) aren't on Android yet.
+Both versions of Time Tracker have the same hours, rate and VAT calculations and the same backup format, and each closely follows its own platform's conventions. The features of version 1.3.0 for iOS (the Pomodoro ring, Resume and Duplicate to Today, the activity calendar, the comparison and trend in the Dashboard) are also in version 2.1.0 for Android, which also lets you choose the length of a Pomodoro cycle.
 
 ---
 
@@ -26,11 +26,7 @@ Both versions of Time Tracker have the same hours, rate and VAT calculations and
 | **Sync** | iCloud (CloudKit, private database) | None, file backups only |
 | **Large screens** | Collapsible sidebar on iPad (`.sidebarAdaptable`) | Navigation rail and side-by-side panes |
 | **Backup format** | Shared JSON | Shared JSON |
-| **Pomodoro cycle ring and Undo** | Yes | No |
-| **Resume and Duplicate to Today** | Yes | No |
-| **Search filtered by project** | Yes | No |
-| **Activity calendar with day filter** | Yes | No |
-| **Comparison with the previous period and trend** | Yes | No |
+| **Pomodoro cycle length** | 25 minutes | Your choice, 15 to 90 minutes |
 
 ---
 

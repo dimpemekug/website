@@ -13,16 +13,16 @@
       "en": "Activities grouped by day, with quick add at the top"
     },
     "03-dashboard": {
-      "it": "La dashboard con le ore per progetto nel periodo scelto",
-      "en": "The dashboard with hours per project in the chosen period"
+      "it": "La dashboard con il grafico dell'andamento e le ore per progetto",
+      "en": "The dashboard with the trend chart and hours per project"
     },
     "03-projects": {
       "it": "L'elenco dei progetti, attivi e archiviati",
       "en": "The project list, active and archived"
     },
     "03-timer": {
-      "it": "Il timer di concentrazione su tablet",
-      "en": "The focus timer on a tablet"
+      "it": "Il Pomodoro su tablet, con l'anello del ciclo nel colore del progetto",
+      "en": "The Pomodoro on a tablet, with the cycle ring in the project's color"
     },
     "04-new-entry": {
       "it": "Una nuova attività, con i titoli già usati proposti come suggerimenti",
@@ -41,28 +41,28 @@
       "en": "The dashboard in dark mode"
     },
     "05-timer": {
-      "it": "Il timer di concentrazione, che registra il tempo come attività",
-      "en": "The focus timer, which logs the time as an activity"
+      "it": "Il Pomodoro, con l'anello del ciclo nel colore del progetto, che registra il tempo come attività",
+      "en": "The Pomodoro, with the cycle ring in the project's color, which logs the time as an activity"
     },
     "06-billing": {
       "it": "La modifica di un progetto con tariffa oraria e IVA",
       "en": "Editing a project with hourly rate and VAT"
     },
     "07-settings": {
-      "it": "Impostazioni: lingua, notifiche del timer, tema, colore d'accento e backup",
-      "en": "Settings: language, timer notifications, theme, accent color and backups"
+      "it": "Impostazioni: lingua, notifiche e durata del Pomodoro, tema, colore d'accento e backup",
+      "en": "Settings: language, Pomodoro notifications and length, theme, accent color and backups"
     },
     "08-dark": {
       "it": "La dashboard con il tema scuro",
       "en": "The dashboard in dark mode"
     },
     "android-tablet/01-summary": {
-      "it": "Su tablet, l'elenco delle attività e l'editor affiancati",
-      "en": "On a tablet, the activity list and the editor side by side"
+      "it": "Su tablet, il calendario attività di un anno sopra le attività di oggi e di ieri",
+      "en": "On a tablet, a year's activity calendar above today's and yesterday's entries"
     },
     "android/01-summary": {
-      "it": "Il riepilogo con le ore di oggi, della settimana e i ricavi",
-      "en": "The summary with today's and this week's hours and revenue"
+      "it": "Le attività, con il calendario attività in cima e le ore di oggi e della settimana",
+      "en": "Time entries, with the activity calendar at the top and today's and this week's hours"
     },
     "ipad/02-dashboard": {
       "it": "La dashboard con il confronto sul periodo precedente, l'andamento e le ore per progetto",

@@ -11,7 +11,7 @@ section: "Analisi e Dati"
 La scheda **Dashboard** trasforma le ore registrate in informazioni chiare:
 
 - **Totale in evidenza**: le ore lavorate nel periodo scelto.
-- **Confronto e andamento** (iOS): sotto il totale, la variazione percentuale *rispetto al periodo precedente* (la settimana, il mese o l'anno prima, oppure un intervallo personalizzato della stessa durata subito prima) e un grafico a barre delle ore per giorno, o per mese quando il periodo supera i due mesi. I giorni senza attività restano nel grafico, a zero.
+- **Confronto e andamento**: sotto il totale, la variazione percentuale *rispetto al periodo precedente* (la settimana, il mese o l'anno prima, oppure un intervallo personalizzato della stessa durata subito prima) e un grafico a barre delle ore per giorno, o per mese quando il periodo supera i due mesi. I giorni senza attività restano nel grafico, a zero.
 - **Ore per progetto**: grafici e percentuali che mostrano come si distribuisce il lavoro tra progetti e clienti.
 - **Quota fatturabile**: separa le ore dei progetti con fatturazione attiva da quelle non fatturabili (es. formazione o attività interne).
 - **Ricavi**: per ogni progetto fatturabile, le ore moltiplicate per la tariffa oraria, IVA inclusa.

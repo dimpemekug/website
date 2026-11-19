@@ -8,7 +8,7 @@ section: "Piattaforme"
 
 ## Due versioni native
 
-Le due versioni di Time Tracker hanno lo stesso calcolo di ore, tariffe e IVA e lo stesso formato di backup, e ciascuna segue da vicino le convenzioni della propria piattaforma. Le funzioni arrivate su iOS con la versione 1.3.0 (anello del Pomodoro, Riprendi e Duplica su oggi, calendario attività, confronto e andamento nella Dashboard) per ora non sono su Android.
+Le due versioni di Time Tracker hanno lo stesso calcolo di ore, tariffe e IVA e lo stesso formato di backup, e ciascuna segue da vicino le convenzioni della propria piattaforma. Le funzioni della versione 1.3.0 per iOS (anello del Pomodoro, Riprendi e Duplica su oggi, calendario attività, confronto e andamento nella Dashboard) sono anche nella 2.1.0 per Android, che in più permette di scegliere la durata del ciclo del Pomodoro.
 
 ---
 
@@ -26,11 +26,7 @@ Le due versioni di Time Tracker hanno lo stesso calcolo di ore, tariffe e IVA e 
 | **Sincronizzazione** | iCloud (CloudKit, database privato) | Nessuna, solo backup su file |
 | **Schermi grandi** | Barra laterale comprimibile su iPad (`.sidebarAdaptable`) | Barra laterale (*navigation rail*) e riquadri affiancati |
 | **Formato di backup** | JSON comune | JSON comune |
-| **Anello del ciclo e Annulla nel Pomodoro** | Sì | No |
-| **Riprendi e Duplica su oggi** | Sì | No |
-| **Ricerca filtrata per progetto** | Sì | No |
-| **Calendario attività con filtro per giorno** | Sì | No |
-| **Confronto con il periodo precedente e andamento** | Sì | No |
+| **Durata del ciclo Pomodoro** | 25 minuti | A scelta, da 15 a 90 minuti |
 
 ---
 

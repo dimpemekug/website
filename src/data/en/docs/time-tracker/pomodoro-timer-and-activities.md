@@ -14,8 +14,8 @@ Time Tracker's **Pomodoro** panel is a stopwatch for focused work sessions:
 - **Start, pause and stop**: start the stopwatch, pause it when needed and stop it when the session ends.
 - **Anchored to the system clock**: elapsed time doesn't depend on an in-memory count but on the saved start time, so it stays correct even if the app is suspended or closed.
 - **Saved as an activity**: when you stop the timer, the session is logged as an activity on the chosen project, with the activity name as its title. Sessions shorter than a minute aren't saved.
-- **Cycle ring** (iOS): a ring in the project's color fills up toward the end of each 25-minute cycle, and below the time you see the current cycle and how long is left (e.g. *Pomodoro 1 · 06:31 left*). The timer is still a stopwatch: it logs all the elapsed time, and the cycles are only a goal to aim for.
-- **Undo** (iOS): after you stop, the panel shows *Saved to* and the project name, with an **Undo** button that deletes the activity that was just saved.
+- **Cycle ring**: a ring in the project's color fills up toward the end of each cycle, and below the time you see the current cycle and how long is left (e.g. *Pomodoro 1 · 06:31 left*). The timer is still a stopwatch: it logs all the elapsed time, and the cycles are only a goal to aim for. A cycle lasts 25 minutes; on Android you can change it in Settings under **Pomodoro length**: 15, 20, 25, 30, 45, 50, 60 or 90 minutes.
+- **Undo**: after you stop, the panel shows *Saved to* and the project name, with an **Undo** button that deletes the activity that was just saved.
 
 ---
 
@@ -36,22 +36,22 @@ For hours logged after the fact, open the activity editor and enter:
 - **title**, **project** and **notes**;
 - the **date** and the **start and end time**, or turn on **daily total** and type the duration directly.
 
-On iOS a new activity starts on the project of the last activity you logged, if it's still active; otherwise on the first active project.
+A new activity starts on the project of the last activity you logged, if it's still active; otherwise on the first active project.
 
 On Android there's also a **quick add** at the top of the summary, with just title and project.
 
 ---
 
-## Resuming and Duplicating an Activity (iOS)
+## Resuming and Duplicating an Activity
 
 In the **Time Entries** list:
-- swiping a row to the right shows **Resume** and **Edit**; a full swipe triggers **Resume**, which starts the timer with the activity's title and project and opens the Pomodoro panel. If a timer is already running, Resume isn't offered;
+- swiping a row to the right shows **Resume** and **Edit**; a full swipe triggers **Resume**, which starts the timer with the activity's title and project and opens the Pomodoro panel. If a timer is already running, Resume isn't offered (on Android the swipe then opens the editor);
 - touching and holding a row opens a menu with **Edit**, **Resume**, **Duplicate to Today** and **Delete**. *Duplicate to Today* creates a copy with the same time of day and duration on today's date;
-- swiping to the left shows **Delete**.
+- swiping to the left shows **Delete**; on Android you can undo the deletion from the bar at the bottom.
 
 ---
 
-## Search and Activity Calendar (iOS)
+## Search and Activity Calendar
 
 - **Search**: the *Search entries* field looks for the text in the title, notes and project name. While you search, the app suggests active projects as filters: picking one or more shows only their activities.
 - **Activity calendar**: at the top of the list, a year of work in a grid with one square per day, darker when there are more hours. Tapping a day shows the date, the hours and the number of activities; **Show** keeps only that day in the list, and **Show all days** removes the filter.
