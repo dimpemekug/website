@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - DomoMeter"
 description: "Privacy dell'app DomoMeter: quali dati vengono trattati, dove restano e come funzionano la sincronizzazione iCloud facoltativa su iOS e il backup di Android."
 ---
 
-Ultimo aggiornamento: 13 ottobre 2026
+Ultimo aggiornamento: 19 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **DomoMeter** tratta i dati, su iOS e su Android.
 
@@ -16,16 +16,16 @@ Questa Informativa sulla Privacy descrive come **DomoMeter** tratta i dati, su i
 - Non viene effettuato alcun tracciamento dell'utente
 - Lo sviluppatore non ha server e non riceve alcun dato
 - Le letture restano sul dispositivo; su iOS anche nell'account iCloud privato dell'utente, solo se attiva la sincronizzazione; su Android anche nel backup Android dell'utente, se attivo
-- Su Android l'app non si connette a Internet e non chiede alcun permesso
+- Su Android l'app non si connette a Internet; l'unico permesso che chiede è quello delle notifiche, e solo se attivi i promemoria
 
 ## Dati trattati dall'app
 
 DomoMeter tratta esclusivamente i contenuti che l'utente inserisce:
 
-- le letture dei contatori di luce (anche per fasce F1, F2 e F3), gas e acqua, con la data ed eventuali note
-- i profili delle abitazioni e i limiti di consumo per ogni utenza
-- su iOS, anche tariffe e budget di spesa inseriti dall'utente e le impostazioni del promemoria di lettura
-- le preferenze dell'app: lingua, tema, colori, unità di misura e impostazioni dell'interfaccia
+- le letture dei contatori di luce (anche per fasce F1, F2 e F3), gas, acqua e delle altre utenze create dall'utente, con la data ed eventuali note
+- i profili delle abitazioni, le utenze e i limiti di consumo per ogni utenza
+- tariffe, budget di spesa e fattori di CO₂ inseriti dall'utente, e le impostazioni dei promemoria di lettura
+- le preferenze dell'app: lingua, tema, colori, valuta, unità di misura e impostazioni dell'interfaccia
 
 ## Raccolta dei dati
 
@@ -48,18 +48,17 @@ Se la sincronizzazione resta disattivata, nessun dato dell'app lascia il disposi
 
 Android può includere i dati dell'app nel backup del dispositivo che l'utente ha attivato (ad esempio il backup di Google) e ripristinarli su un nuovo dispositivo. Il backup è gestito da Android e dal servizio scelto dall'utente, secondo le loro condizioni, e non è accessibile allo sviluppatore. Si può disattivare nelle impostazioni di sistema.
 
-## Notifiche (solo iOS)
+## Notifiche
 
-Il promemoria di lettura utilizza le notifiche locali del sistema operativo, pianificate sul dispositivo. Non prevede l'invio di dati a server remoti e richiede l'autorizzazione dell'utente, revocabile in qualsiasi momento dalle impostazioni di sistema.
+I promemoria di lettura utilizzano le notifiche locali del sistema operativo, pianificate sul dispositivo; su Android, dopo un riavvio, l'app li rimette in calendario. Non prevedono l'invio di dati a server remoti e richiedono l'autorizzazione dell'utente, chiesta solo quando si attiva un promemoria e revocabile in qualsiasi momento dalle impostazioni di sistema.
 
 ## Backup ed esportazione
 
-I backup (JSON) e, su iOS, i file CSV vengono creati solo su richiesta dell'utente e salvati o condivisi nella destinazione che l'utente sceglie. L'importazione legge solo il file selezionato dall'utente.
+I backup (JSON) e i file CSV vengono creati solo su richiesta dell'utente e salvati o condivisi nella destinazione che l'utente sceglie. L'importazione legge solo il file selezionato dall'utente.
 
 ## Permessi del dispositivo
 
-- **iOS**: DomoMeter può chiedere l'autorizzazione a inviare notifiche, per il promemoria di lettura.
-- **Android**: DomoMeter non chiede alcun permesso: non accede a Internet, notifiche, posizione, fotocamera, microfono, foto, contatti o calendari.
+DomoMeter chiede un solo permesso, quello delle notifiche, e solo quando l'utente attiva un promemoria di lettura. Non accede a posizione, fotocamera, microfono, foto, contatti o calendari; su Android non accede nemmeno a Internet.
 
 ## Condivisione dei dati
 
@@ -71,7 +70,7 @@ L'unica eccezione è quando l'utente esporta, salva o condivide esplicitamente u
 
 L'app salva sul dispositivo, nel proprio spazio:
 
-- il database con letture, profili e limiti
+- il database con letture, profili, utenze, tariffe e limiti
 - le preferenze
 
 Su iOS, se la sincronizzazione iCloud è attiva, i dati sono conservati anche nel database privato iCloud dell'utente.

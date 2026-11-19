@@ -4,7 +4,7 @@ title: "DomoMeter Privacy Policy"
 description: "Full privacy policy for the DomoMeter app: what data is processed, where it stays, and how optional iCloud sync on iOS and Android backup work."
 ---
 
-Last updated: October 13, 2026
+Last updated: November 19, 2026
 
 This Privacy Policy describes how **DomoMeter** handles data, on iOS and on Android.
 
@@ -16,16 +16,16 @@ This Privacy Policy describes how **DomoMeter** handles data, on iOS and on Andr
 - No user tracking takes place
 - The developer runs no servers and receives no data
 - Readings stay on the device; on iOS also in the user's private iCloud account, only if they turn on sync; on Android also in the user's Android backup, if turned on
-- On Android the app does not connect to the Internet and asks for no permissions
+- On Android the app does not connect to the Internet; the only permission it asks for is notifications, and only if you turn on reminders
 
 ## Data the app handles
 
 DomoMeter only handles the content the user enters:
 
-- electricity (including F1, F2, and F3 time bands), gas, and water meter readings, with their date and optional notes
-- home profiles and the consumption limits for each utility
-- on iOS, also tariffs and spending budgets entered by the user, and the reading reminder settings
-- app preferences: language, theme, colors, measurement units, and interface settings
+- electricity (including F1, F2, and F3 time bands), gas, and water meter readings, and those of other utilities the user creates, with their date and optional notes
+- home profiles, utilities, and the consumption limits for each utility
+- tariffs, spending budgets, and CO₂ factors entered by the user, and the reading reminder settings
+- app preferences: language, theme, colors, currency, measurement units, and interface settings
 
 ## Data collection
 
@@ -48,18 +48,17 @@ If sync is left off, no app data leaves the device.
 
 Android may include the app's data in the device backup the user has turned on (for example Google backup) and restore it on a new device. The backup is handled by Android and the service the user chose, under their terms, and is not accessible to the developer. It can be turned off in the system settings.
 
-## Notifications (iOS only)
+## Notifications
 
-The reading reminder uses the operating system's local notifications, scheduled on the device. It sends no data to remote servers and requires the user's permission, which can be revoked at any time in the system settings.
+Reading reminders use the operating system's local notifications, scheduled on the device; on Android, after a restart, the app puts them back on schedule. They send no data to remote servers and require the user's permission, which is asked only when a reminder is turned on and can be revoked at any time in the system settings.
 
 ## Backup and export
 
-Backups (JSON) and, on iOS, CSV files are created only when the user asks, and saved or shared to the destination the user chooses. Import reads only the file the user selects.
+Backups (JSON) and CSV files are created only when the user asks, and saved or shared to the destination the user chooses. Import reads only the file the user selects.
 
 ## Device permissions
 
-- **iOS**: DomoMeter may ask for permission to send notifications, for the reading reminder.
-- **Android**: DomoMeter asks for no permissions: it does not access the Internet, notifications, location, camera, microphone, photos, contacts, or calendars.
+DomoMeter asks for a single permission, notifications, and only when the user turns on a reading reminder. It does not access location, camera, microphone, photos, contacts, or calendars; on Android it does not access the Internet either.
 
 ## Data sharing
 
@@ -71,7 +70,7 @@ The only exception is when the user explicitly exports, saves, or shares a backu
 
 The app stores on the device, in its own storage:
 
-- the database with readings, profiles, and limits
+- the database with readings, profiles, utilities, tariffs, and limits
 - preferences
 
 On iOS, when iCloud sync is on, the data is also kept in the user's private iCloud database.
