@@ -23,9 +23,10 @@ Time Tracker nasce per chi ha bisogno di sapere esattamente dove va il proprio t
 
 - **Attività in pochi secondi** — con orario di inizio e fine oppure come totale giornaliero, con i titoli già usati proposti come suggerimenti
 - **Progetti** — colore, note, date di inizio e fine, tariffa oraria e IVA; i progetti conclusi si archiviano
-- **Timer di concentrazione** — un cronometro ancorato all'orologio di sistema, sempre visibile in una barra dentro l'app e, fuori, nella Dynamic Island (iOS) o in una notifica con Pausa, Riprendi e Stop (Android); fermandolo, la sessione diventa un'attività
-- **Riepilogo** — attività raggruppate per giorno, con ricerca su titolo, note e progetto
-- **Dashboard** — ore per settimana, mese, anno o un intervallo a scelta, ore per progetto, quota fatturabile e ricavi
+- **Timer Pomodoro** — un cronometro ancorato all'orologio di sistema, sempre visibile in una barra dentro l'app e, fuori, nella Dynamic Island (iOS) o in una notifica con Pausa, Riprendi e Stop (Android); fermandolo, la sessione diventa un'attività. Su iOS un anello nel colore del progetto si riempie verso la fine di ogni ciclo da 25 minuti, e la sessione appena salvata si può annullare
+- **Riepilogo** — attività raggruppate per giorno, con ricerca su titolo, note e progetto. Su iOS la ricerca filtra anche per uno o più progetti, uno scorrimento su un'attività la riprende con il timer, **Duplica su oggi** la copia sulla data di oggi e le nuove attività partono dall'ultimo progetto usato
+- **Calendario attività** (solo iOS) — un anno di lavoro in una griglia; tocchi un giorno per vederne le ore e mostrare solo quel giorno nell'elenco
+- **Dashboard** — ore per settimana, mese, anno o un intervallo a scelta, ore per progetto, quota fatturabile e ricavi; su iOS anche il confronto con il periodo precedente e il grafico dell'andamento
 - **Report PDF e CSV** — da inviare ai clienti o da aprire in un foglio di calcolo
 - **Backup JSON** — esporta e importa i dati quando vuoi, anche tra iPhone e Android; su iOS c'è anche la sincronizzazione iCloud facoltativa
 - **A modo tuo** — tema chiaro, scuro o di sistema, colore d'accento a scelta, sette lingue

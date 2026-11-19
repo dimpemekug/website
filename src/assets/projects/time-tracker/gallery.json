@@ -1,8 +1,8 @@
 {
   "captions": {
     "01-summary": {
-      "it": "Il riepilogo con il calendario delle attività e le ore di oggi",
-      "en": "The summary with the activity calendar and today's hours"
+      "it": "Le attività, con il calendario attività dell'anno e le ore di oggi",
+      "en": "Time entries, with the year's activity calendar and today's hours"
     },
     "02-dashboard": {
       "it": "La dashboard con le ore per progetto, la quota fatturabile e i ricavi",
@@ -29,8 +29,8 @@
       "en": "A new activity, with previously used titles offered as suggestions"
     },
     "04-pomodoro": {
-      "it": "Il timer di concentrazione, con progetto e attività",
-      "en": "The focus timer, with project and activity"
+      "it": "Il Pomodoro, con l'anello del ciclo da 25 minuti, il progetto e l'attività",
+      "en": "The Pomodoro, with the 25-minute cycle ring, the project and the activity"
     },
     "04-projects": {
       "it": "L'elenco dei progetti e l'editor con tariffa oraria e IVA",
@@ -56,13 +56,21 @@
       "it": "La dashboard con il tema scuro",
       "en": "The dashboard in dark mode"
     },
+    "android-tablet/01-summary": {
+      "it": "Su tablet, l'elenco delle attività e l'editor affiancati",
+      "en": "On a tablet, the activity list and the editor side by side"
+    },
     "android/01-summary": {
       "it": "Il riepilogo con le ore di oggi, della settimana e i ricavi",
       "en": "The summary with today's and this week's hours and revenue"
     },
-    "android-tablet/01-summary": {
-      "it": "Su tablet, l'elenco delle attività e l'editor affiancati",
-      "en": "On a tablet, the activity list and the editor side by side"
+    "ipad/02-dashboard": {
+      "it": "La dashboard con il confronto sul periodo precedente, l'andamento e le ore per progetto",
+      "en": "The dashboard with the comparison to the previous period, the trend and hours per project"
+    },
+    "iphone/02-dashboard": {
+      "it": "La dashboard con il confronto sul periodo precedente, l'andamento e le ore per progetto",
+      "en": "The dashboard with the comparison to the previous period, the trend and hours per project"
     }
   }
 }
