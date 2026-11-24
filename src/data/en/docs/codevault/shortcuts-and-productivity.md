@@ -2,7 +2,7 @@
 title: "Shortcuts and Productivity"
 description: "Keyboard shortcuts on Mac and iPad, menu commands, quick copy, sharing and context actions in CodeVault."
 project: "codevault"
-order: 5
+order: 6
 section: "Features"
 ---
 
@@ -22,11 +22,13 @@ On **Mac** CodeVault adds these commands to the menu bar. On **iPad** with a key
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Import JSON |
 | <kbd>⌘</kbd> <kbd>,</kbd> | Open Settings |
 
+In the editor the system shortcuts apply, such as <kbd>⌘</kbd> <kbd>Z</kbd> to undo; in Markdown notes <kbd>Tab</kbd> and <kbd>⇧</kbd> <kbd>Tab</kbd> change an item's indent. The full guide, with the Mac shortcuts, is also in the app, under **Settings › Information › User Guide** (on Mac, the **User Guide** tab).
+
 ---
 
 ## Clipboard, Sharing and Quick Actions
 
-- **Quick copy**: copy a snippet's code (all blocks) or a note's text with one tap; an on-screen notice and, on iPhone, haptic feedback confirm the copy.
+- **Quick copy**: the **Copy** button in a block's header copies just that code; **Copy Code** copies all of a snippet's blocks, and a note is copied whole; an on-screen notice and, on iPhone, haptic feedback confirm the copy.
 - **Paste from clipboard**: when you create a snippet and the clipboard holds text, the app offers to paste it into the code field and detects its language.
 - **Native sharing**: share snippets and notes as Markdown through the system share sheet to Mail, Messages, Notes or other apps.
 - **Context menu**: right-click (Mac) or long-press (iPhone and iPad) to pin, duplicate, copy, share or delete an item.

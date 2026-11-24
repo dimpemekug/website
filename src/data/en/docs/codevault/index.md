@@ -32,10 +32,12 @@ Persistence relies on **SwiftData** with a versioned schema (`SnippetSchemaV1`�
 ### 4. Three Visual Styles
 In Settings you can pick one of three styles; they change only the look, never the features:
 - **Terminal** (default): dark and monospaced, with an amber accent.
-- **Typographic**: light and minimal, with large titles and card-free lists.
-- **Glass**: system surfaces and rounded cards, in line with Liquid Glass.
+- **Typographic**: light and minimal, with large titles and numbered lists.
+- **Glass**: iOS materials, with cards and tiles, in line with Liquid Glass.
 
-The interface is available in Italian, English, German, Spanish, French, Portuguese and Russian; you can switch language in Settings without changing the system language.
+The theme can be light, dark or automatic. Typographic and Glass have seven accent colors; Terminal always uses amber and looks best with the dark theme.
+
+The interface is available in Italian, English, German, Spanish, French, Portuguese and Russian; you can switch language in Settings without changing the system language. **Settings › Information › User Guide** holds a guide to the app, in Italian and English.
 
 ---
 
@@ -44,5 +46,6 @@ The interface is available in Italian, English, German, Spanish, French, Portugu
 1. **Create a snippet**: press <kbd>⌘</kbd> <kbd>N</kbd> (Mac, or iPad with a keyboard) or tap `+`. For a note, use <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd>.
 2. **Pick the language**: choose one of the 20 supported languages; for a new snippet CodeVault tries to detect it from the code you type or paste.
 3. **Organize**: assign a category and one or more tags, and pin the items you use most.
-4. **Search**: full-text search looks at titles, descriptions, code, language, categories and tags.
-5. **Copy, share or export**: copy code with one tap, share it as Markdown or export the whole library to JSON or Markdown.
+4. **Write notes**: in Markdown, with the bar above the keyboard and `[[Title]]` links between notes (see [Markdown Notes and Links](/en/projects/codevault/docs/markdown-notes-and-links)).
+5. **Search**: search looks at titles, descriptions, code, note text, categories and tags, with filters such as `lang:swift` or `tag:cache`.
+6. **Copy, share or export**: copy code with one tap, share it as Markdown or export the whole library to JSON or Markdown.

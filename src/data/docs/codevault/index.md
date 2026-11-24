@@ -32,10 +32,12 @@ La persistenza usa **SwiftData** con uno schema versionato (`SnippetSchemaV1`–
 ### 4. Tre stili grafici
 Dalle Impostazioni puoi scegliere tra tre stili, che cambiano solo l'aspetto e non le funzioni:
 - **Terminale** (predefinito): scuro e monospaziato, con accento ambra.
-- **Tipografico**: chiaro ed essenziale, con titoli grandi e liste senza card.
-- **Vetro**: superfici di sistema e card arrotondate, in linea con il Liquid Glass.
+- **Tipografico**: chiaro ed essenziale, con titoli grandi ed elenchi numerati.
+- **Vetro**: i materiali di iOS, con schede e riquadri, in linea con il Liquid Glass.
 
-L'interfaccia è disponibile in italiano, inglese, tedesco, spagnolo, francese, portoghese e russo; la lingua si può cambiare dalle Impostazioni senza toccare quella di sistema.
+Il tema può essere chiaro, scuro o automatico. Tipografico e Vetro hanno sette colori di accento; il Terminale usa sempre l'ambra e rende al meglio con il tema scuro.
+
+L'interfaccia è disponibile in italiano, inglese, tedesco, spagnolo, francese, portoghese e russo; la lingua si può cambiare dalle Impostazioni senza toccare quella di sistema. In **Impostazioni › Informazioni › Guida all'uso** c'è una guida all'uso dell'app, in italiano e inglese.
 
 ---
 
@@ -44,5 +46,6 @@ L'interfaccia è disponibile in italiano, inglese, tedesco, spagnolo, francese, 
 1. **Crea uno snippet**: premi <kbd>⌘</kbd> <kbd>N</kbd> (Mac e iPad con tastiera) o tocca `+`. Per una nota usa <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd>.
 2. **Scegli il linguaggio**: tra i 20 supportati; per uno snippet nuovo CodeVault prova a riconoscerlo da solo dal codice che scrivi o incolli.
 3. **Organizza**: assegna una categoria e uno o più tag, e fissa in alto gli elementi che usi più spesso.
-4. **Cerca**: la ricerca full-text guarda titoli, descrizioni, codice, linguaggio, categorie e tag.
-5. **Copia, condividi o esporta**: copia il codice con un tocco, condividilo in Markdown o esporta l'intera libreria in JSON o Markdown.
+4. **Scrivi note**: in Markdown, con la barra sopra la tastiera e i collegamenti `[[Titolo]]` fra note (vedi [Note Markdown e collegamenti](/progetti/codevault/docs/note-markdown-e-collegamenti)).
+5. **Cerca**: la ricerca guarda titoli, descrizioni, codice, testo delle note, categorie e tag, con filtri come `lang:swift` o `tag:cache`.
+6. **Copia, condividi o esporta**: copia il codice con un tocco, condividilo in Markdown o esporta l'intera libreria in JSON o Markdown.

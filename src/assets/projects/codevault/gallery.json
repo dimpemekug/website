@@ -1,32 +1,48 @@
 {
   "captions": {
     "01-home": {
-      "it": "Home in stile Terminale, con snippet e note recenti",
-      "en": "Home in the Terminal style, with recent snippets and notes"
+      "it": "Home in stile Terminale: snippet recenti con una riga di codice, note recenti e contatori",
+      "en": "Home in the Terminal style: recent snippets with one line of code, recent notes and counters"
     },
-    "02-snippet": {
-      "it": "Uno snippet Swift con evidenziazione della sintassi e numeri di riga",
-      "en": "A Swift snippet with syntax highlighting and line numbers"
+    "02-compact": {
+      "it": "La Home nella vista a elenco compatto, con il linguaggio accanto a ogni snippet",
+      "en": "Home in the compact list view, with the language next to each snippet"
     },
-    "03-styles": {
-      "it": "Home in stile Tipografico, chiaro ed essenziale",
-      "en": "Home in the Typographic style, light and minimal"
+    "03-files": {
+      "it": "La Home nella vista Elenco file del Terminale, con snippet e note come nomi di file",
+      "en": "Home in the Terminal's file list view, with snippets and notes shown as file names"
     },
-    "04-list": {
-      "it": "Elenco degli snippet con elementi fissati, categorie e tag",
-      "en": "Snippet list with pinned items, categories and tags"
+    "04-snippet": {
+      "it": "Uno snippet Swift con evidenziazione della sintassi, numeri di riga e pulsante Copia",
+      "en": "A Swift snippet with syntax highlighting, line numbers and a Copy button"
     },
     "05-note": {
-      "it": "Una nota Markdown con titoli, elenchi e codice",
-      "en": "A Markdown note with headings, lists and code"
+      "it": "Una nota Markdown nell'anteprima, con caselle da spuntare e codice in linea",
+      "en": "A Markdown note in the preview, with tickable checkboxes and inline code"
     },
-    "06-glass": {
-      "it": "Home in stile Vetro, con le superfici di sistema di iOS",
-      "en": "Home in the Glass style, with native iOS surfaces"
+    "06-editor": {
+      "it": "L'editor di una nota Markdown, con i colori della sintassi e la barra di formattazione",
+      "en": "The editor of a Markdown note, with syntax colours and the formatting bar"
     },
-    "07-settings": {
-      "it": "Impostazioni: stile, tema, lingua, editor e sincronizzazione",
-      "en": "Settings: style, theme, language, editor and sync"
+    "07-links": {
+      "it": "Una nota con un collegamento [[…]] a un'altra nota, nell'anteprima",
+      "en": "A note with a [[…]] link to another note, in the preview"
+    },
+    "08-typographic": {
+      "it": "La Home in stile Tipografico, chiara, con elenchi numerati",
+      "en": "Home in the Typographic style, light, with numbered lists"
+    },
+    "09-glass": {
+      "it": "La Home in stile Vetro, con elementi fissati e riquadri degli snippet recenti",
+      "en": "Home in the Glass style, with pinned items and tiles for recent snippets"
+    },
+    "10-list": {
+      "it": "Su Mac: barra laterale, elenco degli snippet e uno snippet Python con due blocchi di codice",
+      "en": "On Mac: sidebar, snippet list and a Python snippet with two code blocks"
+    },
+    "10-settings": {
+      "it": "Impostazioni: stile, tema, colore accento, lingua, navigazione ed editor",
+      "en": "Settings: style, theme, accent colour, language, navigation and editor"
     }
   }
 }

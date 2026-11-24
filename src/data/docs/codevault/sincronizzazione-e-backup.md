@@ -2,7 +2,7 @@
 title: "Sincronizzazione e backup"
 description: "Sincronizzazione automatica tramite CloudKit, preferenze sincronizzate con l'archivio chiave-valore di iCloud, backup JSON ed esportazione Markdown e PDF."
 project: "codevault"
-order: 4
+order: 5
 section: "Dati e Backup"
 ---
 
@@ -11,7 +11,7 @@ section: "Dati e Backup"
 CodeVault sincronizza snippet e note tra Mac, iPhone e iPad usando **SwiftData con CloudKit**:
 
 - **Database privato**: i dati stanno solo nel database privato del tuo account iCloud e non sono accessibili a nessun altro, sviluppatore compreso.
-- **Funziona anche offline**: se iCloud non è disponibile o non è configurato, `PersistenceController` passa senza avvisi invadenti all'archivio locale. La sincronizzazione si può anche disattivare in **Impostazioni › Sincronizzazione**.
+- **Funziona anche offline**: se iCloud non è disponibile o non è configurato, `PersistenceController` passa senza avvisi invadenti all'archivio locale. La sincronizzazione si può anche disattivare in **Impostazioni › Dati › Sincronizzazione** (su Mac la scheda **Sincronizzazione**), dove si vede anche lo stato della sincronizzazione.
 - **Modifiche riconciliate da iCloud**: le modifiche fatte su dispositivi diversi vengono unite da CloudKit appena i dispositivi tornano online.
 - **Preferenze sincronizzate**: le impostazioni (stile, tema, colore d'accento, lingua, tema dell'editor, dimensione del carattere, numeri di riga, blocco biometrico) viaggiano separatamente tramite `NSUbiquitousKeyValueStore`, così ritrovi la stessa configurazione su ogni dispositivo. Lo stile grafico può anche restare legato al singolo dispositivo.
 
@@ -19,7 +19,7 @@ CodeVault sincronizza snippet e note tra Mac, iPhone e iPad usando **SwiftData c
 
 ## Backup, importazione ed esportazione
 
-I tuoi dati restano sempre tuoi, senza vincoli. Tutto si trova in **Impostazioni › Backup e importazione** e, su Mac, anche nel menu **File**.
+I tuoi dati restano sempre tuoi, senza vincoli. Tutto si trova in **Impostazioni › Dati › Backup e importazione** (su Mac la scheda **Dati**) e, su Mac, anche nel menu **File**. Backup, importazione e azzeramento lavorano in background: intanto puoi continuare a usare l'app.
 
 ### Backup JSON
 Crea una copia completa della libreria in un unico file JSON, con:
@@ -32,7 +32,7 @@ Il file si può reimportare su qualsiasi installazione di CodeVault. L'importazi
 Esporta l'intera libreria in un unico file `.md`: ogni snippet e ogni nota diventa una sezione con titolo, descrizione, linguaggio o formato, categoria e tag, e il codice è racchiuso in blocchi recintati con il nome del linguaggio. È comodo per consultare i contenuti in editor come Obsidian o VS Code.
 
 ### Condivisione e PDF
-Ogni snippet o nota si può condividere in Markdown con il foglio di condivisione di sistema (Mail, Messaggi, Note e altre app). Le note Markdown si possono anche esportare in **PDF**.
+Ogni snippet o nota si può condividere in Markdown con il foglio di condivisione di sistema (Mail, Messaggi, Note e altre app). Le note Markdown si possono anche esportare in **PDF** (vedi [Note Markdown e collegamenti](/progetti/codevault/docs/note-markdown-e-collegamenti)).
 
 ### Dati di esempio
 Da **Backup e importazione** puoi caricare una serie di snippet e note di esempio per provare l'app; caricarli di nuovo non li duplica.

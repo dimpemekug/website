@@ -2,7 +2,7 @@
 title: "Security, Biometrics and Trash"
 description: "Face ID and Touch ID lock, re-lock after a chosen interval and a Trash that keeps deleted items restorable for 30 days in CodeVault."
 project: "codevault"
-order: 3
+order: 4
 section: "Security"
 ---
 
@@ -22,6 +22,6 @@ Snippets and notes often contain configuration, deployment scripts or sensitive 
 Since version 9 of the data schema, CodeVault does not delete items right away but moves them to the **Trash** (*soft delete*):
 
 - **No accidental losses**: a deleted snippet or note is not removed from the database; it is stamped with its deletion date (the `deletedAt` field) and hidden from the lists.
-- **Trash view**: in **Settings › Trash** you find every deleted item and can restore it with one click.
+- **Trash view**: in **Settings › Data › Trash** (on Mac, the **Trash** tab) you find every deleted item and can restore it with one click.
 - **Automatic cleanup after 30 days**: when the app launches, items that have been in the Trash for more than 30 days are permanently deleted.
 - **Manual emptying**: the **Empty Trash** button deletes everything at once, after a confirmation.
