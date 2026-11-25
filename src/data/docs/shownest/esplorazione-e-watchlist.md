@@ -22,7 +22,7 @@ La scheda **Esplora** di ShowNest ti aiuta a scoprire nuovi titoli con diverse s
 Per aggiungere una serie basta un tocco dalla sua scheda. La **Watchlist** mostra:
 
 ### Da vedere
-Per ogni serie in corso, il prossimo episodio non ancora visto con il suo codice (es. *S02E04*) e il titolo. Con un tocco lo segni come visto e, se hai sbagliato, puoi annullare l'ultimo episodio segnato.
+Per ogni serie in corso, il prossimo episodio non ancora visto con il suo codice (es. *S02E04*) e il titolo. Lo segni come visto con il pulsante ✓ della riga, oppure scorrendo la riga verso destra. In basso compare per qualche secondo un avviso con **Annulla**, che toglie l'episodio appena segnato. Scorrendo la riga verso sinistra apri **Segna individualmente**, per scegliere gli episodi uno per uno.
 
 ### In uscita
 Le serie in cui sei in pari mostrano quanti giorni mancano al prossimo episodio annunciato.
@@ -47,6 +47,9 @@ La scheda **Le mie serie** raggruppa la libreria in base a ciò che hai fatto co
 
 Nella scheda di una serie puoi:
 - **Segnare un singolo episodio** o una **stagione intera** come vista, oppure usare **Segna tutti come visti** per l'intera serie (comodo per le serie che hai già guardato in passato).
+- **Segnare fino a un episodio**: nel menu di un episodio, **Segna fino a qui** segna come visti quell'episodio e tutti i precedenti, anche delle stagioni prima (gli speciali restano fuori). Gli episodi già segnati conservano la loro data.
 - **Scegliere la data**: segna gli episodi come visti oggi o nel giorno in cui sono andati in onda, così le statistiche restano fedeli.
 - **Deselezionare una stagione** o un episodio segnati per errore.
-- **Aprire i dettagli di un episodio**: titolo, trama, durata e data di messa in onda.
+- **Aprire i dettagli di un episodio**: titolo, trama, durata e data di messa in onda. Con le frecce **Episodio precedente** ed **Episodio successivo** passi agli altri episodi della stagione senza chiudere la scheda.
+
+La pagina di una stagione mostra in alto quanti episodi hai visto (per esempio *5 di 10 visti*) e qual è il prossimo. Le stagioni annunciate ma non ancora iniziate sono indicate come **In arrivo**, con la data di inizio quando TMDB la conosce.

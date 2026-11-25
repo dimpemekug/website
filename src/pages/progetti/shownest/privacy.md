@@ -10,6 +10,8 @@ Questa Informativa sulla Privacy descrive come **ShowNest** tratta i dati.
 
 ## Sintesi
 
+ShowNest è progettata per funzionare localmente sul dispositivo dell'utente.
+
 - Non è richiesto alcun account
 - Non vengono utilizzati strumenti di analytics
 - Non vengono utilizzati SDK pubblicitari

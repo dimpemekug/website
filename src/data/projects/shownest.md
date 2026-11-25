@@ -20,11 +20,11 @@ ShowNest ti dice sempre qual è il prossimo episodio da vedere: segui le tue ser
 
 ## Funzionalità principali
 
-- **La tua watchlist** — il prossimo episodio di ogni serie che segui; per quelle in cui sei in pari, i giorni che mancano al prossimo episodio; ordinamento per visione recente, aggiunta recente, ultimo episodio uscito, titolo o episodi rimanenti
-- **Segna gli episodi come preferisci** — uno alla volta, una stagione intera o tutta la serie, come visti oggi o nel giorno in cui sono usciti, con l'annullamento dell'ultimo episodio segnato
+- **La tua watchlist** — il prossimo episodio di ogni serie che segui; per quelle in cui sei in pari, i giorni che mancano al prossimo episodio; lo segni come visto con il pulsante ✓ o scorrendo la riga, e lo annulli subito con «Annulla»; ordinamento per visione recente, aggiunta recente, ultimo episodio uscito, titolo o episodi rimanenti
+- **Segna gli episodi come preferisci** — uno alla volta, una stagione intera, tutta la serie o tutti quelli fino a un episodio con «Segna fino a qui», come visti oggi o nel giorno in cui sono usciti; la pagina di ogni stagione mostra quanti episodi hai visto e qual è il prossimo
 - **Le mie serie** — la libreria divisa in In uscita, In corso, Da iniziare e Completate, più l'archivio per le serie finite, che restano nelle statistiche
 - **Trova cosa guardare** — Tendenze, Popolari, Più votate e In onda oggi, suggerimenti in base a ciò che segui e ricerca in tutto il catalogo di TMDB, con trailer e titoli simili
-- **Statistiche** — tempo totale, episodi visti, serie completate, riepilogo dell'anno, giorni consecutivi, generi preferiti e cronologia di ogni visione
+- **Statistiche** — tempo totale, episodi visti, serie completate, andamento mensile con la media, riepilogo dell'anno, giorni consecutivi, generi preferiti e cronologia di ogni visione, filtrabile per serie
 - **Notifiche nuovi episodi** — un avviso il giorno in cui esce un nuovo episodio delle serie che segui
 - **Sincronizzazione iCloud facoltativa** — libreria ed episodi visti allineati tra iPhone e iPad
 - **A modo tuo** — tema chiaro, scuro o di sistema, sei colori d'accento, sette lingue

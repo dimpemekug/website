@@ -22,8 +22,8 @@ La scheda **Statistiche** trasforma le tue visioni in numeri e grafici:
 
 - **Tempo totale di visione**: la somma della durata degli episodi che hai visto, in ore e minuti.
 - **Contatori**: serie seguite (e archiviate), episodi visti e serie completate.
-- **Riepilogo dell'anno**: le ore di visione mese per mese in un grafico a barre, a confronto con l'anno precedente.
+- **Andamento mensile e riepilogo dell'anno**: le ore di visione mese per mese in un grafico a barre, con una linea tratteggiata per la media mensile, a confronto con l'anno precedente.
 - **Ritmo di visione**: il giorno della settimana in cui guardi di più, la media giornaliera, i giorni consecutivi di visione e il tuo record.
 - **Tempo rimanente e tasso di completamento**: quanto ti manca per finire le serie in corso e quante delle serie iniziate hai portato a termine.
 - **Generi preferiti**: la percentuale di ciascun genere sul totale delle tue visioni.
-- **Serie più viste** e **cronologia** di tutte le visioni, con la data di ogni episodio.
+- **Serie più viste** e **Cronologia visione**: ogni episodio visto, con il titolo e la data; la cronologia si filtra per serie (**Filtra per serie**) e si apre anche dalle Impostazioni.

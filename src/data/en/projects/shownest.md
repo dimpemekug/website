@@ -20,11 +20,11 @@ ShowNest always tells you which episode is next: follow your TV shows, mark the 
 
 ## Key Features
 
-- **Your watchlist** — the next episode of every show you follow; for shows you're caught up on, the days until the next episode; sorting by recently watched, recently added, newest episode, title or episodes left
-- **Mark episodes your way** — one at a time, a whole season or the entire show, as watched today or on their air date, with undo for the last episode you marked
+- **Your watchlist** — the next episode of every show you follow; for shows you're caught up on, the days until the next episode; mark it as watched with the ✓ button or a swipe on the row, and take it back right away with Undo; sorting by recently watched, recently added, newest episode, title or episodes left
+- **Mark episodes your way** — one at a time, a whole season, the entire show or everything up to an episode with Mark up to here, as watched today or on their air date; each season's page shows how many episodes you've seen and which one is next
 - **My Shows** — your library split into Coming Up, In progress, Not started and Completed, plus an archive for finished shows, which still count in your statistics
 - **Find something to watch** — Trending, Popular, Top Rated and Airing Today, suggestions based on what you follow and search across the whole TMDB catalog, with trailers and similar titles
-- **Statistics** — total time, episodes watched, completed shows, yearly recap, day streaks, favorite genres and a history of everything you've watched
+- **Statistics** — total time, episodes watched, completed shows, monthly trend with the average, yearly recap, day streaks, favorite genres and a history of everything you've watched, filterable by show
 - **New-episode notifications** — an alert on the day a new episode of your shows comes out
 - **Optional iCloud sync** — your library and watched episodes kept in step between iPhone and iPad
 - **Your way** — light, dark or system theme, six accent colors, seven languages

@@ -1,26 +1,42 @@
 {
   "captions": {
     "01-watchlist": {
-      "it": "La watchlist con il prossimo episodio di ogni serie",
-      "en": "The watchlist with the next episode of every show"
+      "it": "La Watchlist con il prossimo episodio di ogni serie e il pulsante ✓ per segnarlo",
+      "en": "The Watchlist with the next episode of every show and the ✓ button to mark it"
     },
     "02-detail": {
-      "it": "La scheda di una serie con le stagioni e i titoli simili",
-      "en": "A show's page with its seasons and similar titles"
+      "it": "La pagina di una serie con le stagioni, il prossimo episodio e una stagione in arrivo",
+      "en": "A show's page with its seasons, the next episode and an upcoming season"
     },
-    "03-myshows": {
+    "03-season": {
+      "it": "La pagina di una stagione: episodi visti, avanzamento e prossimo episodio",
+      "en": "A season's page: watched episodes, progress and the next episode"
+    },
+    "04-episode": {
+      "it": "La scheda di un episodio con trama, data e durata, e le frecce per gli altri episodi",
+      "en": "An episode sheet with plot, air date and runtime, and arrows to the other episodes"
+    },
+    "05-myshows": {
       "it": "Le mie serie: in uscita, in corso, completate",
       "en": "My Shows: coming up, in progress, completed"
     },
-    "04-explore": {
+    "06-explore": {
       "it": "Esplora: tendenze e suggerimenti in base a ciò che segui",
       "en": "Explore: trending shows and picks based on what you follow"
     },
-    "05-stats": {
-      "it": "Statistiche: tempo totale, episodi visti e andamento mensile",
-      "en": "Statistics: total time, episodes watched and monthly trend"
+    "07-stats": {
+      "it": "Statistiche: tempo totale, contatori e andamento mensile con la media",
+      "en": "Statistics: total time, counters and the monthly trend with its average"
     },
-    "06-dark": {
+    "08-history": {
+      "it": "La cronologia delle visioni, giorno per giorno, con i titoli degli episodi",
+      "en": "Watch History, day by day, with episode titles"
+    },
+    "09-settings": {
+      "it": "Le Impostazioni: tema, colore d'accento, lingua e stile del menu",
+      "en": "Settings: theme, accent color, language and menu style"
+    },
+    "10-dark": {
       "it": "La watchlist con il tema scuro",
       "en": "The watchlist in dark mode"
     }

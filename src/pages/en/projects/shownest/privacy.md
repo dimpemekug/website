@@ -10,6 +10,8 @@ This Privacy Policy describes how **ShowNest** handles data.
 
 ## Summary
 
+ShowNest is designed to operate locally on the user's device.
+
 - No account is required
 - No analytics tools are used
 - No advertising SDKs are used
@@ -18,7 +20,7 @@ This Privacy Policy describes how **ShowNest** handles data.
 - iCloud sync, if enabled by the user, happens directly between the device and the user's own Apple Account and does not pass through the developer's servers
 - The app communicates with The Movie Database (TMDB) API to retrieve show and episode information; no personal data is included in these requests
 
-## Data processed by the app
+## Data the app handles
 
 The app allows the user to locally build and manage a library of TV shows, including:
 
