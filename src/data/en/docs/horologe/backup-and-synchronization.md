@@ -1,44 +1,51 @@
 ---
 title: "Backup, Sync and Export"
-description: "ZIP archive with photos, safety copy, CloudKit sync on iOS, PDF sheets, insurance inventory and CSV export in Horologe."
+description: "ZIP backup with photos, a safety copy you can restore, iCloud sync on iOS, PDF sheets, an insurance inventory and CSV export in Horologe."
 project: "horologe"
-order: 5
+order: 6
 section: "Data & Sync"
 ---
 
-## The ZIP Backup
+## The ZIP backup
 
-Many cataloging apps export plain text only and lose your images. Horologe instead creates a **complete `.zip` archive**:
+Horologe creates a **complete `.zip` archive**, with your data and files:
 
 ```text
-Backup_Horologe.zip
-├── manifest.json            ← watches, services, wrist days, accuracy
+Backup Horologe 2026-11-25 10-30.zip
+├── manifest.json            ← watches, services, wear days, accuracy
 ├── watch_1_cover.jpg        ← cover photo
-├── watch_1_gallery_1.jpg    ← gallery photos
+├── watch_1_gallery_1.jpg    ← gallery photo
 ├── watch_1_att_1.pdf        ← attachments
 ├── watch_2_cover.jpg
 └── ...
 ```
 
-The format is the same on iOS and Android: export the archive from an iPhone and you can import it on Android (and vice versa), with every photo and detail in place.
+The format is the same on iOS and Android: export the archive from an iPhone, import it on Android (or the other way round), and every photo and detail is back in place. On Android you can share the backup or save it to a folder; Android also imports older JSON backups.
 
-### Importing a Backup
-Importing **replaces** your current collection with the backup's. On iOS, before doing so, Horologe automatically saves a **safety copy** of the current collection: if you change your mind, **Restore previous collection** takes you back. The same copy is made before a reset or loading sample data.
+### Importing a backup
+Importing **replaces** the current collection with the one in the backup, after a confirmation.
+
+### Safety copy
+Before an import, a reset or loading the sample data, Horologe saves a **safety copy** of the current collection on the device, on iOS and on Android. If you change your mind, tap **Restore previous collection** in Settings: the copy takes the place of the current collection, which in turn becomes the new copy, so you can always go back.
+
+The copy stays in the app's storage and is excluded from the device backup.
 
 ---
 
-## iCloud Sync (iOS Only)
+## iCloud sync (iOS only)
 
-On iPhone and iPad Horologe can sync your collection through **CloudKit**, in your private database:
-- **Data**: a compact manifest in the `primary-v2` record.
-- **Photos and attachments without duplicates**: each file is a `file-<sha256>` record identified by its content; if it's already in iCloud it isn't uploaded again.
-- **Large collections**: requests are spread over time and, if CloudKit asks to slow down (HTTP 429), the app waits and retries instead of giving up.
-- **Who wins**: if the collection changed on several devices, the most recent change prevails.
+On iPhone and iPad you can turn on sync in Settings, under **Data**. Horologe uses **CloudKit**, in your iCloud account's private database:
+- **What syncs**: watches, photos, attachments, services, measurements and wear days. Settings stay on each device.
+- **No duplicate photos or attachments**: each file is identified by its content; if it's already in iCloud it isn't uploaded again, and if it's already on the device it isn't downloaded again.
+- **Large collections**: if CloudKit asks to slow down, the app waits and retries instead of stopping.
+- **Who wins**: if the collection changed on more than one device, the most recent change wins.
+
+Android has no sync: the app doesn't connect to the Internet. Android backup, if on, may include the app's data.
 
 ---
 
 ## PDF and CSV
 
-- **Watch PDF sheet**: a document with photos, technical details, service history and accuracy measurements, to share or include with a sale.
-- **Insurance PDF** (iOS): an A4 inventory of the collection with a summary (number of pieces, purchase value per currency, full sets), a table of every watch and a page for each one with photos, reference, serial number, purchase details and papers.
-- **CSV**: the whole collection as a table, to open in Excel, Numbers or Google Sheets.
+- **Watch PDF sheet**: a document with photos, technical details, service history and accuracy measurements, from the watch page's menu.
+- **Insurance PDF**: an A4 inventory of the watches in the collection (owned and in repair), with a summary and a page for each one with photo, reference, serial number, purchase details and papers. Create it from Settings, on iOS and Android.
+- **CSV**: the whole collection as a table, with semicolons as separators and headers in the app's language, to open in Excel, Numbers or Google Sheets.

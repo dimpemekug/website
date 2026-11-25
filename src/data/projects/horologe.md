@@ -3,7 +3,7 @@ title: "Horologe"
 seoTitle: "Horologe: app per catalogare la collezione di orologi"
 applicationCategory: "LifestyleApplication"
 seoDescription: "Cataloga la tua collezione di orologi su iPhone, iPad e Android: statistiche, wishlist e registro al polso. Gratuita e senza pubblicità."
-description: "App mobile per catalogare e gestire la tua collezione di orologi. Statistiche, stato e wishlist, registro al polso e blocco biometrico. Database locale, gratuita, senza pubblicità né acquisti in-app."
+description: "App per iPhone, iPad e Android per catalogare la tua collezione di orologi: foto, revisioni, assistente di precisione, diario al polso e statistiche. Dati sul dispositivo. Gratuita, senza pubblicità né acquisti in-app."
 pubDatetime: 2026-02-11T00:00:00+01:00
 draft: false
 tags: ["iOS", "Android", "mobile", "collezionismo", "privacy"]
@@ -11,29 +11,32 @@ appStore: "https://apps.apple.com/us/app/horologe/id6758836092"
 playStore: "https://play.google.com/store/apps/details?id=com.dimpemekug.horologe"
 privacyDataTypes: "dati degli orologi (marca, modello, prezzo, date), foto, manutenzioni, wishlist, registro al polso, misurazioni di precisione e documenti allegati"
 privacyStorageNote: "Se attivi la sincronizzazione iCloud (facoltativa, solo iOS), una copia del backup viene salvata nel tuo iCloud personale tramite Apple CloudKit — non passa mai dai nostri server."
-privacyUpdatedAt: "13 ottobre 2026"
+privacyUpdatedAt: "25 novembre 2026"
 privacyUrl: "/progetti/horologe/privacy/"
 ---
 
 ## Cos'è Horologe
 
-Horologe è l'app pensata per gli appassionati di orologi che vogliono catalogare, gestire e ammirare la propria collezione in modo ordinato e privato. Marca, referenza, prezzi, foto, garanzie e interventi di manutenzione: tutto in un unico posto, salvato localmente sul dispositivo.
+Horologe è l'app per chi colleziona orologi e vuole catalogarli in modo ordinato e privato. Marca, referenza, prezzi, foto, documenti, revisioni, precisione e giorni al polso: tutto in un unico posto, salvato sul dispositivo e senza account.
 
 ## Funzionalità principali
 
-- **Database completo** — marca, modello, referenza, numero di serie, calibro, anno di produzione e molto altro
-- **Galleria HD** — foto di ogni orologio, corredo, garanzia, fondello e dettagli del quadrante
-- **Statistiche della collezione** — valore totale, distribuzione per marca e movimento, pezzi più indossati
-- **Stato e wishlist** — posseduto, venduto, in wishlist o in riparazione, con plusvalenza calcolata automaticamente alla vendita
-- **Registro manutenzione** — interventi effettuati e costi di servizio, con promemoria di revisione in base all'intervallo impostato
-- **Registro al polso** — segna con un tocco i giorni in cui indossi un orologio e scopri quali usi di più
-- **Registro precisione** — tieni traccia dello scarto di marcia giornaliero dei tuoi movimenti nel tempo
-- **Allegati documenti** — conserva garanzie, scontrini e certificati insieme a ogni orologio
-- **Blocco app** — proteggi la collezione con Face ID o Touch ID su iOS, con impronta, volto o PIN su Android
-- **Export e backup** — scheda PDF di ogni orologio, inventario PDF per l'assicurazione (iOS), CSV della collezione e backup ZIP completo con le foto, compatibile tra iOS e Android
-- **Privacy first** — database salvato localmente sul dispositivo (o sul tuo iCloud personale), nessun server esterno
+- **Scheda completa** — marca, modello, referenza, numero di serie, movimento, calibro, diametro, materiale, anno, scatola e documenti, più i campi personalizzati
+- **Foto e documenti** — copertina e galleria da sfogliare a schermo intero, con lo zoom; garanzie, ricevute e certificati allegati in PDF o come immagini
+- **Collezione a griglia o a elenco** — ricerca, filtri per stato, marca e movimento, dieci ordinamenti e gli orologi indossati di recente
+- **Stato e wishlist** — posseduto, in riparazione, venduto o in wishlist, con il guadagno calcolato alla vendita
+- **Prezzi in qualsiasi valuta** — euro, dollaro, sterlina, franco, yen o un'altra valuta scritta da te, anche diversa per ogni orologio
+- **Revisioni e promemoria** — storico degli interventi con i costi e una notifica quando un orologio è da portare in assistenza
+- **Assistente di precisione** — due letture a un giorno di distanza confrontate con l'ora del telefono, il risultato in secondi al giorno e il grafico nel tempo
+- **Diario al polso** — segna l'orologio che indossi oggi e ritrova i giorni in un calendario mensile
+- **Statistiche** — valore della collezione e il suo andamento, marche e movimenti, prossime revisioni, vendite, pezzi più indossati e costo per utilizzo
+- **Export e backup** — scheda PDF di ogni orologio, inventario PDF per l'assicurazione, CSV della collezione e backup ZIP con foto e allegati, compatibile tra iOS e Android; prima di importare o azzerare, una copia di sicurezza da ripristinare
+- **Blocco dell'app** — Face ID, Touch ID o codice su iOS; impronta, volto o PIN su Android
+- **Privacy** — nessun account e nessun server: i dati restano sul dispositivo (o nel tuo iCloud privato, se attivi la sincronizzazione)
+- **Solo su iOS** — sincronizzazione iCloud tra iPhone e iPad, fotocamera per le foto, fascia di tolleranza COSC nel grafico della precisione
+- **Solo su Android** — stile grafico personalizzato con tema chiaro o scuro e otto colori d'accento o i colori dello sfondo
 - **Nessun abbonamento** — gratuita, senza pubblicità e senza acquisti in-app
 
 ## Piattaforme
 
-Disponibile su **iPhone** e **iPad** con iOS/iPadOS 17 o successivo e su **Android** 7.0 o successivo, in sette lingue. La sincronizzazione iCloud è disponibile solo su iOS.
+Disponibile su **iPhone** e **iPad** con iOS/iPadOS 17 o successivo e su **Android** 7.0 o successivo, compresi tablet e pieghevoli, in sette lingue: italiano, inglese, francese, spagnolo, portoghese, tedesco e russo.

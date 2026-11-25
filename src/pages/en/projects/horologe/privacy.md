@@ -4,7 +4,7 @@ title: "Horologe Privacy Policy"
 description: "Full privacy policy for the Horologe app: what data is processed, where it stays, and how optional iCloud sync on iOS and Android backup work."
 ---
 
-Last updated: October 13, 2026
+Last updated: November 25, 2026
 
 This Privacy Policy describes how **Horologe** handles data, on iOS and on Android.
 
@@ -59,7 +59,9 @@ If the user turns on service reminders, Horologe schedules local notifications o
 
 ## Export and import
 
-Backups (ZIP) and watch PDF sheets are created only when the user asks, and saved or shared to the destination the user chooses. Import reads only the file the user selects and replaces the collection: on Android it asks for confirmation first; on iOS the app keeps a safety copy of the previous collection on the device, so the operation can be undone.
+Backups (ZIP), CSV files, watch PDF sheets and the PDF inventory for insurance are created only when the user asks, and saved or shared to the destination the user chooses. Import reads only the file the user selects and replaces the collection (on Android after a confirmation).
+
+Before an import replaces the data (on Android also before a reset or loading the sample data), the app saves a safety copy of the current collection on the device, so the operation can be undone. On Android the copy is excluded from Android backup.
 
 ## Device permissions
 
@@ -77,7 +79,7 @@ The app does not use the user's location for any feature and does not access con
 
 Horologe does not share user data with the developer or with third parties, for any purpose: analytics, advertising, profiling, or tracking.
 
-The only exception is when the user explicitly exports, saves, or shares a backup or a PDF: the file goes only to the destination the user chooses.
+The only exception is when the user explicitly exports, saves, or shares a backup, a CSV file, or a PDF: the file goes only to the destination the user chooses.
 
 ## Data storage
 
@@ -86,17 +88,17 @@ The app stores on the device, in its own storage:
 - the database (SQLite) with watches, services, wear log, and accuracy log
 - photos and attachments
 - preferences
-- on iOS, the safety copy made before the last import
+- the safety copy made before the last import (on Android also before a reset or loading the sample data)
 
 On iOS, when iCloud sync is on, the collection is also kept in the user's CloudKit private database.
 
 ## Retention and deletion
 
 - Watches, services, photos, and attachments are edited or deleted in the app.
-- Importing a backup replaces the collection's data; on iOS the safety copy makes it possible to go back.
+- Importing a backup replaces the collection's data; the previous collection stays in the safety copy, which makes it possible to go back until another action replaces it.
 - Uninstalling the app, or on Android clearing its data in the system settings, removes local data.
 - On iOS, data synced to iCloud can be deleted in Settings › [your name] › iCloud › Manage Storage.
-- Exported backups and PDFs stay where the user saved them until they are deleted.
+- Exported backups, CSV files, and PDFs stay where the user saved them until they are deleted.
 
 Because the developer receives and stores no data, they cannot access, correct, or delete user data on the user's behalf.
 
@@ -108,7 +110,7 @@ Horologe is not specifically directed at children and does not collect personal 
 
 The app relies on the operating system's security mechanisms, which keep each app's data separate. The optional lock protects access to the app; on iOS, synced data is handled by iCloud under Apple's terms.
 
-No method of on-device storage can be guaranteed to be completely secure, especially after the user exports or shares a backup or a PDF outside the app.
+No method of on-device storage can be guaranteed to be completely secure, especially after the user exports or shares a backup, a CSV file, or a PDF outside the app.
 
 ## Changes to this policy
 

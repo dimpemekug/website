@@ -1,57 +1,60 @@
 ---
 title: "iOS vs Android Comparison"
-description: "Technologies, data storage, sync, appearance and differences between Horologe for iOS and Horologe for Android."
+description: "What Horologe for iOS and for Android share and where they differ: data, sync, camera, appearance, app lock, export and backup."
 project: "horologe"
 order: 2
 section: "Platforms"
 ---
 
-## Two Native Versions
+## Two native versions, the same features
 
-On **iOS** and **Android**, Horologe uses the same SQLite database (schema version 11), the same image folder and the same ZIP backup format. Each version, however, follows its own platform's technologies and conventions.
+Horologe for **iOS** (1.3.0) and for **Android** (2.2.0) have nearly the same features: watch record, gallery, attachments, services with reminders, accuracy assistant, wear diary, statistics, ten sort orders, insurance PDF, CSV and ZIP backup. They use the same SQLite database (schema version 11), the same image folder and the same backup format, so a collection moves from one system to the other without losing anything.
+
+The differences are few and mostly come from what each system offers.
 
 ---
 
-## Comparison Table
+## Comparison table
 
 | Feature | Horologe for iOS | Horologe for Android |
 | :--- | :--- | :--- |
-| **Language and UI** | Swift 6, SwiftUI with `@Observable` | Kotlin 2.4, Jetpack Compose |
-| **Design** | Apple guidelines, adaptive layout for iPhone and iPad | Material 3: black and `#FFE600` yellow theme, dynamic color or a color of your choice |
-| **Minimum requirements** | iOS/iPadOS 17.0 or later | Android 7.0 (API 24) or later |
-| **Database** | **GRDB.swift** on SQLite (`Documents/horologe.db`) | Native SQLite (`WatchDatabase.kt`, `app_flutter/horologe.db`) |
-| **Photos and attachments** | `Documents/watch_images/` | `app_flutter/watch_images/` |
-| **Sync** | iCloud (CloudKit, private database) | None, file backups only |
-| **App lock** | Face ID / Touch ID | Fingerprint, face or PIN (BiometricPrompt) |
-| **PDF** | Single-watch sheet and collection inventory for insurance | Single-watch sheet |
-| **Accuracy measurement** | Guided two-reading assistant or manual entry | Manual entry of the deviation |
-| **Service reminders** | Local notifications (`UserNotifications`) | `AlarmManager`, rescheduled after reboots and every update |
-| **Backup format** | ZIP with `manifest.json` (version 3) and photos | ZIP with `manifest.json` (version 3) and photos |
+| **Devices and requirements** | iPhone and iPad with iOS/iPadOS 17 or later | Phones, tablets and foldables with Android 7.0 (API 24) or later |
+| **Language and UI** | Swift 6, SwiftUI | Kotlin, Jetpack Compose (Material 3) |
+| **Database** | GRDB on SQLite (`Documents/horologe.db`) | SQLite (`app_flutter/horologe.db`) |
+| **Sync** | iCloud (CloudKit, private database), optional | None; data may be included in Android backup, if on |
+| **Internet access** | Only through iCloud, if you turn on sync | None: the app has no network permission |
+| **Photos** | Photos library or **camera** | Android photo picker |
+| **Appearance** | System, Light or Dark theme | **Horologe** style (black and yellow `#FFE600`) or **Custom**: System, Light or Dark theme and an accent color |
+| **App lock** | Face ID, Touch ID or device passcode | Device fingerprint, face or PIN |
+| **Accuracy chart** | With the green COSC tolerance band (−4/+6 s/d) | The last 12 measurements, with **Last** and **Average** |
+| **Service reminders** | Local notifications | `AlarmManager`, rescheduled after a reboot or an update |
+| **Export** | Share | Share, or save to a folder you choose |
+| **Import** | ZIP backup | ZIP backup and older JSON backups |
+| **Backup format** | ZIP with `manifest.json` (version 3) and photos | Same |
 
 ---
 
-## Platform Details
+## Platform details
 
-### Horologe for iOS
-- **iCloud sync**:
-  - the `primary-v2` record holds a compact JSON manifest with watches, services, wrist days and measurements;
-  - photos and attachments travel as separate `file-<sha256>` records, identified by their content: a file already in iCloud isn't uploaded again, and one already on the device isn't downloaded again;
-  - with very large collections CloudKit may throttle requests (HTTP 429): Horologe honors the wait times the server asks for (`CKErrorRetryAfterKey`) and pauses between batches of files, so the first upload gets all the way through.
-- **iPad**: adaptive sidebar and a wider grid.
-- **Wear diary** with a monthly calendar.
+### iOS only
+- **iCloud sync** between iPhone and iPad: see [Backup, Sync and Export](/en/projects/horologe/docs/backup-and-synchronization).
+- **Camera** for the cover photo and gallery.
+- **iPad**: sidebar, grid view always on, watch page and statistics in two columns.
+- On iOS 26, the Liquid Glass look; a zoom transition from the collection to the watch page; Reduce Motion respected.
 
-### Horologe for Android
-- **Colors**: the default theme is black with `#FFE600` yellow; alternatively, dynamic colors taken from your wallpaper (Android 12+) or one of eight base colors from which Material 3 builds the whole palette.
-- **No Internet access**: the app doesn't request network permission; data and photos stay in the app's private storage.
-- **Reliable reminders**: after a phone reboot or an app update (`MY_PACKAGE_REPLACED`), a dedicated receiver reschedules every service reminder.
-- **Large screens**: layouts for tablets and foldables.
+### Android only
+- **Graphic style**: the **Horologe** style is always dark, black with yellow `#FFE600`. With **Custom** you pick the theme and one of eight accent colors (yellow, blue, purple, teal, green, orange, red, pink) or, from Android 12, your wallpaper colors.
+- **No Internet access**: data and photos stay in the app's private storage.
+- **Save to file**: backups, CSV files and PDFs can be shared or saved to a folder.
+- **Tablets and foldables**: side navigation, adaptive grid and a two-column watch page on wide screens.
+
+### Coming to iOS
+A few features that started on Android 2.2.0 reach iOS with the update after 1.3.0: currencies typed in with **Other…**, zoom in the full-screen gallery, and the reminder notification in the app's language.
 
 ---
 
-## Interchangeable Backups
+## Interchangeable backups
 
-A Horologe `.zip` archive contains:
-1. `manifest.json`: the whole collection in JSON (version 3), with services, wrist days and accuracy measurements;
-2. photos and attachments, with predictable names (`watch_1_cover.jpg`, `watch_1_gallery_1.jpg`, `watch_1_att_1.pdf`…).
+Horologe's `.zip` archive contains `manifest.json` (the whole collection, version 3) and the photos and attachments with predictable names (`watch_1_cover.jpg`, `watch_1_gallery_1.jpg`, `watch_1_att_1.pdf`…).
 
-**You can export your collection from an iPhone and import it on Android, or vice versa, without losing any data, dates, photos or service history.**
+**You can export the collection from an iPhone and import it on Android, or the other way round, with photos, services, wear days and measurements.**

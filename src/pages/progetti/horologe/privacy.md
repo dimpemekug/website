@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - Horologe"
 description: "Privacy dell'app Horologe: quali dati vengono trattati, dove restano e come funzionano la sincronizzazione iCloud facoltativa su iOS e il backup di Android."
 ---
 
-Ultimo aggiornamento: 13 ottobre 2026
+Ultimo aggiornamento: 25 novembre 2026
 
 Questa Informativa sulla Privacy descrive come **Horologe** tratta i dati, su iOS e su Android.
 
@@ -59,7 +59,9 @@ Se l'utente attiva i promemoria di revisione, Horologe programma notifiche local
 
 ## Esportazione e importazione
 
-I backup (ZIP) e le schede PDF degli orologi vengono creati solo su richiesta dell'utente e salvati o condivisi nella destinazione che l'utente sceglie. L'importazione legge solo il file selezionato dall'utente e sostituisce la collezione: su Android chiede prima conferma; su iOS l'app conserva sul dispositivo una copia di sicurezza della collezione precedente, per poter annullare l'operazione.
+I backup (ZIP), i file CSV, le schede PDF degli orologi e l'inventario PDF per l'assicurazione vengono creati solo su richiesta dell'utente e salvati o condivisi nella destinazione che l'utente sceglie. L'importazione legge solo il file selezionato dall'utente e sostituisce la collezione (su Android dopo una conferma).
+
+Prima che un'importazione sostituisca i dati (su Android anche prima di un azzeramento o del caricamento dei dati di esempio), l'app salva sul dispositivo una copia di sicurezza della collezione attuale, per poter annullare l'operazione. Su Android la copia è esclusa dal backup di Android.
 
 ## Permessi del dispositivo
 
@@ -77,7 +79,7 @@ L'app non usa la posizione dell'utente per nessuna funzione e non accede a conta
 
 Horologe non condivide dati dell'utente con lo sviluppatore o con terze parti, per nessuna finalità: analytics, pubblicità, profilazione o tracciamento.
 
-L'unica eccezione è quando l'utente esporta, salva o condivide esplicitamente un backup o un PDF: il file va solo verso la destinazione scelta dall'utente.
+L'unica eccezione è quando l'utente esporta, salva o condivide esplicitamente un backup, un CSV o un PDF: il file va solo verso la destinazione scelta dall'utente.
 
 ## Conservazione dei dati
 
@@ -86,17 +88,17 @@ L'app salva sul dispositivo, nel proprio spazio:
 - il database (SQLite) con orologi, revisioni, registro al polso e registro di precisione
 - le foto e gli allegati
 - le preferenze
-- su iOS, la copia di sicurezza creata prima dell'ultima importazione
+- la copia di sicurezza creata prima dell'ultima importazione (su Android anche prima di un azzeramento o del caricamento dei dati di esempio)
 
 Su iOS, se la sincronizzazione iCloud è attiva, la collezione è conservata anche nel database privato CloudKit dell'utente.
 
 ## Conservazione e cancellazione
 
 - Orologi, revisioni, foto e allegati si modificano o eliminano dall'app.
-- Importare un backup sostituisce i dati della collezione; su iOS la copia di sicurezza permette di tornare indietro.
+- Importare un backup sostituisce i dati della collezione; la collezione precedente resta nella copia di sicurezza, che permette di tornare indietro finché un'altra azione non la sostituisce.
 - Disinstallare l'app, o su Android cancellarne i dati dalle impostazioni di sistema, rimuove i dati locali.
 - Su iOS, i dati sincronizzati in iCloud si possono eliminare da Impostazioni › [nome utente] › iCloud › Gestisci spazio.
-- I backup e i PDF esportati restano dove l'utente li ha salvati finché non li elimina.
+- I backup, i CSV e i PDF esportati restano dove l'utente li ha salvati finché non li elimina.
 
 Poiché lo sviluppatore non riceve né conserva alcun dato, non può accedere, correggere o cancellare i dati dell'utente per suo conto.
 
@@ -108,7 +110,7 @@ Horologe non è rivolta specificamente ai minori e non raccoglie dati personali 
 
 L'app si affida ai meccanismi di sicurezza del sistema operativo, che isolano i dati di ogni app. Il blocco facoltativo protegge l'accesso all'app; su iOS i dati sincronizzati sono gestiti da iCloud secondo le condizioni di Apple.
 
-Nessun metodo di archiviazione su dispositivo può essere garantito come completamente sicuro, in particolare dopo che l'utente esporta o condivide un backup o un PDF fuori dall'app.
+Nessun metodo di archiviazione su dispositivo può essere garantito come completamente sicuro, in particolare dopo che l'utente esporta o condivide un backup, un CSV o un PDF fuori dall'app.
 
 ## Modifiche a questa informativa
 

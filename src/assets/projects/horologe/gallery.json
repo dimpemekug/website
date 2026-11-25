@@ -8,41 +8,49 @@
       "it": "Scheda di un orologio con galleria e dati principali",
       "en": "A watch's page with gallery and main details"
     },
+    "03-care": {
+      "it": "Storico delle revisioni con la prossima scadenza, misurazioni di precisione e grafico",
+      "en": "Service history with the next due date, accuracy measurements and chart"
+    },
     "03-statistics": {
       "it": "Statistiche: valore della collezione nel tempo, marche e curiosità",
       "en": "Statistics: collection value over time, brands and insights"
+    },
+    "04-assistant": {
+      "it": "Assistente di misura: due letture a un giorno di distanza, con l'ora del telefono",
+      "en": "Measuring assistant: two readings a day apart, against the phone's clock"
     },
     "04-care": {
       "it": "Diario al polso, revisioni e grafico della precisione",
       "en": "Wear log, services and accuracy chart"
     },
-    "04-edit": {
-      "it": "Modifica di un orologio: marca, modello, referenza, anno e prezzo",
-      "en": "Editing a watch: brand, model, reference, year and price"
-    },
     "05-dark": {
       "it": "La collezione con il tema scuro",
       "en": "The collection in dark mode"
     },
-    "05-settings": {
-      "it": "Impostazioni: lingua, promemoria delle revisioni, blocco dell'app e backup",
-      "en": "Settings: language, service reminders, app lock and backup"
-    },
-    "06-custom": {
-      "it": "La collezione con il tema chiaro e un colore d'accento personalizzato",
-      "en": "The collection in light mode with a custom accent color"
+    "05-statistics": {
+      "it": "Statistiche: valore della collezione nel tempo, curiosità e pezzo più costoso",
+      "en": "Statistics: collection value over time, insights and most expensive piece"
     },
     "06-settings": {
       "it": "Impostazioni: tema, blocco dell'app, promemoria, iCloud e backup",
       "en": "Settings: theme, app lock, reminders, iCloud and backup"
     },
-    "07-custom-settings": {
-      "it": "Scelta dello stile, del tema e di uno degli otto colori d'accento",
-      "en": "Choosing the style, theme and one of eight accent colors"
+    "06-wear": {
+      "it": "Registro al polso delle ultime 20 settimane e orologi più indossati",
+      "en": "Wear log for the last 20 weeks and most worn watches"
+    },
+    "07-edit": {
+      "it": "Modifica di un orologio: foto di copertina, marca, modello, referenza e dettagli",
+      "en": "Editing a watch: cover photo, brand, model, reference and details"
     },
     "07-list": {
       "it": "La collezione in elenco, con stato e prezzo di ogni orologio",
       "en": "The collection as a list, with each watch's status and price"
+    },
+    "08-settings": {
+      "it": "Impostazioni: stile, lingua, blocco dell'app, promemoria ed esportazione",
+      "en": "Settings: style, language, app lock, reminders and export"
     }
   }
 }

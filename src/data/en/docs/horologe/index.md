@@ -1,40 +1,52 @@
 ---
 title: "Introduction to Horologe"
-description: "Overview of Horologe: a catalog for watch collections on iOS and Android, with photos, service history, accuracy log, wrist time and data that stays yours."
+description: "Overview of Horologe: a watch collection catalog on iOS and Android, with photos, services, accuracy assistant, wear diary and statistics."
 project: "horologe"
 order: 1
 section: "Getting Started"
 ---
 
-## What is Horologe
+## What is Horologe?
 
-**Horologe** is a native app for **iPhone and iPad** and for **Android**, made for watch collectors and enthusiasts who want to catalog their collection carefully: photos, technical details, service history, accuracy, wrist time and documents.
+**Horologe** is an app for **iPhone and iPad** and for **Android** made for watch collectors who want to catalog their pieces with care: photos, technical details, value, service history, rate accuracy, days on the wrist and documents.
 
-It is built with each platform's native tools (**SwiftUI** on iOS, **Jetpack Compose** on Android) and stores everything on your device; on iOS you can turn on sync with your private iCloud. It's free, with no ads or in-app purchases, and available in seven languages.
+Both versions are native (**SwiftUI** on iOS, **Jetpack Compose** on Android) and keep everything on the device; on iOS you can turn on sync with your private iCloud. The app is free, with no ads or in-app purchases, and available in seven languages.
+
+The app has three tabs: **Collection**, **Statistics** and **Settings**.
 
 ---
 
-## Highlights
+## What you can do
 
-### 1. A Complete Record for Every Watch
-- Brand, model, reference, serial number and year.
-- Movement, caliber, diameter and case material.
-- Purchase price and date, box and papers, notes.
-- **Custom fields** for everything else (e.g. crystal, water resistance, strap).
-- **Status**: in the collection, in repair, sold (with sale price and date) or on the wishlist.
+### 1. A record for every watch
+- Brand, model, reference, serial number, movement, caliber, diameter, case material and year.
+- Purchase price and date, in any currency, box, papers and notes.
+- **Custom fields** for everything else (crystal, water resistance, strap…).
+- **Status**: Owned, In repair, Sold (with sale date and price) or Wishlist.
 
-### 2. Photos and Documents
-For each watch you can keep a cover photo, a gallery (dial, caseback, movement, full set) and attachments such as warranties, receipts and certificates, PDFs included.
+See [Technical Sheet and Photo Gallery](/en/projects/horologe/docs/technical-specs-and-photos).
 
-### 3. Services and Reminders
-Log every service with its date, type and cost, set a service interval in years and get a notification when it's time to take the watch in.
+### 2. Photos and documents
+A cover photo, a gallery to browse full screen with zoom, and attachments such as warranties, receipts and certificates, as PDFs or images.
 
-### 4. Accuracy and Wrist Time
-- **Accuracy log**: the rate deviation in seconds per day, with a chart over time.
-- **Wrist log**: mark the days you wear a watch with one tap and see which ones you wear most.
+### 3. Services, accuracy and days on the wrist
+- Service history with costs and a reminder when the next service is due.
+- **Measuring assistant**: two readings a day apart, checked against your phone's clock, give the deviation in seconds per day.
+- **Worn today** and the **Wear diary**, with a month-by-month calendar.
 
-### 5. Statistics and Export
-Collection value, breakdown by brand and movement, service costs, sale results; a PDF sheet for each watch, CSV export and a full ZIP backup with photos.
+See [Services, Wrist Time and Accuracy](/en/projects/horologe/docs/service-history-and-precision).
 
-### 6. Privacy and Protection
-No account and no developer servers. You can lock the app with Face ID or Touch ID (iOS) or with fingerprint, face or PIN (Android).
+### 4. Collection and statistics
+Grid or list view, search, filters and ten sort orders; in the statistics, collection value over time, brands and movements, sales, upcoming services and your most worn pieces.
+
+See [Collection, Filters and Statistics](/en/projects/horologe/docs/collection-filters-and-statistics).
+
+### 5. Export and backup
+A PDF sheet for each watch, a PDF inventory for your insurer, a CSV of the collection and a full ZIP backup with photos and attachments that moves from iOS to Android and back.
+
+See [Backup, Sync and Export](/en/projects/horologe/docs/backup-and-synchronization).
+
+### 6. Privacy and protection
+No account and no developer servers; on Android the app does not even ask for Internet access. You can lock the app with Face ID, Touch ID or passcode (iOS) or with fingerprint, face or PIN (Android).
+
+The differences between the two versions are in the [iOS vs Android Comparison](/en/projects/horologe/docs/ios-vs-android-comparison).

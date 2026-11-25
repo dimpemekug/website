@@ -1,6 +1,6 @@
 ---
 title: "Introduzione a Horologe"
-description: "Panoramica di Horologe: catalogo di orologi su iOS e Android, con foto, storico delle revisioni, registro di precisione e giorni al polso."
+description: "Panoramica di Horologe: catalogo di orologi su iOS e Android, con foto, revisioni, assistente di precisione, diario al polso e statistiche."
 project: "horologe"
 order: 1
 section: "Iniziare"
@@ -8,33 +8,45 @@ section: "Iniziare"
 
 ## Cos'è Horologe
 
-**Horologe** è un'app nativa per **iPhone e iPad** e per **Android** pensata per collezionisti e appassionati di orologi che vogliono catalogare la propria collezione con cura: foto, dati tecnici, storico delle revisioni, precisione di marcia, giorni al polso e documenti.
+**Horologe** è un'app per **iPhone e iPad** e per **Android** pensata per chi colleziona orologi e vuole catalogarli con cura: foto, dati tecnici, valore, storico delle revisioni, precisione di marcia, giorni al polso e documenti.
 
-È sviluppata con gli strumenti nativi di ciascuna piattaforma (**SwiftUI** su iOS, **Jetpack Compose** su Android) e salva tutto sul dispositivo; su iOS puoi attivare la sincronizzazione con il tuo iCloud privato. È gratuita, senza pubblicità né acquisti in-app, e disponibile in sette lingue.
+Le due versioni sono native (**SwiftUI** su iOS, **Jetpack Compose** su Android) e salvano tutto sul dispositivo; su iOS puoi attivare la sincronizzazione con il tuo iCloud privato. L'app è gratuita, senza pubblicità né acquisti in-app, e disponibile in sette lingue.
+
+L'app ha tre schede: **Collezione**, **Statistiche** e **Impostazioni**.
 
 ---
 
-## Punti di forza
+## Cosa puoi fare
 
-### 1. Scheda completa per ogni orologio
-- Marca, modello, referenza, numero di serie e anno.
-- Movimento, calibro, diametro e materiale della cassa.
-- Prezzo e data di acquisto, presenza di scatola e documenti, note.
-- **Campi personalizzati** per tutto il resto (es. vetro, impermeabilità, cinturino).
-- **Stato**: in collezione, in riparazione, venduto (con prezzo e data di vendita) o in wishlist.
+### 1. Una scheda per ogni orologio
+- Marca, modello, referenza, numero di serie, movimento, calibro, diametro, materiale della cassa e anno.
+- Prezzo e data di acquisto, in qualsiasi valuta, scatola, documentazione e note.
+- **Campi personalizzati** per tutto il resto (vetro, impermeabilità, cinturino…).
+- **Stato**: Posseduto, In riparazione, Venduto (con data e prezzo di vendita) o Wishlist.
+
+Vedi [Scheda tecnica e galleria fotografica](/progetti/horologe/docs/scheda-tecnica-e-foto).
 
 ### 2. Foto e documenti
-Per ogni orologio puoi salvare una foto di copertina, una galleria di foto (quadrante, fondello, movimento, corredo) e allegati come garanzie, ricevute e certificati, anche in PDF.
+Una foto di copertina, una galleria da sfogliare a schermo intero con lo zoom e allegati come garanzie, ricevute e certificati, in PDF o come immagini.
 
-### 3. Revisioni e promemoria
-Registra ogni intervento con data, tipo e costo, imposta un intervallo di revisione in anni e ricevi una notifica quando è ora di portare l'orologio in assistenza.
+### 3. Revisioni, precisione e giorni al polso
+- Storico degli interventi con i costi e un promemoria quando è ora della prossima revisione.
+- **Assistente di misura**: due letture a un giorno di distanza, confrontate con l'ora del telefono, danno lo scarto in secondi al giorno.
+- **Indossato oggi** e **Diario al polso**, con un calendario mese per mese.
 
-### 4. Precisione e giorni al polso
-- **Registro di precisione**: lo scarto di marcia in secondi al giorno, con un grafico nel tempo.
-- **Registro al polso**: segna con un tocco i giorni in cui indossi un orologio e scopri quali usi di più.
+Vedi [Revisioni, giorni al polso e precisione](/progetti/horologe/docs/revisioni-polso-e-precisione).
 
-### 5. Statistiche ed esportazione
-Valore della collezione, distribuzione per marca e movimento, spese di revisione, risultati delle vendite; scheda PDF di ogni orologio, esportazione CSV e backup ZIP completo con le foto.
+### 4. Collezione e statistiche
+Vista a griglia o a elenco, ricerca, filtri e dieci ordinamenti; nelle statistiche il valore della collezione nel tempo, marche e movimenti, vendite, prossime revisioni e i pezzi più indossati.
+
+Vedi [Collezione, filtri e statistiche](/progetti/horologe/docs/collezione-filtri-e-statistiche).
+
+### 5. Esportazione e backup
+Scheda PDF di ogni orologio, inventario PDF per l'assicurazione, CSV della collezione e backup ZIP completo con foto e allegati, che passa da iOS ad Android e viceversa.
+
+Vedi [Backup, sincronizzazione ed esportazione](/progetti/horologe/docs/backup-e-sincronizzazione).
 
 ### 6. Privacy e protezione
-Nessun account e nessun server dello sviluppatore. Puoi proteggere l'app con Face ID o Touch ID (iOS) oppure con impronta, volto o PIN (Android).
+Nessun account e nessun server dello sviluppatore; su Android l'app non chiede nemmeno l'accesso a Internet. Puoi proteggere l'app con Face ID, Touch ID o codice (iOS) oppure con impronta, volto o PIN (Android).
+
+Le differenze tra le due versioni sono nel [Confronto iOS e Android](/progetti/horologe/docs/confronto-ios-android).
