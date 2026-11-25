@@ -1,6 +1,6 @@
 ---
 title: "Pianificazione VLSM Best-Fit"
-description: "Algoritmo best-fit descending in NetCalc Pro: pianificazione a lunghezza variabile, calcolo dello spreco, mappa scalabile e topologie interconnesse."
+description: "Algoritmo best-fit descending in NetCalc: pianificazione a lunghezza variabile, calcolo dello spreco, mappa scalabile e topologie interconnesse."
 project: "netcalc"
 order: 3
 section: "Calcolo e Pianificazione"
@@ -14,11 +14,11 @@ Il **VLSM** (_Variable Length Subnet Masking_) risolve questo problema permetten
 
 ---
 
-## L'Algoritmo Best-Fit Descending di NetCalc Pro
+## L'Algoritmo Best-Fit Descending di NetCalc
 
 Per evitare sovrapposizioni e frammentazione dello spazio di indirizzamento, la regola d'oro del networking è: **allocare sempre per prime le subnet più grandi**.
 
-NetCalc Pro automatizza l'intero processo:
+NetCalc automatizza l'intero processo:
 
 1. **Inserimento del Blocco Radice**: definisci la rete principale a tua disposizione (es. `172.16.0.0/20` o `192.168.10.0/24`).
 2. **Definizione delle Esigenze**: aggiungi ogni ramo o dipartimento specificando un nome e il numero di host richiesti:
@@ -38,7 +38,7 @@ NetCalc Pro automatizza l'intero processo:
 
 ## Mappa Proporzionale dello Spazio con Zoom Automatico
 
-NetCalc Pro include una visualizzazione grafica a barre proporzionali (`AddressSpaceMapView`) che mappa l'intero blocco padre:
+NetCalc include una visualizzazione grafica a barre proporzionali (`AddressSpaceMapView`) che mappa l'intero blocco padre:
 
 ```text
 ┌────────────────────────────────────── 192.168.10.0/24 ──────────────────────────────────────┐
@@ -54,7 +54,7 @@ NetCalc Pro include una visualizzazione grafica a barre proporzionali (`AddressS
 
 ## Metriche di Efficienza e Diagnostica
 
-Per ciascun piano VLSM elaborato, NetCalc Pro calcola:
+Per ciascun piano VLSM elaborato, NetCalc calcola:
 
 - **Efficienza Complessiva**: percentuale di indirizzi effettivamente utilizzati rispetto alla dimensione del blocco radice.
 - **Indirizzi di Overhead e Riserva**: conteggio esatto degli indirizzi dedicati a network ID e broadcast per ciascun segmento.
@@ -64,7 +64,7 @@ Per ciascun piano VLSM elaborato, NetCalc Pro calcola:
 
 ## Da Piano VLSM a Topologia Interconnessa (`PlanDeviceBuilder`)
 
-Una volta terminata la pianificazione su NetCalc Pro, non serve trascrivere manualmente gli indirizzi né creare i singoli router a mano.
+Una volta terminata la pianificazione su NetCalc, non serve trascrivere manualmente gli indirizzi né creare i singoli router a mano.
 
 Premendo il pulsante **"Crea dispositivi dal piano"** nella toolbar:
 

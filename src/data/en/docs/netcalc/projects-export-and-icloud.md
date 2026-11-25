@@ -1,6 +1,6 @@
 ---
 title: "Projects, Topology and Exporting"
-description: "Lab project management in NetCalc Pro, automatic topology diagram, CoreGraphics PDF reports, CSV/TXT export, and private CloudKit synchronization."
+description: "Lab project management in NetCalc, automatic topology diagram, CoreGraphics PDF reports, CSV/TXT export, and private CloudKit synchronization."
 project: "netcalc"
 order: 8
 section: "Management & Sharing"
@@ -8,7 +8,7 @@ section: "Management & Sharing"
 
 ## Lab Project Management
 
-In NetCalc Pro, designing a network topology is not confined to isolated calculations: configurations are organized into persistent, structured **Projects**.
+In NetCalc, designing a network topology is not confined to isolated calculations: configurations are organized into persistent, structured **Projects**.
 
 Each project hosts a complete ecosystem of network appliances (`CiscoDevice`):
 
@@ -21,7 +21,7 @@ Each project hosts a complete ecosystem of network appliances (`CiscoDevice`):
 
 ## Network Schematic & Topology Diagram (`TopologyView`)
 
-**NetCalc Pro 1.1** introduces an automated topology visualizer (`TopologyBuilder`), displayed directly in the project summary:
+**NetCalc 1.1** introduces an automated topology visualizer (`TopologyBuilder`), displayed directly in the project summary:
 
 - **Automatic Interconnection Detection**: by analyzing the IP addresses and subnet masks across all interfaces, the algorithm automatically identifies:
   - **Point-to-Point Links**: interconnected router pairs on `/30` or `/31` subnets or matching subnets.
@@ -33,7 +33,7 @@ Each project hosts a complete ecosystem of network appliances (`CiscoDevice`):
 
 ## Local-First Architecture and Full Undo/Redo
 
-NetCalc Pro implements a strictly **Local-First** design powered by **SwiftData**:
+NetCalc implements a strictly **Local-First** design powered by **SwiftData**:
 
 ### 1. Dedicated Local Store
 
@@ -46,11 +46,17 @@ All destructive or mutative actions (creating/deleting projects, adding devices,
 - On **macOS**: use standard system shortcuts <kbd>⌘</kbd><kbd>Z</kbd> (Undo) and <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Z</kbd> (Redo), or the _Edit_ menu.
 - On **iPad/iPhone**: support for three-finger gestures and navigation undo buttons.
 
+### 3. Editable device entries and instant Undo
+
+Since version 1.2, a device's OSPF networks, static routes, VLANs, trunks, DHCP pools, and ACLs can be edited in place: with a tap on iPhone, or with a double-click or **Edit…** on Mac and iPad. The entry keeps its position, and fields the sheet doesn't show are preserved.
+
+When you delete an entry, a notice such as "OSPF network deleted · Undo" appears at the bottom for 5 seconds: the **Undo** button puts it back where it was. On iPhone, the deletion comes with a light haptic tap.
+
 ---
 
 ## Export Options
 
-NetCalc Pro offers three export formats tailored for academic and enterprise workflows:
+NetCalc offers three export formats tailored for academic and enterprise workflows:
 
 ### 1. Vector PDF Documents (CoreGraphics & CoreText)
 
@@ -106,4 +112,4 @@ App preferences (language, light/dark theme, accent color, terminal styling, and
 
 ### 3. Real-Time Sync Diagnostics (`CloudSyncMonitor`)
 
-Under **Settings → Synchronization**, NetCalc Pro provides a diagnostic monitor showing sync status, last update timestamp, remote/local record counts, and network troubleshooting guidance.
+Under **Settings → Synchronization**, NetCalc provides a diagnostic monitor showing sync status, last update timestamp, remote/local record counts, and network troubleshooting guidance.

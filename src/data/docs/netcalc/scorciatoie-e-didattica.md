@@ -8,13 +8,24 @@ section: "Riferimento e Didattica"
 
 ## Didattica Integrata e Apprendimento Attivo
 
-NetCalc Pro non è solo un calcolatore per professionisti, ma un ambiente di apprendimento completo progettato per accompagnare studenti e docenti nella preparazione scolastica, universitaria e verso le certificazioni industriali come **Cisco CCNA (200-301)**.
+NetCalc non è solo un calcolatore per professionisti, ma un ambiente di apprendimento completo progettato per accompagnare studenti e docenti nella preparazione scolastica, universitaria e verso le certificazioni industriali come **Cisco CCNA (200-301)**.
+
+## La tab Impara
+
+Dalla versione 1.2, su iPhone la terza tab, **Impara**, raccoglie tutto ciò che serve per studiare:
+
+- **Esercizio del giorno**: la stessa domanda del widget, con il pulsante **Rispondi** e il tuo record di risposte esatte di fila.
+- **Riprendi la guida**: riapre la guida alle reti dall'ultimo capitolo letto.
+- **Guida alle reti**, **Glossario di Rete** ed **Esercizi di subnetting**, ciascuno in un foglio.
+- **Impostazioni**: lingua, tema, colore d'accento e terminale.
+
+Su iPad e Mac la sezione **Impara** si trova nella barra laterale.
 
 ---
 
 ## Esercizi di Subnetting Interattivi (`SubnetQuiz`)
 
-**NetCalc Pro 1.1** introduce il modulo di autovalutazione interattivo **Esercizi di Subnetting** (disponibile nella sezione _Impara_ su iPhone/iPad e dal menu _Aiuto_ su macOS):
+**NetCalc 1.1** introduce il modulo di autovalutazione interattivo **Esercizi di Subnetting** (nella tab _Impara_ su iPhone, nella sezione _Impara_ della barra laterale su iPad e Mac):
 
 ### 9 Tipologie di Domanda
 
@@ -38,7 +49,7 @@ Il generatore algoritmico crea quesiti casuali e realistici appartenenti alle cl
 
 ### Correzione con Spiegazione Matematica Passo-Passo
 
-A differenza dei comuni quiz a risposta multipla, NetCalc Pro non si limita a indicare se la risposta è giusta o sbagliata:
+A differenza dei comuni quiz a risposta multipla, NetCalc non si limita a indicare se la risposta è giusta o sbagliata:
 - Mostra la **spiegazione analitica dettagliata** impiegando esattamente i valori numerici della domanda.
 - Illustra il passaggio binario, la grandezza del blocco incrementale ($256 - \text{maschera}$) e i confini della sottorete.
 - Tiene traccia del **punteggio**, della **serie consecutiva di risposte esatte (Streak)** e del tuo **record personale**.
@@ -47,7 +58,7 @@ A differenza dei comuni quiz a risposta multipla, NetCalc Pro non si limita a in
 
 ## Widget interattivi e integrazione con il sistema
 
-NetCalc Pro sfrutta appieno le novità architetturali di WidgetKit e App Intents di Apple:
+NetCalc sfrutta appieno le novità architetturali di WidgetKit e App Intents di Apple:
 
 ### 1. Widget "Esercizio del Giorno" (Daily Quiz Widget)
 - Presenta ogni giorno un quesito di subnetting deterministico sulla schermata Home o sulla scrivania del Mac.
@@ -120,7 +131,7 @@ Accessibile in qualsiasi momento dal menu _Aiuto → Glossario di Rete_, raccogl
 
 ## Scorciatoie da Tastiera macOS
 
-NetCalc Pro offre un controllo completo da tastiera per un flusso di lavoro efficiente:
+NetCalc offre un controllo completo da tastiera per un flusso di lavoro efficiente:
 
 | Scorciatoia                            | Menu        | Azione                                                             |
 | :------------------------------------- | :---------- | :----------------------------------------------------------------- |
@@ -130,6 +141,6 @@ NetCalc Pro offre un controllo completo da tastiera per un flusso di lavoro effi
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | Vista       | Mostra o nasconde l'ispettore laterale dei dettagli                |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copia la configurazione CLI Cisco del pannello in primo piano      |
 | <kbd>⌘</kbd> <kbd>?</kbd>              | Aiuto       | Apre la Guida Didattica alle Reti in 21 capitoli                   |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Apre la finestra Impostazioni                                      |
+| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc | Apre la finestra Impostazioni                                      |
 | <kbd>⌘</kbd> <kbd>Z</kbd>              | Modifica    | Annulla l'ultima modifica                                          |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Modifica    | Ripristina l'ultima operazione annullata                           |

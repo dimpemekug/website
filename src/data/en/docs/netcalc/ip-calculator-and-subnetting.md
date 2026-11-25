@@ -1,6 +1,6 @@
 ---
 title: "IPv4, IPv6 Calculator and Subnetting"
-description: "Guide to NetCalc Pro's IP calculation tools: four input modes, 32-bit binary inspection, step-by-step calculation breakdown, recent history, and IPv6."
+description: "Guide to NetCalc's IP calculation tools: four input modes, 32-bit binary inspection, step-by-step calculation breakdown, recent history, and IPv6."
 project: "netcalc"
 order: 2
 section: "Calculation & Planning"
@@ -8,7 +8,7 @@ section: "Calculation & Planning"
 
 ## Redesigned IPv4 Calculator
 
-The IPv4 calculator in **NetCalc Pro** delivers a seamless and intuitive experience for analyzing any combination of IP address and subnet mask, combining algebraic accuracy with maximum visual clarity.
+The IPv4 calculator in **NetCalc** delivers a seamless and intuitive experience for analyzing any combination of IP address and subnet mask, combining algebraic accuracy with maximum visual clarity.
 
 On macOS and iPad, all essential values and controls fit on a single screen without scrolling; on iPhone, the interface dynamically optimizes for full address visibility, continuous prefix sliders, and quick contextual menus.
 
@@ -19,7 +19,7 @@ The app adapts to how you prefer to enter network data:
 1. **Address / CIDR Prefix** (e.g., `192.168.1.100/26`): the fastest notation, featuring quick increment/decrement `−` and `+` buttons (or a continuous slider on iPhone).
 2. **Dotted Decimal** (e.g., IP `172.16.50.14`, Mask `255.255.240.0`): ideal for pasting configuration parameters from OS network settings or exam sheets.
 3. **Inverse Wildcard Mask** (e.g., IP `10.1.0.50`, Wildcard `0.0.3.255`): essential for verifying and composing rules for Access Control Lists (ACLs) and `network` statements in OSPF and EIGRP.
-4. **Host Capacity Sizing**: enter the starting address and required host count (e.g., 500 hosts); NetCalc Pro instantly computes the minimal efficient mask (e.g., `/23`), minimizing unused addresses.
+4. **Host Capacity Sizing**: enter the starting address and required host count (e.g., 500 hosts); NetCalc instantly computes the minimal efficient mask (e.g., `/23`), minimizing unused addresses.
 
 ---
 
@@ -64,7 +64,7 @@ Host Formula:    2^(32 - 26) - 2  =  2^6 - 2 = 64 - 2 = 62 usable hosts
 
 ## History and "Recents" Menu
 
-NetCalc Pro automatically preserves your **last 15 calculations**:
+NetCalc automatically preserves your **last 15 calculations**:
 
 - History saves in the background whenever you pause on a valid calculation result.
 - Opening the **Recents** menu in the calculator toolbar lets you recall any past calculation with one click, immediately restoring the address and prefix.
@@ -73,7 +73,7 @@ NetCalc Pro automatically preserves your **last 15 calculations**:
 
 ## Computed Properties and Metrics
 
-For every entered configuration, NetCalc Pro outputs a comprehensive property sheet with single-tap copyable values:
+For every entered configuration, NetCalc outputs a comprehensive property sheet with single-tap copyable values:
 
 | Parameter                       | Description                                                                                             | Example (`192.168.1.100/26`)     |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------- |
@@ -90,11 +90,11 @@ For every entered configuration, NetCalc Pro outputs a comprehensive property sh
 
 ## IPv6 Calculator
 
-NetCalc Pro features a dedicated 128-bit IPv6 module:
+NetCalc features a dedicated 128-bit IPv6 module:
 
 - **RFC 5952 Canonical Compression**: enter any IPv6 address in compressed or uncompressed form; the app displays both canonical format with `::` and full 32-hex expansion.
 - **Prefix Inspection**: breaks down Global Routing Prefix, Provider ID (/48), Subnet ID (/64), and 64-bit Interface Identifier.
-- **EUI-64 Calculation from MAC**: enter a 48-bit Ethernet MAC (e.g., `00:1A:2B:3C:4D:5E`); NetCalc Pro flips the 7th bit (Universal/Local) and inserts `FF:FE` to produce SLAAC / Link-Local addresses (`fe80::021a:2bff:fe3c:4d5e`).
+- **EUI-64 Calculation from MAC**: enter a 48-bit Ethernet MAC (e.g., `00:1A:2B:3C:4D:5E`); NetCalc flips the 7th bit (Universal/Local) and inserts `FF:FE` to produce SLAAC / Link-Local addresses (`fe80::021a:2bff:fe3c:4d5e`).
 - **Address Classification**: immediate scope detection across Global Unicast (`2000::/3`), Link-Local (`fe80::/10`), Unique Local ULA (`fc00::/7`), Multicast (`ff00::/8`), and Loopback (`::1/128`).
 - **Cisco CLI Generation**: one-click output for `ipv6 address` and `ipv6 address ... eui-64` statements.
 

@@ -1,6 +1,6 @@
 ---
 title: "Calcolatrice IPv4, IPv6 e Subnetting"
-description: "Calcolo IP in NetCalc Pro: quattro modalità di inserimento, ispezione binaria a 32 bit, spiegazione passo-passo, cronologia e modulo IPv6."
+description: "Calcolo IP in NetCalc: quattro modalità di inserimento, ispezione binaria a 32 bit, spiegazione passo-passo, cronologia e modulo IPv6."
 project: "netcalc"
 order: 2
 section: "Calcolo e Pianificazione"
@@ -8,7 +8,7 @@ section: "Calcolo e Pianificazione"
 
 ## Calcolatrice IPv4 Ridisegnata
 
-La calcolatrice IPv4 di **NetCalc Pro** offre un'esperienza fluida e immediata per esplorare qualsiasi combinazione di indirizzo IP e maschera di sottorete, unendo la precisione algebrica alla massima chiarezza visiva.
+La calcolatrice IPv4 di **NetCalc** offre un'esperienza fluida e immediata per esplorare qualsiasi combinazione di indirizzo IP e maschera di sottorete, unendo la precisione algebrica alla massima chiarezza visiva.
 
 Su macOS e iPad, tutti i dati essenziali e i controlli risiedono in una singola schermata senza scorrimento; su iPhone, l'interfaccia si adatta dinamicamente per mostrare indirizzi completi, slider di prefisso e menu contestuali rapidi.
 
@@ -19,7 +19,7 @@ L'applicazione si adatta al tuo modo di operare:
 1. **Indirizzo / Prefisso CIDR** (es. `192.168.1.100/26`): la notazione più rapida, dotata di tasti di incremento/decremento rapido `−` e `+` (o slider continuo su iPhone).
 2. **Decimale Puntato** (es. IP `172.16.50.14`, Maschera `255.255.240.0`): ideale per copiare al volo configurazioni da schede di rete e tabelle d'esame.
 3. **Wildcard Mask Inversa** (es. IP `10.1.0.50`, Wildcard `0.0.3.255`): essenziale per verificare e comporre regole per Access Control List (ACL) e direttive `network` in OSPF ed EIGRP.
-4. **Dimensionamento per Numero di Host**: inserisci l'indirizzo base e la quantità di dispositivi da ospitare (es. 500 host); NetCalc Pro calcola la maschera minima efficiente (es. `/23`), minimizzando lo spreco di indirizzi.
+4. **Dimensionamento per Numero di Host**: inserisci l'indirizzo base e la quantità di dispositivi da ospitare (es. 500 host); NetCalc calcola la maschera minima efficiente (es. `/23`), minimizzando lo spreco di indirizzi.
 
 ---
 
@@ -64,7 +64,7 @@ Host Formula:    2^(32 - 26) - 2  =  2^6 - 2 = 64 - 2 = 62 host utilizzabili
 
 ## Cronologia e Menu "Recenti"
 
-NetCalc Pro memorizza automaticamente gli **ultimi 15 calcoli effettuati**:
+NetCalc memorizza automaticamente gli **ultimi 15 calcoli effettuati**:
 
 - La registrazione avviene in background ogni volta che ti soffermi su un risultato valido per qualche istante.
 - Aprendo il menu **Recenti** nella toolbar della calcolatrice, puoi richiamare immediatamente qualsiasi calcolo passato con un clic, ripristinando all'istante l'indirizzo e la maschera associati.
@@ -73,7 +73,7 @@ NetCalc Pro memorizza automaticamente gli **ultimi 15 calcoli effettuati**:
 
 ## Parametri e Proprietà Calcolate
 
-Per ogni combinazione inserita, NetCalc Pro compila una scheda completa con valori copiabili con un singolo tocco:
+Per ogni combinazione inserita, NetCalc compila una scheda completa con valori copiabili con un singolo tocco:
 
 | Parametro                       | Descrizione                                                                                                            | Esempio (`192.168.1.100/26`)     |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
@@ -90,11 +90,11 @@ Per ogni combinazione inserita, NetCalc Pro compila una scheda completa con valo
 
 ## Calcolatrice IPv6
 
-NetCalc Pro integra un modulo dedicato per il protocollo IPv6 a 128 bit:
+NetCalc integra un modulo dedicato per il protocollo IPv6 a 128 bit:
 
 - **Compressione e Decompressione Standard (RFC 5952)**: inserisci qualsiasi indirizzo IPv6 con zeri iniziali o forma estesa; l'app mostra la corretta forma canonica compressa con il doppio due punti `::` e viceversa la rappresentazione estesa a 32 cifre esadecimali raggruppate in 8 hextet.
 - **Analisi Prefissi**: verifica dello spazio globale di routing, del prefisso del fornitore (/48), del subnet ID (/64) e dell'Interface Identifier a 64 bit.
-- **Calcolo EUI-64 da Indirizzo MAC**: inserisci l'indirizzo fisico Ethernet a 48 bit (es. `00:1A:2B:3C:4D:5E`); NetCalc Pro inverte il settimo bit (Universal/Local) e inserisce il pattern `FF:FE` al centro, calcolando l'indirizzo Link-Local o SLAAC risultante (`fe80::021a:2bff:fe3c:4d5e`).
+- **Calcolo EUI-64 da Indirizzo MAC**: inserisci l'indirizzo fisico Ethernet a 48 bit (es. `00:1A:2B:3C:4D:5E`); NetCalc inverte il settimo bit (Universal/Local) e inserisce il pattern `FF:FE` al centro, calcolando l'indirizzo Link-Local o SLAAC risultante (`fe80::021a:2bff:fe3c:4d5e`).
 - **Classificazione dell'Indirizzo**: identificazione istantanea tra Global Unicast (`2000::/3`), Link-Local (`fe80::/10`), Unique Local ULA (`fc00::/7`), Multicast (`ff00::/8`) e Loopback (`::1/128`).
 - **Comandi Cisco IOS per IPv6**: generazione istantanea dei comandi `ipv6 address` ed `ipv6 address ... eui-64`.
 
@@ -108,7 +108,7 @@ Quando occorre suddividere una rete aziendale o accademica in sottoreti tutte de
 2. Scegli il criterio di partizionamento:
    - **Per numero di sottoreti richieste** (es. 8 dipartimenti uguali).
    - **Per nuovo prefisso di subnet** (es. trasforma la `/16` in tante sottoreti `/20`).
-3. NetCalc Pro calcola la tabella complessiva con:
+3. NetCalc calcola la tabella complessiva con:
    - Indice numerico della subnet.
    - Network address.
    - Range del gateway e degli host utilizzabili.

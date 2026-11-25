@@ -1,5 +1,5 @@
 ---
-title: "Lab Verification (Network Linter)"
+title: "Project check (Network Linter)"
 description: "Diagnostics for CCNA labs: detects IP conflicts, overlapping subnets, unreachable next hops, OSPFv3 issues, HSRP problems, and DHCP flaws."
 project: "netcalc"
 order: 7
@@ -21,7 +21,7 @@ Typical root causes are subtle:
 - An HSRP virtual IP sits outside the interface's subnet.
 - Port security is activated on an 802.1Q trunk port (a combination forbidden by Cisco IOS).
 
-NetCalc Pro's **Network Linter** (`NetworkLinter.analyze(devices:)`) is a pure functional diagnostic engine that scans your entire lab topology before powering on devices, highlighting every misconfiguration with educational explanations and actionable fixes.
+NetCalc's **Network Linter** (`NetworkLinter.analyze(devices:)`) is a pure functional diagnostic engine that scans your entire lab topology before powering on devices, highlighting every misconfiguration with educational explanations and actionable fixes.
 
 ---
 
@@ -112,4 +112,9 @@ Diagnostics are categorized into three severity tiers:
 
 ## User Interface Integration
 
-In the project view, the **Lab Verification** button features a dynamic badge displaying active error and warning counts. Clicking any item instantly selects and highlights the faulty device or interface in the context inspector.
+In the project summary, the **Project check** card counts errors, warnings, and notes, or shows "No problems found". Tapping the card, or the **Open the report** button, opens the full list of findings, which you can filter by **Errors only**, **Errors and warnings**, or **Everything**.
+
+Since version 1.2:
+
+- tapping a finding opens the device that needs fixing; when the issue involves several devices, an **Open** button for each lets you pick one;
+- in the project list, next to the device count, the check status appears: a green tick, or the number of errors (red) or warnings (orange), with an icon and text rather than colour alone, also read by VoiceOver.

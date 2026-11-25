@@ -1,6 +1,6 @@
 ---
 title: "Advanced Network Tools"
-description: "NetCalc Pro's four network tools: Route Summary, Range to CIDR converter, Wildcard and ACL simulator, and Network Comparison with Longest Prefix Match."
+description: "NetCalc's four network tools: Route Summary, Range to CIDR converter, Wildcard and ACL simulator, and Network Comparison with Longest Prefix Match."
 project: "netcalc"
 order: 4
 section: "Tools & Calculation"
@@ -8,7 +8,7 @@ section: "Tools & Calculation"
 
 ## A Dedicated Network Toolset
 
-Alongside the IP calculators and subnet planners, **NetCalc Pro 1.1** introduces a dedicated **Tools** section (accessible from the sidebar on Mac and iPad, the title menu on iPhone, or adjacent to the segmented control in the macOS Calculator window).
+Alongside the IP calculators and subnet planners, **NetCalc 1.1** introduces a dedicated **Tools** section (accessible from the sidebar on Mac and iPad, the title menu on iPhone, or adjacent to the segmented control in the macOS Calculator window).
 
 These four tools solve the most frequent operational challenges in enterprise network configuration, troubleshooting, and Cisco CCNA labs:
 
@@ -37,12 +37,12 @@ Summary Block:      192.168.0.0/22 (255.255.252.0)
 
 - **Paste and Calculate**: paste a list of addresses or networks in any format (with CIDR prefix or dotted decimal mask).
 - **Common Bit Highlighting**: visual breakdown of shared bits across all entered networks, pinpointing where the summary boundary falls.
-- **Extra Address Detection**: NetCalc Pro immediately calculates whether the summary block cleanly matches the specified networks or includes unallocated addresses, quantifying them clearly.
+- **Extra Address Detection**: NetCalc immediately calculates whether the summary block cleanly matches the specified networks or includes unallocated addresses, quantifying them clearly.
 - **Exact Aggregation**: if the list doesn't form a clean power of 2, the tool provides both the minimal enclosing summary block and the exact subset list of minimal subnets for 100% aggregation without extra addresses.
 
 ### Ready-to-Use Cisco IOS Commands
 
-NetCalc Pro generates CLI commands ready to copy:
+NetCalc generates CLI commands ready to copy:
 
 - **Static Summary Route**:
   ```text
@@ -74,7 +74,7 @@ In network security and firewall policy design, operational requirements often c
 The tool breaks down any arbitrary range into the **minimal number of valid CIDR blocks**:
 
 1. Enter the **Start IP** and **End IP**.
-2. NetCalc Pro applies power-of-two bit-boundary alignment, aggregating the largest possible blocks towards the center of the range.
+2. NetCalc applies power-of-two bit-boundary alignment, aggregating the largest possible blocks towards the center of the range.
 3. It displays a comprehensive table with:
    - Each computed CIDR block (e.g., `/29`, `/27`, `/26`, etc.).
    - The decimal subnet mask and wildcard mask.
@@ -119,14 +119,14 @@ This issue almost always stems from **mismatched subnet masks**:
 
 - Enter IP and mask for **Host 1** (e.g., `192.168.1.100/24`).
 - Enter IP and mask for **Host 2** (e.g., `192.168.1.200/25`).
-- NetCalc Pro computes each host's local perspective:
+- NetCalc computes each host's local perspective:
   - For Host 1 (`/24`), the subnet spans `.1` to `.254`: Host 2 is viewed as **local** and contacted directly via ARP.
   - For Host 2 (`/25`), the subnet ends at `.126`: Host 1 is viewed as **remote**, sending reply packets to the default gateway (which drops the packet if not configured for routing).
 - The tool highlights the asymmetry with clear, step-by-step diagnostic guidance.
 
 ### Subnet Overlap Detection
 
-Paste a list of subnets from your addressing plan: NetCalc Pro scans all combinations to instantly flag partial overlaps or complete inclusions between subnets with different prefix lengths.
+Paste a list of subnets from your addressing plan: NetCalc scans all combinations to instantly flag partial overlaps or complete inclusions between subnets with different prefix lengths.
 
 ### Longest Prefix Match (LPM) Simulation
 
@@ -134,4 +134,4 @@ In IP routing, when a router receives a packet and multiple routing table entrie
 
 - Enter the destination IP address of the incoming packet.
 - Enter the routing table entries (e.g., `0.0.0.0/0`, `10.0.0.0/8`, `10.1.0.0/16`, `10.1.4.0/24`).
-- NetCalc Pro visually illustrates which routes match and highlights the winning route chosen by the router, showing its prefix length, metric, and egress interface.
+- NetCalc visually illustrates which routes match and highlights the winning route chosen by the router, showing its prefix length, metric, and egress interface.

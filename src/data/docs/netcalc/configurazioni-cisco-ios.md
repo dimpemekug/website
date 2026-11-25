@@ -1,6 +1,6 @@
 ---
 title: "Generazione Configurazioni Cisco IOS"
-description: "Generazione CLI Cisco IOS in NetCalc Pro: interfacce IPv4/IPv6, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, DHCP, ACL e NAT."
+description: "Generazione CLI Cisco IOS in NetCalc: interfacce IPv4/IPv6, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, DHCP, ACL e NAT."
 project: "netcalc"
 order: 5
 section: "Integrazione Cisco IOS"
@@ -10,7 +10,7 @@ section: "Integrazione Cisco IOS"
 
 Nei laboratori di networking come **Cisco Packet Tracer**, **GNS3**, **EVE-NG** o su banchi di prova fisici, scrivere a mano centinaia di righe di comandi comporta frequentemente errori di battitura, incoerenze nelle wildcard o dimenticanze critiche (come il mancato `no shutdown` o l'assenza del comando globale `ipv6 unicast-routing`).
 
-**NetCalc Pro 1.1** integra un motore avanzato di generazione di script in sintassi **Cisco IOS** conforme alle best practice industriali e didattiche, strutturato secondo la rigorosa sequenza di dipendenza del sistema operativo:
+**NetCalc 1.1** integra un motore avanzato di generazione di script in sintassi **Cisco IOS** conforme alle best practice industriali e didattiche, strutturato secondo la rigorosa sequenza di dipendenza del sistema operativo:
 
 1. Le direttive globali (`hostname`, `ipv6 unicast-routing`, sicurezza) vengono poste in testa.
 2. I database VLAN vengono creati prima dell'assegnazione alle porte access/trunk degli switch.
@@ -26,11 +26,11 @@ Nei laboratori di networking come **Cisco Packet Tracer**, **GNS3**, **EVE-NG** 
 
 - **Tipologie di Porta**: supporto nativo per `GigabitEthernet`, `FastEthernet`, `Ethernet` e interfacce seriali `Serial`.
 - **Accensione Automatica**: inserimento del comando `no shutdown` per ciascuna porta attiva.
-- **Modifica Diretta delle Interfacce**: con NetCalc Pro 1.1 puoi modificare qualsiasi interfaccia già creata (doppio clic su Mac, menu contestuale o tap su iPhone/iPad) per aggiornare IP, maschera, descrizioni o funzionalità avanzate senza dover ricreare la porta.
+- **Modifica Diretta delle Interfacce**: con NetCalc 1.1 puoi modificare qualsiasi interfaccia già creata (doppio clic su Mac, menu contestuale o tap su iPhone/iPad) per aggiornare IP, maschera, descrizioni o funzionalità avanzate senza dover ricreare la porta.
 
 ### 2. Router-on-a-Stick Builder (Inter-VLAN Routing)
 
-NetCalc Pro include un builder guidato per implementare l'inter-VLAN routing tramite un singolo router collegato a uno switch trunk:
+NetCalc include un builder guidato per implementare l'inter-VLAN routing tramite un singolo router collegato a uno switch trunk:
 
 - **Riconoscimento Automatico delle VLAN**: il builder legge le VLAN configurate sugli switch del progetto e propone la creazione delle corrispondenti sub-interfacce virtuali (es. `GigabitEthernet0/0/0.10`, `GigabitEthernet0/0/0.20`).
 - **Incapsulamento Standard 802.1Q**: inserimento automatico del comando `encapsulation dot1Q <vlan_id>` prima dell'assegnazione dell'indirizzo IP del gateway.
@@ -38,7 +38,7 @@ NetCalc Pro include un builder guidato per implementare l'inter-VLAN routing tra
 
 ### 3. IPv6 Completo sui Dispositivi e OSPFv3
 
-NetCalc Pro supporta nativamente la configurazione dual-stack IPv4/IPv6:
+NetCalc supporta nativamente la configurazione dual-stack IPv4/IPv6:
 
 - **Indirizzi Globali e Link-Local**: per ogni interfaccia puoi impostare l'indirizzo Global Unicast (`ipv6 address 2001:db8:1::1/64`) e l'indirizzo Link-Local personalizzato (`ipv6 address fe80::1 link-local`).
 - **Abilitazione Automatica Routing**: include la direttiva globale `ipv6 unicast-routing` in cima alla configurazione di tutti i router con porte IPv6 attive.
@@ -58,7 +58,7 @@ NetCalc Pro supporta nativamente la configurazione dual-stack IPv4/IPv6:
 
 ### 5. Switching Avanzato: Spanning Tree, EtherChannel e Port Security
 
-NetCalc Pro 1.1 supporta la suite completa di funzionalità di switching di livello 2 richieste dalla certificazione CCNA:
+NetCalc 1.1 supporta la suite completa di funzionalità di switching di livello 2 richieste dalla certificazione CCNA:
 
 - **Spanning Tree Protocol (STP)**:
   - Modalità operativa globale: `spanning-tree mode pvst`, `rapid-pvst` o `mst`.

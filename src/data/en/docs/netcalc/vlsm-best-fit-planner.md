@@ -1,6 +1,6 @@
 ---
 title: "VLSM Best-Fit Planning"
-description: "Best-fit descending in NetCalc Pro: variable-length subnet planning, waste calculations, dynamic map, and automatic router topology building."
+description: "Best-fit descending in NetCalc: variable-length subnet planning, waste calculations, dynamic map, and automatic router topology building."
 project: "netcalc"
 order: 3
 section: "Calculation & Planning"
@@ -14,11 +14,11 @@ In classical fixed-size subnetting, every network receives an identical mask. Th
 
 ---
 
-## NetCalc Pro's Best-Fit Descending Algorithm
+## NetCalc's Best-Fit Descending Algorithm
 
 To prevent overlaps and address space fragmentation, the golden rule of networking is: **always allocate the largest subnets first**.
 
-NetCalc Pro automates this entire procedure:
+NetCalc automates this entire procedure:
 
 1. **Root Block Specification**: enter your starting base network (e.g., `172.16.0.0/20` or `192.168.10.0/24`).
 2. **Define Requirements**: add your subnets with custom names and host requirements:
@@ -38,7 +38,7 @@ NetCalc Pro automates this entire procedure:
 
 ## Proportional Space Map with Dynamic Zoom
 
-NetCalc Pro features a proportional address space visualizer (`AddressSpaceMapView`):
+NetCalc features a proportional address space visualizer (`AddressSpaceMapView`):
 
 ```text
 ┌────────────────────────────────────── 192.168.10.0/24 ──────────────────────────────────────┐
@@ -54,7 +54,7 @@ NetCalc Pro features a proportional address space visualizer (`AddressSpaceMapVi
 
 ## Efficiency Metrics and Diagnostics
 
-For every generated VLSM plan, NetCalc Pro evaluates:
+For every generated VLSM plan, NetCalc evaluates:
 
 - **Overall Efficiency**: percentage of assigned addresses relative to the root block size.
 - **Overhead and Reserved Count**: exact count of network and broadcast addresses across all segments.

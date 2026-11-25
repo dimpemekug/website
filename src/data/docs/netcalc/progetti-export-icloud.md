@@ -1,6 +1,6 @@
 ---
 title: "Progetti, Topologia ed Esportazione"
-description: "Progetti di laboratorio in NetCalc Pro: diagramma di topologia, report PDF, esportazione CSV/TXT e sincronizzazione CloudKit."
+description: "Progetti di laboratorio in NetCalc: diagramma di topologia, report PDF, esportazione CSV/TXT e sincronizzazione CloudKit."
 project: "netcalc"
 order: 8
 section: "Gestione e Condivisione"
@@ -8,7 +8,7 @@ section: "Gestione e Condivisione"
 
 ## Gestione dei Progetti di Laboratorio
 
-In NetCalc Pro, la progettazione di una topologia non si limita a calcoli isolati: ogni configurazione può essere salvata, organizzata e strutturata all'interno di **Progetti** persistenti.
+In NetCalc, la progettazione di una topologia non si limita a calcoli isolati: ogni configurazione può essere salvata, organizzata e strutturata all'interno di **Progetti** persistenti.
 
 Ogni progetto ospita un insieme completo di apparati (`CiscoDevice`):
 
@@ -21,7 +21,7 @@ Ogni progetto ospita un insieme completo di apparati (`CiscoDevice`):
 
 ## Schema della Rete e Diagramma di Topologia (`TopologyView`)
 
-**NetCalc Pro 1.1** introduce il generatore automatico di topologia (`TopologyBuilder`), visualizzabile nel riepilogo del progetto:
+**NetCalc 1.1** introduce il generatore automatico di topologia (`TopologyBuilder`), visualizzabile nel riepilogo del progetto:
 
 - **Ricostruzione Automatica delle Connessioni**: analizzando gli indirizzi IP e le subnet mask assegnate a ciascuna interfaccia, l'algoritmo identifica autonomamente:
   - **Link Punto-Punto**: router interconnessi su subnet `/30`, `/31` o con subnet identiche.
@@ -33,7 +33,7 @@ Ogni progetto ospita un insieme completo di apparati (`CiscoDevice`):
 
 ## Architettura Local-First e Undo/Redo Completo
 
-NetCalc Pro adotta un approccio rigorosamente **Local-First** basato su **SwiftData**:
+NetCalc adotta un approccio rigorosamente **Local-First** basato su **SwiftData**:
 
 ### 1. Database Locale Dedicato
 
@@ -46,11 +46,17 @@ Tutte le operazioni distruttive o di modifica (creazione o cancellazione di un p
 - Su **macOS**: usa le scorciatoie di sistema standard <kbd>⌘</kbd><kbd>Z</kbd> (Annulla) e <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Z</kbd> (Ripristina), oppure le voci nel menu _Modifica_.
 - Su **iPad/iPhone**: supporta i gesti standard con tre dita e i pulsanti dedicati di navigazione.
 
+### 3. Voci dei dispositivi modificabili e Annulla immediato
+
+Dalla versione 1.2 reti OSPF, route statiche, VLAN, trunk, pool DHCP e ACL di un dispositivo si modificano sul posto: con un tocco su iPhone, con un doppio clic o con **Modifica…** su Mac e iPad. La voce resta nella sua posizione e i campi che il foglio non mostra non vanno persi.
+
+Quando elimini una voce, in basso compare per 5 secondi un avviso come «Rete OSPF eliminata · Annulla»: il pulsante **Annulla** la rimette dov'era. Su iPhone l'eliminazione è accompagnata da un leggero feedback aptico.
+
 ---
 
 ## Opzioni di Esportazione
 
-NetCalc Pro offre tre formati di esportazione progettati per diversi scopi didattici e professionali:
+NetCalc offre tre formati di esportazione progettati per diversi scopi didattici e professionali:
 
 ### 1. Documenti PDF Vettoriali (CoreGraphics e CoreText)
 
@@ -109,4 +115,4 @@ Le preferenze dell'app (lingua, tema chiaro/scuro, palette accento, tema del ter
 
 ### 3. Diagnostica in Tempo Reale (`CloudSyncMonitor`)
 
-Nella schermata **Impostazioni → Sincronizzazione**, NetCalc Pro offre un monitor di diagnostica avanzato con stato del servizio, timestamp dell'ultimo scambio dati, conteggio dei record remoti e locali, e risoluzione guidata delle anomalie di rete.
+Nella schermata **Impostazioni → Sincronizzazione**, NetCalc offre un monitor di diagnostica avanzato con stato del servizio, timestamp dell'ultimo scambio dati, conteggio dei record remoti e locali, e risoluzione guidata delle anomalie di rete.

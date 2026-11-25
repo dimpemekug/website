@@ -8,13 +8,24 @@ section: "Reference & Learning"
 
 ## Integrated Learning & Active Practice
 
-NetCalc Pro is not just an IP calculator for professionals, but a comprehensive learning environment designed to assist students and instructors preparing for academic coursework and industry certifications such as **Cisco CCNA (200-301)**.
+NetCalc is not just an IP calculator for professionals, but a comprehensive learning environment designed to assist students and instructors preparing for academic coursework and industry certifications such as **Cisco CCNA (200-301)**.
+
+## The Learn tab
+
+Since version 1.2, the third tab on iPhone, **Learn**, gathers everything you need to study:
+
+- **Exercise of the day**: the same question as the widget, with the **Answer** button and your best streak of correct answers in a row.
+- **Continue the guide**: reopens the networking guide at the last chapter you read.
+- **Networking Guide**, **Networking glossary**, and **Subnetting exercises**, each in its own sheet.
+- **Settings**: language, theme, accent colour, and terminal.
+
+On iPad and Mac, the **Learn** section is in the sidebar.
 
 ---
 
 ## Interactive Subnetting Exercises (`SubnetQuiz`)
 
-**NetCalc Pro 1.1** introduces an interactive self-assessment module—**Subnetting Exercises** (available under the _Learn_ section on iPhone/iPad and via the _Help_ menu on macOS):
+**NetCalc 1.1** introduces an interactive self-assessment module—**Subnetting Exercises** (in the _Learn_ tab on iPhone, and in the _Learn_ section of the sidebar on iPad and Mac):
 
 ### 9 Question Types
 
@@ -38,7 +49,7 @@ The algorithmic question generator creates varied, realistic problems spanning p
 
 ### Step-by-Step Mathematical Explanation
 
-Unlike standard multiple-choice testing apps, NetCalc Pro provides immediate, full-depth solutions:
+Unlike standard multiple-choice testing apps, NetCalc provides immediate, full-depth solutions:
 - Displays **step-by-step mathematical explanations** using the exact numbers from the question.
 - Demonstrates binary conversion, block increments ($256 - \text{mask}$), and subnet boundaries.
 - Tracks your **Score**, continuous **Winning Streak**, and **All-Time Personal Record**.
@@ -47,7 +58,7 @@ Unlike standard multiple-choice testing apps, NetCalc Pro provides immediate, fu
 
 ## Interactive Widgets and System Integration
 
-NetCalc Pro takes full advantage of modern Apple WidgetKit and App Intents architecture:
+NetCalc takes full advantage of modern Apple WidgetKit and App Intents architecture:
 
 ### 1. "Daily Quiz" Interactive Widget
 - Delivers a fresh subnetting exercise every day right to your iPhone Home Screen or Mac desktop.
@@ -120,7 +131,7 @@ Open anytime via _Help → Network Glossary_, with more than a hundred entries, 
 
 ## macOS Keyboard Shortcuts
 
-NetCalc Pro offers full keyboard navigation for professional workflows:
+NetCalc offers full keyboard navigation for professional workflows:
 
 | Shortcut                               | Menu        | Action                                                  |
 | :------------------------------------- | :---------- | :------------------------------------------------------ |
@@ -130,6 +141,6 @@ NetCalc Pro offers full keyboard navigation for professional workflows:
 | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> | View        | Toggle inspector side panel                             |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> | Cisco       | Copy Cisco CLI configuration from the active panel      |
 | <kbd>⌘</kbd> <kbd>?</kbd>              | Help        | Open 21-chapter Networking Guide                        |
-| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc Pro | Open Settings window                                    |
+| <kbd>⌘</kbd> <kbd>,</kbd>              | NetCalc | Open Settings window                                    |
 | <kbd>⌘</kbd> <kbd>Z</kbd>              | Edit        | Undo last modification                                  |
 | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>Z</kbd> | Edit        | Redo last undone action                                 |

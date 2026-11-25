@@ -1,6 +1,6 @@
 ---
 title: "Cisco IOS Configurations Generation"
-description: "Cisco IOS CLI generation in NetCalc Pro: IPv4/IPv6 interfaces, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, DHCP, ACLs, and NAT."
+description: "Cisco IOS CLI generation in NetCalc: IPv4/IPv6 interfaces, OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel, DHCP, ACLs, and NAT."
 project: "netcalc"
 order: 5
 section: "Cisco IOS Integration"
@@ -10,7 +10,7 @@ section: "Cisco IOS Integration"
 
 In networking labs such as **Cisco Packet Tracer**, **GNS3**, **EVE-NG**, or physical hardware testbeds, hand-crafting hundreds of configuration lines frequently introduces typos, wildcard mask errors, or critical omissions (such as forgetting `no shutdown` or the global `ipv6 unicast-routing` command).
 
-**NetCalc Pro 1.1** features an advanced **Cisco IOS** syntax generation engine adhering strictly to Cisco and CCNA best practices, organized according to the operating system's dependency model:
+**NetCalc 1.1** features an advanced **Cisco IOS** syntax generation engine adhering strictly to Cisco and CCNA best practices, organized according to the operating system's dependency model:
 
 1. Global parameters (`hostname`, `ipv6 unicast-routing`, security) appear first.
 2. VLAN databases are initialized before assignment to access/trunk switchports.
@@ -26,11 +26,11 @@ In networking labs such as **Cisco Packet Tracer**, **GNS3**, **EVE-NG**, or phy
 
 - **Port Families**: native support for `GigabitEthernet`, `FastEthernet`, `Ethernet`, and `Serial` ports.
 - **Automatic Port Activation**: automatically injects the `no shutdown` command on enabled ports.
-- **In-place Interface Editing**: in NetCalc Pro 1.1, you can edit any existing interface (double-click on Mac, context menu, or tap on iPhone/iPad) to update IP, mask, descriptions, or advanced settings without recreating the port.
+- **In-place Interface Editing**: in NetCalc 1.1, you can edit any existing interface (double-click on Mac, context menu, or tap on iPhone/iPad) to update IP, mask, descriptions, or advanced settings without recreating the port.
 
 ### 2. Router-on-a-Stick Builder (Inter-VLAN Routing)
 
-NetCalc Pro features a dedicated builder for single-router inter-VLAN routing connected to an 802.1Q trunk switch:
+NetCalc features a dedicated builder for single-router inter-VLAN routing connected to an 802.1Q trunk switch:
 
 - **Automatic VLAN Discovery**: discovers all VLANs configured across the project's switches and suggests corresponding virtual sub-interfaces (e.g., `GigabitEthernet0/0/0.10`, `GigabitEthernet0/0/0.20`).
 - **IEEE 802.1Q Encapsulation**: injects `encapsulation dot1Q <vlan_id>` before assigning the default gateway IP address.
@@ -38,7 +38,7 @@ NetCalc Pro features a dedicated builder for single-router inter-VLAN routing co
 
 ### 3. Full IPv6 on Devices and OSPFv3
 
-NetCalc Pro natively supports dual-stack IPv4/IPv6 configurations:
+NetCalc natively supports dual-stack IPv4/IPv6 configurations:
 
 - **Global Unicast and Link-Local Addresses**: configure both Global Unicast (`ipv6 address 2001:db8:1::1/64`) and custom Link-Local (`ipv6 address fe80::1 link-local`) addresses per interface.
 - **Automatic Routing Enablement**: automatically inserts the global `ipv6 unicast-routing` command at the top of routers with active IPv6 interfaces.
@@ -58,7 +58,7 @@ NetCalc Pro natively supports dual-stack IPv4/IPv6 configurations:
 
 ### 5. Advanced Switching: Spanning Tree, EtherChannel & Port Security
 
-NetCalc Pro 1.1 provides complete Layer 2 switching support required by CCNA certification curricula:
+NetCalc 1.1 provides complete Layer 2 switching support required by CCNA certification curricula:
 
 - **Spanning Tree Protocol (STP)**:
   - Global mode configuration: `spanning-tree mode pvst`, `rapid-pvst`, or `mst`.

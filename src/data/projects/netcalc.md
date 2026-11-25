@@ -1,6 +1,6 @@
 ---
-title: "NetCalc Pro"
-seoTitle: "NetCalc Pro: calcolo IPv4/IPv6 e subnetting su iPhone e Mac"
+title: "NetCalc"
+seoTitle: "NetCalc: calcolo IPv4/IPv6 e subnetting su iPhone e Mac"
 applicationCategory: "DeveloperApplication"
 seoDescription: "Calcolo IPv4/IPv6, subnetting e VLSM, comandi Cisco IOS e topologia su iPhone, iPad e Mac. Gratuita, senza pubblicità né acquisti in-app."
 description: "App per iPhone, iPad e Mac per le reti: calcolo IPv4/IPv6, quattro strumenti avanzati, subnetting e VLSM, comandi Cisco IOS con switching avanzato, schema di topologia e verifica di laboratorio. Gratuita, senza pubblicità né acquisti in-app."
@@ -14,9 +14,9 @@ privacyUpdatedAt: "14 ottobre 2026"
 privacyUrl: "/progetti/netcalc/privacy/"
 ---
 
-## Cos'è NetCalc Pro
+## Cos'è NetCalc
 
-NetCalc Pro calcola il piano di indirizzamento di una rete, genera i comandi per configurare router e switch, offre strumenti di analisi per wildcard e ACL, disegna lo schema di topologia e controlla che tutto torni prima di accendere il laboratorio. È pensata per chi studia reti (preparazione CCNA) e per chi le configura ogni giorno.
+NetCalc calcola il piano di indirizzamento di una rete, genera i comandi per configurare router e switch, offre strumenti di analisi per wildcard e ACL, disegna lo schema di topologia e controlla che tutto torni prima di accendere il laboratorio. È pensata per chi studia reti (preparazione CCNA) e per chi le configura ogni giorno.
 
 ## Funzionalità principali
 
@@ -31,14 +31,15 @@ NetCalc Pro calcola il piano di indirizzamento di una rete, genera i comandi per
 - **Configurazioni Cisco IOS Complete**: comandi commentati per router e switch con interfacce IPv4/IPv6, OSPFv2, OSPFv3, Router-on-a-Stick dot1Q, HSRP, IP helper-address (DHCP relay), Spanning Tree (PVST+, Rapid-PVST, PortFast, BPDU Guard), EtherChannel (LACP/PAgP), Port Security (sticky MAC, violation modes), DHCP, ACL e NAT/PAT.
 - **Importazione e Confronto Running-Config (Config Diff)**: importa configurazioni reali o confrontale blocco per blocco con il modello di progetto, con copia istantanea dei soli comandi mancanti.
 - **Schema di Rete (Topologia)**: diagramma grafico vettoriale generato automaticamente dagli indirizzi e dai link punto-punto, ingrandibile a schermo e incluso nei report PDF.
-- **Verifica del Laboratorio (Network Linter)**: 15 regole diagnostiche per scovare subnet sovrapposte, IP duplicati, next-hop irraggiungibili, OSPFv3 senza router-id, sub-interfacce errate, HSRP disallineati e port security su trunk.
-- **Didattica ed Esercizi**: quiz interattivo di subnetting a 9 tipologie con 3 difficoltà, correzione spiegata con numeri reali, punteggio e serie vincente (streak); guida alle reti in 21 capitoli e glossario con oltre 100 voci.
+- **Verifica del progetto (Network Linter)**: 15 regole diagnostiche per scovare subnet sovrapposte, IP duplicati, next-hop irraggiungibili, OSPFv3 senza router-id, sub-interfacce errate, HSRP disallineati e port security su trunk. Un tocco su un problema apre il dispositivo da correggere, e l'elenco dei progetti mostra accanto a ciascuno se ci sono errori o avvisi.
+- **Voci dei dispositivi modificabili**: reti OSPF, route statiche, VLAN, trunk, pool DHCP e ACL si modificano sul posto; una voce eliminata per errore torna con **Annulla**, che resta a schermo per qualche secondo.
+- **Didattica ed Esercizi**: su iPhone la tab **Impara** con l'esercizio del giorno, il record di risposte esatte di fila e la guida da riprendere dall'ultimo capitolo letto (su iPad e Mac la sezione Impara è nella barra laterale); quiz interattivo di subnetting a 9 tipologie con 3 difficoltà, correzione spiegata con numeri reali, punteggio e serie vincente (streak); guida alle reti in 21 capitoli e glossario con oltre 100 voci.
 - **Widget e Integrazione di Sistema**: widget interattivo *"Esercizio del Giorno"* con pulsante "Mostra la risposta", tabella prefissi CIDR, controlli per il Centro di Controllo (iOS 18 e macOS 26) e link `netcalc://`.
 - **Esporta e Condividi**: report in PDF vettoriali con CoreGraphics/CoreText (inclusa tavola grafica della topologia), tabelle CSV e script di testo TXT.
 - **Sincronizzazione iCloud Privata**: progetti, apparati e preferenze sempre sincronizzati via CloudKit privato tra iPhone, iPad e Mac, con fallback locale.
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app.
 
-Cisco e Cisco IOS sono marchi o marchi registrati di Cisco Systems, Inc. e/o delle sue affiliate negli Stati Uniti e in altri Paesi. NetCalc Pro genera comandi nella sintassi di Cisco IOS; non è sviluppata, sponsorizzata né approvata da Cisco e non è affiliata a Cisco. Gli altri marchi citati appartengono ai rispettivi proprietari.
+Cisco e Cisco IOS sono marchi o marchi registrati di Cisco Systems, Inc. e/o delle sue affiliate negli Stati Uniti e in altri Paesi. NetCalc genera comandi nella sintassi di Cisco IOS; non è sviluppata, sponsorizzata né approvata da Cisco e non è affiliata a Cisco. Gli altri marchi citati appartengono ai rispettivi proprietari.
 
 ## Piattaforme
 

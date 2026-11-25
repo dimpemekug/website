@@ -1,5 +1,5 @@
 ---
-title: "Verifica Laboratorio (Network Linter)"
+title: "Verifica del progetto (Network Linter)"
 description: "Diagnostica per laboratori CCNA: conflitti di IP, subnet sovrapposte, next-hop non raggiungibili, errori OSPFv3, HSRP, sub-interfacce e DHCP."
 project: "netcalc"
 order: 7
@@ -21,7 +21,7 @@ Le cause tipiche sono sottili:
 - Un IP virtuale HSRP non fa parte della stessa subnet dell'interfaccia.
 - Una porta switch in modalità trunk ha la port security abilitata (configurazione non supportata da Cisco IOS).
 
-Il **Network Linter** di NetCalc Pro (`NetworkLinter.analyze(devices:)`) è un motore diagnostico puramente funzionale che esamina l'intera topologia prima ancora di accendere gli apparati, evidenziando ogni incoerenza con spiegazioni didattiche e indicazioni di correzione.
+Il **Network Linter** di NetCalc (`NetworkLinter.analyze(devices:)`) è un motore diagnostico puramente funzionale che esamina l'intera topologia prima ancora di accendere gli apparati, evidenziando ogni incoerenza con spiegazioni didattiche e indicazioni di correzione.
 
 ---
 
@@ -112,4 +112,9 @@ I rilievi diagnostici sono raggruppati e ordinati per gravità decrescente:
 
 ## Integrazione nell'Interfaccia
 
-Nella vista del progetto, il pulsante **Verifica Laboratorio** mostra un badge dinamico con il conteggio degli errori e avvisi rilevati. Cliccando su qualsiasi rilievo, l'interfaccia evidenzia il dispositivo o l'interfaccia incriminata nell'ispettore contestuale, consentendo una correzione immediata con un solo clic.
+Nel riepilogo del progetto, la scheda **Verifica del progetto** conta errori, avvisi e note, oppure mostra «Nessun problema rilevato». Toccando la scheda, o il pulsante **Apri il rapporto**, si apre l'elenco completo dei rilievi, filtrabile tra **Solo errori**, **Errori e avvisi** e **Tutto**.
+
+Dalla versione 1.2:
+
+- toccando un rilievo si apre il dispositivo da correggere; se il problema riguarda più dispositivi, un pulsante **Apri** per ciascuno permette di scegliere quale;
+- nell'elenco dei progetti, accanto al numero di dispositivi, compare lo stato della verifica: una spunta verde, oppure il numero di errori (in rosso) o di avvisi (in arancione), con icona e testo e non solo il colore, letto anche da VoiceOver.

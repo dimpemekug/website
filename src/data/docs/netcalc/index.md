@@ -1,16 +1,16 @@
 ---
-title: "Introduzione a NetCalc Pro"
-description: "Panoramica di NetCalc Pro per Mac, iPad e iPhone: calcolo IPv4/IPv6, subnetting e VLSM, strumenti di rete, comandi Cisco IOS, topologia e linter."
+title: "Introduzione a NetCalc"
+description: "Panoramica di NetCalc per Mac, iPad e iPhone: calcolo IPv4/IPv6, subnetting e VLSM, strumenti di rete, comandi Cisco IOS, topologia e linter."
 project: "netcalc"
 order: 1
 section: "Iniziare"
 ---
 
-## Cos'è NetCalc Pro
+## Cos'è NetCalc
 
-**NetCalc Pro** è l'applicazione professionale sviluppata nativamente in Swift, SwiftUI e SwiftData per **macOS 14+ (Sonoma, Sequoia, Tahoe)**, **iPadOS 17+** e **iOS 17+**.
+**NetCalc** è l'applicazione professionale sviluppata nativamente in Swift, SwiftUI e SwiftData per **macOS 14+ (Sonoma, Sequoia, Tahoe)**, **iPadOS 17+** e **iOS 17+**.
 
-Progettata specificamente per studenti di reti informatiche (corsi scolastici, universitari o certificazioni **Cisco CCNA**), docenti, sistemisti e appassionati di telecomunicazioni, NetCalc Pro colma il divario tra il calcolo teorico su carta e la configurazione pratica degli apparati in ambienti come **Cisco Packet Tracer**, **GNS3**, **EVE-NG** o laboratori fisici.
+Progettata specificamente per studenti di reti informatiche (corsi scolastici, universitari o certificazioni **Cisco CCNA**), docenti, sistemisti e appassionati di telecomunicazioni, NetCalc colma il divario tra il calcolo teorico su carta e la configurazione pratica degli apparati in ambienti come **Cisco Packet Tracer**, **GNS3**, **EVE-NG** o laboratori fisici.
 
 L'applicazione consente di:
 
@@ -28,7 +28,7 @@ L'applicazione consente di:
 
 ## Architettura e Filosofia
 
-NetCalc Pro è stata costruita seguendo rigorosi standard di ingegneria del software Apple:
+NetCalc è stata costruita seguendo rigorosi standard di ingegneria del software Apple:
 
 ### 1. Modello di Dominio Puro
 
@@ -56,6 +56,6 @@ Per padroneggiare ogni funzionalità dell'applicazione, consulta le guide dedica
 - [Strumenti di Rete Avanzati](/progetti/netcalc/docs/strumenti-di-rete): Route summary con comandi Cisco, convertitore Intervallo a CIDR con ACL, simulatore Wildcard e simulazione Longest Prefix Match.
 - [Generazione Configurazioni Cisco IOS](/progetti/netcalc/docs/configurazioni-cisco-ios): Router, switch, IPv6/OSPFv3, Router-on-a-Stick, HSRP, Spanning Tree, EtherChannel e Port Security.
 - [Importazione e Confronto Running-Config](/progetti/netcalc/docs/import-running-config): Analisi di configurazioni Cisco esistenti, parsing nel progetto e Config Diff con copia dei comandi mancanti.
-- [Verifica del Laboratorio (Network Linter)](/progetti/netcalc/docs/linter-verifica-laboratorio): Diagnosi proattiva a 15 regole di anomalie, conflitti IP, errori OSPFv3 e incoerenze prima del test.
+- [Verifica del progetto (Network Linter)](/progetti/netcalc/docs/linter-verifica-laboratorio): Diagnosi proattiva a 15 regole di anomalie, conflitti IP, errori OSPFv3 e incoerenze prima del test.
 - [Progetti, Topologia ed Esportazione](/progetti/netcalc/docs/progetti-export-icloud): Gestione dei progetti, diagramma di topologia automatico, report PDF vettoriali e sincronizzazione CloudKit.
 - [Didattica, Esercizi e Widget](/progetti/netcalc/docs/scorciatoie-e-didattica): Quiz interattivo a 9 tipologie con serie/record, 21 capitoli didattici, glossario con oltre 100 voci, widget e controlli.

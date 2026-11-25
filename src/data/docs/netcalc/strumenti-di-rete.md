@@ -1,6 +1,6 @@
 ---
 title: "Strumenti di Rete Avanzati"
-description: "I quattro strumenti di NetCalc Pro: Route Summary, convertitore Intervallo a CIDR, simulatore Wildcard e ACL e confronto reti con Longest Prefix Match."
+description: "I quattro strumenti di NetCalc: Route Summary, convertitore Intervallo a CIDR, simulatore Wildcard e ACL e confronto reti con Longest Prefix Match."
 project: "netcalc"
 order: 4
 section: "Strumenti e Calcolo"
@@ -8,7 +8,7 @@ section: "Strumenti e Calcolo"
 
 ## Una Suite di Strumenti Dedicata
 
-Oltre alle calcolatrici e ai pianificatori di sottorete, **NetCalc Pro 1.1** introduce una sezione dedicata di **Strumenti** (accessibile dalla sidebar su Mac e iPad, dal menu del titolo su iPhone, o accanto al selettore segmentato della calcolatrice su macOS).
+Oltre alle calcolatrici e ai pianificatori di sottorete, **NetCalc 1.1** introduce una sezione dedicata di **Strumenti** (accessibile dalla sidebar su Mac e iPad, dal menu del titolo su iPhone, o accanto al selettore segmentato della calcolatrice su macOS).
 
 Questi quattro strumenti risolvono le problematiche operative più frequenti nella configurazione e nel troubleshooting delle reti aziendali e nei laboratori Cisco CCNA:
 
@@ -37,12 +37,12 @@ Blocco Summary:     192.168.0.0/22 (255.255.252.0)
 
 - **Incolla e Calcola**: incolla un elenco di indirizzi o reti in qualsiasi formato (con CIDR o maschera decimale).
 - **Evidenziazione dei Bit Comuni**: visualizzazione grafica dei bit condivisi tra tutte le reti inserite, mostrando visivamente dove si attesta il confine del prefisso riassuntivo.
-- **Rilevamento Indirizzi Extra (Spazio Non Allocato)**: NetCalc Pro calcola all'istante se il blocco riassuntivo copre esattamente solo le reti desiderate oppure se include indirizzi aggiuntivi non ancora allocati, quantificandoli chiaramente.
+- **Rilevamento Indirizzi Extra (Spazio Non Allocato)**: NetCalc calcola all'istante se il blocco riassuntivo copre esattamente solo le reti desiderate oppure se include indirizzi aggiuntivi non ancora allocati, quantificandoli chiaramente.
 - **Aggregazione Esatta**: se l'elenco non forma una potenza di 2 perfetta, lo strumento propone sia il blocco riassuntivo minimo contenitore sia l'elenco delle subnet minime per un'aggregazione esatta al 100%.
 
 ### Comandi Cisco IOS Generati al Volo
 
-NetCalc Pro genera direttamente i comandi pronti da incollare sulla CLI:
+NetCalc genera direttamente i comandi pronti da incollare sulla CLI:
 
 - **Route Statica di Summary**:
   ```text
@@ -74,7 +74,7 @@ Nelle architetture di sicurezza e nella stesura di policy firewall, i requisiti 
 Lo strumento scompone qualsiasi intervallo casuale nel **minor numero possibile di blocchi CIDR validi**:
 
 1. Inserisci l'**IP Iniziale** e l'**IP Finale**.
-2. NetCalc Pro applica l'algoritmo di partizione esponenziale: allinea i confini di bit e aggrega i blocchi più grandi possibili verso il centro dell'intervallo.
+2. NetCalc applica l'algoritmo di partizione esponenziale: allinea i confini di bit e aggrega i blocchi più grandi possibili verso il centro dell'intervallo.
 3. Restituisce la tabella con:
    - Ogni blocco CIDR calcolato (es. `/29`, `/27`, `/26`, ecc.).
    - La maschera decimale e la wildcard mask associata.
@@ -119,14 +119,14 @@ La causa risiede quasi sempre in una **maschera disallineata** tra i due disposi
 
 - Inserisci IP e Maschera dell'**Host 1** (es. `192.168.1.100/24`).
 - Inserisci IP e Maschera dell'**Host 2** (es. `192.168.1.200/25`).
-- NetCalc Pro calcola la visione locale di ciascun host:
+- NetCalc calcola la visione locale di ciascun host:
   - Per l'Host 1 (`/24`), la subnet si estende da `.1` a `.254`: l'Host 2 è considerato **locale** e viene contattato direttamente tramite ARP.
   - Per l'Host 2 (`/25`), la subnet termina a `.126`: l'Host 1 è considerato **remoto** e i pacchetti di risposta vengono inviati al default gateway (che se non esiste o non effettua routing blocca la comunicazione).
 - Lo strumento evidenzia immediatamente l'asimmetria con un messaggio didattico chiaro.
 
 ### Rilevamento Sovrapposizioni (Subnet Overlap)
 
-Incolla una lista di sottoreti del tuo piano di indirizzamento: NetCalc Pro scansiona tutte le coppie possibili e segnala all'istante eventuali sovrapposizioni parziali o inclusioni complete tra blocchi con prefissi diversi.
+Incolla una lista di sottoreti del tuo piano di indirizzamento: NetCalc scansiona tutte le coppie possibili e segnala all'istante eventuali sovrapposizioni parziali o inclusioni complete tra blocchi con prefissi diversi.
 
 ### Simulazione Longest Prefix Match (LPM)
 
@@ -134,4 +134,4 @@ Nel routing IP, quando un pacchetto deve essere inoltrato e nella tabella di ins
 
 - Inserisci l'indirizzo IP di destinazione del pacchetto.
 - Inserisci la tabella delle rotte attive (es. `0.0.0.0/0`, `10.0.0.0/8`, `10.1.0.0/16`, `10.1.4.0/24`).
-- NetCalc Pro mostra graficamente quali rotte corrispondono all'indirizzo e contrassegna la rotta vincente selezionata dal router per l'inoltro, calcolando la metrica e l'interfaccia associata.
+- NetCalc mostra graficamente quali rotte corrispondono all'indirizzo e contrassegna la rotta vincente selezionata dal router per l'inoltro, calcolando la metrica e l'interfaccia associata.

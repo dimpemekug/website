@@ -16,29 +16,33 @@
       "it": "Un router con interfacce, OSPF e route statiche",
       "en": "A router with interfaces, OSPF and static routes"
     },
-    "05-ipv6": {
-      "it": "Calcolatrice IPv6: compressione, prefissi ed EUI-64",
-      "en": "IPv6 calculator: compression, prefixes and EUI-64"
-    },
-    "06-guide": {
-      "it": "Un capitolo della guida alle reti",
-      "en": "A chapter of the networking guide"
-    },
-    "07-report": {
-      "it": "La verifica del laboratorio: errori e avvisi, ciascuno con la soluzione",
-      "en": "Lab verification: errors and warnings, each explained with its fix"
-    },
-    "08-config": {
+    "05-config": {
       "it": "La configurazione Cisco IOS commentata, pronta da incollare",
       "en": "Commented Cisco IOS configuration, ready to paste"
     },
-    "09-summary": {
+    "06-report": {
+      "it": "La verifica del progetto: errori e avvisi, ciascuno con la soluzione",
+      "en": "Project check: errors and warnings, each explained with its fix"
+    },
+    "07-summary": {
       "it": "Summary: il blocco che riassume più reti, con i bit in comune",
       "en": "Summary: the block that sums up several networks, with the common bits"
     },
-    "10-exercises": {
+    "08-exercises": {
       "it": "Un esercizio di subnetting con la soluzione passo per passo",
       "en": "A subnetting exercise with a step-by-step solution"
+    },
+    "09-guide": {
+      "it": "L'indice della guida alle reti in 21 capitoli",
+      "en": "Contents of the 21-chapter networking guide"
+    },
+    "09-learn": {
+      "it": "La tab Impara: esercizio del giorno, guida da riprendere e glossario",
+      "en": "The Learn tab: exercise of the day, guide to continue and glossary"
+    },
+    "10-ipv6-dark": {
+      "it": "Calcolatrice IPv6 in tema scuro: compressione, prefissi ed EUI-64",
+      "en": "IPv6 calculator in dark mode: compression, prefixes and EUI-64"
     }
   }
 }

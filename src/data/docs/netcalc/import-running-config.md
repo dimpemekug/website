@@ -1,6 +1,6 @@
 ---
 title: "Importazione e Confronto Running-Config"
-description: "Importare e confrontare configurazioni Cisco IOS reali con NetCalc Pro: ricostruzione apparati, Config Diff e copia dei comandi mancanti."
+description: "Importare e confrontare configurazioni Cisco IOS reali con NetCalc: ricostruzione apparati, Config Diff e copia dei comandi mancanti."
 project: "netcalc"
 order: 6
 section: "Integrazione Cisco IOS"
@@ -10,12 +10,12 @@ section: "Integrazione Cisco IOS"
 
 Nel flusso di lavoro tipico di uno studente, di un docente o di un ingegnere di rete:
 
-1. **Si progetta** il piano di indirizzamento in NetCalc Pro.
+1. **Si progetta** il piano di indirizzamento in NetCalc.
 2. **Si generano** i comandi Cisco IOS e si incollano nel simulatore (**Cisco Packet Tracer**, **GNS3**, **EVE-NG**) o sugli apparati fisici.
 3. **Si effettuano modifiche e prove** direttamente sulla console CLI durante il troubleshooting (aggiunta di rotte, abilitazione di porte, modifica di ACL).
 4. **Si creano discrepanze**: l'apparato reale non rispecchia più il progetto originale o si manifestano problemi di connettività.
 
-Per risolvere questo problema bidirezionale, NetCalc Pro include due strumenti complementari:
+Per risolvere questo problema bidirezionale, NetCalc include due strumenti complementari:
 - **Importazione Running-Config**: analizza una configurazione esistente e ricrea il dispositivo all'interno del progetto.
 - **Confronto con la Running-Config (Config Diff)**: confronta la configurazione reale con il modello teorico, indicando cosa manca e cosa c'è in più.
 
@@ -29,7 +29,7 @@ Per risolvere questo problema bidirezionale, NetCalc Pro include due strumenti c
    show running-config
    ```
 2. Seleziona e copia l'intero testo generato (inclusi i caratteri `!` e i blocchi di interfaccia).
-3. In NetCalc Pro, apri il tuo progetto nella sidebar.
+3. In NetCalc, apri il tuo progetto nella sidebar.
 4. Premi il pulsante **Importa Running-Config** (oppure usa la voce dedicata dal menu contestuale del progetto o dalla toolbar).
 5. Incolla il testo nell'area di acquisizione e conferma.
 6. L'app creerà automaticamente un nuovo dispositivo (`CiscoDevice`) con l'hostname, le interfacce fisiche e virtuali, i protocolli di routing e i servizi estratti.
@@ -40,7 +40,7 @@ Per risolvere questo problema bidirezionale, NetCalc Pro include due strumenti c
 
 Una `running-config` di produzione o di laboratorio contiene spesso centinaia di righe non rilevanti per la logica di livello 2/3 (es. `crypto pki trustpoint`, certificati digitali, timer interni, direttive hardware proprietary).
 
-Il parser di NetCalc Pro opera secondo due principi fondamentali:
+Il parser di NetCalc opera secondo due principi fondamentali:
 
 ### Tolleranza ai Comandi non Modellati
 
@@ -76,13 +76,13 @@ Il parser supporta la totalità dei comandi generati dal motore CLI dell'app:
 
 ## 4. "Confronta con la Running-Config" (Config Diff)
 
-Una delle novità più apprezzate di **NetCalc Pro 1.1** è il pannello **Confronta con la running-config** (`ConfigCompareSheet`), accessibile dalla scheda di ciascun dispositivo del progetto.
+Una delle novità più apprezzate di **NetCalc 1.1** è il pannello **Confronta con la running-config** (`ConfigCompareSheet`), accessibile dalla scheda di ciascun dispositivo del progetto.
 
 ### Come Funziona il Diff
 
 Quando incolli l'output di `show running-config` di un apparato reale:
 
 1. **Analisi Strutturale Blocco per Blocco**: l'algoritmo non fa un semplice diff testuale riga per riga, ma confronta logicamente ogni sezione (interfaccia per interfaccia, processo per processo).
-2. **Evidenziazione Comandi Mancanti**: identifica quali comandi previsti dal modello di NetCalc Pro non sono ancora stati applicati sul dispositivo reale (es. `no shutdown` dimenticato, mancata assegnazione della VLAN alla porta trunk, route statica mancante).
+2. **Evidenziazione Comandi Mancanti**: identifica quali comandi previsti dal modello di NetCalc non sono ancora stati applicati sul dispositivo reale (es. `no shutdown` dimenticato, mancata assegnazione della VLAN alla porta trunk, route statica mancante).
 3. **Evidenziazione Comandi Extra**: segnala eventuali comandi presenti sull'apparato reale che non fanno parte del modello di progetto.
-4. **Pulsante "Copia Comandi Mancanti"**: con un clic, NetCalc Pro isola e copia negli appunti esclusivamente la sequenza minima di comandi Cisco IOS necessari per allineare l'apparato fisico al progetto, pronta da incollare nel terminale senza dover riconfigurare l'intero switch o router.
+4. **Pulsante "Copia Comandi Mancanti"**: con un clic, NetCalc isola e copia negli appunti esclusivamente la sequenza minima di comandi Cisco IOS necessari per allineare l'apparato fisico al progetto, pronta da incollare nel terminale senza dover riconfigurare l'intero switch o router.
