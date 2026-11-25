@@ -27,7 +27,7 @@ I dieci modelli pronti:
 
 ## Modelli personali
 
-**Archivio › Salva come modello…** salva il documento aperto come modello, con testo, stili e impostazioni della pagina. I modelli personali compaiono nella finestra di benvenuto e in **Archivio › Nuovo da modello personale**; sono file DOCX nella cartella dei modelli dell'app (**Mostra cartella dei modelli**). In **Impostazioni › Modelli** si creano documenti, si rinominano e si spostano nel Cestino; i documenti già creati da un modello non cambiano.
+**Archivio › Salva come modello…** salva il documento aperto come modello, con testo, stili e impostazioni della pagina, in un file DOCX nella cartella che scegli tu. **Aggiungi modello…** (in **Archivio › Nuovo da modello personale** e in **Impostazioni › Modelli**) usa come modello un documento Word che hai già, lasciandolo dov'è: Documenta ricorda solo dove si trova. I modelli personali compaiono nella finestra di benvenuto e in **Archivio › Nuovo da modello personale**. In **Impostazioni › Modelli** si crea un documento da un modello (**Crea documento**), lo si trova nel Finder (**Mostra nel Finder**) o lo si toglie con **Rimuovi dall'elenco**, che non cancella il file; i documenti già creati da un modello non cambiano.
 
 ## Salvataggio
 

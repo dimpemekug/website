@@ -38,4 +38,4 @@ Documenta è un elaboratore di testi per Mac, iPhone e iPad. Scrivi su pagine im
 
 ## Piattaforme
 
-Disponibile sull'App Store per **iPhone** e **iPad** con iOS e iPadOS 26 o successivo. La versione per **Mac**, con chip Apple (Apple silicon) e macOS 15 Sequoia o successivo, è in revisione e arriverà nella stessa pagina dello store.
+Disponibile sull'App Store per **Mac** con chip Apple (Apple silicon) e macOS 15 Sequoia o successivo, e per **iPhone** e **iPad** con iOS e iPadOS 26 o successivo. Un solo download gratuito vale su tutti i dispositivi.

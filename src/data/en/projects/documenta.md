@@ -38,4 +38,4 @@ Documenta is a word processor for Mac, iPhone and iPad. Write on pages laid out 
 
 ## Platforms
 
-Available on the App Store for **iPhone** and **iPad** with iOS and iPadOS 26 or later. The **Mac** version, for Apple silicon and macOS 15 Sequoia or later, is in review and will arrive on the same App Store page.
+Available on the App Store for **Mac** with Apple silicon and macOS 15 Sequoia or later, and for **iPhone** and **iPad** with iOS and iPadOS 26 or later. One free download works on all your devices.

@@ -33,8 +33,8 @@ data.
   replacements, the author name for comments and tracked changes) in the app settings.
 - **Personal dictionary**: the words you add, in the app settings on the Mac; they are also
   taught to the system spell checker, which keeps them on your device.
-- **Personal templates** (Mac): the documents you save as a template, in the app's Application
-  Support folder.
+- **Personal templates** (Mac): the documents you save or add as a template stay in the folder you
+  choose; the app only remembers where they are, in its preferences.
 - **Performance reports** (Mac): through MetricKit, macOS gives the app anonymous reports on launch
   times, hangs and crashes. The app keeps them for about a month in its Application Support folder
   and does not send them to anyone.

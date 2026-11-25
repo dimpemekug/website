@@ -33,8 +33,8 @@ dato personale.
   personali del testo, nome dell'autore di commenti e revisioni) nelle impostazioni dell'app.
 - **Dizionario personale**: le parole che aggiungi, nelle impostazioni dell'app sul Mac; vengono
   anche insegnate al correttore ortografico del sistema, che le tiene sul dispositivo.
-- **Modelli personali** (Mac): i documenti che salvi come modello, nella cartella Application
-  Support dell'app.
+- **Modelli personali** (Mac): i documenti che salvi o aggiungi come modello restano nella cartella
+  che scegli tu; l'app ricorda solo dove sono, nelle sue preferenze.
 - **Rapporti sulle prestazioni** (Mac): macOS consegna all'app, tramite MetricKit, rapporti anonimi
   su tempi di avvio, blocchi e arresti anomali. L'app li conserva per circa un mese nella cartella
   Application Support e non li invia a nessuno.

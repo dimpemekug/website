@@ -27,7 +27,7 @@ The ten ready-made templates:
 
 ## Your own templates
 
-**File › Save as Template…** saves the open document as a template, with its text, styles and page setup. Your templates appear in the welcome window and in **File › New from My Template**; they are DOCX files in the app's templates folder (**Show Templates Folder**). In **Settings › Templates** you create documents from them, rename them and move them to the Trash; documents already created from a template don't change.
+**File › Save as Template…** saves the open document as a template, with its text, styles and page setup, in a DOCX file in the folder you choose. **Add Template…** (in **File › New from My Template** and in **Settings › Templates**) uses a Word document you already have as a template, leaving it where it is: Documenta only remembers where it is. Your templates appear in the welcome window and in **File › New from My Template**. In **Settings › Templates** you create a document from a template (**Create Document**), find it in Finder (**Show in Finder**) or remove it with **Remove from List**, which doesn't delete the file; documents already created from a template don't change.
 
 ## Saving
 
