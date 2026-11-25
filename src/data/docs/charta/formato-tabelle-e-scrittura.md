@@ -37,10 +37,11 @@ Un clic con il tasto destro nel testo (su iPhone e iPad il menu che compare tocc
 
 - **su un collegamento `[[nota]]`**: **Apri «…»**, **Collegamenti in entrata** e **Rinomina la nota…** (nelle cartelle), sul Mac **Apri in una finestra a parte**; se la nota non esiste, **Crea la nota «…»**. Poi **Copia collegamento** e **Togli il collegamento**;
 - **su un link**: **Apri link** (o **Vai al titolo** per un link interno), **Copia indirizzo**, **Modifica link…**, che seleziona l'indirizzo, e **Togli il collegamento**, che lascia il testo;
-- **con del testo selezionato**, in una cartella: **Crea nota dalla selezione** sposta il testo in una nota nuova accanto e lascia al suo posto il collegamento; **Collega a una nota…** trasforma la selezione in `[[|testo]]` e propone le note; **Cerca nella cartella** la cerca in tutte le note;
+- **con del testo selezionato**, in una cartella: **Crea nota dalla selezione** sposta il testo in una nota nuova accanto e lascia al suo posto il collegamento; **Collega a una nota…** trasforma la selezione in `[[|testo]]` e propone le note; **Cerca nella cartella** la cerca in tutte le note. Con qualsiasi selezione c'è anche **Copia come testo formattato**;
 - **in una tabella**: i sottomenu **Riga** (**Inserisci riga sopra**, **Inserisci riga sotto**, **Elimina riga**) e **Colonna** (inserisci a sinistra o a destra, elimina, allinea), e **Formatta tabella**;
 - **in una voce da spuntare**: **Spunta** o **Togli la spunta**, **Spunta tutte** e **Togli tutte le spunte** (anche le voci annidate);
-- **su un titolo**: **Copia collegamento al titolo** (un `[[nota#titolo]]` nelle cartelle, un link `#titolo` in un documento) e **Sposta la sezione in su** o **in giù**, che scambia il titolo e il suo testo con la sezione vicina dello stesso livello;
+- **su un titolo**: **Copia collegamento al titolo** (un `[[nota#titolo]]` nelle cartelle, un link `#titolo` in un documento) e **Sposta la sezione in su** o **in giù**, che scambia il titolo e il suo testo con la sezione vicina dello stesso livello; poi **Ripiega la sezione** o **Espandi la sezione** e le versioni per tutte le sezioni;
+- **su un tag**: **Note con #…** cerca il tag in tutte le note della cartella;
 - **in un blocco di codice**: **Copia il codice** e il sottomenu **Lingua**; **in una formula o un diagramma**: **Copia il sorgente**; **su un richiamo di nota**: **Vai alla nota a piè di pagina**;
 - **nel testo normale**: i sottomenu **Formato** e **Trasforma in** (testo, titoli, elenchi, citazione).
 

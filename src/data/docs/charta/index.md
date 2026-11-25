@@ -30,7 +30,8 @@ Nelle cartelle le note si salvano da sole poco dopo ogni modifica. Sul Mac, sott
 - [Markdown supportato](/progetti/charta/docs/markdown-supportato): tabelle, formule, diagrammi, note, front matter e le altre estensioni
 - [Formato, tabelle e scrittura](/progetti/charta/docs/formato-tabelle-e-scrittura): menu, tasto destro, elenchi, tabelle, incolla, obiettivo di parole, Focus e Macchina da scrivere
 - [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate): progetti, collegamenti, grafo, ricerca e immagini
-- [Esportazione e stampa](/progetti/charta/docs/esportazione-e-stampa): HTML, PDF, Word ed EPUB
+- [Tag, comandi e sezioni ripiegate](/progetti/charta/docs/tag-comandi-e-sezioni-ripiegate): tag, riquadro dei comandi, sezioni ripiegabili, anteprima dei collegamenti, collegamenti rotti e note orfane
+- [Esportazione e stampa](/progetti/charta/docs/esportazione-e-stampa): HTML, PDF, Word ed EPUB, CSS personalizzato, copia come testo formattato
 - [iPhone e iPad](/progetti/charta/docs/iphone-e-ipad): la barra sopra la tastiera e le differenze dal Mac
 - [Impostazioni](/progetti/charta/docs/impostazioni) e [Scorciatoie da tastiera](/progetti/charta/docs/scorciatoie)
 

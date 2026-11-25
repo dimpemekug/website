@@ -2,11 +2,11 @@
 title: "Impostazioni"
 description: "Tutte le impostazioni di Charta su Mac, iPhone e iPad, con i valori predefiniti."
 project: "charta"
-order: 8
+order: 9
 section: "Riferimento"
 ---
 
-Sul Mac: **Charta › Impostazioni…** (<kbd>⌘</kbd> <kbd>,</kbd>), con le schede **Generali**, **Editor** e **Anteprima**. Su iPhone e iPad: **Impostazioni** nel menu **Altro** (…) della barra di un documento o della barra laterale di una cartella, in un'unica pagina. Le impostazioni valgono per tutti i documenti; quelle di un singolo progetto sono in [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate).
+Sul Mac: **Charta › Impostazioni…** (<kbd>⌘</kbd> <kbd>,</kbd>), con le schede **Generali**, **Editor**, **Anteprima** ed **Esportazione**. Su iPhone e iPad: **Impostazioni** nel menu **Altro** (…) della barra di un documento o della barra laterale di una cartella, in un'unica pagina. Le impostazioni valgono per tutti i documenti; quelle di un singolo progetto sono in [Cartelle e note collegate](/progetti/charta/docs/cartelle-e-note-collegate).
 
 ## Generali
 
@@ -61,6 +61,17 @@ Sul Mac <kbd>⌘</kbd> <kbd>+</kbd> e <kbd>⌘</kbd> <kbd>-</kbd> cambiano insie
 | Scorrimento sincronizzato | | attivo |
 
 Lo stile vale anche per l'esportazione in HTML e PDF. Su iPhone e iPad la disposizione si sceglie con il selettore della vista.
+
+## Esportazione
+
+| Impostazione | Valori | Predefinito |
+|---|---|---|
+| Usa un CSS personalizzato | un tuo CSS per anteprima, HTML, PDF, stampa ed EPUB | spenta |
+| Indice all'inizio | indice dei titoli sulla prima pagina del PDF e della stampa | spenta |
+| Numeri di pagina | «3 / 12» in fondo alle pagine del PDF | attiva |
+| Intestazione con titolo e data | in cima alle pagine del PDF | spenta |
+
+Dettagli in [Esportazione e stampa](/progetti/charta/docs/esportazione-e-stampa).
 
 ## Riconoscimenti
 

@@ -23,6 +23,7 @@ Charta reads CommonMark and GitHub's extensions (GFM), plus a few extensions com
 | Checklists | `- [ ] to do`, `- [x] done` |
 | Quote | `> text` |
 | Divider | `---` |
+| Tag | `#idea`, `#project/charta` (see [Tags, commands and folded sections](/en/projects/charta/docs/tags-commands-and-folded-sections)) |
 
 ## Tables
 

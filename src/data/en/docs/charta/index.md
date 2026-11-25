@@ -30,7 +30,8 @@ In folders, notes save themselves shortly after each change. On the Mac, the sav
 - [Supported Markdown](/en/projects/charta/docs/supported-markdown): tables, math, diagrams, footnotes, front matter and the other extensions
 - [Formatting, tables and writing](/en/projects/charta/docs/formatting-tables-and-writing): menus, right-click, lists, tables, paste, word goal, Focus and Typewriter Mode
 - [Folders and linked notes](/en/projects/charta/docs/folders-and-linked-notes): projects, links, graph, search and images
-- [Export and print](/en/projects/charta/docs/export-and-print): HTML, PDF, Word and EPUB
+- [Tags, commands and folded sections](/en/projects/charta/docs/tags-commands-and-folded-sections): tags, command palette, foldable sections, link previews, broken links and orphan notes
+- [Export and print](/en/projects/charta/docs/export-and-print): HTML, PDF, Word and EPUB, custom CSS, copy as rich text
 - [iPhone and iPad](/en/projects/charta/docs/iphone-and-ipad): the bar above the keyboard and the differences from the Mac
 - [Settings](/en/projects/charta/docs/settings) and [Keyboard shortcuts](/en/projects/charta/docs/keyboard-shortcuts)
 

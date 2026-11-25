@@ -2,7 +2,7 @@
 title: "Scorciatoie da tastiera"
 description: "Tutte le scorciatoie da tastiera di Charta per Mac, divise per menu, e quelle che valgono su iPad con una tastiera."
 project: "charta"
-order: 9
+order: 10
 section: "Riferimento"
 ---
 
@@ -17,6 +17,12 @@ Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</
 | Grafo delle note | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>G</kbd> |
 | Apri cartella… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> |
 | Stampa… | <kbd>⌘</kbd> <kbd>P</kbd> |
+
+## Composizione
+
+| Comando | Scorciatoia |
+|---|---|
+| Copia come testo formattato | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> |
 
 ## Formato
 
@@ -59,6 +65,9 @@ Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</
 | Solo anteprima | <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
 | Mostra · Nascondi struttura | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>L</kbd> |
 | Collegamenti in entrata | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>B</kbd> |
+| Comandi… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
+| Ripiega la sezione · Espandi la sezione | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>[</kbd> · <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>]</kbd> |
+| Ripiega tutte le sezioni · Espandi tutte le sezioni | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>[</kbd> · <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>]</kbd> |
 | Modalità Focus | <kbd>⌃</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd> |
 | Macchina da scrivere | <kbd>⌃</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>T</kbd> |
 | Ingrandisci testo · Riduci testo | <kbd>⌘</kbd> <kbd>+</kbd> · <kbd>⌘</kbd> <kbd>-</kbd> |
@@ -83,5 +92,6 @@ Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</
 |---|---|
 | Grassetto · Corsivo · Link | <kbd>⌘</kbd> <kbd>B</kbd> · <kbd>⌘</kbd> <kbd>I</kbd> · <kbd>⌘</kbd> <kbd>K</kbd> |
 | WYSIWYG o codice | <kbd>⌘</kbd> <kbd>E</kbd> |
+| Comandi… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
 | Vai alla nota (nelle cartelle) | <kbd>⌘</kbd> <kbd>T</kbd> |
 | Collegamenti in entrata (nelle cartelle) | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>B</kbd> |

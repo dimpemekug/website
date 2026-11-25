@@ -32,21 +32,29 @@
       "it": "Il grafo delle note della cartella, con i colori delle sottocartelle",
       "en": "The note graph of the folder, colored by subfolder"
     },
-    "07-outline": {
-      "it": "La struttura dei titoli accanto al testo, con il titolo al cursore evidenziato",
-      "en": "The heading outline beside the text, with the heading at the cursor highlighted"
-    },
     "08-search": {
       "it": "La ricerca nel testo di tutte le note, con le opzioni maiuscole, parola intera ed espressione regolare",
       "en": "Full-text search across all notes, with match case, whole word and regular expression options"
     },
-    "09-goto": {
-      "it": "Vai alla nota: l'elenco delle note della cartella da aprire per nome",
-      "en": "Go to Note: the folder's notes, to open by name"
-    },
     "10-dark": {
       "it": "La stessa nota con formule e diagramma nel tema scuro",
       "en": "The same note with formulas and diagram in the dark theme"
+    },
+    "07-fold": {
+      "it": "Una nota con alcune sezioni ripiegate sotto i titoli, segnate dalla freccia e da «…»",
+      "en": "A note with some sections folded under their headings, marked by an arrow and \"…\""
+    },
+    "09-commands": {
+      "it": "Il riquadro dei comandi: scrivendo «fo» trova comandi di inserimento, vista, sezioni e formato con le loro scorciatoie",
+      "en": "The command palette: typing \"fo\" finds insert, view, section and format commands with their shortcuts"
+    },
+    "mac/07-fold": {
+      "it": "Sezioni ripiegate nel testo e nella Struttura, con i tag della cartella nella barra laterale",
+      "en": "Folded sections in the text and in the Outline, with the folder's tags in the sidebar"
+    },
+    "iphone/09-commands": {
+      "it": "Il riquadro dei comandi su iPhone: scrivendo «fo» trova comandi di inserimento, vista, sezioni e formato",
+      "en": "The command palette on iPhone: typing \"fo\" finds insert, view, section and format commands"
     }
   }
 }

@@ -13,10 +13,11 @@ Una cartella aperta in Charta diventa un **progetto**: un insieme di note Markdo
 - **Mac**: **Archivio › Apri cartella…** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd>). Ogni cartella si apre nella sua finestra; le ultime aperte sono in **Archivio › Cartelle recenti**, che si svuota con **Cancella elenco**.
 - **iPhone e iPad**: **Apri cartella** nella schermata iniziale. Su iPad la cartella si apre in una finestra sua, su iPhone a schermo intero.
 
-A sinistra c'è la barra delle cartelle con due sezioni:
+A sinistra c'è la barra delle cartelle con tre sezioni:
 
 - **Recenti**: le ultime note aperte, di tutti i progetti, con il nome del progetto sotto;
-- **Progetti**: i progetti fissati e recenti, ciascuno un ramo da aprire. Il progetto della finestra mostra il suo albero; una nota di un altro progetto lo apre nella stessa finestra (o porta davanti la finestra che lo ha già aperto).
+- **Progetti**: i progetti fissati e recenti, ciascuno un ramo da aprire. Il progetto della finestra mostra il suo albero; una nota di un altro progetto lo apre nella stessa finestra (o porta davanti la finestra che lo ha già aperto);
+- **Tag**: i tag delle note del progetto, con i tag annidati (vedi [Tag, comandi e sezioni ripiegate](/progetti/charta/docs/tag-comandi-e-sezioni-ripiegate)).
 
 Se una cartella è stata spostata o non è più raggiungibile, la finestra lo dice e offre **Apri un altro progetto**.
 
@@ -39,6 +40,8 @@ Con **Impostazioni › Generali › Ricarica senza chiedere i file cambiati da a
 Scrivi `[[` e il nome di una nota: Charta propone le note della cartella mentre scrivi (sul Mac in un elenco sotto il cursore, su iPhone e iPad nella barra sopra la tastiera). Dopo `[[Nota#` propone i titoli di quella nota. Le forme `[[Nota#Titolo]]` e `[[Nota|testo]]` sono spiegate in [Markdown supportato](/progetti/charta/docs/markdown-supportato).
 
 Un clic su un collegamento, nel WYSIWYG o nell'anteprima, apre la nota; se la nota non esiste ancora, Charta la crea accanto a quella aperta, con il nome come titolo.
+
+Fermando il puntatore su un collegamento (su iPhone e iPad tenendolo premuto) vedi l'inizio della nota senza aprirla. Per i collegamenti che non portano a nessuna nota c'è **Collegamenti rotti e note orfane…**: vedi [Tag, comandi e sezioni ripiegate](/progetti/charta/docs/tag-comandi-e-sezioni-ripiegate).
 
 ### Collegamenti in entrata
 

@@ -23,6 +23,7 @@ Charta legge CommonMark e le estensioni di GitHub (GFM), più alcune estensioni 
 | Voci da spuntare | `- [ ] da fare`, `- [x] fatto` |
 | Citazione | `> testo` |
 | Separatore | `---` |
+| Tag | `#idea`, `#progetto/charta` (vedi [Tag, comandi e sezioni ripiegate](/progetti/charta/docs/tag-comandi-e-sezioni-ripiegate)) |
 
 ## Tabelle
 

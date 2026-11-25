@@ -2,7 +2,7 @@
 title: "Esportazione e stampa"
 description: "Esportare un documento di Charta in HTML, PDF, Word (DOCX) ed EPUB e stamparlo, su Mac, iPhone e iPad."
 project: "charta"
-order: 6
+order: 7
 section: "Condividere"
 ---
 
@@ -33,6 +33,19 @@ Un documento Word vero, non una pagina web rinominata:
 ## EPUB
 
 Un libro elettronico con un capitolo per ogni titolo di primo livello (`#`). I link tra i titoli funzionano anche da un capitolo all'altro. Formule e diagrammi diventano immagini, e le immagini del documento entrano nel libro.
+
+## CSS personalizzato e opzioni del PDF
+
+In **Impostazioni › Esportazione**:
+
+- **Usa un CSS personalizzato**: un tuo foglio di stile, scritto nel campo sotto (con **Inserisci un esempio** da cui partire). Si aggiunge allo stile dell'anteprima e vince su di lui, e vale per anteprima, HTML, PDF, stampa ed EPUB.
+- **Indice all'inizio**: l'elenco dei titoli da solo sulla prima pagina del PDF e della stampa.
+- **Numeri di pagina**: «3 / 12» in fondo a ogni pagina del PDF (attiva all'inizio).
+- **Intestazione con titolo e data**: il titolo a sinistra e la data a destra in cima a ogni pagina del PDF.
+
+## Copia come testo formattato
+
+**Composizione › Copia come testo formattato** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd>; anche nel tasto destro su una selezione e nel riquadro dei comandi) mette negli appunti la selezione, o tutto il documento senza selezione, in tre forme: HTML e RTF per Mail, Pages e Word, con titoli, grassetto ed elenchi, e il Markdown per gli editor di testo. Ogni app prende la forma che preferisce. I collegamenti `[[nota]]` diventano testo.
 
 ## Titolo, autore e lingua
 

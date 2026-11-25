@@ -25,12 +25,15 @@ Charta is a Markdown editor for Mac, iPhone and iPad that lets you write the sam
 - **Math and diagrams**: LaTeX math inline and in blocks, rendered with KaTeX, and Mermaid diagrams, bundled in the app and working without a network
 - **Extended Markdown**: tables, checklists, footnotes, YAML front matter, highlighted text, a `[TOC]` table of contents, callouts like `> [!NOTE]` and code highlighting for about thirty languages
 - **Linked notes**: open a folder as a project, with a note tree and full-text search; `[[note]]` links completed as you type, backlinks, links that update when you rename a note, and a note graph
+- **Tags and sections**: `#name` tags, nested too, gathered in the sidebar; foldable sections under headings, remembered for each file, and moved by dragging headings in the Outline
+- **Command palette**: every command, the document's headings and, in folders, notes and tags, found by typing part of their name (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd>)
+- **Link previews**: rest the pointer on a `[[link]]` or a footnote to read it without opening it; in folders, a list of broken links and orphan notes
 - **Projects**: pinned projects and recent notes, each project with its own name, color and symbol; Go to Note (<kbd>⌘</kbd> <kbd>T</kbd>) opens any note by name
 - **Find and replace** across the whole folder, with whole words and regular expressions
 - **Right-click**: commands for what's under the cursor, such as opening or renaming a linked note, creating a note from the selection, adding rows and columns, checking every item or moving a section
 - **Files changed by other apps**: Charta tells you and asks whether to reload or keep the open version
 - **Write faster**: Return continues lists, Tab moves to the next table cell, text copied from a web page becomes Markdown, pasted or dropped images are saved next to the note; a word goal saved in the file, word count and reading time
-- **Export and print**: HTML, PDF, Word (DOCX) and EPUB, in the preview style of your choice (GitHub, Paper or Compact); in Word and EPUB, math and diagrams become images
+- **Export and print**: HTML, PDF, Word (DOCX) and EPUB, in the preview style of your choice (GitHub, Paper or Compact) or your own CSS; in PDFs a table of contents, page numbers and a header; in Word and EPUB, math and diagrams become images. **Copy as Rich Text** to paste into Mail, Pages or Word
 - **Mac only**: a welcome window with recent projects and documents, Format and Insert menus with keyboard shortcuts, Focus Mode and Typewriter Mode, documents in tabs
 - **iPhone and iPad only**: a bar above the keyboard with formatting, lists, links, indentation and a menu to insert tables, code, math and diagrams; exports shared with AirDrop, Mail or Files
 - **Private**: no account and no data collected, your writing stays on your device; interface in English and Italian, light and dark themes
@@ -38,4 +41,4 @@ Charta is a Markdown editor for Mac, iPhone and iPad that lets you write the sam
 
 ## Platforms
 
-Available on the App Store for **iPhone** and **iPad** with iOS and iPadOS 26 or later. The **Mac** version, for Apple silicon with macOS 26 or later, will arrive on the same store page: one free download will work on all your devices.
+Available on the App Store for **Mac** with Apple silicon and macOS 26 or later, and for **iPhone** and **iPad** with iOS and iPadOS 26 or later. One free download works on all your devices.

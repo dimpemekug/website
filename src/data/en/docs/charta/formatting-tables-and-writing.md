@@ -37,10 +37,11 @@ Right-clicking in the text (on iPhone and iPad, the menu that appears when you t
 
 - **on a `[[note]]` link**: **Open "…"**, **Backlinks** and **Rename Note…** (in folders), on the Mac **Open in a Separate Window**; if the note doesn't exist, **Create Note "…"**. Then **Copy Link** and **Remove Link**;
 - **on a link**: **Open Link** (or **Go to Heading** for an internal link), **Copy Address**, **Edit Link…**, which selects the address, and **Remove Link**, which keeps the text;
-- **with text selected**, in a folder: **New Note from Selection** moves the text into a new note next to this one and leaves the link in its place; **Link to a Note…** turns the selection into `[[|text]]` and suggests notes; **Search in Folder** searches every note for it;
+- **with text selected**, in a folder: **New Note from Selection** moves the text into a new note next to this one and leaves the link in its place; **Link to a Note…** turns the selection into `[[|text]]` and suggests notes; **Search in Folder** searches every note for it. With any selection there's also **Copy as Rich Text**;
 - **in a table**: the **Row** (**Insert Row Above**, **Insert Row Below**, **Delete Row**) and **Column** (insert left or right, delete, align) submenus, and **Format Table**;
 - **in a checklist item**: **Check** or **Uncheck**, **Check All** and **Uncheck All** (nested items included);
-- **on a heading**: **Copy Link to Heading** (a `[[note#heading]]` in folders, a `#heading` link in a document) and **Move Section Up** or **Down**, which swaps the heading and its text with the neighboring section of the same level;
+- **on a heading**: **Copy Link to Heading** (a `[[note#heading]]` in folders, a `#heading` link in a document) and **Move Section Up** or **Down**, which swaps the heading and its text with the neighboring section of the same level; then **Fold Section** or **Expand Section** and the versions for all sections;
+- **on a tag**: **Notes Tagged #…** searches every note in the folder for the tag;
 - **in a code block**: **Copy Code** and the **Language** submenu; **in math or a diagram**: **Copy Source**; **on a footnote reference**: **Go to Footnote**;
 - **in plain text**: the **Format** and **Turn Into** submenus (text, headings, lists, quote).
 

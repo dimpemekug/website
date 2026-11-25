@@ -2,11 +2,11 @@
 title: "Settings"
 description: "All of Charta's settings on Mac, iPhone and iPad, with their defaults."
 project: "charta"
-order: 8
+order: 9
 section: "Reference"
 ---
 
-On the Mac: **Charta › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>), with the **General**, **Editor** and **Preview** tabs. On iPhone and iPad: **Settings** in the **More** (…) menu of a document's toolbar or of a folder's sidebar, on a single page. Settings apply to every document; those of a single project are covered in [Folders and linked notes](/en/projects/charta/docs/folders-and-linked-notes).
+On the Mac: **Charta › Settings…** (<kbd>⌘</kbd> <kbd>,</kbd>), with the **General**, **Editor**, **Preview** and **Export** tabs. On iPhone and iPad: **Settings** in the **More** (…) menu of a document's toolbar or of a folder's sidebar, on a single page. Settings apply to every document; those of a single project are covered in [Folders and linked notes](/en/projects/charta/docs/folders-and-linked-notes).
 
 ## General
 
@@ -61,6 +61,17 @@ On the Mac, <kbd>⌘</kbd> <kbd>+</kbd> and <kbd>⌘</kbd> <kbd>-</kbd> change b
 | Synchronized Scrolling | | on |
 
 The style is also used when exporting to HTML and PDF. On iPhone and iPad, choose the layout with the view switcher.
+
+## Export
+
+| Setting | Values | Default |
+|---|---|---|
+| Use Custom CSS | your own CSS for preview, HTML, PDF, printing and EPUB | off |
+| Table of Contents at the Start | list of headings on the first page of the PDF and of printouts | off |
+| Page Numbers | "3 / 12" at the bottom of PDF pages | on |
+| Header with Title and Date | at the top of PDF pages | off |
+
+Details in [Export and print](/en/projects/charta/docs/export-and-print).
 
 ## Acknowledgements
 

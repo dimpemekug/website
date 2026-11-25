@@ -2,7 +2,7 @@
 title: "Keyboard shortcuts"
 description: "All of Charta's keyboard shortcuts for Mac, by menu, and the ones that work on iPad with a keyboard."
 project: "charta"
-order: 9
+order: 10
 section: "Reference"
 ---
 
@@ -17,6 +17,12 @@ The standard macOS shortcuts also work: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</k
 | Note Graph | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>G</kbd> |
 | Open Folder… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd> |
 | Print… | <kbd>⌘</kbd> <kbd>P</kbd> |
+
+## Edit
+
+| Command | Shortcut |
+|---|---|
+| Copy as Rich Text | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd> |
 
 ## Format
 
@@ -59,6 +65,9 @@ The standard macOS shortcuts also work: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</k
 | Preview Only | <kbd>⌥</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
 | Show · Hide Outline | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>L</kbd> |
 | Backlinks | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>B</kbd> |
+| Commands… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
+| Fold Section · Expand Section | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>[</kbd> · <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>]</kbd> |
+| Fold All Sections · Expand All Sections | <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>[</kbd> · <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>]</kbd> |
 | Focus Mode | <kbd>⌃</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>F</kbd> |
 | Typewriter Mode | <kbd>⌃</kbd> <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>T</kbd> |
 | Bigger Text · Smaller Text | <kbd>⌘</kbd> <kbd>+</kbd> · <kbd>⌘</kbd> <kbd>-</kbd> |
@@ -83,5 +92,6 @@ The standard macOS shortcuts also work: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</k
 |---|---|
 | Bold · Italic · Link | <kbd>⌘</kbd> <kbd>B</kbd> · <kbd>⌘</kbd> <kbd>I</kbd> · <kbd>⌘</kbd> <kbd>K</kbd> |
 | WYSIWYG or Code | <kbd>⌘</kbd> <kbd>E</kbd> |
+| Commands… | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>P</kbd> |
 | Go to Note (in folders) | <kbd>⌘</kbd> <kbd>T</kbd> |
 | Backlinks (in folders) | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>B</kbd> |

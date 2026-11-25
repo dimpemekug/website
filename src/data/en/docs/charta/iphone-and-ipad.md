@@ -2,7 +2,7 @@
 title: "iPhone and iPad"
 description: "Charta on iPhone and iPad: the launch screen, the bar above the keyboard, the toolbar menus, hardware keyboards and the differences from the Mac version."
 project: "charta"
-order: 7
+order: 8
 section: "iPhone and iPad"
 ---
 
@@ -24,9 +24,11 @@ To the right of the title, in the same order as on the Mac:
 - **Format**: styles, headings, lists, insert items and, with the cursor in a table, table commands;
 - on iPad, the **view switcher**: **WYSIWYG**, **Code Editor**, **Code and Preview** (unless you moved it to the status bar);
 - on iPad, **Outline**; in folders, **Backlinks**;
-- **More** (…): **Preview Only**, **Synchronized Scrolling** (in the code editor), the exports, **Print…** and, in documents, **Settings**. On iPhone, where there's less room, it also holds the view switcher and **Outline**.
+- **More** (…): **Commands…**, **Preview Only**, **Synchronized Scrolling** (in the code editor), the exports, **Print…** and, in documents, **Settings**. On iPhone, where there's less room, it also holds the view switcher and **Outline**.
 
-In folders, **Settings** is in the sidebar's **More** (…) menu, next to **Note Graph**, **New Folder** and **Sort By**.
+In folders, **Settings** is in the sidebar's **More** (…) menu, next to **Note Graph**, **Broken Links and Orphan Notes**, **New Folder** and **Sort By**.
+
+Press and hold a `[[note]]` link or a footnote reference to see its preview. On iPhone, where there's no margin, the arrow that folds a section sits after the heading where the cursor is (see [Tags, commands and folded sections](/en/projects/charta/docs/tags-commands-and-folded-sections)).
 
 On iPhone the preview sits below the text, and the outline and backlinks open in a sheet; on iPad the preview sits beside the text and the sidebar stays alongside it.
 

@@ -13,10 +13,11 @@ A folder opened in Charta becomes a **project**: a set of Markdown notes (with t
 - **Mac**: **File › Open Folder…** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>O</kbd>). Each folder opens in its own window; the latest ones are in **File › Recent Folders**, emptied with **Clear List**.
 - **iPhone and iPad**: **Open Folder** on the launch screen. On iPad the folder opens in its own window, on iPhone full screen.
 
-On the left there's the folder sidebar with two sections:
+On the left there's the folder sidebar with three sections:
 
 - **Recent**: the latest notes you opened, from every project, with the project name below;
-- **Projects**: pinned and recent projects, each a branch you can expand. The window's project shows its tree; a note from another project opens that project in the same window (or brings forward the window that already has it).
+- **Projects**: pinned and recent projects, each a branch you can expand. The window's project shows its tree; a note from another project opens that project in the same window (or brings forward the window that already has it);
+- **Tags**: the tags of the project's notes, with nested tags (see [Tags, commands and folded sections](/en/projects/charta/docs/tags-commands-and-folded-sections)).
 
 If a folder was moved or can no longer be reached, the window says so and offers **Open Another Project**.
 
@@ -39,6 +40,8 @@ With **Settings › General › Reload Files Changed by Other Apps Without Askin
 Type `[[` and a note's name: Charta suggests the folder's notes as you type (on the Mac in a list under the cursor, on iPhone and iPad in the bar above the keyboard). After `[[Note#` it suggests that note's headings. The `[[Note#Heading]]` and `[[Note|text]]` forms are explained in [Supported Markdown](/en/projects/charta/docs/supported-markdown).
 
 Clicking a link, in WYSIWYG or in the preview, opens the note; if the note doesn't exist yet, Charta creates it next to the open one, with the name as its title.
+
+Rest the pointer on a link (on iPhone and iPad, press and hold it) to see the beginning of the note without opening it. For links that lead to no note there's **Broken Links and Orphan Notes…**: see [Tags, commands and folded sections](/en/projects/charta/docs/tags-commands-and-folded-sections).
 
 ### Backlinks
 

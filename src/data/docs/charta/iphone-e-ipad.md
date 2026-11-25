@@ -2,7 +2,7 @@
 title: "iPhone e iPad"
 description: "Charta su iPhone e iPad: schermata iniziale, barra sopra la tastiera, menu della barra, tastiera esterna e differenze dalla versione per Mac."
 project: "charta"
-order: 7
+order: 8
 section: "iPhone e iPad"
 ---
 
@@ -24,9 +24,11 @@ A destra del titolo, nello stesso ordine del Mac:
 - **Formato**: stili, titoli, elenchi, inserimenti e, con il cursore in una tabella, i comandi delle tabelle;
 - su iPad, il **selettore della vista**: **WYSIWYG**, **Editor di codice**, **Codice e anteprima** (se non l'hai spostato nella barra di stato);
 - su iPad, **Struttura**; nelle cartelle, **Collegamenti in entrata**;
-- **Altro** (…): **Solo anteprima**, **Scorrimento sincronizzato** (nell'editor di codice), le esportazioni, **Stampa…** e, nei documenti, **Impostazioni**. Su iPhone, dove c'è meno posto, ci sono anche il selettore della vista e **Struttura**.
+- **Altro** (…): **Comandi…**, **Solo anteprima**, **Scorrimento sincronizzato** (nell'editor di codice), le esportazioni, **Stampa…** e, nei documenti, **Impostazioni**. Su iPhone, dove c'è meno posto, ci sono anche il selettore della vista e **Struttura**.
 
-Nelle cartelle le **Impostazioni** sono nel menu **Altro** (…) della barra laterale, accanto a **Grafo delle note**, **Nuova cartella** e **Ordina per**.
+Nelle cartelle le **Impostazioni** sono nel menu **Altro** (…) della barra laterale, accanto a **Grafo delle note**, **Collegamenti rotti e note orfane**, **Nuova cartella** e **Ordina per**.
+
+Tenendo premuto un collegamento `[[nota]]` o un richiamo di nota a piè di pagina compare la sua anteprima. Su iPhone, dove non c'è il margine, la freccia per ripiegare una sezione sta dopo il titolo dove c'è il cursore (vedi [Tag, comandi e sezioni ripiegate](/progetti/charta/docs/tag-comandi-e-sezioni-ripiegate)).
 
 Su iPhone l'anteprima sta sotto il testo e la struttura e i collegamenti in entrata si aprono in un foglio; su iPad l'anteprima sta accanto e la barra laterale resta affiancata al testo.
 

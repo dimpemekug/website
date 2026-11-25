@@ -2,7 +2,7 @@
 title: "Export and print"
 description: "Exporting a Charta document to HTML, PDF, Word (DOCX) and EPUB and printing it, on Mac, iPhone and iPad."
 project: "charta"
-order: 6
+order: 7
 section: "Sharing"
 ---
 
@@ -33,6 +33,19 @@ A real Word document, not a renamed web page:
 ## EPUB
 
 An e-book with one chapter for each first-level heading (`#`). Links between headings work across chapters too. Math and diagrams become images, and the document's images go into the book.
+
+## Custom CSS and PDF options
+
+In **Settings › Export**:
+
+- **Use Custom CSS**: your own style sheet, written in the field below (with **Insert an Example** to start from). It's added to the preview style and overrides it, and applies to the preview, HTML, PDF, printing and EPUB.
+- **Table of Contents at the Start**: the list of headings alone on the first page of the PDF and of printouts.
+- **Page Numbers**: "3 / 12" at the bottom of every PDF page (on at first).
+- **Header with Title and Date**: the title on the left and the date on the right at the top of every PDF page.
+
+## Copy as rich text
+
+**Edit › Copy as Rich Text** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>C</kbd>; also in the right-click menu on a selection and in the command palette) puts the selection, or the whole document when nothing is selected, on the clipboard in three forms: HTML and RTF for Mail, Pages and Word, with headings, bold and lists, and the Markdown for text editors. Each app takes the form it prefers. `[[note]]` links become text.
 
 ## Title, author and language
 
