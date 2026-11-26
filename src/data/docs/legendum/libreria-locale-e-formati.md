@@ -75,3 +75,13 @@ Legendum/
 - **Fumetti**: se l'archivio CBZ o CBR contiene il file standard `ComicInfo.xml`, Legendum ne legge titolo della serie, autore, trama, generi, titolo e numero del capitolo e verso di lettura. Senza metadati valgono i nomi dei file.
 - **Ebook**: per gli EPUB, titolo, autore, descrizione, argomenti e verso di lettura vengono dai metadati del libro, e la copertina è quella che il libro dichiara (in mancanza, la prima pagina). Un EPUB da solo dà il nome alla serie; dentro una cartella è un volume.
 - **EPUB con DRM** (Adobe, Apple, Readium LCP) non si possono aprire: Legendum lo segnala con un messaggio.
+
+---
+
+## Gestire la libreria
+
+- **Prossimo capitolo**: nella pagina di una serie il capitolo o l'episodio da cui riprendere porta l'etichetta **Prossimo** ed è evidenziato; una serie lunga si apre già scorsa fin lì. Quando hai letto tutto, nessun capitolo viene segnato.
+- **Continua a leggere**: con una sola serie in corso la riga occupa tutta la larghezza; con più serie si vede il bordo della successiva. Un tocco riprende la lettura dal punto in cui eri.
+- **Annulla**: dopo aver segnato capitoli come letti o non letti, o aver tolto una serie dalla libreria, compare per qualche secondo un avviso con **Annulla**. L'annullamento conta come una modifica nuova, quindi vale anche su iCloud e sui server che avevano già ricevuto il segno.
+- **Titoli delle copertine**: in *Impostazioni › Libreria* scegli se mettere il titolo **Sulla copertina**, **Sotto la copertina** o tenerlo **Nascosti**; VoiceOver lo legge comunque. Nella stessa sezione ci sono **Badge non letti** e **Ordine capitoli**.
+- Per spostare una serie da una fonte che non funziona più a un'altra, vedi [Migrare una serie](/progetti/legendum/docs/server-estensioni-e-sync#migrare-una-serie-su-unaltra-fonte).

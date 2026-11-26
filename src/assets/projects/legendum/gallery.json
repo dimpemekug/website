@@ -17,12 +17,28 @@
       "en": "A webtoon in continuous vertical scrolling"
     },
     "05-ebook": {
-      "it": "Un libro nel lettore di testo",
-      "en": "A book in the text reader"
+      "it": "Un libro nel lettore di testo, con le impostazioni di tema, dimensione e carattere",
+      "en": "A book in the text reader, with the theme, size and font settings"
     },
     "06-reader-settings": {
       "it": "Le impostazioni di lettura: modalità, sfondo e orientamento",
       "en": "Reading settings: mode, background and orientation"
+    },
+    "07-anime-catalog": {
+      "it": "La ricerca nel catalogo di un modulo video",
+      "en": "Searching the catalog of a video module"
+    },
+    "08-anime-series": {
+      "it": "La pagina di una serie animata, con il prossimo episodio in evidenza",
+      "en": "An animated series page, with the next episode highlighted"
+    },
+    "09-player": {
+      "it": "Il player video in orizzontale, con il pulsante per l'episodio successivo",
+      "en": "The video player in landscape, with the button for the next episode"
+    },
+    "10-dark-library": {
+      "it": "La libreria in tema scuro, con fumetti, libri e serie animate",
+      "en": "The library in dark mode, with comics, books and animated series"
     }
   }
 }

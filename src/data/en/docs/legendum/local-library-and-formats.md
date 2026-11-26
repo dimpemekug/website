@@ -75,3 +75,13 @@ Legendum/
 - **Comics**: if a CBZ or CBR archive contains the standard `ComicInfo.xml` file, Legendum reads the series title, author, synopsis, genres, chapter title and number and reading direction from it. Without metadata, file names are used.
 - **Ebooks**: for EPUBs, title, author, description, subjects and reading direction come from the book's metadata, and the cover is the one the book declares (or the first page if there isn't one). An EPUB on its own names the series; inside a folder it's a volume.
 - **DRM-protected EPUBs** (Adobe, Apple, Readium LCP) can't be opened: Legendum tells you so with a message.
+
+---
+
+## Managing the Library
+
+- **Next chapter**: on a series page, the chapter or episode to pick up from is labeled **Next** and highlighted; a long series opens already scrolled to it. Once you've read everything, no chapter is marked.
+- **Continue Reading**: with a single series in progress the row takes the full width; with more, the edge of the next one shows. A tap resumes reading where you left off.
+- **Undo**: after marking chapters read or unread, or taking a series out of the library, a banner with **Undo** shows for a few seconds. Undoing counts as a new change, so it also applies on iCloud and on servers that already received the mark.
+- **Cover Titles**: in *Settings › Library* choose whether the title goes **On the Cover**, **Below the Cover**, or stays **Hidden**; VoiceOver still reads it. The same section has **Unread Badges** and **Chapter Order**.
+- To move a series from a source that stopped working to another one, see [Migrating a series](/en/projects/legendum/docs/servers-extensions-and-sync#migrating-a-series-to-another-source).

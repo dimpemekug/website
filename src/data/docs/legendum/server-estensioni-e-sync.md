@@ -1,6 +1,6 @@
 ---
 title: "Server, estensioni e sincronizzazione"
-description: "Collegamento ai server Jellyfin, Suwayomi, Komga e Kavita, estensioni Aidoku e Paperback, sincronizzazione iCloud e backup in Legendum."
+description: "Collegamento ai server Jellyfin, Suwayomi, Komga e Kavita, estensioni Aidoku e Paperback, migrazione delle serie, sincronizzazione iCloud e backup in Legendum."
 project: "legendum"
 order: 6
 section: "Rete e Sync"
@@ -28,6 +28,19 @@ Legendum esegue al suo interno le estensioni di due ecosistemi. Nessun repositor
 - **Aidoku (`.aix`)**: eseguite con un runtime WebAssembly (**WasmKit**), con home, liste, ricerca con filtri, dettagli, capitoli, impostazioni della fonte, login e ricomposizione delle pagine protette con CoreGraphics.
 - **Paperback 0.9 (`index.js`)**: eseguite con **JavaScriptCore**, con sezioni della home, ricerca con ordinamenti, dettagli, capitoli, impostazioni della fonte e verifica Cloudflare.
 - **Aggiornamenti**: estensioni e moduli video si aggiornano da soli (si può disattivare), e da *Impostazioni › Fonti* puoi controllare gli aggiornamenti quando vuoi.
+
+---
+
+## Migrare una serie su un'altra fonte
+
+Quando una fonte smette di funzionare, **Migra** sposta le sue serie su un'altra estensione installata senza perdere il segno.
+
+- **Da dove**: dal menu "…" della pagina di una serie in libreria, dal menu della copertina in Libreria, oppure dal pulsante **Migra** della Libreria. Lì **Seleziona serie** permette di sceglierne più d'una (con **Seleziona tutto**), mentre **Migra tutte le serie** le prende tutte. Le serie locali non si migrano.
+- **Destinazione**: le estensioni Aidoku e Paperback installate per i fumetti, i moduli video per gli episodi. Le fonti dei server (Suwayomi, Komga, Kavita, OPDS, Jellyfin) possono essere solo l'origine.
+- **Ricerca**: Legendum cerca il titolo nella nuova fonte e propone il risultato più simile, con il numero di capitoli; puoi cercare un altro titolo o sceglierne un risultato diverso. Poi scegli **Sostituisci** (predefinito) o **Tieni entrambe** e confermi con **Migra**.
+- **Più serie**: si passa da una all'altra dopo ogni conferma, o con **Salta questa serie**. **Sposta senza chiedere i titoli identici** sposta da sola una serie quando il titolo trovato è lo stesso. Alla fine un riepilogo dice quanti capitoli hanno preso il progresso e quanti capitoli letti mancano nella nuova fonte.
+- **Progresso**: i capitoli si abbinano per numero, e per volume quando entrambe le fonti lo indicano. I capitoli che c'erano solo nella nuova fonte, prima dell'ultimo letto, diventano letti.
+- **La vecchia voce** esce solo dalla libreria, come con **Rimuovi dalla libreria**: i suoi download restano finché non li elimini, e iCloud e backup seguono il cambiamento.
 
 ---
 
