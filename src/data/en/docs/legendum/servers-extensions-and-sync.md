@@ -28,6 +28,7 @@ Legendum runs extensions from two ecosystems inside the app. No repository is in
 - **Aidoku (`.aix`)**: run with a WebAssembly runtime (**WasmKit**), with home, lists, search with filters, details, chapters, source settings, login and reassembly of protected pages with CoreGraphics.
 - **Paperback 0.9 (`index.js`)**: run with **JavaScriptCore**, with home sections, search with sorting, details, chapters, source settings and Cloudflare verification.
 - **Updates**: extensions and video modules update on their own (this can be turned off), and from *Settings › Sources* you can check for updates whenever you like.
+- **My extensions**: the sources I publish, in both formats, are on the [Manga Extensions](/en/projects/manga-extensions/) page.
 
 ---
 

@@ -68,6 +68,10 @@ const projectSchema = z.object({
   website: z.url().optional(),
   // Download diretto fuori dagli store (es. DMG su GitHub Releases)
   download: z.url().optional(),
+  // Repository di estensioni da aggiungere in un'app (es. Aidoku, Paperback): pagina e indirizzo da copiare
+  repositories: z
+    .array(z.object({ name: z.string(), page: z.url(), address: z.url() }))
+    .optional(),
   privacyDataTypes: z.string().optional(),
   privacyStorageNote: z.string().optional(),
   privacyUpdatedAt: z.string().optional(),

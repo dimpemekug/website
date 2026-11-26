@@ -23,7 +23,7 @@ type Props = {
 };
 
 const { project, lang = "it" } = Astro.props;
-const { title, seoTitle, seoDescription, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, download, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
+const { title, seoTitle, seoDescription, applicationCategory, description, tags, pubDatetime, appStore, playStore, storeStatus, website, download, repositories, privacyDataTypes, privacyStorageNote, privacyUpdatedAt, privacyUrl } = project.data;
 
 const projectDocs = lang === "en"
   ? await getCollection("docsEn", d => !d.data.draft && (d.data.project || d.id.split("/")[0]) === project.id)
@@ -77,7 +77,8 @@ const projectStructuredData = [
     ...(playStore && { downloadUrl: playStore }),
     ...(download && { downloadUrl: download }),
     ...(website && { sameAs: website }),
-    ...((appStore || playStore || download || storeStatus) && {
+    ...(repositories && !download && !playStore && { downloadUrl: repositories.map(r => r.page) }),
+    ...((appStore || playStore || download || storeStatus || repositories) && {
       offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     }),
     inLanguage: lang === "it" ? "it-IT" : "en-US",
@@ -140,7 +141,7 @@ const projectStructuredData = [
 
       <!-- Store links -->
       <!-- Store & Docs links -->
-      {(hasDocs || appStore || playStore || download || storeStatus || website) && (
+      {(hasDocs || appStore || playStore || download || storeStatus || website || repositories) && (
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           {hasDocs && (
             <a
@@ -172,6 +173,20 @@ const projectStructuredData = [
               {downloadLabel}
             </a>
           )}
+          {repositories?.map(repository => (
+            <a
+              href={repository.page}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              {lang === "en" ? `${repository.name} repository` : `Repository ${repository.name}`}
+            </a>
+          ))}
           {appStore && (
             <a
               href={appStore}

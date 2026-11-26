@@ -28,6 +28,7 @@ Legendum esegue al suo interno le estensioni di due ecosistemi. Nessun repositor
 - **Aidoku (`.aix`)**: eseguite con un runtime WebAssembly (**WasmKit**), con home, liste, ricerca con filtri, dettagli, capitoli, impostazioni della fonte, login e ricomposizione delle pagine protette con CoreGraphics.
 - **Paperback 0.9 (`index.js`)**: eseguite con **JavaScriptCore**, con sezioni della home, ricerca con ordinamenti, dettagli, capitoli, impostazioni della fonte e verifica Cloudflare.
 - **Aggiornamenti**: estensioni e moduli video si aggiornano da soli (si può disattivare), e da *Impostazioni › Fonti* puoi controllare gli aggiornamenti quando vuoi.
+- **Le mie estensioni**: le fonti che pubblico io, nei due formati, sono nella pagina [Estensioni manga](/progetti/manga-extensions/).
 
 ---
 
