@@ -42,7 +42,7 @@ and paste it into the app:
 
 | App | Where |
 |---|---|
-| **Legendum** | *Settings › Sources › Add Repository*: it takes both the Aidoku list and the Paperback repository |
+| **Legendum** | *Settings › Sources › Add Repository*, then **Aidoku** or **Paperback** to match the address you copied |
 | **Aidoku** | *Settings › Source Lists*, then **+** |
 | **Paperback** | *Settings › Extensions › Repositories*, then **+** |
 

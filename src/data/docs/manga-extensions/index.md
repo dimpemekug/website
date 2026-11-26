@@ -42,7 +42,7 @@ e incollalo nell'app:
 
 | App | Dove |
 |---|---|
-| **Legendum** | *Impostazioni › Fonti › Aggiungi repository*: accetta sia la lista Aidoku sia il repository Paperback |
+| **Legendum** | *Impostazioni › Fonti › Aggiungi repository*, poi **Aidoku** o **Paperback** secondo l'indirizzo che hai copiato |
 | **Aidoku** | *Impostazioni › Liste di fonti*, poi **+** |
 | **Paperback** | *Impostazioni › Estensioni › Repository*, poi **+** |
 

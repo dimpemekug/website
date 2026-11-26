@@ -66,7 +66,7 @@ https://dimpemekug.github.io/Paperback-Extensions/
 
 | App | Where to paste the address |
 |---|---|
-| **Legendum** | *Settings › Sources › Add Repository* (either one works) |
+| **Legendum** | *Settings › Sources › Add Repository*, then **Aidoku** or **Paperback** to match the repository |
 | **Aidoku** | *Settings › Source Lists*, then **+** (Aidoku repository) |
 | **Paperback** | *Settings › Extensions › Repositories*, then **+** (Paperback repository) |
 
