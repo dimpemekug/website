@@ -6,7 +6,7 @@ seoDescription: "Come organizzare appunti in Markdown con collegamenti [[nota]] 
 pubDatetime: 2026-11-13T09:00:00Z
 related:
   - local-first-app-offline-sincronizzazione-2026
-  - aprire-rar-protetto-mac
+  - equazioni-latex-word-mac-iphone
   - memoria-assistenti-ai-2026
 relatedProjects:
   - charta
