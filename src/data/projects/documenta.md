@@ -8,9 +8,9 @@ pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "iOS", "produttività", "privacy"]
 appStore: "https://apps.apple.com/app/documenta-elaboratore-testi/id6832269539"
-privacyDataTypes: "i documenti che apri, modifichi e salvi; su iPhone e iPad la fotocamera per scansionare i fogli e le foto che scegli tu; le preferenze dell'app (con le sostituzioni personali e il nome dell'autore di commenti e revisioni), il dizionario personale e, sul Mac, i modelli personali e rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese"
+privacyDataTypes: "i documenti che apri, modifichi e salvi; su iPhone e iPad la fotocamera per scansionare i fogli e le foto che scegli tu; le preferenze dell'app (con le sostituzioni personali e il nome dell'autore di commenti e revisioni), il dizionario personale, i modelli personali e, sul Mac, rapporti anonimi sulle prestazioni (MetricKit) conservati per circa un mese"
 privacyStorageNote: "Documenta non si collega a server, né propri né di terzi. I documenti restano sul dispositivo, nella cartella Documenta del tuo iCloud Drive o nel servizio cloud che scegli tu; il testo delle scansioni e delle foto è riconosciuto sul dispositivo."
-privacyUpdatedAt: "6 novembre 2026"
+privacyUpdatedAt: "27 novembre 2026"
 privacyUrl: "/progetti/documenta/privacy/"
 ---
 

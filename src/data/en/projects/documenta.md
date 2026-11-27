@@ -8,9 +8,9 @@ pubDatetime: 2026-11-04T00:00:00+01:00
 draft: false
 tags: ["macOS", "iOS", "productivity", "privacy"]
 appStore: "https://apps.apple.com/app/documenta-elaboratore-testi/id6832269539"
-privacyDataTypes: "the documents you open, edit and save; on iPhone and iPad, the camera to scan paper sheets and the photos you choose; the app's preferences (including personal text replacements and the author name for comments and tracked changes), the personal dictionary and, on the Mac, personal templates and anonymous performance reports (MetricKit) kept for about a month"
+privacyDataTypes: "the documents you open, edit and save; on iPhone and iPad, the camera to scan paper sheets and the photos you choose; the app's preferences (including personal text replacements and the author name for comments and tracked changes), the personal dictionary, personal templates and, on the Mac, anonymous performance reports (MetricKit) kept for about a month"
 privacyStorageNote: "Documenta doesn't connect to any server, ours or anyone else's. Documents stay on your device, in the Documenta folder of your iCloud Drive or in the cloud service you choose; text from scans and photos is recognized on the device."
-privacyUpdatedAt: "November 6, 2026"
+privacyUpdatedAt: "November 27, 2026"
 privacyUrl: "/en/projects/documenta/privacy/"
 ---
 

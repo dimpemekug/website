@@ -4,7 +4,7 @@ title: "Informativa sulla Privacy - Documenta"
 description: "Privacy di Documenta per Mac, iPhone e iPad: nessun dato raccolto, fotocamera e foto solo su tua scelta, documenti sul dispositivo o su iCloud Drive."
 ---
 
-*Aggiornata al 6 novembre 2026*
+*Aggiornata al 27 novembre 2026*
 
 Documenta è un'app per Mac, iPhone e iPad che non raccoglie, non memorizza e non trasmette alcun
 dato personale.
@@ -33,8 +33,12 @@ dato personale.
   personali del testo, nome dell'autore di commenti e revisioni) nelle impostazioni dell'app.
 - **Dizionario personale**: le parole che aggiungi, nelle impostazioni dell'app sul Mac; vengono
   anche insegnate al correttore ortografico del sistema, che le tiene sul dispositivo.
-- **Modelli personali** (Mac): i documenti che salvi o aggiungi come modello restano nella cartella
-  che scegli tu; l'app ricorda solo dove sono, nelle sue preferenze.
+- **Modelli personali**: sul Mac i documenti che salvi o aggiungi come modello restano nella
+  cartella che scegli tu e l'app ricorda solo dove sono, nelle sue preferenze; su iPhone e iPad sono
+  file nella cartella Modelli, accanto ai documenti nuovi (in iCloud Drive o sul dispositivo, come
+  scegli nelle impostazioni).
+- **Anteprime dei documenti** (iPhone e iPad): l'immagine della prima pagina che la schermata
+  iniziale mostra è salvata dentro il file del documento.
 - **Rapporti sulle prestazioni** (Mac): macOS consegna all'app, tramite MetricKit, rapporti anonimi
   su tempi di avvio, blocchi e arresti anomali. L'app li conserva per circa un mese nella cartella
   Application Support e non li invia a nessuno.

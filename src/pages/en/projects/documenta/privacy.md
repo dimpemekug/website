@@ -4,7 +4,7 @@ title: "Documenta Privacy Policy"
 description: "Documenta privacy policy for Mac, iPhone and iPad: no data collected, camera and photos only when you choose, files on device or in iCloud Drive."
 ---
 
-*Updated November 6, 2026*
+*Updated November 27, 2026*
 
 Documenta is an app for Mac, iPhone and iPad that does not collect, store or transmit any personal
 data.
@@ -33,8 +33,12 @@ data.
   replacements, the author name for comments and tracked changes) in the app settings.
 - **Personal dictionary**: the words you add, in the app settings on the Mac; they are also
   taught to the system spell checker, which keeps them on your device.
-- **Personal templates** (Mac): the documents you save or add as a template stay in the folder you
-  choose; the app only remembers where they are, in its preferences.
+- **Personal templates**: on the Mac, the documents you save or add as a template stay in the
+  folder you choose and the app only remembers where they are, in its preferences; on iPhone and
+  iPad they are files in the Templates folder, next to new documents (in iCloud Drive or on the
+  device, as you choose in the settings).
+- **Document previews** (iPhone and iPad): the image of the first page shown on the start screen is
+  saved inside the document file.
 - **Performance reports** (Mac): through MetricKit, macOS gives the app anonymous reports on launch
   times, hangs and crashes. The app keeps them for about a month in its Application Support folder
   and does not send them to anyone.
