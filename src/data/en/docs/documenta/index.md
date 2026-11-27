@@ -8,7 +8,7 @@ section: "Getting Started"
 
 ## What is Documenta?
 
-**Documenta** is a word processor for Mac, iPhone and iPad, written in SwiftUI with AppKit on the Mac and UIKit on iPhone and iPad. You write on pages laid out like paper and open, edit and save documents in their own format: Word (`.docx` and `.doc`), OpenDocument (`.odt`), RTF and plain text.
+**Documenta** is a word processor for Mac, iPhone and iPad, written in SwiftUI with AppKit on the Mac and UIKit on iPhone and iPad. You write on pages laid out like paper and open, edit and save documents in their own format: Word (`.docx` and `.doc`), OpenDocument (`.odt`), RTF, Markdown and plain text.
 
 **Requirements**: on the Mac, macOS 15 Sequoia or later and an Apple chip (Apple silicon: the app doesn't run on Intel Macs); on iPhone and iPad, iOS and iPadOS 26 or later. The interface is in English and Italian; on the Mac choose the language in **Settings › General › App language** (the app needs a restart).
 
@@ -22,14 +22,14 @@ This guide describes the Mac app; what changes on iPhone and iPad is in [iPhone 
 
 ## The document window
 
-- **Toolbar**: paragraph style, font and size, bold, italic, underline, color and highlight, alignment, lists, table, text box, shapes and the <kbd>+</kbd> button for other insertions.
-- **Outline** (on the left, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>): the document's headings, indented by level. See [Long documents](/en/projects/documenta/docs/long-documents).
+- **Toolbar**: to the right of the title, which always stays whole, paragraph style, font and size, bold, italic, underline, color and highlight, alignment, line spacing, indents, lists, table, text box, shapes and the <kbd>+</kbd> button for other insertions; at the far right Find, Focus and the inspector button. In narrow windows the less used commands move into the <kbd>+</kbd> menu or stay in the inspector and the Format menu.
+- **Sidebar** (on the left): the **Outline** of headings (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>), indented by level, and the list of **Comments** (**View › Show Comments**). See [Long documents](/en/projects/documenta/docs/long-documents) and [Comments and tracked changes](/en/projects/documenta/docs/comments-and-tracked-changes).
 - **Inspector** (on the right, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd>): text, paragraph, page, document and the selected object or table. In **Settings › Appearance › Inspector layout** you choose how it looks:
   - **Cards** (the initial choice): Pages-style tabs with the sections in rounded cards, as on iPad;
   - **Tabs**: Style, Page and Document, as in Pages, plus a tab for the selected table or object;
   - **Sections**: one column of sections you expand and collapse;
   - **Icons**: a bar with one icon per category; the Table panel appears when the cursor is in a table.
-- **Status bar** (at the bottom): current page and total, words and characters, the word goal, a notice when change tracking is on, the Single Page and Two Pages buttons and the zoom.
+- **Status bar** (at the bottom): current page and total (a click opens Go to Page), words and characters, of the selection too, the word goal, open comments, a notice when change tracking is on, the Single Page and Two Pages buttons and the zoom.
 
 ## View
 
@@ -48,8 +48,8 @@ From the **View** menu:
 - [Pages, headers and sections](/en/projects/documenta/docs/pages-headers-and-sections): paper, margins, columns, footers.
 - [Formatting and styles](/en/projects/documenta/docs/formatting-and-styles): font, paragraph, lists, styles.
 - [Long documents](/en/projects/documenta/docs/long-documents): numbered headings, table of contents, captions, notes.
-- [Tables](/en/projects/documenta/docs/tables) and [Objects on the page](/en/projects/documenta/docs/objects-on-the-page).
-- [Comments and tracked changes](/en/projects/documenta/docs/comments-and-tracked-changes).
+- [Tables](/en/projects/documenta/docs/tables), [Objects on the page](/en/projects/documenta/docs/objects-on-the-page) and [Equations](/en/projects/documenta/docs/equations).
+- [Comments and tracked changes](/en/projects/documenta/docs/comments-and-tracked-changes): resolved comments, comparing versions, clean copy.
 - [Templates, saving and settings](/en/projects/documenta/docs/templates-saving-and-settings).
 - [iPhone and iPad](/en/projects/documenta/docs/iphone-and-ipad): the iPhone and iPad app and how it differs from the Mac.
 - [Keyboard shortcuts](/en/projects/documenta/docs/keyboard-shortcuts).

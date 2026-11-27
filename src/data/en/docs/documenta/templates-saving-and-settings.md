@@ -2,7 +2,7 @@
 title: "Templates, saving and settings"
 description: "Documenta's welcome window and templates, your own templates, autosave, spell checking and every tab of the Settings window."
 project: "documenta"
-order: 9
+order: 10
 section: "Reference"
 ---
 
@@ -29,6 +29,8 @@ The ten ready-made templates:
 
 **File › Save as Template…** saves the open document as a template, with its text, styles and page setup, in a DOCX file in the folder you choose. **Add Template…** (in **File › New from My Template** and in **Settings › Templates**) uses a Word document you already have as a template, leaving it where it is: Documenta only remembers where it is. Your templates appear in the welcome window and in **File › New from My Template**. In **Settings › Templates** you create a document from a template (**Create Document**), find it in Finder (**Show in Finder**) or remove it with **Remove from List**, which doesn't delete the file; documents already created from a template don't change.
 
+On iPhone and iPad, personal templates are files in the Templates folder and are managed from the start screen: see [iPhone and iPad](/en/projects/documenta/docs/iphone-and-ipad).
+
 ## Saving
 
 - Documents are saved wherever you like; in the **Documenta** folder of iCloud Drive you also find them on iPhone and iPad. With **Handoff**, a document open from iCloud Drive can be picked up on your other device.
@@ -52,7 +54,7 @@ The ten ready-made templates:
 
 - **General**: app language, what to do at launch (welcome window, blank document or nothing), default zoom, Documenta as the default app for documents, restoring the defaults.
 - **Appearance**: look of windows and bars (automatic, light, dark), page appearance, Pageless, page layout, inspector layout (Cards, Tabs, Sections, Icons) and panels for new windows.
-- **Writing**: spelling and grammar, personal dictionary, substitutions, pasting with the document's style, word count, reading speed, and the voice and speed for read aloud.
+- **Writing**: spelling and grammar, personal dictionary, substitutions, pasting with the document's style, Markdown-style formatting as you type, word count, reading speed, and the voice and speed for read aloud.
 - **Text and Fonts**: font, size, line spacing and paragraph spacing of new blank documents; page number in the footer of new documents.
 - **Page**: paper, orientation and margins (Normal, Narrow, Wide or Custom) for new documents, layout and column guides, unit of measure (centimeters, inches or points).
 - **File**: default format for new documents, autosave, warning about missing fonts.

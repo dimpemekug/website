@@ -20,19 +20,21 @@ Documenta è un elaboratore di testi per Mac, iPhone e iPad. Scrivi su pagine im
 
 ## Funzionalità principali
 
-- **I tuoi formati**: documenti Word (.docx e .doc), OpenDocument (.odt), RTF e testo semplice, aperti e salvati così come sono; esportazione in PDF, EPUB, pagina web e Markdown. Su iPhone e iPad i .doc si aprono in un documento Word nuovo
-- **Pagine vere**: margini e righello, verticale od orizzontale, formati da A3 a Tabloid, colonne di testo e sezioni con carta, colonne e intestazioni diverse; oppure il testo senza pagina, largo quanto la finestra o lo schermo
-- **Intestazioni e piè di pagina**: in tre parti, con numero di pagina e totale, diversi sulla prima pagina e sulle pagine pari; bordo della pagina, filigrana, numeri di riga e sillabazione. Si impostano sul Mac; su iPhone e iPad quelli dei documenti si vedono e si conservano
-- **Documenti lunghi**: titoli numerati, sommario e indice delle figure, didascalie numerate, riferimenti incrociati, segnalibri, note a piè di pagina e di chiusura, struttura dei titoli nella barra laterale
-- **Commenti e revisioni**: commenti nel margine con le risposte, come in Word e LibreOffice; registra le tue modifiche e accetta o rifiuta quelle degli altri
-- **Tabelle**: celle unite, bordi e sfondi per cella, stili pronti, prima riga ripetuta su ogni pagina e righe da ordinare; sul Mac anche formule come `=SUM(ABOVE)`
-- **Oggetti sulla pagina**: caselle di testo, forme e immagini con il testo attorno, da ruotare, raggruppare e allineare; sul Mac anche il WordArt con il testo curvo
-- **Formattazione completa**: undici stili di paragrafo, stili di carattere, elenchi su più livelli, tabulazioni con puntini, capolettera, sfondo e bordi dei paragrafi
+- **I tuoi formati**: documenti Word (.docx e .doc), OpenDocument (.odt), RTF, Markdown e testo semplice, aperti e salvati così come sono; esportazione in PDF, EPUB e pagina web. Se un file contiene parti che Documenta non gestisce, un avviso lo dice appena lo apri. Su iPhone e iPad i .doc si aprono in un documento Word nuovo
+- **Pagine vere**: margini e righello, anche speculari e con la rilegatura, verticale od orizzontale, formati da A3 a Tabloid, colonne di testo e sezioni con carta, colonne e intestazioni diverse; oppure il testo senza pagina, largo quanto la finestra o lo schermo
+- **Intestazioni e piè di pagina**: in tre parti, con numero di pagina e totale, diversi sulla prima pagina e sulle pagine pari; bordo della pagina, filigrana, numeri di riga e sillabazione, sul Mac come su iPhone e iPad
+- **Documenti lunghi**: titoli numerati da comprimere ed espandere, sommario e indice delle figure, didascalie numerate, riferimenti incrociati, segnalibri, note a piè di pagina e di chiusura, struttura dei titoli nella barra laterale, Vai alla pagina
+- **Equazioni**: si scrivono in LaTeX, con l'anteprima e i modelli, e si salvano come equazioni di Word e di LibreOffice
+- **Commenti e revisioni**: commenti nel margine con le risposte, da risolvere quando hai finito, come in Word e LibreOffice; registra le tue modifiche e accetta o rifiuta quelle degli altri; confronta con una versione precedente; stampa e PDF anche in copia pulita
+- **Tabelle**: celle unite, bordi e sfondi per cella, stili pronti, prima riga ripetuta su ogni pagina, righe da ordinare e formule come `=SUM(ABOVE)`
+- **Oggetti sulla pagina**: caselle di testo, WordArt con il testo curvo, forme e immagini con il testo attorno, da ruotare, raggruppare e allineare; restano al loro posto anche nei file RTF e DOC
+- **Formattazione completa**: undici stili di paragrafo, stili di carattere, elenchi su più livelli, tabulazioni con puntini, capolettera, sfondo e bordi dei paragrafi, paragrafi da destra a sinistra; formattazione automatica come in Markdown (# per un titolo, ** per il grassetto)
 - **Scrittura**: trova e sostituisci anche per formattazione e con espressioni regolari, controllo ortografico nella lingua di ogni parte del testo, sostituzioni personali, lettura ad alta voce con la voce che scegli, tempo di lettura, obiettivo di parole e indice di leggibilità
-- **Dieci modelli pronti**: lettera, rapporto, tesi, curriculum, preventivo e altri; sul Mac anche i tuoi documenti salvati come modelli personali
+- **Dieci modelli pronti**: lettera, rapporto, tesi, curriculum, preventivo e altri, più i tuoi documenti salvati come modelli personali
 - **Pagina chiara o scura**: la pagina scura per la sera vale solo sullo schermo; misure in centimetri, pollici o punti
-- **Solo sul Mac**: Modalità Focus, menu completi e scorciatoie da tastiera
-- **Solo su iPhone e iPad**: barra di formato sopra la tastiera, scansione dei fogli con la fotocamera e testo dalle foto, disegni e scrittura a mano con l'Apple Pencil; su iPad struttura, pagine e inspector affiancati, barra dei menu e scorciatoie con la tastiera
+- **Modalità Focus**: resta in evidenza solo il paragrafo che stai scrivendo
+- **Solo sul Mac**: menu completi e scorciatoie da tastiera, salvataggio nel vecchio formato .doc
+- **Solo su iPhone e iPad**: barra sopra la tastiera, schermata iniziale con i modelli e l'anteprima della prima pagina dei documenti, scansione dei fogli con la fotocamera e testo dalle foto, disegni e scrittura a mano con l'Apple Pencil; su iPad struttura, pagine e inspector affiancati, barra dei menu e scorciatoie con la tastiera
 - **Privata**: nessun account e nessun dato raccolto, i documenti restano sul dispositivo o nel tuo iCloud Drive; interfaccia in italiano e in inglese
 - **Nessun abbonamento**: gratuita, senza pubblicità e senza acquisti in-app
 

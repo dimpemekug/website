@@ -45,12 +45,12 @@
       "en": "A DOCX report on iPhone with a table, lists and footnotes"
     },
     "02-write": {
-      "it": "Scrittura senza pagina su iPhone, con stile, grassetto e allineamento nella barra sopra la tastiera",
-      "en": "Pageless writing on iPhone, with style, bold and alignment in the bar above the keyboard"
+      "it": "Scrittura senza pagina su iPhone, con la barra sopra la tastiera: inserimento, stile, grassetto, corsivo, elenchi, allineamento e Annulla",
+      "en": "Pageless writing on iPhone, with the bar above the keyboard: insert, style, bold, italic, lists, alignment and Undo"
     },
     "03-format": {
-      "it": "Il foglio Formato su iPhone, con le schede Testo, Paragrafo, Pagina e Documento",
-      "en": "The Format sheet on iPhone, with the Text, Paragraph, Page and Document tabs"
+      "it": "Il foglio Formato su iPhone, aperto sulla scheda Stile, con le schede Pagina e Documento",
+      "en": "The Format sheet on iPhone, open on the Style tab, with the Page and Document tabs"
     },
     "04-long-documents": {
       "it": "Una tesi su iPhone con sommario e indice delle figure",
@@ -69,24 +69,24 @@
       "en": "A programme on iPhone with a page border and tabs, and the Page tab"
     },
     "08-review": {
-      "it": "Commenti e revisioni su iPhone, con il riquadro dei commenti",
-      "en": "Comments and tracked changes on iPhone, with the comments panel"
+      "it": "Commenti e revisioni su iPhone, con il riquadro dei commenti diviso in aperti e risolti",
+      "en": "Comments and tracked changes on iPhone, with the comments panel split into open and resolved"
     },
     "08-templates": {
-      "it": "La schermata iniziale su iPad: Crea documento, i dieci modelli e i documenti della cartella Documenta",
-      "en": "The start screen on iPad: Create Document, the ten templates and the documents in the Documenta folder"
+      "it": "La schermata iniziale su iPad: Nuovo documento, i dieci modelli e sotto i documenti con l'anteprima della prima pagina",
+      "en": "The start screen on iPad: New Document, the ten templates and, below, the documents with a preview of their first page"
     },
     "iphone/09-dark": {
-      "it": "Il saggio su iPhone in modalità scura, con il foglio Paragrafo",
-      "en": "The essay on iPhone in dark mode, with the Paragraph sheet"
+      "it": "Il saggio su iPhone in modalità scura, con il foglio Formato sulla scheda Documento: parole, tempo di lettura e leggibilità",
+      "en": "The essay on iPhone in dark mode, with the Format sheet on the Document tab: words, reading time and readability"
     },
     "ipad/01-pages": {
-      "it": "Su iPad la struttura a sinistra, le pagine al centro e l'inspector Testo a destra",
-      "en": "On iPad, the outline on the left, the pages in the middle and the Text inspector on the right"
+      "it": "Su iPad la struttura a sinistra, le pagine al centro e l'inspector Stile a destra",
+      "en": "On iPad, the outline on the left, the pages in the middle and the Style inspector on the right"
     },
     "ipad/02-formats": {
-      "it": "Un rapporto DOCX su iPad con struttura e inspector Paragrafo",
-      "en": "A DOCX report on iPad with the outline and the Paragraph inspector"
+      "it": "Un rapporto DOCX su iPad con struttura e inspector Stile",
+      "en": "A DOCX report on iPad with the outline and the Style inspector"
     },
     "ipad/03-long-documents": {
       "it": "Una tesi su iPad con sommario, indice delle figure, struttura e scheda Documento",
@@ -97,8 +97,8 @@
       "en": "A budget on iPad with the cursor in a table and the Table tab"
     },
     "ipad/05-objects": {
-      "it": "Un notiziario su iPad con titolo WordArt, forme raggruppate, colonne a metà pagina e immagine con il testo attorno",
-      "en": "A newsletter on iPad with a WordArt headline, grouped shapes, columns from mid-page and an image with text wrapped around it"
+      "it": "Un notiziario su iPad con titolo WordArt, forme raggruppate, colonne a metà pagina, immagine con il testo attorno e inspector Stile",
+      "en": "A newsletter on iPad with a WordArt headline, grouped shapes, columns from mid-page, an image with text wrapped around it and the Style inspector"
     },
     "ipad/06-layout": {
       "it": "Un programma su iPad con bordo della pagina, tabulazioni e la scheda Pagina",
@@ -109,8 +109,8 @@
       "en": "Comments and tracked changes on iPad, with the comments panel"
     },
     "ipad/09-dark": {
-      "it": "Il saggio su iPad in modalità scura, con l'inspector Testo",
-      "en": "The essay on iPad in dark mode, with the Text inspector"
+      "it": "Il saggio su iPad in modalità scura, con la pagina che resta chiara e l'inspector Stile",
+      "en": "The essay on iPad in dark mode, with the page staying light and the Style inspector"
     },
     "09-dark": {
       "it": "Il saggio in modalità scura, con la pagina scura",

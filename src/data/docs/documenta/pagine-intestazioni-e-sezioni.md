@@ -13,6 +13,7 @@ Le impostazioni della pagina stanno nella scheda **Pagina** dell'inspector; le p
 - **Formato carta**: A3, A4, A5, B5, US Letter, US Legal e Tabloid, o una misura personalizzata.
 - **Verticale** od **Orizzontale**.
 - **Margini** nella sezione Carta e margini, in centimetri, pollici o punti (**Impostazioni › Pagina › Unità di misura**).
+- **Margini speculari**: per la stampa fronte e retro, i margini A sinistra e A destra diventano **Interno** ed **Esterno** e si scambiano sulle pagine pari. **Rilegatura** aggiunge spazio sul lato interno, per la rilegatura.
 
 Per i documenti nuovi carta, orientamento e margini si scelgono in **Impostazioni › Pagina › Documenti nuovi**. Da lì si accendono anche le **guide di layout** (i margini dell'area di testo) e le **guide delle colonne**, che non si stampano.
 
@@ -38,9 +39,9 @@ Una sezione è una parte del documento con carta, orientamento, margini, colonne
 - **Inserisci › Interruzione di sezione**: la nuova sezione comincia su una pagina nuova.
 - **Inserisci › Interruzione di sezione nella stessa pagina**: utile per passare da una a due colonne a metà pagina.
 
-Nella sezione **Sezione** della scheda Pagina, **Comincia** sceglie tra Su una pagina nuova e Nella stessa pagina. Nella stessa pagina cambiano solo le colonne: carta, margini e intestazioni cambiano dalla pagina seguente. Le interruzioni su pagina pari o dispari dei file Word si conservano, ma in Documenta cominciano sulla pagina seguente.
+Nella sezione **Sezione** della scheda Pagina, **Comincia** sceglie tra Su una pagina nuova e Nella stessa pagina. Nella stessa pagina cambiano solo le colonne: carta, margini e intestazioni cambiano dalla pagina seguente. Le sezioni dei file Word che cominciano su una pagina pari o dispari si conservano: quando il numero di pagina non torna, la sezione prima finisce con una pagina vuota, come in Word.
 
-In stampa si usa il foglio della prima pagina e le pagine di misura diversa vi si riducono; il PDF le tiene come sono.
+In stampa si usa il foglio della prima pagina: le pagine in orizzontale si ruotano e quelle più grandi del foglio si riducono invece di uscire tagliate. Il PDF tiene le pagine come sono.
 
 ## Bordo, filigrana, numeri di riga
 
@@ -52,4 +53,5 @@ In stampa si usa il foglio della prima pagina e le pagine di misura diversa vi s
 ## Interruzioni
 
 - **Interruzione di pagina**: <kbd>⌘</kbd> <kbd>↩</kbd>.
+- **Interruzione di colonna**: <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>↩</kbd>, il testo riprende in cima alla colonna seguente.
 - **Interruzione di riga**: <kbd>⇧</kbd> <kbd>↩</kbd>, una riga nuova nello stesso paragrafo.

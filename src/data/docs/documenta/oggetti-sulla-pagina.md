@@ -49,4 +49,4 @@ La sezione **Testo curvo** sceglie la curva: Stirato, Arco in su, Arco in giù, 
 - **Sostituisci immagine…** mette un'altra immagine al posto di quella selezionata.
 - **Archivio › Riduci dimensione delle immagini…** alleggerisce il file: vedi [Formati e compatibilità](/progetti/documenta/docs/formati-e-compatibilita).
 
-In RTF, DOC e testo semplice le caselle di testo diventano testo e le forme si perdono.
+In RTF e DOC caselle di testo, forme, immagini sulla pagina, gruppi e WordArt restano forme di Word, anche quelli scritti da Word. Nel testo semplice le caselle di testo diventano testo e le forme si perdono. Gli SmartArt dei file Word si aprono come gruppi di forme con il loro testo.

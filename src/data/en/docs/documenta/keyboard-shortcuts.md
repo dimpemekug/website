@@ -2,13 +2,13 @@
 title: "Keyboard shortcuts"
 description: "Every keyboard shortcut in Documenta for Mac: file, edit, format, insert, objects and view."
 project: "documenta"
-order: 11
+order: 12
 section: "Reference"
 ---
 
 The standard macOS shortcuts work as well: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</kbd> <kbd>O</kbd>, <kbd>⌘</kbd> <kbd>S</kbd>, <kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⌘</kbd> <kbd>F</kbd>, <kbd>⌘</kbd> <kbd>,</kbd> and so on.
 
-On iPad with a keyboard, the same shortcuts work for styles, alignment, indents, lists, comments, tracked changes, Advanced Find and printing.
+On iPad with a keyboard, the same shortcuts work for styles, alignment, indents, lists, superscript and subscript, comments, tracked changes, Advanced Find, printing, Go to Page, Go Back and Forward, the inspector and Focus Mode.
 
 ## File and edit
 
@@ -49,7 +49,9 @@ The nine styles, in order: Title, Subtitle, Heading 1–6, Body.
 | Comment | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd> |
 | Footnote | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>F</kbd> |
 | Page Break | <kbd>⌘</kbd> <kbd>↩</kbd> |
+| Column Break | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>↩</kbd> |
 | Line Break | <kbd>⇧</kbd> <kbd>↩</kbd> |
+| Equation… | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>E</kbd> |
 
 ## View
 
@@ -57,6 +59,8 @@ The nine styles, in order: Title, Subtitle, Heading 1–6, Body.
 |---|---|
 | Zoom In · Zoom Out | <kbd>⌘</kbd> <kbd>></kbd> · <kbd>⌘</kbd> <kbd><</kbd> |
 | Actual Size | <kbd>⌘</kbd> <kbd>0</kbd> |
+| Go to Page… | <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>G</kbd> |
+| Go Back · Go Forward | <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>←</kbd> · <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>→</kbd> |
 | Show Outline | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd> |
 | Show Ruler | <kbd>⌘</kbd> <kbd>R</kbd> |
 | Show Inspector | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> |

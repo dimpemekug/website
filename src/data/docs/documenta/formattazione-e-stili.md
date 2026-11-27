@@ -1,6 +1,6 @@
 ---
 title: "Formattazione e stili"
-description: "Carattere, paragrafo, elenchi, tabulazioni, bordi e capolettera in Documenta; gli undici stili di paragrafo, gli stili di carattere e la copia dello stile."
+description: "Carattere, paragrafo, elenchi, tabulazioni, bordi e capolettera in Documenta; stili, direzione del testo e formattazione automatica come in Markdown."
 project: "documenta"
 order: 4
 section: "Scrittura"
@@ -41,10 +41,22 @@ Dal menu **Formato › Carattere** e dalla sezione Font dell'inspector:
 - **Tabulazioni**: a sinistra, al centro, a destra o sui decimali, con riempitivo a puntini, trattini o linea. Senza tabulazioni scelte, ce n'è una ogni 1,27 cm. Si spostano anche trascinandole sul righello.
 - **Bordi e sfondo**: riquadri pronti, linea continua, doppia, tratteggiata o punteggiata per ogni lato, colore e sfondo. Paragrafi consecutivi con lo stesso riquadro stanno in un riquadro solo.
 - **Capolettera**: quante righe e quanti caratteri, nel testo o nel margine, e la distanza dal testo.
+- **Direzione del paragrafo** (**Formato › Testo**, o la riga Direzione nell'inspector): da sinistra a destra o da destra a sinistra, per l'arabo e l'ebraico. Un paragrafo da destra a sinistra allineato a sinistra si allinea a destra. Si conserva in DOCX, ODT e RTF.
 
 ## Elenchi
 
 **Elenco puntato** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>8</kbd>) ed **Elenco numerato** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>7</kbd>); nell'inspector anche lettere e numeri romani, maiuscoli o minuscoli, il simbolo dei punti, il numero di partenza e i numeri gerarchici come 1.1. All'inizio di una voce, <kbd>Tab</kbd> e <kbd>⇧</kbd> <kbd>Tab</kbd> la spostano di un livello.
+
+## Formattazione automatica come in Markdown
+
+Mentre scrivi, alcuni segni di Markdown diventano formattazione. All'inizio di un paragrafo in stile Corpo, seguiti da uno spazio:
+
+- da `#` a `######`: da Intestazione 1 a Intestazione 6;
+- `-`, `*` o `+`: elenco puntato;
+- `1.` o `1)`: elenco numerato;
+- `>`: stile Citazione.
+
+Nel testo, `**testo**` o `__testo__` diventa grassetto, `*testo*` o `_testo_` corsivo, `~~testo~~` barrato e `` `testo` `` lo stile di carattere Codice. I segni spariscono e il primo **Annulla** li rimette. Non vale nelle tabelle e quando la registrazione delle modifiche è attiva. Si spegne in **Impostazioni › Scrittura › Formattazione automatica come in Markdown**.
 
 ## Lingua del testo
 

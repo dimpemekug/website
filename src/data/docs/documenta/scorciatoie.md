@@ -2,13 +2,13 @@
 title: "Scorciatoie da tastiera"
 description: "Tutte le scorciatoie da tastiera di Documenta per Mac: archivio, modifica, formato, inserimento, oggetti e vista."
 project: "documenta"
-order: 11
+order: 12
 section: "Riferimento"
 ---
 
 Oltre a queste valgono le scorciatoie standard di macOS: <kbd>⌘</kbd> <kbd>N</kbd>, <kbd>⌘</kbd> <kbd>O</kbd>, <kbd>⌘</kbd> <kbd>S</kbd>, <kbd>⌘</kbd> <kbd>Z</kbd>, <kbd>⌘</kbd> <kbd>F</kbd>, <kbd>⌘</kbd> <kbd>,</kbd> e così via.
 
-Su iPad con una tastiera valgono le stesse scorciatoie per stili, allineamento, rientri, elenchi, commenti, revisioni, Trova avanzato e stampa.
+Su iPad con una tastiera valgono le stesse scorciatoie per stili, allineamento, rientri, elenchi, apice e pedice, commenti, revisioni, Trova avanzato, stampa, Vai alla pagina, Vai indietro e avanti, inspector e Modalità Focus.
 
 ## Archivio e modifica
 
@@ -49,7 +49,9 @@ I nove stili, in ordine: Titolo, Sottotitolo, Intestazione 1–6, Corpo.
 | Commento | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>K</kbd> |
 | Nota a piè di pagina | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>F</kbd> |
 | Interruzione di pagina | <kbd>⌘</kbd> <kbd>↩</kbd> |
+| Interruzione di colonna | <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>↩</kbd> |
 | Interruzione di riga | <kbd>⇧</kbd> <kbd>↩</kbd> |
+| Equazione… | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>E</kbd> |
 
 ## Vista
 
@@ -57,6 +59,8 @@ I nove stili, in ordine: Titolo, Sottotitolo, Intestazione 1–6, Corpo.
 |---|---|
 | Ingrandisci · Riduci | <kbd>⌘</kbd> <kbd>></kbd> · <kbd>⌘</kbd> <kbd><</kbd> |
 | Dimensione reale | <kbd>⌘</kbd> <kbd>0</kbd> |
+| Vai alla pagina… | <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>G</kbd> |
+| Vai indietro · Vai avanti | <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>←</kbd> · <kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>→</kbd> |
 | Mostra struttura | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd> |
 | Mostra righello | <kbd>⌘</kbd> <kbd>R</kbd> |
 | Mostra inspector | <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd> |

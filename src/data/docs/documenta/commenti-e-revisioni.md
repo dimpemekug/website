@@ -1,8 +1,8 @@
 ---
 title: "Commenti e revisioni"
-description: "Commenti nel margine e revisioni in Documenta: aggiungere, modificare ed eliminare commenti, accettare o rifiutare modifiche, compatibili con Word."
+description: "Commenti e revisioni in Documenta: commenti da risolvere, elenco dei commenti, modifiche da accettare o rifiutare, confronto tra versioni e copia pulita."
 project: "documenta"
-order: 8
+order: 9
 section: "Revisione"
 ---
 
@@ -12,7 +12,22 @@ section: "Revisione"
 - Il testo commentato è evidenziato in giallo (solo sullo schermo) e un fumetto nel margine destro della pagina apre il commento, con autore, data, testo e risposte. Lì si modifica, si elimina o si risponde.
 - L'autore è il nome dell'utente del Mac; su iPhone e iPad si sceglie nelle Impostazioni dell'app.
 
-I commenti si conservano in DOCX e ODT e si leggono da quelli scritti in Word e LibreOffice. Si conservano il testo semplice del commento, non la sua formattazione, e le risposte. In RTF, DOC e testo semplice i commenti si perdono.
+### Risolvere un commento
+
+Quando una discussione è chiusa, **Risolvi** nella finestra del commento la risolve: il commento resta nel documento, ma il testo non è più evidenziato e nel margine resta un segno grigio. **Riapri** lo riporta tra quelli aperti.
+
+Nel menu **Modifica › Revisioni**:
+
+- **Commento successivo** e **Commento precedente** passano da un commento aperto all'altro;
+- **Risolvi e passa al successivo** risolve il commento del cursore e va al prossimo.
+
+Quando ci sono commenti aperti, la barra di stato ne mostra il numero, con un menu che ha gli stessi comandi.
+
+### L'elenco dei commenti
+
+**Vista › Mostra commenti** apre la barra laterale sulla scheda **Commenti**, accanto a **Struttura**. L'elenco si filtra in **Aperti** e **Risolti**; ogni voce ha autore, data, testo commentato, commento e numero di risposte. Un clic porta al testo, un doppio clic apre il commento, il menu contestuale lo risolve, lo riapre o lo elimina.
+
+I commenti si conservano in DOCX e ODT, anche risolti, e si leggono da quelli scritti in Word e LibreOffice. Si conservano il testo semplice del commento, non la sua formattazione, e le risposte. In RTF i commenti diventano annotazioni di Word, con le risposte; in DOC e testo semplice si perdono.
 
 ## Registrare le modifiche
 
@@ -42,4 +57,17 @@ Ogni comando si annulla in un solo passo.
 
 - In **DOCX** le revisioni si leggono e si scrivono come quelle di Word.
 - In **ODT**, un cambio di formattazione salvato da LibreOffice si può solo accettare, perché ODF non salva la formattazione di prima (Documenta la aggiunge ai suoi file). I cambi di paragrafo salvati in ODT si riaprono in Documenta, mentre LibreOffice li mostra come cambi di formattazione; una cancellazione su più paragrafi diventa un paragrafo solo.
-- In RTF, DOC, testo semplice e nelle esportazioni resta il testo con tutte le revisioni accettate.
+- In **RTF** inserimenti e cancellazioni restano revisioni, anche quelle scritte da Word; i cambi di formattazione si salvano accettati.
+- In DOC, testo semplice e nelle esportazioni resta il testo con tutte le revisioni accettate.
+
+## Confrontare con una versione precedente
+
+**Archivio › Confronta con una versione precedente…** chiede il file della versione di prima (DOCX, ODT, RTF, DOC, Markdown o testo semplice) e apre un documento nuovo: la versione di oggi, con le differenze come revisioni, il testo tolto barrato e quello nuovo sottolineato. Si accettano e si rifiutano come le altre.
+
+- Un paragrafo cambiato si confronta parola per parola; se è cambiato quasi tutto, diventa un paragrafo cancellato e uno inserito.
+- I cambi di formattazione e di paragrafo (stile, allineamento, rientri) diventano revisioni di formattazione; le tabelle con le stesse righe e colonne si confrontano cella per cella.
+- Le revisioni che i due file avevano già si accettano prima del confronto.
+
+## Copia pulita
+
+Se il documento ha revisioni o commenti aperti, **Stampa…** ed **Esporta come PDF…** chiedono come procedere: **Stampa copia pulita** (o **Esporta copia pulita**) accetta le revisioni e toglie i commenti solo nella copia, **Stampa com'è** la lascia come la vedi. Il documento non cambia.

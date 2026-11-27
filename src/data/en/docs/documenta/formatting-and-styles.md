@@ -1,6 +1,6 @@
 ---
 title: "Formatting and styles"
-description: "Font, paragraph, lists, tabs, borders and drop caps in Documenta; the eleven paragraph styles, character styles and copying a style."
+description: "Font, paragraph, lists, tabs, borders and drop caps in Documenta; styles, text direction and Markdown-style formatting as you type."
 project: "documenta"
 order: 4
 section: "Writing"
@@ -41,10 +41,22 @@ From the **Format › Font** menu and the Font section of the inspector:
 - **Tabs**: left, center, right or decimal, with a dots, dashes or line leader. With no tab stops set, there is one every 1.27 cm. You can also drag them on the ruler.
 - **Borders and Background**: ready-made boxes, a solid, double, dashed or dotted line for each side, color and shading. Consecutive paragraphs with the same box share a single box.
 - **Drop Cap**: how many lines and characters, in the text or in the margin, and the distance from the text.
+- **Paragraph Direction** (**Format › Text**, or the Direction row in the inspector): left to right or right to left, for Arabic and Hebrew. A right-to-left paragraph aligned left lines up on the right. It's kept in DOCX, ODT and RTF.
 
 ## Lists
 
 **Bulleted List** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>8</kbd>) and **Numbered List** (<kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>7</kbd>); the inspector also has letters and Roman numerals, upper or lower case, the bullet symbol, the starting number and hierarchical numbering like 1.1. At the start of an item, <kbd>Tab</kbd> and <kbd>⇧</kbd> <kbd>Tab</kbd> move it one level.
+
+## Markdown-style formatting as you type
+
+As you type, some Markdown marks become formatting. At the start of a Body paragraph, followed by a space:
+
+- `#` to `######`: Heading 1 to Heading 6;
+- `-`, `*` or `+`: bulleted list;
+- `1.` or `1)`: numbered list;
+- `>`: Quote style.
+
+Within the text, `**text**` or `__text__` becomes bold, `*text*` or `_text_` italic, `~~text~~` strikethrough and `` `text` `` the Code character style. The marks disappear and the first **Undo** puts them back. It doesn't apply in tables or while change tracking is on. Turn it off in **Settings › Writing › Format as You Type, Markdown Style**.
 
 ## Language of the text
 

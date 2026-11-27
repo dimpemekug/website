@@ -49,4 +49,4 @@ The **Curved Text** section chooses the curve: Stretched, Arch Up, Arch Down, Ci
 - **Replace Image…** puts another image in place of the selected one.
 - **File › Reduce Image Size…** slims the file: see [Formats and compatibility](/en/projects/documenta/docs/formats-and-compatibility).
 
-In RTF, DOC and plain text, text boxes become text and shapes are lost.
+In RTF and DOC, text boxes, shapes, images on the page, groups and WordArt stay Word shapes, including those written by Word. In plain text, text boxes become text and shapes are lost. SmartArt in Word files opens as groups of shapes with their text.

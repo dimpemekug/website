@@ -8,7 +8,7 @@ section: "Iniziare"
 
 ## Cos'è Documenta
 
-**Documenta** è un elaboratore di testi per Mac, iPhone e iPad, scritto in SwiftUI con AppKit sul Mac e UIKit su iPhone e iPad. Si scrive su pagine impaginate come sulla carta e si aprono, modificano e salvano i documenti nel loro formato: Word (`.docx` e `.doc`), OpenDocument (`.odt`), RTF e testo semplice.
+**Documenta** è un elaboratore di testi per Mac, iPhone e iPad, scritto in SwiftUI con AppKit sul Mac e UIKit su iPhone e iPad. Si scrive su pagine impaginate come sulla carta e si aprono, modificano e salvano i documenti nel loro formato: Word (`.docx` e `.doc`), OpenDocument (`.odt`), RTF, Markdown e testo semplice.
 
 **Requisiti**: sul Mac macOS 15 Sequoia o successivo e un chip Apple (Apple silicon: l'app non gira sui Mac con Intel); su iPhone e iPad iOS e iPadOS 26 o successivo. L'interfaccia è in italiano e in inglese; sul Mac la lingua si sceglie in **Impostazioni › Generali › Lingua dell'app** (serve riavviare l'app).
 
@@ -22,14 +22,14 @@ Questa guida descrive l'app per Mac; cosa cambia su iPhone e iPad è in [iPhone 
 
 ## La finestra del documento
 
-- **Barra degli strumenti**: stile di paragrafo, font e dimensione, grassetto, corsivo, sottolineato, colore ed evidenziazione, allineamento, elenchi, tabella, casella di testo, forme e il pulsante <kbd>+</kbd> per gli altri inserimenti.
-- **Struttura** (a sinistra, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>): i titoli del documento, rientrati per livello. Vedi [Documenti lunghi](/progetti/documenta/docs/documenti-lunghi).
+- **Barra degli strumenti**: a destra del titolo, che resta sempre intero, stile di paragrafo, font e dimensione, grassetto, corsivo, sottolineato, colore ed evidenziazione, allineamento, interlinea, rientri, elenchi, tabella, casella di testo, forme e il pulsante <kbd>+</kbd> per gli altri inserimenti; all'estremità destra Trova, Focus e il pulsante dell'inspector. Nelle finestre strette i comandi meno usati passano nel menu <kbd>+</kbd> o restano nell'inspector e nel menu Formato.
+- **Barra laterale** (a sinistra): la **Struttura** dei titoli (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>), rientrati per livello, e l'elenco dei **Commenti** (**Vista › Mostra commenti**). Vedi [Documenti lunghi](/progetti/documenta/docs/documenti-lunghi) e [Commenti e revisioni](/progetti/documenta/docs/commenti-e-revisioni).
 - **Inspector** (a destra, <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd>): raccoglie testo, paragrafo, pagina, documento e l'oggetto o la tabella selezionati. In **Impostazioni › Aspetto › Disposizione dell'inspector** si sceglie come mostrarlo:
   - **Riquadri** (la scelta iniziale): le schede di Pages con le sezioni in riquadri arrotondati, come su iPad;
   - **Schede**: Stile, Pagina e Documento, come in Pages, più una scheda per la tabella o l'oggetto selezionato;
   - **Sezioni**: una colonna di sezioni da aprire e chiudere;
   - **Icone**: una barra con un'icona per categoria; il pannello Tabella compare quando il cursore è in una tabella.
-- **Barra di stato** (in basso): pagina corrente e totale, parole e caratteri, l'obiettivo di parole, l'avviso quando la registrazione delle modifiche è attiva, i pulsanti Pagina singola e Due pagine e lo zoom.
+- **Barra di stato** (in basso): pagina corrente e totale (un clic apre Vai alla pagina), parole e caratteri, anche della selezione, l'obiettivo di parole, i commenti aperti, l'avviso quando la registrazione delle modifiche è attiva, i pulsanti Pagina singola e Due pagine e lo zoom.
 
 ## Vista
 
@@ -48,8 +48,8 @@ Dal menu **Vista**:
 - [Pagine, intestazioni e sezioni](/progetti/documenta/docs/pagine-intestazioni-e-sezioni): carta, margini, colonne, piè di pagina.
 - [Formattazione e stili](/progetti/documenta/docs/formattazione-e-stili): carattere, paragrafo, elenchi, stili.
 - [Documenti lunghi](/progetti/documenta/docs/documenti-lunghi): titoli numerati, sommario, didascalie, note.
-- [Tabelle](/progetti/documenta/docs/tabelle) e [Oggetti sulla pagina](/progetti/documenta/docs/oggetti-sulla-pagina).
-- [Commenti e revisioni](/progetti/documenta/docs/commenti-e-revisioni).
+- [Tabelle](/progetti/documenta/docs/tabelle), [Oggetti sulla pagina](/progetti/documenta/docs/oggetti-sulla-pagina) ed [Equazioni](/progetti/documenta/docs/equazioni).
+- [Commenti e revisioni](/progetti/documenta/docs/commenti-e-revisioni): commenti risolti, confronto tra versioni, copia pulita.
 - [Modelli, salvataggio e impostazioni](/progetti/documenta/docs/modelli-esportazione-e-impostazioni).
 - [iPhone e iPad](/progetti/documenta/docs/iphone-e-ipad): l'app per iPhone e iPad e le differenze dal Mac.
 - [Scorciatoie da tastiera](/progetti/documenta/docs/scorciatoie).

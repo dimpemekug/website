@@ -20,19 +20,21 @@ Documenta is a word processor for Mac, iPhone and iPad. Write on pages laid out 
 
 ## Key Features
 
-- **Your formats**: Word documents (.docx and .doc), OpenDocument (.odt), RTF and plain text, opened and saved as they are; export to PDF, EPUB, web page and Markdown. On iPhone and iPad, .doc files open in a new Word document
-- **Real pages**: margins and a ruler, portrait or landscape, paper sizes from A3 to Tabloid, text columns and sections with their own paper, columns and headers; or pageless text as wide as the window or screen
-- **Headers and footers**: in three parts, with page number and total, different on the first page and on even pages; page borders, watermarks, line numbers and hyphenation. They are set up on the Mac; on iPhone and iPad the ones in your documents are shown and kept
-- **Long documents**: numbered headings, a table of contents and a table of figures, numbered captions, cross-references, bookmarks, footnotes and endnotes, an outline of headings in the sidebar
-- **Comments and tracked changes**: margin comments with replies, as in Word and LibreOffice; record your edits and accept or reject everyone else's
-- **Tables**: merged cells, per-cell borders and shading, ready-made styles, first row repeated on every page and sortable rows; on the Mac also formulas like `=SUM(ABOVE)`
-- **Objects on the page**: text boxes, shapes and images with text wrapping around them, to rotate, group and align; on the Mac also WordArt with curved text
-- **Complete formatting**: eleven paragraph styles, character styles, multilevel lists, dot-leader tabs, drop caps, paragraph shading and borders
+- **Your formats**: Word documents (.docx and .doc), OpenDocument (.odt), RTF, Markdown and plain text, opened and saved as they are; export to PDF, EPUB and web page. If a file holds something Documenta doesn't handle, a notice tells you as soon as you open it. On iPhone and iPad, .doc files open in a new Word document
+- **Real pages**: margins and a ruler, mirror margins and a gutter too, portrait or landscape, paper sizes from A3 to Tabloid, text columns and sections with their own paper, columns and headers; or pageless text as wide as the window or screen
+- **Headers and footers**: in three parts, with page number and total, different on the first page and on even pages; page borders, watermarks, line numbers and hyphenation, on the Mac as on iPhone and iPad
+- **Long documents**: numbered headings you can collapse and expand, a table of contents and a table of figures, numbered captions, cross-references, bookmarks, footnotes and endnotes, an outline of headings in the sidebar, Go to Page
+- **Equations**: typed in LaTeX, with a live preview and templates, and saved as Word and LibreOffice equations
+- **Comments and tracked changes**: margin comments with replies, to resolve when you're done, as in Word and LibreOffice; record your edits and accept or reject everyone else's; compare with an earlier version; print and PDF as a clean copy too
+- **Tables**: merged cells, per-cell borders and shading, ready-made styles, first row repeated on every page, sortable rows and formulas like `=SUM(ABOVE)`
+- **Objects on the page**: text boxes, WordArt with curved text, shapes and images with text wrapping around them, to rotate, group and align; they stay in place in RTF and DOC files too
+- **Complete formatting**: eleven paragraph styles, character styles, multilevel lists, dot-leader tabs, drop caps, paragraph shading and borders, right-to-left paragraphs; Markdown-style formatting as you type (# for a heading, ** for bold)
 - **Writing tools**: find and replace by formatting too and with regular expressions, spell checking in the language of each part of the text, custom replacements, read aloud in the voice you choose, reading time, a word goal and a readability score
-- **Ten ready-made templates**: letter, report, thesis, résumé, quote and more; on the Mac also your own documents saved as templates
+- **Ten ready-made templates**: letter, report, thesis, résumé, quote and more, plus your own documents saved as personal templates
 - **Light or dark page**: the dark page for the evening applies on screen only; measurements in centimeters, inches or points
-- **Mac only**: Focus Mode, full menus and keyboard shortcuts
-- **iPhone and iPad only**: a formatting bar above the keyboard, scanning paper sheets with the camera and text from photos, drawings and handwriting with Apple Pencil; on iPad the outline, pages and inspector side by side, a menu bar and keyboard shortcuts
+- **Focus Mode**: only the paragraph you're writing stays highlighted
+- **Mac only**: full menus and keyboard shortcuts, saving in the old .doc format
+- **iPhone and iPad only**: a bar above the keyboard, a start screen with the templates and a preview of each document's first page, scanning paper sheets with the camera and text from photos, drawings and handwriting with Apple Pencil; on iPad the outline, pages and inspector side by side, a menu bar and keyboard shortcuts
 - **Private**: no account and no data collected, your documents stay on your device or in your iCloud Drive; interface in English and Italian
 - **No subscription**: free, with no ads and no in-app purchases
 

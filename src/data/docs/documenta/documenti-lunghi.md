@@ -1,6 +1,6 @@
 ---
 title: "Documenti lunghi"
-description: "Struttura, titoli numerati, sommario, didascalie, indice delle figure, riferimenti incrociati, segnalibri e note in Documenta, per tesi e rapporti."
+description: "Struttura, titoli compressi, Vai alla pagina, titoli numerati, sommario, didascalie, riferimenti incrociati e note in Documenta, per tesi e rapporti."
 project: "documenta"
 order: 5
 section: "Scrittura"
@@ -8,13 +8,24 @@ section: "Scrittura"
 
 ## Struttura del documento
 
-**Vista › Mostra struttura** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>) apre la barra laterale con i paragrafi in stile Titolo e Intestazione, rientrati per livello; la voce che contiene il cursore resta evidenziata.
+**Vista › Mostra struttura** (<kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>O</kbd>) apre la barra laterale con i paragrafi in stile Titolo e Intestazione, rientrati per livello; la voce che contiene il cursore resta evidenziata. Con i titoli numerati ogni voce ha il suo numero; i titoli lunghi vanno a capo, e passando sopra una voce si legge intera. In cima alla barra si passa da **Struttura** a **Commenti**: vedi [Commenti e revisioni](/progetti/documenta/docs/commenti-e-revisioni).
 
 - Un clic porta al titolo.
 - Trascinando un titolo si sposta **il capitolo intero**: il titolo e tutto quello che segue fino al titolo successivo dello stesso livello o più alto.
 - Il menu contestuale ha **Sposta su**, **Sposta giù**, **Alza di livello** e **Abbassa di livello**; cambiando livello si spostano anche i sottotitoli.
 
 Ogni operazione si annulla in un solo passo.
+
+## Comprimere i titoli
+
+Nel menu contestuale della struttura, **Comprimi la sezione** nasconde tutto quello che segue un titolo fino al titolo successivo dello stesso livello o più alto; un'icona nella struttura segna le sezioni compresse ed **Espandi la sezione** le riapre. **Vista › Comprimi tutti i titoli** comprime le sezioni del livello più alto presente, **Espandi tutti i titoli** riapre tutto.
+
+I titoli compressi valgono solo sullo schermo: file, stampa e PDF hanno sempre tutto il testo. Se il cursore entra in una sezione compressa, con le frecce, una ricerca o un link, la sezione si riapre.
+
+## Spostarsi nel documento
+
+- **Vista › Vai alla pagina…** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>G</kbd>), o un clic su «Pagina X di Y» nella barra di stato, porta il cursore all'inizio della pagina scelta.
+- **Vai indietro** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>←</kbd>) e **Vai avanti** (<kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>→</kbd>) funzionano come in un browser: riportano dove eri prima di un salto (un clic nella struttura o nell'elenco dei commenti, il commento o la revisione successivi, un segnalibro o un link interno, Vai alla pagina). Si ricordano fino a 50 posizioni; i normali spostamenti del cursore e le ricerche non contano.
 
 ## Titoli numerati
 
@@ -53,6 +64,6 @@ Il riferimento segue il suo bersaglio: se la figura 2 diventa la 3, il testo cam
 
 ## Conteggi e leggibilità
 
-La barra di stato mostra parole e caratteri. Un clic sull'obiettivo di parole permette di sceglierne uno (0 per non averlo) e ne mostra la percentuale raggiunta.
+La barra di stato mostra parole e caratteri; con del testo selezionato, anche quelli della selezione («12 di 840 parole»). Un clic sull'obiettivo di parole permette di sceglierne uno (0 per non averlo) e ne mostra la percentuale raggiunta.
 
 La sezione **Informazioni** della scheda Documento mostra parole, caratteri, pagine, **tempo di lettura**, parole per frase, frase più lunga, parole frequenti e **leggibilità**: l'indice Gulpease per l'italiano e Flesch per l'inglese. La velocità di lettura (230 parole al minuto all'inizio) si cambia in **Impostazioni › Scrittura**.

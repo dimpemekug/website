@@ -2,7 +2,7 @@
 title: "Modelli, salvataggio e impostazioni"
 description: "Finestra di benvenuto e modelli di Documenta, modelli personali, salvataggio automatico, controllo ortografico e tutte le schede delle Impostazioni."
 project: "documenta"
-order: 9
+order: 10
 section: "Riferimento"
 ---
 
@@ -29,6 +29,8 @@ I dieci modelli pronti:
 
 **Archivio › Salva come modello…** salva il documento aperto come modello, con testo, stili e impostazioni della pagina, in un file DOCX nella cartella che scegli tu. **Aggiungi modello…** (in **Archivio › Nuovo da modello personale** e in **Impostazioni › Modelli**) usa come modello un documento Word che hai già, lasciandolo dov'è: Documenta ricorda solo dove si trova. I modelli personali compaiono nella finestra di benvenuto e in **Archivio › Nuovo da modello personale**. In **Impostazioni › Modelli** si crea un documento da un modello (**Crea documento**), lo si trova nel Finder (**Mostra nel Finder**) o lo si toglie con **Rimuovi dall'elenco**, che non cancella il file; i documenti già creati da un modello non cambiano.
 
+Su iPhone e iPad i modelli personali sono file nella cartella Modelli e si gestiscono dalla schermata iniziale: vedi [iPhone e iPad](/progetti/documenta/docs/iphone-e-ipad).
+
 ## Salvataggio
 
 - I documenti si salvano dove vuoi; nella cartella **Documenta** di iCloud Drive li trovi anche su iPhone e iPad. Con **Handoff** un documento aperto in iCloud Drive si riprende sull'altro dispositivo.
@@ -52,7 +54,7 @@ I dieci modelli pronti:
 
 - **Generali**: lingua dell'app, cosa fare all'avvio (finestra di benvenuto, documento vuoto o niente), zoom predefinito, Documenta come app predefinita per i documenti, ripristino delle impostazioni iniziali.
 - **Aspetto**: aspetto di finestre e barre (automatico, chiaro, scuro), aspetto della pagina, Senza pagina, layout di pagina, disposizione dell'inspector (Riquadri, Schede, Sezioni, Icone) e pannelli delle finestre nuove.
-- **Scrittura**: ortografia e grammatica, dizionario personale, sostituzioni, incolla con lo stile del documento, conteggio delle parole, velocità di lettura, voce e velocità della lettura ad alta voce.
+- **Scrittura**: ortografia e grammatica, dizionario personale, sostituzioni, incolla con lo stile del documento, formattazione automatica come in Markdown, conteggio delle parole, velocità di lettura, voce e velocità della lettura ad alta voce.
 - **Testo e caratteri**: carattere, dimensione, interlinea e spaziatura dei documenti vuoti nuovi; numero di pagina nel piè di pagina dei documenti nuovi.
 - **Pagina**: carta, orientamento e margini (Normali, Stretti, Ampi o Personalizzati) dei documenti nuovi, guide di layout e delle colonne, unità di misura (centimetri, pollici o punti).
 - **File**: formato predefinito dei documenti nuovi, salvataggio automatico, avviso dei font non installati.

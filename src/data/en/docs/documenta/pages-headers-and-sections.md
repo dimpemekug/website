@@ -13,6 +13,7 @@ Page settings are in the **Page** tab of the inspector; the most common ones are
 - **Paper Size**: A3, A4, A5, B5, US Letter, US Legal and Tabloid, or a custom size.
 - **Portrait** or **Landscape**.
 - **Margins** in the Paper and Margins section, in centimeters, inches or points (**Settings › Page › Unit of measure**).
+- **Mirror Margins**: for double-sided printing, the Left and Right margins become **Inside** and **Outside** and swap on even pages. **Gutter** adds space on the inside edge, for binding.
 
 For new documents, paper, orientation and margins are set in **Settings › Page › New Documents**. That's also where you turn on the **layout guides** (the margins of the text area) and the **column guides**, which don't print.
 
@@ -38,9 +39,9 @@ A section is a part of the document with its own paper, orientation, margins, co
 - **Insert › Section Break**: the new section starts on a new page.
 - **Insert › Section Break on the Same Page**: handy for going from one to two columns mid-page.
 
-In the **Section** section of the Page tab, **Starts** chooses between On a New Page and On the Same Page. On the same page only the columns change: paper, margins and headers change from the next page. Breaks on an even or odd page in Word files are kept, but in Documenta they start on the next page.
+In the **Section** section of the Page tab, **Starts** chooses between On a New Page and On the Same Page. On the same page only the columns change: paper, margins and headers change from the next page. Sections in Word files that start on an even or odd page are kept: when the page number doesn't match, the previous section ends with a blank page, as in Word.
 
-When printing, the paper of the first page is used and pages of a different size are scaled to it; the PDF keeps them as they are.
+When printing, the paper of the first page is used: landscape pages are rotated and pages larger than the paper are scaled down instead of being cut off. The PDF keeps the pages as they are.
 
 ## Border, watermark, line numbers
 
@@ -52,4 +53,5 @@ When printing, the paper of the first page is used and pages of a different size
 ## Breaks
 
 - **Page Break**: <kbd>⌘</kbd> <kbd>↩</kbd>.
+- **Column Break**: <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>↩</kbd>, the text continues at the top of the next column.
 - **Line Break**: <kbd>⇧</kbd> <kbd>↩</kbd>, a new line in the same paragraph.
